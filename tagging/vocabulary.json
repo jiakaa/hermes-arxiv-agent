@@ -1,0 +1,155 @@
+{
+  "_comment": "论文标签受控词表。别名匹配:纯 ASCII 的别名按小写子串匹配(相当于不区分大小写 regex),含中文的别名按原样子串匹配。新增标签/别名后运行 tagging/update_keywords.py 即可重打。",
+  "groups": [
+    {
+      "name": "前馈3D重建",
+      "tags": [
+        {
+          "name": "前馈3D重建",
+          "aliases": [
+            "VGGT", "DGGT", "feed-forward 3D reconstruction", "feedforward 3D", "feed forward 3D",
+            "sparse-view reconstruction", "sparse view reconstruction", "few-view reconstruction",
+            "online reconstruction", "incremental reconstruction", "lightweight reconstruction",
+            "efficient 3D reconstruction", "前馈重建"
+          ]
+        },
+        {
+          "name": "多视角立体",
+          "aliases": ["multi-view stereo", "multiview stereo", "MVS"]
+        },
+        {
+          "name": "深度估计",
+          "aliases": ["depth estimation", "monocular depth", "metric depth", "单目深度", "深度估计"]
+        }
+      ]
+    },
+    {
+      "name": "3DGS/4DGS",
+      "tags": [
+        {
+          "name": "3DGS",
+          "aliases": ["3DGS", "3D Gaussian", "Gaussian Splatting", "高斯泼溅"]
+        },
+        {
+          "name": "4DGS",
+          "aliases": ["4DGS", "4D Gaussian", "dynamic Gaussian"]
+        },
+        {
+          "name": "动态场景重建",
+          "aliases": ["dynamic scene reconstruction", "4D reconstruction", "动态场景"]
+        },
+        {
+          "name": "场景压缩",
+          "aliases": ["Gaussian compression", "scene compression", "场景压缩", "压缩"]
+        },
+        {
+          "name": "实时渲染",
+          "aliases": ["real-time rendering", "real-time Gaussian", "fast rendering", "实时渲染"]
+        }
+      ]
+    },
+    {
+      "name": "世界模型与仿真",
+      "tags": [
+        {
+          "name": "世界模型",
+          "aliases": ["world model", "WorldDrive", "world models", "世界模型"]
+        },
+        {
+          "name": "闭环仿真",
+          "aliases": ["closed-loop simulation", "closed-loop training", "closed-loop", "闭环"]
+        },
+        {
+          "name": "生成式仿真",
+          "aliases": ["generative simulation", "scenario generation", "scenario simulation", "生成式仿真"]
+        },
+        {
+          "name": "视频生成",
+          "aliases": ["video generation", "driving video generation", "视频生成"]
+        },
+        {
+          "name": "扩散模型",
+          "aliases": ["diffusion model", "diffusion policy", "扩散模型"]
+        },
+        {
+          "name": "强化学习",
+          "aliases": ["reinforcement learning", "policy learning", "强化学习"]
+        },
+        {
+          "name": "轨迹预测",
+          "aliases": ["trajectory prediction", "trajectory forecasting", "轨迹预测"]
+        },
+        {
+          "name": "规划",
+          "aliases": ["motion planning", "planning head", "决策规划", "规划"]
+        }
+      ]
+    },
+    {
+      "name": "地面重建",
+      "tags": [
+        {
+          "name": "道路高程",
+          "aliases": ["road elevation", "road height estimation", "road profile", "RoadBEV", "道路高程"]
+        },
+        {
+          "name": "路面重建",
+          "aliases": ["road surface reconstruction", "road geometry", "路面重建", "路面"]
+        },
+        {
+          "name": "坑洼检测",
+          "aliases": ["pothole", "坑洼"]
+        },
+        {
+          "name": "地形重建",
+          "aliases": ["terrain reconstruction", "ground reconstruction", "地形"]
+        }
+      ]
+    },
+    {
+      "name": "通用",
+      "tags": [
+        {
+          "name": "自动驾驶",
+          "aliases": ["autonomous driving", "self-driving", "driving scene", "自动驾驶"]
+        },
+        {
+          "name": "SLAM",
+          "aliases": ["SLAM", "visual odometry"]
+        },
+        {
+          "name": "NeRF",
+          "aliases": ["NeRF", "neural radiance field"]
+        },
+        {
+          "name": "点云",
+          "aliases": ["point cloud", "LiDAR", "点云"]
+        },
+        {
+          "name": "事件相机",
+          "aliases": ["event camera", "event-based", "事件相机"]
+        },
+        {
+          "name": "多模态",
+          "aliases": ["multimodal", "vision-language", "多模态"]
+        },
+        {
+          "name": "大语言模型",
+          "aliases": ["LLM", "large language model", "大语言模型"]
+        },
+        {
+          "name": "具身智能",
+          "aliases": ["embodied", "robot manipulation", "具身"]
+        },
+        {
+          "name": "仿真器",
+          "aliases": ["simulator", "simulation platform", "仿真器"]
+        },
+        {
+          "name": "训练加速",
+          "aliases": ["training efficiency", "fast training", "accelerated training", "训练加速"]
+        }
+      ]
+    }
+  ]
+}

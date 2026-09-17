@@ -26,11 +26,23 @@ CRAWLED_IDS_FILE = BASE_DIR / "crawled_ids.txt"
 PENDING_LLM_IDS_FILE = BASE_DIR / "pending_llm_ids.txt"
 KEYWORDS_FILE = BASE_DIR / "search_keywords.txt"
 OUTPUT_JSON = BASE_DIR / "new_papers.json"   # 输出给 hermes agent 的中间文件
+SENT_FEISHU_IDS_FILE = BASE_DIR / "sent_feishu_ids.txt"
 
 # arxiv API 配置
 ARXIV_API = "https://export.arxiv.org/api/query"
-MAX_RESULTS = 50
-REQUEST_INTERVAL = 3  # 秒
+MAX_RESULTS = 10
+REQUEST_INTERVAL = 6  # 秒（增大间隔避免 arXiv 限流）
+
+
+# ==================== 通用工具函数 ====================
+
+def normalize_arxiv_id(raw_id: str) -> str:
+    """统一规范化 arxiv_id：去版本号、去空格。"""
+    raw = raw_id.strip()
+    if "v" in raw and raw.count(".") >= 1:
+        # 去掉版本号: 2401.12345v2 -> 2401.12345
+        raw = raw.split("v")[0]
+    return raw.strip()
 
 # ==================== 工具函数 ====================
 
@@ -38,7 +50,12 @@ def load_crawled_ids() -> set:
     if not CRAWLED_IDS_FILE.exists():
         return set()
     with open(CRAWLED_IDS_FILE, "r", encoding="utf-8") as f:
-        return set(line.strip() for line in f if line.strip())
+        ids = set()
+        for line in f:
+            stripped = line.strip()
+            if stripped:
+                ids.add(normalize_arxiv_id(stripped))
+        return ids
 
 
 def load_excel_ids() -> set:
@@ -90,16 +107,89 @@ def save_crawled_ids_batch(new_ids: list[str]):
     """批量追加新 ID"""
     with open(CRAWLED_IDS_FILE, "a", encoding="utf-8") as f:
         for arxiv_id in new_ids:
-            f.write(arxiv_id + "\n")
+            f.write(normalize_arxiv_id(arxiv_id) + "\n")
 
 
-def load_search_keywords() -> str:
-    default_keywords = "all:quantization+AND+all:large+AND+all:language+AND+all:model"
-    if KEYWORDS_FILE.exists():
-        with open(KEYWORDS_FILE, "r", encoding="utf-8") as f:
-            kw = f.read().strip()
-            return kw if kw else default_keywords
-    return default_keywords
+def rebuild_crawled_ids_from_excel():
+    """从 Excel 重建 crawled_ids.txt，保证无重复、无版本号。"""
+    from openpyxl import load_workbook
+    if not EXCEL_FILE.exists():
+        return
+    try:
+        wb = load_workbook(EXCEL_FILE, read_only=True)
+        if "Papers" not in wb.sheetnames:
+            return
+        ws = wb["Papers"]
+        header = [str(c.value) for c in next(ws.iter_rows(min_row=1, max_row=1))]
+        if "arxiv_id" not in header:
+            return
+        arxiv_col = header.index("arxiv_id")
+        ids = set()
+        for row in ws.iter_rows(min_row=2, values_only=True):
+            val = row[arxiv_col] if arxiv_col < len(row) else None
+            if val:
+                ids.add(normalize_arxiv_id(str(val)))
+        with open(CRAWLED_IDS_FILE, "w", encoding="utf-8") as f:
+            for aid in sorted(ids):
+                f.write(aid + "\n")
+        print(f"[INFO] Rebuilt crawled_ids.txt: {len(ids)} unique, clean IDs")
+    except Exception as e:
+        print(f"[WARN] Failed to rebuild crawled_ids: {e}")
+
+
+def load_sent_feishu_ids() -> set:
+    if not SENT_FEISHU_IDS_FILE.exists():
+        return set()
+    with open(SENT_FEISHU_IDS_FILE, "r", encoding="utf-8") as f:
+        ids = set()
+        for line in f:
+            stripped = line.strip()
+            if stripped:
+                ids.add(normalize_arxiv_id(stripped))
+        return ids
+
+
+def save_sent_feishu_ids(ids: set[str]):
+    cleaned = sorted({normalize_arxiv_id(x) for x in ids if normalize_arxiv_id(x)})
+    with open(SENT_FEISHU_IDS_FILE, "w", encoding="utf-8") as f:
+        for aid in cleaned:
+            f.write(aid + "\n")
+
+
+def load_search_keywords() -> list[str]:
+    """Return a list of arxiv search queries.
+    Lines in the same section (separated by blank lines or comment blocks)
+    are combined into a single OR query.
+    One section = one search_query = one API call.
+    """
+    default_keywords = ["all:quantization+AND+all:large+AND+all:language+AND+all:model"]
+    if not KEYWORDS_FILE.exists():
+        return default_keywords
+
+    sections = []
+    current_section = []
+    with open(KEYWORDS_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            stripped = line.strip()
+            # Blank line or comment => section separator
+            if not stripped or stripped.startswith("#"):
+                if current_section:
+                    # Combine current section into one OR query
+                    combined = "+OR+".join(current_section)
+                    sections.append(combined)
+                    current_section = []
+                continue
+            current_section.append(stripped)
+    # Don't forget the last section
+    if current_section:
+        combined = "+OR+".join(current_section)
+        sections.append(combined)
+
+    if not sections:
+        return default_keywords
+    print(f"[INFO] Combined {sum(len(s.split('+OR+')) for s in sections)} "
+          f"queries into {len(sections)} section queries")
+    return sections
 
 
 def search_arxiv_papers(keywords: str, max_results: int = MAX_RESULTS) -> list[dict]:
@@ -111,8 +201,23 @@ def search_arxiv_papers(keywords: str, max_results: int = MAX_RESULTS) -> list[d
     )
 
     print(f"[INFO] Searching arxiv: {keywords}")
-    response = requests.get(url, timeout=30)
-    response.raise_for_status()
+
+    # Retry up to 6 times on transient SSL/network errors
+    last_error = None
+    for attempt in range(6):
+        try:
+            response = requests.get(url, timeout=30)
+            response.raise_for_status()
+            break
+        except (requests.exceptions.SSLError, requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout, requests.exceptions.HTTPError) as e:
+            last_error = e
+            print(f"[WARN] Attempt {attempt+1}/6 failed: {e}")
+            if attempt < 5:
+                time.sleep(5 * (attempt + 1))
+            continue
+    else:
+        print(f"[ERROR] All 6 retries failed: {last_error}")
+        return []
 
     ns = {"a": "http://www.w3.org/2005/Atom"}
     root = ET.fromstring(response.content)
@@ -157,17 +262,24 @@ def download_pdf(paper: dict) -> bool:
     if pdf_path.exists():
         print(f"[INFO] PDF exists: {paper['pdf_filename']}")
         return True
-    try:
-        response = requests.get(paper["pdf_url"], timeout=60, stream=True)
-        response.raise_for_status()
-        with open(pdf_path, "wb") as f:
-            for chunk in response.iter_content(chunk_size=8192):
-                f.write(chunk)
-        print(f"[INFO] Downloaded: {paper['pdf_filename']}")
-        return True
-    except Exception as e:
-        print(f"[ERROR] Download failed {paper['pdf_url']}: {e}")
-        return False
+    last_error = None
+    for attempt in range(4):
+        try:
+            response = requests.get(paper["pdf_url"], timeout=30, stream=True)
+            response.raise_for_status()
+            with open(pdf_path, "wb") as f:
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
+            print(f"[INFO] Downloaded: {paper['pdf_filename']}")
+            return True
+        except Exception as e:
+            last_error = e
+            print(f"[WARN] Download attempt {attempt+1}/4 failed {paper['pdf_url']}: {e}")
+            if attempt < 3:
+                time.sleep(5 * (attempt + 1))
+            continue
+    print(f"[ERROR] Download failed {paper['pdf_url']}: {last_error}")
+    return False
 
 
 def load_or_create_excel() -> openpyxl.Workbook:
@@ -202,25 +314,41 @@ def load_or_create_excel() -> openpyxl.Workbook:
     return wb
 
 
+EXCEL_FIELDS = [
+    "arxiv_id", "title", "authors", "affiliations", "published_date",
+    "categories", "abstract", "summary_cn", "pdf_filename", "crawled_date",
+    "notes", "rating", "keywords",
+]
+
+
 def append_to_excel(wb: openpyxl.Workbook, paper: dict):
+    """按表头名写入一行(表头缺列时自动补到末尾),避免列位漂移。"""
     ws = wb["Papers"]
     today = date.today().isoformat()
-    row = [
-        paper["arxiv_id"],
-        paper["title"],
-        paper["authors"],
-        paper.get("affiliations", ""),
-        paper["published_date"],
-        paper["categories"],
-        paper["summary"],
-        paper.get("summary_cn", ""),
-        paper["pdf_filename"],
-        today,
-        "",  # notes
-    ]
-    ws.append(row)
+    values = {
+        "arxiv_id": paper["arxiv_id"],
+        "title": paper["title"],
+        "authors": paper["authors"],
+        "affiliations": paper.get("affiliations", ""),
+        "published_date": paper["published_date"],
+        "categories": paper["categories"],
+        "abstract": paper["summary"],
+        "summary_cn": paper.get("summary_cn", ""),
+        "pdf_filename": paper["pdf_filename"],
+        "crawled_date": today,
+        "notes": paper.get("notes", ""),
+        "rating": paper.get("rating", ""),
+        "keywords": paper.get("keywords", ""),
+    }
+    header = [ws.cell(row=1, column=c).value for c in range(1, ws.max_column + 1)]
+    header = [str(h) if h is not None else "" for h in header]
+    for name in EXCEL_FIELDS:
+        if name not in header:
+            header.append(name)
+            ws.cell(row=1, column=len(header), value=name)
+    ws.append([values.get(name, "") for name in header])
     last_row = ws.max_row
-    for col in range(1, len(row) + 1):
+    for col in range(1, len(header) + 1):
         ws.cell(row=last_row, column=col).alignment = Alignment(wrap_text=True, vertical="top")
     print(f"[INFO] Appended: {paper['arxiv_id']} - {paper['title'][:40]}...")
 
@@ -271,6 +399,10 @@ def upsert_to_excel(
             updates["affiliations"] = paper.get("affiliations", "")
         if paper.get("summary_cn"):
             updates["summary_cn"] = paper.get("summary_cn", "")
+        if paper.get("rating"):
+            updates["rating"] = paper.get("rating", "")
+        if paper.get("keywords"):
+            updates["keywords"] = paper.get("keywords", "")
 
         for key, value in updates.items():
             col = header_index.get(key)
@@ -294,7 +426,23 @@ def save_excel(wb: openpyxl.Workbook):
 
 
 def export_viewer_json_from_excel():
-    """从 papers_record.xlsx 导出 viewer 使用的 papers_data.json。"""
+    """从 papers_record.xlsx 导出 viewer 使用的 papers_data.json。
+
+    优先委托 viewer/build_data.py(单一实现,避免双份逻辑漂移);
+    委托失败时回退到下面的内联实现,保证 monitor.py 不会因为 viewer 侧改动而整体失败。
+    """
+    import subprocess
+
+    script = BASE_DIR / "viewer" / "build_data.py"
+    if script.exists():
+        result = subprocess.run([sys.executable, str(script)], capture_output=True, text=True)
+        if result.returncode == 0:
+            print(result.stdout.strip() or f"[INFO] Viewer JSON updated via {script.name}")
+            return
+        print(f"[WARN] {script.name} failed (rc={result.returncode}), fallback to inline export")
+        if result.stderr:
+            print(f"[WARN] {result.stderr.strip()[:300]}")
+
     if not EXCEL_FILE.exists():
         print(f"[WARN] Excel not found, skip viewer export: {EXCEL_FILE}")
         return
@@ -507,21 +655,32 @@ def main():
         f"excel_incomplete={len(incomplete_excel_papers)} merged={len(pending_ids)}"
     )
 
-    # 搜索
-    keywords = load_search_keywords()
-    all_papers = search_arxiv_papers(keywords)
-    print(f"[INFO] Retrieved {len(all_papers)} papers from arxiv")
+    # 搜索（多行检索式，每行独立检索，按 arxiv_id 去重）
+    keywords_list = load_search_keywords()
+    all_papers = []
+    seen_ids = set()
+    for kw in keywords_list:
+        papers = search_arxiv_papers(kw)
+        for p in papers:
+            if p["arxiv_id"] not in seen_ids:
+                seen_ids.add(p["arxiv_id"])
+                all_papers.append(p)
+        time.sleep(REQUEST_INTERVAL)
+    print(f"[INFO] Retrieved {len(all_papers)} papers from arxiv ({len(keywords_list)} queries)")
 
     # 查重
     new_papers = [p for p in all_papers if p["arxiv_id"] not in crawled_ids]
-    print(f"[INFO] {len(new_papers)} NEW papers")
+    print(f"[INFO] {len(new_papers)} NEW papers (after dedup across queries and crawled IDs)")
 
     # 下载 PDF + 更新 ID
     downloaded = []
     for paper in new_papers:
+        already_exists = (PAPERS_DIR / paper["pdf_filename"]).exists()
         ok = download_pdf(paper)
         downloaded.append({**paper, "pdf_downloaded": ok})
-        time.sleep(REQUEST_INTERVAL)
+        # 仅在真正下载了 PDF 时才 sleep（arXiv 限流保护）
+        if not already_exists:
+            time.sleep(REQUEST_INTERVAL)
 
     if downloaded:
         # 保存 Excel（summary_cn 和 affiliations 暂留空，等 LLM 填入）
@@ -549,11 +708,14 @@ def main():
             "pending_count": 0,
             "new_papers": [],
             "papers_to_process": [],
-            "feishu_msg": f"✅ 今日（{date.today().isoformat()}）未发现新的 LLM 量化论文。",
+            "feishu_msg": f"✅ 今日（{date.today().isoformat()}）未发现新的论文。",
         }
         with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
             json.dump(output, f, ensure_ascii=False, indent=2)
         export_viewer_json_from_excel()
+        # 同步状态文件
+        rebuild_crawled_ids_from_excel()
+        sync_pending_state_from_excel(refresh_output_json=False)
         print("[INFO] No new papers and no pending LLM tasks. Output JSON written.")
         return
 
@@ -568,6 +730,9 @@ def main():
         f"[INFO] fresh_downloaded={len(downloaded)} "
         f"pending_llm={len(papers_to_process)}. Awaiting LLM summarization..."
     )
+
+    # 同步状态文件
+    rebuild_crawled_ids_from_excel()
 
     print("\n" + "=" * 60)
     print("[LLM_SUMMARIZATION_REQUIRED]")
