@@ -2,6 +2,16 @@ let allPapers = [];
 let favorites = new Set();
 const FAVORITES_STORAGE_KEY = "hermes-arxiv-agent:favorites";
 
+const state = {
+  dateMode: "crawled_date",
+  start: "",
+  end: "",
+  keyword: "",
+  ratingSet: new Set(),
+  tagSet: new Set(),
+  favoriteOnly: false,
+};
+
 function loadFavorites() {
   try {
     const raw = window.localStorage.getItem(FAVORITES_STORAGE_KEY);
@@ -66,20 +76,36 @@ function inRange(dateValue, start, end) {
   return true;
 }
 
-function matchesKeyword(paper, keyword) {
-  if (!keyword) {
-    return true;
-  }
-  const target = [
-    paper.arxiv_id,
-    paper.title,
-    paper.authors,
-    paper.affiliations,
-    paper.categories,
-    paper.summary_cn,
-    paper.abstract,
-  ].join(" ").toLowerCase();
-  return target.includes(keyword.toLowerCase());
+function renderRatingBadge(node, rating) {
+  const el = node.querySelector(".rating-badge");
+  el.textContent = rating || "";
+  el.dataset.r = rating || "";
+  el.hidden = !rating;
+}
+
+function renderTags(node, paper, onTagClick) {
+  const wrap = node.querySelector(".tags");
+  wrap.innerHTML = "";
+
+  (paper.keywords || []).forEach((kw) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "tag tag-clickable" + (state.tagSet.has(kw) ? " active" : "");
+    b.textContent = kw;
+    b.addEventListener("click", () => onTagClick(kw));
+    wrap.appendChild(b);
+  });
+
+  text(paper.categories)
+    .split(",")
+    .map((x) => x.trim())
+    .filter(Boolean)
+    .forEach((cat) => {
+      const span = document.createElement("span");
+      span.className = "tag tag-cat";
+      span.textContent = cat;
+      wrap.appendChild(span);
+    });
 }
 
 function renderCards(papers) {
@@ -99,6 +125,7 @@ function renderCards(papers) {
     const node = tpl.content.cloneNode(true);
 
     node.querySelector(".pill").textContent = p.arxiv_id;
+    renderRatingBadge(node, p.rating);
 
     const title = node.querySelector(".title");
     title.textContent = text(p.title) || p.arxiv_id;
@@ -122,87 +149,145 @@ function renderCards(papers) {
 
     node.querySelector(".meta").textContent =
       `抓取: ${text(p.crawled_date) || "-"} | 发表: ${text(p.published_date) || "-"}` +
+      `\n单位: ${text(p.affiliations) || "未提供"}` +
       `\n作者: ${text(p.authors) || "-"}`;
 
-    const tags = node.querySelector(".tags");
-    const cats = text(p.categories)
-      .split(",")
-      .map((x) => x.trim())
-      .filter(Boolean);
-    cats.forEach((cat) => {
-      const span = document.createElement("span");
-      span.className = "tag";
-      span.textContent = cat;
-      tags.appendChild(span);
+    renderTags(node, p, (kw) => {
+      if (state.tagSet.has(kw)) {
+        state.tagSet.delete(kw);
+      } else {
+        state.tagSet.add(kw);
+      }
+      syncTagCloud();
+      applyFilter();
     });
 
-    node.querySelector(".affiliations").textContent = text(p.affiliations) || "未提供";
     node.querySelector(".summary-cn").textContent = text(p.summary_cn) || "未提供";
     node.querySelector(".abstract").textContent = text(p.abstract) || "未提供";
+
+    const rvBtn = node.querySelector(".review-btn");
+    if (window.paperReview.hasReview(p.arxiv_id)) {
+      rvBtn.textContent = "精读(已有)";
+      rvBtn.classList.add("has-review");
+    }
+    rvBtn.addEventListener("click", () => window.paperReview.open(p.arxiv_id, p.title));
 
     container.appendChild(node);
   });
 }
 
-function applyFilter() {
-  const dateMode = document.getElementById("dateMode").value;
-  const start = document.getElementById("startDate").value;
-  const end = document.getElementById("endDate").value;
-  const keyword = document.getElementById("keyword").value.trim();
-  const favoriteOnly = document.getElementById("favoriteOnly").checked;
+function renderTagCloud(tags) {
+  const el = document.getElementById("tagCloud");
+  el.innerHTML = "";
+  if (!tags.length) {
+    el.textContent = "暂无标签";
+    return;
+  }
+  tags.forEach((t) => {
+    const b = document.createElement("button");
+    b.type = "button";
+    b.className = "tag-chip" + (state.tagSet.has(t.name) ? " active" : "");
+    b.dataset.tag = t.name;
+    b.textContent = `${t.name} ${t.count}`;
+    b.addEventListener("click", () => {
+      if (state.tagSet.has(t.name)) {
+        state.tagSet.delete(t.name);
+      } else {
+        state.tagSet.add(t.name);
+      }
+      syncTagCloud();
+      applyFilter();
+    });
+    el.appendChild(b);
+  });
+}
 
-  const papers = allPapers.filter((p) =>
-    inRange(text(p[dateMode]), start, end) &&
-    matchesKeyword(p, keyword) &&
-    (!favoriteOnly || isFavorite(p.arxiv_id))
+function syncTagCloud() {
+  document.querySelectorAll("#tagCloud .tag-chip").forEach((b) => {
+    b.classList.toggle("active", state.tagSet.has(b.dataset.tag));
+  });
+}
+
+function ratingSummary() {
+  if (!state.ratingSet.size) return "全部";
+  return Array.from(state.ratingSet).sort().join("+");
+}
+
+function tagOverlap(paper) {
+  if (!state.tagSet.size) return 0;
+  return (paper.keywords || []).filter((k) => state.tagSet.has(k)).length;
+}
+
+function applyFilter() {
+  const s = state;
+  let papers = allPapers.filter((p) =>
+    inRange(text(p[s.dateMode]), s.start, s.end) &&
+    (s.ratingSet.size === 0 || s.ratingSet.has(text(p.rating))) &&
+    tagOverlap(p) === s.tagSet.size &&
+    (!s.favoriteOnly || isFavorite(p.arxiv_id))
   );
+  papers = window.paperSearch.filter(papers, s.keyword);
   renderCards(papers);
 
   const summary = document.getElementById("summary");
-  summary.textContent = `共 ${allPapers.length} 篇，收藏 ${favorites.size} 篇，当前展示 ${papers.length} 篇（按 ${dateMode === "crawled_date" ? "抓取日期" : "发表日期"} 筛选）`;
+  summary.textContent = [
+    `共 ${allPapers.length} 篇`,
+    `当前展示 ${papers.length} 篇`,
+    `评级: ${ratingSummary()}`,
+    s.tagSet.size ? `标签: ${Array.from(s.tagSet).join(" + ")}` : "标签: 不限",
+    `日期: ${s.dateMode === "crawled_date" ? "抓取" : "发表"} ${s.start || "…"} ~ ${s.end || "…"}`,
+    `收藏 ${favorites.size} 篇`,
+  ].join(" | ");
 }
 
 function resetFilter(defaultMin, defaultMax) {
-  document.getElementById("dateMode").value = "crawled_date";
-  document.getElementById("startDate").value = defaultMin || "";
-  document.getElementById("endDate").value = defaultMax || "";
+  state.dateMode = "crawled_date";
+  state.start = defaultMin || "";
+  state.end = defaultMax || "";
+  state.keyword = "";
+  state.favoriteOnly = false;
+  state.ratingSet.clear();
+  state.tagSet.clear();
+
+  document.getElementById("dateMode").value = state.dateMode;
+  document.getElementById("startDate").value = state.start;
+  document.getElementById("endDate").value = state.end;
   document.getElementById("keyword").value = "";
   document.getElementById("favoriteOnly").checked = false;
+  document.querySelectorAll("#ratingChips .chip").forEach((b) => {
+    b.classList.toggle("active", b.dataset.rating === "");
+  });
+  syncTagCloud();
   applyFilter();
 }
 
 function applyQuickRange(range) {
-  const startDate = document.getElementById("startDate");
-  const endDate = document.getElementById("endDate");
   const today = new Date();
   const end = formatDate(today);
-
   if (range === "all") {
-    startDate.value = "";
-    endDate.value = "";
-    applyFilter();
-    return;
+    state.start = "";
+    state.end = "";
+  } else if (range === "today") {
+    state.start = end;
+    state.end = end;
+  } else if (range === "3d") {
+    state.start = formatDate(daysAgo(today, 2));
+    state.end = end;
+  } else if (range === "7d") {
+    state.start = formatDate(daysAgo(today, 6));
+    state.end = end;
   }
+  document.getElementById("startDate").value = state.start;
+  document.getElementById("endDate").value = state.end;
+  applyFilter();
+}
 
-  if (range === "today") {
-    startDate.value = end;
-    endDate.value = end;
-    applyFilter();
-    return;
-  }
-
-  if (range === "3d") {
-    startDate.value = formatDate(daysAgo(today, 2));
-    endDate.value = end;
-    applyFilter();
-    return;
-  }
-
-  if (range === "7d") {
-    startDate.value = formatDate(daysAgo(today, 6));
-    endDate.value = end;
-    applyFilter();
-  }
+function debounce(fn, ms) {
+  let t = null;
+  return (...args) => {
+    if (t) clearTimeout(t);
+    t = setTimeout(() => fn(...args), ms);
+  };
 }
 
 async function init() {
@@ -214,30 +299,72 @@ async function init() {
   const payload = await res.json();
   allPapers = payload.papers || [];
   loadFavorites();
+  await window.paperReview.loadIndex();
 
   const defaultMin = payload.crawled_date_min || "";
   const defaultMax = payload.crawled_date_max || "";
+  state.start = defaultMin;
+  state.end = defaultMax;
 
+  const counts = payload.rating_counts || {};
   document.getElementById("metaText").textContent =
-    `收录 ${payload.count || allPapers.length} 篇 | 抓取区间 ${defaultMin || "-"} ~ ${defaultMax || "-"}`;
+    `收录 ${payload.count || allPapers.length} 篇 | 抓取区间 ${defaultMin || "-"} ~ ${defaultMax || "-"}` +
+    ` | S ${counts.S || 0} / A ${counts.A || 0} / B ${counts.B || 0} / C ${counts.C || 0}`;
 
-  const startDate = document.getElementById("startDate");
-  const endDate = document.getElementById("endDate");
-  startDate.value = defaultMin;
-  endDate.value = defaultMax;
+  document.getElementById("startDate").value = defaultMin;
+  document.getElementById("endDate").value = defaultMax;
 
-  document.getElementById("applyBtn").addEventListener("click", applyFilter);
+  renderTagCloud(payload.tags || []);
+
+  document.getElementById("ratingChips").addEventListener("click", (e) => {
+    const btn = e.target.closest("button[data-rating]");
+    if (!btn) return;
+    const r = btn.dataset.rating;
+    if (r === "") {
+      state.ratingSet.clear();
+    } else if (state.ratingSet.has(r)) {
+      state.ratingSet.delete(r);
+    } else {
+      state.ratingSet.add(r);
+    }
+    document.querySelectorAll("#ratingChips .chip").forEach((b) => {
+      const active = b.dataset.rating === "" ? state.ratingSet.size === 0 : state.ratingSet.has(b.dataset.rating);
+      b.classList.toggle("active", active);
+    });
+    applyFilter();
+  });
+
+  document.getElementById("dateMode").addEventListener("change", (e) => {
+    state.dateMode = e.target.value;
+    applyFilter();
+  });
+  document.getElementById("startDate").addEventListener("change", (e) => {
+    state.start = e.target.value;
+    applyFilter();
+  });
+  document.getElementById("endDate").addEventListener("change", (e) => {
+    state.end = e.target.value;
+    applyFilter();
+  });
   document.getElementById("resetBtn").addEventListener("click", () => resetFilter(defaultMin, defaultMax));
-  document.getElementById("favoriteOnly").addEventListener("change", applyFilter);
+  document.getElementById("favoriteOnly").addEventListener("change", (e) => {
+    state.favoriteOnly = e.target.checked;
+    applyFilter();
+  });
   document.getElementById("quickRange").addEventListener("click", (e) => {
     const btn = e.target.closest("button[data-range]");
-    if (!btn) {
-      return;
-    }
+    if (!btn) return;
     applyQuickRange(btn.dataset.range);
   });
-  document.getElementById("keyword").addEventListener("keydown", (e) => {
+
+  const keywordInput = document.getElementById("keyword");
+  keywordInput.addEventListener("input", debounce((e) => {
+    state.keyword = e.target.value;
+    applyFilter();
+  }, 250));
+  keywordInput.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
+      state.keyword = keywordInput.value;
       applyFilter();
     }
   });
@@ -247,5 +374,5 @@ async function init() {
 
 init().catch((err) => {
   const summary = document.getElementById("summary");
-  summary.textContent = err.message;
+  if (summary) summary.textContent = err.message;
 });

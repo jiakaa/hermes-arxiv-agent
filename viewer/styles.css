@@ -447,3 +447,256 @@ summary {
     margin-left: 0;
   }
 }
+
+/* ===== 侧栏布局 + 多条件筛选 + 精读面板 ===== */
+.layout {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 280px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.sidebar {
+  position: sticky;
+  top: 84px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: var(--shadow);
+  max-height: calc(100vh - 104px);
+  overflow-y: auto;
+}
+
+.main-col {
+  min-width: 0;
+}
+
+.hint {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.hint-inline {
+  font-size: 11px;
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.chip {
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  font: inherit;
+  width: auto;
+  min-width: 0;
+}
+
+.chip.active {
+  background: var(--accent-soft);
+  border-color: #99f6e4;
+  color: #0f766e;
+  font-weight: 700;
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding-right: 2px;
+}
+
+.tag-chip {
+  border: 1px solid #ddd2be;
+  background: var(--chip);
+  color: #5c4a20;
+  border-radius: 999px;
+  padding: 3px 9px;
+  font-size: 11px;
+  cursor: pointer;
+  font: inherit;
+  width: auto;
+}
+
+.tag-chip.active {
+  background: #fde68a;
+  border-color: #f59e0b;
+  color: #78350f;
+  font-weight: 700;
+}
+
+.tag.tag-clickable {
+  cursor: pointer;
+  font: inherit;
+}
+
+.tag.tag-clickable.active {
+  background: #fde68a;
+  border-color: #f59e0b;
+  color: #78350f;
+  font-weight: 700;
+}
+
+.tag.tag-cat {
+  background: #eef2f7;
+  border-color: #d7dee8;
+  color: #475569;
+}
+
+.rating-badge {
+  border-radius: 999px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.rating-badge[data-r="S"] { background: #fee2e2; color: #b91c1c; }
+.rating-badge[data-r="A"] { background: #fef3c7; color: #b45309; }
+.rating-badge[data-r="B"] { background: #e0e7ff; color: #3730a3; }
+.rating-badge[data-r="C"] { background: #f1f5f9; color: #64748b; }
+
+.card-actions {
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.review-btn {
+  width: 100%;
+}
+
+.review-btn.has-review {
+  background: linear-gradient(135deg, #a7f3d0, #bae6fd);
+}
+
+.review-panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: min(760px, 94vw);
+  background: var(--card);
+  border-left: 1px solid var(--line);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  box-shadow: -12px 0 40px rgba(24, 29, 37, 0.18);
+}
+
+/* display:flex 会覆盖 UA 的 [hidden]{display:none},这里显式补回 */
+.review-panel[hidden] {
+  display: none;
+}
+
+.review-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.review-head-actions {
+  display: flex;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.review-head-actions .btn {
+  width: auto;
+  font-size: 13px;
+  padding: 6px 12px;
+}
+
+.review-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 20px 60px;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.review-body h1 { font-size: 20px; margin: 8px 0 12px; }
+.review-body h2 {
+  font-size: 16px;
+  margin: 22px 0 8px;
+  border-left: 4px solid var(--accent);
+  padding-left: 10px;
+}
+.review-body h3 { font-size: 15px; margin: 16px 0 6px; }
+.review-body p { margin: 0 0 10px; color: #334155; }
+.review-body ul { margin: 0 0 12px; padding-left: 22px; color: #334155; }
+.review-body li { margin-bottom: 4px; }
+.review-body blockquote {
+  margin: 0 0 12px;
+  padding: 6px 12px;
+  border-left: 3px solid #cbd5e1;
+  color: var(--muted);
+  background: #f8fafc;
+}
+.review-body pre {
+  background: #f1f5f9;
+  padding: 10px 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 12.5px;
+}
+.review-body code {
+  background: #f1f5f9;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 12.5px;
+}
+
+.review-loading,
+.review-empty {
+  color: var(--muted);
+  padding: 28px 4px;
+  line-height: 1.9;
+}
+
+.review-empty .hint {
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.review-empty code {
+  word-break: break-all;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .sidebar {
+    position: static;
+    max-height: none;
+  }
+
+  .tag-cloud {
+    max-height: 180px;
+  }
+}
+

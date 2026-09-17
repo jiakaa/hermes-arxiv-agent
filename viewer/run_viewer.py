@@ -12,7 +12,11 @@ import argparse
 import errno
 import http.server
 import json
+import re
 import socketserver
+import subprocess
+import threading
+import time
 from pathlib import Path
 import socket
 import sys
@@ -23,6 +27,66 @@ PORT = 8765
 HOST = "0.0.0.0"
 VIEWER_DIR = Path(__file__).resolve().parent
 FAVORITES_FILE = VIEWER_DIR / "favorites.json"
+
+# ===== 精读生成(点击触发,不在任何定时任务里自动跑)=====
+PAPERS_DIR = VIEWER_DIR.parent / "papers"
+REVIEWS_DIR = VIEWER_DIR / "reviews"
+GENERATE_SCRIPT = VIEWER_DIR.parent / "scripts" / "generate_review.py"
+REVIEW_PATH_RE = re.compile(r"^/api/review/(?P<arxiv_id>\d{4}\.\d{4,5})$")
+CJK_RE = re.compile(r"[\u4e00-\u9fff]")
+_review_jobs: dict[str, dict] = {}
+_review_lock = threading.Lock()
+
+
+def _cjk_count(path: Path) -> int:
+    return len(CJK_RE.findall(path.read_text(encoding="utf-8", errors="replace")))
+
+
+def review_status(arxiv_id: str) -> dict:
+    md = REVIEWS_DIR / f"{arxiv_id}.md"
+    if md.exists():
+        return {"status": "done", "chars": _cjk_count(md)}
+    with _review_lock:
+        job = _review_jobs.get(arxiv_id)
+        proc = job["proc"] if job else None
+        started = job["started_at"] if job else 0.0
+    if proc is not None and proc.poll() is None:
+        return {"status": "generating", "elapsed": time.time() - started, "pid": proc.pid}
+    if proc is not None:
+        log_path = Path(f"/tmp/review_{arxiv_id}.agy.log")
+        tail = ""
+        if log_path.exists():
+            tail = log_path.read_text(encoding="utf-8", errors="replace")[-1500:]
+        return {
+            "status": "error",
+            "message": f"生成进程已退出(rc={proc.returncode}),结果未达到要求",
+            "log": tail,
+        }
+    return {"status": "missing"}
+
+
+def start_review(arxiv_id: str) -> tuple[dict, int]:
+    md = REVIEWS_DIR / f"{arxiv_id}.md"
+    if md.exists():
+        return {"status": "done", "chars": _cjk_count(md)}, 200
+    if not (PAPERS_DIR / f"{arxiv_id}.pdf").exists():
+        return {"status": "error", "message": f"本地缺少 PDF:papers/{arxiv_id}.pdf"}, 404
+    if not GENERATE_SCRIPT.exists():
+        return {"status": "error", "message": f"缺少生成脚本:{GENERATE_SCRIPT}"}, 500
+    with _review_lock:
+        job = _review_jobs.get(arxiv_id)
+        if job and job["proc"].poll() is None:
+            return {"status": "generating", "elapsed": time.time() - job["started_at"]}, 409
+        log = open(f"/tmp/review_{arxiv_id}.server.log", "w", encoding="utf-8")  # noqa: SIM115
+        proc = subprocess.Popen(
+            [sys.executable, str(GENERATE_SCRIPT), arxiv_id],
+            stdout=log,
+            stderr=subprocess.STDOUT,
+            text=True,
+            cwd=str(VIEWER_DIR.parent),
+        )
+        _review_jobs[arxiv_id] = {"proc": proc, "started_at": time.time()}
+    return {"status": "generating", "pid": proc.pid}, 202
 
 
 def get_local_ip() -> str:
@@ -84,12 +148,24 @@ def main() -> None:
             self.wfile.write(body)
 
         def do_GET(self) -> None:
+            if self.path == "/api/health":
+                self._send_json({"ok": True, "mode": "local"})
+                return
+            match = REVIEW_PATH_RE.match(self.path)
+            if match:
+                self._send_json(review_status(match.group("arxiv_id")))
+                return
             if self.path == "/api/favorites":
                 self._send_json({"favorites": load_favorites()})
                 return
             super().do_GET()
 
         def do_POST(self) -> None:
+            match = REVIEW_PATH_RE.match(self.path)
+            if match:
+                payload, status = start_review(match.group("arxiv_id"))
+                self._send_json(payload, status=status)
+                return
             if self.path != "/api/favorites":
                 self.send_error(404, "Not Found")
                 return
