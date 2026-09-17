@@ -1,6 +1,12 @@
 {
-  "count": 1,
+  "count": 2,
   "reviews": [
+    {
+      "arxiv_id": "2609.08730",
+      "title": "CVT-GS: Learning to Simplify 3D Gaussian Splatting with Centroidal Voronoi Tessellation",
+      "updated": 1789640114.8851604,
+      "chars": 31299
+    },
     {
       "arxiv_id": "2609.17039",
       "title": "BI-FLOWGS: BRIDGING GENERATIVE VIEW COMPLETION AND GAUSSIAN GEOMETRY THROUGH BIDIRECTIONAL FLOW CO-REFINEMENT",
