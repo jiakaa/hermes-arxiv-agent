@@ -151,6 +151,17 @@ def run_agy(prompt: str, model: str, timeout_min: float, log_path: Path) -> int:
     return proc.returncode
 
 
+def agy_auth_failed(log_path: Path) -> bool:
+    """检测 agy 是否因未登录而失败(常见:token 过期),便于给出明确指引。"""
+    if not log_path.exists():
+        return False
+    try:
+        text = log_path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return False
+    return ("Authentication required" in text) or ("authentication failed" in text.lower())
+
+
 def rebuild_index() -> None:
     """生成成功后刷新 reviews_index.json,便于前端显示"已精读"徽章。"""
     script = BASE / "viewer" / "build_reviews_index.py"
@@ -229,6 +240,15 @@ def main() -> int:
                 )
             print(f"[INFO] agy source={source} attempt={attempt} model={args.model} timeout={args.timeout}m")
             rc = run_agy(run_prompt, args.model, args.timeout, log_path)
+            if agy_auth_failed(log_path):
+                print(
+                    "[ERROR] agy 未登录或登录已过期。请在终端里执行一次:\n"
+                    "        agy --print \"ok\"\n"
+                    "        然后打开它给出的 Google 授权链接、复制授权码粘贴回终端即可(只需一次)。\n"
+                    "        完成后重跑本脚本即可生成精读。",
+                    file=sys.stderr,
+                )
+                return 4
             if not out_path.exists():
                 print(f"[WARN] source={source} attempt={attempt}: 未产出文件 (agy rc={rc})")
                 break
