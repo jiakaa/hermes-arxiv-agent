@@ -128,6 +128,7 @@
       const data = await res.json();
       if (data.status === "done") {
         await showMarkdown(arxivId);
+        document.dispatchEvent(new CustomEvent("review:generated", { detail: { arxivId } }));
         return;
       }
       if (data.status === "error") {

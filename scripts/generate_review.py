@@ -100,6 +100,18 @@ def run_agy(prompt: str, model: str, timeout_min: float, log_path: Path) -> int:
     return proc.returncode
 
 
+def rebuild_index() -> None:
+    """生成成功后刷新 reviews_index.json,便于前端显示"已精读"徽章。"""
+    script = BASE / "viewer" / "build_reviews_index.py"
+    if not script.exists():
+        return
+    result = subprocess.run([sys.executable, str(script)], capture_output=True, text=True)
+    if result.returncode == 0:
+        print(result.stdout.strip())
+    else:
+        print(f"[WARN] build_reviews_index.py failed: {result.stderr.strip()[:200]}")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("arxiv_id")
@@ -146,6 +158,7 @@ def main() -> int:
             chars = count_cjk(out_path.read_text(encoding="utf-8"))
             print(f"[INFO] attempt {attempt}: wrote {chars} 汉字 (agy rc={rc})")
             if chars >= args.min_chars:
+                rebuild_index()
                 print(f"[OK] {out_path} ({chars} 汉字)")
                 return 0
         else:

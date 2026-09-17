@@ -369,6 +369,9 @@ async function init() {
     }
   });
 
+  // 精读生成完成后刷新卡片徽章("精读" -> "精读(已有)")
+  document.addEventListener("review:generated", () => applyFilter());
+
   applyFilter();
 }
 
