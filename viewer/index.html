@@ -10,6 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="vendor/katex/katex.min.css">
   <!-- Cloudflare Web Analytics -->
   <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "__CF_TOKEN_PLACEHOLDER__"}'></script>
   <!-- End Cloudflare Web Analytics -->
@@ -111,12 +112,14 @@
 
   <template id="paperTpl">
     <article class="card">
-      <div class="card-head">
+      <!-- 第一层:与标题无关的元信息(编号 / 评级 / 收藏) -->
+      <div class="card-top">
         <span class="pill"></span>
         <span class="rating-badge"></span>
-        <a class="title" target="_blank" rel="noopener noreferrer"></a>
         <button class="favorite-btn" type="button" aria-label="收藏">☆ 收藏</button>
       </div>
+      <!-- 第二层:标题独占整行,从左边缘开始 -->
+      <a class="title" target="_blank" rel="noopener noreferrer"></a>
       <div class="meta"></div>
       <div class="tags"></div>
       <div class="section">
@@ -133,7 +136,10 @@
     </article>
   </template>
 
+  <script src="vendor/katex/katex.min.js"></script>
+  <script src="vendor/katex/auto-render.min.js"></script>
   <script src="search.js"></script>
+  <script src="markdown.js"></script>
   <script src="review.js"></script>
   <script src="app.js"></script>
 </body>

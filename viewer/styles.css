@@ -593,7 +593,7 @@ summary {
   top: 0;
   right: 0;
   height: 100vh;
-  width: min(760px, 94vw);
+  width: var(--review-panel-w);
   background: var(--card);
   border-left: 1px solid var(--line);
   z-index: 40;
@@ -698,5 +698,182 @@ summary {
   .tag-cloud {
     max-height: 180px;
   }
+}
+
+/* ===== 卡片头部两层排版:第一层放编号/评级/收藏,第二层标题独占整行 ===== */
+.card-top {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card-top .favorite-btn {
+  margin-left: auto;
+}
+
+.card .title {
+  display: block;
+  width: 100%;
+  font-size: 15.5px;
+  line-height: 1.5;
+  letter-spacing: 0.1px;
+  overflow-wrap: anywhere;
+}
+
+/* ===== 打开精读面板时:卡片区整体左移,并把左侧栏收起,保证卡片宽度可用 ===== */
+:root {
+  --review-panel-w: min(680px, 48vw);
+}
+
+.layout {
+  transition: padding-right 0.25s ease;
+}
+
+body.review-open .layout {
+  padding-right: calc(var(--review-panel-w) + 20px);
+}
+
+/* 中等宽度:收起筛选侧栏,把全部剩余宽度给卡片(否则卡片会被压成一格一个词) */
+@media (max-width: 1500px) {
+  body.review-open .layout {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  body.review-open .sidebar {
+    display: none;
+  }
+}
+
+/* 窄屏:面板几乎占满,不再左移 */
+@media (max-width: 1180px) {
+  :root {
+    --review-panel-w: 94vw;
+  }
+
+  body.review-open .layout {
+    padding-right: 20px;
+  }
+}
+
+/* ===== 精读正文:表格 / 告警块 / 折叠块 / 高亮 / 公式 ===== */
+.review-body strong {
+  color: #0f172a;
+}
+
+.review-body mark {
+  background: #fef08a;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+
+.review-body u {
+  text-decoration-color: #14b8a6;
+  text-underline-offset: 3px;
+}
+
+.review-body hr {
+  border: none;
+  border-top: 1px dashed #cbd5e1;
+  margin: 22px 0;
+}
+
+.md-table-wrap {
+  overflow-x: auto;
+  margin: 0 0 16px;
+}
+
+.review-body table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 13px;
+}
+
+.review-body th,
+.review-body td {
+  border: 1px solid #dbe3ec;
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.review-body thead th {
+  background: #f1f5f9;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.review-body tbody tr:nth-child(even) {
+  background: #fafcff;
+}
+
+.callout {
+  border-left: 4px solid #94a3b8;
+  background: #f8fafc;
+  border-radius: 8px;
+  padding: 10px 14px 4px;
+  margin: 0 0 16px;
+}
+
+.callout-title {
+  margin: 0 0 6px !important;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.4px;
+}
+
+.callout-note { border-left-color: #3b82f6; background: #eff6ff; }
+.callout-note .callout-title { color: #1d4ed8; }
+.callout-tip { border-left-color: #10b981; background: #ecfdf5; }
+.callout-tip .callout-title { color: #047857; }
+.callout-important { border-left-color: #8b5cf6; background: #f5f3ff; }
+.callout-important .callout-title { color: #6d28d9; }
+.callout-warning { border-left-color: #f59e0b; background: #fffbeb; }
+.callout-warning .callout-title { color: #b45309; }
+.callout-caution { border-left-color: #ef4444; background: #fef2f2; }
+.callout-caution .callout-title { color: #b91c1c; }
+
+.review-body details {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  margin: 0 0 16px;
+  background: #fcfdff;
+}
+
+.review-body details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #0f766e;
+}
+
+.md-details-body {
+  padding-top: 8px;
+}
+
+.md-list {
+  padding-left: 22px;
+}
+
+.md-task {
+  list-style: none;
+  margin-left: -18px;
+  display: flex;
+  gap: 8px;
+}
+
+.md-task .md-check {
+  color: #0d9488;
+  font-weight: 700;
+}
+
+.md-task.done {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.review-body .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 0;
 }
 

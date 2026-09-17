@@ -14,45 +14,9 @@
       ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   }
 
+  // Markdown 渲染实现放在 markdown.js(表格 / 告警块 / 折叠块 / 公式)
   function renderMarkdown(md) {
-    const lines = md.split(/\r?\n/);
-    let html = "", inCode = false, inList = false;
-    const codeBuf = [];
-    const inline = (s) => s
-      .replace(/`([^`]+)`/g, "<code>$1</code>")
-      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
-      .replace(/\[([^\]]+)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
-    for (const raw of lines) {
-      if (raw.trim().startsWith("```")) {
-        if (inCode) { html += `<pre><code>${esc(codeBuf.join("\n"))}</code></pre>`; codeBuf.length = 0; }
-        inCode = !inCode;
-        continue;
-      }
-      if (inCode) { codeBuf.push(raw); continue; }
-      if (!raw.trim()) { if (inList) { html += "</ul>"; inList = false; } continue; }
-      const h = raw.match(/^(#{1,4})\s+(.*)$/);
-      if (h) {
-        if (inList) { html += "</ul>"; inList = false; }
-        html += `<h${h[1].length}>${inline(esc(h[2]))}</h${h[1].length}>`;
-        continue;
-      }
-      const li = raw.match(/^\s*(?:[-*]|\d+\.)\s+(.*)$/);
-      if (li) {
-        if (!inList) { html += "<ul>"; inList = true; }
-        html += `<li>${inline(esc(li[1]))}</li>`;
-        continue;
-      }
-      if (/^>\s?/.test(raw)) {
-        if (inList) { html += "</ul>"; inList = false; }
-        html += `<blockquote>${inline(esc(raw.replace(/^>\s?/, "")))}</blockquote>`;
-        continue;
-      }
-      if (inList) { html += "</ul>"; inList = false; }
-      html += `<p>${inline(esc(raw))}</p>`;
-    }
-    if (inCode) html += `<pre><code>${esc(codeBuf.join("\n"))}</code></pre>`;
-    if (inList) html += "</ul>";
-    return html;
+    return window.mdRender(md);
   }
 
   async function loadIndex() {
@@ -84,6 +48,7 @@
   function close() {
     stopPolling();
     panel.hidden = true;
+    document.body.classList.remove("review-open");
     currentId = null;
   }
 
@@ -91,6 +56,7 @@
     const res = await fetch(`reviews/${encodeURIComponent(arxivId)}.md`, { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     body.innerHTML = renderMarkdown(await res.text());
+    if (window.mdRenderMath) window.mdRenderMath(body);
     indexCache = null;
     await loadIndex();
   }
@@ -155,6 +121,7 @@
       titleEl.textContent = title || arxivId;
       linkEl.href = `https://arxiv.org/abs/${arxivId}`;
       panel.hidden = false;
+      document.body.classList.add("review-open");
       body.innerHTML = `<div class="review-loading">加载精读…</div>`;
       await loadIndex();
       try {
