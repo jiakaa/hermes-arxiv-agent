@@ -1,4 +1,4 @@
-## 任务：每天自动监控 arXiv 论文并推送飞书
+## 任务：每天自动监控 arXiv 论文并推送飞书日报
 
 ### 第一步：执行 Python 脚本
 cd 到项目根目录后，用 python3 运行：
@@ -43,6 +43,12 @@ cd /path/to/hermes-arxiv-agent && python3 monitor.py
 将 affiliations 和 summary_cn 回填到 `/path/to/hermes-arxiv-agent/papers_record.xlsx`（按 arxiv_id 匹配）。
 
 ### 第五步：更新网站数据
+
+在重建网站数据前，先为缺失关键词的论文自动打标签（确定性规则，不调用 LLM，失败可忽略并继续）：
+```bash
+cd /path/to/hermes-arxiv-agent && python3 tagging/update_keywords.py --missing
+```
+
 在项目根目录执行：
 ```bash
 cd /path/to/hermes-arxiv-agent && python3 viewer/build_data.py
@@ -62,12 +68,86 @@ cd /path/to/hermes-arxiv-agent && python3 monitor.py --sync-pending-state
 - 若全部论文都已完成单位提取和中文总结，应自动清空 `pending_llm_ids.txt`
 - 该步骤还会同步刷新 `new_papers.json`，避免 agent 重试时继续读取旧的待处理论文列表
 
-### 第七步：构建飞书 Markdown 消息
-输出格式：
+### 第七步：更新 sent_feishu_ids.txt 避免重复推送
+
+在构建飞书消息前，先读取 sent_feishu_ids.txt（路径：/home/lijian/code/AIGC/hermes-arxiv/sent_feishu_ids.txt）：
+- 如果文件不存在，视为首次推送，所有已完成的论文都可以推送。
+- 每次推送前过滤：已经在该文件中的 arxiv_id 不要再次推送。
+- 推送完成后，将本次推送的所有 arxiv_id 追加到 sent_feishu_ids.txt 中（每行一个）。
+- 每个 arxiv_id 只保留一次，不允许重复行。
+
+**已推送过的论文不再重复推送**，除非用户手动清空 sent_feishu_ids.txt。
+
+### 第八步：对每篇论文进行相关性分级
+
+我的博士方向是：自动驾驶场景中的在线前馈 3D 重建、3DGS/4DGS 场景重建与压缩、世界模型与闭环仿真、精密地面重建（RoadBEV、CARD、pothole 检测）。
+
+对每一篇已完成 LLM 补全的论文（从 Excel 中读取），请按以下规则分级：
+
+**S 级：强相关，建议当天阅读**。满足以下任一条件即可：
+  a. 直接涉及 VGGT、DGGT、feed-forward 3D reconstruction、online reconstruction、sparse-view reconstruction；
+  b. 直接涉及自动驾驶场景中的 3DGS、4DGS、Gaussian Splatting、动态场景重建、场景压缩、快速训练；
+  c. 直接涉及 world model、WorldDrive、闭环规划、规划头、强化学习、policy learning；
+  d. 直接涉及 closed-loop training、closed-loop simulation、scenario simulation；
+  e. 直接涉及 RoadBEV、CARD、road surface reconstruction、road elevation、road geometry、pothole、ground reconstruction。
+
+**A 级：相关，建议收藏**。论文方向与上述主题接近，但不是直接解决我的问题。
+
+**B 级：弱相关**。只需要简短记录。
+
+**C 级：明显噪声**。不要推送正文，只在最后统计数量。
+
+如果论文中引用、提到或明显相关于 RoadBEV、CARD、VGGT、DGGT、WorldDrive、Gaussian Splatting、3DGS、4DGS、closed-loop、pothole、road surface，请优先推送，即使它不是当天最热门论文。
+
+分级完成后，把每篇论文的评级（S/A/B/C）按 arxiv_id 写回 `/path/to/hermes-arxiv-agent/papers_record.xlsx` 的 `rating` 列（该列已存在；只写本次分级的论文，其余行不动）。这一步只影响网页库的评级筛选，不改变飞书日报的内容与格式。
+
+### 第九步：构建飞书日报
+
+按以下格式构建飞书 Markdown 消息，**只推送本次新完成 + 未推送过的论文**（已读 sent_feishu_ids.txt 过滤）：
+
 ```
-📚 **论文日报** | YYYY-MM-DD
-共发现 **N** 篇新论文
-[每篇：标题、arXiv ID、日期、作者、单位、PDF 链接、90-150 字中文摘要]
-PDF 已下载至 papers/，记录已更新至 papers_record.xlsx，网站数据已更新至 viewer/papers_data.json。
+# 今日博士方向 arXiv 论文日报：YYYY-MM-DD
+
+## 总览
+- 今日新增论文：N 篇
+- S 级强相关：N 篇（本次新推送）
+- A 级相关：N 篇（本次新推送）
+- B 级弱相关：N 篇（本次新推送）
+- C 级噪声过滤：N 篇
+- 待补全论文：N 篇（仅统计数量，不展开正文）
+
+## S 级：建议当天精读
+
+逐篇列出，每篇格式：
+
+**1. 【在线前馈重建/自动驾驶3DGS/4DGS/世界模型/规划/闭环训练/精密地面重建】标题**
+- arXiv ID：xxxx.xxxxx
+- 发布日期：YYYY-MM-DD
+- 作者：作者名1, 作者名2, ...
+- 作者单位：MIT; Stanford; ...
+- PDF：[链接](https://arxiv.org/pdf/xxxx.xxxxx)
+- 关键词命中：all:VGGT, all:3DGS, ...
+- 中文总结：150 字以内，重点回答：这篇论文解决什么问题？方法核心是什么？是否更轻量、更快、多视角更轻量、更少训练资源？是否能用于自动驾驶场景重建、闭环仿真、规划训练、世界模型或地面细节重建？和 VGGT/DGGT、3DGS/4DGS、WorldDrive、RoadBEV、CARD 是否有关？
+- 对博士论文价值：1-3 句话说明该论文对我博士论文的潜在价值
+- 建议精读：是
+
+## A 级：建议收藏
+
+每篇格式与 S 级相同，但"建议精读"改为"可收藏"。
+
+## B 级：弱相关简记
+
+只列标题、arXiv ID、方向标签和一句话原因。
+
+## 被过滤的 C 级论文
+共 N 篇，不展开。
+
+## 今日最值得读的 3 篇
+请按和我博士方向的相关性排序，给出 1、2、3，并说明为什么。
+
+### 第十步：记录已推送 ID
+
+构建并推送飞书消息后，将本次推送的所有 arxiv_id 追加写入 `/home/lijian/code/AIGC/hermes-arxiv/sent_feishu_ids.txt`（每行一个，确保无重复）。这样明天的日报不会再推送这些论文。
 ```
-**重要：最终回复只输出飞书消息文本，不要输出其他说明。**
+
+**重要：最终回复只输出飞书消息文本（Markdown 格式），不要输出其他说明。**
