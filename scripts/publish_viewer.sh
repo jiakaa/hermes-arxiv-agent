@@ -34,8 +34,16 @@ if [[ -f pending_llm_ids.txt ]] && [[ -s pending_llm_ids.txt ]]; then
 fi
 
 changed_paths=()
-for path in viewer/papers_data.json viewer/index.html viewer/app.js viewer/styles.css; do
+for path in viewer/papers_data.json viewer/index.html viewer/app.js viewer/styles.css \
+            viewer/search.js viewer/review.js viewer/reviews_index.json; do
   if [[ -n "$(git status --porcelain -- "$path")" ]]; then
+    changed_paths+=("$path")
+  fi
+done
+
+# 精读文档:单篇新增/更新都要能被发布(通配展开为空时跳过)
+for path in viewer/reviews/*.md; do
+  if [[ -e "$path" ]] && [[ -n "$(git status --porcelain -- "$path")" ]]; then
     changed_paths+=("$path")
   fi
 done
