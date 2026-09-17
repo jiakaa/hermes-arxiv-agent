@@ -34,8 +34,11 @@ if [[ -f pending_llm_ids.txt ]] && [[ -s pending_llm_ids.txt ]]; then
 fi
 
 changed_paths=()
+# 注意:index.html 引用到的每个本地文件都必须在这里(或通过目录项),否则线上会出现 404。
+# tests/test_publish_manifest.py 会校验这一点。
 for path in viewer/papers_data.json viewer/index.html viewer/app.js viewer/styles.css \
-            viewer/search.js viewer/review.js viewer/reviews_index.json; do
+            viewer/search.js viewer/review.js viewer/markdown.js viewer/reviews_index.json \
+            viewer/favicon.svg viewer/vendor; do
   if [[ -n "$(git status --porcelain -- "$path")" ]]; then
     changed_paths+=("$path")
   fi
