@@ -13,6 +13,7 @@ import errno
 import http.server
 import json
 import re
+import shutil
 import socketserver
 import subprocess
 import threading
@@ -34,8 +35,15 @@ REVIEWS_DIR = VIEWER_DIR / "reviews"
 GENERATE_SCRIPT = VIEWER_DIR.parent / "scripts" / "generate_review.py"
 REVIEW_PATH_RE = re.compile(r"^/api/review/(?P<arxiv_id>\d{4}\.\d{4,5})$")
 CJK_RE = re.compile(r"[\u4e00-\u9fff]")
+PDF_PATH_RE = re.compile(r"^/pdf/(?P<arxiv_id>\d{4}\.\d{4,5})$")
 _review_jobs: dict[str, dict] = {}
 _review_lock = threading.Lock()
+
+
+def find_local_pdf(arxiv_id: str) -> Path | None:
+    """本地已下载的 PDF(papers/ 在项目根,不在 viewer/ 里)。"""
+    path = PAPERS_DIR / f"{arxiv_id}.pdf"
+    return path if path.exists() else None
 
 
 def _cjk_count(path: Path) -> int:
@@ -147,9 +155,31 @@ def main() -> None:
             self.end_headers()
             self.wfile.write(body)
 
+        def _serve_pdf(self, arxiv_id: str) -> None:
+            """把本地 papers/<id>.pdf 以内联方式交给浏览器内置 PDF 阅读器。"""
+            pdf = find_local_pdf(arxiv_id)
+            if pdf is None:
+                self._send_json({"error": "pdf not found locally", "arxiv_id": arxiv_id}, status=404)
+                return
+            try:
+                size = pdf.stat().st_size
+                self.send_response(200)
+                self.send_header("Content-Type", "application/pdf")
+                self.send_header("Content-Length", str(size))
+                self.send_header("Content-Disposition", f'inline; filename="{arxiv_id}.pdf"')
+                self.end_headers()
+                with pdf.open("rb") as fh:
+                    shutil.copyfileobj(fh, self.wfile, length=256 * 1024)
+            except (BrokenPipeError, ConnectionResetError):
+                pass  # 浏览器取消下载属正常情况
+
         def do_GET(self) -> None:
             if self.path == "/api/health":
                 self._send_json({"ok": True, "mode": "local"})
+                return
+            pdf_match = PDF_PATH_RE.match(self.path)
+            if pdf_match:
+                self._serve_pdf(pdf_match.group("arxiv_id"))
                 return
             match = REVIEW_PATH_RE.match(self.path)
             if match:

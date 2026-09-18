@@ -45,6 +45,18 @@
     if (pollTimer) { clearTimeout(pollTimer); pollTimer = null; }
   }
 
+  function setSourceLink(arxivId, isLocal) {
+    if (isLocal) {
+      linkEl.href = `pdf/${encodeURIComponent(arxivId)}`;
+      linkEl.textContent = "本地 PDF";
+      linkEl.title = "用浏览器打开本机已下载的 PDF";
+    } else {
+      linkEl.href = `https://arxiv.org/abs/${arxivId}`;
+      linkEl.textContent = "arXiv 原文";
+      linkEl.title = "打开 arXiv 摘要页";
+    }
+  }
+
   function close() {
     stopPolling();
     panel.hidden = true;
@@ -113,13 +125,16 @@
 
   window.paperReview = {
     loadIndex,
+    detectApi,
+    isLocal() { return apiAvailable === true; },
     hasReview(arxivId) {
       return indexCache ? indexCache.reviews.some((r) => r.arxiv_id === String(arxivId)) : false;
     },
     async open(arxivId, title) {
       currentId = String(arxivId);
       titleEl.textContent = title || arxivId;
-      linkEl.href = `https://arxiv.org/abs/${arxivId}`;
+      const hasApi = await detectApi();
+      setSourceLink(currentId, hasApi);
       panel.hidden = false;
       document.body.classList.add("review-open");
       body.innerHTML = `<div class="review-loading">加载精读…</div>`;
@@ -128,7 +143,6 @@
         await showMarkdown(currentId);
         return;
       } catch (e) { /* 未生成,走下面的分支 */ }
-      const hasApi = await detectApi();
       if (hasApi) {
         renderGeneratePrompt(currentId, "当前为本地模式,可以直接生成。");
       } else {

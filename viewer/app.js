@@ -1,4 +1,5 @@
 let allPapers = [];
+let localMode = false;
 let favorites = new Set();
 const FAVORITES_STORAGE_KEY = "hermes-arxiv-agent:favorites";
 
@@ -129,7 +130,11 @@ function renderCards(papers) {
 
     const title = node.querySelector(".title");
     title.textContent = text(p.title) || p.arxiv_id;
-    title.href = `https://arxiv.org/abs/${p.arxiv_id}`;
+    // 本地模式(有本机服务)优先打开已下载的 PDF;远端 Pages 上退回 arXiv 摘要页
+    title.href = localMode
+      ? `pdf/${encodeURIComponent(p.arxiv_id)}`
+      : `https://arxiv.org/abs/${p.arxiv_id}`;
+    title.title = localMode ? "打开本机已下载的 PDF" : "打开 arXiv 摘要页";
 
     const favBtn = node.querySelector(".favorite-btn");
     const favored = isFavorite(p.arxiv_id);
@@ -300,6 +305,7 @@ async function init() {
   allPapers = payload.papers || [];
   loadFavorites();
   await window.paperReview.loadIndex();
+  localMode = await window.paperReview.detectApi();
 
   const defaultMin = payload.crawled_date_min || "";
   const defaultMax = payload.crawled_date_max || "";
