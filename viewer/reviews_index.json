@@ -1,6 +1,12 @@
 {
-  "count": 2,
+  "count": 3,
   "reviews": [
+    {
+      "arxiv_id": "2607.23758",
+      "title": "RoadVGGT: Road-Structure-Aware Feed-Forward Road Surface Reconstruction",
+      "updated": 1789722783.998389,
+      "chars": 28841
+    },
     {
       "arxiv_id": "2609.08730",
       "title": "CVT-GS: Learning to Simplify 3D Gaussian Splatting with Centroidal Voronoi Tessellation",
