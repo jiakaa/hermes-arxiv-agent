@@ -1,61 +1,66 @@
 {
-  "count": 1061,
+  "count": 1083,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-09-18",
+  "crawled_date_max": "2026-09-21",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-09-17",
+  "published_date_max": "2026-09-18",
   "rating_counts": {
-    "S": 258,
-    "A": 519,
-    "B": 166,
-    "C": 118,
+    "S": 272,
+    "A": 521,
+    "B": 168,
+    "C": 122,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 245,
+      "count": 249,
       "group": "3DGS/4DGS"
     },
     {
       "name": "自动驾驶",
-      "count": 205,
+      "count": 207,
       "group": "通用"
     },
     {
       "name": "规划",
-      "count": 168,
+      "count": 170,
       "group": "世界模型与仿真"
     },
     {
       "name": "世界模型",
-      "count": 147,
+      "count": 150,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 143,
+      "count": 149,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 142,
+      "count": 146,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 121,
+      "count": 122,
       "group": "通用"
     },
     {
       "name": "点云",
-      "count": 76,
+      "count": 78,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 66,
+      "count": 68,
       "group": "世界模型与仿真"
+    },
+    {
+      "name": "前馈3D重建",
+      "count": 62,
+      "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
@@ -68,28 +73,23 @@
       "group": "通用"
     },
     {
-      "name": "前馈3D重建",
-      "count": 58,
-      "group": "前馈3D重建"
-    },
-    {
       "name": "场景压缩",
       "count": 45,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 37,
+      "count": 39,
       "group": "世界模型与仿真"
     },
     {
       "name": "4DGS",
-      "count": 33,
+      "count": 34,
       "group": "3DGS/4DGS"
     },
     {
       "name": "SLAM",
-      "count": 31,
+      "count": 32,
       "group": "通用"
     },
     {
@@ -108,18 +108,18 @@
       "group": "3DGS/4DGS"
     },
     {
+      "name": "深度估计",
+      "count": 24,
+      "group": "前馈3D重建"
+    },
+    {
       "name": "轨迹预测",
       "count": 22,
       "group": "世界模型与仿真"
     },
     {
-      "name": "深度估计",
-      "count": 22,
-      "group": "前馈3D重建"
-    },
-    {
       "name": "动态场景重建",
-      "count": 20,
+      "count": 21,
       "group": "3DGS/4DGS"
     },
     {
@@ -133,14 +133,14 @@
       "group": "地面重建"
     },
     {
+      "name": "地形重建",
+      "count": 10,
+      "group": "地面重建"
+    },
+    {
       "name": "事件相机",
       "count": 10,
       "group": "通用"
-    },
-    {
-      "name": "地形重建",
-      "count": 9,
-      "group": "地面重建"
     },
     {
       "name": "训练加速",
@@ -154,6 +154,435 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2609.22040",
+      "title": "PRIME: Perception Feedback with Situational Memory Embeddings in VLA Models",
+      "authors": "Erik Deinzer, Naya Baslan, Luca Paparusso, Narunas Vaskevicius, Peter Knott, Luigi Palmieri",
+      "affiliations": "RWTH Aachen University; Robert Bosch GmbH",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Current Vision-Language-Action (VLA) models for autonomous driving operate primarily through feedforward inference across the perception--reasoning--planning hierarchy. While modern architectures maintain temporal recurrence within the perceptual module, early perception remains blind to downstream reasoning and navigation goals, processing visual inputs agnostically without prioritizing cues informed by prior decisions. To bridge this gap, this paper introduces PRIME, a learned feedback mechanism that conditions the VLA perceptual queries on a novel Situational Memory. By aggregating latent representations of past perception, reasoning, navigation goals, and predicted behaviors across an L-step window via cross-attention, PRIME enables intent-driven perceptual attention at minimal computational cost, adding only a maximum of 29.7M parameters (0.41% of the 7.3B-parameter base model). Evaluated on the Bench2Drive closed-loop benchmark, PRIME achieves a state-of-the-art Driving Score of 82.47 (+4.73 over ORION) and a Success Rate of 60.00% (+5.38 percentage points), the highest reported Driving Score among published VLAs trained on Think2Drive demonstrations.",
+      "summary_cn": "针对 VLA 驾驶模型中早期感知无法获知下游推理与导航目标的缺陷，提出反馈机制 PRIME：以情境记忆对 L 步窗口内过去感知、推理、导航目标与预测行为的隐表示做交叉注意力聚合，让感知查询具备意图驱动注意，仅增 29.7M 参数（占 7.3B 基座 0.41%）。Bench2Drive 闭环取得 SOTA 驾驶分数 82.47（+4.73）与 60.00% 成功率。",
+      "pdf_filename": "2609.22040.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.22040",
+      "search_text": "prime: perception feedback with situational memory embeddings in vla models 闭环仿真 自动驾驶 多模态 针对 vla 驾驶模型中早期感知无法获知下游推理与导航目标的缺陷，提出反馈机制 prime：以情境记忆对 l 步窗口内过去感知、推理、导航目标与预测行为的隐表示做交叉注意力聚合，让感知查询具备意图驱动注意，仅增 29.7m 参数（占 7.3b 基座 0.41%）。bench2drive 闭环取得 sota 驾驶分数 82.47（+4.73）与 60.00% 成功率。 current vision-language-action (vla) models for autonomous driving operate primarily through feedforward inference across the perception--reasoning--planning hierarchy. while modern architectures maintain temporal recurrence within the perceptual module, early perception remains blind to downstream reasoning and navigation goals, processing visual inputs agnostically without prioritizing cues informed by prior decisions. to bridge this gap, this paper introduces prime, a learned feedback mechanism that conditions the vla perceptual queries on a novel situational memory. by aggregating latent representations of past perception, reasoning, navigation goals, and predicted behaviors across an l-step window via cross-attention, prime enables intent-driven perceptual attention at minimal computational cost, adding only a maximum of 29.7m parameters (0.41% of the 7.3b-parameter base model). evaluated on the bench2drive closed-loop benchmark, prime achieves a state-of-the-art driving score of 82.47 (+4.73 over orion) and a success rate of 60.00% (+5.38 percentage points), the highest reported driving score among published vlas trained on think2drive demonstrations. rwth aachen university; robert bosch gmbh erik deinzer, naya baslan, luca paparusso, narunas vaskevicius, peter knott, luigi palmieri cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21938",
+      "title": "Info3R: Information-Adaptive Test-Time Training for 3D Reconstruction",
+      "authors": "Sunghyun Baek, Hanna Bae, Minchan Kwon, Junmo Kim",
+      "affiliations": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV",
+      "abstract": "Transformer-based models have recently achieved strong performance on 3D reconstruction from images, and recent works extend them to process video streams in an online manner for real-world deployment. However, existing methods overlook two key signals when handling long image streams: the importance of each incoming frame and the information saturation of the model's internal state. In this paper, we propose Info3R, a novel information-adaptive test-time training method for the online 3D reconstruction. We introduce an information-aware state update that modulates the state update strength based on the redundancy and informativeness of each incoming frame. To restore the state's plasticity -- its capacity to incorporate new observations -- we propose a dynamic state reset, triggered by the cumulative magnitude of state updates and the model's prediction confidence and accompanied by an anchor-to-world alignment. Our method achieves consistent improvements on camera pose estimation, video depth estimation, and 3D reconstruction, while substantially mitigating the performance degradation in the long sequence evaluation. Notably, on KITTI Odometry, our method achieves on average 1.68x lower ATE than LongStream, demonstrating its robustness on extended outdoor sequences.",
+      "summary_cn": "针对在线长序列三维重建中被忽视的帧重要性与状态信息饱和问题，提出信息自适应测试时训练 Info3R：按新帧冗余度与信息量调制状态更新强度，并在更新累积幅度与预测置信度触发时做动态状态重置，配合锚点到世界坐标对齐以恢复状态塑性。相机位姿、视频深度与三维重建一致提升，KITTI Odometry 上 ATE 平均比 LongStream 低 1.68 倍。",
+      "pdf_filename": "2609.21938.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "深度估计"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21938",
+      "search_text": "info3r: information-adaptive test-time training for 3d reconstruction 深度估计 针对在线长序列三维重建中被忽视的帧重要性与状态信息饱和问题，提出信息自适应测试时训练 info3r：按新帧冗余度与信息量调制状态更新强度，并在更新累积幅度与预测置信度触发时做动态状态重置，配合锚点到世界坐标对齐以恢复状态塑性。相机位姿、视频深度与三维重建一致提升，kitti odometry 上 ate 平均比 longstream 低 1.68 倍。 transformer-based models have recently achieved strong performance on 3d reconstruction from images, and recent works extend them to process video streams in an online manner for real-world deployment. however, existing methods overlook two key signals when handling long image streams: the importance of each incoming frame and the information saturation of the model's internal state. in this paper, we propose info3r, a novel information-adaptive test-time training method for the online 3d reconstruction. we introduce an information-aware state update that modulates the state update strength based on the redundancy and informativeness of each incoming frame. to restore the state's plasticity -- its capacity to incorporate new observations -- we propose a dynamic state reset, triggered by the cumulative magnitude of state updates and the model's prediction confidence and accompanied by an anchor-to-world alignment. our method achieves consistent improvements on camera pose estimation, video depth estimation, and 3d reconstruction, while substantially mitigating the performance degradation in the long sequence evaluation. notably, on kitti odometry, our method achieves on average 1.68x lower ate than longstream, demonstrating its robustness on extended outdoor sequences. kaist (korea advanced institute of science and technology) sunghyun baek, hanna bae, minchan kwon, junmo kim cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21774",
+      "title": "Scalable Packet Tracking on FPGAs for Erasure-Coded RDMA over Lossy WANs",
+      "authors": "Yicheng Qian, Konstantin Taranov, Yevgeny Yankilevich, Assaf Shacham, Mahmoud Elhaddad, Abdul Kabbani, Miriam Leeser, Nadeen Gebara",
+      "affiliations": "Northeastern University; Microsoft Corporation",
+      "published_date": "2026-09-18",
+      "categories": "cs.AR",
+      "abstract": "Modern AI workloads increasingly rely on scale across architectures that interconnect multiple datacenters to form a single \"AI factory\", overcoming the power and cooling constraints of individual sites. However, extending Remote Direct Memory Access (RDMA) across wide area networks (WANs) introduces fundamental challenges: multi-path packet reordering, high latency, and packet loss that severely degrade performance. While erasure coding (EC) has emerged as a promising mechanism for loss recovery, its effectiveness critically depends on efficient packet arrival tracking implemented in hardware. We present COmpact Multi-path Erasure-coded Tracking (COMET), the first fully hardware-offloaded packet-arrival tracking design implemented on an FPGA-based network interface card (NIC) for multi-path RDMA over lossy WANs. COMET employs a scalable cache-based architecture that supports operation at high link rates. Our evaluation shows that COMET sustains line rate operation at 400 Gbps and beyond. Critically, COMET decouples on-chip memory footprint from link Bandwidth-Delay Product (BDP), and its cache-based architecture (COMET Cache) enables supporting 6 times more concurrent connections than state-of-the-art (SOTA) SoC-based designs. These results demonstrate that scalable, fully hardware-offloaded packet-arrival tracking is practical on FPGA-based NICs at current data rates, and its architectural scalability extends to emerging 1.6 Tbps NICs and beyond.",
+      "summary_cn": "提出 COMET，首个在 FPGA 网卡上全硬件卸载的多路径 RDMA 包到达追踪设计，为跨广域网纠删码丢包恢复提供高效跟踪。采用可扩展缓存式架构，在 400 Gbps 及以上维持线速，并把片上内存占用与链路带宽时延积解耦，支持的并发连接数比 SOTA SoC 方案多 6 倍，可扩展到 1.6 Tbps 网卡。",
+      "pdf_filename": "2609.21774.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2609.21774",
+      "search_text": "scalable packet tracking on fpgas for erasure-coded rdma over lossy wans  提出 comet，首个在 fpga 网卡上全硬件卸载的多路径 rdma 包到达追踪设计，为跨广域网纠删码丢包恢复提供高效跟踪。采用可扩展缓存式架构，在 400 gbps 及以上维持线速，并把片上内存占用与链路带宽时延积解耦，支持的并发连接数比 sota soc 方案多 6 倍，可扩展到 1.6 tbps 网卡。 modern ai workloads increasingly rely on scale across architectures that interconnect multiple datacenters to form a single \"ai factory\", overcoming the power and cooling constraints of individual sites. however, extending remote direct memory access (rdma) across wide area networks (wans) introduces fundamental challenges: multi-path packet reordering, high latency, and packet loss that severely degrade performance. while erasure coding (ec) has emerged as a promising mechanism for loss recovery, its effectiveness critically depends on efficient packet arrival tracking implemented in hardware. we present compact multi-path erasure-coded tracking (comet), the first fully hardware-offloaded packet-arrival tracking design implemented on an fpga-based network interface card (nic) for multi-path rdma over lossy wans. comet employs a scalable cache-based architecture that supports operation at high link rates. our evaluation shows that comet sustains line rate operation at 400 gbps and beyond. critically, comet decouples on-chip memory footprint from link bandwidth-delay product (bdp), and its cache-based architecture (comet cache) enables supporting 6 times more concurrent connections than state-of-the-art (sota) soc-based designs. these results demonstrate that scalable, fully hardware-offloaded packet-arrival tracking is practical on fpga-based nics at current data rates, and its architectural scalability extends to emerging 1.6 tbps nics and beyond. northeastern university; microsoft corporation yicheng qian, konstantin taranov, yevgeny yankilevich, assaf shacham, mahmoud elhaddad, abdul kabbani, miriam leeser, nadeen gebara cs.ar"
+    },
+    {
+      "arxiv_id": "2609.21740",
+      "title": "Sandwich-Residuals: Parameter-Efficient Test-time Adaptation of World Models",
+      "authors": "Krishnam Soni, Aditya Sehgal, Vedant Dave, Elmar Rueckert",
+      "affiliations": "Montanuniversität Leoben",
+      "published_date": "2026-09-18",
+      "categories": "cs.RO",
+      "abstract": "Latent world models enable planning by predicting the effects of actions in a learned representation space, but their predictions can become unreliable when test-time conditions differ from training. Existing test-time adaptation methods address this by updating parts of the pretrained model, often modifying millions of parameters and requiring a choice of which internal components to adapt. We introduce Sandwich-Residuals, a lightweight alternative that keeps the pretrained world model frozen and learns only small residual corrections around the predictor. The residuals are optimized online using the model's self-supervised prediction error and require no rewards, labels, or source-domain data. Across 21 conditions on the AdaJEPA benchmark, our method achieves $1.3\\times$ the success rate of the frozen model while retaining 95% of the performance of the strongest AdaJEPA variant and adapting 97-99% fewer parameters. Under compound shifts, this advantage increases to $1.9\\times$ the success rate of the frozen model, while remaining comparable to internal block adaptation. We further demonstrate the same adaptation principle on a DINO-WM model for 3-D manipulation. These results suggest that effective test-time adaptation of world models does not necessarily require modifying their pretrained internal weights.",
+      "summary_cn": "提出参数高效的世界模型测试时自适应方法 Sandwich-Residuals：冻结预训练世界模型，只在预测器外围学习小型残差修正，残差依据模型自监督预测误差在线优化，不需要奖励、标签或源域数据。AdaJEPA 基准 21 种条件下成功率达冻结模型的 1.3 倍，保留最强变体 95% 性能，自适应参数减少 97–99%，复合漂移下提升至 1.9 倍。",
+      "pdf_filename": "2609.21740.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21740",
+      "search_text": "sandwich-residuals: parameter-efficient test-time adaptation of world models 世界模型 提出参数高效的世界模型测试时自适应方法 sandwich-residuals：冻结预训练世界模型，只在预测器外围学习小型残差修正，残差依据模型自监督预测误差在线优化，不需要奖励、标签或源域数据。adajepa 基准 21 种条件下成功率达冻结模型的 1.3 倍，保留最强变体 95% 性能，自适应参数减少 97–99%，复合漂移下提升至 1.9 倍。 latent world models enable planning by predicting the effects of actions in a learned representation space, but their predictions can become unreliable when test-time conditions differ from training. existing test-time adaptation methods address this by updating parts of the pretrained model, often modifying millions of parameters and requiring a choice of which internal components to adapt. we introduce sandwich-residuals, a lightweight alternative that keeps the pretrained world model frozen and learns only small residual corrections around the predictor. the residuals are optimized online using the model's self-supervised prediction error and require no rewards, labels, or source-domain data. across 21 conditions on the adajepa benchmark, our method achieves $1.3\\times$ the success rate of the frozen model while retaining 95% of the performance of the strongest adajepa variant and adapting 97-99% fewer parameters. under compound shifts, this advantage increases to $1.9\\times$ the success rate of the frozen model, while remaining comparable to internal block adaptation. we further demonstrate the same adaptation principle on a dino-wm model for 3-d manipulation. these results suggest that effective test-time adaptation of world models does not necessarily require modifying their pretrained internal weights. montanuniversität leoben krishnam soni, aditya sehgal, vedant dave, elmar rueckert cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21712",
+      "title": "ZYT-World: A Real-Time Controllable World Model for Closed-Loop Autonomous-Driving Simulation",
+      "authors": "Boni Hu, Xiong Wei, Haoming Huang, Yong Huang, Chenbo Wang, Yi Yang, Jiancheng Wang, Ruicheng Zhu, Zhimin Yang, Guanglai Liu, Qiaowan Jin, Dongzhuo Wang, Haiwei Kuang, Jiajun Fan, Yue Wu, Jiaxin Wei, Hao Sun, Feihong Yan, Wei Bi, Kaixuan Wang, Zichao Guo, Xiaozhi Chen",
+      "affiliations": "ZYT AI Team",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV",
+      "abstract": "Generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low latency; and preserving scene identity when a location is revisited. We present ZYT-World, a single architecture that natively generates four fisheye views with field of view > 180° and three pinhole views. Projection-specific Plucker adapters encode camera geometry, ego-motion adaptive layer normalization provides global motion control, and a lightweight pixel-aligned layout conditions traffic participants and signals through instance-level boxes, headings and colors. Heterogeneous training combines full-rig geometric coverage with high-resolution detail. Teacher forcing, causal consistency distillation, self-rollout distribution matching distillation, and RigCritic transform a 40-step bidirectional teacher into a one-step, per-latent streaming generator, with RigCritic evaluating the seven-view rig jointly. A 19M-parameter variational autoencoder decoder (TinyVAE), W8A8 quantization, and our inference engine reduce decoding, backbone, and incremental-execution costs, respectively. Finally, cross-trajectory pairs derived from real captures train a plug-in implicit-memory module that preserves place-specific evidence. On the internal multi-view test set, the one-step model retains more than 90% of the teacher's PSNR and SSIM, while FID, FVD, and LPIPS stay within 11% of the teacher. Under the generator-only timing in Figure 2, it is 107.7 times faster than the 40-step bidirectional teacher. TinyVAE decodes 59.8 times faster than Wan. 30s rollouts and cross-trajectory revisits show the intended long-horizon and memory behavior.",
+      "summary_cn": "提出实时可控驾驶世界模型 ZYT-World：原生生成四路 FoV>180° 鱼眼与三路针孔视图，用投影相关 Plücker 适配器编码相机几何、AdaLN 做全局运动控制；以教师强制、因果一致性蒸馏、DMD 与 RigCritic 把 40 步双向教师蒸馏成单步流式生成器，配合 19M TinyVAE 与 W8A8 量化。单步模型保留教师 90% 以上 PSNR/SSIM，生成快 107.7 倍。",
+      "pdf_filename": "2609.21712.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21712",
+      "search_text": "zyt-world: a real-time controllable world model for closed-loop autonomous-driving simulation 世界模型 闭环仿真 多模态 提出实时可控驾驶世界模型 zyt-world：原生生成四路 fov>180° 鱼眼与三路针孔视图，用投影相关 plücker 适配器编码相机几何、adaln 做全局运动控制；以教师强制、因果一致性蒸馏、dmd 与 rigcritic 把 40 步双向教师蒸馏成单步流式生成器，配合 19m tinyvae 与 w8a8 量化。单步模型保留教师 90% 以上 psnr/ssim，生成快 107.7 倍。 generative world models offer controllable and repeatable closed-loop simulation for end-to-end and vision-language-action driving policies, but production deployment exposes three unresolved requirements: faithfully reproducing a mixed fisheye-pinhole rig at native resolutions; reconciling causal, per-timestep interaction with long-horizon stability and low latency; and preserving scene identity when a location is revisited. we present zyt-world, a single architecture that natively generates four fisheye views with field of view > 180° and three pinhole views. projection-specific plucker adapters encode camera geometry, ego-motion adaptive layer normalization provides global motion control, and a lightweight pixel-aligned layout conditions traffic participants and signals through instance-level boxes, headings and colors. heterogeneous training combines full-rig geometric coverage with high-resolution detail. teacher forcing, causal consistency distillation, self-rollout distribution matching distillation, and rigcritic transform a 40-step bidirectional teacher into a one-step, per-latent streaming generator, with rigcritic evaluating the seven-view rig jointly. a 19m-parameter variational autoencoder decoder (tinyvae), w8a8 quantization, and our inference engine reduce decoding, backbone, and incremental-execution costs, respectively. finally, cross-trajectory pairs derived from real captures train a plug-in implicit-memory module that preserves place-specific evidence. on the internal multi-view test set, the one-step model retains more than 90% of the teacher's psnr and ssim, while fid, fvd, and lpips stay within 11% of the teacher. under the generator-only timing in figure 2, it is 107.7 times faster than the 40-step bidirectional teacher. tinyvae decodes 59.8 times faster than wan. 30s rollouts and cross-trajectory revisits show the intended long-horizon and memory behavior. zyt ai team boni hu, xiong wei, haoming huang, yong huang, chenbo wang, yi yang, jiancheng wang, ruicheng zhu, zhimin yang, guanglai liu, qiaowan jin, dongzhuo wang, haiwei kuang, jiajun fan, yue wu, jiaxin wei, hao sun, feihong yan, wei bi, kaixuan wang, zichao guo, xiaozhi chen cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21617",
+      "title": "CounterPlay: Counterfactual Post-Training for Self-Play Driving Policies",
+      "authors": "Jiarong Wei, Yin Wu, Runkai He, Abhinav Valada",
+      "affiliations": "University of Freiburg; Karlsruhe Institute of Technology (KIT); CARIAD SE",
+      "published_date": "2026-09-18",
+      "categories": "cs.RO",
+      "abstract": "Self-play in high-throughput simulators yields driving policies with robust closed-loop performance, but improvement per unit of simulation diminishes as training scales. Policies learn to handle common situations early, while further rollouts repeatedly encounter unresolved failures. Post-training offers an opportunity to target these failures, but existing methods primarily evaluate alternative actions or continuations at visited states, although successful recovery may require changing driving style earlier. We propose CounterPlay, a counterfactual self-play post-training approach that backtracks from failed tasks and retries them under alternate driving styles. CounterPlay rests on three key components. First, failure-driven backtracking uses the policy's value estimates to select an earlier stored state from which to retry the task. Second, reward conditioning enables a single policy to retry the task from this state using candidate styles ranging from cautious to aggressive. Third, CounterPlay retains task-completing retries only if no other vehicle incurs a new or earlier collision or off-road event relative to the factual branch. Retries that pass verification with fresh randomness are then distilled into the policy under its deployment condition. On BehaviorBench, CounterPlay achieves state-of-the-art scores on both the Interactive and Random splits across all eight traffic regimes using 1B post-training transitions, which is just 1% of the anchor's 100B self-play training budget. Improvements over the anchor hold across all three evaluated driving styles. CounterPlay resolves a substantial fraction of the anchor's timeout cases on BehaviorBench and achieves a balance between task completion and safety that neither continued self-play nor adopting a more aggressive driving style attains.",
+      "summary_cn": "提出反事实自博弈后训练方法 CounterPlay：用价值估计从失败任务回溯到更早存储状态重试，并以奖励条件化让同一策略在保守到激进的多种风格下重试；仅当其他车辆未新增或提前碰撞、越界时才保留成功重试，再在部署条件下蒸馏回策略。BehaviorBench 八个场景两划分均达 SOTA，仅用 10 亿后训练转移，约为基线 1000 亿预算的 1%。",
+      "pdf_filename": "2609.21617.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21617",
+      "search_text": "counterplay: counterfactual post-training for self-play driving policies 闭环仿真 提出反事实自博弈后训练方法 counterplay：用价值估计从失败任务回溯到更早存储状态重试，并以奖励条件化让同一策略在保守到激进的多种风格下重试；仅当其他车辆未新增或提前碰撞、越界时才保留成功重试，再在部署条件下蒸馏回策略。behaviorbench 八个场景两划分均达 sota，仅用 10 亿后训练转移，约为基线 1000 亿预算的 1%。 self-play in high-throughput simulators yields driving policies with robust closed-loop performance, but improvement per unit of simulation diminishes as training scales. policies learn to handle common situations early, while further rollouts repeatedly encounter unresolved failures. post-training offers an opportunity to target these failures, but existing methods primarily evaluate alternative actions or continuations at visited states, although successful recovery may require changing driving style earlier. we propose counterplay, a counterfactual self-play post-training approach that backtracks from failed tasks and retries them under alternate driving styles. counterplay rests on three key components. first, failure-driven backtracking uses the policy's value estimates to select an earlier stored state from which to retry the task. second, reward conditioning enables a single policy to retry the task from this state using candidate styles ranging from cautious to aggressive. third, counterplay retains task-completing retries only if no other vehicle incurs a new or earlier collision or off-road event relative to the factual branch. retries that pass verification with fresh randomness are then distilled into the policy under its deployment condition. on behaviorbench, counterplay achieves state-of-the-art scores on both the interactive and random splits across all eight traffic regimes using 1b post-training transitions, which is just 1% of the anchor's 100b self-play training budget. improvements over the anchor hold across all three evaluated driving styles. counterplay resolves a substantial fraction of the anchor's timeout cases on behaviorbench and achieves a balance between task completion and safety that neither continued self-play nor adopting a more aggressive driving style attains. university of freiburg; karlsruhe institute of technology (kit); cariad se jiarong wei, yin wu, runkai he, abhinav valada cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21594",
+      "title": "HyperParallel-FSDP: Topology-Aware Fully Sharded Training with Layout-Driven Muon on Ascend SuperPods",
+      "authors": "Mo Sun, Yifan Yao, Yanwei Liu, Luobin Liu, Zhenzhang Yang, Kaisheng Wang, Xiangyu Meng, Chen Li, Xizheng Pang, Huilan Li, Xinglei Xu, Yushi Cui, Xinyao Lin, Kaiqi Chen, Jie Zhang, Zeke Wang, Teng Su",
+      "affiliations": "Zhejiang University; Huawei Technologies Co., Ltd",
+      "published_date": "2026-09-18",
+      "categories": "cs.DC",
+      "abstract": "Declarative SPMD programming uses tensor sharding descriptions to drive distributed execution, separating parallelization from model code. However, the evaluated PyTorch DTensor stack dispatches every operator below autograd, incurring repeated dispatch and metadata costs, while lacking an inexpensive end-to-end validation path. Existing FSDP and distributed Muon implementations also mismatch two-tier supernode topologies: FSDP relies on explicit parameter packing and unpacking, and Muon's whole-matrix orthogonalization conflicts with parameter sharding.   We observe that distributed tensors need only express sharding semantics at the tensor API boundary above autograd, allowing differentiation and kernels to operate on plain tensors. Based on this insight, we present HyperParallel-FSDP, featuring: (1) dual-mode DTensor execution, using one sharding plan for both a production mode with one-time layout resolution and no steady-state dispatch overhead, and a validation mode with end-to-end metadata propagation, fail-fast checks, and gradient-equivalence testing; (2) topology-aware FSDP, with zero-copy intra-supernode collectives, fused inter-supernode reduction, and a cross-layer backward pipeline that avoids waits on slow links; and (3) layout-driven distributed Muon, with sharding-derived communication groups, deduplicated orthogonalization, and shape-fused Newton-Schulz iterations.   On Atlas 900 A3 SuperPoD, HyperParallel-FSDP scales from 16 dies to 384 cards (768 ranks), sustaining 421k tokens/s for a 505B-parameter MoE while FSDP communication uses 2.9% of step time. It reduces mean step time by 29.7% versus PyTorch FSDP2 and 25.5% versus Megatron DDP, with Pearson correlation above 0.999997 over 1,000 steps. Distributed Muon improves profiler step time by 5.4-16.0% over competing systems. Source code is available at https://atomgit.com/mindspore/hyper-parallel.",
+      "summary_cn": "提出 HyperParallel-FSDP：分布式张量只需在 autograd 之上的张量 API 边界表达分片语义，免去逐算子调度开销。含双模式 DTensor 执行、拓扑感知 FSDP（超节点内零拷贝通信、跨节点融合归约、跨层反向流水）与分片驱动的分布式 Muon。Atlas 900 A3 上扩到 384 卡，505B MoE 保持 42.1 万 token/s，步时较 FSDP2 降低 29.7%。",
+      "pdf_filename": "2609.21594.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2609.21594",
+      "search_text": "hyperparallel-fsdp: topology-aware fully sharded training with layout-driven muon on ascend superpods  提出 hyperparallel-fsdp：分布式张量只需在 autograd 之上的张量 api 边界表达分片语义，免去逐算子调度开销。含双模式 dtensor 执行、拓扑感知 fsdp（超节点内零拷贝通信、跨节点融合归约、跨层反向流水）与分片驱动的分布式 muon。atlas 900 a3 上扩到 384 卡，505b moe 保持 42.1 万 token/s，步时较 fsdp2 降低 29.7%。 declarative spmd programming uses tensor sharding descriptions to drive distributed execution, separating parallelization from model code. however, the evaluated pytorch dtensor stack dispatches every operator below autograd, incurring repeated dispatch and metadata costs, while lacking an inexpensive end-to-end validation path. existing fsdp and distributed muon implementations also mismatch two-tier supernode topologies: fsdp relies on explicit parameter packing and unpacking, and muon's whole-matrix orthogonalization conflicts with parameter sharding.   we observe that distributed tensors need only express sharding semantics at the tensor api boundary above autograd, allowing differentiation and kernels to operate on plain tensors. based on this insight, we present hyperparallel-fsdp, featuring: (1) dual-mode dtensor execution, using one sharding plan for both a production mode with one-time layout resolution and no steady-state dispatch overhead, and a validation mode with end-to-end metadata propagation, fail-fast checks, and gradient-equivalence testing; (2) topology-aware fsdp, with zero-copy intra-supernode collectives, fused inter-supernode reduction, and a cross-layer backward pipeline that avoids waits on slow links; and (3) layout-driven distributed muon, with sharding-derived communication groups, deduplicated orthogonalization, and shape-fused newton-schulz iterations.   on atlas 900 a3 superpod, hyperparallel-fsdp scales from 16 dies to 384 cards (768 ranks), sustaining 421k tokens/s for a 505b-parameter moe while fsdp communication uses 2.9% of step time. it reduces mean step time by 29.7% versus pytorch fsdp2 and 25.5% versus megatron ddp, with pearson correlation above 0.999997 over 1,000 steps. distributed muon improves profiler step time by 5.4-16.0% over competing systems. source code is available at https://atomgit.com/mindspore/hyper-parallel. zhejiang university; huawei technologies co., ltd mo sun, yifan yao, yanwei liu, luobin liu, zhenzhang yang, kaisheng wang, xiangyu meng, chen li, xizheng pang, huilan li, xinglei xu, yushi cui, xinyao lin, kaiqi chen, jie zhang, zeke wang, teng su cs.dc"
+    },
+    {
+      "arxiv_id": "2609.21516",
+      "title": "2D GauSS-MI: Efficient Active Scene Reconstruction with Balanced Visual and Geometric Quality",
+      "authors": "Yuhan Xie, Jia Pan",
+      "affiliations": "The University of Hong Kong",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Active reconstruction requires efficient active view selection to achieve high-quality reconstruction within limited onboard computational resources. Existing methods face challenges in adequately balancing visual and geometric quality with the computational efficiency required for real-time operation. In this work, we present an active reconstruction framework based on 2D Gaussian Splatting (2DGS). We develop an efficient online 2DGS mapping pipeline for incremental RGB-D observations and introduce a probabilistic reliability model that characterizes the view-dependent reconstruction quality of individual 2D Gaussian splats. Building on this model, we formulate 2D Gaussian Splatting Shannon Mutual Information (2D GauSS-MI), a mutual-information-based metric that exploits the explicit surface orientation of 2DGS to evaluate the expected information gain of candidate views. The proposed metric enables active view selection to account for both visual and geometric reconstruction quality. We evaluate the proposed system against three state-of-the-art baselines on eight Replica scenes. Experimental results demonstrate that our method achieves a favorable balance between visual and geometric reconstruction quality with substantially lower computational cost and competitive model storage.",
+      "summary_cn": "面向主动重建提出 2D 高斯泼溅框架：构建支持增量 RGB-D 观测的在线 2DGS 建图管线，并提出刻画单个 2D 高斯视图相关重建质量的概率可靠性模型；在此基础上定义互信息指标 2D GauSS-MI，利用 2DGS 显式表面朝向评估候选视角的期望信息增益，使视角选择同时兼顾视觉与几何质量。八个 Replica 场景上以显著更低算力取得更均衡质量。",
+      "pdf_filename": "2609.21516.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21516",
+      "search_text": "2d gauss-mi: efficient active scene reconstruction with balanced visual and geometric quality 3dgs 面向主动重建提出 2d 高斯泼溅框架：构建支持增量 rgb-d 观测的在线 2dgs 建图管线，并提出刻画单个 2d 高斯视图相关重建质量的概率可靠性模型；在此基础上定义互信息指标 2d gauss-mi，利用 2dgs 显式表面朝向评估候选视角的期望信息增益，使视角选择同时兼顾视觉与几何质量。八个 replica 场景上以显著更低算力取得更均衡质量。 active reconstruction requires efficient active view selection to achieve high-quality reconstruction within limited onboard computational resources. existing methods face challenges in adequately balancing visual and geometric quality with the computational efficiency required for real-time operation. in this work, we present an active reconstruction framework based on 2d gaussian splatting (2dgs). we develop an efficient online 2dgs mapping pipeline for incremental rgb-d observations and introduce a probabilistic reliability model that characterizes the view-dependent reconstruction quality of individual 2d gaussian splats. building on this model, we formulate 2d gaussian splatting shannon mutual information (2d gauss-mi), a mutual-information-based metric that exploits the explicit surface orientation of 2dgs to evaluate the expected information gain of candidate views. the proposed metric enables active view selection to account for both visual and geometric reconstruction quality. we evaluate the proposed system against three state-of-the-art baselines on eight replica scenes. experimental results demonstrate that our method achieves a favorable balance between visual and geometric reconstruction quality with substantially lower computational cost and competitive model storage. the university of hong kong yuhan xie, jia pan cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21498",
+      "title": "VoxelTTO: Voxel-Aligned Feed-Forward 3D Gaussian Splatting with Test-Time Optimization",
+      "authors": "Yibin Zhao, Yihan Pan, Yangwen Li, Jun Nan, Jianjun Yi",
+      "affiliations": "East China University of Science and Technology; Shanghai Open University",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV",
+      "abstract": "Recent feed-forward 3D Gaussian Splatting (3DGS) methods typically regress pixel-aligned Gaussian primitives, often causing excessive overlap and artifacts, while inaccuracies in predicted camera poses can lead to misalignment in novel-view synthesis (NVS). We present VoxelTTO, a feed-forward framework for reconstructing geometrically accurate 3DGS scenes from an arbitrary number of images and optional camera parameters. VoxelTTO aggregates dense image features into a global voxel representation and decodes Gaussians from voxel features, breaking the pixel-to-Gaussian correspondence. To exploit known camera parameters while keeping the pretrained visual foundation model (VFM) parameters frozen, we introduce test-time optimization (TTO) that adapts lightweight LoRA modules using pose supervision. We further replace vanilla 3DGS rasterization with stochastic solid volume rendering during training and inference, improving geometric fidelity. Training updates only the voxel-aligned Gaussian reconstruction modules, requiring 80 GPU hours. Experiments on Replica, Tanks and Temples, and DTU demonstrate improved RGB-D NVS and camera-pose estimation relative to prior methods.",
+      "summary_cn": "提出前馈 3DGS 框架 VoxelTTO：把图像特征聚合为全局体素表征并从中解码高斯，打破像素—高斯对应，缓解重叠与伪影；冻结视觉基础模型，仅用测试时优化适配轻量 LoRA 并施加位姿监督以利用已知相机参数，并用随机实体体渲染替代 3DGS 光栅化提升几何保真。训练仅需 80 GPU 小时，Replica 等三数据集新视角合成与位姿估计均更优。",
+      "pdf_filename": "2609.21498.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21498",
+      "search_text": "voxeltto: voxel-aligned feed-forward 3d gaussian splatting with test-time optimization 3dgs 提出前馈 3dgs 框架 voxeltto：把图像特征聚合为全局体素表征并从中解码高斯，打破像素—高斯对应，缓解重叠与伪影；冻结视觉基础模型，仅用测试时优化适配轻量 lora 并施加位姿监督以利用已知相机参数，并用随机实体体渲染替代 3dgs 光栅化提升几何保真。训练仅需 80 gpu 小时，replica 等三数据集新视角合成与位姿估计均更优。 recent feed-forward 3d gaussian splatting (3dgs) methods typically regress pixel-aligned gaussian primitives, often causing excessive overlap and artifacts, while inaccuracies in predicted camera poses can lead to misalignment in novel-view synthesis (nvs). we present voxeltto, a feed-forward framework for reconstructing geometrically accurate 3dgs scenes from an arbitrary number of images and optional camera parameters. voxeltto aggregates dense image features into a global voxel representation and decodes gaussians from voxel features, breaking the pixel-to-gaussian correspondence. to exploit known camera parameters while keeping the pretrained visual foundation model (vfm) parameters frozen, we introduce test-time optimization (tto) that adapts lightweight lora modules using pose supervision. we further replace vanilla 3dgs rasterization with stochastic solid volume rendering during training and inference, improving geometric fidelity. training updates only the voxel-aligned gaussian reconstruction modules, requiring 80 gpu hours. experiments on replica, tanks and temples, and dtu demonstrate improved rgb-d nvs and camera-pose estimation relative to prior methods. east china university of science and technology; shanghai open university yibin zhao, yihan pan, yangwen li, jun nan, jianjun yi cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21437",
+      "title": "Think Locally, Refine Globally for Memory-Efficient 3D Reconstruction",
+      "authors": "Jingke Zhou, Chenhang Ma, Zhizhou Zhong, Mingkai Liu, Zhuang Zhou, Yicheng ji, Binghua Su, Bo Cai, Xianliang Huang",
+      "affiliations": "Zhejiang University; Fudan University; Peking University; Beijing Institute of Technology",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "We propose LoG-VGGT, a memory-efficient framework for long-sequence 3D reconstruction that balances local temporal modeling with global camera consistency. Instead of relying on full global attention, our method introduces cross-window attention at a small subset of transformer blocks, enabling effective information propagation across adjacent temporal windows while keeping memory usage bounded. To mitigate long-term pose drift, we further design a global camera consistency refinement module, where camera tokens interact with compact register tokens via cross-attention to enforce scene-level constraints across the entire sequence. This design enables joint optimization of camera representations and significantly improves long-horizon pose stability without incurring the high cost of sequence-wide attention. Extensive experiments demonstrate that LoG-VGGT achieves improved depth accuracy and robust camera pose estimation across multiple long-sequence benchmarks, while delivering competitive streaming reconstruction performance.",
+      "summary_cn": "提出显存高效的长序列三维重建框架 LoG-VGGT：不做全局长程注意力，只在少量 transformer 块引入跨窗口注意力，在相邻时间窗口间传播信息并把显存限制住；另设全局相机一致性精化模块，让相机 token 与紧凑 register token 交叉注意力交互，对整段序列施加场景级约束以抑制位姿漂移。长序列基准上深度与位姿精度更优，流式性能有竞争力。",
+      "pdf_filename": "2609.21437.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21437",
+      "search_text": "think locally, refine globally for memory-efficient 3d reconstruction 前馈3d重建 提出显存高效的长序列三维重建框架 log-vggt：不做全局长程注意力，只在少量 transformer 块引入跨窗口注意力，在相邻时间窗口间传播信息并把显存限制住；另设全局相机一致性精化模块，让相机 token 与紧凑 register token 交叉注意力交互，对整段序列施加场景级约束以抑制位姿漂移。长序列基准上深度与位姿精度更优，流式性能有竞争力。 we propose log-vggt, a memory-efficient framework for long-sequence 3d reconstruction that balances local temporal modeling with global camera consistency. instead of relying on full global attention, our method introduces cross-window attention at a small subset of transformer blocks, enabling effective information propagation across adjacent temporal windows while keeping memory usage bounded. to mitigate long-term pose drift, we further design a global camera consistency refinement module, where camera tokens interact with compact register tokens via cross-attention to enforce scene-level constraints across the entire sequence. this design enables joint optimization of camera representations and significantly improves long-horizon pose stability without incurring the high cost of sequence-wide attention. extensive experiments demonstrate that log-vggt achieves improved depth accuracy and robust camera pose estimation across multiple long-sequence benchmarks, while delivering competitive streaming reconstruction performance. zhejiang university; fudan university; peking university; beijing institute of technology jingke zhou, chenhang ma, zhizhou zhong, mingkai liu, zhuang zhou, yicheng ji, binghua su, bo cai, xianliang huang cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2609.21404",
+      "title": "Stabilizing Trajectory Outputs in End-to-End Autonomous Driving via SC-IMM Based Teacher Signals",
+      "authors": "Siewoo Kim, Seung-Hyun Kong",
+      "affiliations": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "published_date": "2026-09-18",
+      "categories": "cs.RO",
+      "abstract": "End-to-End autonomous driving models commonly predict future waypoints from sensor inputs and convert them into vehicle control commands through a downstream controller. However, conventional waypoint-based imitation learning mainly minimizes coordinate-level errors, making it difficult to capture scene-dependent path-speed changes and temporal instability across waypoint outputs. In this paper, we propose an offline teacher-signal generation and learning method for trajectory-output stabilization based on a Scene-Conditioned Interacting Multiple Model (SC-IMM) to mitigate this issue. The proposed method converts expert trajectories into path-speed states and performs IMM updates conditioned on scene cues to generate path-speed teacher labels and mode posterior probabilities. The generated signals are added to the original trajectory loss as auxiliary supervision during training, while the inference structure and waypoint controller remain unchanged. In closed-loop evaluation on 100 short routes in CARLA Town12, the proposed method improved the driving score by 28.0% and reduced Collision/km by 62.3% compared with the baseline, while also improving jerk and trajectory-variation metrics. These results demonstrate that offline teacher signals embedding scene-conditioned motion-model cues can guide trajectory-output driving models toward more stable closed-loop behavior.",
+      "summary_cn": "针对端到端自动驾驶航点输出时序不稳、难捕捉场景相关路径—速度变化，提出基于场景条件交互多模型 SC-IMM 的离线教师信号方法：把专家轨迹转成路径—速度状态并按场景线索做 IMM 更新，生成教师标签与模式后验作为辅助监督加入原轨迹损失，推理结构与控制器不变。CARLA Town12 百条路线闭环驾驶分数提升 28.0%，每公里碰撞降 62.3%。",
+      "pdf_filename": "2609.21404.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21404",
+      "search_text": "stabilizing trajectory outputs in end-to-end autonomous driving via sc-imm based teacher signals 闭环仿真 自动驾驶 针对端到端自动驾驶航点输出时序不稳、难捕捉场景相关路径—速度变化，提出基于场景条件交互多模型 sc-imm 的离线教师信号方法：把专家轨迹转成路径—速度状态并按场景线索做 imm 更新，生成教师标签与模式后验作为辅助监督加入原轨迹损失，推理结构与控制器不变。carla town12 百条路线闭环驾驶分数提升 28.0%，每公里碰撞降 62.3%。 end-to-end autonomous driving models commonly predict future waypoints from sensor inputs and convert them into vehicle control commands through a downstream controller. however, conventional waypoint-based imitation learning mainly minimizes coordinate-level errors, making it difficult to capture scene-dependent path-speed changes and temporal instability across waypoint outputs. in this paper, we propose an offline teacher-signal generation and learning method for trajectory-output stabilization based on a scene-conditioned interacting multiple model (sc-imm) to mitigate this issue. the proposed method converts expert trajectories into path-speed states and performs imm updates conditioned on scene cues to generate path-speed teacher labels and mode posterior probabilities. the generated signals are added to the original trajectory loss as auxiliary supervision during training, while the inference structure and waypoint controller remain unchanged. in closed-loop evaluation on 100 short routes in carla town12, the proposed method improved the driving score by 28.0% and reduced collision/km by 62.3% compared with the baseline, while also improving jerk and trajectory-variation metrics. these results demonstrate that offline teacher signals embedding scene-conditioned motion-model cues can guide trajectory-output driving models toward more stable closed-loop behavior. kaist (korea advanced institute of science and technology) siewoo kim, seung-hyun kong cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21366",
+      "title": "TokaGLINT: A Scalable GPU-Tailored Implicit Solver for Full 3D Tokamak Electromagnetic Simulations",
+      "authors": "Zifan Yang, Haoyuan Zhang, Jialin Li, Wu Yuan, Xiazhen Liu, Jian Zhang, Jianyuan Xiao, Shan Liang",
+      "affiliations": "Computer Network Information Center, Chinese Academy of Sciences; University of Chinese Academy of Sciences; Tsinghua University; University of Science and Technology of China",
+      "published_date": "2026-09-18",
+      "categories": "cs.DC",
+      "abstract": "We introduce TokaGLINT, a GPU-accelerated implicit solver for electromagnetic field computations in full 3D tokamak simulations, aimed at efficient large-scale parallel GPU computing. Its central innovation lies in the co-design of hierarchical domain decomposition and a fast exact local solver, where hierarchical partitioning is tailored to match fine-grained intra-card subdomains and exploit the tensor-based solver dedicated to curvilinear-coordinate symplectic CN-FDTD-discretized 3D Maxwell equations. Backed by automated operator fusion and batching customized for the intra-card multi-subdomain structure, the solver decouples unknowns through discrete transformations and leverages tensor-structured computations to achieve high hardware utilization, while preserving the long-time stability characteristic of symplectic discretizations. TokaGLINT scales the electromagnetic field solve beyond 10,000 GPUs, achieving 90.1% weak and 53.9% strong scaling efficiency, while delivering a 2.67X single-node speedup over an unpreconditioned BiCGStab baseline (HIP-enabled HYPRE). It is validated in EAST tokamak simulations within the SymPIC plasma simulation code, enabling high-fidelity long-duration modeling.",
+      "summary_cn": "提出全三维托卡马克电磁仿真的 GPU 隐式求解器 TokaGLINT，核心是层次化区域分解与快速精确局部求解器协同设计：分区匹配卡内子域，配合曲线坐标下辛 CN-FDTD 离散三维麦克斯韦方程的张量求解器，并以自动算子融合与批处理解耦未知量。超万张 GPU 上达 90.1% 弱扩展、53.9% 强扩展效率，单节点较 BiCGStab 加速 2.67 倍。",
+      "pdf_filename": "2609.21366.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2609.21366",
+      "search_text": "tokaglint: a scalable gpu-tailored implicit solver for full 3d tokamak electromagnetic simulations  提出全三维托卡马克电磁仿真的 gpu 隐式求解器 tokaglint，核心是层次化区域分解与快速精确局部求解器协同设计：分区匹配卡内子域，配合曲线坐标下辛 cn-fdtd 离散三维麦克斯韦方程的张量求解器，并以自动算子融合与批处理解耦未知量。超万张 gpu 上达 90.1% 弱扩展、53.9% 强扩展效率，单节点较 bicgstab 加速 2.67 倍。 we introduce tokaglint, a gpu-accelerated implicit solver for electromagnetic field computations in full 3d tokamak simulations, aimed at efficient large-scale parallel gpu computing. its central innovation lies in the co-design of hierarchical domain decomposition and a fast exact local solver, where hierarchical partitioning is tailored to match fine-grained intra-card subdomains and exploit the tensor-based solver dedicated to curvilinear-coordinate symplectic cn-fdtd-discretized 3d maxwell equations. backed by automated operator fusion and batching customized for the intra-card multi-subdomain structure, the solver decouples unknowns through discrete transformations and leverages tensor-structured computations to achieve high hardware utilization, while preserving the long-time stability characteristic of symplectic discretizations. tokaglint scales the electromagnetic field solve beyond 10,000 gpus, achieving 90.1% weak and 53.9% strong scaling efficiency, while delivering a 2.67x single-node speedup over an unpreconditioned bicgstab baseline (hip-enabled hypre). it is validated in east tokamak simulations within the sympic plasma simulation code, enabling high-fidelity long-duration modeling. computer network information center, chinese academy of sciences; university of chinese academy of sciences; tsinghua university; university of science and technology of china zifan yang, haoyuan zhang, jialin li, wu yuan, xiazhen liu, jian zhang, jianyuan xiao, shan liang cs.dc"
+    },
+    {
+      "arxiv_id": "2609.21319",
+      "title": "LEMCA: LLM-Guided Synthesis of Efficient Mode-Switching Control Architectures",
+      "authors": "Arjun Krishna, Vincent Pacelli, Dinesh Jayaraman",
+      "affiliations": "University of Pennsylvania; Amazon Robotics",
+      "published_date": "2026-09-18",
+      "categories": "cs.RO",
+      "abstract": "Physical control tasks in the natural world, such as driving or object manipulation, frequently exhibit dramatic variations in sensory and compute complexity over time. Correspondingly, a natural resource-efficient choice for robot control is to dynamically switch between control modes with varying resource allocations. However, such \"mode-switching controllers\" (MSCs) have historically required laborious, expert-driven design and synthesis for each new task. Driven by these design difficulties, modern robotic control architectures often fall back to a wasteful \"monolithic\" one-size-fits-all structure, where resource allocation is permanently anchored to the hardest, most resource-intensive task phases. To facilitate the design of performant yet efficient MSCs, we propose LLM-Guided synthesis of Efficient Mode-Switching Control Architectures (LEMCA). LEMCA represents MSC designs as interpretable programs to be iteratively refined in an evolutionary loop. To evaluate design fitness, we propose MSC-compatible extensions of automated controller synthesis approaches, such as reinforcement learning in simulation. LEMCA then leverages the semantic priors, reasoning, and coding capabilities of Large Language Models (LLMs) to iteratively edit controller modes, their corresponding sensory-compute resource allocations, and mode transitions. Our experiments across diverse control benchmarks show that LEMCA consistently discovers strategies that surpass the Pareto frontier of monolithic designs by reclaiming wasted resources during \"easy\" task phases. LEMCA thus presents an automated, low-effort path to synthesize resource-efficient MSC designs.",
+      "summary_cn": "提出 LEMCA，用大语言模型引导合成高效模式切换控制器：把控制架构表示为可解释程序，在进化循环中由 LLM 迭代编辑各控制模式的感知与算力资源分配及切换条件，并用强化学习等自动合成方法评估适应度。多个控制基准上持续超越单体架构 Pareto 前沿，回收简单任务阶段被浪费的算力，为模式切换控制器设计提供低人力自动路径。",
+      "pdf_filename": "2609.21319.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "强化学习",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21319",
+      "search_text": "lemca: llm-guided synthesis of efficient mode-switching control architectures 强化学习 大语言模型 提出 lemca，用大语言模型引导合成高效模式切换控制器：把控制架构表示为可解释程序，在进化循环中由 llm 迭代编辑各控制模式的感知与算力资源分配及切换条件，并用强化学习等自动合成方法评估适应度。多个控制基准上持续超越单体架构 pareto 前沿，回收简单任务阶段被浪费的算力，为模式切换控制器设计提供低人力自动路径。 physical control tasks in the natural world, such as driving or object manipulation, frequently exhibit dramatic variations in sensory and compute complexity over time. correspondingly, a natural resource-efficient choice for robot control is to dynamically switch between control modes with varying resource allocations. however, such \"mode-switching controllers\" (mscs) have historically required laborious, expert-driven design and synthesis for each new task. driven by these design difficulties, modern robotic control architectures often fall back to a wasteful \"monolithic\" one-size-fits-all structure, where resource allocation is permanently anchored to the hardest, most resource-intensive task phases. to facilitate the design of performant yet efficient mscs, we propose llm-guided synthesis of efficient mode-switching control architectures (lemca). lemca represents msc designs as interpretable programs to be iteratively refined in an evolutionary loop. to evaluate design fitness, we propose msc-compatible extensions of automated controller synthesis approaches, such as reinforcement learning in simulation. lemca then leverages the semantic priors, reasoning, and coding capabilities of large language models (llms) to iteratively edit controller modes, their corresponding sensory-compute resource allocations, and mode transitions. our experiments across diverse control benchmarks show that lemca consistently discovers strategies that surpass the pareto frontier of monolithic designs by reclaiming wasted resources during \"easy\" task phases. lemca thus presents an automated, low-effort path to synthesize resource-efficient msc designs. university of pennsylvania; amazon robotics arjun krishna, vincent pacelli, dinesh jayaraman cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21228",
+      "title": "FOCAL-VLA: Subtask-Guided Geometry Distillation and Implicit World Modeling for Vision-Language-Action Models",
+      "authors": "Zhiyuan Gao, Di Wen, Yanxiang Zhan, Mohammad Khoshnazar, Jeroen Schäfer, Kunyu Peng, Michael Beetz",
+      "affiliations": "University of Bremen; Karlsruhe Institute of Technology (KIT); Robotics Institute Germany",
+      "published_date": "2026-09-18",
+      "categories": "cs.RO, cs.AI, cs.CV",
+      "abstract": "Vision-language-action (VLA) models built on pretrained vision-language models have demonstrated strong performance across diverse robotic manipulation tasks. However, VLA models that directly map current 2D observations to actions often lack sufficient spatial and temporal understanding, limiting their performance in precise and long-horizon manipulation. Recent methods enhance VLA models through geometric supervision and future-state prediction across the entire scene. However, these methods can suffer from redundant scene information, distracting the model from learning the geometry and dynamics relevant to the current interaction. To address this issue, we propose FOCAL-VLA, a framework that combines subtask-guided geometry distillation with implicit world modeling to learn representations of current spatial structure and future interaction dynamics. To focus geometric learning on the current subtask, we transfer geometric knowledge from VGGT to the VLA model by aligning geometry latents with features from subtask-relevant image regions. To capture the future 3D evolution of the current interaction, we incorporate implicit world modeling using Track4World features from current and future demonstration frames. The two complementary representations jointly guide action generation without running VGGT or Track4World at inference time. Experiments show that FOCAL-VLA outperforms baselines on both simulation benchmarks and real-world manipulation tasks. Project website: https://zhiyuan-gao.github.io/FOCAL-VLA/.",
+      "summary_cn": "针对 VLA 模型空间与时间理解不足，提出子任务引导几何蒸馏加隐式世界建模：把 VGGT 的几何知识通过对齐子任务相关图像区域蒸馏进 VLA，并用 Track4World 的当前与未来帧特征建模交互的未来三维演化，两类表征共同引导动作生成，推理时不再运行 VGGT 或 Track4World，避免整场景冗余干扰。仿真与真实操作任务均超基线。",
+      "pdf_filename": "2609.21228.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "世界模型",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21228",
+      "search_text": "focal-vla: subtask-guided geometry distillation and implicit world modeling for vision-language-action models 前馈3d重建 世界模型 多模态 针对 vla 模型空间与时间理解不足，提出子任务引导几何蒸馏加隐式世界建模：把 vggt 的几何知识通过对齐子任务相关图像区域蒸馏进 vla，并用 track4world 的当前与未来帧特征建模交互的未来三维演化，两类表征共同引导动作生成，推理时不再运行 vggt 或 track4world，避免整场景冗余干扰。仿真与真实操作任务均超基线。 vision-language-action (vla) models built on pretrained vision-language models have demonstrated strong performance across diverse robotic manipulation tasks. however, vla models that directly map current 2d observations to actions often lack sufficient spatial and temporal understanding, limiting their performance in precise and long-horizon manipulation. recent methods enhance vla models through geometric supervision and future-state prediction across the entire scene. however, these methods can suffer from redundant scene information, distracting the model from learning the geometry and dynamics relevant to the current interaction. to address this issue, we propose focal-vla, a framework that combines subtask-guided geometry distillation with implicit world modeling to learn representations of current spatial structure and future interaction dynamics. to focus geometric learning on the current subtask, we transfer geometric knowledge from vggt to the vla model by aligning geometry latents with features from subtask-relevant image regions. to capture the future 3d evolution of the current interaction, we incorporate implicit world modeling using track4world features from current and future demonstration frames. the two complementary representations jointly guide action generation without running vggt or track4world at inference time. experiments show that focal-vla outperforms baselines on both simulation benchmarks and real-world manipulation tasks. project website: https://zhiyuan-gao.github.io/focal-vla/. university of bremen; karlsruhe institute of technology (kit); robotics institute germany zhiyuan gao, di wen, yanxiang zhan, mohammad khoshnazar, jeroen schäfer, kunyu peng, michael beetz cs.ro, cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21225",
+      "title": "VGGT-CAD: Reconstructing Parametric CAD 3D Model with Geometric Grounding",
+      "authors": "Chunan Yu, Tianrun Chen, Fu Shen, Cheng Chen, Lanyun Zhu, Yang Yang",
+      "affiliations": "Nanjing University of Science and Technology; Nanjing Institute of Agricultural Mechanization",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV",
+      "abstract": "Parametric CAD reconstruction requires recovering both precise geometry and editable modeling operations from visual observations, making it challenging under limited and ambiguous views. Existing methods mainly rely on 2D appearance cues and lack strong multi-view geometric priors. In this work, we present VGGT-CAD, a geometry-aware framework for parametric CAD reconstruction from single- and multi-view observations. We transfer pretrained 3D geometric priors into CAD reconstruction by encoding camera parameters as condition tokens and jointly modeling them with image tokens. To handle varying numbers of viewpoints, we introduce a variable-view cross-view context aggregation module that adaptively fuses multi-view features. We further develop a training-free geometry-aware view selection strategy to select complementary and reliable frames during inference. The resulting representation is decoded into CAD command sequences using a non-autoregressive decoder. We also develop VideoCAD, a large-scale multi-view video benchmark derived from existing CAD data through multi-view re-rendering. Extensive experiments demonstrate the effectiveness of VGGT-CAD for visual CAD reconstruction under different observation configurations.",
+      "summary_cn": "把预训练三维几何先验迁到参数化 CAD 重建：相机参数编码为条件 token 与图像 token 联合建模，提出可变视角跨视角上下文聚合模块适配任意视角数，并用免训练几何感知选帧策略筛选互补可靠帧，由非自回归解码器输出 CAD 命令序列。同时构建多视角视频基准 VideoCAD，单视与多视配置下均验证几何先验的增益。",
+      "pdf_filename": "2609.21225.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21225",
+      "search_text": "vggt-cad: reconstructing parametric cad 3d model with geometric grounding 前馈3d重建 把预训练三维几何先验迁到参数化 cad 重建：相机参数编码为条件 token 与图像 token 联合建模，提出可变视角跨视角上下文聚合模块适配任意视角数，并用免训练几何感知选帧策略筛选互补可靠帧，由非自回归解码器输出 cad 命令序列。同时构建多视角视频基准 videocad，单视与多视配置下均验证几何先验的增益。 parametric cad reconstruction requires recovering both precise geometry and editable modeling operations from visual observations, making it challenging under limited and ambiguous views. existing methods mainly rely on 2d appearance cues and lack strong multi-view geometric priors. in this work, we present vggt-cad, a geometry-aware framework for parametric cad reconstruction from single- and multi-view observations. we transfer pretrained 3d geometric priors into cad reconstruction by encoding camera parameters as condition tokens and jointly modeling them with image tokens. to handle varying numbers of viewpoints, we introduce a variable-view cross-view context aggregation module that adaptively fuses multi-view features. we further develop a training-free geometry-aware view selection strategy to select complementary and reliable frames during inference. the resulting representation is decoded into cad command sequences using a non-autoregressive decoder. we also develop videocad, a large-scale multi-view video benchmark derived from existing cad data through multi-view re-rendering. extensive experiments demonstrate the effectiveness of vggt-cad for visual cad reconstruction under different observation configurations. nanjing university of science and technology; nanjing institute of agricultural mechanization chunan yu, tianrun chen, fu shen, cheng chen, lanyun zhu, yang yang cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21217",
+      "title": "X-SPUR: Explainable Surprisal-Based Protocol-Aware Unsupervised Reasoning for Automotive Ethernet Intrusion Detection",
+      "authors": "Jisoo Kim, Seonghoon Jeong",
+      "affiliations": "Sookmyung Women's University",
+      "published_date": "2026-09-18",
+      "categories": "cs.CR, cs.NI",
+      "abstract": "Automotive Ethernet carries heterogeneous multi-protocol traffic in modern in-vehicle networks, where labeled attack data are rarely available and the strongest prior unsupervised detector still relies on handcrafted traffic features. This article presents X-SPUR, an explainable, surprisal-based, protocol-aware unsupervised reasoning framework that instead represents raw packet fields as token sequences, learns benign traffic patterns through causal language modeling, and detects anomalies from per-token cross-entropy surprisal. To incorporate temporal context, we introduce a bimodal fusion architecture that combines payload-token embeddings with inter-packet timing through additive fusion and a Hadamard interaction. To handle the heterogeneous score distributions of different protocol families, we further propose a dual top-$k$% per-protocol $Z$-score calibration that jointly captures moderately distributed and sparse anomaly signatures. On the TOW-IDS dataset, X-SPUR achieves an AUC of 0.9987. This is marginally higher than the 0.9969 reported for AERO. X-SPUR also eliminates handcrafted feature engineering. We train a separate CarDS model using the same architecture and training hyperparameters. This model retains strong performance on the second automotive Ethernet dataset. Beyond detection, per-token surprisal provides fine-grained explainability by attributing anomaly scores to specific protocol fields, supporting interpretable security analysis in heterogeneous in-vehicle networks.",
+      "summary_cn": "面向车载以太网的入侵检测：把原始报文字段表示为 token 序列，用因果语言模型学正常流量，以逐 token 交叉熵惊异度检测异常，去掉人工特征工程。提出载荷嵌入与包间时序的双模态融合及双 top-k 逐协议 Z-score 校准。TOW-IDS 上 AUC 0.9987 略超 AERO 的 0.9969，并能将异常归因到具体协议字段。",
+      "pdf_filename": "2609.21217.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2609.21217",
+      "search_text": "x-spur: explainable surprisal-based protocol-aware unsupervised reasoning for automotive ethernet intrusion detection  面向车载以太网的入侵检测：把原始报文字段表示为 token 序列，用因果语言模型学正常流量，以逐 token 交叉熵惊异度检测异常，去掉人工特征工程。提出载荷嵌入与包间时序的双模态融合及双 top-k 逐协议 z-score 校准。tow-ids 上 auc 0.9987 略超 aero 的 0.9969，并能将异常归因到具体协议字段。 automotive ethernet carries heterogeneous multi-protocol traffic in modern in-vehicle networks, where labeled attack data are rarely available and the strongest prior unsupervised detector still relies on handcrafted traffic features. this article presents x-spur, an explainable, surprisal-based, protocol-aware unsupervised reasoning framework that instead represents raw packet fields as token sequences, learns benign traffic patterns through causal language modeling, and detects anomalies from per-token cross-entropy surprisal. to incorporate temporal context, we introduce a bimodal fusion architecture that combines payload-token embeddings with inter-packet timing through additive fusion and a hadamard interaction. to handle the heterogeneous score distributions of different protocol families, we further propose a dual top-$k$% per-protocol $z$-score calibration that jointly captures moderately distributed and sparse anomaly signatures. on the tow-ids dataset, x-spur achieves an auc of 0.9987. this is marginally higher than the 0.9969 reported for aero. x-spur also eliminates handcrafted feature engineering. we train a separate cards model using the same architecture and training hyperparameters. this model retains strong performance on the second automotive ethernet dataset. beyond detection, per-token surprisal provides fine-grained explainability by attributing anomaly scores to specific protocol fields, supporting interpretable security analysis in heterogeneous in-vehicle networks. sookmyung women's university jisoo kim, seonghoon jeong cs.cr, cs.ni"
+    },
+    {
+      "arxiv_id": "2609.21186",
+      "title": "Robust Structureless Monocular Visual Inertial Initialization Exploiting Line Features and Vanishing Points",
+      "authors": "Junwan Choi, Woongrae Jo, Dong-Uk Seo, Jinwoo Jeon, Hyun Myung",
+      "affiliations": "KAIST (Korea Advanced Institute of Science and Technology)",
+      "published_date": "2026-09-18",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Accurate initialization is essential for reliable visual-inertial odometry (VIO), but it is often ill-conditioned under degenerate motions. Existing methods typically require restrictive excitation motions to ensure sufficient observability or rely on computationally expensive 3D structure reconstruction, limiting efficient and practical deployment. To address these limitations, we propose SLIM-init, a structureless monocular VIO initializer that directly exploits geometric constraints from tracked 2D line features without explicit 3D landmark reconstruction. Specifically, SLIM-init leverages line-derived vanishing points (VPs) as translation-invariant orientation cues to provide robust rotation-only constraints under degenerate scenarios such as low-parallax or translation-dominant motions. It further incorporates a line epipolar residual to constrain translation and a line-normal projection residual to improve the conditioning of linear alignment, enhancing the accuracy and robustness of initial state estimation. Extensive experiments on a public benchmark and challenging custom degenerate-motion sequences demonstrate improved accuracy and robustness over state-of-the-art initialization methods. The source code is available at: https://github.com/cjunwan/SLIM-init.",
+      "summary_cn": "提出结构无关的单目视觉惯性初始化器 SLIM-init，直接用二维线特征几何约束而无需重建三维结构：以线导出消失点作为平移不变姿态线索，在低视差、平移主导等退化运动下提供鲁棒旋转约束，并引入线对极残差约束平移、线法向投影残差改善线性对齐条件数。公开基准与自建退化序列上精度与鲁棒性均优于现有方法。",
+      "pdf_filename": "2609.21186.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2609.21186",
+      "search_text": "robust structureless monocular visual inertial initialization exploiting line features and vanishing points  提出结构无关的单目视觉惯性初始化器 slim-init，直接用二维线特征几何约束而无需重建三维结构：以线导出消失点作为平移不变姿态线索，在低视差、平移主导等退化运动下提供鲁棒旋转约束，并引入线对极残差约束平移、线法向投影残差改善线性对齐条件数。公开基准与自建退化序列上精度与鲁棒性均优于现有方法。 accurate initialization is essential for reliable visual-inertial odometry (vio), but it is often ill-conditioned under degenerate motions. existing methods typically require restrictive excitation motions to ensure sufficient observability or rely on computationally expensive 3d structure reconstruction, limiting efficient and practical deployment. to address these limitations, we propose slim-init, a structureless monocular vio initializer that directly exploits geometric constraints from tracked 2d line features without explicit 3d landmark reconstruction. specifically, slim-init leverages line-derived vanishing points (vps) as translation-invariant orientation cues to provide robust rotation-only constraints under degenerate scenarios such as low-parallax or translation-dominant motions. it further incorporates a line epipolar residual to constrain translation and a line-normal projection residual to improve the conditioning of linear alignment, enhancing the accuracy and robustness of initial state estimation. extensive experiments on a public benchmark and challenging custom degenerate-motion sequences demonstrate improved accuracy and robustness over state-of-the-art initialization methods. the source code is available at: https://github.com/cjunwan/slim-init. kaist (korea advanced institute of science and technology) junwan choi, woongrae jo, dong-uk seo, jinwoo jeon, hyun myung cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21176",
+      "title": "4DGS-Fixer: Generative Sparse-View 4D Gaussian Splatting with Iterative Refinement Guided by Video Diffusion Priors",
+      "authors": "Haitao Huang, Shenghao Zhao, Boyuan Tian, Shin-Fang Chng, Songlin Yang, Sheila Lim, Huangying Zhan, Yi Xu, Anyi Rao, Frank Guan",
+      "affiliations": "Singapore Institute of Technology; The Hong Kong University of Science and Technology; Alpha Labs",
+      "published_date": "2026-09-18",
+      "categories": "cs.CV",
+      "abstract": "This paper addresses the challenges of dynamic scene synthesis from sparse-view videos. Existing methods employ geometric priors, adaptive optimization, or density-control strategies to improve 4D Gaussian modeling under sparse observations. However, they cannot fundamentally resolve the ill-posed problem caused by insufficient observations and missing scene information. Moreover, sparse-view 4D Gaussian Splatting (4DGS) often suffers from poor geometric initialization: with only a few input views, COLMAP typically reconstructs sparse and incomplete point clouds, leaving large scene regions without sufficient Gaussian support and making them difficult to recover through subsequent optimization. To address these limitations, we propose a novel iterative refinement framework based on a video diffusion model to improve the completeness and consistency of dynamic 4D scenes. Specifically, we first estimate multi-view depth maps and fuse them into dense point clouds to provide more complete geometric initialization for a dynamic 4DGS representation. We then employ a pretrained video restoration model to refine sequences rendered along novel camera trajectories at different time steps. The restored sequences serve as pseudo-supervision to regularize and iteratively refine the 4DGS representation. Experiments on a widely used benchmark dataset demonstrate that our method substantially outperforms existing baselines, achieving nearly a 2 dB PSNR improvement over the previous best-performing method.",
+      "summary_cn": "针对稀疏视角动态场景重建，先用多视深度估计融合稠密点云，为 4DGS 提供更完整几何初始化，缓解 COLMAP 点云稀疏导致的高斯支撑不足；再用预训练视频复原模型修复沿新视角轨迹渲染的序列，以其为伪监督迭代精化 4DGS。公开基准上较此前最优方法提升近 2 dB PSNR，动态场景完整性与一致性明显改善。",
+      "pdf_filename": "2609.21176.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "深度估计",
+        "3DGS",
+        "4DGS",
+        "动态场景重建",
+        "扩散模型",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21176",
+      "search_text": "4dgs-fixer: generative sparse-view 4d gaussian splatting with iterative refinement guided by video diffusion priors 深度估计 3dgs 4dgs 动态场景重建 扩散模型 点云 针对稀疏视角动态场景重建，先用多视深度估计融合稠密点云，为 4dgs 提供更完整几何初始化，缓解 colmap 点云稀疏导致的高斯支撑不足；再用预训练视频复原模型修复沿新视角轨迹渲染的序列，以其为伪监督迭代精化 4dgs。公开基准上较此前最优方法提升近 2 db psnr，动态场景完整性与一致性明显改善。 this paper addresses the challenges of dynamic scene synthesis from sparse-view videos. existing methods employ geometric priors, adaptive optimization, or density-control strategies to improve 4d gaussian modeling under sparse observations. however, they cannot fundamentally resolve the ill-posed problem caused by insufficient observations and missing scene information. moreover, sparse-view 4d gaussian splatting (4dgs) often suffers from poor geometric initialization: with only a few input views, colmap typically reconstructs sparse and incomplete point clouds, leaving large scene regions without sufficient gaussian support and making them difficult to recover through subsequent optimization. to address these limitations, we propose a novel iterative refinement framework based on a video diffusion model to improve the completeness and consistency of dynamic 4d scenes. specifically, we first estimate multi-view depth maps and fuse them into dense point clouds to provide more complete geometric initialization for a dynamic 4dgs representation. we then employ a pretrained video restoration model to refine sequences rendered along novel camera trajectories at different time steps. the restored sequences serve as pseudo-supervision to regularize and iteratively refine the 4dgs representation. experiments on a widely used benchmark dataset demonstrate that our method substantially outperforms existing baselines, achieving nearly a 2 db psnr improvement over the previous best-performing method. singapore institute of technology; the hong kong university of science and technology; alpha labs haitao huang, shenghao zhao, boyuan tian, shin-fang chng, songlin yang, sheila lim, huangying zhan, yi xu, anyi rao, frank guan cs.cv"
+    },
+    {
+      "arxiv_id": "2609.21114",
+      "title": "Noctif3R: Feed-Forward Monocular Real-Time SLAM for Photon-Limited Scenes on Embedded Hardware",
+      "authors": "Mihir Chauhan, Aditya Uday Abhang, Kevin Biju Mathew, Aniket Bera",
+      "affiliations": "Purdue University",
+      "published_date": "2026-09-17",
+      "categories": "cs.RO",
+      "abstract": "Robots carrying out tasks in dark environments need to localize from a single RGB camera, in light so low that the per-pixel signal approaches the sensor's own noise, on a power-constrained onboard computer, in real time. Each of these constraints has matured pipelines, but the intersection does not. Offline low-light reconstruction now recovers structure below -4 dB but is far too slow to run in real time, while the real-time monocular systems a robot can actually carry (DROID-SLAM, DPV-SLAM, etc.) degrade or fail when SNR gets low. We measured how they fail: across the nine lowest darkness levels of our scenes, DROID-SLAM returns a full-length trajectory carrying no information about the camera's motion on all nine, VGGT-SLAM and CUT3R on eight, pi^3 on seven, and DPV-SLAM on four. We present SYS, a monocular pipeline built on a low-light feed-forward pointmap front end with an explicit match gate, which returns three tracked trajectories and no uninformative ones, at the lowest error of any method where it tracks (24-47% of the no-information ceiling against 56-73% for the strongest baseline), and at the narrowest coverage. On a real robot video take in which 86.5% of delivered frames are entirely black, every configuration of ours stops after the lit beginning, while DROID-SLAM and DPV-SLAM each emit a pose for all 1178 frames. Our method contribution is an embedded execution path for the Jetson AGX Orin: running the map, keyframes and backend at 384 pixels with tracking at 256, together with two fixes to the per-frame pose solve, is a replicated Pareto improvement, 1.28x throughput at 0.964x error on one scene and 1.42x at 0.68x on a second, with 47% less peak GPU memory and 29% less energy per pose. We evaluate on a calibrated, bit-exact regenerable noise ladder, on relabelled real-world dark exposures, and on a new dark-room video ladder recorded from a Boston Dynamics Spot robot.",
+      "summary_cn": "面向光子受限极暗场景的单目实时 SLAM，以低光前馈点图前端加匹配门控为核心，只在可信时输出轨迹，避免在无信息帧上给出虚假位姿。九档最暗序列中 DROID-SLAM 全部返回无信息轨迹，本方法在能跟踪处误差最低且不输出无信息轨迹。Jetson AGX Orin 嵌入式执行路径使吞吐提升 1.28–1.42 倍、显存峰值降 47%、每帧能耗降 29%。",
+      "pdf_filename": "2609.21114.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "SLAM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21114",
+      "search_text": "noctif3r: feed-forward monocular real-time slam for photon-limited scenes on embedded hardware 前馈3d重建 slam 面向光子受限极暗场景的单目实时 slam，以低光前馈点图前端加匹配门控为核心，只在可信时输出轨迹，避免在无信息帧上给出虚假位姿。九档最暗序列中 droid-slam 全部返回无信息轨迹，本方法在能跟踪处误差最低且不输出无信息轨迹。jetson agx orin 嵌入式执行路径使吞吐提升 1.28–1.42 倍、显存峰值降 47%、每帧能耗降 29%。 robots carrying out tasks in dark environments need to localize from a single rgb camera, in light so low that the per-pixel signal approaches the sensor's own noise, on a power-constrained onboard computer, in real time. each of these constraints has matured pipelines, but the intersection does not. offline low-light reconstruction now recovers structure below -4 db but is far too slow to run in real time, while the real-time monocular systems a robot can actually carry (droid-slam, dpv-slam, etc.) degrade or fail when snr gets low. we measured how they fail: across the nine lowest darkness levels of our scenes, droid-slam returns a full-length trajectory carrying no information about the camera's motion on all nine, vggt-slam and cut3r on eight, pi^3 on seven, and dpv-slam on four. we present sys, a monocular pipeline built on a low-light feed-forward pointmap front end with an explicit match gate, which returns three tracked trajectories and no uninformative ones, at the lowest error of any method where it tracks (24-47% of the no-information ceiling against 56-73% for the strongest baseline), and at the narrowest coverage. on a real robot video take in which 86.5% of delivered frames are entirely black, every configuration of ours stops after the lit beginning, while droid-slam and dpv-slam each emit a pose for all 1178 frames. our method contribution is an embedded execution path for the jetson agx orin: running the map, keyframes and backend at 384 pixels with tracking at 256, together with two fixes to the per-frame pose solve, is a replicated pareto improvement, 1.28x throughput at 0.964x error on one scene and 1.42x at 0.68x on a second, with 47% less peak gpu memory and 29% less energy per pose. we evaluate on a calibrated, bit-exact regenerable noise ladder, on relabelled real-world dark exposures, and on a new dark-room video ladder recorded from a boston dynamics spot robot. purdue university mihir chauhan, aditya uday abhang, kevin biju mathew, aniket bera cs.ro"
+    },
+    {
+      "arxiv_id": "2609.21112",
+      "title": "Demonstration Synthesis from a Single Scan via Gaussian Splatting for Visuomotor Policy Learning",
+      "authors": "Beichen Wang, Yuen-Hei Yeung, V. R. Sridhar Devarakonda, Xuesu Xiao",
+      "affiliations": "George Mason University; New York University",
+      "published_date": "2026-09-17",
+      "categories": "cs.RO",
+      "abstract": "Training a visuomotor policy calls for abundant demonstrations that closely match the target environment, yet collecting them anew remains expensive. Existing demonstration synthesis methods reduce this cost but remain constrained by high manual effort, limited visual fidelity, or heavy reliance on physics simulators. This paper introduces GaussianFactory, a high-fidelity data engine that mass-produces demonstrations with a single video scan as its only human input and no physics engine in the generation loop. Specifically, GaussianFactory reconstructs the scene as an editable 3D Gaussian Splatting (3DGS) replica and samples from the object-combination tasks the scene affords. For each task, it plans grasps and trajectories purely kinematically on the geometric reconstruction, rendering photorealistic demonstrations that visually match the target environment. Physical dynamics enter the pipeline only where contact force interactions dictate the outcome---during grasp formation, via a learned contact model pretrained once on an interaction dataset. To evaluate the downstream utility of the synthesized demonstrations, we implement an end-to-end scan-to-deployment workflow in two setups: a simulated scene that stands in for the real world to enable reproducibility, and a real-world workspace with a physical UR10e robot. In each setup, a standard diffusion policy trained solely on the synthesized demonstrations achieves 95.1% and 84.2% success rates, respectively.",
+      "summary_cn": "提出数据引擎 GaussianFactory：仅需一段视频扫描，将场景重建为可编辑 3DGS 副本，从场景支持的物体组合任务中采样，纯运动学规划抓取与轨迹，配合一次预训练接触模型渲染照片级演示，生成环节不用物理引擎。仿真与真实 UR10e 上仅用合成演示训练扩散策略，成功率分别达 95.1% 与 84.2%。",
+      "pdf_filename": "2609.21112.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "闭环仿真",
+        "扩散模型",
+        "强化学习",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21112",
+      "search_text": "demonstration synthesis from a single scan via gaussian splatting for visuomotor policy learning 3dgs 闭环仿真 扩散模型 强化学习 规划 提出数据引擎 gaussianfactory：仅需一段视频扫描，将场景重建为可编辑 3dgs 副本，从场景支持的物体组合任务中采样，纯运动学规划抓取与轨迹，配合一次预训练接触模型渲染照片级演示，生成环节不用物理引擎。仿真与真实 ur10e 上仅用合成演示训练扩散策略，成功率分别达 95.1% 与 84.2%。 training a visuomotor policy calls for abundant demonstrations that closely match the target environment, yet collecting them anew remains expensive. existing demonstration synthesis methods reduce this cost but remain constrained by high manual effort, limited visual fidelity, or heavy reliance on physics simulators. this paper introduces gaussianfactory, a high-fidelity data engine that mass-produces demonstrations with a single video scan as its only human input and no physics engine in the generation loop. specifically, gaussianfactory reconstructs the scene as an editable 3d gaussian splatting (3dgs) replica and samples from the object-combination tasks the scene affords. for each task, it plans grasps and trajectories purely kinematically on the geometric reconstruction, rendering photorealistic demonstrations that visually match the target environment. physical dynamics enter the pipeline only where contact force interactions dictate the outcome---during grasp formation, via a learned contact model pretrained once on an interaction dataset. to evaluate the downstream utility of the synthesized demonstrations, we implement an end-to-end scan-to-deployment workflow in two setups: a simulated scene that stands in for the real world to enable reproducibility, and a real-world workspace with a physical ur10e robot. in each setup, a standard diffusion policy trained solely on the synthesized demonstrations achieves 95.1% and 84.2% success rates, respectively. george mason university; new york university beichen wang, yuen-hei yeung, v. r. sridhar devarakonda, xuesu xiao cs.ro"
+    },
+    {
+      "arxiv_id": "2609.20983",
+      "title": "PIVOT: Physically Informed Vision-Language Off-Road Traversability for Field Robot Navigation",
+      "authors": "Aoran Jiao, Wenda Zhao, Hshmat Sahak, Timothy D. Barfoot",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-09-17",
+      "categories": "cs.RO",
+      "abstract": "Terrain assessment is a critical capability for off-road mobile robots, enabling safe and reliable navigation through unstructured and geometrically complex environments. Conventional geometry-based terrain assessment is fast to compute but often overly conservative in unstructured environments. We present PIVOT: a Physically Informed Vision-Language Off-Road Traversability navigation system that augments conventional geometry-based planning with vision-language-model (VLM)-based semantic reasoning for field robots. To physically ground this assessment, we quantify how strongly the VLM's predicted traversal energy cost, robot vibration, and wheel slip correlate with real-world measurements and introduce a unified traversability score that weights each modality by its prediction-measurement correlation. For efficiency, we design a two-level navigation architecture that retains geometry-based planning as the nominal mode and invokes semantic replanning only when that mode fails to find a path. Across five repeated closed-loop trials on a mixed-terrain route totalling around $6.4$ km, the proposed system increases overall autonomy from $59.6\\%$ to $97.0\\%$, reduces human interventions from $11$ to $3$, and increases the mean distance between interventions (MDBI) from $69.2$ m to $412.9$ m compared with geometry-only navigation. These results demonstrate that physically grounded VLM-based terrain assessment can substantially extend autonomous navigation beyond the limitations of geometry alone, while preserving efficient geometric planning as the nominal mode.",
+      "summary_cn": "提出越野可通行性导航系统 PIVOT，用视觉语言模型为几何规划补语义：量化 VLM 预测的通行能耗、车体振动与打滑同实测值的相关性，按相关性加权成统一可通行性分数；几何规划为常驻模式，仅找不到路径时才触发语义重规划。约 6.4 km 混合地形五次闭环试验中自主率由 59.6% 升到 97.0%，人工接管从 11 次降至 3 次。",
+      "pdf_filename": "2609.20983.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "地形重建",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.20983",
+      "search_text": "pivot: physically informed vision-language off-road traversability for field robot navigation 闭环仿真 规划 地形重建 多模态 提出越野可通行性导航系统 pivot，用视觉语言模型为几何规划补语义：量化 vlm 预测的通行能耗、车体振动与打滑同实测值的相关性，按相关性加权成统一可通行性分数；几何规划为常驻模式，仅找不到路径时才触发语义重规划。约 6.4 km 混合地形五次闭环试验中自主率由 59.6% 升到 97.0%，人工接管从 11 次降至 3 次。 terrain assessment is a critical capability for off-road mobile robots, enabling safe and reliable navigation through unstructured and geometrically complex environments. conventional geometry-based terrain assessment is fast to compute but often overly conservative in unstructured environments. we present pivot: a physically informed vision-language off-road traversability navigation system that augments conventional geometry-based planning with vision-language-model (vlm)-based semantic reasoning for field robots. to physically ground this assessment, we quantify how strongly the vlm's predicted traversal energy cost, robot vibration, and wheel slip correlate with real-world measurements and introduce a unified traversability score that weights each modality by its prediction-measurement correlation. for efficiency, we design a two-level navigation architecture that retains geometry-based planning as the nominal mode and invokes semantic replanning only when that mode fails to find a path. across five repeated closed-loop trials on a mixed-terrain route totalling around $6.4$ km, the proposed system increases overall autonomy from $59.6\\%$ to $97.0\\%$, reduces human interventions from $11$ to $3$, and increases the mean distance between interventions (mdbi) from $69.2$ m to $412.9$ m compared with geometry-only navigation. these results demonstrate that physically grounded vlm-based terrain assessment can substantially extend autonomous navigation beyond the limitations of geometry alone, while preserving efficient geometric planning as the nominal mode. 未找到单位信息 aoran jiao, wenda zhao, hshmat sahak, timothy d. barfoot cs.ro"
+    },
+    {
+      "arxiv_id": "2609.20964",
+      "title": "Warp-Geo: Differentiable Geometry Representation for Dynamic-Boundary Simulation and Shape Optimization",
+      "authors": "Weijie Zhang, Xiantao Fan, Jian-Xun Wang",
+      "affiliations": "University of Notre Dame; Cornell University",
+      "published_date": "2026-09-17",
+      "categories": "physics.comp-ph",
+      "abstract": "Modern inverse problems and adaptive simulations require efficient and differentiable representations of complex geometries that can be updated frequently for gradient-based optimization. Existing methods cannot simultaneously achieve both. We present Warp-Geo, a differentiable GPU-accelerated framework for reconstructing signed distance fields and evaluating surface normals from point clouds of complex 3D geometries. Warp-Geo combines uniform grids for GPU parallelism with implicit differentiation through the Poisson solve, enabling frequent geometry recomputation while maintaining full differentiability. We demonstrate Warp-Geo on forward SDF reconstruction, dynamic fluid--structure interaction with moving boundaries, and inverse shape optimization via automatic differentiation with gradient validation. GPU scalability analysis confirms practical feasibility for frequent geometry updates. The framework, implemented in Warp and JAX, enables seamless integration with differentiable physics solvers for end-to-end shape optimization.",
+      "summary_cn": "提出 GPU 可微几何框架 Warp-Geo，从三维点云重建符号距离场并求表面法向：用均匀网格做 GPU 并行，对泊松求解做隐式微分，使几何可频繁重算且全程可微。在正向 SDF 重建、动边界流固耦合与逆形状优化上验证梯度正确性与大规模可扩展性，基于 Warp 与 JAX 实现，可接入可微物理求解器做端到端形状优化。",
+      "pdf_filename": "2609.20964.pdf",
+      "crawled_date": "2026-09-21",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.20964",
+      "search_text": "warp-geo: differentiable geometry representation for dynamic-boundary simulation and shape optimization 点云 提出 gpu 可微几何框架 warp-geo，从三维点云重建符号距离场并求表面法向：用均匀网格做 gpu 并行，对泊松求解做隐式微分，使几何可频繁重算且全程可微。在正向 sdf 重建、动边界流固耦合与逆形状优化上验证梯度正确性与大规模可扩展性，基于 warp 与 jax 实现，可接入可微物理求解器做端到端形状优化。 modern inverse problems and adaptive simulations require efficient and differentiable representations of complex geometries that can be updated frequently for gradient-based optimization. existing methods cannot simultaneously achieve both. we present warp-geo, a differentiable gpu-accelerated framework for reconstructing signed distance fields and evaluating surface normals from point clouds of complex 3d geometries. warp-geo combines uniform grids for gpu parallelism with implicit differentiation through the poisson solve, enabling frequent geometry recomputation while maintaining full differentiability. we demonstrate warp-geo on forward sdf reconstruction, dynamic fluid--structure interaction with moving boundaries, and inverse shape optimization via automatic differentiation with gradient validation. gpu scalability analysis confirms practical feasibility for frequent geometry updates. the framework, implemented in warp and jax, enables seamless integration with differentiable physics solvers for end-to-end shape optimization. university of notre dame; cornell university weijie zhang, xiantao fan, jian-xun wang physics.comp-ph"
+    },
     {
       "arxiv_id": "2609.20818",
       "title": "SplashSplat: Reconstructing Splashing Liquids from Real-World Multi-View Videos",
