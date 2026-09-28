@@ -1,5 +1,5 @@
 {
-  "count": 3,
+  "count": 4,
   "reviews": [
     {
       "arxiv_id": "2607.23758",
@@ -18,6 +18,12 @@
       "title": "BI-FLOWGS: BRIDGING GENERATIVE VIEW COMPLETION AND GAUSSIAN GEOMETRY THROUGH BIDIRECTIONAL FLOW CO-REFINEMENT",
       "updated": 1789636724.7693574,
       "chars": 28153
+    },
+    {
+      "arxiv_id": "2609.26792",
+      "title": "DreamStream: Towards Policy-Oriented Generative Simulation for End-to-End Driving",
+      "updated": 1790599101.553435,
+      "chars": 31939
     }
   ]
 }
