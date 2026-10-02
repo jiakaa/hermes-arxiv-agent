@@ -1,45 +1,45 @@
 {
-  "count": 1288,
+  "count": 1315,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-01",
+  "crawled_date_max": "2026-10-02",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-09-30",
+  "published_date_max": "2026-10-01",
   "rating_counts": {
-    "S": 345,
-    "A": 591,
-    "B": 196,
-    "C": 156,
+    "S": 357,
+    "A": 597,
+    "B": 201,
+    "C": 160,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 294,
+      "count": 295,
       "group": "3DGS/4DGS"
     },
     {
       "name": "自动驾驶",
-      "count": 246,
+      "count": 248,
       "group": "通用"
     },
     {
       "name": "规划",
-      "count": 220,
+      "count": 225,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 184,
+      "count": 188,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 179,
+      "count": 182,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 175,
+      "count": 180,
       "group": "世界模型与仿真"
     },
     {
@@ -49,27 +49,27 @@
     },
     {
       "name": "点云",
-      "count": 89,
+      "count": 90,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 87,
+      "count": 88,
       "group": "世界模型与仿真"
     },
     {
       "name": "前馈3D重建",
-      "count": 75,
+      "count": 78,
       "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
-      "count": 73,
+      "count": 76,
       "group": "通用"
     },
     {
       "name": "仿真器",
-      "count": 70,
+      "count": 71,
       "group": "通用"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "name": "视频生成",
-      "count": 36,
+      "count": 37,
       "group": "世界模型与仿真"
     },
     {
@@ -124,7 +124,7 @@
     },
     {
       "name": "生成式仿真",
-      "count": 18,
+      "count": 19,
       "group": "世界模型与仿真"
     },
     {
@@ -154,6 +154,514 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.02122",
+      "title": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
+      "authors": "Gabriel Tomitsuka, Arman Raayatsanati, Emma Xing, Duke Gand, Joseph J Ma",
+      "affiliations": "TextQL",
+      "published_date": "2026-10-01",
+      "categories": "cs.CL, cs.AI, cs.DB",
+      "abstract": "Real-world enterprise data science and analytics workflows require reasoning across dozens of tables, performing statistical analyses, and acting on the results. Established text-to-SQL benchmarks evaluate query generation alone, and audits have found their answer keys frequently wrong. Because real enterprise warehouses are too sensitive to release, these benchmarks are built on public datasets where a business event fits in a single table. We introduce Argo-Bench, an evaluation framework comprising 210 data science and analytics tasks. Drawing on public data, peer-reviewed industry literature, and regulatory filings, we simulate a food delivery platform in New York City at true scale, with 81 million orders in 2024, grounded economics, fraud patterns, and marketplace incentives. We export this world to an ERP warehouse of 235 tables and 7.5 billion rows, modeled on the Oracle E-Business Suite schema. The simulator's ground-truth state is withheld from the warehouse the agent sees, so tasks require reconstructing facts by navigating the warehouse before acting on them. Argo-Bench goes beyond text-to-SQL: the agent files actions such as banning fraudulent accounts, allocating courier incentive budgets, or issuing back pay, and the grader scores each by its consequences in the simulator. Every task has an executable reference solution that demonstrates solvability using only the warehouse. The strongest of 14 frontier and open-weight models scores 95 or higher on only 34.8% of tasks and averages 59.5 points. We hope Argo-Bench drives progress toward agents that understand, navigate, and act within real data environments.",
+      "summary_cn": "Argo-Bench 针对现有 text-to-SQL 基准只考查询生成、答案键常有错的问题，以真实规模模拟纽约外卖平台（2024年8100万订单），导出235张表、75亿行的ERP仓库；真值对智能体不可见，需先巡视仓库重建事实再行动。210个任务按行动后果评分，14个模型中最优者仅34.8%任务得分≥95。",
+      "pdf_filename": "2610.02122.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.02122",
+      "search_text": "argo-bench: evaluating data agents on enterprise-scale workflows 仿真器 argo-bench 针对现有 text-to-sql 基准只考查询生成、答案键常有错的问题，以真实规模模拟纽约外卖平台（2024年8100万订单），导出235张表、75亿行的erp仓库；真值对智能体不可见，需先巡视仓库重建事实再行动。210个任务按行动后果评分，14个模型中最优者仅34.8%任务得分≥95。 real-world enterprise data science and analytics workflows require reasoning across dozens of tables, performing statistical analyses, and acting on the results. established text-to-sql benchmarks evaluate query generation alone, and audits have found their answer keys frequently wrong. because real enterprise warehouses are too sensitive to release, these benchmarks are built on public datasets where a business event fits in a single table. we introduce argo-bench, an evaluation framework comprising 210 data science and analytics tasks. drawing on public data, peer-reviewed industry literature, and regulatory filings, we simulate a food delivery platform in new york city at true scale, with 81 million orders in 2024, grounded economics, fraud patterns, and marketplace incentives. we export this world to an erp warehouse of 235 tables and 7.5 billion rows, modeled on the oracle e-business suite schema. the simulator's ground-truth state is withheld from the warehouse the agent sees, so tasks require reconstructing facts by navigating the warehouse before acting on them. argo-bench goes beyond text-to-sql: the agent files actions such as banning fraudulent accounts, allocating courier incentive budgets, or issuing back pay, and the grader scores each by its consequences in the simulator. every task has an executable reference solution that demonstrates solvability using only the warehouse. the strongest of 14 frontier and open-weight models scores 95 or higher on only 34.8% of tasks and averages 59.5 points. we hope argo-bench drives progress toward agents that understand, navigate, and act within real data environments. textql gabriel tomitsuka, arman raayatsanati, emma xing, duke gand, joseph j ma cs.cl, cs.ai, cs.db"
+    },
+    {
+      "arxiv_id": "2610.02120",
+      "title": "SkeleWAM: Skeleton World-Action Modeling for Efficient Robotic Manipulation",
+      "authors": "Juyi Sheng, Hua Wang, Mengyuan Liu",
+      "affiliations": "Peking University",
+      "published_date": "2026-10-01",
+      "categories": "cs.RO",
+      "abstract": "World action models (WAMs) combine robot action generation with future state prediction. Existing WAMs typically predict videos or learned visual latents, which represent interaction geometry only implicitly and may retain appearance information unrelated to control. We introduce SkeleWAM, a compact WAM that represents a manipulation scene as a sparse 3D skeleton composed of robot joints, object centers, and interaction points. Constructed online from current RGB-D observations and robot proprioception, the skeleton provides a unified geometric state for action generation and future skeleton prediction. Future skeleton prediction provides additional geometric supervision for action learning without requiring visual reconstruction. At inference, SkeleWAM generates actions directly from the current skeleton and language instruction, while Medoid Action Consensus (MAC) serves as an auxiliary consensus strategy for stochastic action samples. On LIBERO-Plus, SkeleWAM achieves an overall success rate of 85.9% with 57.1M parameters, outperforming Cosmos-Policy by 3.7 percentage points. These results demonstrate that sparse 3D robot--object structure provides an effective state space for robust and parameter-efficient world action learning. The project is available at https://skelewam-project.github.io/.",
+      "summary_cn": "SkeleWAM 把操作场景表示为由机器人关节、物体中心与交互点构成的稀疏3D骨架，作为动作生成与未来骨架预测的统一几何状态；未来骨架预测提供额外几何监督，推理时由骨架与语言指令出动作，并聚合随机采样的动作。LIBERO-Plus 上以57.1M参数达85.9%成功率，超 Cosmos-Policy 3.7个百分点。",
+      "pdf_filename": "2610.02120.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.02120",
+      "search_text": "skelewam: skeleton world-action modeling for efficient robotic manipulation  skelewam 把操作场景表示为由机器人关节、物体中心与交互点构成的稀疏3d骨架，作为动作生成与未来骨架预测的统一几何状态；未来骨架预测提供额外几何监督，推理时由骨架与语言指令出动作，并聚合随机采样的动作。libero-plus 上以57.1m参数达85.9%成功率，超 cosmos-policy 3.7个百分点。 world action models (wams) combine robot action generation with future state prediction. existing wams typically predict videos or learned visual latents, which represent interaction geometry only implicitly and may retain appearance information unrelated to control. we introduce skelewam, a compact wam that represents a manipulation scene as a sparse 3d skeleton composed of robot joints, object centers, and interaction points. constructed online from current rgb-d observations and robot proprioception, the skeleton provides a unified geometric state for action generation and future skeleton prediction. future skeleton prediction provides additional geometric supervision for action learning without requiring visual reconstruction. at inference, skelewam generates actions directly from the current skeleton and language instruction, while medoid action consensus (mac) serves as an auxiliary consensus strategy for stochastic action samples. on libero-plus, skelewam achieves an overall success rate of 85.9% with 57.1m parameters, outperforming cosmos-policy by 3.7 percentage points. these results demonstrate that sparse 3d robot--object structure provides an effective state space for robust and parameter-efficient world action learning. the project is available at https://skelewam-project.github.io/. peking university juyi sheng, hua wang, mengyuan liu cs.ro"
+    },
+    {
+      "arxiv_id": "2610.02011",
+      "title": "XAI Evaluation Cards: A Practical Method for Designing Human-Centred XAI Evaluations",
+      "authors": "Kristýna Sirka Kacafírková, Ivania Donoso-Guzmán, Denis Parra, Katrien Verbert, An Jacobs",
+      "affiliations": "Vrije Universiteit Brussel; KU Leuven; Pontificia Universidad Católica de Chile",
+      "published_date": "2026-10-01",
+      "categories": "cs.HC",
+      "abstract": "Evaluating explainable AI (XAI) systems from a human-centred approach requires researchers to select from numerous evaluation dimensions and measures, often in an ad hoc and fragmented manner. This paper introduces a method to help HCI, computer science, designers and social science researchers systematically evaluate XAI systems. The approach is based on an updated XAI-specific evaluation framework derived from an analysis of 82 studies. Using this framework, we developed a card-sorting method with 36 cards to help researchers prioritise relevant evaluation aspects. The process was tested with two research groups (n = 13) across five projects. The XAI Evaluation Cards are available as a printable appendix, along with an online repository of methods from previous XAI studies. Although not exhaustive, our findings indicate that the card-sorting approach can organise and streamline the design of the evaluation process, encouraging a more comprehensive and multidisciplinary assessment of XAI systems in research and development.",
+      "summary_cn": "针对人本XAI评估维度与测度繁多、选择零散的问题，作者基于对82项研究的分析更新XAI评估框架，并据此设计含36张卡片的分类方法，帮助HCI、设计与社会科学研究者按相关性与重要性排序并挑选评估属性，配套可打印卡片与测度在线仓库。方法在两个研究小组、13名参与者、5个项目中试用，显示卡片分类能组织并简化评估流程设计。",
+      "pdf_filename": "2610.02011.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.02011",
+      "search_text": "xai evaluation cards: a practical method for designing human-centred xai evaluations  针对人本xai评估维度与测度繁多、选择零散的问题，作者基于对82项研究的分析更新xai评估框架，并据此设计含36张卡片的分类方法，帮助hci、设计与社会科学研究者按相关性与重要性排序并挑选评估属性，配套可打印卡片与测度在线仓库。方法在两个研究小组、13名参与者、5个项目中试用，显示卡片分类能组织并简化评估流程设计。 evaluating explainable ai (xai) systems from a human-centred approach requires researchers to select from numerous evaluation dimensions and measures, often in an ad hoc and fragmented manner. this paper introduces a method to help hci, computer science, designers and social science researchers systematically evaluate xai systems. the approach is based on an updated xai-specific evaluation framework derived from an analysis of 82 studies. using this framework, we developed a card-sorting method with 36 cards to help researchers prioritise relevant evaluation aspects. the process was tested with two research groups (n = 13) across five projects. the xai evaluation cards are available as a printable appendix, along with an online repository of methods from previous xai studies. although not exhaustive, our findings indicate that the card-sorting approach can organise and streamline the design of the evaluation process, encouraging a more comprehensive and multidisciplinary assessment of xai systems in research and development. vrije universiteit brussel; ku leuven; pontificia universidad católica de chile kristýna sirka kacafírková, ivania donoso-guzmán, denis parra, katrien verbert, an jacobs cs.hc"
+    },
+    {
+      "arxiv_id": "2610.01985",
+      "title": "H-SPAR: Hydrodynamic-aware Simulation for Particle Transport and Autonomous Robots",
+      "authors": "Navid Zarrabi, Nariman Yousefi, Sajad Saeedi",
+      "affiliations": "Toronto Metropolitan University; University College London",
+      "published_date": "2026-10-01",
+      "categories": "cs.RO",
+      "abstract": "Environmental robotic sampling requires considering the dual influence of water currents on robotic motion and particle transport. Existing marine robotics simulators generally model flow, autonomy, and sampling targets separately, limiting joint evaluation of mission cost and sampling performance. H-SPAR integrates spatially and temporally varying velocity fields, Lagrangian particle transport, probabilistic sampling, and ROS 2/Gazebo-based uncrewed surface vehicle (USV) autonomy. In this work, shared precomputed flow fields drive particle advection and current-induced forces during closed-loop vehicle execution. Path-planning experiments show that the existing current-aware planner SVF-RRT* achieves 69.4% lower upstream cost than conventional RRT* at the planning level, but this reduction falls to 41.7% during execution under time-varying currents, reflecting temporal flow variation, vehicle motion constraints, and path deviation omitted during planning. Coverage experiments show that sweep orientation changes the particle-sampling rate by up to 22.2% under the complete H-SPAR configuration. These findings highlight the importance of evaluating planning, vehicle execution, particle transport, and sampling together under consistent hydrodynamic conditions. The project webpage is available at https://sites.google.com/view/h-spar, and the open-source code is available on GitHub at https://github.com/naviiidz/h-spar-sim.",
+      "summary_cn": "H-SPAR 面向环境机器人采样，将流速场、拉格朗日粒子输运、概率采样与 ROS 2/Gazebo 的无人水面艇自主性整合进统一仿真，同一流场驱动粒子平流与艇体受力做闭环评估。水流感知规划器 SVF-RRT* 规划阶段逆流代价比 RRT* 低69.4%，时变水流执行时降为41.7%；扫描方向可使采样率变化达22.2%。",
+      "pdf_filename": "2610.01985.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01985",
+      "search_text": "h-spar: hydrodynamic-aware simulation for particle transport and autonomous robots 闭环仿真 规划 h-spar 面向环境机器人采样，将流速场、拉格朗日粒子输运、概率采样与 ros 2/gazebo 的无人水面艇自主性整合进统一仿真，同一流场驱动粒子平流与艇体受力做闭环评估。水流感知规划器 svf-rrt* 规划阶段逆流代价比 rrt* 低69.4%，时变水流执行时降为41.7%；扫描方向可使采样率变化达22.2%。 environmental robotic sampling requires considering the dual influence of water currents on robotic motion and particle transport. existing marine robotics simulators generally model flow, autonomy, and sampling targets separately, limiting joint evaluation of mission cost and sampling performance. h-spar integrates spatially and temporally varying velocity fields, lagrangian particle transport, probabilistic sampling, and ros 2/gazebo-based uncrewed surface vehicle (usv) autonomy. in this work, shared precomputed flow fields drive particle advection and current-induced forces during closed-loop vehicle execution. path-planning experiments show that the existing current-aware planner svf-rrt* achieves 69.4% lower upstream cost than conventional rrt* at the planning level, but this reduction falls to 41.7% during execution under time-varying currents, reflecting temporal flow variation, vehicle motion constraints, and path deviation omitted during planning. coverage experiments show that sweep orientation changes the particle-sampling rate by up to 22.2% under the complete h-spar configuration. these findings highlight the importance of evaluating planning, vehicle execution, particle transport, and sampling together under consistent hydrodynamic conditions. the project webpage is available at https://sites.google.com/view/h-spar, and the open-source code is available on github at https://github.com/naviiidz/h-spar-sim. toronto metropolitan university; university college london navid zarrabi, nariman yousefi, sajad saeedi cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01927",
+      "title": "CLoSeR: Closing the Loop for Long-Context Streaming Reconstruction",
+      "authors": "Moyang Li, Zihan Zhu, Wei Zhang, Marc Pollefeys, Daniel Barath",
+      "affiliations": "ETH Zurich; University of Stuttgart; Microsoft",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Feedforward foundation models have recently shown remarkable 3D reconstruction capabilities. However, existing models exhibit large tracking drift in long-context streaming reconstruction due to error accumulation. In this paper, we revisit loop closure with streaming reconstruction foundation models to enable accurate, drift-free, kilometer-scale reconstruction. Specifically, our method detects loop candidates through global descriptor retrieval, and constructs loop-conditioned windows to estimate the relative poses between looped frames. Given the observation that our adopted streaming reconstruction backbone produces a globally consistent scale, we optimize all frame poses on the SE(3) manifold with sequential and loop closure constraints, avoiding the pose graph optimization on the Sim(3) or higher-dimensional SL(4) manifolds employed in prior works. Extensive experiments show that our method reduces drift and produces consistent geometry on kilometer-scale sequences, significantly outperforming the state of the art. Code is available at https://github.com/MoyangLi00/CLoSeR.git.",
+      "summary_cn": "针对前馈模型在长序列流式重建中误差累积、漂移的问题，CLoSeR 引入回环闭合：用全局描述子检索回环候选，构建回环条件窗口估计相对位姿；利用主干输出全局一致尺度，直接在 SE(3) 上以顺序与回环约束优化帧位姿，避免 Sim(3)/SL(4) 位姿图优化。公里级序列降低漂移，KITTI 00 上 ATE 为6.51m。",
+      "pdf_filename": "2610.01927.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.01927",
+      "search_text": "closer: closing the loop for long-context streaming reconstruction  针对前馈模型在长序列流式重建中误差累积、漂移的问题，closer 引入回环闭合：用全局描述子检索回环候选，构建回环条件窗口估计相对位姿；利用主干输出全局一致尺度，直接在 se(3) 上以顺序与回环约束优化帧位姿，避免 sim(3)/sl(4) 位姿图优化。公里级序列降低漂移，kitti 00 上 ate 为6.51m。 feedforward foundation models have recently shown remarkable 3d reconstruction capabilities. however, existing models exhibit large tracking drift in long-context streaming reconstruction due to error accumulation. in this paper, we revisit loop closure with streaming reconstruction foundation models to enable accurate, drift-free, kilometer-scale reconstruction. specifically, our method detects loop candidates through global descriptor retrieval, and constructs loop-conditioned windows to estimate the relative poses between looped frames. given the observation that our adopted streaming reconstruction backbone produces a globally consistent scale, we optimize all frame poses on the se(3) manifold with sequential and loop closure constraints, avoiding the pose graph optimization on the sim(3) or higher-dimensional sl(4) manifolds employed in prior works. extensive experiments show that our method reduces drift and produces consistent geometry on kilometer-scale sequences, significantly outperforming the state of the art. code is available at https://github.com/moyangli00/closer.git. eth zurich; university of stuttgart; microsoft moyang li, zihan zhu, wei zhang, marc pollefeys, daniel barath cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01842",
+      "title": "On the Divergence of Accuracy and Mechanism Consistency in Time Series World Models",
+      "authors": "Haochen Zhang, Jiaheng Guo, Zhen Xu, Zachary Plotkin, Nicholas Konz, Zhen Tan, Tianlong Chen",
+      "affiliations": "University of North Carolina at Chapel Hill; Foci Labs; Stevens Institute of Technology",
+      "published_date": "2026-10-01",
+      "categories": "cs.AI",
+      "abstract": "A time series world model (TSWM) predicts a controlled system's state from its observed history and planned actions and exogenous inputs. Current approaches build forecasters with actions as covariates, trained and evaluated on prediction error under the executed plan. Yet world models compare unexecuted plans, but their responses to changed plans remain untested. We ask which design choices matter and whether accurate forecasters respond to changed plans as real systems do. We address both with a formalization and benchmark. The formalization separates state, actions and exogenous inputs, distinguishes continuous, mode and event actions, and introduces mechanism consistency, a metric built on declared action-state relations with known directions, such as a vasopressor raising blood pressure: it checks whether shifting an action moves the forecast in the declared direction. The benchmark consolidates eight public datasets with real actions from engineered infrastructure and clinical care, varying prediction space, plan fusion and plan encoding across seven backbones and five seeds. First, a frozen latent prediction space lowers MAE by 9.9% over observation space and gated output fusion lowers it by 12.7% over input concatenation on average, with both improving all eight datasets; temporal plan encoding changes average MAE by at most 2.2%. Second, prediction error and mechanism consistency diverge: the lowest-error configuration is at or below chance in consistency on four of five datasets with declared mechanisms, and no design choice avoids this. Finally, directional supervision, a loss penalizing the wrong-signed part of the response to a shifted action, significantly raises consistency on penalized mechanisms with no change in MAE. Together they give TSWMs a recipe: a frozen latent space and output-side fusion for accuracy, and a training objective for mechanism consistency.",
+      "summary_cn": "该工作形式化时序世界模型，区分连续、模式与事件动作，提出机制一致性指标，检验改变动作后预测方向是否与已声明机制一致。跨8个数据集、7种骨干、5个种子扫描预测空间、融合与编码：冻结隐空间使MAE降9.9%，输出端门控融合再降12.7%；但最低误差配置在含机制数据集上一致性接近随机，方向性监督可提升一致性而不损MAE。",
+      "pdf_filename": "2610.01842.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01842",
+      "search_text": "on the divergence of accuracy and mechanism consistency in time series world models 世界模型 该工作形式化时序世界模型，区分连续、模式与事件动作，提出机制一致性指标，检验改变动作后预测方向是否与已声明机制一致。跨8个数据集、7种骨干、5个种子扫描预测空间、融合与编码：冻结隐空间使mae降9.9%，输出端门控融合再降12.7%；但最低误差配置在含机制数据集上一致性接近随机，方向性监督可提升一致性而不损mae。 a time series world model (tswm) predicts a controlled system's state from its observed history and planned actions and exogenous inputs. current approaches build forecasters with actions as covariates, trained and evaluated on prediction error under the executed plan. yet world models compare unexecuted plans, but their responses to changed plans remain untested. we ask which design choices matter and whether accurate forecasters respond to changed plans as real systems do. we address both with a formalization and benchmark. the formalization separates state, actions and exogenous inputs, distinguishes continuous, mode and event actions, and introduces mechanism consistency, a metric built on declared action-state relations with known directions, such as a vasopressor raising blood pressure: it checks whether shifting an action moves the forecast in the declared direction. the benchmark consolidates eight public datasets with real actions from engineered infrastructure and clinical care, varying prediction space, plan fusion and plan encoding across seven backbones and five seeds. first, a frozen latent prediction space lowers mae by 9.9% over observation space and gated output fusion lowers it by 12.7% over input concatenation on average, with both improving all eight datasets; temporal plan encoding changes average mae by at most 2.2%. second, prediction error and mechanism consistency diverge: the lowest-error configuration is at or below chance in consistency on four of five datasets with declared mechanisms, and no design choice avoids this. finally, directional supervision, a loss penalizing the wrong-signed part of the response to a shifted action, significantly raises consistency on penalized mechanisms with no change in mae. together they give tswms a recipe: a frozen latent space and output-side fusion for accuracy, and a training objective for mechanism consistency. university of north carolina at chapel hill; foci labs; stevens institute of technology haochen zhang, jiaheng guo, zhen xu, zachary plotkin, nicholas konz, zhen tan, tianlong chen cs.ai"
+    },
+    {
+      "arxiv_id": "2610.01744",
+      "title": "3DROID: A Renderable 3D Gaussian Dataset with Measured Per-Scene Reliability",
+      "authors": "Wonguen Cho, Junhoo Lee, Nojun Kwak",
+      "affiliations": "Seoul National University; KAIST",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Robot manipulation models primarily reason from 2D observations while acting in the 3D physical world. To bridge this gap, recent work has augmented robot data with geometric priors such as depth, point clouds, and 3D trajectories, while renderable 3D Gaussian representations provide another promising form of 3D supervision. However, 3DGS representation is designed mainly for photometric fidelity and may not preserve real-world metric scale, particularly when the supplied camera extrinsics are unreliable. We study the effect of extrinsic reliability and pose conditioning on feed-forward 3DGS, and propose a calibration-aware pipeline that anchors reconstructed scenes to the robot's metric workspace. Our experiments show that pose conditioning improves novel-view fidelity, while its geometric benefit depends on the reliability of the injected extrinsics. Using this pipeline, we present a renderable, metric-pose-anchored dataset with scene-level reliability information for robot manipulation research. Our dataset is available at https://huggingface.co/datasets/wonguen/3DROID",
+      "summary_cn": "面向机器人操作中2D观测与3D物理世界的鸿沟，3DROID 研究外参可靠性与位姿条件对前馈3DGS的影响，提出标定感知流水线把重建场景锚定到机器人米制工作空间。实验表明位姿条件提升新视角保真度，其几何收益取决于注入外参的可靠性。数据集覆盖114个DROID场景，含可渲染高斯、米制深度图、覆盖率掩码与逐场景可靠性信息。",
+      "pdf_filename": "2610.01744.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "点云",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01744",
+      "search_text": "3droid: a renderable 3d gaussian dataset with measured per-scene reliability 3dgs 点云 具身智能 面向机器人操作中2d观测与3d物理世界的鸿沟，3droid 研究外参可靠性与位姿条件对前馈3dgs的影响，提出标定感知流水线把重建场景锚定到机器人米制工作空间。实验表明位姿条件提升新视角保真度，其几何收益取决于注入外参的可靠性。数据集覆盖114个droid场景，含可渲染高斯、米制深度图、覆盖率掩码与逐场景可靠性信息。 robot manipulation models primarily reason from 2d observations while acting in the 3d physical world. to bridge this gap, recent work has augmented robot data with geometric priors such as depth, point clouds, and 3d trajectories, while renderable 3d gaussian representations provide another promising form of 3d supervision. however, 3dgs representation is designed mainly for photometric fidelity and may not preserve real-world metric scale, particularly when the supplied camera extrinsics are unreliable. we study the effect of extrinsic reliability and pose conditioning on feed-forward 3dgs, and propose a calibration-aware pipeline that anchors reconstructed scenes to the robot's metric workspace. our experiments show that pose conditioning improves novel-view fidelity, while its geometric benefit depends on the reliability of the injected extrinsics. using this pipeline, we present a renderable, metric-pose-anchored dataset with scene-level reliability information for robot manipulation research. our dataset is available at https://huggingface.co/datasets/wonguen/3droid seoul national university; kaist wonguen cho, junhoo lee, nojun kwak cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01741",
+      "title": "ATI-VLA: Action-Centric Predictive Vision-Language-Action Models via Actionable Alignment Then Adaptive Injection",
+      "authors": "Yijie Zhu, Rui Shao, Jie He, Wei Li, Bo Zhao, Yelin Wang, Xiaochen Yuan, Tao Tan, Miao Zhang, Xiaojiang Peng, Zitong Yu",
+      "affiliations": "Harbin Institute of Technology, Shenzhen; Institute for Artificial Intelligence, Great Bay University; Macao Polytechnic University; Shenzhen Technology University; Shenzhen Loop Area Institute; Dongguan Key Laboratory for Intelligence and Information Technology",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Predictive Vision-Language-Action (VLA) models aim to improve robotic manipulation via future observation or world dynamics forecasting. However, existing approaches often fail to realize this potential and underperform direct action prediction models. We argue that these limitations stem from modality misalignment between observations and actions, together with joint optimization conflicts that drive learning away from an action-centric objective. To this end, we introduce ATI-VLA, an Action-Centric Predictive Vision-Language-Action framework via Actionable Alignment Then Adaptive Injection. Specifically, it follows a two-step design: 1) Actionable Representation Alignment via a Shared Codebook. It aligns predictive observation and action representations by mapping both modalities into a shared discrete latent space via a unified codebook, making predictive observation latents readily usable for action generation and mitigating modality misalignment. 2) Action-Centric Adaptive Injection of Predictive Latents. Building upon this, it then injects predictive observation latents into action decoding as explicit predictive priors via a lightweight adaptive side-path, enabling adaptive predictive guidance under a single action-centric objective. Extensive experiments on both simulation and real-world robotic tasks demonstrate that ATI-VLA achieves state-of-the-art performance with faster convergence.",
+      "summary_cn": "ATI-VLA 指出预测式视觉-语言-动作模型因观测与动作模态错位、联合优化冲突而弱于直接动作预测。方法分两步：先用共享码本把预测观测与动作映射到同一离散隐空间完成动作化表征对齐，再经轻量自适应侧路把预测隐变量作为显式先验注入动作解码，统一在动作中心目标下训练。仿真与真机实验取得最优性能且收敛更快。",
+      "pdf_filename": "2610.01741.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01741",
+      "search_text": "ati-vla: action-centric predictive vision-language-action models via actionable alignment then adaptive injection 多模态 ati-vla 指出预测式视觉-语言-动作模型因观测与动作模态错位、联合优化冲突而弱于直接动作预测。方法分两步：先用共享码本把预测观测与动作映射到同一离散隐空间完成动作化表征对齐，再经轻量自适应侧路把预测隐变量作为显式先验注入动作解码，统一在动作中心目标下训练。仿真与真机实验取得最优性能且收敛更快。 predictive vision-language-action (vla) models aim to improve robotic manipulation via future observation or world dynamics forecasting. however, existing approaches often fail to realize this potential and underperform direct action prediction models. we argue that these limitations stem from modality misalignment between observations and actions, together with joint optimization conflicts that drive learning away from an action-centric objective. to this end, we introduce ati-vla, an action-centric predictive vision-language-action framework via actionable alignment then adaptive injection. specifically, it follows a two-step design: 1) actionable representation alignment via a shared codebook. it aligns predictive observation and action representations by mapping both modalities into a shared discrete latent space via a unified codebook, making predictive observation latents readily usable for action generation and mitigating modality misalignment. 2) action-centric adaptive injection of predictive latents. building upon this, it then injects predictive observation latents into action decoding as explicit predictive priors via a lightweight adaptive side-path, enabling adaptive predictive guidance under a single action-centric objective. extensive experiments on both simulation and real-world robotic tasks demonstrate that ati-vla achieves state-of-the-art performance with faster convergence. harbin institute of technology, shenzhen; institute for artificial intelligence, great bay university; macao polytechnic university; shenzhen technology university; shenzhen loop area institute; dongguan key laboratory for intelligence and information technology yijie zhu, rui shao, jie he, wei li, bo zhao, yelin wang, xiaochen yuan, tao tan, miao zhang, xiaojiang peng, zitong yu cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01614",
+      "title": "Oneira: From Open-Ended Generation to Open-World Interaction in Video World Models",
+      "authors": "Xindi Yang, Baolu Li, Liam Lee, Zhenfei Yin, Songxin Zhang, Zhuoyang Song, Xu Jia, Jianfei Cai, Tien-Tsin Wong, Bingyi Jing, Mengyue Yang",
+      "affiliations": "Monash University; University of Bristol; Dalian University of Technology; The Chinese University of Hong Kong, Shenzhen; Oxford University",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Generative video world models can now synthesize open-ended environments that agents can navigate and interact with in simple ways. Yet open-ended generation does not imply full interaction: as a generated world expands, newly created content through navigation should expand what the agent can act upon, and as the agent changes the world, those changes should become persistent parts of the environment rather than transient visual effects. We characterize these two requirements as Open-World Interactivity, where newly generated or encountered entities are incorporated into the actionable world, and Persistent State, where interaction outcomes are committed to the world state and continue to influence subsequent observations and interactions. We present Oneira, an interactive video world model that closes the loop between generation and interaction through an explicit, extensible world state managed by a coding agent. Given the current observation and an action or high-level goal, the agent reads the world state, grounds the relevant entities, plans the interaction, and writes its outcome back into a world state table. When exploration reveals new objects, the agent incorporates them from generated observations, allowing the interaction space to expand with the generated world. Meanwhile, previously induced state changes are carried across video segments, making the consequences of interaction persistent parts of subsequent world evolution. The updated world state is rendered along the camera action trajectory into a coarse conditioning video, from which a video generator fills in the appearance, motion, and interaction details not represented in the state. Experiments show that Oneira enables direct and consistent interaction with newly generated objects, while preserving the effects of prior interactions over long horizons. Project page: https://madaoer.github.io/projects/oneira",
+      "summary_cn": "针对视频世界模型开放式生成不等于可交互的问题，Oneira 用编码智能体维护可扩展的世界状态表：智能体读取状态、定位实体、规划交互并把结果写回表，新探索到的物体也登记入表，状态变化跨片段延续，再由视频生成器按相机轨迹渲染补全外观与运动。实验表明模型能与新生成物体持续交互，并长时间保持历史交互效果。",
+      "pdf_filename": "2610.01614.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "视频生成",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01614",
+      "search_text": "oneira: from open-ended generation to open-world interaction in video world models 世界模型 视频生成 规划 针对视频世界模型开放式生成不等于可交互的问题，oneira 用编码智能体维护可扩展的世界状态表：智能体读取状态、定位实体、规划交互并把结果写回表，新探索到的物体也登记入表，状态变化跨片段延续，再由视频生成器按相机轨迹渲染补全外观与运动。实验表明模型能与新生成物体持续交互，并长时间保持历史交互效果。 generative video world models can now synthesize open-ended environments that agents can navigate and interact with in simple ways. yet open-ended generation does not imply full interaction: as a generated world expands, newly created content through navigation should expand what the agent can act upon, and as the agent changes the world, those changes should become persistent parts of the environment rather than transient visual effects. we characterize these two requirements as open-world interactivity, where newly generated or encountered entities are incorporated into the actionable world, and persistent state, where interaction outcomes are committed to the world state and continue to influence subsequent observations and interactions. we present oneira, an interactive video world model that closes the loop between generation and interaction through an explicit, extensible world state managed by a coding agent. given the current observation and an action or high-level goal, the agent reads the world state, grounds the relevant entities, plans the interaction, and writes its outcome back into a world state table. when exploration reveals new objects, the agent incorporates them from generated observations, allowing the interaction space to expand with the generated world. meanwhile, previously induced state changes are carried across video segments, making the consequences of interaction persistent parts of subsequent world evolution. the updated world state is rendered along the camera action trajectory into a coarse conditioning video, from which a video generator fills in the appearance, motion, and interaction details not represented in the state. experiments show that oneira enables direct and consistent interaction with newly generated objects, while preserving the effects of prior interactions over long horizons. project page: https://madaoer.github.io/projects/oneira monash university; university of bristol; dalian university of technology; the chinese university of hong kong, shenzhen; oxford university xindi yang, baolu li, liam lee, zhenfei yin, songxin zhang, zhuoyang song, xu jia, jianfei cai, tien-tsin wong, bingyi jing, mengyue yang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01612",
+      "title": "ReCo: Response-Consistent Locomotion with Policy-Aware MPC for Legged Manipulation",
+      "authors": "Kuankuan Sima, Yichao Gao, Chenxi Gu, Kefan Zhao, Lin Zhao",
+      "affiliations": "National University of Singapore",
+      "published_date": "2026-10-01",
+      "categories": "cs.RO",
+      "abstract": "Continuous legged manipulation requires accurate end-effector tracking while the base keeps walking. Combining reinforcement learning (RL) with model predictive control (MPC) suits this task: the learned policy provides robust locomotion, while MPC coordinates the base and arm to compensate for tracking errors. However, MPC can compensate only for base motion that it can predict, and a learned policy's command response varies with gait phase, contact, and payload. We present ReCo, a framework that couples response-consistent locomotion with policy-aware MPC for legged manipulation. Response shaping trains the policy to respond to commands consistently and repeatably across randomized dynamics. An identified closed-loop response model then lets MPC jointly plan locomotion commands and arm motion. On the simulation benchmark, ReCo reduces position and orientation root-mean-square error (RMSE) by 28.7% and 27.4% relative to the best baseline for each metric. Real-world experiments demonstrate onboard continuous legged manipulation with coordinated base and arm motion.",
+      "summary_cn": "ReCo面向连续腿式操作，提出响应一致的运动策略，用参考跟踪、相位重复、稳态增益与跨域一致性奖励塑造命令响应的可重复性；再用辨识出的含步态周期项的闭环响应模型让策略感知MPC联合规划运动命令与机械臂。仿真中位置、姿态RMSE相对最好基线降低28.7%和27.4%，预测MSE降59.6%，并在四足平台板载实机运行。",
+      "pdf_filename": "2610.01612.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "强化学习",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01612",
+      "search_text": "reco: response-consistent locomotion with policy-aware mpc for legged manipulation 闭环仿真 强化学习 规划 reco面向连续腿式操作，提出响应一致的运动策略，用参考跟踪、相位重复、稳态增益与跨域一致性奖励塑造命令响应的可重复性；再用辨识出的含步态周期项的闭环响应模型让策略感知mpc联合规划运动命令与机械臂。仿真中位置、姿态rmse相对最好基线降低28.7%和27.4%，预测mse降59.6%，并在四足平台板载实机运行。 continuous legged manipulation requires accurate end-effector tracking while the base keeps walking. combining reinforcement learning (rl) with model predictive control (mpc) suits this task: the learned policy provides robust locomotion, while mpc coordinates the base and arm to compensate for tracking errors. however, mpc can compensate only for base motion that it can predict, and a learned policy's command response varies with gait phase, contact, and payload. we present reco, a framework that couples response-consistent locomotion with policy-aware mpc for legged manipulation. response shaping trains the policy to respond to commands consistently and repeatably across randomized dynamics. an identified closed-loop response model then lets mpc jointly plan locomotion commands and arm motion. on the simulation benchmark, reco reduces position and orientation root-mean-square error (rmse) by 28.7% and 27.4% relative to the best baseline for each metric. real-world experiments demonstrate onboard continuous legged manipulation with coordinated base and arm motion. national university of singapore kuankuan sima, yichao gao, chenxi gu, kefan zhao, lin zhao cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01589",
+      "title": "PAGER: Partial-to-global Alignment via Geometric and Relational Distillation",
+      "authors": "Akira-Miranda Adeyomi Adeniran-Lowe, Binod Singh, Lars Arnold Dethlefsen, Lazaros Nalpantidis, Theodora Kontogianni",
+      "affiliations": "Technical University of Denmark; Pioneer Center for Artificial Intelligence",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Pretrained 3D encoders are typically developed on globally reconstructed scenes expressed in a consistent world coordinate frame, whereas embodied systems must reason from partial, viewpoint-dependent observations in camera coordinates. We show that this shift from globally learned 3D feature spaces to realistic partial observations exposes a severe representation mismatch, which we find consistently across representative state-of-the-art encoders, including Sonata and Concerto. A frozen Sonata encoder with a global linear probe achieves 72.47 mIoU on full ScanNet scenes, but 2.57 mIoU on single-frame camera-coordinate inputs. Training-free gravity alignment recovers performance to 41.64 mIoU, showing that coordinate-frame mismatch is a dominant source of degradation but cannot be fully resolved through canonicalization alone. We introduce PAGER, a label-free adaptation method that aligns partial-view features with a frozen global 3D semantic space using only paired partial/global geometry. It learns lightweight adaptation modules while keeping the pretrained encoder and global segmentation probe frozen. Matched-point feature alignment anchors partial features to their global counterparts, while relational supervision preserves their similarity structure with respect to the global representation. Global geometry provides supervision only during training. Inference operates directly on the partial observation. Without partial-view labels, PAGER outperforms label-supervised PEFT on both Sonata and Concerto, and in zero-shot ScanNet$\\rightarrow$ScanNet++ transfer surpasses fully fine-tuned Sonata ($53.93$ vs.\\ $48.09$ mIoU), suggesting that preserving the frozen global representation can improve cross-dataset transfer.",
+      "summary_cn": "PAGER针对预训练3D编码器建模全局坐标系场景、而具身系统只有相机系局部观测的失配：冻结Sonata在全ScanNet达72.47 mIoU，单帧相机系输入骤降至2.57，仅重力对齐也只回到41.64。该方法无标签，冻结编码器与全局分割头，用成对局部/全局几何学轻量适配模块做匹配点对齐与关系蒸馏；零样本ScanNet到ScanNet++达53.93 mIoU，超过全量微调Sonata的48.09。",
+      "pdf_filename": "2610.01589.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01589",
+      "search_text": "pager: partial-to-global alignment via geometric and relational distillation 具身智能 pager针对预训练3d编码器建模全局坐标系场景、而具身系统只有相机系局部观测的失配：冻结sonata在全scannet达72.47 miou，单帧相机系输入骤降至2.57，仅重力对齐也只回到41.64。该方法无标签，冻结编码器与全局分割头，用成对局部/全局几何学轻量适配模块做匹配点对齐与关系蒸馏；零样本scannet到scannet++达53.93 miou，超过全量微调sonata的48.09。 pretrained 3d encoders are typically developed on globally reconstructed scenes expressed in a consistent world coordinate frame, whereas embodied systems must reason from partial, viewpoint-dependent observations in camera coordinates. we show that this shift from globally learned 3d feature spaces to realistic partial observations exposes a severe representation mismatch, which we find consistently across representative state-of-the-art encoders, including sonata and concerto. a frozen sonata encoder with a global linear probe achieves 72.47 miou on full scannet scenes, but 2.57 miou on single-frame camera-coordinate inputs. training-free gravity alignment recovers performance to 41.64 miou, showing that coordinate-frame mismatch is a dominant source of degradation but cannot be fully resolved through canonicalization alone. we introduce pager, a label-free adaptation method that aligns partial-view features with a frozen global 3d semantic space using only paired partial/global geometry. it learns lightweight adaptation modules while keeping the pretrained encoder and global segmentation probe frozen. matched-point feature alignment anchors partial features to their global counterparts, while relational supervision preserves their similarity structure with respect to the global representation. global geometry provides supervision only during training. inference operates directly on the partial observation. without partial-view labels, pager outperforms label-supervised peft on both sonata and concerto, and in zero-shot scannet$\\rightarrow$scannet++ transfer surpasses fully fine-tuned sonata ($53.93$ vs.\\ $48.09$ miou), suggesting that preserving the frozen global representation can improve cross-dataset transfer. technical university of denmark; pioneer center for artificial intelligence akira-miranda adeyomi adeniran-lowe, binod singh, lars arnold dethlefsen, lazaros nalpantidis, theodora kontogianni cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01581",
+      "title": "Evaluating Physical Consistency and Plausibility in Generative Scenario Models for Autonomous Driving",
+      "authors": "Manasa Mariam Mammen, Zafer Kayatas, Stefan Wagner",
+      "affiliations": "Technical University of Munich; Mercedes Benz AG",
+      "published_date": "2026-10-01",
+      "categories": "cs.AI",
+      "abstract": "Generative AI models are increasingly used for scenario generation in autonomous driving. While they can generate realistic-looking scenarios, they often provide limited transparency into learned representations and consistency with real-world vehicle dynamics. This lack of formal assurance limits their use in safety-critical validation and certification workflows. To address this aspect, we introduce a layered evaluation protocol that complements existing methods by assessing models across five layers. The first four layers inspect internal representations and network layers through kinematic alignment, statistical baseline comparison, latent controllability, and activation analysis. The fifth layer evaluates model outputs against vehicle dynamics constraints such as lateral jerk thresholds. We demonstrate the protocol on a Variational Autoencoder (VAE)-based scenario generator. Although standard output-level metrics and visualizations suggest that the generated scenarios are realistic, our protocol provides deeper insight into the extent to which the model's latent space aligns with kinematic features and whether visually plausible trajectories satisfy vehicle-dynamics constraints. We further apply the protocol to additional generative models, demonstrating its applicability beyond the VAE architecture.",
+      "summary_cn": "针对自动驾驶生成式场景模型缺乏可解释性与动力学一致性保证，提出五层评测协议：前四层以运动学对齐、统计基线对比、潜空间可控性和激活分析检查内部表示，第五层用横向急动(jerk)等车辆动力学约束检验输出。在VAE场景生成器上，常规指标与可视化看似真实，该协议却揭示潜空间与运动学对齐有限、轨迹未必满足动力学约束。",
+      "pdf_filename": "2610.01581.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "生成式仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01581",
+      "search_text": "evaluating physical consistency and plausibility in generative scenario models for autonomous driving 生成式仿真 自动驾驶 针对自动驾驶生成式场景模型缺乏可解释性与动力学一致性保证，提出五层评测协议：前四层以运动学对齐、统计基线对比、潜空间可控性和激活分析检查内部表示，第五层用横向急动(jerk)等车辆动力学约束检验输出。在vae场景生成器上，常规指标与可视化看似真实，该协议却揭示潜空间与运动学对齐有限、轨迹未必满足动力学约束。 generative ai models are increasingly used for scenario generation in autonomous driving. while they can generate realistic-looking scenarios, they often provide limited transparency into learned representations and consistency with real-world vehicle dynamics. this lack of formal assurance limits their use in safety-critical validation and certification workflows. to address this aspect, we introduce a layered evaluation protocol that complements existing methods by assessing models across five layers. the first four layers inspect internal representations and network layers through kinematic alignment, statistical baseline comparison, latent controllability, and activation analysis. the fifth layer evaluates model outputs against vehicle dynamics constraints such as lateral jerk thresholds. we demonstrate the protocol on a variational autoencoder (vae)-based scenario generator. although standard output-level metrics and visualizations suggest that the generated scenarios are realistic, our protocol provides deeper insight into the extent to which the model's latent space aligns with kinematic features and whether visually plausible trajectories satisfy vehicle-dynamics constraints. we further apply the protocol to additional generative models, demonstrating its applicability beyond the vae architecture. technical university of munich; mercedes benz ag manasa mariam mammen, zafer kayatas, stefan wagner cs.ai"
+    },
+    {
+      "arxiv_id": "2610.01531",
+      "title": "Towards Reliable Vision-Language Models for Autonomous Driving",
+      "authors": "Manasa Mariam Mammen, Priyanka Mary Mammen, Zafer Kayatas, Stefan Wagner",
+      "affiliations": "Technical University of Munich; Mercedes Benz AG; University of Massachusetts, Amherst",
+      "published_date": "2026-10-01",
+      "categories": "cs.AI, cs.CV",
+      "abstract": "Vision-Language models (VLMs) are increasingly being explored in autonomous driving for tasks such as scene understanding, driving reasoning, decision-making, and end-to-end driving. As their role becomes more prominent, ensuring their robustness and reliability is increasingly important. In real-world conditions, visual inputs may be degraded by sensor imperfections and environmental conditions, potentially affecting both model predictions and their associated confidence. Such degradation is especially concerning in autonomous driving, where safety-critical decisions require models to make accurate predictions and recognize when their predictions may be unreliable. In this work, we evaluate five VLMs (Qwen3.5-9B, Gemma4-E4B, LLaVA-OneVision-7B, DriveFusion/DriveFusionQA-4B, and NVIDIA Alpamayo-1.5-10B) across four driving-related QA datasets with different visual input settings, including single-frame, multi-view, multi-frame, and monocular inputs. Our results show that the effects of visual corruption vary across models, datasets, and input settings, with changes in accuracy and confidence reliability and also differing across conditions. We then apply Visual Evidence Augmentation ($\\mathrm{V}{\\scriptstyle \\mathrm{EA}}$), a recent inference-time method to examine whether it can improve model reliability under degraded visual conditions. We find that $\\mathrm{V}{\\scriptstyle \\mathrm{EA}}$ improves performance for some models and datasets, although the gains are not consistent across all settings.",
+      "summary_cn": "评测五个视觉语言模型(Qwen3.5-9B、Gemma4-E4B、LLaVA-OneVision-7B、DriveFusion-4B、NVIDIA Alpamayo-1.5-10B)在四个驾驶问答数据集及单帧、多视角、多帧、单目输入下的鲁棒性。结果显示视觉损坏对准确率与置信度可靠性的影响随模型、数据集和输入设置而变化，推理时的Visual Evidence Augmentation只在部分设置下带来改善且并不一致。",
+      "pdf_filename": "2610.01531.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01531",
+      "search_text": "towards reliable vision-language models for autonomous driving 自动驾驶 多模态 评测五个视觉语言模型(qwen3.5-9b、gemma4-e4b、llava-onevision-7b、drivefusion-4b、nvidia alpamayo-1.5-10b)在四个驾驶问答数据集及单帧、多视角、多帧、单目输入下的鲁棒性。结果显示视觉损坏对准确率与置信度可靠性的影响随模型、数据集和输入设置而变化，推理时的visual evidence augmentation只在部分设置下带来改善且并不一致。 vision-language models (vlms) are increasingly being explored in autonomous driving for tasks such as scene understanding, driving reasoning, decision-making, and end-to-end driving. as their role becomes more prominent, ensuring their robustness and reliability is increasingly important. in real-world conditions, visual inputs may be degraded by sensor imperfections and environmental conditions, potentially affecting both model predictions and their associated confidence. such degradation is especially concerning in autonomous driving, where safety-critical decisions require models to make accurate predictions and recognize when their predictions may be unreliable. in this work, we evaluate five vlms (qwen3.5-9b, gemma4-e4b, llava-onevision-7b, drivefusion/drivefusionqa-4b, and nvidia alpamayo-1.5-10b) across four driving-related qa datasets with different visual input settings, including single-frame, multi-view, multi-frame, and monocular inputs. our results show that the effects of visual corruption vary across models, datasets, and input settings, with changes in accuracy and confidence reliability and also differing across conditions. we then apply visual evidence augmentation ($\\mathrm{v}{\\scriptstyle \\mathrm{ea}}$), a recent inference-time method to examine whether it can improve model reliability under degraded visual conditions. we find that $\\mathrm{v}{\\scriptstyle \\mathrm{ea}}$ improves performance for some models and datasets, although the gains are not consistent across all settings. technical university of munich; mercedes benz ag; university of massachusetts, amherst manasa mariam mammen, priyanka mary mammen, zafer kayatas, stefan wagner cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01373",
+      "title": "Learning Commute-Time-Preserving World Models for Planning",
+      "authors": "Michael Hauri, Peter Buttaroni, Fabian A. Mikulasch, Friedemann Zenke",
+      "affiliations": "Friedrich Miescher Institute for Biomedical Research; University of Basel",
+      "published_date": "2026-10-01",
+      "categories": "cs.LG",
+      "abstract": "World models allow agents to plan in latent space by choosing a sequence of actions that most reduces the distance to a given goal state. Thus, planning can benefit from latent representations whose distances mirror commute-times in the environment. The spectral embedding space of the graph Laplacian provides such a representation, if it obeys a specific eigenvalue-dependent scaling. Unfortunately, instantiating the graph Laplacian is intractable in large, continuous environments. Self-supervised learning offers a natural route to such commute-time-preserving embeddings at scale. However, here we show that existing methods, which commonly encourage isotropic representations to prevent representational collapse, tend to degrade the \"correct\" eigenvalue-dependent scaling, leading to an inaccurate representation of commute times. To address this problem, we introduce Commute-Time-Preserving World Models (CTWMs), combining a latent displacement predictor and a log-determinant regularizer that prevents collapse, which provably recover the correctly scaled Laplacian representation under reversible deterministic dynamics and at the predictor's fixed point. In numerical simulations, CTWM matches or outperforms LeWM, a task-agnostic baseline, on several complex, continuous goal-reaching benchmarks, while using half the parameters.",
+      "summary_cn": "CTWM让潜空间距离对齐环境交换时间：指出现有各向同性正则破坏图拉普拉斯特征值缩放，改用潜位移预测器加log-determinant正则，在可逆确定性动力学与预测器不动点处可证恢复正确缩放的拉普拉斯表示。多个连续目标到达基准上追平或超过LeWM，参数量只用一半。",
+      "pdf_filename": "2610.01373.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01373",
+      "search_text": "learning commute-time-preserving world models for planning 世界模型 ctwm让潜空间距离对齐环境交换时间：指出现有各向同性正则破坏图拉普拉斯特征值缩放，改用潜位移预测器加log-determinant正则，在可逆确定性动力学与预测器不动点处可证恢复正确缩放的拉普拉斯表示。多个连续目标到达基准上追平或超过lewm，参数量只用一半。 world models allow agents to plan in latent space by choosing a sequence of actions that most reduces the distance to a given goal state. thus, planning can benefit from latent representations whose distances mirror commute-times in the environment. the spectral embedding space of the graph laplacian provides such a representation, if it obeys a specific eigenvalue-dependent scaling. unfortunately, instantiating the graph laplacian is intractable in large, continuous environments. self-supervised learning offers a natural route to such commute-time-preserving embeddings at scale. however, here we show that existing methods, which commonly encourage isotropic representations to prevent representational collapse, tend to degrade the \"correct\" eigenvalue-dependent scaling, leading to an inaccurate representation of commute times. to address this problem, we introduce commute-time-preserving world models (ctwms), combining a latent displacement predictor and a log-determinant regularizer that prevents collapse, which provably recover the correctly scaled laplacian representation under reversible deterministic dynamics and at the predictor's fixed point. in numerical simulations, ctwm matches or outperforms lewm, a task-agnostic baseline, on several complex, continuous goal-reaching benchmarks, while using half the parameters. friedrich miescher institute for biomedical research; university of basel michael hauri, peter buttaroni, fabian a. mikulasch, friedemann zenke cs.lg"
+    },
+    {
+      "arxiv_id": "2610.01314",
+      "title": "ARROW: Arbitrary Reconstruction and Tracking of 4D Observations in the Wild",
+      "authors": "Ilya Fradlin, Christian Schmidt, Jens Piekenbrinck, Karim Knaebel, Gonzalo Martin Garcia, Bastian Leibe",
+      "affiliations": "RWTH Aachen University",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Dynamic scenes may be captured by a moving camera, multiple video streams, or images taken at different times. These observations reveal complementary aspects of scene geometry and motion, yet bringing them together requires establishing correspondence across viewpoints, capture times, and visibility changes. We introduce ARROW, a feed-forward model that unifies 3D reconstruction and 3D point tracking from arbitrary image sets. At its core is a novel order-invariant querying approach, which allows the association of queries with observations across arbitrary inputs. We show that exposing the model to more diverse sets of inputs during training results in improved task performance. Moreover, the resulting model is capable of generalization to a wider range of tasks including multi-view tracking. Trained with this strategy, ARROW establishes a new state of the art in 3D tracking on WorldTrack and TAPVid-3D and outperforms dedicated multi-view trackers on an adapted RGB-only MVTracker benchmark, while remaining competitive across 3D reconstruction tasks. Code and weights are publicly available.",
+      "summary_cn": "ARROW是前馈模型，用顺序不变查询机制统一任意图像集合的三维重建与三维点跟踪，并在训练中喂入视角和时间更异构的输入以提升泛化能力。它在WorldTrack与TAPVid-3D上刷新三维跟踪SOTA，在RGB-only MVTracker基准上超过专用多视图跟踪器，三维重建保持竞争力，代码与权重均已开源。",
+      "pdf_filename": "2610.01314.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.01314",
+      "search_text": "arrow: arbitrary reconstruction and tracking of 4d observations in the wild  arrow是前馈模型，用顺序不变查询机制统一任意图像集合的三维重建与三维点跟踪，并在训练中喂入视角和时间更异构的输入以提升泛化能力。它在worldtrack与tapvid-3d上刷新三维跟踪sota，在rgb-only mvtracker基准上超过专用多视图跟踪器，三维重建保持竞争力，代码与权重均已开源。 dynamic scenes may be captured by a moving camera, multiple video streams, or images taken at different times. these observations reveal complementary aspects of scene geometry and motion, yet bringing them together requires establishing correspondence across viewpoints, capture times, and visibility changes. we introduce arrow, a feed-forward model that unifies 3d reconstruction and 3d point tracking from arbitrary image sets. at its core is a novel order-invariant querying approach, which allows the association of queries with observations across arbitrary inputs. we show that exposing the model to more diverse sets of inputs during training results in improved task performance. moreover, the resulting model is capable of generalization to a wider range of tasks including multi-view tracking. trained with this strategy, arrow establishes a new state of the art in 3d tracking on worldtrack and tapvid-3d and outperforms dedicated multi-view trackers on an adapted rgb-only mvtracker benchmark, while remaining competitive across 3d reconstruction tasks. code and weights are publicly available. rwth aachen university ilya fradlin, christian schmidt, jens piekenbrinck, karim knaebel, gonzalo martin garcia, bastian leibe cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01224",
+      "title": "Supervise What Decides Success: Criterion-Aligned Auxiliary Losses for Latent World-Model Planning",
+      "authors": "Takumi Hara, Kanata Suzuki",
+      "affiliations": "Kyoto University; Fujitsu Limited",
+      "published_date": "2026-10-01",
+      "categories": "cs.LG, cs.RO",
+      "abstract": "Latent world models plan by scoring candidate action sequences with distances in latent space. However, task success is judged by physical quantities, which we call the success-criterion quantities. In all four latent world models we examine, the end-effector position is encoded in the latent state with an error larger than the success criterion allows. Such a latent state cannot separate successful candidates from failing ones. We propose an auxiliary loss that uses success-criterion quantities as training targets, whereas existing latent world models take them only as inputs. During training, a linear head on the encoder and predictor outputs regresses the success-criterion quantities, and the regression error is added to the training loss. The head is discarded after training, so the model, its cost, and its inputs at test time are unchanged. This loss alone improves the success rate on PushT and cube by 3.5% and 3.4% (absolute), respectively, and both improvements are statistically significant. A success criterion thus specifies what a world model must retain in its latent state, and we show that it can serve directly as a training target.",
+      "summary_cn": "作者指出四个潜世界模型编码的末端位姿误差都超出成功判据容差。提出以成功判据物理量为目标的辅助损失：训练时在编码器与预测器上加线性头回归这些量并计入损失，训完丢弃，测试代价与输入不变。仅此即让PushT与cube成功率分别绝对提升3.5%和3.4%，且均统计显著。",
+      "pdf_filename": "2610.01224.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01224",
+      "search_text": "supervise what decides success: criterion-aligned auxiliary losses for latent world-model planning 世界模型 作者指出四个潜世界模型编码的末端位姿误差都超出成功判据容差。提出以成功判据物理量为目标的辅助损失：训练时在编码器与预测器上加线性头回归这些量并计入损失，训完丢弃，测试代价与输入不变。仅此即让pusht与cube成功率分别绝对提升3.5%和3.4%，且均统计显著。 latent world models plan by scoring candidate action sequences with distances in latent space. however, task success is judged by physical quantities, which we call the success-criterion quantities. in all four latent world models we examine, the end-effector position is encoded in the latent state with an error larger than the success criterion allows. such a latent state cannot separate successful candidates from failing ones. we propose an auxiliary loss that uses success-criterion quantities as training targets, whereas existing latent world models take them only as inputs. during training, a linear head on the encoder and predictor outputs regresses the success-criterion quantities, and the regression error is added to the training loss. the head is discarded after training, so the model, its cost, and its inputs at test time are unchanged. this loss alone improves the success rate on pusht and cube by 3.5% and 3.4% (absolute), respectively, and both improvements are statistically significant. a success criterion thus specifies what a world model must retain in its latent state, and we show that it can serve directly as a training target. kyoto university; fujitsu limited takumi hara, kanata suzuki cs.lg, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01201",
+      "title": "iSEE: Object Permanence Through Self-Supervision",
+      "authors": "Pramish Paudel, Ajad Chhatkuli, Luc Van Gool, Danda Pani Paudel",
+      "affiliations": "INSAIT, Sofia University \"St. Kliment Ohridski\"",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Object permanence, keeping track of an object's identity and position while it is occluded, is central to video representations that track, predict and plan. Trackers that achieve it learn from boxes, track identities and visibility labels. On the other hand, self-supervised object-centric methods discover objects without labels: through slot attention, it represents a video as slots that bind to objects and follow them across frames. However, these slots are lost under occlusion, making the desired permanence impossible. Reasoning permanence is a hard problem because it requires to detect when an object becomes occluded, re-identify when object reappears, and keep the object's hidden position continuous, using reapperance as the only learning cue. To address this, we propose iSEE, a novel framework that offers all three aforementioned requirements, without any labels whatsoever. We built iSEE using the following three proposed components: (i) Object evidence modelling: a slot's attention, compared with its own past, reveals when its object is hidden. (ii) Appearance-position separation: two slot streams let the appearance be held for re-identification while the position keeps changing. (iii) Permanence from reappearance: a walker follows the hidden object's position, trained only on where the object reappears. On LA-CATER static, iSEE returns a reappearing object to its own slot after 86% of occlusions, against 32% for SlotContrast, and localises it while hidden within 4.1 mAP of the label-trained SoTA RAM. The two streams also allow downstream planning, with the position stream as the action of a world model. Project page: https://insait-institute.github.io/iSEE/",
+      "summary_cn": "iSEE是无标签物体恒常性框架：用槽注意力证据建模判断遮挡，外观-位置双流分离以保持重识别，walker仅凭物体重现位置学习隐藏期间的位置。在LA-CATER(static)上遮挡后正确归槽率达86%(SlotContrast仅32%)，隐藏期定位mAP距有监督SoTA RAM仅4.1，位置流可充当世界模型动作用于下游规划。",
+      "pdf_filename": "2610.01201.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01201",
+      "search_text": "isee: object permanence through self-supervision 世界模型 规划 isee是无标签物体恒常性框架：用槽注意力证据建模判断遮挡，外观-位置双流分离以保持重识别，walker仅凭物体重现位置学习隐藏期间的位置。在la-cater(static)上遮挡后正确归槽率达86%(slotcontrast仅32%)，隐藏期定位map距有监督sota ram仅4.1，位置流可充当世界模型动作用于下游规划。 object permanence, keeping track of an object's identity and position while it is occluded, is central to video representations that track, predict and plan. trackers that achieve it learn from boxes, track identities and visibility labels. on the other hand, self-supervised object-centric methods discover objects without labels: through slot attention, it represents a video as slots that bind to objects and follow them across frames. however, these slots are lost under occlusion, making the desired permanence impossible. reasoning permanence is a hard problem because it requires to detect when an object becomes occluded, re-identify when object reappears, and keep the object's hidden position continuous, using reapperance as the only learning cue. to address this, we propose isee, a novel framework that offers all three aforementioned requirements, without any labels whatsoever. we built isee using the following three proposed components: (i) object evidence modelling: a slot's attention, compared with its own past, reveals when its object is hidden. (ii) appearance-position separation: two slot streams let the appearance be held for re-identification while the position keeps changing. (iii) permanence from reappearance: a walker follows the hidden object's position, trained only on where the object reappears. on la-cater static, isee returns a reappearing object to its own slot after 86% of occlusions, against 32% for slotcontrast, and localises it while hidden within 4.1 map of the label-trained sota ram. the two streams also allow downstream planning, with the position stream as the action of a world model. project page: https://insait-institute.github.io/isee/ insait, sofia university \"st. kliment ohridski\" pramish paudel, ajad chhatkuli, luc van gool, danda pani paudel cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01105",
+      "title": "Extreme Length Generalization in a Compact Recurrent Architecture for One-Shot Exploration",
+      "authors": "Izen Thornton, Aaron Shey, William Su",
+      "affiliations": "FRANK Autonomous Systems Inc.; University of California, Berkeley",
+      "published_date": "2026-10-01",
+      "categories": "cs.RO",
+      "abstract": "Autonomous robots on one-shot missions run over horizons far longer than the trajectories seen during training, under a fixed onboard compute budget. We present FRANK, a 507K-parameter recurrent architecture that combines tau-gated recurrent modules, content-addressable memory, and a feedforward reflex pathway. We evaluate it against recurrent, state-space, and reduced modular baselines at matched parameter count on four algorithmic sequence tasks, trained at length 5-20 and evaluated out to two million tokens. At 100,000x the maximum training length, 6 of 10 FRANK seeds retain exactly 100.0% accuracy, while none of the 50 baseline configurations does, five architectures at ten seeds each with none left incomplete (Fisher exact, two-sided p = 4.2E-6. Targeted lesions across the four tasks yield four distinct component-reliance profiles, consistent with task-dependent allocation across the recurrent, memory, and reflex pathways. Separately, a FRANK policy trained in simulation drives a physical ground vehicle to commanded waypoints through obstacles without teleoperation.",
+      "summary_cn": "FRANK是一款507K参数循环架构，融合τ门控循环模块、内容可寻址记忆与前馈反射通路。在四个序列任务上训练长度仅5-20、评估延伸至200万token，10万倍长度时6/10种子保持100.0%准确率，50个基线配置无一做到(p=4.2e-6)，消融得到四种组件依赖画像；仿真训练策略可驱动实体地面车自主避障抵达航点。",
+      "pdf_filename": "2610.01105.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.01105",
+      "search_text": "extreme length generalization in a compact recurrent architecture for one-shot exploration  frank是一款507k参数循环架构，融合τ门控循环模块、内容可寻址记忆与前馈反射通路。在四个序列任务上训练长度仅5-20、评估延伸至200万token，10万倍长度时6/10种子保持100.0%准确率，50个基线配置无一做到(p=4.2e-6)，消融得到四种组件依赖画像；仿真训练策略可驱动实体地面车自主避障抵达航点。 autonomous robots on one-shot missions run over horizons far longer than the trajectories seen during training, under a fixed onboard compute budget. we present frank, a 507k-parameter recurrent architecture that combines tau-gated recurrent modules, content-addressable memory, and a feedforward reflex pathway. we evaluate it against recurrent, state-space, and reduced modular baselines at matched parameter count on four algorithmic sequence tasks, trained at length 5-20 and evaluated out to two million tokens. at 100,000x the maximum training length, 6 of 10 frank seeds retain exactly 100.0% accuracy, while none of the 50 baseline configurations does, five architectures at ten seeds each with none left incomplete (fisher exact, two-sided p = 4.2e-6. targeted lesions across the four tasks yield four distinct component-reliance profiles, consistent with task-dependent allocation across the recurrent, memory, and reflex pathways. separately, a frank policy trained in simulation drives a physical ground vehicle to commanded waypoints through obstacles without teleoperation. frank autonomous systems inc.; university of california, berkeley izen thornton, aaron shey, william su cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01098",
+      "title": "MVDG: Efficient Multi-view 3D Disambiguation on Unconstrained Real-World Images",
+      "authors": "Hanyuan Xiao, Gonglin Chen, Haolin Xiong, Wenbin Teng, Haiwei Chen, Yajie Zhao",
+      "affiliations": "University of Southern California; Institute for Creative Technologies",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Illusory matches between distinct yet visually similar 3D surfaces--doppelgangers--remain a fundamental obstacle for large-scale, in-the-wild 3D reconstruction and visual localization. Prior work mitigates this issue with pairwise classifiers, but this design limits multi-view contextual reasoning and incurs O(n^2) inference complexity for downstream structure-from-motion (SfM). We present MVDG, a scalable multi-view disambiguation framework built on the 3D foundation model VGGT, which jointly reasons over an arbitrary number of multiview images. By incorporating 3D-aware multi-view features, our method reduces dependence on pairwise comparisons by encoding and decoding views in a single pass. We further observe that direct multi-view fine-tuning of VGGT can be unstable under noisy supervision; motivated by label ambiguity in Doppelgangers, we construct a pseudo-pairwise training set from AerialMegaDepth and show that fine-tuning on sampled subsets yields stable optimization and strong generalization to held-out scenes. Finally, because full SfM evaluation (even with faster pipelines such as GLOMAP) remains expensive, we process a pseudo-pairwise dataset for efficient validation; we derive a predictive relationship between regular SfM metrics and the classification accuracy on this pseudo-pairwise test. Experiments show that our method achieves comparable pairwise accuracy while improving both SfM accuracy and inference speed over baselines.",
+      "summary_cn": "MVDG 针对无约束真实图像中外观相似却属不同表面的“二重身”误匹配，构建在三维基础模型VGGT之上，可对任意数量多视图图像联合推理。它用三维感知多视图特征在单次编解码中减少对成对比较的依赖，并以置信模块自适应提前退出编码器层提速；针对噪声监督下微调不稳定，从AerialMegaDepth构造伪成对训练集，在采样子集上微调获得稳定优化与泛化，并提升SfM精度与速度。",
+      "pdf_filename": "2610.01098.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01098",
+      "search_text": "mvdg: efficient multi-view 3d disambiguation on unconstrained real-world images 前馈3d重建 mvdg 针对无约束真实图像中外观相似却属不同表面的“二重身”误匹配，构建在三维基础模型vggt之上，可对任意数量多视图图像联合推理。它用三维感知多视图特征在单次编解码中减少对成对比较的依赖，并以置信模块自适应提前退出编码器层提速；针对噪声监督下微调不稳定，从aerialmegadepth构造伪成对训练集，在采样子集上微调获得稳定优化与泛化，并提升sfm精度与速度。 illusory matches between distinct yet visually similar 3d surfaces--doppelgangers--remain a fundamental obstacle for large-scale, in-the-wild 3d reconstruction and visual localization. prior work mitigates this issue with pairwise classifiers, but this design limits multi-view contextual reasoning and incurs o(n^2) inference complexity for downstream structure-from-motion (sfm). we present mvdg, a scalable multi-view disambiguation framework built on the 3d foundation model vggt, which jointly reasons over an arbitrary number of multiview images. by incorporating 3d-aware multi-view features, our method reduces dependence on pairwise comparisons by encoding and decoding views in a single pass. we further observe that direct multi-view fine-tuning of vggt can be unstable under noisy supervision; motivated by label ambiguity in doppelgangers, we construct a pseudo-pairwise training set from aerialmegadepth and show that fine-tuning on sampled subsets yields stable optimization and strong generalization to held-out scenes. finally, because full sfm evaluation (even with faster pipelines such as glomap) remains expensive, we process a pseudo-pairwise dataset for efficient validation; we derive a predictive relationship between regular sfm metrics and the classification accuracy on this pseudo-pairwise test. experiments show that our method achieves comparable pairwise accuracy while improving both sfm accuracy and inference speed over baselines. university of southern california; institute for creative technologies hanyuan xiao, gonglin chen, haolin xiong, wenbin teng, haiwei chen, yajie zhao cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01056",
+      "title": "HierGF: Hierarchical Gaussian Fields via Geometry-perception Message Passing for Sparse-view 3D Reconstruction",
+      "authors": "Bi'an Du, Zhimin Zhang, Daizong Liu, Baoquan Chen, Wei Hu",
+      "affiliations": "Wangxuan Institute of Computer Technology, Peking University; Institute for Math & AI, Wuhan University; School of Intelligence Science and Technology, Peking University",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV, eess.IV",
+      "abstract": "Sparse view 3D reconstruction is an important and common scenario in multimedia applications, such as augmented reality/virtual reality (AR/VR) content creation, cultural heritage digitization, and certain robotic applications, where only a limited number of randomly captured views may be available. However, sparse views contain only limited 3D information, posing two major challenges:1) too few images are available for matching, making it difficult to build multi-view consistency; 2) insufficient view coverage leads to a lack of information in under-sampled regions, resulting in missing parts of object structure. Existing methods mostly still rely on limited reprojection errors and regularization terms, which are prone to overfitting to a single view and inconsistent appearances across views. In geometrically under-sampled regions, they often rely on heuristic density control, lacking reliable guidance and often resulting in blurring and structural holes.To address these issues, this paper proposes Hierarchical Gaussian Fields (HierGF), which revisits sparse-view reconstruction from a hierarchical geometry-perception perspective and converts limited observations into reliable self-generated supervision beyond fixed priors and heuristic density control. In particular, we transform coarse 3D geometric information and additional 2D generative priors into structured pseudo-supervision through a two-stage geometry-perception backbone network, thereby enhancing multi-view consistency with very few input views. In addition, we introduce a learnable confidence network to guide gradients toward cross-view consistent content, and a geometrically consistent densification module to improve the reconstruction of multi-view alignment and under-sampled regions.",
+      "summary_cn": "HierGF 从层次化几何感知重构稀疏视图三维重建，把有限观测转为可靠的自生成监督而非依赖固定先验与启发式密度控制：两阶段几何感知骨干网络将粗糙三维几何与二维生成先验转为结构化伪监督，可学习置信网络引导梯度指向跨视图一致内容，几何一致性致密化模块补全欠采样区域。在MipNeRF360 kitchen四视图下，单张A100逐场景重建632秒、后优化渲染70秒，并在LLFF、DTU上验证。",
+      "pdf_filename": "2610.01056.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01056",
+      "search_text": "hiergf: hierarchical gaussian fields via geometry-perception message passing for sparse-view 3d reconstruction 前馈3d重建 hiergf 从层次化几何感知重构稀疏视图三维重建，把有限观测转为可靠的自生成监督而非依赖固定先验与启发式密度控制：两阶段几何感知骨干网络将粗糙三维几何与二维生成先验转为结构化伪监督，可学习置信网络引导梯度指向跨视图一致内容，几何一致性致密化模块补全欠采样区域。在mipnerf360 kitchen四视图下，单张a100逐场景重建632秒、后优化渲染70秒，并在llff、dtu上验证。 sparse view 3d reconstruction is an important and common scenario in multimedia applications, such as augmented reality/virtual reality (ar/vr) content creation, cultural heritage digitization, and certain robotic applications, where only a limited number of randomly captured views may be available. however, sparse views contain only limited 3d information, posing two major challenges:1) too few images are available for matching, making it difficult to build multi-view consistency; 2) insufficient view coverage leads to a lack of information in under-sampled regions, resulting in missing parts of object structure. existing methods mostly still rely on limited reprojection errors and regularization terms, which are prone to overfitting to a single view and inconsistent appearances across views. in geometrically under-sampled regions, they often rely on heuristic density control, lacking reliable guidance and often resulting in blurring and structural holes.to address these issues, this paper proposes hierarchical gaussian fields (hiergf), which revisits sparse-view reconstruction from a hierarchical geometry-perception perspective and converts limited observations into reliable self-generated supervision beyond fixed priors and heuristic density control. in particular, we transform coarse 3d geometric information and additional 2d generative priors into structured pseudo-supervision through a two-stage geometry-perception backbone network, thereby enhancing multi-view consistency with very few input views. in addition, we introduce a learnable confidence network to guide gradients toward cross-view consistent content, and a geometrically consistent densification module to improve the reconstruction of multi-view alignment and under-sampled regions. wangxuan institute of computer technology, peking university; institute for math & ai, wuhan university; school of intelligence science and technology, peking university bi'an du, zhimin zhang, daizong liu, baoquan chen, wei hu cs.cv, eess.iv"
+    },
+    {
+      "arxiv_id": "2610.01013",
+      "title": "VASC: Value-Aware Sparse Attention with Cross-Layer Memory for Efficient 3D Reconstruction",
+      "authors": "Junyi Wu, Fanqing Kong, Leyang Chen, Shaoqiu Zhang, Yulun Zhang",
+      "affiliations": "Shanghai Jiao Tong University",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Feed-forward 3D vision models such as VGGT have achieved remarkable progress, unifying camera estimation and dense scene reconstruction in a single pass. However, their quadratic global attention makes long image sequences expensive, while existing sparse methods may favor highly attended yet value-redundant regions. To address these limitations, we introduce VASC, a training-free sparse attention method combining value-aware block selection and execution-aware cross-layer memory. Our value-aware block selection integrates pooled query--key relevance with neighboring value contrast, reducing redundancy while preserving query-relevant and distinctive content. Cross-layer memory tracks unserved demand across layers and updates this state according to actual execution, enabling previously underserved blocks to compete under a fixed computation budget. Experiments on 7Scenes and NeuralRGB-D with VGGT and $π^3$ demonstrate improved pose estimation and reconstruction quality compared with FasterVGGT, together with up to $2.29\\times$ faster inference than dense VGGT. Code is available at https://github.com/kosakayamahoo-design/VASC.",
+      "summary_cn": "VASC 是免训练稀疏注意力方法，用于加速 VGGT、π³ 等前馈三维视觉模型：把池化查询-键相关性与邻近值对比度结合做值感知分块选择，在降冗余的同时保留与查询相关且具区分度的内容；并以执行感知的跨层记忆跟踪各层未被满足的需求，按实际执行更新状态，使先前被忽略的分块能在固定算力预算下竞争。在7Scenes与NeuralRGB-D上，位姿与重建质量优于FasterVGGT，推理较稠密VGGT最快提升2.29倍。",
+      "pdf_filename": "2610.01013.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01013",
+      "search_text": "vasc: value-aware sparse attention with cross-layer memory for efficient 3d reconstruction 前馈3d重建 vasc 是免训练稀疏注意力方法，用于加速 vggt、π³ 等前馈三维视觉模型：把池化查询-键相关性与邻近值对比度结合做值感知分块选择，在降冗余的同时保留与查询相关且具区分度的内容；并以执行感知的跨层记忆跟踪各层未被满足的需求，按实际执行更新状态，使先前被忽略的分块能在固定算力预算下竞争。在7scenes与neuralrgb-d上，位姿与重建质量优于fastervggt，推理较稠密vggt最快提升2.29倍。 feed-forward 3d vision models such as vggt have achieved remarkable progress, unifying camera estimation and dense scene reconstruction in a single pass. however, their quadratic global attention makes long image sequences expensive, while existing sparse methods may favor highly attended yet value-redundant regions. to address these limitations, we introduce vasc, a training-free sparse attention method combining value-aware block selection and execution-aware cross-layer memory. our value-aware block selection integrates pooled query--key relevance with neighboring value contrast, reducing redundancy while preserving query-relevant and distinctive content. cross-layer memory tracks unserved demand across layers and updates this state according to actual execution, enabling previously underserved blocks to compete under a fixed computation budget. experiments on 7scenes and neuralrgb-d with vggt and $π^3$ demonstrate improved pose estimation and reconstruction quality compared with fastervggt, together with up to $2.29\\times$ faster inference than dense vggt. code is available at https://github.com/kosakayamahoo-design/vasc. shanghai jiao tong university junyi wu, fanqing kong, leyang chen, shaoqiu zhang, yulun zhang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.00992",
+      "title": "Closed-Loop Refinement and Execution for Learned Driving Planners",
+      "authors": "Huaijin Hu, Shanting Wang, Zhongyu Mo, Andreas A. Malikopoulos",
+      "affiliations": "Cornell University, Ithaca, NY, USA",
+      "published_date": "2026-10-01",
+      "categories": "eess.SY, cs.RO",
+      "abstract": "Learning-based driving planners are usually trained and evaluated in open loop against logged trajectories. In closed loop, a trajectory with small displacement error can still stall the vehicle, steer it into a conflict with surrounding agents, or be executed with abrupt braking. We introduce Closed-Loop Refinement and Execution (CLRE), a hierarchical receding-horizon control framework designed to mitigate these failure modes while leaving the upstream planner frozen and adding no new learned model. The upper layer treats the nominal trajectory as a reference and solves a finite-horizon optimal control problem that trades route progress against interaction with predicted agents. Solving it from several initializations gives a candidate set, and a prediction-conditioned oriented-bounding-box (OBB) feasibility test retains only candidates whose minimum predicted OBB clearance over the horizon meets a threshold. The lower layer executes the lowest-cost survivor, or a route-centerline backup when none remains, through the tracking controller supplied with the planner, augmented by a range-based speed bound and a saturated proportional braking law. In closed-loop simulation on 126 Bench2Drive routes with VAD as the upstream planner, CLRE raises the driving score from 43.41 to 56.42 and route completion from 57.27 to 72.23, and reduces collision events from 70 to 53.",
+      "summary_cn": "该文提出CLRE分层次滚动时域控制框架，在冻结上游规划器、不新增学习模型的前提下改善闭环驾驶：上层把名义轨迹当参考，求解权衡路线推进与预测智能体交互的有限时域最优控制，用预测条件有向包围盒可行性测试筛选候选，下层执行最低代价幸存者或中心线备份并施加基于距离限速与饱和比例制动。在Bench2Drive的126条路线上，驾驶分由43.41升至56.42，完成率57.27升至72.23，碰撞70降至53。",
+      "pdf_filename": "2610.00992.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00992",
+      "search_text": "closed-loop refinement and execution for learned driving planners 闭环仿真 规划 该文提出clre分层次滚动时域控制框架，在冻结上游规划器、不新增学习模型的前提下改善闭环驾驶：上层把名义轨迹当参考，求解权衡路线推进与预测智能体交互的有限时域最优控制，用预测条件有向包围盒可行性测试筛选候选，下层执行最低代价幸存者或中心线备份并施加基于距离限速与饱和比例制动。在bench2drive的126条路线上，驾驶分由43.41升至56.42，完成率57.27升至72.23，碰撞70降至53。 learning-based driving planners are usually trained and evaluated in open loop against logged trajectories. in closed loop, a trajectory with small displacement error can still stall the vehicle, steer it into a conflict with surrounding agents, or be executed with abrupt braking. we introduce closed-loop refinement and execution (clre), a hierarchical receding-horizon control framework designed to mitigate these failure modes while leaving the upstream planner frozen and adding no new learned model. the upper layer treats the nominal trajectory as a reference and solves a finite-horizon optimal control problem that trades route progress against interaction with predicted agents. solving it from several initializations gives a candidate set, and a prediction-conditioned oriented-bounding-box (obb) feasibility test retains only candidates whose minimum predicted obb clearance over the horizon meets a threshold. the lower layer executes the lowest-cost survivor, or a route-centerline backup when none remains, through the tracking controller supplied with the planner, augmented by a range-based speed bound and a saturated proportional braking law. in closed-loop simulation on 126 bench2drive routes with vad as the upstream planner, clre raises the driving score from 43.41 to 56.42 and route completion from 57.27 to 72.23, and reduces collision events from 70 to 53. cornell university, ithaca, ny, usa huaijin hu, shanting wang, zhongyu mo, andreas a. malikopoulos eess.sy, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.00970",
+      "title": "RelationVGGT: Visual Geometry Transformers for 3D Spatial Relation Segmentation",
+      "authors": "Minsu Kim, Jaesung Choe, Jiwoo Lee, Yu-Chiang Frank Wang, Seon Joo Kim",
+      "affiliations": "Yonsei University; NVIDIA",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Recent advances in 3D reconstruction have progressed from per-scene optimization to feed-forward inference, and semantic scene understanding has followed suit -- yet existing methods remain confined to object-centric perception, neglecting spatial relations between objects. We formulate 3D spatial relation segmentation in a feed-forward, pose-free multi-view setting: given a visually specified subject and a relational text query, the model segments the target across views without receiving its category name. To this end, we propose RelationVGGT, a novel feed-forward framework that integrates semantic features from a visual foundation model with geometry-aware representations from a 3D geometry foundation model and leverages a relation transformer for subject-conditioned, cross-view relation prediction -- requiring neither per-scene optimization nor known camera poses. We additionally provide a fully automated annotation pipeline built on ScanNet++ with VLMs and LLMs, enabling scalable training data generation for this new task.",
+      "summary_cn": "RelationVGGT 把三维空间关系分割表述为前馈、免位姿的多视图任务：给定参考视图主体掩码与关系文本查询，跨视图分割满足关系（如“放在…上”）的目标且不给其类别名。框架融合视觉基础模型的语义特征与三维几何基础模型VGGT的几何表示，用关系变换器做主体条件的跨视图关系预测，无需逐场景优化或已知相机位姿；并基于ScanNet++用VLM与LLM搭建自动标注流程生成训练数据。",
+      "pdf_filename": "2610.00970.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.00970",
+      "search_text": "relationvggt: visual geometry transformers for 3d spatial relation segmentation  relationvggt 把三维空间关系分割表述为前馈、免位姿的多视图任务：给定参考视图主体掩码与关系文本查询，跨视图分割满足关系（如“放在…上”）的目标且不给其类别名。框架融合视觉基础模型的语义特征与三维几何基础模型vggt的几何表示，用关系变换器做主体条件的跨视图关系预测，无需逐场景优化或已知相机位姿；并基于scannet++用vlm与llm搭建自动标注流程生成训练数据。 recent advances in 3d reconstruction have progressed from per-scene optimization to feed-forward inference, and semantic scene understanding has followed suit -- yet existing methods remain confined to object-centric perception, neglecting spatial relations between objects. we formulate 3d spatial relation segmentation in a feed-forward, pose-free multi-view setting: given a visually specified subject and a relational text query, the model segments the target across views without receiving its category name. to this end, we propose relationvggt, a novel feed-forward framework that integrates semantic features from a visual foundation model with geometry-aware representations from a 3d geometry foundation model and leverages a relation transformer for subject-conditioned, cross-view relation prediction -- requiring neither per-scene optimization nor known camera poses. we additionally provide a fully automated annotation pipeline built on scannet++ with vlms and llms, enabling scalable training data generation for this new task. yonsei university; nvidia minsu kim, jaesung choe, jiwoo lee, yu-chiang frank wang, seon joo kim cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.00731",
+      "title": "Measuring Asset and Scene Reconstruction Effects in Real-to-Sim Robot Evaluation",
+      "authors": "Sanya Verma, Luca Cilio, Velissarios Christodoulou",
+      "affiliations": "Kaedim",
+      "published_date": "2026-09-30",
+      "categories": "cs.RO",
+      "abstract": "Simulated evaluation is increasingly used alongside real-world evaluation of robot policies because it is cheaper and easier to repeat; however, its value depends on how closely its outcomes track the real robot's. We test whether our reconstruction pipeline, combining metrically scaled object geometry, authored physical parameters and scene reconstruction, reduces disagreement between simulated and real robot scores relative to a default open-source recipe. We constructed two simulated versions of one bimanual robot cell: an authored reconstruction, using object geometry at estimated metric scale, projected textures, authored physics and our own scene splat; and a baseline, referred to as the default reconstruction, using the open-source recipe of a generative single-image mesh, engine-default physics and a Gaussian-splat scene. Both reconstructions use the same object photographs and scene video. Two policies ran five tasks each, giving ten task-policy pairs, which we call cells; each cell was run twenty times in each reconstruction with all other settings held fixed. Both reconstructions were scored against the same real trials, graded by a third-party evaluator. Pearson correlation between the ten simulated and real cell means is r = 0.90 for the authored reconstruction and 0.51 for the default. Mean score error is 6.97 percentage points for the authored reconstruction and 17.54 for the default, a reduction of 10.56 percentage points. These results show that improving the quality of the environment reconstruction through higher visual fidelity, authored physics and metric scale makes the simulation more faithful to the real world and narrows the sim-to-real gap. We release the harness, the per-trial scores, every reported run's configuration, and the assets and scenes of both reconstructions.",
+      "summary_cn": "本文检验重建质量对真实到仿真机器人评测的影响：对同一双臂机器人单元构造作者重建（度量尺度几何、投影纹理、人工标定物理与自建场景splat）与默认重建（单图生成网格、引擎默认物理、高斯splat场景），各在二十次重复中对比同一批真实评分。十个任务-策略单元的仿真与真实均值相关为作者重建r=0.90、默认0.51，平均分误差6.97与17.54个百分点，缩小10.56，说明高保真重建使仿真更贴近真实。",
+      "pdf_filename": "2610.00731.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.00731",
+      "search_text": "measuring asset and scene reconstruction effects in real-to-sim robot evaluation  本文检验重建质量对真实到仿真机器人评测的影响：对同一双臂机器人单元构造作者重建（度量尺度几何、投影纹理、人工标定物理与自建场景splat）与默认重建（单图生成网格、引擎默认物理、高斯splat场景），各在二十次重复中对比同一批真实评分。十个任务-策略单元的仿真与真实均值相关为作者重建r=0.90、默认0.51，平均分误差6.97与17.54个百分点，缩小10.56，说明高保真重建使仿真更贴近真实。 simulated evaluation is increasingly used alongside real-world evaluation of robot policies because it is cheaper and easier to repeat; however, its value depends on how closely its outcomes track the real robot's. we test whether our reconstruction pipeline, combining metrically scaled object geometry, authored physical parameters and scene reconstruction, reduces disagreement between simulated and real robot scores relative to a default open-source recipe. we constructed two simulated versions of one bimanual robot cell: an authored reconstruction, using object geometry at estimated metric scale, projected textures, authored physics and our own scene splat; and a baseline, referred to as the default reconstruction, using the open-source recipe of a generative single-image mesh, engine-default physics and a gaussian-splat scene. both reconstructions use the same object photographs and scene video. two policies ran five tasks each, giving ten task-policy pairs, which we call cells; each cell was run twenty times in each reconstruction with all other settings held fixed. both reconstructions were scored against the same real trials, graded by a third-party evaluator. pearson correlation between the ten simulated and real cell means is r = 0.90 for the authored reconstruction and 0.51 for the default. mean score error is 6.97 percentage points for the authored reconstruction and 17.54 for the default, a reduction of 10.56 percentage points. these results show that improving the quality of the environment reconstruction through higher visual fidelity, authored physics and metric scale makes the simulation more faithful to the real world and narrows the sim-to-real gap. we release the harness, the per-trial scores, every reported run's configuration, and the assets and scenes of both reconstructions. kaedim sanya verma, luca cilio, velissarios christodoulou cs.ro"
+    },
+    {
+      "arxiv_id": "2610.00601",
+      "title": "When Reasoning Helps Action: Monitoring and Steering Chain-of-Thought in Vision-Language-Action Policies",
+      "authors": "Sathwik Karnik, Joseph JR. Lee, Aryaman Gupta, Somil Bansal",
+      "affiliations": "Safe and Intelligent Autonomy Lab, Stanford University",
+      "published_date": "2026-09-30",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Reasoning-enabled VLA policies expose chain-of-thought (CoT) traces that appear to explain and guide their actions, creating a potential interface for runtime safety through reasoning monitoring and correction. In this work, we define and operationalize two evaluation axes for assessing when this interface can improve embodied behavior: correctability, which measures whether unreliable reasoning can be detected and improved during generation, and actionability, which measures whether reasoning corrections produce behaviorally meaningful changes in the intended direction. To enable correctability, we introduce Token-level Reward for Utility-Steered Chain-of-Thought (TRUST), an offline-trained value model that predicts eventual reasoning correctness from partial prefixes and uses these estimates to monitor and selectively steer reasoning generation in frozen VLA policies. On the Alpamayo 1.5 driving VLA, TRUST monitors correctness with 88.9% accuracy and improves reasoning correctness from 75.9% to 90.0%. On a baseline-defined challenging subset in AlpaSim, TRUST reduces collision rate by 30.4% and maximum trajectory error by 11.5% relative to the unsteered policy, outperforming a compute-matched Best-of-4 baseline. On the DeepThinkVLA manipulation VLA, TRUST improves the correctness of grasp-state claims from 69.3% to 90.2% and action-choice claims from 68.8% to 85.9%, yet closed-loop task performance on LIBERO-Plus remains largely unchanged. Empirical analysis reveals intent-consistent behavioral effects in Alpamayo 1.5 but limited effects in DeepThinkVLA, helping interpret these different task-level outcomes. Together, our results show that gains in reasoning correctness do not automatically imply gains in embodied performance, motivating evaluation of correctability and actionability when using CoT as a runtime safety interface.",
+      "summary_cn": "该文提出 TRUST，一个离线训练的价值模型，从部分推理前缀预测最终推理正确性，从而在冻结的VLA策略上监控并选择性引导链式推理。Alpamayo 1.5驾驶VLA上监控准确率88.9%，推理正确率由75.9%升至90.0%，AlpaSim上碰撞率降30.4%、最大轨迹误差降11.5%；DeepThinkVLA上抓取状态与动作选择断言正确率分别由69.3%和68.8%升至90.2%和85.9%，但LIBERO-Plus闭环表现几乎不变。",
+      "pdf_filename": "2610.00601.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00601",
+      "search_text": "when reasoning helps action: monitoring and steering chain-of-thought in vision-language-action policies 闭环仿真 多模态 具身智能 该文提出 trust，一个离线训练的价值模型，从部分推理前缀预测最终推理正确性，从而在冻结的vla策略上监控并选择性引导链式推理。alpamayo 1.5驾驶vla上监控准确率88.9%，推理正确率由75.9%升至90.0%，alpasim上碰撞率降30.4%、最大轨迹误差降11.5%；deepthinkvla上抓取状态与动作选择断言正确率分别由69.3%和68.8%升至90.2%和85.9%，但libero-plus闭环表现几乎不变。 reasoning-enabled vla policies expose chain-of-thought (cot) traces that appear to explain and guide their actions, creating a potential interface for runtime safety through reasoning monitoring and correction. in this work, we define and operationalize two evaluation axes for assessing when this interface can improve embodied behavior: correctability, which measures whether unreliable reasoning can be detected and improved during generation, and actionability, which measures whether reasoning corrections produce behaviorally meaningful changes in the intended direction. to enable correctability, we introduce token-level reward for utility-steered chain-of-thought (trust), an offline-trained value model that predicts eventual reasoning correctness from partial prefixes and uses these estimates to monitor and selectively steer reasoning generation in frozen vla policies. on the alpamayo 1.5 driving vla, trust monitors correctness with 88.9% accuracy and improves reasoning correctness from 75.9% to 90.0%. on a baseline-defined challenging subset in alpasim, trust reduces collision rate by 30.4% and maximum trajectory error by 11.5% relative to the unsteered policy, outperforming a compute-matched best-of-4 baseline. on the deepthinkvla manipulation vla, trust improves the correctness of grasp-state claims from 69.3% to 90.2% and action-choice claims from 68.8% to 85.9%, yet closed-loop task performance on libero-plus remains largely unchanged. empirical analysis reveals intent-consistent behavioral effects in alpamayo 1.5 but limited effects in deepthinkvla, helping interpret these different task-level outcomes. together, our results show that gains in reasoning correctness do not automatically imply gains in embodied performance, motivating evaluation of correctability and actionability when using cot as a runtime safety interface. safe and intelligent autonomy lab, stanford university sathwik karnik, joseph jr. lee, aryaman gupta, somil bansal cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.00523",
+      "title": "SimplexUQ: An Evaluation Framework and Benchmark for Conformal Uncertainty on Simplex-Valued Predictions",
+      "authors": "Liang You, Hengyu Shi, Dongwen Ou",
+      "affiliations": "University of Pittsburgh; Xiamen University; Duke University",
+      "published_date": "2026-09-30",
+      "categories": "cs.LG, stat.AP",
+      "abstract": "Conformal prediction guarantees marginal coverage, but a single calibration threshold can still spread that coverage unevenly, over-covering easy regions and under-covering hard ones. SimplexUQ is, to our knowledge, the first benchmark and reproducible protocol for measuring this allocation problem on simplex-valued predictions; it compares existing conformal wrappers rather than proposing a new one. Its task suite, SimplexTasks-12, combines six controlled synthetic regimes with six frozen-predictor real tasks spanning class probabilities, topic mixtures, spectral abundances, cell-type fractions, age distributions, and emotion mixtures. Each comparison fixes the predictor, score, and response-free stratification map, varies only the wrapper, and reports marginal coverage, worst-stratum coverage, max disparity, and within-task radius and compute. Global calibration can look valid while failing badly: on CIFAR-10 it attains 0.900 marginal coverage but only 0.542 in the worst entropy stratum, and Mondrian calibration raises that stratum to 0.886 while reducing max disparity from 0.358 to 0.022. No wrapper dominates, however. Under smooth synthetic heterogeneity, several repairs are competitive; fixed-map analyses show that rankings depend on the evaluation groups and protocol; and in a 12-task comparison, Mondrian has lower disparity on its single target partition for all 12 tasks, whereas BatchMVP has lower disparity over overlapping groups on five. These are empirical comparisons, not new coverage guarantees. A controlled predictor-bias sweep shows that removing predictor bias only partly reduces global-threshold disparity. We release task cards, result provenance, permitted derived arrays, and rebuild instructions, and treat wrapper selection as a diagnostic comparison rather than a universal ranking.",
+      "summary_cn": "SimplexUQ 是首个衡量单纯形值预测共形覆盖分配问题的基准与可复现协议，其 SimplexTasks-12 含六个合成场景与六个冻结预测器真实任务，固定预测器只换共形包装器，报告边际覆盖、最差分层覆盖、最大差异及计算量。CIFAR-10 上全局校准边际覆盖达0.900，最难熵分层仅0.542；Mondrian 将其升至0.886并把最大差异从0.358降到0.022，但没有包装器全面占优。",
+      "pdf_filename": "2610.00523.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.00523",
+      "search_text": "simplexuq: an evaluation framework and benchmark for conformal uncertainty on simplex-valued predictions  simplexuq 是首个衡量单纯形值预测共形覆盖分配问题的基准与可复现协议，其 simplextasks-12 含六个合成场景与六个冻结预测器真实任务，固定预测器只换共形包装器，报告边际覆盖、最差分层覆盖、最大差异及计算量。cifar-10 上全局校准边际覆盖达0.900，最难熵分层仅0.542；mondrian 将其升至0.886并把最大差异从0.358降到0.022，但没有包装器全面占优。 conformal prediction guarantees marginal coverage, but a single calibration threshold can still spread that coverage unevenly, over-covering easy regions and under-covering hard ones. simplexuq is, to our knowledge, the first benchmark and reproducible protocol for measuring this allocation problem on simplex-valued predictions; it compares existing conformal wrappers rather than proposing a new one. its task suite, simplextasks-12, combines six controlled synthetic regimes with six frozen-predictor real tasks spanning class probabilities, topic mixtures, spectral abundances, cell-type fractions, age distributions, and emotion mixtures. each comparison fixes the predictor, score, and response-free stratification map, varies only the wrapper, and reports marginal coverage, worst-stratum coverage, max disparity, and within-task radius and compute. global calibration can look valid while failing badly: on cifar-10 it attains 0.900 marginal coverage but only 0.542 in the worst entropy stratum, and mondrian calibration raises that stratum to 0.886 while reducing max disparity from 0.358 to 0.022. no wrapper dominates, however. under smooth synthetic heterogeneity, several repairs are competitive; fixed-map analyses show that rankings depend on the evaluation groups and protocol; and in a 12-task comparison, mondrian has lower disparity on its single target partition for all 12 tasks, whereas batchmvp has lower disparity over overlapping groups on five. these are empirical comparisons, not new coverage guarantees. a controlled predictor-bias sweep shows that removing predictor bias only partly reduces global-threshold disparity. we release task cards, result provenance, permitted derived arrays, and rebuild instructions, and treat wrapper selection as a diagnostic comparison rather than a universal ranking. university of pittsburgh; xiamen university; duke university liang you, hengyu shi, dongwen ou cs.lg, stat.ap"
+    },
+    {
+      "arxiv_id": "2610.00447",
+      "title": "Frozen Scenes, Shifting Winners: Configuration Fragility in Text-to-3D Evaluation",
+      "authors": "Anson Y. Lam, Shuqing Li, Michael R. Lyu",
+      "affiliations": "Department of Computer Science and Engineering, The Chinese University of Hong Kong, Hong Kong, China",
+      "published_date": "2026-09-30",
+      "categories": "cs.AI, cs.CL, cs.CV, cs.GR, cs.MM",
+      "abstract": "Can a text-to-3D leaderboard change when every generated scene stays fixed? We audit this question for rendered-image evaluation, where camera settings and caption wording become part of the measurement protocol. Across 300 frozen scenes from six generators, we vary eight render and caption factors for 19 alignment evaluators plus one perceptual-quality control, then test four targeted scene degradations. Peak configuration variance exceeds between-generator variance for 17/19 alignment evaluators, with prompt-bootstrap lower bounds above 1 for 11/19. Rankings are more stable than scores, yet 18/19 evaluators change their point-estimate winner under some configuration. Pairwise protocol margin envelopes show which comparisons keep their direction across the tested settings. Selected pairs have opposite pointwise intervals, but no reversal survives simultaneous inference over the full search. Thus the observed winner changes are descriptive, not confirmed changes in generator superiority. Sensitivity remains separate: no evaluator, even the prompt-free control, exceeds 67% tie-adjusted directional discrimination on layout scrambling, which is diagnostic rather than human-validated ground truth. The audit separates score stability, decision uncertainty, and targeted sensitivity, and recommends reporting (generator, score, card ID) with protocol-dependent comparisons and selection-aware uncertainty.",
+      "summary_cn": "本文审计文本到3D评测的配置脆弱性：固定六个生成器的300个场景，令19个对齐评测器与1个感知质量对照逐一改变8项渲染和文案因素，再做4种定向退化。结果17/19个评测器的峰值配置方差超过生成器间方差，18/19会在某配置下改变点估计冠军；每个评测器平局校正后的方向判别率均不超过67%，说明榜单结论随评测协议而变。",
+      "pdf_filename": "2610.00447.pdf",
+      "crawled_date": "2026-10-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.00447",
+      "search_text": "frozen scenes, shifting winners: configuration fragility in text-to-3d evaluation  本文审计文本到3d评测的配置脆弱性：固定六个生成器的300个场景，令19个对齐评测器与1个感知质量对照逐一改变8项渲染和文案因素，再做4种定向退化。结果17/19个评测器的峰值配置方差超过生成器间方差，18/19会在某配置下改变点估计冠军；每个评测器平局校正后的方向判别率均不超过67%，说明榜单结论随评测协议而变。 can a text-to-3d leaderboard change when every generated scene stays fixed? we audit this question for rendered-image evaluation, where camera settings and caption wording become part of the measurement protocol. across 300 frozen scenes from six generators, we vary eight render and caption factors for 19 alignment evaluators plus one perceptual-quality control, then test four targeted scene degradations. peak configuration variance exceeds between-generator variance for 17/19 alignment evaluators, with prompt-bootstrap lower bounds above 1 for 11/19. rankings are more stable than scores, yet 18/19 evaluators change their point-estimate winner under some configuration. pairwise protocol margin envelopes show which comparisons keep their direction across the tested settings. selected pairs have opposite pointwise intervals, but no reversal survives simultaneous inference over the full search. thus the observed winner changes are descriptive, not confirmed changes in generator superiority. sensitivity remains separate: no evaluator, even the prompt-free control, exceeds 67% tie-adjusted directional discrimination on layout scrambling, which is diagnostic rather than human-validated ground truth. the audit separates score stability, decision uncertainty, and targeted sensitivity, and recommends reporting (generator, score, card id) with protocol-dependent comparisons and selection-aware uncertainty. department of computer science and engineering, the chinese university of hong kong, hong kong, china anson y. lam, shuqing li, michael r. lyu cs.ai, cs.cl, cs.cv, cs.gr, cs.mm"
+    },
     {
       "arxiv_id": "2609.40358",
       "title": "Physis-Lang: Self-Evolving Language as a Physical Representation for Video World Model",
