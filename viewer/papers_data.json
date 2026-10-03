@@ -1,50 +1,50 @@
 {
-  "count": 1315,
+  "count": 1329,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-02",
+  "crawled_date_max": "2026-10-03",
   "published_date_min": "2025-12-08",
   "published_date_max": "2026-10-01",
   "rating_counts": {
-    "S": 357,
-    "A": 597,
-    "B": 201,
-    "C": 160,
+    "S": 359,
+    "A": 600,
+    "B": 206,
+    "C": 164,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 295,
+      "count": 296,
       "group": "3DGS/4DGS"
     },
     {
       "name": "自动驾驶",
-      "count": 248,
+      "count": 251,
       "group": "通用"
     },
     {
       "name": "规划",
-      "count": 225,
+      "count": 228,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 188,
+      "count": 189,
+      "group": "世界模型与仿真"
+    },
+    {
+      "name": "世界模型",
+      "count": 184,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 182,
+      "count": 184,
       "group": "通用"
     },
     {
-      "name": "世界模型",
-      "count": 180,
-      "group": "世界模型与仿真"
-    },
-    {
       "name": "大语言模型",
-      "count": 138,
+      "count": 139,
       "group": "通用"
     },
     {
@@ -58,18 +58,18 @@
       "group": "世界模型与仿真"
     },
     {
+      "name": "具身智能",
+      "count": 78,
+      "group": "通用"
+    },
+    {
       "name": "前馈3D重建",
       "count": 78,
       "group": "前馈3D重建"
     },
     {
-      "name": "具身智能",
-      "count": 76,
-      "group": "通用"
-    },
-    {
       "name": "仿真器",
-      "count": 71,
+      "count": 73,
       "group": "通用"
     },
     {
@@ -83,14 +83,14 @@
       "group": "世界模型与仿真"
     },
     {
+      "name": "视频生成",
+      "count": 40,
+      "group": "世界模型与仿真"
+    },
+    {
       "name": "4DGS",
       "count": 39,
       "group": "3DGS/4DGS"
-    },
-    {
-      "name": "视频生成",
-      "count": 37,
-      "group": "世界模型与仿真"
     },
     {
       "name": "NeRF",
@@ -119,7 +119,7 @@
     },
     {
       "name": "轨迹预测",
-      "count": 23,
+      "count": 24,
       "group": "世界模型与仿真"
     },
     {
@@ -154,6 +154,279 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.01162",
+      "title": "PhysicsLENS: Diagnosing Physical Property Blindness in Video Generation Models",
+      "authors": "Isaiah Milkey, Som Sagar, Aditya Taparia, Xinyuan Liu, Jiqing Wen, Ransalu Senanayake",
+      "affiliations": "School of Computing and Augmented Intelligence, Arizona State University",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Reliable video world models could provide scalable predictive environments for robot learning, planning, and evaluation. However, generated robot videos can violate physical principles and complete tasks through physically implausible behavior, limiting their reliability for robot learning and planning. Current video-generation benchmarks exclude physics that are inherently hidden by visuals (e.g., weight, viscosity, friction). Due to this, video models are evaluated on the fidelity of physics, not the underlying accuracy of physics. We introduce PhysicsLENS, a dataset and benchmark for evaluating plausibility of physical properties grounded in robotics. PhysicsLENS uses matched scenario pairs that hold the same conditioning frame and task, while varying underlying physics in the scene description. Scenarios are curated from public robot video sources and annotated across seven physical domains: collision, gravity, momentum, friction, deformation, fluid, and causality. We evaluate across four video generation models, producing over 400 human-annotated labels. Results show that plausible-looking videos often ignore the stated property (34 of 47), and that stating the property lowers plausibility only slightly and not significantly.",
+      "summary_cn": "针对视频世界模型只被评价物理保真度而忽略物理属性正确性的问题，本文提出 PhysicsLENS 数据集与基准，用条件帧与任务相同、仅改变场景描述中物理属性的配对场景，覆盖碰撞、重力、动量、摩擦、形变、流体与因果七个域，评测四个视频生成模型并收集四百余条人工标注，发现 47 例中 34 例看似合理的视频实际忽略了所述物理属性。",
+      "pdf_filename": "2610.01162.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "视频生成"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01162",
+      "search_text": "physicslens: diagnosing physical property blindness in video generation models 世界模型 视频生成 针对视频世界模型只被评价物理保真度而忽略物理属性正确性的问题，本文提出 physicslens 数据集与基准，用条件帧与任务相同、仅改变场景描述中物理属性的配对场景，覆盖碰撞、重力、动量、摩擦、形变、流体与因果七个域，评测四个视频生成模型并收集四百余条人工标注，发现 47 例中 34 例看似合理的视频实际忽略了所述物理属性。 reliable video world models could provide scalable predictive environments for robot learning, planning, and evaluation. however, generated robot videos can violate physical principles and complete tasks through physically implausible behavior, limiting their reliability for robot learning and planning. current video-generation benchmarks exclude physics that are inherently hidden by visuals (e.g., weight, viscosity, friction). due to this, video models are evaluated on the fidelity of physics, not the underlying accuracy of physics. we introduce physicslens, a dataset and benchmark for evaluating plausibility of physical properties grounded in robotics. physicslens uses matched scenario pairs that hold the same conditioning frame and task, while varying underlying physics in the scene description. scenarios are curated from public robot video sources and annotated across seven physical domains: collision, gravity, momentum, friction, deformation, fluid, and causality. we evaluate across four video generation models, producing over 400 human-annotated labels. results show that plausible-looking videos often ignore the stated property (34 of 47), and that stating the property lowers plausibility only slightly and not significantly. school of computing and augmented intelligence, arizona state university isaiah milkey, som sagar, aditya taparia, xinyuan liu, jiqing wen, ransalu senanayake cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.01092",
+      "title": "Ego2Act: Evaluating Goal-Directed Manipulation in Egocentric Video Generation",
+      "authors": "Patrick Amadeus Irawan, Iskandar Muda Rizky Parlambang, Rava Maulana, Qinrong Cui, Erland Hilman Fuadi, Zayd M. K. Zuhri, Nanda Ryaas Absar, Ahmed Elshabrawy, Wilfried Ariel Mulyawan, Shoubin Yu, Yue Zhang, Mohit Bansal, Alham Fikri Aji",
+      "affiliations": "Mohamed bin Zayed University of Artificial Intelligence; Nanyang Technological University; University of North Carolina at Chapel Hill",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "Video generation models are increasingly being explored as world simulators for embodied planning and learning. To do so effectively, these models must not only generate visually appealing frames, but also predict how environments dynamically evolve when executing goal-directed actions. While evaluating these capabilities is crucial, existing benchmarks focus mainly on single short actions or step-by-step instructions. This leaves multi-step physical reasoning underexplored, especially in egocentric video generation that requires planning to simulate proper execution to accomplish high-level goals by carrying out multiple real-world manipulations. We introduce Ego2Act, a goal-directed benchmark featuring 2,640 videos from 110 real-world tasks across day-to-day settings, varying object clutter and multi-step complexity. Given an initial scene image and a high-level goal, Ego2Act evaluates whether video generation models can produce realistic egocentric videos of a hand manipulating objects to carry out the task. To support scalable evaluation, we also introduce Ego2ActJudge, a reference-free evaluation pipeline that achieves better task completion and physics plausibility evaluation alignment with human consensus compared to relevant baselines. Our findings reveal that models' generated simulations often skip or partially execute steps, leaving later steps missing dependent states, which leads to unfulfilled goal. Furthermore, models consistently fail at fine-grained physical dynamics, particularly during complex object manipulation and persistent world modeling. We hope Ego2Act provides a rigorous testbed for advancing video models toward physically plausible, goal-directed simulation.",
+      "summary_cn": "针对视频生成模型作为世界模拟器时缺乏多步目标导向评测的问题，本文提出 Ego2Act 基准，覆盖 110 个真实任务与 2640 段第一视角视频，要求在给定初始场景图与高层目标下生成手部操作完成任务的过程视频，并提出无参考的 Ego2ActJudge 评测管线衡量任务完成度与物理合理性。",
+      "pdf_filename": "2610.01092.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "视频生成",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01092",
+      "search_text": "ego2act: evaluating goal-directed manipulation in egocentric video generation 世界模型 视频生成 具身智能 针对视频生成模型作为世界模拟器时缺乏多步目标导向评测的问题，本文提出 ego2act 基准，覆盖 110 个真实任务与 2640 段第一视角视频，要求在给定初始场景图与高层目标下生成手部操作完成任务的过程视频，并提出无参考的 ego2actjudge 评测管线衡量任务完成度与物理合理性。 video generation models are increasingly being explored as world simulators for embodied planning and learning. to do so effectively, these models must not only generate visually appealing frames, but also predict how environments dynamically evolve when executing goal-directed actions. while evaluating these capabilities is crucial, existing benchmarks focus mainly on single short actions or step-by-step instructions. this leaves multi-step physical reasoning underexplored, especially in egocentric video generation that requires planning to simulate proper execution to accomplish high-level goals by carrying out multiple real-world manipulations. we introduce ego2act, a goal-directed benchmark featuring 2,640 videos from 110 real-world tasks across day-to-day settings, varying object clutter and multi-step complexity. given an initial scene image and a high-level goal, ego2act evaluates whether video generation models can produce realistic egocentric videos of a hand manipulating objects to carry out the task. to support scalable evaluation, we also introduce ego2actjudge, a reference-free evaluation pipeline that achieves better task completion and physics plausibility evaluation alignment with human consensus compared to relevant baselines. our findings reveal that models' generated simulations often skip or partially execute steps, leaving later steps missing dependent states, which leads to unfulfilled goal. furthermore, models consistently fail at fine-grained physical dynamics, particularly during complex object manipulation and persistent world modeling. we hope ego2act provides a rigorous testbed for advancing video models toward physically plausible, goal-directed simulation. mohamed bin zayed university of artificial intelligence; nanyang technological university; university of north carolina at chapel hill patrick amadeus irawan, iskandar muda rizky parlambang, rava maulana, qinrong cui, erland hilman fuadi, zayd m. k. zuhri, nanda ryaas absar, ahmed elshabrawy, wilfried ariel mulyawan, shoubin yu, yue zhang, mohit bansal, alham fikri aji cs.cv"
+    },
+    {
+      "arxiv_id": "2610.01052",
+      "title": "Towards Subject Consistency over Dynamic Subject Sets in Video Generation",
+      "authors": "Tongcheng Zhang, Jun Zhu, Jianfei Chen",
+      "affiliations": "Tsinghua University (Dept. of Comp. Sci. and Tech., Institute for AI, BNRist Center, THBI Lab, Tsinghua-Bosch Joint ML Center)",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "We argue that as video generation extends to longer durations, subject consistency should be evaluated over \\textit{dynamic subject sets}. We therefore introduce \\textbf{DynSC-Eval}, an evaluation framework that dynamically tracks eligible subjects throughout their visible lifespans and measures local continuity and global identity preservation using six complementary object-level metrics, with explicit detection of inconsistency events. To validate its effectiveness, we design synthetic experiments that actively inject inconsistency events, demonstrating both the sensitivity of DynSC-Eval and the limitations of existing metrics. Evaluations of diverse models on 5s, 15s, and 60s video generation further reveal substantial subject consistency differences that are obscured by conventional metrics. Beyond evaluation, we construct rewards from DynSC-Eval and apply DiffusionNFT post-training in an autonomous-driving testbed. On 5s generation, our approach reduces the six inconsistency metrics by an average of 13.82\\% for Wan-2.1-1.3B and 5.66\\% for SANA-2B, with improvements also observed on the I2V model ReSim. Qualitative comparisons further demonstrate the effectiveness of our method. We then extend generation to 10s and 30s through curriculum learning and show that consistency optimization remains effective while largely preserving other capabilities.",
+      "summary_cn": "针对长视频生成中主体一致性评测不足的问题，本文提出在动态主体集合上评测的 DynSC-Eval，逐个主体跟踪可见生命周期并用六项对象级指标衡量局部连续性与全局身份保持，可显式检测不一致事件；进一步把该指标构造成奖励在自动驾驶视频生成平台做 DiffusionNFT 后训练，5 秒生成的不一致指标平均下降百分之十三点八二。",
+      "pdf_filename": "2610.01052.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "视频生成",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.01052",
+      "search_text": "towards subject consistency over dynamic subject sets in video generation 视频生成 自动驾驶 针对长视频生成中主体一致性评测不足的问题，本文提出在动态主体集合上评测的 dynsc-eval，逐个主体跟踪可见生命周期并用六项对象级指标衡量局部连续性与全局身份保持，可显式检测不一致事件；进一步把该指标构造成奖励在自动驾驶视频生成平台做 diffusionnft 后训练，5 秒生成的不一致指标平均下降百分之十三点八二。 we argue that as video generation extends to longer durations, subject consistency should be evaluated over \\textit{dynamic subject sets}. we therefore introduce \\textbf{dynsc-eval}, an evaluation framework that dynamically tracks eligible subjects throughout their visible lifespans and measures local continuity and global identity preservation using six complementary object-level metrics, with explicit detection of inconsistency events. to validate its effectiveness, we design synthetic experiments that actively inject inconsistency events, demonstrating both the sensitivity of dynsc-eval and the limitations of existing metrics. evaluations of diverse models on 5s, 15s, and 60s video generation further reveal substantial subject consistency differences that are obscured by conventional metrics. beyond evaluation, we construct rewards from dynsc-eval and apply diffusionnft post-training in an autonomous-driving testbed. on 5s generation, our approach reduces the six inconsistency metrics by an average of 13.82\\% for wan-2.1-1.3b and 5.66\\% for sana-2b, with improvements also observed on the i2v model resim. qualitative comparisons further demonstrate the effectiveness of our method. we then extend generation to 10s and 30s through curriculum learning and show that consistency optimization remains effective while largely preserving other capabilities. tsinghua university (dept. of comp. sci. and tech., institute for ai, bnrist center, thbi lab, tsinghua-bosch joint ml center) tongcheng zhang, jun zhu, jianfei chen cs.cv"
+    },
+    {
+      "arxiv_id": "2610.00976",
+      "title": "Variational Streaming Flow: Probabilistic Forecasting in Physical Time",
+      "authors": "Hans Hao-Hsun Hsu, Minseon Gwak, Soon Hoe Lim, Pan Li, N. Benjamin Erichson",
+      "affiliations": "Georgia Institute of Technology; Lawrence Berkeley National Laboratory; KTH Royal Institute of Technology; Nordita; International Computer Science Institute",
+      "published_date": "2026-10-01",
+      "categories": "cs.LG",
+      "abstract": "Probabilistic forecasting is important for predicting complex dynamical systems because intrinsic randomness and incomplete observations can cause the same observed state to evolve into multiple plausible futures. While flow matching is a flexible approach for probabilistic forecasting, it is computationally expensive. Streaming flow (SF) reformulates this approach to model temporal evolution efficiently by learning a continuous velocity field directly in physical time. However, SF learns a deterministic velocity field. Thus, it provides only a single future trajectory for a given fixed initial state and observation history. To overcome this limitation, we introduce Variational Streaming Flow (VSF). Our approach learns a latent distribution that is conditioned on the dynamics of interest. In turn, this enables probabilistic forecasting. Importantly, we retain the computational efficiency of SF by generating in physical time. Across deterministic and stochastic dynamical systems, VSF demonstrates superior predictive accuracy and distributional fidelity. We demonstrate the advantage for both long-horizon rollouts exceeding 1,000 steps, and settings with bifurcating dynamics. Moreover, VSF can be integrated into existing Joint-Embedding Predictive Architecture (JEPA)-based world models as a plug-and-play predictor to improve temporal dynamics and goal-directed success rate in navigation, motion planning, and manipulation.",
+      "summary_cn": "针对流匹配概率预测计算昂贵、流式流只能给出确定性单轨迹的问题，本文提出变分流式流 VSF，在物理时间上学得与动力学相关的隐分布以支持概率式多轨迹预测，同时保留流式流的高效生成特性，在确定性随机动力系统、超过 1000 步的长程 rollout 与分岔动力学上取得更优的预测精度与分布保真度。",
+      "pdf_filename": "2610.00976.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "轨迹预测",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00976",
+      "search_text": "variational streaming flow: probabilistic forecasting in physical time 世界模型 轨迹预测 规划 针对流匹配概率预测计算昂贵、流式流只能给出确定性单轨迹的问题，本文提出变分流式流 vsf，在物理时间上学得与动力学相关的隐分布以支持概率式多轨迹预测，同时保留流式流的高效生成特性，在确定性随机动力系统、超过 1000 步的长程 rollout 与分岔动力学上取得更优的预测精度与分布保真度。 probabilistic forecasting is important for predicting complex dynamical systems because intrinsic randomness and incomplete observations can cause the same observed state to evolve into multiple plausible futures. while flow matching is a flexible approach for probabilistic forecasting, it is computationally expensive. streaming flow (sf) reformulates this approach to model temporal evolution efficiently by learning a continuous velocity field directly in physical time. however, sf learns a deterministic velocity field. thus, it provides only a single future trajectory for a given fixed initial state and observation history. to overcome this limitation, we introduce variational streaming flow (vsf). our approach learns a latent distribution that is conditioned on the dynamics of interest. in turn, this enables probabilistic forecasting. importantly, we retain the computational efficiency of sf by generating in physical time. across deterministic and stochastic dynamical systems, vsf demonstrates superior predictive accuracy and distributional fidelity. we demonstrate the advantage for both long-horizon rollouts exceeding 1,000 steps, and settings with bifurcating dynamics. moreover, vsf can be integrated into existing joint-embedding predictive architecture (jepa)-based world models as a plug-and-play predictor to improve temporal dynamics and goal-directed success rate in navigation, motion planning, and manipulation. georgia institute of technology; lawrence berkeley national laboratory; kth royal institute of technology; nordita; international computer science institute hans hao-hsun hsu, minseon gwak, soon hoe lim, pan li, n. benjamin erichson cs.lg"
+    },
+    {
+      "arxiv_id": "2610.00859",
+      "title": "CtrlWAM: Controllable World Action Models with Aligned Intent and Foresight",
+      "authors": "Chensheng Peng, Wenhao Ding, Ran Tian, Zewei Zhou, Jef Packer, Maximilian Igl, Peter Karkus, Yan Wang, Masayoshi Tomizuka, Boris Ivanovic, Marco Pavone, Yuxiao Chen",
+      "affiliations": "NVIDIA; UC Berkeley; UCLA",
+      "published_date": "2026-10-01",
+      "categories": "cs.CV",
+      "abstract": "World action models (WAMs) jointly predict actions (intent) and visual future (foresight). Standard training adds noise to recorded actions and video simultaneously, but such training paradigms introduce a mismatch: perturbed actions imply counterfactual future visual, while the noised video remains tied to the GT recording. In low-noise regime, the scene geometry and even the dynamic behavior remain clearly visible from the noisy future frames despite the added noise. We present CtrlWAM, which executes perturbed actions in a simulator and pairs them with their noised visual consequences for joint WAM learning. To accommodate the different denoising requirements of video and actions, we introduce warped video--action noise schedules that aim to keep visual layout responsive as action predictions evolve. We further extend the action interface from ego-only control to a variable number of agent streams, allowing a unified model to represent predicted or commanded futures for multiple agents. Driving experiments show more accurate action forecasts, closer agreement between generated video and actions, and better following of supplied commands; robotics experiments show stronger motion fidelity and controllability. Matched controls support the benefit of off-path renders for command following and manipulation fidelity. Together, these findings contribute to a more controllable world action model. Project page: https://ctrl-wam.github.io/",
+      "summary_cn": "针对世界动作模型中动作噪声与视频噪声语义不匹配的问题，本文提出 CtrlWAM，在仿真器中执行扰动动作并配对其加噪渲染结果实现物理对齐加噪，用形变的视频动作噪声调度保持视觉布局随动作演化，并把动作接口从自车扩展到多智能体；驾驶实验显示动作预测更准、生成视频与动作更一致，机器人任务运动质量同步提升。",
+      "pdf_filename": "2610.00859.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00859",
+      "search_text": "ctrlwam: controllable world action models with aligned intent and foresight 仿真器 针对世界动作模型中动作噪声与视频噪声语义不匹配的问题，本文提出 ctrlwam，在仿真器中执行扰动动作并配对其加噪渲染结果实现物理对齐加噪，用形变的视频动作噪声调度保持视觉布局随动作演化，并把动作接口从自车扩展到多智能体；驾驶实验显示动作预测更准、生成视频与动作更一致，机器人任务运动质量同步提升。 world action models (wams) jointly predict actions (intent) and visual future (foresight). standard training adds noise to recorded actions and video simultaneously, but such training paradigms introduce a mismatch: perturbed actions imply counterfactual future visual, while the noised video remains tied to the gt recording. in low-noise regime, the scene geometry and even the dynamic behavior remain clearly visible from the noisy future frames despite the added noise. we present ctrlwam, which executes perturbed actions in a simulator and pairs them with their noised visual consequences for joint wam learning. to accommodate the different denoising requirements of video and actions, we introduce warped video--action noise schedules that aim to keep visual layout responsive as action predictions evolve. we further extend the action interface from ego-only control to a variable number of agent streams, allowing a unified model to represent predicted or commanded futures for multiple agents. driving experiments show more accurate action forecasts, closer agreement between generated video and actions, and better following of supplied commands; robotics experiments show stronger motion fidelity and controllability. matched controls support the benefit of off-path renders for command following and manipulation fidelity. together, these findings contribute to a more controllable world action model. project page: https://ctrl-wam.github.io/ nvidia; uc berkeley; ucla chensheng peng, wenhao ding, ran tian, zewei zhou, jef packer, maximilian igl, peter karkus, yan wang, masayoshi tomizuka, boris ivanovic, marco pavone, yuxiao chen cs.cv"
+    },
+    {
+      "arxiv_id": "2610.00722",
+      "title": "JEPA-TTT: Persistent Test-Time Training of Latent World Models for Planning under Dynamics Shifts",
+      "authors": "Zheyuan Zhang, Suyu Ye, Nakul Agarwal, Hossein Nourkhiz Mahjoub, Ehsan Moradi Pari, Daniel Khashabi, Tianmin Shu, Vaishnav Tadiparthi",
+      "affiliations": "Honda Research Institute USA; Johns Hopkins University",
+      "published_date": "2026-09-30",
+      "categories": "cs.LG",
+      "abstract": "World models enable agents to plan by predicting future states of the environment, but their predictions can become unreliable when test-time dynamics differ from those seen during training. We present JEPA-TTT, which adapts the latent dynamics predictor of a pretrained action-conditioned Joint-Embedding Predictive Architecture world model throughout test time. Self-supervised updates accumulate across episodes, while the visual encoder and reward head remain fixed, preserving the pretrained representation and task objective. Planning requires neither a goal image nor online environment reward. JEPA-TTT uses dense replay, which forms prediction windows at every temporal offset, retains them in a growing buffer, and samples minibatches from that buffer for predictor updates. Across eight dynamics shifts in four continuous-control environments, JEPA-TTT improves planning on every shift. After 500 test-time episodes, it reduces autoregressive latent prediction error by 83% on average and improves planning performance by 153% over the frozen JEPA world model. These results show that persistent self-supervised test-time training can adapt a pretrained latent world model under changed dynamics.",
+      "summary_cn": "针对测试时动力学偏移导致世界模型预测失准的问题，本文提出 JEPA-TTT，在测试阶段持续自适应预训练 JEPA 世界模型的隐动力学预测器，冻结视觉编码器与奖励头，用密集回放构造预测窗口并按小批更新；在四类连续控制环境的八种动力学偏移下，500 回合后自回归隐预测误差平均降低 83%，规划性能较冻结世界模型提升 153%。",
+      "pdf_filename": "2610.00722.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00722",
+      "search_text": "jepa-ttt: persistent test-time training of latent world models for planning under dynamics shifts 世界模型 规划 针对测试时动力学偏移导致世界模型预测失准的问题，本文提出 jepa-ttt，在测试阶段持续自适应预训练 jepa 世界模型的隐动力学预测器，冻结视觉编码器与奖励头，用密集回放构造预测窗口并按小批更新；在四类连续控制环境的八种动力学偏移下，500 回合后自回归隐预测误差平均降低 83%，规划性能较冻结世界模型提升 153%。 world models enable agents to plan by predicting future states of the environment, but their predictions can become unreliable when test-time dynamics differ from those seen during training. we present jepa-ttt, which adapts the latent dynamics predictor of a pretrained action-conditioned joint-embedding predictive architecture world model throughout test time. self-supervised updates accumulate across episodes, while the visual encoder and reward head remain fixed, preserving the pretrained representation and task objective. planning requires neither a goal image nor online environment reward. jepa-ttt uses dense replay, which forms prediction windows at every temporal offset, retains them in a growing buffer, and samples minibatches from that buffer for predictor updates. across eight dynamics shifts in four continuous-control environments, jepa-ttt improves planning on every shift. after 500 test-time episodes, it reduces autoregressive latent prediction error by 83% on average and improves planning performance by 153% over the frozen jepa world model. these results show that persistent self-supervised test-time training can adapt a pretrained latent world model under changed dynamics. honda research institute usa; johns hopkins university zheyuan zhang, suyu ye, nakul agarwal, hossein nourkhiz mahjoub, ehsan moradi pari, daniel khashabi, tianmin shu, vaishnav tadiparthi cs.lg"
+    },
+    {
+      "arxiv_id": "2610.00487",
+      "title": "ScaffoldM3C: A Multimodal Sequential Monte Carlo Framework for Generative Stable Construction Planning",
+      "authors": "Gadiel Sznaier Camps, Chengyang He, Guillaume Sartoretti, Eduardo Montijano, Mac Schwager",
+      "affiliations": "Stanford University; National University of Singapore; Universidad de Zaragoza",
+      "published_date": "2026-09-30",
+      "categories": "cs.RO, cs.LG",
+      "abstract": "Autonomously constructing physically realizable 3D structures remains a significant challenge due to combinatorial action spaces, interchangeable components, equifinal assembly sequences, and strict stability requirements during construction. State-of-the-art methods fine-tune large language models for text-based generative construction. However, these approaches do not allow for Multimodal (text, image, sketch) conditioning, overlook the practical role of scaffolding for stabilizing intermediate structures, and suffer from slow inference speeds. Therefore, we formulate construction as a probabilistic next-block generation task with multiple potential assembly actions and multiple potential task conditioning modalities. Concurrently, we explicitly consider the utility of scaffolding by introducing an auxiliary scaffold block token. We present Scaffold Multimodal Monte Carlo (ScaffoldM3C), a multimodal, lightweight, auto-regressive model for stable block-based construction, that proposes a set of next-step candidate blocks. Leveraging these candidates, we utilize Sequential Monte Carlo (SMC) to maintain a population of possible assembly sequences, allowing us to consider multiple, potentially different, assembly directions simultaneously. We train our multimodal architecture by extending the StableText2Brick dataset to contain image conditioning prompts and scaffold-stabilized build sequences. ScaffoldM3C is 4x smaller than competing baselines, yielding a 5x to 20x speedup during inference, while achieving comparable construction quality to state-of-the-art methods and higher overall stability. We demonstrate the effectiveness of our approach through simulations and real-world robot assembly demonstrations.",
+      "summary_cn": "针对积木式自主建造的组合动作空间与施工稳定性约束，本文把建造建模为概率式下一块生成任务，提出 225M 参数多模态轻量自回归模型 ScaffoldM3C，引入脚手架块标记并配合序贯蒙特卡洛维持多条可行装配序列，支持文本图像草图条件输入，在仿真与真机建造中验证了稳定性与推理速度优势。",
+      "pdf_filename": "2610.00487.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "多模态",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00487",
+      "search_text": "scaffoldm3c: a multimodal sequential monte carlo framework for generative stable construction planning 多模态 大语言模型 针对积木式自主建造的组合动作空间与施工稳定性约束，本文把建造建模为概率式下一块生成任务，提出 225m 参数多模态轻量自回归模型 scaffoldm3c，引入脚手架块标记并配合序贯蒙特卡洛维持多条可行装配序列，支持文本图像草图条件输入，在仿真与真机建造中验证了稳定性与推理速度优势。 autonomously constructing physically realizable 3d structures remains a significant challenge due to combinatorial action spaces, interchangeable components, equifinal assembly sequences, and strict stability requirements during construction. state-of-the-art methods fine-tune large language models for text-based generative construction. however, these approaches do not allow for multimodal (text, image, sketch) conditioning, overlook the practical role of scaffolding for stabilizing intermediate structures, and suffer from slow inference speeds. therefore, we formulate construction as a probabilistic next-block generation task with multiple potential assembly actions and multiple potential task conditioning modalities. concurrently, we explicitly consider the utility of scaffolding by introducing an auxiliary scaffold block token. we present scaffold multimodal monte carlo (scaffoldm3c), a multimodal, lightweight, auto-regressive model for stable block-based construction, that proposes a set of next-step candidate blocks. leveraging these candidates, we utilize sequential monte carlo (smc) to maintain a population of possible assembly sequences, allowing us to consider multiple, potentially different, assembly directions simultaneously. we train our multimodal architecture by extending the stabletext2brick dataset to contain image conditioning prompts and scaffold-stabilized build sequences. scaffoldm3c is 4x smaller than competing baselines, yielding a 5x to 20x speedup during inference, while achieving comparable construction quality to state-of-the-art methods and higher overall stability. we demonstrate the effectiveness of our approach through simulations and real-world robot assembly demonstrations. stanford university; national university of singapore; universidad de zaragoza gadiel sznaier camps, chengyang he, guillaume sartoretti, eduardo montijano, mac schwager cs.ro, cs.lg"
+    },
+    {
+      "arxiv_id": "2609.39467",
+      "title": "DensePed-Lite: Quality-Aware Adaptive Detection for Dense Pedestrians under Occlusion",
+      "authors": "ZiAn Wang, MingZhe Liu, Chaoyi Guo, ChangChun Li, Fangming Gu",
+      "affiliations": "Jilin University; Shenzhen University; Taiyuan University of Technology",
+      "published_date": "2026-09-30",
+      "categories": "cs.CV",
+      "abstract": "Pedestrian detection plays a crucial role in computer vision with applications in autonomous driving, surveillance, and public safety. However, real-world dense scenes bring severe challenges, including heavy occlusion, drastic scale variations, and strict real-time requirements. Existing lightweight detectors struggle to balance accuracy and efficiency while often neglecting quality-aware feature modeling and consistency between classification and localization, leading to unstable performance under crowded conditions. To address these issues, we propose DensePed-Lite, a unified framework built on a single principle: under occlusion the network should adapt its behavior to the quality of what it observes rather than assume complete information. This principle is realized at three points where occlusion does the most damage: unreliable confidence scoring (UQE), fragmented spatial coverage (MPSC), and incoherent multi-scale fusion (CTDM). The three mechanisms reinforce one another instead of acting in isolation, all without significantly increasing complexity. Experiments on CityPersons and CrowdHuman validate that DensePed-Lite achieves a superior accuracy-efficiency trade-off compared with recent state-of-the-art lightweight methods, making it suitable for real-time deployment in dense pedestrian scenarios.",
+      "summary_cn": "面向密集遮挡场景的实时行人检测，本文提出轻量框架 DensePed-Lite，核心思想是让网络依据观测质量自适应调整行为，并落实为不可靠置信度校正、碎片化空间覆盖与多尺度融合一致性三个机制，在 CityPersons 与 CrowdHuman 上取得更优的精度效率折中，适配自动驾驶实时感知需求。",
+      "pdf_filename": "2609.39467.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.39467",
+      "search_text": "denseped-lite: quality-aware adaptive detection for dense pedestrians under occlusion 自动驾驶 面向密集遮挡场景的实时行人检测，本文提出轻量框架 denseped-lite，核心思想是让网络依据观测质量自适应调整行为，并落实为不可靠置信度校正、碎片化空间覆盖与多尺度融合一致性三个机制，在 citypersons 与 crowdhuman 上取得更优的精度效率折中，适配自动驾驶实时感知需求。 pedestrian detection plays a crucial role in computer vision with applications in autonomous driving, surveillance, and public safety. however, real-world dense scenes bring severe challenges, including heavy occlusion, drastic scale variations, and strict real-time requirements. existing lightweight detectors struggle to balance accuracy and efficiency while often neglecting quality-aware feature modeling and consistency between classification and localization, leading to unstable performance under crowded conditions. to address these issues, we propose denseped-lite, a unified framework built on a single principle: under occlusion the network should adapt its behavior to the quality of what it observes rather than assume complete information. this principle is realized at three points where occlusion does the most damage: unreliable confidence scoring (uqe), fragmented spatial coverage (mpsc), and incoherent multi-scale fusion (ctdm). the three mechanisms reinforce one another instead of acting in isolation, all without significantly increasing complexity. experiments on citypersons and crowdhuman validate that denseped-lite achieves a superior accuracy-efficiency trade-off compared with recent state-of-the-art lightweight methods, making it suitable for real-time deployment in dense pedestrian scenarios. jilin university; shenzhen university; taiyuan university of technology zian wang, mingzhe liu, chaoyi guo, changchun li, fangming gu cs.cv"
+    },
+    {
+      "arxiv_id": "2609.39413",
+      "title": "Aligning the Incomplete: Joint Distribution Calibration for Multimodal EEG-Eye Emotion Recognition",
+      "authors": "Yang Wu, Jinpeng Li",
+      "affiliations": "School of Automation Science and Engineering, South China University of Technology",
+      "published_date": "2026-09-30",
+      "categories": "cs.HC",
+      "abstract": "The success of cross-subject multimodal emotion recognition hinges on maintaining the consistency of the joint data distribution across individuals. However, real-world deployment frequently triggers the \\emph{asymmetric joint distribution collapse}: EEG signals suffer from severe cross-subject distribution shifts, while eye movements sensors are susceptible to packet loss and tracking failures. Existing methods treat domain adaptation and missing-modality imputation as disjoint tasks. Consequently, they fail to resolve the compounded errors when both degradations co-occur, either propagating domain shifts through imputed signals or destroying the joint decision boundary. To tackle this unified challenge, we propose GUARD (\\textbf{G}radient-guided \\textbf{U}nsupervised \\textbf{A}symmetric \\textbf{R}ecovery of \\textbf{D}istributions). First, GUARD establishes a reliable anchor manifold in the source domain by employing a theoretically grounded gradient-weighted objective, which forces the robust EEG modality to preemptively entangle task-discriminative ocular features. Next, to structurally recover the collapsed joint distribution, we constrain a generative module with downstream perceptual losses, prioritizing emotion-discriminative semantics over mere signal fidelity. Finally, we formulate target-domain adaptation as an ill-posed inverse problem. By driving a cycle-consistent flow, we achieve unsupervised calibration of the recovered joint distribution directly on the target-domain manifold. Extensive experiments demonstrate that GUARD significantly outperforms state-of-the-art methods, maintaining resilient discriminative performance even under complete auxiliary modality failure. Our code and models are made publicly available to ensure complete reproducibility.",
+      "summary_cn": "针对跨被试脑电与眼动情绪识别中的联合分布不对称崩溃，本文提出 GUARD 框架，先用梯度加权目标在源域建立锚定流形，让鲁棒模态预先纠缠任务判别特征，再用受下游性能约束的生成模块结构性恢复联合分布，统一处理域漂移与缺失模态插补。",
+      "pdf_filename": "2609.39413.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.39413",
+      "search_text": "aligning the incomplete: joint distribution calibration for multimodal eeg-eye emotion recognition 多模态 针对跨被试脑电与眼动情绪识别中的联合分布不对称崩溃，本文提出 guard 框架，先用梯度加权目标在源域建立锚定流形，让鲁棒模态预先纠缠任务判别特征，再用受下游性能约束的生成模块结构性恢复联合分布，统一处理域漂移与缺失模态插补。 the success of cross-subject multimodal emotion recognition hinges on maintaining the consistency of the joint data distribution across individuals. however, real-world deployment frequently triggers the \\emph{asymmetric joint distribution collapse}: eeg signals suffer from severe cross-subject distribution shifts, while eye movements sensors are susceptible to packet loss and tracking failures. existing methods treat domain adaptation and missing-modality imputation as disjoint tasks. consequently, they fail to resolve the compounded errors when both degradations co-occur, either propagating domain shifts through imputed signals or destroying the joint decision boundary. to tackle this unified challenge, we propose guard (\\textbf{g}radient-guided \\textbf{u}nsupervised \\textbf{a}symmetric \\textbf{r}ecovery of \\textbf{d}istributions). first, guard establishes a reliable anchor manifold in the source domain by employing a theoretically grounded gradient-weighted objective, which forces the robust eeg modality to preemptively entangle task-discriminative ocular features. next, to structurally recover the collapsed joint distribution, we constrain a generative module with downstream perceptual losses, prioritizing emotion-discriminative semantics over mere signal fidelity. finally, we formulate target-domain adaptation as an ill-posed inverse problem. by driving a cycle-consistent flow, we achieve unsupervised calibration of the recovered joint distribution directly on the target-domain manifold. extensive experiments demonstrate that guard significantly outperforms state-of-the-art methods, maintaining resilient discriminative performance even under complete auxiliary modality failure. our code and models are made publicly available to ensure complete reproducibility. school of automation science and engineering, south china university of technology yang wu, jinpeng li cs.hc"
+    },
+    {
+      "arxiv_id": "2609.39323",
+      "title": "HiWE: Hierarchical World Knowledge Model with Visual Keypoint Enhancement for Zero-Shot 3D Path Planning",
+      "authors": "Guoqing Ma, Mingqi Yuan, Chen Gao, Jiayu Chen, Shan Yu",
+      "affiliations": "Institute of Automation, Chinese Academy of Sciences; University of Chinese Academy of Sciences; The University of Hong Kong; Tsinghua University",
+      "published_date": "2026-09-30",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Robot demonstration generation requires a system to identify where an interaction should occur, plan a feasible motion, and execute the required contact. HiWE connects these decisions through a point-based interface between visual grounding and language-based planning. PointVLM is instruction-tuned to associate task-relevant objects with image coordinates using a mixture of point annotations, segmentation-derived samples, robot observations, and visual question answering data. Depth measurements lift these predictions into a semantic 3D representation. A language planner, 3DLLM, uses this representation to specify end-effector waypoints and gripper commands, while a hybrid grasping module resolves local grasp poses. The evaluation covers 14 simulated manipulation tasks and four physical-robot tasks, together with ablations of the visual training data, spatial inputs, and grasp selection. Here, zero-shot execution refers to deployment without task-specific demonstration training; the visual model uses existing robot data during fine-tuning. This paper describes the original point-based formulation of the framework; its relationship to the subsequent GeneralVLA extension is detailed in the introduction.",
+      "summary_cn": "面向机器人演示生成的零样本三维路径规划，本文提出层次化世界知识模型 HiWE：PointVLM 用点标注、分割样本与机器人观测微调，把任务物体关联到图像坐标并提升为语义三维表示，语言规划器 3DLLM 据此输出末端路点与夹爪指令，混合抓取模块求解局部抓取位姿，在 14 个仿真与 4 个真机任务上完成零样本验证。",
+      "pdf_filename": "2609.39323.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.39323",
+      "search_text": "hiwe: hierarchical world knowledge model with visual keypoint enhancement for zero-shot 3d path planning 规划 面向机器人演示生成的零样本三维路径规划，本文提出层次化世界知识模型 hiwe：pointvlm 用点标注、分割样本与机器人观测微调，把任务物体关联到图像坐标并提升为语义三维表示，语言规划器 3dllm 据此输出末端路点与夹爪指令，混合抓取模块求解局部抓取位姿，在 14 个仿真与 4 个真机任务上完成零样本验证。 robot demonstration generation requires a system to identify where an interaction should occur, plan a feasible motion, and execute the required contact. hiwe connects these decisions through a point-based interface between visual grounding and language-based planning. pointvlm is instruction-tuned to associate task-relevant objects with image coordinates using a mixture of point annotations, segmentation-derived samples, robot observations, and visual question answering data. depth measurements lift these predictions into a semantic 3d representation. a language planner, 3dllm, uses this representation to specify end-effector waypoints and gripper commands, while a hybrid grasping module resolves local grasp poses. the evaluation covers 14 simulated manipulation tasks and four physical-robot tasks, together with ablations of the visual training data, spatial inputs, and grasp selection. here, zero-shot execution refers to deployment without task-specific demonstration training; the visual model uses existing robot data during fine-tuning. this paper describes the original point-based formulation of the framework; its relationship to the subsequent generalvla extension is detailed in the introduction. institute of automation, chinese academy of sciences; university of chinese academy of sciences; the university of hong kong; tsinghua university guoqing ma, mingqi yuan, chen gao, jiayu chen, shan yu cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.00314",
+      "title": "Predictive Credit: Measuring What Scientific Explanations Add to Experimental Forecasts",
+      "authors": "Jingjie Ning, Xueqi Li, Yibo Kong, Dongting Li",
+      "affiliations": "Carnegie Mellon University; Tsinghua University",
+      "published_date": "2026-09-29",
+      "categories": "cs.AI",
+      "abstract": "Research agents explain planned experiments. We measure predictive credit with paired forecasts sharing an intervention, forecaster, and outcome while varying description, matched explanation, and donor context. Five checks track commitment, delivery, predictive gain, alignment, and known-signal uptake. Across 336 prospective states in controlled learning, 12 Tox21 endpoints, and 24 OpenML tasks, v5's frozen credit decision was inconclusive. Tox21's preregistered ROC AUC interval-score harm test was unmet ($D-M=-.0026$, 95 percent interval [$-.0174$, .0104]); OpenML's joint formation, point-equivalence, and repeatability rule was unmet. Matched point-accuracy gains over description remained unconfirmed, and Tox21/OpenML seed-donor intervals spanned zero. Under requested DeepSeek V4 Pro, matched and donor cards reduced secondary Tox21 drift by 64.5 and 59.1 percent. A DeepSeek V4 Flash replay raised matched point MAE from .01823 to .02020 and missed matched-donor interval-score equivalence. OpenML full-card assignment widened nominal 80 percent intervals by 21 percent, with 49.3 percent coverage versus 51.4 percent for description and content in 66/144 cards. Direct-text Flash delivered all 144 notes without detectable matched point-accuracy gain. A researcher-authored mechanism positive control lowered point MAE by 2.60 percentage points versus description. The protocol measures predictive credit for research-agent benchmarks and scientific forecasting; natural-explanation credit remained unconfirmed at the tested donor resolutions.",
+      "summary_cn": "本文研究科研智能体对实验预测的增益，用配对预测固定干预、预测者与结果，比较描述、匹配解释与供体上下文的作用，在 336 个前瞻状态、12 个 Tox21 端点与 24 个 OpenML 任务上检验可信度、对齐与已知信号吸收，整体结论未达预设显著性标准。",
+      "pdf_filename": "2610.00314.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.00314",
+      "search_text": "predictive credit: measuring what scientific explanations add to experimental forecasts  本文研究科研智能体对实验预测的增益，用配对预测固定干预、预测者与结果，比较描述、匹配解释与供体上下文的作用，在 336 个前瞻状态、12 个 tox21 端点与 24 个 openml 任务上检验可信度、对齐与已知信号吸收，整体结论未达预设显著性标准。 research agents explain planned experiments. we measure predictive credit with paired forecasts sharing an intervention, forecaster, and outcome while varying description, matched explanation, and donor context. five checks track commitment, delivery, predictive gain, alignment, and known-signal uptake. across 336 prospective states in controlled learning, 12 tox21 endpoints, and 24 openml tasks, v5's frozen credit decision was inconclusive. tox21's preregistered roc auc interval-score harm test was unmet ($d-m=-.0026$, 95 percent interval [$-.0174$, .0104]); openml's joint formation, point-equivalence, and repeatability rule was unmet. matched point-accuracy gains over description remained unconfirmed, and tox21/openml seed-donor intervals spanned zero. under requested deepseek v4 pro, matched and donor cards reduced secondary tox21 drift by 64.5 and 59.1 percent. a deepseek v4 flash replay raised matched point mae from .01823 to .02020 and missed matched-donor interval-score equivalence. openml full-card assignment widened nominal 80 percent intervals by 21 percent, with 49.3 percent coverage versus 51.4 percent for description and content in 66/144 cards. direct-text flash delivered all 144 notes without detectable matched point-accuracy gain. a researcher-authored mechanism positive control lowered point mae by 2.60 percentage points versus description. the protocol measures predictive credit for research-agent benchmarks and scientific forecasting; natural-explanation credit remained unconfirmed at the tested donor resolutions. carnegie mellon university; tsinghua university jingjie ning, xueqi li, yibo kong, dongting li cs.ai"
+    },
+    {
+      "arxiv_id": "2609.38488",
+      "title": "Gaussian Stippling: Efficient Sorting-Free 3D Gaussian Rendering through Hybrid Sampling and Spatiotemporal Reconstruction",
+      "authors": "Zijian Huang, Suiliang Mai, Chuankun Zheng, Yuan Meng, Yuchi Huo",
+      "affiliations": "State Key Laboratory of CAD&CG, Zhejiang University",
+      "published_date": "2026-09-29",
+      "categories": "cs.GR, cs.CV",
+      "abstract": "Conventional 3D Gaussian Splatting (3DGS) requires depth sorting and ordered alpha blending to correctly render overlapping Gaussian primitives. Stochastic transparency enables sorting-free rendering by replacing fractional alpha contributions with discrete stochastic visibility samples, but produces substantial spatial and temporal noise at low sample counts. We refer to this conversion from continuous Gaussian splats to discrete visibility samples as \\textit{Gaussian Stippling}. Based on this, we present an efficient order-independent rendering and reconstruction framework that operates directly on unmodified 3DGS assets. Our method adaptively integrates primitive-based and fragment-based stippling, leveraging their complementary strengths across different rendering regimes to significantly improve rendering throughput. To recover high-quality images from sparse stochastic samples, we further introduce a lightweight Gaussian-aware spatiotemporal reconstruction network. By exploiting the Gaussian attributes retained by each stipple, the network aggregates structured stochastic clues across both space and time, effectively suppressing stippling noise. Experiments show that our hybrid Gaussian stippling method, coupled with a spatiotemporal reconstruction network trained on diverse scenes, generalizes to unseen scenes and enables interactive, temporally stable, and visually plausible rendering on mobile devices without retraining or preprocessing. With scene-specific training and appropriately scaled sampling and network capacity, our method further outperforms the baselines in visual quality, offering a high-fidelity configuration for quality-prioritized applications.",
+      "summary_cn": "针对 3DGS 渲染必须深度排序与有序 alpha 混合带来的开销，本文提出高斯点彩框架，用离散随机可见性采样替代连续 alpha 混合实现无序渲染，自适应融合图元级与片元级采样，再用轻量高斯感知时空重建网络从稀疏随机样本恢复高质量图像，在不改动原有资产的前提下显著提升渲染吞吐。",
+      "pdf_filename": "2609.38488.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.38488",
+      "search_text": "gaussian stippling: efficient sorting-free 3d gaussian rendering through hybrid sampling and spatiotemporal reconstruction 3dgs 针对 3dgs 渲染必须深度排序与有序 alpha 混合带来的开销，本文提出高斯点彩框架，用离散随机可见性采样替代连续 alpha 混合实现无序渲染，自适应融合图元级与片元级采样，再用轻量高斯感知时空重建网络从稀疏随机样本恢复高质量图像，在不改动原有资产的前提下显著提升渲染吞吐。 conventional 3d gaussian splatting (3dgs) requires depth sorting and ordered alpha blending to correctly render overlapping gaussian primitives. stochastic transparency enables sorting-free rendering by replacing fractional alpha contributions with discrete stochastic visibility samples, but produces substantial spatial and temporal noise at low sample counts. we refer to this conversion from continuous gaussian splats to discrete visibility samples as \\textit{gaussian stippling}. based on this, we present an efficient order-independent rendering and reconstruction framework that operates directly on unmodified 3dgs assets. our method adaptively integrates primitive-based and fragment-based stippling, leveraging their complementary strengths across different rendering regimes to significantly improve rendering throughput. to recover high-quality images from sparse stochastic samples, we further introduce a lightweight gaussian-aware spatiotemporal reconstruction network. by exploiting the gaussian attributes retained by each stipple, the network aggregates structured stochastic clues across both space and time, effectively suppressing stippling noise. experiments show that our hybrid gaussian stippling method, coupled with a spatiotemporal reconstruction network trained on diverse scenes, generalizes to unseen scenes and enables interactive, temporally stable, and visually plausible rendering on mobile devices without retraining or preprocessing. with scene-specific training and appropriately scaled sampling and network capacity, our method further outperforms the baselines in visual quality, offering a high-fidelity configuration for quality-prioritized applications. state key laboratory of cad&cg, zhejiang university zijian huang, suiliang mai, chuankun zheng, yuan meng, yuchi huo cs.gr, cs.cv"
+    },
+    {
+      "arxiv_id": "2609.32106",
+      "title": "An Attention-Driven Heterogeneous GNN Model for Credit Card Fraud Detection",
+      "authors": "Kathiresan Jayabalan, Sethuraman Radhakrishnan",
+      "affiliations": "Sathyabama Institute of Science and Technology, Chennai, India",
+      "published_date": "2026-09-26",
+      "categories": "cs.LG",
+      "abstract": "The global transition to a cashless economy has placed credit cards as the key element of digital transactions, acclaimed for their easy use, speed, and acceptance in most places. However, the growing dependence on this payment method has led to an escalation of the risks associated with credit card (CC) fraud. Detecting this type of fraud is a difficult task because the patterns are constantly changing, there is a data imbalance, and it is necessary to identify the legitimate transactions and the fraud ones at the same time. This study addresses this challenge by proposing a credit card fraud detection (CCFD) framework using a data balancing technique and a deep learning (DL) model. The proposed fraud detection model is trained and evaluated by collecting the dataset called Credit Card Fraud Detection from the Kaggle repository. As the dataset is highly imbalanced, we utilized the Synthetic Minority Oversampling Technique (SMOTE)-Tomek technique to balance the dataset. Further, the balanced dataset is classified using the Heterogeneous Graph Neural Network (HGNN) model. The HGNN model represent various transactions using a heterogeneous graph architecture and by using an attention based message passing technique, it managed to consider the complex relationships, time factors, and user behavior. The integration of SMOTE-Tomek in the model further boosted its capacity to identify fraudulent transactions, while lowering the rate of false positives. The HGNN model attained a 99.97% accuracy, a 99.48% F1-score, a 99.15% precision, and a 98.97% recall. The findings indicates that this model is effective and can be applied to real-world CCFD scenarios.",
+      "summary_cn": "针对信用卡欺诈样本极度不平衡且模式持续漂移的问题，本文提出结合 SMOTE-Tomek 平衡与注意力异构图神经网络的检测框架，把交易关系建模为异构图并聚合邻居信息完成分类，在 Kaggle 信用卡欺诈数据集上验证了检测指标的提升。",
+      "pdf_filename": "2609.32106.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2609.32106",
+      "search_text": "an attention-driven heterogeneous gnn model for credit card fraud detection  针对信用卡欺诈样本极度不平衡且模式持续漂移的问题，本文提出结合 smote-tomek 平衡与注意力异构图神经网络的检测框架，把交易关系建模为异构图并聚合邻居信息完成分类，在 kaggle 信用卡欺诈数据集上验证了检测指标的提升。 the global transition to a cashless economy has placed credit cards as the key element of digital transactions, acclaimed for their easy use, speed, and acceptance in most places. however, the growing dependence on this payment method has led to an escalation of the risks associated with credit card (cc) fraud. detecting this type of fraud is a difficult task because the patterns are constantly changing, there is a data imbalance, and it is necessary to identify the legitimate transactions and the fraud ones at the same time. this study addresses this challenge by proposing a credit card fraud detection (ccfd) framework using a data balancing technique and a deep learning (dl) model. the proposed fraud detection model is trained and evaluated by collecting the dataset called credit card fraud detection from the kaggle repository. as the dataset is highly imbalanced, we utilized the synthetic minority oversampling technique (smote)-tomek technique to balance the dataset. further, the balanced dataset is classified using the heterogeneous graph neural network (hgnn) model. the hgnn model represent various transactions using a heterogeneous graph architecture and by using an attention based message passing technique, it managed to consider the complex relationships, time factors, and user behavior. the integration of smote-tomek in the model further boosted its capacity to identify fraudulent transactions, while lowering the rate of false positives. the hgnn model attained a 99.97% accuracy, a 99.48% f1-score, a 99.15% precision, and a 98.97% recall. the findings indicates that this model is effective and can be applied to real-world ccfd scenarios. sathyabama institute of science and technology, chennai, india kathiresan jayabalan, sethuraman radhakrishnan cs.lg"
+    },
+    {
+      "arxiv_id": "2609.31814",
+      "title": "DriveHierarchy: A Benchmark for Diagnosing VLM Driving Capabilities from Open-Loop Understanding to Closed-Loop Execution",
+      "authors": "Chengkai Xu, Jiaqi Liu, Yicheng Guo, Peng Hang, Jian Sun",
+      "affiliations": "College of Transportation, Tongji University; Department of Computer Science, UNC Chapel Hill",
+      "published_date": "2026-09-25",
+      "categories": "cs.AI",
+      "abstract": "Evaluating VLM-based autonomous driving remains difficult because driving competence is composite, where a capable system must ground traffic participants and hazards, integrate context across views and time, reason about future evolution, and act appropriately under closed-loop interaction. Existing benchmarks usually assess either open-loop understanding or closed-loop driving but provide limited structure for explaining how these abilities are organized, how they relate, and how they may inform model diagnosis and improvement. We present \\textsc{DriveHierarchy}, a hierarchical benchmark that organizes VLM-based autonomous driving into four ranks, spanning perceptual grounding, contextual memory, mental reasoning, and closed-loop execution. To instantiate this hierarchy, we integrate multiple open-source autonomous-driving datasets into a unified open-loop benchmark with 76,798 question-answer pairs over 84,279 frames and develop a closed-loop simulation platform with interactive scenario construction on a real-world road network, from which 100 driving scenarios are curated for embodied evaluation. Experiments on 15 VLMs show that \\textsc{DriveHierarchy} captures structured but non-redundant capability variation, relates open-loop understanding to closed-loop driving, and provides a practical basis for diagnosis and benchmark-guided optimization. \\textsc{DriveHierarchy} therefore serves as a unified framework for evaluating and improving VLM-based autonomous driving systems. An anonymized project has been released on https://github.com/PerfectXu88/DriveHierarchy",
+      "summary_cn": "针对 VLM 自动驾驶评测缺乏结构化分层的问题，本文提出 DriveHierarchy 层次基准，把能力划分为感知定位、上下文记忆、心智推理与闭环执行四级，整合开源驾驶数据集构建含 76798 条问答、84279 帧的开环评测，并在真实路网上搭建闭环仿真平台精选 100 个交互场景，对 15 个 VLM 做分级诊断，揭示各层能力的结构化差异。",
+      "pdf_filename": "2609.31814.pdf",
+      "crawled_date": "2026-10-03",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶",
+        "具身智能",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.31814",
+      "search_text": "drivehierarchy: a benchmark for diagnosing vlm driving capabilities from open-loop understanding to closed-loop execution 闭环仿真 自动驾驶 具身智能 仿真器 针对 vlm 自动驾驶评测缺乏结构化分层的问题，本文提出 drivehierarchy 层次基准，把能力划分为感知定位、上下文记忆、心智推理与闭环执行四级，整合开源驾驶数据集构建含 76798 条问答、84279 帧的开环评测，并在真实路网上搭建闭环仿真平台精选 100 个交互场景，对 15 个 vlm 做分级诊断，揭示各层能力的结构化差异。 evaluating vlm-based autonomous driving remains difficult because driving competence is composite, where a capable system must ground traffic participants and hazards, integrate context across views and time, reason about future evolution, and act appropriately under closed-loop interaction. existing benchmarks usually assess either open-loop understanding or closed-loop driving but provide limited structure for explaining how these abilities are organized, how they relate, and how they may inform model diagnosis and improvement. we present \\textsc{drivehierarchy}, a hierarchical benchmark that organizes vlm-based autonomous driving into four ranks, spanning perceptual grounding, contextual memory, mental reasoning, and closed-loop execution. to instantiate this hierarchy, we integrate multiple open-source autonomous-driving datasets into a unified open-loop benchmark with 76,798 question-answer pairs over 84,279 frames and develop a closed-loop simulation platform with interactive scenario construction on a real-world road network, from which 100 driving scenarios are curated for embodied evaluation. experiments on 15 vlms show that \\textsc{drivehierarchy} captures structured but non-redundant capability variation, relates open-loop understanding to closed-loop driving, and provides a practical basis for diagnosis and benchmark-guided optimization. \\textsc{drivehierarchy} therefore serves as a unified framework for evaluating and improving vlm-based autonomous driving systems. an anonymized project has been released on https://github.com/perfectxu88/drivehierarchy college of transportation, tongji university; department of computer science, unc chapel hill chengkai xu, jiaqi liu, yicheng guo, peng hang, jian sun cs.ai"
+    },
     {
       "arxiv_id": "2610.02122",
       "title": "Argo-Bench: Evaluating Data Agents on Enterprise-Scale Workflows",
