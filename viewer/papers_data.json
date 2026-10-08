@@ -1,61 +1,66 @@
 {
-  "count": 1414,
+  "count": 1438,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-07",
+  "crawled_date_max": "2026-10-08",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-06",
+  "published_date_max": "2026-10-07",
   "rating_counts": {
-    "S": 388,
-    "A": 622,
-    "B": 223,
-    "C": 181,
+    "S": 399,
+    "A": 624,
+    "B": 229,
+    "C": 186,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 312,
+      "count": 313,
       "group": "3DGS/4DGS"
     },
     {
       "name": "自动驾驶",
-      "count": 263,
+      "count": 267,
       "group": "通用"
     },
     {
       "name": "规划",
-      "count": 246,
-      "group": "世界模型与仿真"
-    },
-    {
-      "name": "世界模型",
-      "count": 201,
+      "count": 254,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 201,
+      "count": 207,
+      "group": "世界模型与仿真"
+    },
+    {
+      "name": "世界模型",
+      "count": 206,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 190,
+      "count": 193,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 150,
+      "count": 151,
       "group": "通用"
     },
     {
       "name": "点云",
-      "count": 96,
+      "count": 97,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 93,
+      "count": 94,
       "group": "世界模型与仿真"
+    },
+    {
+      "name": "前馈3D重建",
+      "count": 86,
+      "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
@@ -63,28 +68,23 @@
       "group": "通用"
     },
     {
-      "name": "前馈3D重建",
-      "count": 84,
-      "group": "前馈3D重建"
-    },
-    {
       "name": "仿真器",
-      "count": 81,
+      "count": 82,
       "group": "通用"
     },
     {
       "name": "场景压缩",
-      "count": 64,
+      "count": 65,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 50,
+      "count": 51,
       "group": "世界模型与仿真"
     },
     {
       "name": "视频生成",
-      "count": 42,
+      "count": 43,
       "group": "世界模型与仿真"
     },
     {
@@ -98,14 +98,14 @@
       "group": "通用"
     },
     {
+      "name": "SLAM",
+      "count": 36,
+      "group": "通用"
+    },
+    {
       "name": "深度估计",
       "count": 36,
       "group": "前馈3D重建"
-    },
-    {
-      "name": "SLAM",
-      "count": 35,
-      "group": "通用"
     },
     {
       "name": "实时渲染",
@@ -119,7 +119,7 @@
     },
     {
       "name": "轨迹预测",
-      "count": 25,
+      "count": 26,
       "group": "世界模型与仿真"
     },
     {
@@ -154,6 +154,472 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.10528",
+      "title": "Long-WAM: Scaling the Context of World-Action Models",
+      "authors": "Wei Huang, Bohan Zhang, Chenzhi Liu, Isabella Liu, Shuai Yang, Weian Mao, Luozhou Wang, Yicheng Xiao, Weifeng Lin, Qixin Hu, Bryan Chu, Sifei Liu, Linxi Fan, Xiaojuan Qi, Song Han, Yukang Chen",
+      "affiliations": "NVIDIA; Massachusetts Institute of Technology (MIT); The University of Hong Kong; University of California, San Diego",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO, cs.AI, cs.CV",
+      "abstract": "Real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. We present Long-WAM, a model-system framework for scaling the context of causal world-action models under real-time control constraints. Our central finding is that access to history is not the same as using it: longer histories pay off far more when the video foundation is pretrained autoregressively (AR). We first learn causal prediction from robot and egocentric videos without action labels, then preserve this history-to-future structure during world-action adaptation. On RoboCasa GR-1, increasing context from 0.0 to 19.2 seconds raises success from 63.3% to 78.7%, whereas a bidirectionally pretrained initialization shows no net gain; robot-domain AR pretraining further raises peak success on GR-1 and LIBERO-Long. Long-WAM also achieves the best results among compared methods on LIBERO-Long, RoboTwin 2.0, and DOMINO. Streaming observation encoding, asynchronous execution, and hardware-specific acceleration enable deployment on RTX 5090, DGX Spark, and Jetson AGX Thor without dropping future prediction; on RTX 5090, each action chunk, including future-video latent prediction, takes 107.4 ms. Real-time deployment on Unitree G1 and YAM supports dynamic and long-horizon manipulation, including 95% success on dynamic cup stacking, where Pi0.5 and Fast-WAM succeed in none of 20 trials. As a memory-informed executor, Long-WAM also complements higher-level planning in composite tasks.",
+      "summary_cn": "针对实时机器人控制既需要足够视觉历史推断运动与任务进度、处理历史又会延迟动作的问题，提出Long-WAM模型—系统框架：核心发现是“能访问历史”不等于“会利用历史”，只有视频基础模型以自回归方式预训练时更长历史才显著收益；先在无动作标签的机器人/第一视角视频上学因果预测，再在世界—动作适配中保留该结构。RoboCasa GR-1上上下文从0秒增至19.2秒使成功率从63.3%升至78.7%，可在RTX 5090等设备实时部署",
+      "pdf_filename": "2610.10528.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.10528",
+      "search_text": "long-wam: scaling the context of world-action models  针对实时机器人控制既需要足够视觉历史推断运动与任务进度、处理历史又会延迟动作的问题，提出long-wam模型—系统框架：核心发现是“能访问历史”不等于“会利用历史”，只有视频基础模型以自回归方式预训练时更长历史才显著收益；先在无动作标签的机器人/第一视角视频上学因果预测，再在世界—动作适配中保留该结构。robocasa gr-1上上下文从0秒增至19.2秒使成功率从63.3%升至78.7%，可在rtx 5090等设备实时部署 real-time robot control demands enough visual history to infer motion and task progress, but processing that history can delay action. we present long-wam, a model-system framework for scaling the context of causal world-action models under real-time control constraints. our central finding is that access to history is not the same as using it: longer histories pay off far more when the video foundation is pretrained autoregressively (ar). we first learn causal prediction from robot and egocentric videos without action labels, then preserve this history-to-future structure during world-action adaptation. on robocasa gr-1, increasing context from 0.0 to 19.2 seconds raises success from 63.3% to 78.7%, whereas a bidirectionally pretrained initialization shows no net gain; robot-domain ar pretraining further raises peak success on gr-1 and libero-long. long-wam also achieves the best results among compared methods on libero-long, robotwin 2.0, and domino. streaming observation encoding, asynchronous execution, and hardware-specific acceleration enable deployment on rtx 5090, dgx spark, and jetson agx thor without dropping future prediction; on rtx 5090, each action chunk, including future-video latent prediction, takes 107.4 ms. real-time deployment on unitree g1 and yam supports dynamic and long-horizon manipulation, including 95% success on dynamic cup stacking, where pi0.5 and fast-wam succeed in none of 20 trials. as a memory-informed executor, long-wam also complements higher-level planning in composite tasks. nvidia; massachusetts institute of technology (mit); the university of hong kong; university of california, san diego wei huang, bohan zhang, chenzhi liu, isabella liu, shuai yang, weian mao, luozhou wang, yicheng xiao, weifeng lin, qixin hu, bryan chu, sifei liu, linxi fan, xiaojuan qi, song han, yukang chen cs.ro, cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.10515",
+      "title": "RoboJEPA: Scaling Robotic Latent World Models",
+      "authors": "Artem Zholus, Nicolas Beltran-Velez, Jianhao Yuan, Sarath Chandar, Tushar Nagarajan, Daniel Severo, Koustuv Sinha, Michal Drozdzal, Adriana Romero Soriano, Jeannette Bohg, Nicolas Ballas, Mahmoud Assran",
+      "affiliations": "FAIR at Meta; Mila - Quebec AI Institute; Polytechnique Montréal; Chandar Research Lab",
+      "published_date": "2026-10-07",
+      "categories": "cs.AI, cs.RO",
+      "abstract": "Latent world models have shown a remarkable ability to predict future states and to plan in the real world. In practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field. In this work we present RoboJEPA, a world model based on the Joint Embedding Predictive Architecture (JEPA) and trained on a large-scale dataset spanning 12 robotic embodiments. We show that RoboJEPA's imagination error, the error of its latent rollouts, follows a second-order power law in compute, allowing us to predict model quality well beyond the scale at which the law is fit. We further show that downstream robotic planning performance improves predictably with compute, and that imagination error is strongly correlated with it, making it a reliable proxy for real-robot evaluation. Finally, we demonstrate that latent world models can be deployed zero-shot as robotic agents, planning toward a single goal image to solve tasks requiring long-horizon planning on real hardware. We release all model checkpoints together with our training and robot deployment code. To our knowledge, this is the first work to establish scaling laws for multi-embodiment robotic world models trained on real robot data, and RoboJEPA, at 8B parameters, is the largest JEPA predictor model trained to date.",
+      "summary_cn": "针对隐世界模型能力随规模、数据与算力如何扩展缺乏原则性估计方法的问题，提出RoboJEPA：基于联合嵌入预测架构、在覆盖12种机器人本体的大规模真实机器人数据上训练，发现其想象误差（隐状态滚动误差）随算力呈二阶幂律，可外推预测远超拟合尺度的模型质量；下游规划性能随算力可预测提升且与想象误差强相关，使该误差成为真机评测的可靠代理。8B的RoboJEPA是迄今最大JEPA预测器，可零样本部署为机器人智能体做长时程规划",
+      "pdf_filename": "2610.10515.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10515",
+      "search_text": "robojepa: scaling robotic latent world models 世界模型 规划 针对隐世界模型能力随规模、数据与算力如何扩展缺乏原则性估计方法的问题，提出robojepa：基于联合嵌入预测架构、在覆盖12种机器人本体的大规模真实机器人数据上训练，发现其想象误差（隐状态滚动误差）随算力呈二阶幂律，可外推预测远超拟合尺度的模型质量；下游规划性能随算力可预测提升且与想象误差强相关，使该误差成为真机评测的可靠代理。8b的robojepa是迄今最大jepa预测器，可零样本部署为机器人智能体做长时程规划 latent world models have shown a remarkable ability to predict future states and to plan in the real world. in practice, however, we lack a principled way to estimate how their capabilities scale with model size, data, and compute, an open problem that slows progress in the field. in this work we present robojepa, a world model based on the joint embedding predictive architecture (jepa) and trained on a large-scale dataset spanning 12 robotic embodiments. we show that robojepa's imagination error, the error of its latent rollouts, follows a second-order power law in compute, allowing us to predict model quality well beyond the scale at which the law is fit. we further show that downstream robotic planning performance improves predictably with compute, and that imagination error is strongly correlated with it, making it a reliable proxy for real-robot evaluation. finally, we demonstrate that latent world models can be deployed zero-shot as robotic agents, planning toward a single goal image to solve tasks requiring long-horizon planning on real hardware. we release all model checkpoints together with our training and robot deployment code. to our knowledge, this is the first work to establish scaling laws for multi-embodiment robotic world models trained on real robot data, and robojepa, at 8b parameters, is the largest jepa predictor model trained to date. fair at meta; mila - quebec ai institute; polytechnique montréal; chandar research lab artem zholus, nicolas beltran-velez, jianhao yuan, sarath chandar, tushar nagarajan, daniel severo, koustuv sinha, michal drozdzal, adriana romero soriano, jeannette bohg, nicolas ballas, mahmoud assran cs.ai, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.10409",
+      "title": "RobotWorld: Benchmarking Multimodal Agents for Robot Use Across Diverse Tasks and Embodiments",
+      "authors": "Zhiqin Yang, Chenxin Li, Xiaomeng Hu, Yibin Liu, Weidong Huang, Jiankai Sun, Haitao Li, Zijian Wu, Yuzhi Huang, Fanding Huang, Hanwen Sun, Jiashun Liu, Jingqi Tong, Mingxin Huang, Shaoli Hu, Shijue Huang, Tianyi Bai, Xinyuan Wang, Yunlong Lin, Zhengyang Tang, Zhexin Zhang, Zhuo Chen, Xierui Song, Juntao Dai, Boyuan Chen, Jiaming Ji, Fangneng Zhan, Mengkang Hu, Wei Xue, Yonggang Zhang, Han Hu, Tsung-Yi Ho, Yike Guo",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO, cs.LG",
+      "abstract": "General-purpose agents increasingly write code, use tools, and complete complex digital tasks, raising the question of how far these capabilities carry into the physical world. To investigate this, we introduce RobotWorld, a challenging simulation testbed for robot use: turning instructions and observations into physical task execution through robot interfaces. Its 84 tasks span manipulation, mobile manipulation, locomotion, driving, and aerial control, with explicit interaction budgets and executable success checks. By analysing task outcomes alongside execution traces, we identify both the capabilities that transfer and the gaps that prevent reliable completion. Furthermore, we find that current agents can construct sophisticated perception and control workflows, including image segmentation, camera calibration, spatial estimation, and dynamics-based computation. These capabilities, however, do not consistently compose into successful behaviour: agents lose task-relevant object states despite reaching commanded poses, fail to correct ineffective actions, recover too late, or mistake unfinished tasks for completion. This uneven transfer also differs across models: Astra succeeds more often on spatial and constrained-contact goals, whereas Opus 5.5 succeeds more often on continuous-balance and timed-interaction goals. By linking these outcomes to execution behaviour, RobotWorld provides both a rigorous proving ground and an empirical account of the remaining capability gaps, thereby establishing concrete targets for training and designing more reliable physical-world agents.",
+      "summary_cn": "针对通用智能体的数字世界能力能多大程度迁移到物理世界的问题，提出仿真测试台RobotWorld：84个任务覆盖操作、移动操作、运动、驾驶与空中控制，带显式交互预算与可执行成功检查；通过任务结果与执行轨迹联合分析，定位导致失败的能力空缺。结果显示当前智能体能搭建分割、相机标定、空间估计等复杂工作流，却难以组合成成功行为：达到指令位姿却丢失物体状态、不纠正无效动作、恢复过晚或将未完成任务误判为完成；最佳模型成功率仅19.0%",
+      "pdf_filename": "2610.10409.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10409",
+      "search_text": "robotworld: benchmarking multimodal agents for robot use across diverse tasks and embodiments 多模态 针对通用智能体的数字世界能力能多大程度迁移到物理世界的问题，提出仿真测试台robotworld：84个任务覆盖操作、移动操作、运动、驾驶与空中控制，带显式交互预算与可执行成功检查；通过任务结果与执行轨迹联合分析，定位导致失败的能力空缺。结果显示当前智能体能搭建分割、相机标定、空间估计等复杂工作流，却难以组合成成功行为：达到指令位姿却丢失物体状态、不纠正无效动作、恢复过晚或将未完成任务误判为完成；最佳模型成功率仅19.0% general-purpose agents increasingly write code, use tools, and complete complex digital tasks, raising the question of how far these capabilities carry into the physical world. to investigate this, we introduce robotworld, a challenging simulation testbed for robot use: turning instructions and observations into physical task execution through robot interfaces. its 84 tasks span manipulation, mobile manipulation, locomotion, driving, and aerial control, with explicit interaction budgets and executable success checks. by analysing task outcomes alongside execution traces, we identify both the capabilities that transfer and the gaps that prevent reliable completion. furthermore, we find that current agents can construct sophisticated perception and control workflows, including image segmentation, camera calibration, spatial estimation, and dynamics-based computation. these capabilities, however, do not consistently compose into successful behaviour: agents lose task-relevant object states despite reaching commanded poses, fail to correct ineffective actions, recover too late, or mistake unfinished tasks for completion. this uneven transfer also differs across models: astra succeeds more often on spatial and constrained-contact goals, whereas opus 5.5 succeeds more often on continuous-balance and timed-interaction goals. by linking these outcomes to execution behaviour, robotworld provides both a rigorous proving ground and an empirical account of the remaining capability gaps, thereby establishing concrete targets for training and designing more reliable physical-world agents. 未找到单位信息 zhiqin yang, chenxin li, xiaomeng hu, yibin liu, weidong huang, jiankai sun, haitao li, zijian wu, yuzhi huang, fanding huang, hanwen sun, jiashun liu, jingqi tong, mingxin huang, shaoli hu, shijue huang, tianyi bai, xinyuan wang, yunlong lin, zhengyang tang, zhexin zhang, zhuo chen, xierui song, juntao dai, boyuan chen, jiaming ji, fangneng zhan, mengkang hu, wei xue, yonggang zhang, han hu, tsung-yi ho, yike guo cs.ro, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.10274",
+      "title": "Sparse Planning in Visual World Models via Cost Gradients",
+      "authors": "Yingchen Xu, Edward Grefenstette",
+      "affiliations": "University College London",
+      "published_date": "2026-10-07",
+      "categories": "cs.LG",
+      "abstract": "Token-based world models enable fine-grained latent planning, but repeatedly processing large spatial token grids makes action search expensive. We introduce COSTGRAD, a training-free, goal-conditioned selector that ranks spatial tokens by the gradient norm of the planning cost with respect to each input token. By deriving importance from the downstream control objective, COSTGRAD targets tokens that matter for planning rather than merely for prediction. On AdaLN-conditioned predictors at $50\\%$ sparsity, COSTGRAD matches or exceeds full-token planning on three of four continuous-control benchmarks, while giving a measured $2.6\\times$ wall-clock speedup per environment planning step. Combining token sparsity with reduced CEM search increases this to a $\\sim 5\\times$ total speedup while still exceeding the full-token baseline. We also identify an architecture-dependent failure mode: in a matched AdaLN-vs-concat comparison, concat maintains comparable full-token performance but pure COSTGRAD loses its advantage over random selection. This difference tracks action-pathway drift: gradient-selected removal produces less drift than random removal on AdaLN, but more on concat. These results highlight selector-architecture compatibility as a design axis for sparse world-model planning. Project page and demos: https://ycxuyingchen.github.io/costgrad/",
+      "summary_cn": "针对基于token的世界模型反复处理大空间token网格、动作搜索代价高的问题，提出免训练的目标条件选择器COSTGRAD：按规划代价对每个输入token的梯度范数对空间token排序，使重要性来自下游控制目标而非预测目标，从而保留对规划真正重要的token。在AdaLN条件预测器上50%稀疏度时，四个连续控制基准中三个匹配或超过全token规划，单环境规划步墙钟加速2.6倍；叠加缩减CEM搜索可达约5倍总加速",
+      "pdf_filename": "2610.10274.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10274",
+      "search_text": "sparse planning in visual world models via cost gradients 世界模型 规划 针对基于token的世界模型反复处理大空间token网格、动作搜索代价高的问题，提出免训练的目标条件选择器costgrad：按规划代价对每个输入token的梯度范数对空间token排序，使重要性来自下游控制目标而非预测目标，从而保留对规划真正重要的token。在adaln条件预测器上50%稀疏度时，四个连续控制基准中三个匹配或超过全token规划，单环境规划步墙钟加速2.6倍；叠加缩减cem搜索可达约5倍总加速 token-based world models enable fine-grained latent planning, but repeatedly processing large spatial token grids makes action search expensive. we introduce costgrad, a training-free, goal-conditioned selector that ranks spatial tokens by the gradient norm of the planning cost with respect to each input token. by deriving importance from the downstream control objective, costgrad targets tokens that matter for planning rather than merely for prediction. on adaln-conditioned predictors at $50\\%$ sparsity, costgrad matches or exceeds full-token planning on three of four continuous-control benchmarks, while giving a measured $2.6\\times$ wall-clock speedup per environment planning step. combining token sparsity with reduced cem search increases this to a $\\sim 5\\times$ total speedup while still exceeding the full-token baseline. we also identify an architecture-dependent failure mode: in a matched adaln-vs-concat comparison, concat maintains comparable full-token performance but pure costgrad loses its advantage over random selection. this difference tracks action-pathway drift: gradient-selected removal produces less drift than random removal on adaln, but more on concat. these results highlight selector-architecture compatibility as a design axis for sparse world-model planning. project page and demos: https://ycxuyingchen.github.io/costgrad/ university college london yingchen xu, edward grefenstette cs.lg"
+    },
+    {
+      "arxiv_id": "2610.10239",
+      "title": "ProtocolMatch: Protocol-Dependent Model Selection for Scientific Dynamics Forecasting",
+      "authors": "Lu Wei, Yufeng Wang, Haibin Ling",
+      "affiliations": "Stony Brook University; Westlake University",
+      "published_date": "2026-10-07",
+      "categories": "cs.LG, quant-ph",
+      "abstract": "Scientific dynamics forecasting is often framed as an architecture choice, although deployment is also determined by observed history, rollout feedback, compute budget, physical objective, and test distribution. We formulate protocol-dependent model selection and introduce ProtocolMatch, a compute-matched, validation-selected, and failure-preserving evaluation framework. On driven quantum-spin dynamics, we compare recurrent, patched-attention, causal-attention, and low-rank linear predictors across three independently generated datasets. The causal-attention--recurrence ordering reverses as the training set grows within a fixed two-spin task, while a linear predictor has the lowest mean error in the six-spin local-observable comparison. Restricting observed history worsens every refreshed-history view but improves every closed-loop view in the four-spin study. A latest-state MLP has lower error than persistence on every dataset under state refresh across all five cells, yet its closed-loop rank varies by system and includes finite explosive errors. Physical penalties improve targeted consistency without reliably improving prediction error, and in-distribution intervals lose most coverage after a driving-frequency shift. Thus scientific model selection should return a predictor with its protocol and report accuracy, physical validity, and shifted-distribution reliability separately.",
+      "summary_cn": "针对科学动力学预测常被简化为架构选择、而实际部署还取决于观测历史、滚动反馈、算力预算与测试分布的问题，提出协议相关的模型选择框架ProtocolMatch：等算力、按验证集选择并保留失败案例。在驱动量子自旋动力学上比较循环、分块注意力、因果注意力与低秩线性预测器：固定两自旋任务中因果注意力与循环顺序随训练集增大而反转；四自旋研究中限制观测历史劣化所有刷新历史视图却改善所有闭环视图；分布内区间在驱动频率偏移后大幅失去覆盖率",
+      "pdf_filename": "2610.10239.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10239",
+      "search_text": "protocolmatch: protocol-dependent model selection for scientific dynamics forecasting 闭环仿真 针对科学动力学预测常被简化为架构选择、而实际部署还取决于观测历史、滚动反馈、算力预算与测试分布的问题，提出协议相关的模型选择框架protocolmatch：等算力、按验证集选择并保留失败案例。在驱动量子自旋动力学上比较循环、分块注意力、因果注意力与低秩线性预测器：固定两自旋任务中因果注意力与循环顺序随训练集增大而反转；四自旋研究中限制观测历史劣化所有刷新历史视图却改善所有闭环视图；分布内区间在驱动频率偏移后大幅失去覆盖率 scientific dynamics forecasting is often framed as an architecture choice, although deployment is also determined by observed history, rollout feedback, compute budget, physical objective, and test distribution. we formulate protocol-dependent model selection and introduce protocolmatch, a compute-matched, validation-selected, and failure-preserving evaluation framework. on driven quantum-spin dynamics, we compare recurrent, patched-attention, causal-attention, and low-rank linear predictors across three independently generated datasets. the causal-attention--recurrence ordering reverses as the training set grows within a fixed two-spin task, while a linear predictor has the lowest mean error in the six-spin local-observable comparison. restricting observed history worsens every refreshed-history view but improves every closed-loop view in the four-spin study. a latest-state mlp has lower error than persistence on every dataset under state refresh across all five cells, yet its closed-loop rank varies by system and includes finite explosive errors. physical penalties improve targeted consistency without reliably improving prediction error, and in-distribution intervals lose most coverage after a driving-frequency shift. thus scientific model selection should return a predictor with its protocol and report accuracy, physical validity, and shifted-distribution reliability separately. stony brook university; westlake university lu wei, yufeng wang, haibin ling cs.lg, quant-ph"
+    },
+    {
+      "arxiv_id": "2610.10181",
+      "title": "Argos: Adapt Rich Geometric Priors for Generalizable Online Scene-Change-Detection",
+      "authors": "Ruihan Xu, Jiae Yoon, Kaichen Zhou, Ue-Hwan Kim, Luca Carlone",
+      "affiliations": "Massachusetts Institute of Technology (MIT); Gwangju Institute of Science and Technology",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV",
+      "abstract": "Robots operating in dynamic environments require reliable detection of how their surroundings change over time. Existing learning-based methods largely rely on pairwise 2D image features, which struggle under large viewpoint changes and occlusions, are sensitive to noise, and show limited generalization across domains, while explicit 3D approaches typically require costly offline optimization. We show that the implicit 3D knowledge of Geometric Foundation Models (GFMs) provides a strong basis for addressing these limitations. We introduce Argos, which adapts GFM features for joint scene change detection and 3D reconstruction. To address data scarcity and take a step toward a foundation model for scene change detection, we introduce a large-scale benchmark comprising two synthetic datasets and one real-world dataset, and train jointly across diverse datasets to improve cross-domain generalization. We further introduce Argos-SLAM, a real-time system designed for robotics, which performs online change detection and change-aware 4D mapping. Across benchmarks, our framework substantially outperforms existing baselines, with gains of up to 42.01% in change IoU and 27.91% in F1, while supporting scalable deployment in changing real-world environments.",
+      "summary_cn": "针对场景变化检测依赖成对2D特征、在大视角变化与遮挡下失稳且跨域泛化差，而显式3D方法又需昂贵离线优化的问题，提出Argos：把几何基础模型（GFM）的隐式3D知识经适配用于变化检测与3D重建联合任务，并构建含两个合成集与一个真实集的大规模基准做跨数据集联合训练以提升泛化；进一步给出面向机器人的实时系统Argos-SLAM，实现在线变化检测与变化感知的4D点云建图。基准上变化IoU最高提升42.01%、F1提升27.91%",
+      "pdf_filename": "2610.10181.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "SLAM",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10181",
+      "search_text": "argos: adapt rich geometric priors for generalizable online scene-change-detection slam 点云 针对场景变化检测依赖成对2d特征、在大视角变化与遮挡下失稳且跨域泛化差，而显式3d方法又需昂贵离线优化的问题，提出argos：把几何基础模型（gfm）的隐式3d知识经适配用于变化检测与3d重建联合任务，并构建含两个合成集与一个真实集的大规模基准做跨数据集联合训练以提升泛化；进一步给出面向机器人的实时系统argos-slam，实现在线变化检测与变化感知的4d点云建图。基准上变化iou最高提升42.01%、f1提升27.91% robots operating in dynamic environments require reliable detection of how their surroundings change over time. existing learning-based methods largely rely on pairwise 2d image features, which struggle under large viewpoint changes and occlusions, are sensitive to noise, and show limited generalization across domains, while explicit 3d approaches typically require costly offline optimization. we show that the implicit 3d knowledge of geometric foundation models (gfms) provides a strong basis for addressing these limitations. we introduce argos, which adapts gfm features for joint scene change detection and 3d reconstruction. to address data scarcity and take a step toward a foundation model for scene change detection, we introduce a large-scale benchmark comprising two synthetic datasets and one real-world dataset, and train jointly across diverse datasets to improve cross-domain generalization. we further introduce argos-slam, a real-time system designed for robotics, which performs online change detection and change-aware 4d mapping. across benchmarks, our framework substantially outperforms existing baselines, with gains of up to 42.01% in change iou and 27.91% in f1, while supporting scalable deployment in changing real-world environments. massachusetts institute of technology (mit); gwangju institute of science and technology ruihan xu, jiae yoon, kaichen zhou, ue-hwan kim, luca carlone cs.cv"
+    },
+    {
+      "arxiv_id": "2610.10178",
+      "title": "Do Vision-Language-Action Models Understand Instructions? A Mechanistic Interpretability Study on Language Grounding",
+      "authors": "Theodor Wulff, Angelo Cangelosi",
+      "affiliations": "Department of Computer Science, The University of Manchester",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO",
+      "abstract": "Vision-Language-Action models are designed to generalise across environments and task descriptions, raising the question of whether their action generation actually depends on the language instruction, or whether they largely rely on visual cues and superficial correlations. Robustness to variance in the visual and linguistic observation space is critical for real-world deployment, yet VLAs lack explicit grounding modules and instead rely on the intrinsic language grounding capabilities of their Vision-Language model backbones. For this reason, we conduct a controlled mechanistic interpretability study on the language grounding capabilities of two state-of-the-art Vision-Language-Action models, $π_{0.5}$ and GR00T N1.7, by applying activation and attribution patching to the residual stream of the action generation modules. We systematically corrupt the task instruction of input samples of the LIBERO benchmark following five strategies: synonym replacement, semantic scaling, directional corruption, random object substitution, and empty string. Our experiments find that both models are comparatively insensitive to abstract rephrasing and to referencing non-existent objects, but react strongly to empty task descriptions and, especially, to directional language. During action generation, this sensitivity is concentrated in different loci for each model: mainly in the early, periodic cross-attention layers for GR00T N1.7, versus distributed across the earliest and selected later layers for $π_{0.5}$. For GR00T N1.7, directional perturbations drive some of the largest causal effects while leaving the internal representational geometry comparatively unchanged, a dissociation we do not observe clearly for $π_{0.5}$. Finally, the reliability of attribution patching is model-dependent: it closely tracks activation patching for GR00T N1.7 but not for $π_{0.5}$.",
+      "summary_cn": "针对视觉—语言—动作模型的动作生成是否真正依赖语言指令、还是主要依赖视觉线索与浅层相关的问题，对π0.5与GR00T N1.7在LIBERO上做受控机制可解释性研究：对动作生成模块残差流施以激活与归因补丁，并按同义替换、语义缩放、方向性篡改、随机物体替换与空指令五种策略破坏任务描述。发现两模型对抽象改写与不存在的物体相对不敏感，但对空描述尤其方向性语言反应强烈，敏感位点各不相同",
+      "pdf_filename": "2610.10178.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10178",
+      "search_text": "do vision-language-action models understand instructions? a mechanistic interpretability study on language grounding 多模态 针对视觉—语言—动作模型的动作生成是否真正依赖语言指令、还是主要依赖视觉线索与浅层相关的问题，对π0.5与gr00t n1.7在libero上做受控机制可解释性研究：对动作生成模块残差流施以激活与归因补丁，并按同义替换、语义缩放、方向性篡改、随机物体替换与空指令五种策略破坏任务描述。发现两模型对抽象改写与不存在的物体相对不敏感，但对空描述尤其方向性语言反应强烈，敏感位点各不相同 vision-language-action models are designed to generalise across environments and task descriptions, raising the question of whether their action generation actually depends on the language instruction, or whether they largely rely on visual cues and superficial correlations. robustness to variance in the visual and linguistic observation space is critical for real-world deployment, yet vlas lack explicit grounding modules and instead rely on the intrinsic language grounding capabilities of their vision-language model backbones. for this reason, we conduct a controlled mechanistic interpretability study on the language grounding capabilities of two state-of-the-art vision-language-action models, $π_{0.5}$ and gr00t n1.7, by applying activation and attribution patching to the residual stream of the action generation modules. we systematically corrupt the task instruction of input samples of the libero benchmark following five strategies: synonym replacement, semantic scaling, directional corruption, random object substitution, and empty string. our experiments find that both models are comparatively insensitive to abstract rephrasing and to referencing non-existent objects, but react strongly to empty task descriptions and, especially, to directional language. during action generation, this sensitivity is concentrated in different loci for each model: mainly in the early, periodic cross-attention layers for gr00t n1.7, versus distributed across the earliest and selected later layers for $π_{0.5}$. for gr00t n1.7, directional perturbations drive some of the largest causal effects while leaving the internal representational geometry comparatively unchanged, a dissociation we do not observe clearly for $π_{0.5}$. finally, the reliability of attribution patching is model-dependent: it closely tracks activation patching for gr00t n1.7 but not for $π_{0.5}$. department of computer science, the university of manchester theodor wulff, angelo cangelosi cs.ro"
+    },
+    {
+      "arxiv_id": "2610.10065",
+      "title": "Distributed Motion Planning for Multi-Robot Systems under Topological Constraints",
+      "authors": "Gianpietro Battocletti, Dimitris Boskos, Dimos V. Dimarogonas, Bart De Schutter",
+      "affiliations": "Delft Center for Systems and Control, Delft University of Technology; Division of Decision and Control Systems, KTH Royal Institute of Technology",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO",
+      "abstract": "Efficient and distributed coordination of mobile robots is one of the main challenges in multi-robot systems. Topological constraints, often expressed as topological braids, are a popular tool to encode complex coordination patterns between multiple mobile robots, as they offer a compact and abstract representation of the desired qualitative relation between the space-time trajectories of the robots. However, execution of joint motion plans encoded as braid-based topological constraints via distributed controllers is challenging, with existing approaches, generally based on the execution of one braid generator at a time, producing slow and suboptimal trajectories. We propose a distributed controller based on Model Predictive Control (MPC) to efficiently execute braid-based topological specifications. Rather than directly tracking the braid specification, we propose to use winding numbers, which are topological invariants for braids, as a proxy. This has the twofold benefit of converting braids into a continuous function, which can be easily tracked by an MPC controller through an appropriate term in the cost function, and of decoupling the global braid specification into a set of pairwise specifications, which can be tracked distributedly through the solution of only local MPC problems. To maintain global coordination, we propose a consensus-based progress estimation approach, which allows the robots to synchronize their motion toward the desired specification. We validate the proposed approach in simulation and in real-world experiments, where we demonstrate the effectiveness of the proposed approach and the improvement over existing approaches in terms of execution speed and control effort.",
+      "summary_cn": "针对以拓扑辫编码的多机器人协同约束此前靠逐个执行辫发生器、轨迹慢且次优的问题，提出基于模型预测控制的分布式控制器：不直接跟踪辫规范，而用其拓扑不变量——卷绕数作为代理，既把离散辫转为可由代价项连续跟踪的函数，又把全局辫规范解耦为成对规范，仅需局部MPC即可分布式跟踪；并用一致性进度估计实现全局同步。仿真与实机实验验证了多机拓扑约束下的有效性与效率",
+      "pdf_filename": "2610.10065.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10065",
+      "search_text": "distributed motion planning for multi-robot systems under topological constraints 规划 针对以拓扑辫编码的多机器人协同约束此前靠逐个执行辫发生器、轨迹慢且次优的问题，提出基于模型预测控制的分布式控制器：不直接跟踪辫规范，而用其拓扑不变量——卷绕数作为代理，既把离散辫转为可由代价项连续跟踪的函数，又把全局辫规范解耦为成对规范，仅需局部mpc即可分布式跟踪；并用一致性进度估计实现全局同步。仿真与实机实验验证了多机拓扑约束下的有效性与效率 efficient and distributed coordination of mobile robots is one of the main challenges in multi-robot systems. topological constraints, often expressed as topological braids, are a popular tool to encode complex coordination patterns between multiple mobile robots, as they offer a compact and abstract representation of the desired qualitative relation between the space-time trajectories of the robots. however, execution of joint motion plans encoded as braid-based topological constraints via distributed controllers is challenging, with existing approaches, generally based on the execution of one braid generator at a time, producing slow and suboptimal trajectories. we propose a distributed controller based on model predictive control (mpc) to efficiently execute braid-based topological specifications. rather than directly tracking the braid specification, we propose to use winding numbers, which are topological invariants for braids, as a proxy. this has the twofold benefit of converting braids into a continuous function, which can be easily tracked by an mpc controller through an appropriate term in the cost function, and of decoupling the global braid specification into a set of pairwise specifications, which can be tracked distributedly through the solution of only local mpc problems. to maintain global coordination, we propose a consensus-based progress estimation approach, which allows the robots to synchronize their motion toward the desired specification. we validate the proposed approach in simulation and in real-world experiments, where we demonstrate the effectiveness of the proposed approach and the improvement over existing approaches in terms of execution speed and control effort. delft center for systems and control, delft university of technology; division of decision and control systems, kth royal institute of technology gianpietro battocletti, dimitris boskos, dimos v. dimarogonas, bart de schutter cs.ro"
+    },
+    {
+      "arxiv_id": "2610.10047",
+      "title": "AdSpark: A Large-Scale Dataset and Benchmark for Product-Centric Advertisement Video Generation",
+      "authors": "Zhifei Yang, Zhao Jiang, Keyang Lu, Honghe Zhu, Zheng Zhang, Jingjing Lv, Changping Peng, Ching Law, Zhen Xiao",
+      "affiliations": "Peking University; JD.com",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV",
+      "abstract": "Product-centric advertisement video generation aims to create promotional videos that preserve fine-grained product identity while presenting selling points through coherent multi-shot narratives. However, this emerging task remains underexplored due to the lack of large-scale advertisement-specific datasets and comprehensive evaluation frameworks. To address this gap, we introduce \\textbf{AdSpark}, a large-scale dataset and benchmark for product-centric advertisement video generation, based on data from a major e-commerce platform. \\textit{AdSpark-300K} contains approximately 300K reference image--prompt--video triplets, comprising a real-world subset and a synthetic subset. Each sample provides structured advertisement annotations, including product identity annotations, selling-point descriptions, creative plans, and aligned audio scripts, enabling models to learn product preservation and advertisement-oriented visual storytelling. We further propose \\textit{AdSpark-Bench}, a diagnostic benchmark that evaluates generated advertisements across six dimensions, including visual quality, product fidelity, instruction adherence, temporal coherence, audio alignment, and advertisement effectiveness. Based on AdSpark-Bench, we evaluate representative models, revealing key challenges in product preservation, multi-shot storytelling, and selling-point visualization. Experiments with AdSpark-300K-finetuned models further validate the effectiveness of our dataset. AdSpark provides a unified dataset and benchmark for future research, and we will release the dataset upon acceptance.",
+      "summary_cn": "针对以商品为中心的广告视频生成缺大规模专用数据集与评测框架的问题，构建AdSpark：AdSpark-300K含约30万条参考图—提示—视频三元组（真实与合成子集），每条附商品身份标注、卖点描述、创意方案与对齐音频脚本，使模型可学习商品保真与广告式视觉叙事；并提出AdSpark-Bench从视觉质量、商品保真、指令遵循、时序连贯、音频对齐与广告效果六维诊断评测。评测暴露商品保持、多镜头叙事与卖点可视化仍是关键挑战",
+      "pdf_filename": "2610.10047.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "视频生成"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10047",
+      "search_text": "adspark: a large-scale dataset and benchmark for product-centric advertisement video generation 视频生成 针对以商品为中心的广告视频生成缺大规模专用数据集与评测框架的问题，构建adspark：adspark-300k含约30万条参考图—提示—视频三元组（真实与合成子集），每条附商品身份标注、卖点描述、创意方案与对齐音频脚本，使模型可学习商品保真与广告式视觉叙事；并提出adspark-bench从视觉质量、商品保真、指令遵循、时序连贯、音频对齐与广告效果六维诊断评测。评测暴露商品保持、多镜头叙事与卖点可视化仍是关键挑战 product-centric advertisement video generation aims to create promotional videos that preserve fine-grained product identity while presenting selling points through coherent multi-shot narratives. however, this emerging task remains underexplored due to the lack of large-scale advertisement-specific datasets and comprehensive evaluation frameworks. to address this gap, we introduce \\textbf{adspark}, a large-scale dataset and benchmark for product-centric advertisement video generation, based on data from a major e-commerce platform. \\textit{adspark-300k} contains approximately 300k reference image--prompt--video triplets, comprising a real-world subset and a synthetic subset. each sample provides structured advertisement annotations, including product identity annotations, selling-point descriptions, creative plans, and aligned audio scripts, enabling models to learn product preservation and advertisement-oriented visual storytelling. we further propose \\textit{adspark-bench}, a diagnostic benchmark that evaluates generated advertisements across six dimensions, including visual quality, product fidelity, instruction adherence, temporal coherence, audio alignment, and advertisement effectiveness. based on adspark-bench, we evaluate representative models, revealing key challenges in product preservation, multi-shot storytelling, and selling-point visualization. experiments with adspark-300k-finetuned models further validate the effectiveness of our dataset. adspark provides a unified dataset and benchmark for future research, and we will release the dataset upon acceptance. peking university; jd.com zhifei yang, zhao jiang, keyang lu, honghe zhu, zheng zhang, jingjing lv, changping peng, ching law, zhen xiao cs.cv"
+    },
+    {
+      "arxiv_id": "2610.10020",
+      "title": "Tactile Reconstruction of Contact Task Frames and Forces for Hybrid Force/Motion Control",
+      "authors": "Antonio Rapuano, Simone Orelli, Barbara Bazzana, Antonio Franchi, Alessandro De Luca",
+      "affiliations": "Department of Computer, Control and Management Engineering, Sapienza University of Rome; Robotics and Mechatronics Department, University of Twente",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO",
+      "abstract": "Hybrid force/motion control requires knowledge of the interaction force and of a task frame defining the force- and motion-controlled directions. These quantities are usually obtained from force/torque sensing or model-based residuals, often assuming also a nominal environment model. This work addresses the online estimation of the contact force and a possibly time-varying task frame using only soft optical tactile sensing, under the assumption of locally planar contact with a negligible contact moment. The proposed method maps a single image of the deformed elastomer of a soft optical tactile sensor to observable contact variables: indentation depth, two surface-to-sensor tilt angles, and 3D contact force, each with a per-sample uncertainty estimate. The mapping is learned through a self-labeling acquisition procedure, in which a manipulator imposes controlled contacts while an auxiliary Force/Torque sensor is used offline to provide ground-truth labels. The tactile measurement is then fused with robot proprioceptive data in an Extended Kalman Filter, producing a continuously updated estimate of the contact task frame and of the interaction force. Control experiments with a DigiTac sensor mounted on a UR10 manipulator demonstrate closed-loop contact force regulation against a flat rigid board in linear and angular motion by a human operator, with touch as the only exteroceptive feedback.",
+      "summary_cn": "针对混合力/位控制需要交互力与任务坐标系、而传统做法依赖力/力矩传感或需已知环境模型的问题，提出仅用软体光学触觉传感在线估计接触力与可能时变的任务坐标系：把单张弹性体变形图像映射为压入深度、两个面—传感器倾角与三维接触力并给出逐样本不确定度，映射通过机械臂施加受控接触并用力/力矩传感器离线自标注学习；触觉量再与本体感知经扩展卡尔曼滤波融合。UR10配DigiTac实验仅靠触觉实现闭环接触力调节",
+      "pdf_filename": "2610.10020.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10020",
+      "search_text": "tactile reconstruction of contact task frames and forces for hybrid force/motion control 闭环仿真 针对混合力/位控制需要交互力与任务坐标系、而传统做法依赖力/力矩传感或需已知环境模型的问题，提出仅用软体光学触觉传感在线估计接触力与可能时变的任务坐标系：把单张弹性体变形图像映射为压入深度、两个面—传感器倾角与三维接触力并给出逐样本不确定度，映射通过机械臂施加受控接触并用力/力矩传感器离线自标注学习；触觉量再与本体感知经扩展卡尔曼滤波融合。ur10配digitac实验仅靠触觉实现闭环接触力调节 hybrid force/motion control requires knowledge of the interaction force and of a task frame defining the force- and motion-controlled directions. these quantities are usually obtained from force/torque sensing or model-based residuals, often assuming also a nominal environment model. this work addresses the online estimation of the contact force and a possibly time-varying task frame using only soft optical tactile sensing, under the assumption of locally planar contact with a negligible contact moment. the proposed method maps a single image of the deformed elastomer of a soft optical tactile sensor to observable contact variables: indentation depth, two surface-to-sensor tilt angles, and 3d contact force, each with a per-sample uncertainty estimate. the mapping is learned through a self-labeling acquisition procedure, in which a manipulator imposes controlled contacts while an auxiliary force/torque sensor is used offline to provide ground-truth labels. the tactile measurement is then fused with robot proprioceptive data in an extended kalman filter, producing a continuously updated estimate of the contact task frame and of the interaction force. control experiments with a digitac sensor mounted on a ur10 manipulator demonstrate closed-loop contact force regulation against a flat rigid board in linear and angular motion by a human operator, with touch as the only exteroceptive feedback. department of computer, control and management engineering, sapienza university of rome; robotics and mechatronics department, university of twente antonio rapuano, simone orelli, barbara bazzana, antonio franchi, alessandro de luca cs.ro"
+    },
+    {
+      "arxiv_id": "2610.09853",
+      "title": "DeltaSplat: Iterative Gaussian Refinement for Pose-Free Feed-Forward 3D Gaussian Splatting",
+      "authors": "Chanung Park, Seunghyeon Song, Joo Chan Lee, Eunbyung Park, Jong Hwan Ko",
+      "affiliations": "Department of Electrical and Computer Engineering, Sungkyunkwan University; Department of Artificial Intelligence, Sungkyunkwan University; Department of Artificial Intelligence, Yonsei University",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV",
+      "abstract": "Pose-free feed-forward 3D Gaussian Splatting (3DGS) reconstructs a scene from sparse, unposed images in a single network pass, removing the need for camera calibration and per-scene optimization. However, camera estimation errors propagate into the predicted Gaussians and compound the geometric and photometric inaccuracies of single-pass prediction. To correct these errors, we introduce DeltaSplat, a lightweight Gaussian refinement module for pose-free feed-forward 3DGS. It iteratively renders the current Gaussians at the input context views and predicts per-Gaussian updates from the resulting residuals. A 2D residual alone, however, underdetermines the 3D correction. DeltaSplat therefore conditions each update on per-pixel Plücker rays and rendered depth as a soft geometric prior. A dual-branch convolutional mixer efficiently encodes these inputs, and per-attribute heads decode the fused features into position, opacity, and color updates. The module adds only ~2.2% parameters to the backbone and remains fully feed-forward at inference. On DL3DV, DeltaSplat reaches 26.64 dB PSNR in the pose-free setting, improving its state-of-the-art backbone by 1.75 dB and surpassing even baselines supplied with ground-truth cameras; consistent gains hold across 6-24 views and all camera regimes.",
+      "summary_cn": "针对无位姿前馈3DGS单次前向中相机估计误差会传播进高斯、放大几何与光度偏差的问题，提出轻量迭代细化模块DeltaSplat：在输入视角渲染当前高斯并由残差预测逐高斯更新；因2D残差不足以确定3D修正，每次更新以逐像素Plücker光线与渲染深度为软几何先验，经双分支卷积混合器编码后解码位置、不透明度与颜色更新。仅增约2.2%参数且推理仍全前馈，DL3DV无位姿下达26.64dB，比SOTA骨干提升1.75dB",
+      "pdf_filename": "2610.09853.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09853",
+      "search_text": "deltasplat: iterative gaussian refinement for pose-free feed-forward 3d gaussian splatting 3dgs 针对无位姿前馈3dgs单次前向中相机估计误差会传播进高斯、放大几何与光度偏差的问题，提出轻量迭代细化模块deltasplat：在输入视角渲染当前高斯并由残差预测逐高斯更新；因2d残差不足以确定3d修正，每次更新以逐像素plücker光线与渲染深度为软几何先验，经双分支卷积混合器编码后解码位置、不透明度与颜色更新。仅增约2.2%参数且推理仍全前馈，dl3dv无位姿下达26.64db，比sota骨干提升1.75db pose-free feed-forward 3d gaussian splatting (3dgs) reconstructs a scene from sparse, unposed images in a single network pass, removing the need for camera calibration and per-scene optimization. however, camera estimation errors propagate into the predicted gaussians and compound the geometric and photometric inaccuracies of single-pass prediction. to correct these errors, we introduce deltasplat, a lightweight gaussian refinement module for pose-free feed-forward 3dgs. it iteratively renders the current gaussians at the input context views and predicts per-gaussian updates from the resulting residuals. a 2d residual alone, however, underdetermines the 3d correction. deltasplat therefore conditions each update on per-pixel plücker rays and rendered depth as a soft geometric prior. a dual-branch convolutional mixer efficiently encodes these inputs, and per-attribute heads decode the fused features into position, opacity, and color updates. the module adds only ~2.2% parameters to the backbone and remains fully feed-forward at inference. on dl3dv, deltasplat reaches 26.64 db psnr in the pose-free setting, improving its state-of-the-art backbone by 1.75 db and surpassing even baselines supplied with ground-truth cameras; consistent gains hold across 6-24 views and all camera regimes. department of electrical and computer engineering, sungkyunkwan university; department of artificial intelligence, sungkyunkwan university; department of artificial intelligence, yonsei university chanung park, seunghyeon song, joo chan lee, eunbyung park, jong hwan ko cs.cv"
+    },
+    {
+      "arxiv_id": "2610.09785",
+      "title": "UltraWorld: Learning Interactive Ultrasound World Models from Untracked Clinical Videos with Acoustic Sampling Map",
+      "authors": "Keke Yang, Erqi Wang, Sainan Guan, Hongliang Ren",
+      "affiliations": "The Chinese University of Hong Kong; The Eighth Affiliated Hospital, Sun Yat-sen University",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "World models can enable autonomous ultrasound scanning by predicting the outcomes of probe motions from local observations. Learning this action--observation relationship typically relies on synchronized video--pose pairs, which are costly to collect at scale and largely unavailable in routine clinical recordings. Reliable action following further requires modeling ultrasound's cross-sectional sampling geometry. We present UltraWorld, a self-distillation recipe that transfers priors from clinical ultrasound videos into interactive world models without real action annotations. Starting from clinical videos, we adapt a video foundation model into an ultrasound generator conditioned on reference images and anatomical masks. Anatomical masks sampled along programmable trajectories through 3D anatomy provide spatial guidance for synthesizing action--video pairs. We then use these synthetic pairs to self-distill the generator into a world model that predicts future observations from local observations and actions, without requiring anatomical masks or other 3D assets at inference time. To further improve action following, we introduce the Acoustic Sampling Map (AsMap), which represents probe poses and imaging settings as pixel-wise 3D sampling positions, beam directions, and depths. Experiments demonstrate improved prediction fidelity and action following. Across nine simulated closed-loop local planning episodes, UltraWorld reduces the mean final distance to the goal and orientation error by 29\\% and 38\\%, respectively, compared with visual servoing. Project Page: https://ultraworld-project.github.io/.",
+      "summary_cn": "针对交互式超声世界模型难获同步视频—位姿对、临床录像又缺动作标注的问题，提出自蒸馏配方UltraWorld：先把视频基础模型适配为以参考图像与解剖掩码为条件的超声生成器，沿可编程轨迹采样掩码合成动作—视频对，再把生成器自蒸馏为仅需局部观测与动作预测未来的世界模型；并引入声学采样图AsMap把探头位姿与成像设置表示为逐像素三维采样位置、波束方向与深度。九个仿真闭环规划回合中终点距离与朝向误差较视觉伺服降低29%与38%",
+      "pdf_filename": "2610.09785.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09785",
+      "search_text": "ultraworld: learning interactive ultrasound world models from untracked clinical videos with acoustic sampling map 世界模型 闭环仿真 规划 针对交互式超声世界模型难获同步视频—位姿对、临床录像又缺动作标注的问题，提出自蒸馏配方ultraworld：先把视频基础模型适配为以参考图像与解剖掩码为条件的超声生成器，沿可编程轨迹采样掩码合成动作—视频对，再把生成器自蒸馏为仅需局部观测与动作预测未来的世界模型；并引入声学采样图asmap把探头位姿与成像设置表示为逐像素三维采样位置、波束方向与深度。九个仿真闭环规划回合中终点距离与朝向误差较视觉伺服降低29%与38% world models can enable autonomous ultrasound scanning by predicting the outcomes of probe motions from local observations. learning this action--observation relationship typically relies on synchronized video--pose pairs, which are costly to collect at scale and largely unavailable in routine clinical recordings. reliable action following further requires modeling ultrasound's cross-sectional sampling geometry. we present ultraworld, a self-distillation recipe that transfers priors from clinical ultrasound videos into interactive world models without real action annotations. starting from clinical videos, we adapt a video foundation model into an ultrasound generator conditioned on reference images and anatomical masks. anatomical masks sampled along programmable trajectories through 3d anatomy provide spatial guidance for synthesizing action--video pairs. we then use these synthetic pairs to self-distill the generator into a world model that predicts future observations from local observations and actions, without requiring anatomical masks or other 3d assets at inference time. to further improve action following, we introduce the acoustic sampling map (asmap), which represents probe poses and imaging settings as pixel-wise 3d sampling positions, beam directions, and depths. experiments demonstrate improved prediction fidelity and action following. across nine simulated closed-loop local planning episodes, ultraworld reduces the mean final distance to the goal and orientation error by 29\\% and 38\\%, respectively, compared with visual servoing. project page: https://ultraworld-project.github.io/. the chinese university of hong kong; the eighth affiliated hospital, sun yat-sen university keke yang, erqi wang, sainan guan, hongliang ren cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.09763",
+      "title": "Beyond Policy Support: Interaction Constrained Offline Reinforcement Learning for Autonomous Driving",
+      "authors": "Mahmoud Selim, Cristina Cipriani, Karl Henrik Johansson",
+      "affiliations": "TRATON; KTH Royal Institute of Technology",
+      "published_date": "2026-10-07",
+      "categories": "cs.LG, cs.AI, cs.RO",
+      "abstract": "Offline reinforcement learning enables reward-driven policy improvement from fixed datasets without requiring online exploration, making it particularly attractive in safety-critical domains. A central challenge, however, is distribution shift: policy optimization may favor actions that are weakly supported by the offline data, rendering value estimates unreliable. Existing approaches primarily control this shift in the policy's own action space. In interactive environments such as autonomous driving, this can be insufficient: a candidate ego trajectory may remain well supported under the marginal behavior distribution while being poorly supported jointly with the surrounding-agent behavior observed in the logged interaction. We refer to this degradation in interaction support as \\emph{interaction distribution shift} (IDS), and introduce \\emph{Interaction-Constrained Drive Policy} (ICDP), an offline reinforcement learning framework that explicitly controls interaction-level distribution shift. Starting from the joint data distribution over ego and surrounding-agent futures, we show that joint-support degradation decomposes exactly into an ego-support component and a residual interaction-support component. We recover the latter through contrastive density-ratio estimation, isolating interaction compatibility without explicit joint-density modeling, surrounding-agent prediction, or rollouts in reactive simulators or learned world models during policy optimization. Closed-loop evaluations on nuPlan, Interplan and real-world truck experiments show that ICDP suppresses high-value yet interaction-unsupported trajectory selections and improves performance in interaction-critical driving scenarios. Project webpage: https://mahmoud-selim.github.io/ICDP/",
+      "summary_cn": "针对离线强化学习在驾驶这类交互环境中的分布偏移——候选自车轨迹在边际行为分布下支持良好，但与日志中周围车辆行为联合起来支持不足，提出交互分布偏移IDS与ICDP框架：从自车与周围车辆未来的联合分布出发，证明联合支持退化可精确分解为自车支持与残差交互支持，并用对比式密度比估计恢复后者，无需显式联合密度建模或反应式仿真器/世界模型展开。nuPlan、Interplan与真实卡车实验的闭环评测抑制了高价值不可靠行为",
+      "pdf_filename": "2610.09763.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "强化学习",
+        "自动驾驶",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09763",
+      "search_text": "beyond policy support: interaction constrained offline reinforcement learning for autonomous driving 世界模型 闭环仿真 强化学习 自动驾驶 仿真器 针对离线强化学习在驾驶这类交互环境中的分布偏移——候选自车轨迹在边际行为分布下支持良好，但与日志中周围车辆行为联合起来支持不足，提出交互分布偏移ids与icdp框架：从自车与周围车辆未来的联合分布出发，证明联合支持退化可精确分解为自车支持与残差交互支持，并用对比式密度比估计恢复后者，无需显式联合密度建模或反应式仿真器/世界模型展开。nuplan、interplan与真实卡车实验的闭环评测抑制了高价值不可靠行为 offline reinforcement learning enables reward-driven policy improvement from fixed datasets without requiring online exploration, making it particularly attractive in safety-critical domains. a central challenge, however, is distribution shift: policy optimization may favor actions that are weakly supported by the offline data, rendering value estimates unreliable. existing approaches primarily control this shift in the policy's own action space. in interactive environments such as autonomous driving, this can be insufficient: a candidate ego trajectory may remain well supported under the marginal behavior distribution while being poorly supported jointly with the surrounding-agent behavior observed in the logged interaction. we refer to this degradation in interaction support as \\emph{interaction distribution shift} (ids), and introduce \\emph{interaction-constrained drive policy} (icdp), an offline reinforcement learning framework that explicitly controls interaction-level distribution shift. starting from the joint data distribution over ego and surrounding-agent futures, we show that joint-support degradation decomposes exactly into an ego-support component and a residual interaction-support component. we recover the latter through contrastive density-ratio estimation, isolating interaction compatibility without explicit joint-density modeling, surrounding-agent prediction, or rollouts in reactive simulators or learned world models during policy optimization. closed-loop evaluations on nuplan, interplan and real-world truck experiments show that icdp suppresses high-value yet interaction-unsupported trajectory selections and improves performance in interaction-critical driving scenarios. project webpage: https://mahmoud-selim.github.io/icdp/ traton; kth royal institute of technology mahmoud selim, cristina cipriani, karl henrik johansson cs.lg, cs.ai, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.09695",
+      "title": "Do Better Visual Representations Always Lead to Better End-to-End Autonomous Driving?",
+      "authors": "Zihao Zhang, Haochen Tian, Tianyu Li, Changhui Jing, Jingliang He, Naisheng Ye, Ziyuan Pu, Zhenjie Yang",
+      "affiliations": "Southeast University; OpenDriveLab at The University of Hong Kong; Shenzhen Loop Area Institute",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Visual foundation models (VFMs) are increasingly integrated into end-to-end autonomous driving for their powerful representations, yet it remains unclear when these representations improve driving performance. To investigate this question, we introduce ViRA, a planner-agnostic visual representation alignment framework that keeps the planner architecture and inference cost unchanged. Our study reveals three findings: (1) VFM-guided visual representations consistently improve driving performance across diverse end-to-end planners, with gains extending to zero-shot closed-loop evaluation. (2) The choice of VFM target matters for planning performance, and alignment to a different VFM can further benefit planners with pre-trained VFM encoders. (3) Auxiliary perception supervision reduces sensitivity to VFM target selection, narrowing the EPDMS spread across five targets from 2.7 to 0.5 points and potentially compensating for less effective VFM targets. Guided by these findings, we develop ViRA-Diffusion, a diffusion-based planner trained without auxiliary perception supervision, which achieves 92.3 EPDMS on NAVSIM v2 navtest, outperforming recent methods in our comparison by at least 1.9 points. The results motivate jointly considering target selection and planner supervision when integrating VFMs into end-to-end autonomous driving. The results and demo are available at https://github.com/OpenDriveLab/ViRA.",
+      "summary_cn": "针对视觉基础模型广泛接入端到端自动驾驶、但表示何时真正提升驾驶性能不明的问题，提出规划器无关的视觉表示对齐框架ViRA，不改变规划器结构与推理成本：VFM引导表示在多种规划器上一致提升且泛化到零样本闭环评测；对齐目标选择影响规划；辅助感知监督可降低目标敏感度，把五目标EPDMS极差从2.7压到0.5。据此提出ViRA-Diffusion，在NAVSIM v2 navtest上取得92.3 EPDMS，领先至少1.9点",
+      "pdf_filename": "2610.09695.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09695",
+      "search_text": "do better visual representations always lead to better end-to-end autonomous driving? 闭环仿真 规划 自动驾驶 针对视觉基础模型广泛接入端到端自动驾驶、但表示何时真正提升驾驶性能不明的问题，提出规划器无关的视觉表示对齐框架vira，不改变规划器结构与推理成本：vfm引导表示在多种规划器上一致提升且泛化到零样本闭环评测；对齐目标选择影响规划；辅助感知监督可降低目标敏感度，把五目标epdms极差从2.7压到0.5。据此提出vira-diffusion，在navsim v2 navtest上取得92.3 epdms，领先至少1.9点 visual foundation models (vfms) are increasingly integrated into end-to-end autonomous driving for their powerful representations, yet it remains unclear when these representations improve driving performance. to investigate this question, we introduce vira, a planner-agnostic visual representation alignment framework that keeps the planner architecture and inference cost unchanged. our study reveals three findings: (1) vfm-guided visual representations consistently improve driving performance across diverse end-to-end planners, with gains extending to zero-shot closed-loop evaluation. (2) the choice of vfm target matters for planning performance, and alignment to a different vfm can further benefit planners with pre-trained vfm encoders. (3) auxiliary perception supervision reduces sensitivity to vfm target selection, narrowing the epdms spread across five targets from 2.7 to 0.5 points and potentially compensating for less effective vfm targets. guided by these findings, we develop vira-diffusion, a diffusion-based planner trained without auxiliary perception supervision, which achieves 92.3 epdms on navsim v2 navtest, outperforming recent methods in our comparison by at least 1.9 points. the results motivate jointly considering target selection and planner supervision when integrating vfms into end-to-end autonomous driving. the results and demo are available at https://github.com/opendrivelab/vira. southeast university; opendrivelab at the university of hong kong; shenzhen loop area institute zihao zhang, haochen tian, tianyu li, changhui jing, jingliang he, naisheng ye, ziyuan pu, zhenjie yang cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.09536",
+      "title": "MagCilia: A Compact Magnetociliary Tactile Sensor with 3D Force Sensing for Robotic Contact Perception and Grasping Feedback",
+      "authors": "Yu Feng, Hao Wu, Haotian Guo, Haoming Liu, William Su, Jingxiang Guo, Jiankun Li, Masayoshi Tomizuka, Wen Jung Li, Jianshu Zhou",
+      "affiliations": "Department of Mechanical Engineering, National University of Singapore; Department of Mechanical Engineering, University of California, Berkeley; Mechanical Engineering Department, City University of Hong Kong; CAS-CityU Joint Laboratory for Robotic Research, City University of Hong Kong Shenzhen Research Institute",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO",
+      "abstract": "Robotic grasping and surface exploration benefit from simultaneous measurement of normal and tangential forces and from surface information obtained through contact. Here, we present a compact magnetociliary tactile sensor (MagCilia) that combines a flexible magnetic-cilia structure with a Hall sensor for 3D force sensing. Quasi-static finite element analysis is used to investigate structural deformation and magnetic responses under multidirectional loading. To reconstruct forces from the coupled magnetic channels, we propose causal history fusion regression (CHFR), which combines current magnetic-field measurements with their recent changes. Five-fold cross-validation grouped by calibration record yields root-mean-square errors of 0.40, 0.57, and 0.69 N for Fx, Fy, and Fz, respectively, with corresponding coefficients of determination of 0.93, 0.90, and 0.92. Robotic experiments demonstrate tangential-force-guided gripper adjustment and multi-axis load monitoring under external perturbations. Frequency-domain features of the reconstructed forces distinguish six surface categories with 99.39% accuracy in three-fold cross-validation grouped by acquisition session. An online robotic demonstration additionally identifies all six tested surfaces. These results demonstrate 3D force reconstruction, grasping feedback, and surface recognition using a single compact tactile unit.",
+      "summary_cn": "针对机器人抓取与表面探索需同时测量法向/切向力并获得接触表面信息的问题，提出紧凑磁纤毛触觉传感器MagCilia：柔性磁纤毛结构配合霍尔传感器实现三维力感知，用准静态有限元分析多向加载下的形变与磁响应，并以因果历史融合回归CHFR结合当前磁场与近期变化解耦耦合磁通道。按标定记录五折交叉验证Fx/Fy/Fz均方根误差0.40/0.57/0.69N，力频域特征对六类表面分类准确率达99.39%",
+      "pdf_filename": "2610.09536.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.09536",
+      "search_text": "magcilia: a compact magnetociliary tactile sensor with 3d force sensing for robotic contact perception and grasping feedback  针对机器人抓取与表面探索需同时测量法向/切向力并获得接触表面信息的问题，提出紧凑磁纤毛触觉传感器magcilia：柔性磁纤毛结构配合霍尔传感器实现三维力感知，用准静态有限元分析多向加载下的形变与磁响应，并以因果历史融合回归chfr结合当前磁场与近期变化解耦耦合磁通道。按标定记录五折交叉验证fx/fy/fz均方根误差0.40/0.57/0.69n，力频域特征对六类表面分类准确率达99.39% robotic grasping and surface exploration benefit from simultaneous measurement of normal and tangential forces and from surface information obtained through contact. here, we present a compact magnetociliary tactile sensor (magcilia) that combines a flexible magnetic-cilia structure with a hall sensor for 3d force sensing. quasi-static finite element analysis is used to investigate structural deformation and magnetic responses under multidirectional loading. to reconstruct forces from the coupled magnetic channels, we propose causal history fusion regression (chfr), which combines current magnetic-field measurements with their recent changes. five-fold cross-validation grouped by calibration record yields root-mean-square errors of 0.40, 0.57, and 0.69 n for fx, fy, and fz, respectively, with corresponding coefficients of determination of 0.93, 0.90, and 0.92. robotic experiments demonstrate tangential-force-guided gripper adjustment and multi-axis load monitoring under external perturbations. frequency-domain features of the reconstructed forces distinguish six surface categories with 99.39% accuracy in three-fold cross-validation grouped by acquisition session. an online robotic demonstration additionally identifies all six tested surfaces. these results demonstrate 3d force reconstruction, grasping feedback, and surface recognition using a single compact tactile unit. department of mechanical engineering, national university of singapore; department of mechanical engineering, university of california, berkeley; mechanical engineering department, city university of hong kong; cas-cityu joint laboratory for robotic research, city university of hong kong shenzhen research institute yu feng, hao wu, haotian guo, haoming liu, william su, jingxiang guo, jiankun li, masayoshi tomizuka, wen jung li, jianshu zhou cs.ro"
+    },
+    {
+      "arxiv_id": "2610.09520",
+      "title": "Not All Uncertainty Matters: Simulation-in-the-Loop Fast-Slow Reasoning for Decision-Critical Autonomous Driving System",
+      "authors": "Jiayi Chen, Shuai Wang, Guangxu Zhu, Derrick Wing Kwan Ng, Chengzhong Xu, Kaibin Huang",
+      "affiliations": "Shenzhen Research Institute of Big Data; Shenzhen Institutes of Advanced Technology (SIAT), Chinese Academy of Sciences; University of New South Wales; University of Macau; The University of Hong Kong",
+      "published_date": "2026-10-07",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Large vision-language models (VLMs) provide powerful open-world perception and reasoning for autonomous driving, but their high computational cost and inference latency make continuous cloud-side use impractical. This motivates fast--slow collaboration, where efficient onboard modules handle real-time perception and control while cloud models provide high-level reasoning only when needed. The key challenge is deciding when cloud reasoning should influence time-critical driving decisions. Existing methods often rely on perception uncertainty, heuristic triggers, or resource-driven policies, without assessing whether resolving an uncertainty will improve planning. We propose \\textbf{SIGMA}, a simulation-in-the-loop framework for task-oriented fast--slow collaboration. SIGMA embeds the planner into uncertainty assessment and evaluates how plausible scene realizations under semantic and geometric uncertainty affect feasible trajectories and planning cost. Based on these outcomes, it estimates the expected reduction in planning cost from resolving uncertainty. We further introduce expected planning gain (EPG), a decision-level metric for cloud invocation, cloud-guidance integration, and request prioritization under deadline and resource constraints. Experiments in CARLA show that SIGMA reduces unnecessary cloud interactions while improving planning, efficiency, and navigation success in static and dynamic obstacle scenarios. Compared with fixed-period collaboration, SIGMA reduces unnecessary cloud interactions by 50\\%, improves navigation success by more than 6\\%, and cuts finish time by up to 26.2\\% in dynamic scenarios.",
+      "summary_cn": "针对云侧大视觉语言模型推理开销高、难以持续调用的问题，提出SIGMA：把规划器嵌入不确定性评估回路，在语义与几何不确定性下构造候选场景实现，经仿真在环评估其对可行轨迹集与规划代价的影响，据此给出决策级指标EPG（期望规划增益），统一用于云推理触发、云引导融合与截止期/资源约束下的请求排序。CARLA实验中相比固定周期协作减少50%不必要云交互，导航成功率提升超6%",
+      "pdf_filename": "2610.09520.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "规划",
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09520",
+      "search_text": "not all uncertainty matters: simulation-in-the-loop fast-slow reasoning for decision-critical autonomous driving system 规划 自动驾驶 多模态 针对云侧大视觉语言模型推理开销高、难以持续调用的问题，提出sigma：把规划器嵌入不确定性评估回路，在语义与几何不确定性下构造候选场景实现，经仿真在环评估其对可行轨迹集与规划代价的影响，据此给出决策级指标epg（期望规划增益），统一用于云推理触发、云引导融合与截止期/资源约束下的请求排序。carla实验中相比固定周期协作减少50%不必要云交互，导航成功率提升超6% large vision-language models (vlms) provide powerful open-world perception and reasoning for autonomous driving, but their high computational cost and inference latency make continuous cloud-side use impractical. this motivates fast--slow collaboration, where efficient onboard modules handle real-time perception and control while cloud models provide high-level reasoning only when needed. the key challenge is deciding when cloud reasoning should influence time-critical driving decisions. existing methods often rely on perception uncertainty, heuristic triggers, or resource-driven policies, without assessing whether resolving an uncertainty will improve planning. we propose \\textbf{sigma}, a simulation-in-the-loop framework for task-oriented fast--slow collaboration. sigma embeds the planner into uncertainty assessment and evaluates how plausible scene realizations under semantic and geometric uncertainty affect feasible trajectories and planning cost. based on these outcomes, it estimates the expected reduction in planning cost from resolving uncertainty. we further introduce expected planning gain (epg), a decision-level metric for cloud invocation, cloud-guidance integration, and request prioritization under deadline and resource constraints. experiments in carla show that sigma reduces unnecessary cloud interactions while improving planning, efficiency, and navigation success in static and dynamic obstacle scenarios. compared with fixed-period collaboration, sigma reduces unnecessary cloud interactions by 50\\%, improves navigation success by more than 6\\%, and cuts finish time by up to 26.2\\% in dynamic scenarios. shenzhen research institute of big data; shenzhen institutes of advanced technology (siat), chinese academy of sciences; university of new south wales; university of macau; the university of hong kong jiayi chen, shuai wang, guangxu zhu, derrick wing kwan ng, chengzhong xu, kaibin huang cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.09518",
+      "title": "ActiveLang: Active Open-Vocabulary 3D Mapping with Semantic-Uncertainty-Guided Exploration",
+      "authors": "Liyan Chen, Hairong Yin, Huangying Zhan, Yi Xu, Raymond A. Yeh, Philippos Mordohai",
+      "affiliations": "Stevens Institute of Technology; Purdue University; Goertek Alpha Labs",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "As robots increasingly assist humans with diverse tasks, they need both geometric and semantic understanding of their surroundings. Moreover, robots often operate in unfamiliar environments and take on new tasks without knowing the relevant concepts ahead of time. This motivates language-annotated 3D maps that support open-vocabulary scene understanding and human-robot interaction. We introduce ActiveLang, an autonomous system for active open-vocabulary 3D mapping with semantic-uncertainty-guided exploration. ActiveLang performs online language-feature adaptation on a compact dual-Gaussian representation to jointly reconstruct scene geometry, appearance, and open-vocabulary semantics with modest memory overhead. Its planner efficiently selects informative viewpoints, enabling effective mapping with fewer observations and lower computational cost. Experiments on Replica and ScanNet++ demonstrate substantial improvements in 2D and 3D open-vocabulary segmentation over both online and offline baselines, highlighting that actively exploring scenes builds language-annotated 3D maps more efficiently.",
+      "summary_cn": "针对机器人需要在陌生环境中同时获得几何与开放词汇语义理解的问题，提出ActiveLang：在紧凑双高斯表示上做在线语言特征适配，同时重建几何、外观与开放词汇语义，内存开销有限；规划器基于语义不确定性选择信息量大的视点，以更少观测和更低算力完成建图。在Replica与ScanNet++上2D与3D开放词汇分割均显著优于在线与离线基线，表明主动探索能更高效构建语言标注3D地图",
+      "pdf_filename": "2610.09518.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09518",
+      "search_text": "activelang: active open-vocabulary 3d mapping with semantic-uncertainty-guided exploration 规划 针对机器人需要在陌生环境中同时获得几何与开放词汇语义理解的问题，提出activelang：在紧凑双高斯表示上做在线语言特征适配，同时重建几何、外观与开放词汇语义，内存开销有限；规划器基于语义不确定性选择信息量大的视点，以更少观测和更低算力完成建图。在replica与scannet++上2d与3d开放词汇分割均显著优于在线与离线基线，表明主动探索能更高效构建语言标注3d地图 as robots increasingly assist humans with diverse tasks, they need both geometric and semantic understanding of their surroundings. moreover, robots often operate in unfamiliar environments and take on new tasks without knowing the relevant concepts ahead of time. this motivates language-annotated 3d maps that support open-vocabulary scene understanding and human-robot interaction. we introduce activelang, an autonomous system for active open-vocabulary 3d mapping with semantic-uncertainty-guided exploration. activelang performs online language-feature adaptation on a compact dual-gaussian representation to jointly reconstruct scene geometry, appearance, and open-vocabulary semantics with modest memory overhead. its planner efficiently selects informative viewpoints, enabling effective mapping with fewer observations and lower computational cost. experiments on replica and scannet++ demonstrate substantial improvements in 2d and 3d open-vocabulary segmentation over both online and offline baselines, highlighting that actively exploring scenes builds language-annotated 3d maps more efficiently. stevens institute of technology; purdue university; goertek alpha labs liyan chen, hairong yin, huangying zhan, yi xu, raymond a. yeh, philippos mordohai cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.09438",
+      "title": "Controllable Crowd Generation through World-Model Planning",
+      "authors": "JunGyu Lee, Jisu Shin, Seunghyun Shin, Hae-Gon Jeon",
+      "affiliations": "Yonsei University; Gwangju Institute of Science and Technology (GIST)",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV",
+      "abstract": "Crowd simulation plays a central role in robot navigation, autonomous driving, and urban planning. For these applications, realistic simulation requires crowds to adapt their behavior to environmental changes and user objectives. However, existing methods that rely on predefined control settings have limited flexibility in accommodating new user-specified objectives. To address this limitation, we propose Ctrl-CWM, a multi-agent Controllable Crowd World Model that integrates crowd generation and run-time control. Our key idea is to adapt the world-model principle of planning using imagined futures to crowd simulation. To this end, Ctrl-CWM consists of an encoder that learns a representation of human motion dynamics, an actor that proposes pedestrian displacements, a critic that evaluates imagined crowd trajectories, and a planner that selects actions. We first learn human motion dynamics through trajectory prediction on real-world pedestrian videos and then freeze the encoder to preserve them. Using this representation, the actor generates imagined crowd trajectories through repeated state updates, and the planner combines the critic's scores with user costs to select actions. Repeated planning advances the simulated crowd, while additional user costs introduce new control objectives without retraining. We extensively evaluate crowd generation under varied agent arrival conditions and run-time control across avoidance and attraction scenarios. Ctrl-CWM outperforms the state-of-the-art method on most crowd realism and collision metrics, and adapts crowd behaviors to user-specified objectives introduced during simulation. The project page is available at https://jungyu0413.github.io/Ctrl-CWM",
+      "summary_cn": "针对人群仿真依赖预定义控制设置、难以适配新用户目标的问题，提出可控人群世界模型Ctrl-CWM：先在真实行人视频上做轨迹预测学习人体运动动力学表示并冻结编码器，再由actor提议位移、critic评估想象轨迹、planner结合评分与用户代价选动作，反复规划推进人群演化。运行时加入新代价函数无需重训练即可引入新控制目标，在人群生成与避让/吸引控制场景中多数真实性指标优于现有方法",
+      "pdf_filename": "2610.09438.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "轨迹预测",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09438",
+      "search_text": "controllable crowd generation through world-model planning 世界模型 轨迹预测 规划 自动驾驶 针对人群仿真依赖预定义控制设置、难以适配新用户目标的问题，提出可控人群世界模型ctrl-cwm：先在真实行人视频上做轨迹预测学习人体运动动力学表示并冻结编码器，再由actor提议位移、critic评估想象轨迹、planner结合评分与用户代价选动作，反复规划推进人群演化。运行时加入新代价函数无需重训练即可引入新控制目标，在人群生成与避让/吸引控制场景中多数真实性指标优于现有方法 crowd simulation plays a central role in robot navigation, autonomous driving, and urban planning. for these applications, realistic simulation requires crowds to adapt their behavior to environmental changes and user objectives. however, existing methods that rely on predefined control settings have limited flexibility in accommodating new user-specified objectives. to address this limitation, we propose ctrl-cwm, a multi-agent controllable crowd world model that integrates crowd generation and run-time control. our key idea is to adapt the world-model principle of planning using imagined futures to crowd simulation. to this end, ctrl-cwm consists of an encoder that learns a representation of human motion dynamics, an actor that proposes pedestrian displacements, a critic that evaluates imagined crowd trajectories, and a planner that selects actions. we first learn human motion dynamics through trajectory prediction on real-world pedestrian videos and then freeze the encoder to preserve them. using this representation, the actor generates imagined crowd trajectories through repeated state updates, and the planner combines the critic's scores with user costs to select actions. repeated planning advances the simulated crowd, while additional user costs introduce new control objectives without retraining. we extensively evaluate crowd generation under varied agent arrival conditions and run-time control across avoidance and attraction scenarios. ctrl-cwm outperforms the state-of-the-art method on most crowd realism and collision metrics, and adapts crowd behaviors to user-specified objectives introduced during simulation. the project page is available at https://jungyu0413.github.io/ctrl-cwm yonsei university; gwangju institute of science and technology (gist) jungyu lee, jisu shin, seunghyun shin, hae-gon jeon cs.cv"
+    },
+    {
+      "arxiv_id": "2610.09383",
+      "title": "PPCAR-Net: Projection-Refined Parametric 3D Coronary Artery Reconstruction from Sparse X-ray Angiographic Views",
+      "authors": "Yu Ren, Hwee Kuan Lee, Tat-Jen Cham, Jonathan Yap, Khung Keong Yeo",
+      "affiliations": "Bioinformatics Institute, Agency for Science, Technology and Research (A*STAR), Singapore; College of Computing and Data Science, Nanyang Technological University; National Heart Centre Singapore",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV",
+      "abstract": "Sparse-view 3D coronary reconstruction commonly relies on cross-view correspondence and triangulation, which are vulnerable to vessel overlap and foreshortening, or on volumetric prediction followed by vascular-graph extraction, which does not directly provide centrelines and radii. We introduce PPCAR-Net, a projection-refined parametric coronary artery reconstruction network that directly predicts a branch-structured centreline-and-radius representation without explicit point matching, triangulation, or an intermediate volume. Given a variable number of segmented views, a coarse predictor combines frozen VGGT features with learned branch queries to estimate branch presence, B-spline centreline trajectories, and dense radius profiles. Projection-guided geometry and radius refiners then sample local evidence from the input views and apply residual corrections learned with 3D supervision. We evaluate representation fidelity and sparse-view reconstruction quantitatively and qualitatively. On simulated angiographic masks generated from CT-derived coronary anatomy, PPCAR-Net produces better connected artery reconstructions and achieves strong centreline accuracy, particularly for RCA, while maintaining competitive volumetric overlap. Coarse-to-fine inference takes 121 ms, enabling real-time reconstruction.",
+      "summary_cn": "针对稀疏视角冠脉3D重建依赖跨视对应与三角化（易受血管重叠、透视缩短影响）或先体素预测再抽取血管图（不直接给出中心线与半径）的问题，提出PPCAR-Net：用冻结的VGGT特征配合可学习分支查询直接预测分支存在性、B样条中心线轨迹与稠密半径剖面，再由投影引导的几何与半径细化器做残差修正。仿真掩码上重建连通性更好、RCA中心线精度高，粗到细推理仅121ms",
+      "pdf_filename": "2610.09383.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09383",
+      "search_text": "ppcar-net: projection-refined parametric 3d coronary artery reconstruction from sparse x-ray angiographic views 前馈3d重建 针对稀疏视角冠脉3d重建依赖跨视对应与三角化（易受血管重叠、透视缩短影响）或先体素预测再抽取血管图（不直接给出中心线与半径）的问题，提出ppcar-net：用冻结的vggt特征配合可学习分支查询直接预测分支存在性、b样条中心线轨迹与稠密半径剖面，再由投影引导的几何与半径细化器做残差修正。仿真掩码上重建连通性更好、rca中心线精度高，粗到细推理仅121ms sparse-view 3d coronary reconstruction commonly relies on cross-view correspondence and triangulation, which are vulnerable to vessel overlap and foreshortening, or on volumetric prediction followed by vascular-graph extraction, which does not directly provide centrelines and radii. we introduce ppcar-net, a projection-refined parametric coronary artery reconstruction network that directly predicts a branch-structured centreline-and-radius representation without explicit point matching, triangulation, or an intermediate volume. given a variable number of segmented views, a coarse predictor combines frozen vggt features with learned branch queries to estimate branch presence, b-spline centreline trajectories, and dense radius profiles. projection-guided geometry and radius refiners then sample local evidence from the input views and apply residual corrections learned with 3d supervision. we evaluate representation fidelity and sparse-view reconstruction quantitatively and qualitatively. on simulated angiographic masks generated from ct-derived coronary anatomy, ppcar-net produces better connected artery reconstructions and achieves strong centreline accuracy, particularly for rca, while maintaining competitive volumetric overlap. coarse-to-fine inference takes 121 ms, enabling real-time reconstruction. bioinformatics institute, agency for science, technology and research (a*star), singapore; college of computing and data science, nanyang technological university; national heart centre singapore yu ren, hwee kuan lee, tat-jen cham, jonathan yap, khung keong yeo cs.cv"
+    },
+    {
+      "arxiv_id": "2610.09376",
+      "title": "Unified Multi-plane Autoregressive Diffusion for 3D Multi-contrast MRI Synthesis",
+      "authors": "Yejee Shin, Geonhui Son, Jinglu Wang, Minwoo Jung, Yan Lu, Dosik Hwang",
+      "affiliations": "Yonsei University; Microsoft Research Asia; Korea Institute of Science and Technology",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV",
+      "abstract": "Acquiring a complete set of magnetic resonance imaging (MRI) contrasts is time-intensive and uncomfortable for patients, despite the diagnostic value of multi-contrast imaging. This motivates synthesizing missing contrasts from those already acquired, which is an inherently 3D problem requiring anatomical coherence across axial, sagittal, and coronal planes. However, fully 3D generative models are often impracti- cal under computational resources that scale cubically with volume size. We propose a unified Multi-Plane Autoregressive Diffusion (MPAD), a latent diffusion framework that achieves full-volume 3D synthesis using efficient plane-wise 2D operations while preserving volumetric coherence. A 3D autoencoder first compresses MRI scans into an isotropic 3D la- tent representation. A 2D diffusion model is then trained to reconstruct masked latent slices of the target contrast, conditioned on both source- contrast slices and unmasked target-contrast slices. During inference, we introduce plane-wise autoregressive synthesis with inter-plane priors. Slices are generated autoregressively in random order within one plane orientation to maintain intra-plane continuity, then propagated as con- ditioning priors to orthogonal plane orientations to enforce inter-plane consistency. Compared to 3D latent diffusion baselines, MPAD reduces training and inference FLOPs by 7x and 3x, respectively, while also lowering inference time and peak memory consumption. Experiments on multiple datasets demonstrate that MPAD achieves superior perfor- mance, generating high-fidelity 3D volumes and supporting one-to-many translation within a single unified model.",
+      "summary_cn": "针对多对比度MRI需在所有方向保持解剖一致、而全3D生成模型算力随体积立方增长的问题，提出多平面自回归扩散MPAD：先用3D自编码器压缩为各向同性隐表示，用2D扩散模型重建目标对比度的掩码隐切片，条件为源对比度切片与未掩码目标切片；推理在单一平面方向内随机序自回归生成并作为先验传播到正交平面。训练与推理FLOPs较3D隐扩散基线分别降低7倍与3倍",
+      "pdf_filename": "2610.09376.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "场景压缩",
+        "扩散模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09376",
+      "search_text": "unified multi-plane autoregressive diffusion for 3d multi-contrast mri synthesis 场景压缩 扩散模型 针对多对比度mri需在所有方向保持解剖一致、而全3d生成模型算力随体积立方增长的问题，提出多平面自回归扩散mpad：先用3d自编码器压缩为各向同性隐表示，用2d扩散模型重建目标对比度的掩码隐切片，条件为源对比度切片与未掩码目标切片；推理在单一平面方向内随机序自回归生成并作为先验传播到正交平面。训练与推理flops较3d隐扩散基线分别降低7倍与3倍 acquiring a complete set of magnetic resonance imaging (mri) contrasts is time-intensive and uncomfortable for patients, despite the diagnostic value of multi-contrast imaging. this motivates synthesizing missing contrasts from those already acquired, which is an inherently 3d problem requiring anatomical coherence across axial, sagittal, and coronal planes. however, fully 3d generative models are often impracti- cal under computational resources that scale cubically with volume size. we propose a unified multi-plane autoregressive diffusion (mpad), a latent diffusion framework that achieves full-volume 3d synthesis using efficient plane-wise 2d operations while preserving volumetric coherence. a 3d autoencoder first compresses mri scans into an isotropic 3d la- tent representation. a 2d diffusion model is then trained to reconstruct masked latent slices of the target contrast, conditioned on both source- contrast slices and unmasked target-contrast slices. during inference, we introduce plane-wise autoregressive synthesis with inter-plane priors. slices are generated autoregressively in random order within one plane orientation to maintain intra-plane continuity, then propagated as con- ditioning priors to orthogonal plane orientations to enforce inter-plane consistency. compared to 3d latent diffusion baselines, mpad reduces training and inference flops by 7x and 3x, respectively, while also lowering inference time and peak memory consumption. experiments on multiple datasets demonstrate that mpad achieves superior perfor- mance, generating high-fidelity 3d volumes and supporting one-to-many translation within a single unified model. yonsei university; microsoft research asia; korea institute of science and technology yejee shin, geonhui son, jinglu wang, minwoo jung, yan lu, dosik hwang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.09274",
+      "title": "Hardware-aware Calibrated Clustered Attention for Efficient Visual Geometric Transformers",
+      "authors": "Weitian Wang, Shubham Rai, Cecilia De La Parra, Akash Kumar",
+      "affiliations": "Robert Bosch GmbH, Germany; Ruhr University Bochum, Germany",
+      "published_date": "2026-10-07",
+      "categories": "cs.CV, cs.LG",
+      "abstract": "The Visual Geometry Grounded Transformer (VGGT) marks a significant leap forward in 3D scene reconstruction, as it is the first model that directly infers all key 3D attributes (camera poses, depths, and dense geometry) jointly in one pass. However, this joint inference mechanism requires global attention layers with extremely long sequences that causes a significant latency bottleneck. In this paper, we propose blockwise clustered attention (BC attention) to accelerate the global attention layers in VGGT. By limiting the clustering within HW-friendly neighborhood blocks, BC attention reduces the computation overhead of query clustering as well as the costly data movement between on- and off-chip memory. This enables BC attention to scale to long sequences and deliver practical latency improvements on GPUs. Moreover, we introduce a hashing hyperplane calibration method and a threshold-based error compensation method to reduce clustering errors efficiently, which is a bottleneck in the current clustered attention mechanism. Overall, our experiments on GPU demonstrate that calibrated BC attention accelerates the global attention layers by 2.10-2.63$\\times$ and the whole backbone by 1.77-2.35$\\times$ with negligible loss (1%) for large scenes. With a small performance loss (< 5%), calibrated BC attention further achieves a 2.26-2.87$\\times$ latency improvement on the global attention layers and a 1.90-2.55$\\times$ improvement on the backbone.",
+      "summary_cn": "针对VGGT联合推理相机位姿、深度与稠密几何时全局注意力序列极长、成为延迟瓶颈的问题，提出分块聚类注意力：把聚类限制在硬件友好的邻域块内，降低查询聚类开销与片内外数据搬移，使长序列可扩展；并给出哈希超平面校准与阈值误差补偿抑制聚类误差。GPU实测全局注意力层加速2.10–2.63倍、整个骨干1.77–2.35倍，大场景仅损失约1%",
+      "pdf_filename": "2610.09274.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09274",
+      "search_text": "hardware-aware calibrated clustered attention for efficient visual geometric transformers 前馈3d重建 针对vggt联合推理相机位姿、深度与稠密几何时全局注意力序列极长、成为延迟瓶颈的问题，提出分块聚类注意力：把聚类限制在硬件友好的邻域块内，降低查询聚类开销与片内外数据搬移，使长序列可扩展；并给出哈希超平面校准与阈值误差补偿抑制聚类误差。gpu实测全局注意力层加速2.10–2.63倍、整个骨干1.77–2.35倍，大场景仅损失约1% the visual geometry grounded transformer (vggt) marks a significant leap forward in 3d scene reconstruction, as it is the first model that directly infers all key 3d attributes (camera poses, depths, and dense geometry) jointly in one pass. however, this joint inference mechanism requires global attention layers with extremely long sequences that causes a significant latency bottleneck. in this paper, we propose blockwise clustered attention (bc attention) to accelerate the global attention layers in vggt. by limiting the clustering within hw-friendly neighborhood blocks, bc attention reduces the computation overhead of query clustering as well as the costly data movement between on- and off-chip memory. this enables bc attention to scale to long sequences and deliver practical latency improvements on gpus. moreover, we introduce a hashing hyperplane calibration method and a threshold-based error compensation method to reduce clustering errors efficiently, which is a bottleneck in the current clustered attention mechanism. overall, our experiments on gpu demonstrate that calibrated bc attention accelerates the global attention layers by 2.10-2.63$\\times$ and the whole backbone by 1.77-2.35$\\times$ with negligible loss (1%) for large scenes. with a small performance loss (< 5%), calibrated bc attention further achieves a 2.26-2.87$\\times$ latency improvement on the global attention layers and a 1.90-2.55$\\times$ improvement on the backbone. robert bosch gmbh, germany; ruhr university bochum, germany weitian wang, shubham rai, cecilia de la parra, akash kumar cs.cv, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.09173",
+      "title": "RDGSplat: Render-Dedicated Geometry for Novel View Synthesis",
+      "authors": "Zhijie Zheng, Xinhao Xiang, Jiawei Zhang",
+      "affiliations": "University of California, Davis",
+      "published_date": "2026-10-06",
+      "categories": "cs.CV",
+      "abstract": "3D foundation models enable efficient novel view synthesis by carrying a Gaussian head on the representation they already use for reconstruction. However, the views they render fall short of the geometry they recover, because that geometry is estimated under a metric objective and never scored on how it renders. Recent methods alleviate this by updating the backbone weights, but they thereby discard the metric predictions the model was built for and must be repeated for every new backbone. To this end, we propose RDGSplat, a framework that decodes a second geometry dedicated to rendering from a frozen 3D foundation model, leaving its metric predictions intact. In particular, we devise Render-Dedicated Geometry Decoding, which duplicates the pretrained decoders and optimizes the duplicates under photometric supervision alone. Then, a Target-Pose Conditioned Adapter is introduced to reformulate the representation those decoders read, conditioned on the target camera pose rather than the target image. Extensive experiments show that RDGSplat improves novel view synthesis across three feed-forward backbones on four benchmarks, with every pretrained weight frozen. On RE10K, it raises WM2.0 from 20.918 to 24.266\\,dB while training 205.5\\,M added parameters against a frozen 1.4\\,B backbone, and the depth and pose the same model predicts are unchanged.",
+      "summary_cn": "针对3D基础模型能重建几何却渲染质量不足、微调主干又破坏度量预测的问题，提出RDGSplat：在冻结的3D基础模型上复制预训练解码器作为渲染专用几何解码，仅以光度监督优化新增2.055亿参数，并用目标位姿条件适配器按目标相机位姿重构表示。三个前馈骨干、四个基准上稳定提升新视角合成，RE10K上把WM2.0从20.918dB提到24.266dB，深度与位姿预测保持不变",
+      "pdf_filename": "2610.09173.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.09173",
+      "search_text": "rdgsplat: render-dedicated geometry for novel view synthesis  针对3d基础模型能重建几何却渲染质量不足、微调主干又破坏度量预测的问题，提出rdgsplat：在冻结的3d基础模型上复制预训练解码器作为渲染专用几何解码，仅以光度监督优化新增2.055亿参数，并用目标位姿条件适配器按目标相机位姿重构表示。三个前馈骨干、四个基准上稳定提升新视角合成，re10k上把wm2.0从20.918db提到24.266db，深度与位姿预测保持不变 3d foundation models enable efficient novel view synthesis by carrying a gaussian head on the representation they already use for reconstruction. however, the views they render fall short of the geometry they recover, because that geometry is estimated under a metric objective and never scored on how it renders. recent methods alleviate this by updating the backbone weights, but they thereby discard the metric predictions the model was built for and must be repeated for every new backbone. to this end, we propose rdgsplat, a framework that decodes a second geometry dedicated to rendering from a frozen 3d foundation model, leaving its metric predictions intact. in particular, we devise render-dedicated geometry decoding, which duplicates the pretrained decoders and optimizes the duplicates under photometric supervision alone. then, a target-pose conditioned adapter is introduced to reformulate the representation those decoders read, conditioned on the target camera pose rather than the target image. extensive experiments show that rdgsplat improves novel view synthesis across three feed-forward backbones on four benchmarks, with every pretrained weight frozen. on re10k, it raises wm2.0 from 20.918 to 24.266\\,db while training 205.5\\,m added parameters against a frozen 1.4\\,b backbone, and the depth and pose the same model predicts are unchanged. university of california, davis zhijie zheng, xinhao xiang, jiawei zhang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.08983",
+      "title": "Zero-Shot Brain MRI Inpainting with 2.5D Unconditional Flow Priors",
+      "authors": "Arnela Hadzic, Franz Thaler, Simon Johannes Joham, Martin Urschler",
+      "affiliations": "Institute for Medical Informatics, Statistics and Documentation, Medical University of Graz, Graz, Austria",
+      "published_date": "2026-10-06",
+      "categories": "cs.CV",
+      "abstract": "Generative inpainting of brain MRI volumes is essential for synthesizing healthy tissue in pathological regions, improving the accuracy and reliability of automated downstream brain analysis applications such as image registration, brain extraction, and segmentation. However, standard 3D approaches are computationally prohibitive, while efficient 2D slice-wise methods suffer from severe inter-slice discontinuities. Furthermore, traditional models rely on conditional training, requiring task-specific learning of masked inputs. We propose a zero-shot brain MRI inpainting framework utilizing 2.5D unconditional flow priors to capture spatial context along the superior-inferior axis without the overhead of full 3D convolutions. During training, our flow matching model learns the joint distribution of adjacent axial slice triplets, modeling the manifold of healthy brain anatomy while explicitly excluding pathological regions from the loss function. At inference, the model processes the input triplets autoregressively along the depth axis. We employ the Restora-Flow solver to constrain the unconditional prior using the input mask, achieving accurate zero-shot inpainting. Evaluations show our 2.5D strategy resolves the structural discontinuities of 2D baselines, synthesizing plausible healthy tissue while maintaining volumetric consistency across the axial, sagittal, and coronal planes. As a final step, we generate and average an ensemble of multiple stochastic reconstructions to form the final prediction. Quantitative results benchmarked on the official BraTS 2026 Inpainting Challenge validation set demonstrate the effectiveness of our proposed approach, yielding an SSIM of 0.816 $\\pm$ 0.112, MSE of 0.007 $\\pm$ 0.005, and PSNR of 22.923 $\\pm$ 4.343. Code is available at https://github.com/imigraz/brats2026-inpainting.",
+      "summary_cn": "针对脑MRI生成式修补中3D方法算力过高、2D逐层法层间不连续的问题，提出零样本修补框架：仅训练2.5D无条件流匹配先验学习相邻三层轴位切片联合分布，并在损失中显式排除病灶区域；推理沿深度轴自回归生成，用Restora-Flow求解器以输入掩码约束先验，最后对多次随机重建取平均。在BraTS 2026修补挑战上消除2D基线结构断裂并保持三平面体积一致性",
+      "pdf_filename": "2610.08983.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.08983",
+      "search_text": "zero-shot brain mri inpainting with 2.5d unconditional flow priors  针对脑mri生成式修补中3d方法算力过高、2d逐层法层间不连续的问题，提出零样本修补框架：仅训练2.5d无条件流匹配先验学习相邻三层轴位切片联合分布，并在损失中显式排除病灶区域；推理沿深度轴自回归生成，用restora-flow求解器以输入掩码约束先验，最后对多次随机重建取平均。在brats 2026修补挑战上消除2d基线结构断裂并保持三平面体积一致性 generative inpainting of brain mri volumes is essential for synthesizing healthy tissue in pathological regions, improving the accuracy and reliability of automated downstream brain analysis applications such as image registration, brain extraction, and segmentation. however, standard 3d approaches are computationally prohibitive, while efficient 2d slice-wise methods suffer from severe inter-slice discontinuities. furthermore, traditional models rely on conditional training, requiring task-specific learning of masked inputs. we propose a zero-shot brain mri inpainting framework utilizing 2.5d unconditional flow priors to capture spatial context along the superior-inferior axis without the overhead of full 3d convolutions. during training, our flow matching model learns the joint distribution of adjacent axial slice triplets, modeling the manifold of healthy brain anatomy while explicitly excluding pathological regions from the loss function. at inference, the model processes the input triplets autoregressively along the depth axis. we employ the restora-flow solver to constrain the unconditional prior using the input mask, achieving accurate zero-shot inpainting. evaluations show our 2.5d strategy resolves the structural discontinuities of 2d baselines, synthesizing plausible healthy tissue while maintaining volumetric consistency across the axial, sagittal, and coronal planes. as a final step, we generate and average an ensemble of multiple stochastic reconstructions to form the final prediction. quantitative results benchmarked on the official brats 2026 inpainting challenge validation set demonstrate the effectiveness of our proposed approach, yielding an ssim of 0.816 $\\pm$ 0.112, mse of 0.007 $\\pm$ 0.005, and psnr of 22.923 $\\pm$ 4.343. code is available at https://github.com/imigraz/brats2026-inpainting. institute for medical informatics, statistics and documentation, medical university of graz, graz, austria arnela hadzic, franz thaler, simon johannes joham, martin urschler cs.cv"
+    },
+    {
+      "arxiv_id": "2610.08928",
+      "title": "Multi-Aspect Runtime Verification for Simulation-Based V&V of LLM-Enabled Autonomous Agents",
+      "authors": "Nikolaos Kekatos, Dimitrios Nikou, Anastasios Temperekidis, Alexios Lekidis, Nikolaos Kolokotronis, Panagiotis Katsaros, Stylianos Basagiannis",
+      "affiliations": "Clone Systems, Cyprus; International Hellenic University, Greece; University of Thessaly, Greece; University of Peloponnese, Greece; Aristotle University of Thessaloniki, Greece",
+      "published_date": "2026-10-06",
+      "categories": "cs.CR, cs.AI, cs.LO",
+      "abstract": "LLM-based agents are entering decision-support roles in defence staff work, where the obligations they must respect are already written down and binding, and where retraining is not available as a control because models arrive as procured components. What can be placed under engineering control is the interface between the agent and the systems it acts on. Those obligations are at once spatial, temporal and text-semantic, and a violation typically lives in the composition of a multi-step interaction, which is why per-event guardrails miss sequential tool-attack chains. We present a multi-aspect runtime-verification framework that decomposes a natural-language policy clause into a typed spatial/temporal/semantic triple over one canonical event stream, checks each aspect with its own monitoring specification, and fuses the verdicts through a four-valued algebra that carries provenance. The spatial aspect is interpreted over a weighted two-sorted location graph in which mission geometry and information-release topology are one object; we show that these spatial obligations are not in general subsumed by a first-order temporal specification. The past-time aspect runs on the unmodified MonPoly engine, which agrees with our reference monitor at every time point. Across two mission domains, casualty evacuation and contested sustainment, and one civil domain, composition under the precautionary blocking policy drives attack success to zero with no observed false positives and microsecond-scale per-event cost, while every single aspect and every pair leaves a substantial share of attacks succeeding. In a closed-loop experiment a policy-naive planner reaches a violating state in most unshielded missions and in none when shielded, and four refused episodes in five still recover to a compliant outcome.",
+      "summary_cn": "针对国防决策支持中LLM智能体不可重训、义务条款已成文的情形，提出多维运行时验证框架：把自然语言政策条款分解为空间、时间、语义三类，在统一事件流上各自监控后经带溯源的四值代数融合；空间义务用加权双分类位置图建模，并证明其不能被一阶时序规约涵盖。在伤员后送与保障对抗两域中组合监控使攻击成功率降为零、无误报、单事件开销微秒级",
+      "pdf_filename": "2610.08928.pdf",
+      "crawled_date": "2026-10-08",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "闭环仿真",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.08928",
+      "search_text": "multi-aspect runtime verification for simulation-based v&v of llm-enabled autonomous agents 闭环仿真 大语言模型 针对国防决策支持中llm智能体不可重训、义务条款已成文的情形，提出多维运行时验证框架：把自然语言政策条款分解为空间、时间、语义三类，在统一事件流上各自监控后经带溯源的四值代数融合；空间义务用加权双分类位置图建模，并证明其不能被一阶时序规约涵盖。在伤员后送与保障对抗两域中组合监控使攻击成功率降为零、无误报、单事件开销微秒级 llm-based agents are entering decision-support roles in defence staff work, where the obligations they must respect are already written down and binding, and where retraining is not available as a control because models arrive as procured components. what can be placed under engineering control is the interface between the agent and the systems it acts on. those obligations are at once spatial, temporal and text-semantic, and a violation typically lives in the composition of a multi-step interaction, which is why per-event guardrails miss sequential tool-attack chains. we present a multi-aspect runtime-verification framework that decomposes a natural-language policy clause into a typed spatial/temporal/semantic triple over one canonical event stream, checks each aspect with its own monitoring specification, and fuses the verdicts through a four-valued algebra that carries provenance. the spatial aspect is interpreted over a weighted two-sorted location graph in which mission geometry and information-release topology are one object; we show that these spatial obligations are not in general subsumed by a first-order temporal specification. the past-time aspect runs on the unmodified monpoly engine, which agrees with our reference monitor at every time point. across two mission domains, casualty evacuation and contested sustainment, and one civil domain, composition under the precautionary blocking policy drives attack success to zero with no observed false positives and microsecond-scale per-event cost, while every single aspect and every pair leaves a substantial share of attacks succeeding. in a closed-loop experiment a policy-naive planner reaches a violating state in most unshielded missions and in none when shielded, and four refused episodes in five still recover to a compliant outcome. clone systems, cyprus; international hellenic university, greece; university of thessaly, greece; university of peloponnese, greece; aristotle university of thessaloniki, greece nikolaos kekatos, dimitrios nikou, anastasios temperekidis, alexios lekidis, nikolaos kolokotronis, panagiotis katsaros, stylianos basagiannis cs.cr, cs.ai, cs.lo"
+    },
     {
       "arxiv_id": "2610.08791",
       "title": "World Models' Last Exam in Physics",
