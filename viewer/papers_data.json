@@ -1,14 +1,14 @@
 {
-  "count": 1530,
+  "count": 1551,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-14",
+  "crawled_date_max": "2026-10-15",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-13",
+  "published_date_max": "2026-10-14",
   "rating_counts": {
-    "S": 432,
-    "A": 648,
-    "B": 247,
-    "C": 203,
+    "S": 436,
+    "A": 652,
+    "B": 252,
+    "C": 211,
     "": 0
   },
   "tags": [
@@ -19,32 +19,32 @@
     },
     {
       "name": "自动驾驶",
-      "count": 286,
+      "count": 288,
       "group": "通用"
     },
     {
       "name": "规划",
-      "count": 281,
-      "group": "世界模型与仿真"
-    },
-    {
-      "name": "闭环仿真",
-      "count": 229,
+      "count": 288,
       "group": "世界模型与仿真"
     },
     {
       "name": "世界模型",
-      "count": 229,
+      "count": 234,
+      "group": "世界模型与仿真"
+    },
+    {
+      "name": "闭环仿真",
+      "count": 233,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 210,
+      "count": 215,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 157,
+      "count": 164,
       "group": "通用"
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "name": "强化学习",
-      "count": 101,
+      "count": 104,
       "group": "世界模型与仿真"
     },
     {
@@ -63,13 +63,13 @@
       "group": "前馈3D重建"
     },
     {
-      "name": "具身智能",
-      "count": 85,
+      "name": "仿真器",
+      "count": 86,
       "group": "通用"
     },
     {
-      "name": "仿真器",
-      "count": 84,
+      "name": "具身智能",
+      "count": 86,
       "group": "通用"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "name": "扩散模型",
-      "count": 54,
+      "count": 55,
       "group": "世界模型与仿真"
     },
     {
@@ -154,6 +154,418 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.20609",
+      "title": "SafeDriveVLA: Navigation-Conditioned World Model Dreaming for Conflict-Aware End-to-End Autonomous Driving",
+      "authors": "Shaoyuan Xie, Zihan Zhang, Jingxuan Wang, Jiashu Qu, Xiaoqing Liang, Lingdong Kong, Junchi Lu, Henrik I. Christensen, Qi Alfred Chen",
+      "affiliations": "UC Irvine; UC San Diego; University of Cincinnati; National University of Singapore",
+      "published_date": "2026-10-14",
+      "categories": "cs.RO",
+      "abstract": "Vision-Language-Action (VLA) models are gaining attention in autonomous driving, inheriting commonsense priors from large language models (LLMs) and widening the navigation interface from a fixed command set to free-form natural-language instructions. However, this open-ended interface exposes a new vulnerability surface: an inattentive driver may issue instructions that are unsafe given the current scene, and a malicious user may issue dangerous ones on purpose. We present the first benchmark suite that evaluates navigation following and conflict awareness together, along with adversarial robustness. Existing VLAs fall short on both: SimLingo completes no language-instructed lane change in closed loop, and all models degrade sharply under conflicting signals. We propose SafeDriveVLA, the first driving VLA that (1) explicitly predicts a three-level navigation-compliance mode to decouple conflict reasoning from action generation, and (2) uses navigation-conditioned world model dreaming to inform this prediction. Unlike prior world models that roll out expert or planned actions, ours dreams of strictly following the navigation signal, showing when following is safe. SafeDriveVLA reaches 88.16 Driving Score (DS) and 68.64% Success Rate (SR) on Bench2Drive, lifts closed-loop language following by 49.3% and reduces collisions under unsafe instructions from 60 to 38 compared to the best SimLingo variant. Video demonstrations are available on our project page.",
+      "summary_cn": "提出冲突感知端到端自动驾驶方法SafeDriveVLA：基准同时评测导航跟随、冲突意识与对抗鲁棒性，现有视觉—语言—动作模型在闭环中无法完成语言指令变道、遇冲突信号性能骤降。显式预测三级导航遵从模式以解耦冲突推理与动作生成，并用导航条件化世界模型做梦，严格模拟遵循导航信号判断何时安全跟随。Bench2Drive达88.16驾驶分与68.64%成功率，闭环语言跟随提升49.3%，不安全指令下碰撞从60降到38。",
+      "pdf_filename": "2610.20609.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "自动驾驶",
+        "多模态",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20609",
+      "search_text": "safedrivevla: navigation-conditioned world model dreaming for conflict-aware end-to-end autonomous driving 世界模型 闭环仿真 自动驾驶 多模态 大语言模型 提出冲突感知端到端自动驾驶方法safedrivevla：基准同时评测导航跟随、冲突意识与对抗鲁棒性，现有视觉—语言—动作模型在闭环中无法完成语言指令变道、遇冲突信号性能骤降。显式预测三级导航遵从模式以解耦冲突推理与动作生成，并用导航条件化世界模型做梦，严格模拟遵循导航信号判断何时安全跟随。bench2drive达88.16驾驶分与68.64%成功率，闭环语言跟随提升49.3%，不安全指令下碰撞从60降到38。 vision-language-action (vla) models are gaining attention in autonomous driving, inheriting commonsense priors from large language models (llms) and widening the navigation interface from a fixed command set to free-form natural-language instructions. however, this open-ended interface exposes a new vulnerability surface: an inattentive driver may issue instructions that are unsafe given the current scene, and a malicious user may issue dangerous ones on purpose. we present the first benchmark suite that evaluates navigation following and conflict awareness together, along with adversarial robustness. existing vlas fall short on both: simlingo completes no language-instructed lane change in closed loop, and all models degrade sharply under conflicting signals. we propose safedrivevla, the first driving vla that (1) explicitly predicts a three-level navigation-compliance mode to decouple conflict reasoning from action generation, and (2) uses navigation-conditioned world model dreaming to inform this prediction. unlike prior world models that roll out expert or planned actions, ours dreams of strictly following the navigation signal, showing when following is safe. safedrivevla reaches 88.16 driving score (ds) and 68.64% success rate (sr) on bench2drive, lifts closed-loop language following by 49.3% and reduces collisions under unsafe instructions from 60 to 38 compared to the best simlingo variant. video demonstrations are available on our project page. uc irvine; uc san diego; university of cincinnati; national university of singapore shaoyuan xie, zihan zhang, jingxuan wang, jiashu qu, xiaoqing liang, lingdong kong, junchi lu, henrik i. christensen, qi alfred chen cs.ro"
+    },
+    {
+      "arxiv_id": "2610.20604",
+      "title": "VITAL: From Visual Motion to Precise Action",
+      "authors": "Ao Liang, Youquan Liu, Mingxiao Li, Wei Chow, Lingdong Kong, Yue Liao, Dongyue Lu, Yu Yang, Wei Yin, Runnan Chen",
+      "affiliations": "Horizon Robotics; Shanghai Innovation Institute; Fudan University; National University of Singapore; Zhejiang University",
+      "published_date": "2026-10-14",
+      "categories": "cs.CV",
+      "abstract": "World-action models aim to turn visual anticipation into driving decisions, yet typically train action experts on trajectory representations defined independently of visual dynamics. This motivates deriving action targets directly from visual motion. We first examine a simpler setting in which trajectories are reconstructed from recorded future images. Even without the need for future prediction, reconstruction captures the dominant maneuver but leaves centimeter-scale errors. We therefore introduce VITAL (Vision-Induced Tokens for Action Learning), an action tokenizer that couples a visually derived motion scaffold with a compact residual encoding the trajectory error left by that scaffold. This representation makes visual motion the principal prediction target and gives small metric corrections a separate, normalized learning scale. Using flow matching, the action expert jointly predicts both components from the current image, ego state, and navigation command, without generating future images at inference. The same residual coordinates support bounded reinforcement post-training that refines execution while keeping the predicted visual scaffold fixed. With only one action denoising step, VITAL achieves 90.8 PDMS on NAVSIM v1 navtest, within 0.13 points of its ten-step score at 3.29x the end-to-end inference speed. Without retraining, it achieves 91.1 EPDMS on NAVSIM v2 navtest and 38.6 on navhard. Project page: https://worldbench.github.io/vital",
+      "summary_cn": "针对世界—动作模型把动作专家训练在与视觉动力学无关的轨迹表示上的问题，提出VITAL动作分词器：用视觉导出的运动骨架加紧凑残差编码骨架未覆盖的轨迹误差，让视觉运动成为主预测目标、米制修正独立归一化；以流匹配从图像、自车状态与导航指令预测两部分，不生成未来图像。一步去噪即在NAVSIM v1达90.8 PDMS、距十步仅0.13且快3.29倍，v2达91.1 EPDMS，同一残差坐标还支持有界强化学习后训练。",
+      "pdf_filename": "2610.20604.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20604",
+      "search_text": "vital: from visual motion to precise action 强化学习 针对世界—动作模型把动作专家训练在与视觉动力学无关的轨迹表示上的问题，提出vital动作分词器：用视觉导出的运动骨架加紧凑残差编码骨架未覆盖的轨迹误差，让视觉运动成为主预测目标、米制修正独立归一化；以流匹配从图像、自车状态与导航指令预测两部分，不生成未来图像。一步去噪即在navsim v1达90.8 pdms、距十步仅0.13且快3.29倍，v2达91.1 epdms，同一残差坐标还支持有界强化学习后训练。 world-action models aim to turn visual anticipation into driving decisions, yet typically train action experts on trajectory representations defined independently of visual dynamics. this motivates deriving action targets directly from visual motion. we first examine a simpler setting in which trajectories are reconstructed from recorded future images. even without the need for future prediction, reconstruction captures the dominant maneuver but leaves centimeter-scale errors. we therefore introduce vital (vision-induced tokens for action learning), an action tokenizer that couples a visually derived motion scaffold with a compact residual encoding the trajectory error left by that scaffold. this representation makes visual motion the principal prediction target and gives small metric corrections a separate, normalized learning scale. using flow matching, the action expert jointly predicts both components from the current image, ego state, and navigation command, without generating future images at inference. the same residual coordinates support bounded reinforcement post-training that refines execution while keeping the predicted visual scaffold fixed. with only one action denoising step, vital achieves 90.8 pdms on navsim v1 navtest, within 0.13 points of its ten-step score at 3.29x the end-to-end inference speed. without retraining, it achieves 91.1 epdms on navsim v2 navtest and 38.6 on navhard. project page: https://worldbench.github.io/vital horizon robotics; shanghai innovation institute; fudan university; national university of singapore; zhejiang university ao liang, youquan liu, mingxiao li, wei chow, lingdong kong, yue liao, dongyue lu, yu yang, wei yin, runnan chen cs.cv"
+    },
+    {
+      "arxiv_id": "2610.20538",
+      "title": "PrismaCoder: Pushing the Boundaries of Open Multimodal Code Intelligence through Decomposed Rubric Synthesis",
+      "authors": "Qiushi Sun, Jingyang Gong, Yang Liu, Qiaosheng Chen, Zhangyue Yin, Zixian Huang, Hanxu Hu, Jing Xiong, Fangzhi Xu, Haochen Tan, Haoli Bai, Lifeng Shang, Xiaoguang Li, Ben Kao, Qipeng Guo, Lingpeng Kong, Jiahui Gao",
+      "affiliations": "The University of Hong Kong; Nanjing University; Fudan University; Huawei Foundation Model Department; University of Zurich; Shanghai Innovation Institute",
+      "published_date": "2026-10-14",
+      "categories": "cs.CL, cs.AI, cs.CV, cs.LG, cs.SE",
+      "abstract": "Multimodal code intelligence connects the symbolic world of programs with the visual world their execution creates. Interest in this capability is burgeoning, as models are increasingly asked to produce charts, webpages, animations, and semi-structured documents. Recently, proprietary models have pushed far ahead, producing interactive artifacts even from a text description or a screenshot alone. Yet their data and training remain closed, and open progress is held back by the quantity and quality of available data and by the pipelines and methods for producing it. Quality is the harder of the two, since a sample must be correct as a program, well built, and above all visually right once rendered. No existing signal covers all three. Execution often returns just a pass or fail, code similarity does not map to the visual output, and task-specific verifiers do not generalize. To push open progress further, we start from the data side with PrismaForge, a hierarchical data pipeline centered on a synthesized rubric that decomposes these factors into checkable criteria. The same rubric serves as both filter and reward: it curates the supervised corpus, then drives reinforcement learning on visual-coding tasks. Leveraging PrismaForge for data synthesis and filtering, we build PrismaCoder-2M, the most diverse open dataset for multimodal code intelligence and the largest to date. On the model side, we train PrismaCoder-9B and PrismaCoder-35B on this data and release both. They lead the open state of the art by a wide margin and rival leading proprietary systems. Our analyses further show that the proposed rubric-based pipeline improves multimodal coding performance across model backbones. We release our code and data at https://qiushisun.github.io/PrismaCoder-Home/.",
+      "summary_cn": "面向多模态代码智能，提出PrismaForge分层数据流水线，用合成的评分细则把程序正确、工程良好、渲染视觉正确三因素拆成可检查条目，同一细则既当数据过滤器又当强化学习奖励。据此构建两百万规模开放数据集PrismaCoder-2M，并训练发布PrismaCoder-9B与35B，大幅领先开放最优、逼近领先闭源系统；分析表明基于细则的流水线能跨骨干提升多模态编码性能。",
+      "pdf_filename": "2610.20538.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "强化学习",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20538",
+      "search_text": "prismacoder: pushing the boundaries of open multimodal code intelligence through decomposed rubric synthesis 强化学习 多模态 面向多模态代码智能，提出prismaforge分层数据流水线，用合成的评分细则把程序正确、工程良好、渲染视觉正确三因素拆成可检查条目，同一细则既当数据过滤器又当强化学习奖励。据此构建两百万规模开放数据集prismacoder-2m，并训练发布prismacoder-9b与35b，大幅领先开放最优、逼近领先闭源系统；分析表明基于细则的流水线能跨骨干提升多模态编码性能。 multimodal code intelligence connects the symbolic world of programs with the visual world their execution creates. interest in this capability is burgeoning, as models are increasingly asked to produce charts, webpages, animations, and semi-structured documents. recently, proprietary models have pushed far ahead, producing interactive artifacts even from a text description or a screenshot alone. yet their data and training remain closed, and open progress is held back by the quantity and quality of available data and by the pipelines and methods for producing it. quality is the harder of the two, since a sample must be correct as a program, well built, and above all visually right once rendered. no existing signal covers all three. execution often returns just a pass or fail, code similarity does not map to the visual output, and task-specific verifiers do not generalize. to push open progress further, we start from the data side with prismaforge, a hierarchical data pipeline centered on a synthesized rubric that decomposes these factors into checkable criteria. the same rubric serves as both filter and reward: it curates the supervised corpus, then drives reinforcement learning on visual-coding tasks. leveraging prismaforge for data synthesis and filtering, we build prismacoder-2m, the most diverse open dataset for multimodal code intelligence and the largest to date. on the model side, we train prismacoder-9b and prismacoder-35b on this data and release both. they lead the open state of the art by a wide margin and rival leading proprietary systems. our analyses further show that the proposed rubric-based pipeline improves multimodal coding performance across model backbones. we release our code and data at https://qiushisun.github.io/prismacoder-home/. the university of hong kong; nanjing university; fudan university; huawei foundation model department; university of zurich; shanghai innovation institute qiushi sun, jingyang gong, yang liu, qiaosheng chen, zhangyue yin, zixian huang, hanxu hu, jing xiong, fangzhi xu, haochen tan, haoli bai, lifeng shang, xiaoguang li, ben kao, qipeng guo, lingpeng kong, jiahui gao cs.cl, cs.ai, cs.cv, cs.lg, cs.se"
+    },
+    {
+      "arxiv_id": "2610.20457",
+      "title": "Same Claim, Different Interpretations: How LLM Agents Resolve Ambiguity in Scientific Claims",
+      "authors": "Delip Rao, Ahmed Muharram, Chris Callison-Burch",
+      "affiliations": "University of Pennsylvania",
+      "published_date": "2026-10-14",
+      "categories": "cs.CL",
+      "abstract": "Co-scientists and agentic scientific claim verifiers are increasingly used to assess claims across the sciences. Natural-language scientific claims, written for human experts, are often underspecified and so admit several defensible interpretations. Such verifiers usually pick one, often tacitly, and benchmarks score their verdicts against expert labels without recording the expert's interpretation or the verifier's in a comparable form. This leads to disagreements with expert labels that cannot be traced to the evidence or the interpretation, and to compute spent on unchecked interpretations. We introduce Claim Cards to make such interpretations explicit in the reasoning itself. A Claim Card records a verifier's interpretation as nine fields before evidence gathering, each marked stated, inferred, or default. To test whether an agent's interpretation can change its verdict, we ran a GPT-5.4 agent five times on each of 60 expert-labeled materials-science and biomedical claims with a card, without one, and with one card frozen across runs (900 runs). Over 40% of card fields were not marked stated, and a card added about a tenth to a run's GPT-5.4 tokens and time without measurably changing agreement with expert labels. The agent's own interpretations varied between runs, although within a claim this variation did not measurably track the verdict. A deliberate change to one field of the frozen card, however, making the quantifier universal or the threshold for support stricter, changed the verdict on about a third of the claims, against about one in seven expected by chance (p < 0.001 for each edit). On 24 materials-science claims run with computational tools, the stricter threshold also changed what the agent asked those tools to compute. We therefore argue that verdicts should be reported with their interpretations and that benchmarks could publish the interpretation behind each label.",
+      "summary_cn": "论文指出科学论断核验器常默默选定一种解释，基准只对结论打分，与专家标签的分歧无法归因。作者提出论断卡：取证前用九字段记录核验器解释，并标记为原文陈述、推断或默认。在60条专家标注的材料与生物医学论断上各跑五次，四成以上字段非原文陈述，加卡使开销增一成却不改善与专家标签一致；改某字段为全称量化或收紧阈值，则约三分之一论断翻转。",
+      "pdf_filename": "2610.20457.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20457",
+      "search_text": "same claim, different interpretations: how llm agents resolve ambiguity in scientific claims 大语言模型 论文指出科学论断核验器常默默选定一种解释，基准只对结论打分，与专家标签的分歧无法归因。作者提出论断卡：取证前用九字段记录核验器解释，并标记为原文陈述、推断或默认。在60条专家标注的材料与生物医学论断上各跑五次，四成以上字段非原文陈述，加卡使开销增一成却不改善与专家标签一致；改某字段为全称量化或收紧阈值，则约三分之一论断翻转。 co-scientists and agentic scientific claim verifiers are increasingly used to assess claims across the sciences. natural-language scientific claims, written for human experts, are often underspecified and so admit several defensible interpretations. such verifiers usually pick one, often tacitly, and benchmarks score their verdicts against expert labels without recording the expert's interpretation or the verifier's in a comparable form. this leads to disagreements with expert labels that cannot be traced to the evidence or the interpretation, and to compute spent on unchecked interpretations. we introduce claim cards to make such interpretations explicit in the reasoning itself. a claim card records a verifier's interpretation as nine fields before evidence gathering, each marked stated, inferred, or default. to test whether an agent's interpretation can change its verdict, we ran a gpt-5.4 agent five times on each of 60 expert-labeled materials-science and biomedical claims with a card, without one, and with one card frozen across runs (900 runs). over 40% of card fields were not marked stated, and a card added about a tenth to a run's gpt-5.4 tokens and time without measurably changing agreement with expert labels. the agent's own interpretations varied between runs, although within a claim this variation did not measurably track the verdict. a deliberate change to one field of the frozen card, however, making the quantifier universal or the threshold for support stricter, changed the verdict on about a third of the claims, against about one in seven expected by chance (p < 0.001 for each edit). on 24 materials-science claims run with computational tools, the stricter threshold also changed what the agent asked those tools to compute. we therefore argue that verdicts should be reported with their interpretations and that benchmarks could publish the interpretation behind each label. university of pennsylvania delip rao, ahmed muharram, chris callison-burch cs.cl"
+    },
+    {
+      "arxiv_id": "2610.20442",
+      "title": "Towards Agentic Robots: Model, Data, Environment, and Harness",
+      "authors": "Chonghan Qin, Dongming Wu, Kaituo Feng, Jiaxu Wang, Xinlei Yu, Peiwen Sun, Yijia Fan, Xilin He, Bingao Chen, Weitong Lian, Ryan Ji, Wenqi Ren, Xiaobin Hu, Dahua Lin, Yu-Gang Jiang, Xiangyu Yue",
+      "affiliations": "The Chinese University of Hong Kong; Fudan University; Tsinghua University; Zhejiang University; Sun Yat-sen University; NovaXBot",
+      "published_date": "2026-10-14",
+      "categories": "cs.RO",
+      "abstract": "Foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and real-world execution. We characterize this emerging paradigm as an agentic robots, in which agents reason over human instructions, interact with robotic environments, rectify execution errors autonomously, and dynamically adjust operational strategies. Although this field develops fast, current studies are not well connected. Researchers have no consistent view of how to combine different agentic functions into a complete robot system. This paper provides a unified overview of existing research on agentic robots. We first trace the development from robot policies to agentic systems, covering vision-language-action models, world models, and world-action models. We then clarify the definition and scope of agentic robots and organize existing research into seventeen categories across four functional domains: Model, Data, Environment, and Harness. Across these domains, we examine how agents shape model learning and robot decisions, collect and curate robot data, construct worlds, tasks, and tests for learning and evaluation, and organize capabilities for robot use. Finally, we discuss open challenges and outline directions for future research. Looking forward, we hope this work contributes to a clearer understanding of agentic robots and supports new approaches to making them more capable, reliable, and adaptive.",
+      "summary_cn": "综述智能体化机器人范式：基础模型正把机器人智能从底层动作预测推向数据采集、模型训练、任务规划与真实执行的闭环编排。梳理从机器人策略到智能体系统的演进，覆盖视觉—语言—动作模型、世界模型与世界—动作模型，把研究归入模型、数据、环境、工具链四个域十七类，讨论智能体如何塑造模型学习与决策、采集整理机器人数据、构建世界与测试，列出开放挑战。",
+      "pdf_filename": "2610.20442.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20442",
+      "search_text": "towards agentic robots: model, data, environment, and harness 世界模型 闭环仿真 规划 多模态 综述智能体化机器人范式：基础模型正把机器人智能从底层动作预测推向数据采集、模型训练、任务规划与真实执行的闭环编排。梳理从机器人策略到智能体系统的演进，覆盖视觉—语言—动作模型、世界模型与世界—动作模型，把研究归入模型、数据、环境、工具链四个域十七类，讨论智能体如何塑造模型学习与决策、采集整理机器人数据、构建世界与测试，列出开放挑战。 foundation models are driving a paradigm shift in robotic intelligence, moving beyond low-level action prediction to goal-directed orchestration of data collection, model training, task planning, and real-world execution. we characterize this emerging paradigm as an agentic robots, in which agents reason over human instructions, interact with robotic environments, rectify execution errors autonomously, and dynamically adjust operational strategies. although this field develops fast, current studies are not well connected. researchers have no consistent view of how to combine different agentic functions into a complete robot system. this paper provides a unified overview of existing research on agentic robots. we first trace the development from robot policies to agentic systems, covering vision-language-action models, world models, and world-action models. we then clarify the definition and scope of agentic robots and organize existing research into seventeen categories across four functional domains: model, data, environment, and harness. across these domains, we examine how agents shape model learning and robot decisions, collect and curate robot data, construct worlds, tasks, and tests for learning and evaluation, and organize capabilities for robot use. finally, we discuss open challenges and outline directions for future research. looking forward, we hope this work contributes to a clearer understanding of agentic robots and supports new approaches to making them more capable, reliable, and adaptive. the chinese university of hong kong; fudan university; tsinghua university; zhejiang university; sun yat-sen university; novaxbot chonghan qin, dongming wu, kaituo feng, jiaxu wang, xinlei yu, peiwen sun, yijia fan, xilin he, bingao chen, weitong lian, ryan ji, wenqi ren, xiaobin hu, dahua lin, yu-gang jiang, xiangyu yue cs.ro"
+    },
+    {
+      "arxiv_id": "2610.20205",
+      "title": "What and Where in Identifying and Quantifying Conventions in Humans and AI Agents",
+      "authors": "Makoto Fukushima, Tim Puphal",
+      "affiliations": "Honda Research Institute Japan; Honda Research Institute Europe",
+      "published_date": "2026-10-14",
+      "categories": "cs.HC, cs.AI, cs.MA",
+      "abstract": "Cooperative success rests in part on implicit communication. Partners converge on conventions: regularities that give an action meaning beyond its direct effect. Yet conventions are usually observed only indirectly: a score drop when partners are swapped shows that a convention existed, but not what it was or where it was used. In the card game Hanabi, the exact probability that a play fails can be computed from the hints received and the cards in view. Players who use conventions succeed more often than this prediction allows; the resulting margin is the convention gap. Off-belief learning provides a hierarchy of agents (levels 1-5) whose first level uses no conventions by construction and whose later levels use progressively more. For humans and these agents on one scale, we ask what the conventions are and where they are used. On what: in two independently collected corpora of human games, humans show a larger gap than every agent level. On the conventions both populations use, however, humans do no better than level 2. The human advantage is concentrated in a situation that no agent level learns to use: hints that point to a card other than the ones they touch. On where: conventions depend on what the player already knows about the card, not on how recently it was hinted, and they are used most in the mid-game; humans use them earlier and later in the game than the agents. In interventions on the agents, blocking a single high-gap situation costs little, because meaning reroutes to other situations, but blocking several together costs far more than the sum of the single costs. Thus, the convention gap turns conventions from an inferred cause of score loss into a measurable, comparable, and causally testable object.",
+      "summary_cn": "论文把约定变成可测量对象：在Hanabi中由提示与可见牌可算出出牌失败的确切概率，超出部分即约定差。作者用off-belief学习的1~5级智能体与人类同尺度对比，两个人类语料上人类约定差均大于所有智能体层级，但共有约定上人类不超过2级；人类优势集中在一类智能体学不会的提示，即指向未被触碰的牌。干预显示封锁单个高差情境无代价，多个一起封锁则远超单点之和。",
+      "pdf_filename": "2610.20205.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.20205",
+      "search_text": "what and where in identifying and quantifying conventions in humans and ai agents  论文把约定变成可测量对象：在hanabi中由提示与可见牌可算出出牌失败的确切概率，超出部分即约定差。作者用off-belief学习的1~5级智能体与人类同尺度对比，两个人类语料上人类约定差均大于所有智能体层级，但共有约定上人类不超过2级；人类优势集中在一类智能体学不会的提示，即指向未被触碰的牌。干预显示封锁单个高差情境无代价，多个一起封锁则远超单点之和。 cooperative success rests in part on implicit communication. partners converge on conventions: regularities that give an action meaning beyond its direct effect. yet conventions are usually observed only indirectly: a score drop when partners are swapped shows that a convention existed, but not what it was or where it was used. in the card game hanabi, the exact probability that a play fails can be computed from the hints received and the cards in view. players who use conventions succeed more often than this prediction allows; the resulting margin is the convention gap. off-belief learning provides a hierarchy of agents (levels 1-5) whose first level uses no conventions by construction and whose later levels use progressively more. for humans and these agents on one scale, we ask what the conventions are and where they are used. on what: in two independently collected corpora of human games, humans show a larger gap than every agent level. on the conventions both populations use, however, humans do no better than level 2. the human advantage is concentrated in a situation that no agent level learns to use: hints that point to a card other than the ones they touch. on where: conventions depend on what the player already knows about the card, not on how recently it was hinted, and they are used most in the mid-game; humans use them earlier and later in the game than the agents. in interventions on the agents, blocking a single high-gap situation costs little, because meaning reroutes to other situations, but blocking several together costs far more than the sum of the single costs. thus, the convention gap turns conventions from an inferred cause of score loss into a measurable, comparable, and causally testable object. honda research institute japan; honda research institute europe makoto fukushima, tim puphal cs.hc, cs.ai, cs.ma"
+    },
+    {
+      "arxiv_id": "2610.20203",
+      "title": "Investigating Behavior Cloning from Few Demonstrations for Autonomous Driving based on Bird's-Eye View in Simulated Cities",
+      "authors": "Eric Aislan Antonelo, Gustavo Claudio Karl Couto, Christian Möller, Pedro Henrique Fernandes",
+      "affiliations": "Federal University of Santa Catarina; Abo Akademi University",
+      "published_date": "2026-10-14",
+      "categories": "cs.RO, cs.LG",
+      "abstract": "This paper investigates the use of Behavior Cloning (BC) for autonomous driving from a bird's-eye view (BEV) perspective in simulated urban environments. BC uses supervised learning to mimic expert driving behaviors. Previous works have applied BC in the CARLA simulator but did not fully address the challenges of traffic light compliance. Our approach enhances BC by integrating a kernel density estimator to adjust training sample weights based on action density, thereby improving the learning of rare but critical actions such as stopping at red lights and accelerating at green lights, specially in scenarios of scarce number of expert demonstrations. Using BEV inputs, which provide an abstract top-down view of the driving environment, our method simplifies the policy learning process. The trained convolutional neural network (CNN) outputs steering and acceleration actions based on these BEV inputs and additional state variables. Experimental results in the CARLA simulator demonstrate that our weighted BC method significantly improves driving performance, achieving higher route completion compared to standard BC. This weighted approach proved to be crucial in learning correct driving behaviors, particularly in test environments not encountered during training, highlighting its potential for enhancing autonomous vehicle navigation.",
+      "summary_cn": "论文研究仿真城市中基于鸟瞰图BEV的自动驾驶行为克隆：CARLA中已有工作未很好解决红绿灯合规，作者用核密度估计按动作密度调整训练样本权重，强化红灯停车、绿灯起步等稀少但关键的行为，配合抽象俯视BEV输入简化策略学习，卷积网络由BEV与状态变量输出转向和加速度。实验显示加权行为克隆显著提升路径完成率，在未见的测试环境中尤为关键。",
+      "pdf_filename": "2610.20203.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "强化学习",
+        "自动驾驶",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20203",
+      "search_text": "investigating behavior cloning from few demonstrations for autonomous driving based on bird's-eye view in simulated cities 强化学习 自动驾驶 仿真器 论文研究仿真城市中基于鸟瞰图bev的自动驾驶行为克隆：carla中已有工作未很好解决红绿灯合规，作者用核密度估计按动作密度调整训练样本权重，强化红灯停车、绿灯起步等稀少但关键的行为，配合抽象俯视bev输入简化策略学习，卷积网络由bev与状态变量输出转向和加速度。实验显示加权行为克隆显著提升路径完成率，在未见的测试环境中尤为关键。 this paper investigates the use of behavior cloning (bc) for autonomous driving from a bird's-eye view (bev) perspective in simulated urban environments. bc uses supervised learning to mimic expert driving behaviors. previous works have applied bc in the carla simulator but did not fully address the challenges of traffic light compliance. our approach enhances bc by integrating a kernel density estimator to adjust training sample weights based on action density, thereby improving the learning of rare but critical actions such as stopping at red lights and accelerating at green lights, specially in scenarios of scarce number of expert demonstrations. using bev inputs, which provide an abstract top-down view of the driving environment, our method simplifies the policy learning process. the trained convolutional neural network (cnn) outputs steering and acceleration actions based on these bev inputs and additional state variables. experimental results in the carla simulator demonstrate that our weighted bc method significantly improves driving performance, achieving higher route completion compared to standard bc. this weighted approach proved to be crucial in learning correct driving behaviors, particularly in test environments not encountered during training, highlighting its potential for enhancing autonomous vehicle navigation. federal university of santa catarina; abo akademi university eric aislan antonelo, gustavo claudio karl couto, christian möller, pedro henrique fernandes cs.ro, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.19955",
+      "title": "Neurosymbolic Learning of Interpretable World Models",
+      "authors": "Riccardo Andreoni, Massimiliano Ronzani, Chiara Ghidini, Alessandro Daniele, Emile van Krieken",
+      "affiliations": "Fondazione Bruno Kessler; Free University of Bozen-Bolzano; Vrije Universiteit Amsterdam",
+      "published_date": "2026-10-14",
+      "categories": "cs.AI",
+      "abstract": "World models aim to learn compact representations of an environment from observations, enabling agents to predict future states and plan their behaviour. However, most existing approaches learn black-box representations, with limited ability to incorporate prior knowledge about the world. We introduce Concept-Grounded World Models (CGWMs), a neurosymbolic world model design that instead learns interpretable concept representations. We learn these concepts from observations using explicit and complete knowledge, expressed in temporal logic, that specifies the valid world states and the temporal relations governing their dynamics. Furthermore, we directly use this knowledge by formulating planning as differentiable reasoning, optimising the agent's actions by gradient ascent to satisfy a goal. We experimentally compare CGWM with a purely neural baseline and a neurosymbolic baseline on two game environments. We find that CGWMs ground concepts much more accurately, even over long horizons, resulting in significantly more robust planning both in and out of distribution.",
+      "summary_cn": "提出概念落地世界模型CGWM：用时序逻辑表达的显式完整知识规定合法世界状态及其动态关系，据此从观测中学习可解释概念表示，并把规划形式化为可微推理，用梯度上升优化动作以满足目标。在两个游戏环境上与纯神经基线和神经符号基线对比，CGWM即使长时域下概念落地也更准确，分布内与分布外规划都更鲁棒，说明注入知识可同时提升可解释性与规划可靠性。",
+      "pdf_filename": "2610.19955.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19955",
+      "search_text": "neurosymbolic learning of interpretable world models 世界模型 规划 提出概念落地世界模型cgwm：用时序逻辑表达的显式完整知识规定合法世界状态及其动态关系，据此从观测中学习可解释概念表示，并把规划形式化为可微推理，用梯度上升优化动作以满足目标。在两个游戏环境上与纯神经基线和神经符号基线对比，cgwm即使长时域下概念落地也更准确，分布内与分布外规划都更鲁棒，说明注入知识可同时提升可解释性与规划可靠性。 world models aim to learn compact representations of an environment from observations, enabling agents to predict future states and plan their behaviour. however, most existing approaches learn black-box representations, with limited ability to incorporate prior knowledge about the world. we introduce concept-grounded world models (cgwms), a neurosymbolic world model design that instead learns interpretable concept representations. we learn these concepts from observations using explicit and complete knowledge, expressed in temporal logic, that specifies the valid world states and the temporal relations governing their dynamics. furthermore, we directly use this knowledge by formulating planning as differentiable reasoning, optimising the agent's actions by gradient ascent to satisfy a goal. we experimentally compare cgwm with a purely neural baseline and a neurosymbolic baseline on two game environments. we find that cgwms ground concepts much more accurately, even over long horizons, resulting in significantly more robust planning both in and out of distribution. fondazione bruno kessler; free university of bozen-bolzano; vrije universiteit amsterdam riccardo andreoni, massimiliano ronzani, chiara ghidini, alessandro daniele, emile van krieken cs.ai"
+    },
+    {
+      "arxiv_id": "2610.19911",
+      "title": "CARD: Closing the Teacher-Student Loop for Adversarial Robustness Distillation",
+      "authors": "Zhi Li, Haowei Liu, Hongchen Yang, Xiaoxuan Wang, Song Gao, Zhenli He, Wei Zhou, Shaowen Yao",
+      "affiliations": "Yunnan University; Yunnan Normal University",
+      "published_date": "2026-10-14",
+      "categories": "cs.LG, cs.CV",
+      "abstract": "Adversarial robustness distillation typically treats a robust teacher as a fixed knowledge source and transfers robustness to a compact student in a one-way manner. This paradigm terminates teacher-student interaction once the student is distilled, thereby discarding potentially useful feedback from the distilled student. However, exploiting such feedback is nontrivial because indiscriminate weak-to-strong transfer may propagate student errors to the teacher. To address this issue, we propose Cyclic Adversarial Robustness Distillation (CARD), a closed-loop framework that turns the distilled student into a feedback source for refining the robust teacher and subsequently transfers the teacher gains back to the same student. CARD first performs strong-to-weak adversarial distillation and then uses reliability-enhanced student feedback to refine the robust teacher. The refinement combines inverse adversarial student feedback with teacher-student discrepancy maximization, after which the refined teacher is used to continue training the same student under the unchanged base distillation objective. We further establish a sample-level sufficient condition for reliable weak-to-strong feedback transfer and derive a distribution-level upper bound on the refined teacher's risk. Experiments on CIFAR-10, CIFAR-100, and TinyImageNet-10 across multiple teacher-student architectures and base distillation methods show that CARD improves adversarial robustness in most evaluated settings while generally preserving clean accuracy. These results show that the distilled student can provide useful feedback to the teacher, enabling robustness transfer to proceed beyond the conventional one-way teacher-to-student paradigm.",
+      "summary_cn": "提出CARD循环对抗鲁棒性蒸馏：把蒸馏后的学生变成反馈源来精炼鲁棒教师，再把教师增益回传给同一学生——先做强到弱对抗蒸馏，再用增强可靠性的学生反馈精炼教师，结合逆向对抗反馈与师生差异最大化，随后在不变的基础蒸馏目标下继续训练学生。给出弱到强反馈可靠的样本级充分条件与精炼教师风险的分布级上界；在CIFAR-10/100与TinyImageNet-10上多数设置提升鲁棒性且保持精度。",
+      "pdf_filename": "2610.19911.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19911",
+      "search_text": "card: closing the teacher-student loop for adversarial robustness distillation 闭环仿真 提出card循环对抗鲁棒性蒸馏：把蒸馏后的学生变成反馈源来精炼鲁棒教师，再把教师增益回传给同一学生——先做强到弱对抗蒸馏，再用增强可靠性的学生反馈精炼教师，结合逆向对抗反馈与师生差异最大化，随后在不变的基础蒸馏目标下继续训练学生。给出弱到强反馈可靠的样本级充分条件与精炼教师风险的分布级上界；在cifar-10/100与tinyimagenet-10上多数设置提升鲁棒性且保持精度。 adversarial robustness distillation typically treats a robust teacher as a fixed knowledge source and transfers robustness to a compact student in a one-way manner. this paradigm terminates teacher-student interaction once the student is distilled, thereby discarding potentially useful feedback from the distilled student. however, exploiting such feedback is nontrivial because indiscriminate weak-to-strong transfer may propagate student errors to the teacher. to address this issue, we propose cyclic adversarial robustness distillation (card), a closed-loop framework that turns the distilled student into a feedback source for refining the robust teacher and subsequently transfers the teacher gains back to the same student. card first performs strong-to-weak adversarial distillation and then uses reliability-enhanced student feedback to refine the robust teacher. the refinement combines inverse adversarial student feedback with teacher-student discrepancy maximization, after which the refined teacher is used to continue training the same student under the unchanged base distillation objective. we further establish a sample-level sufficient condition for reliable weak-to-strong feedback transfer and derive a distribution-level upper bound on the refined teacher's risk. experiments on cifar-10, cifar-100, and tinyimagenet-10 across multiple teacher-student architectures and base distillation methods show that card improves adversarial robustness in most evaluated settings while generally preserving clean accuracy. these results show that the distilled student can provide useful feedback to the teacher, enabling robustness transfer to proceed beyond the conventional one-way teacher-to-student paradigm. yunnan university; yunnan normal university zhi li, haowei liu, hongchen yang, xiaoxuan wang, song gao, zhenli he, wei zhou, shaowen yao cs.lg, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.19714",
+      "title": "Uncertainty-Driven Self-Play for Robust Multi-Agent Driving Policies",
+      "authors": "Sajad Marvi, Julian Schmidt, Alessandro Canevaro, Julian Jordan, Abhinav Valada",
+      "affiliations": "Mercedes-Benz AG; University of Freiburg",
+      "published_date": "2026-10-14",
+      "categories": "cs.RO, cs.AI, cs.MA",
+      "abstract": "Learning robust driving policies that generalize beyond their training domain remains a central challenge in motion planning. We propose an uncertainty-driven self-play scheme, in which half of the agents are rewarded for increasing their neighbors' epistemic uncertainty, while the other half learn to drive safely as the exploring agents continuously seek out their weaknesses. Epistemic uncertainty indicates where the policy is least confident and serves as an automatic proxy for scenario difficulty. Exploring agents use this signal to seek out hard cases, generating a challenging curriculum without manual scenario design. The resulting policy outperforms standard self-play, achieving best-in-class zero-shot transfer to nuplan Val14 (99.12% vs. 97.97%) and Argoverse 2 (82.39% vs. 78.03%) without fine-tuning, while also improving performance over standard self-play on Waymo. Our diversity-driven approach achieves 85% higher LSTM hidden-state coverage than the baseline, indicating a much richer set of behaviors. Further analysis shows that epistemic uncertainty serves as a calibrated difficulty detector, with highest-uncertain agents exhibiting 14.8 times the combined failure rate across collision, off-road, and DNF, of lowest-uncertain agents, enabling automatic prioritization of challenging scenarios without ground-truth labels.",
+      "summary_cn": "提出不确定性驱动的自博弈：一半智能体因提高邻居的认知不确定性获得奖励，另一半学习安全行驶，探索方持续寻找对手弱点，认知不确定性自动充当场景难度代理，无需人工设计课程即生成困难场景。策略在nuPlan Val14达99.12%、Argoverse 2达82.39%，零样本迁移均优于标准自博弈，LSTM隐状态覆盖率提高85%；最高不确定性智能体的碰撞、出界与未完成综合失败率是最低组的14.8倍，可无标签筛选难例。",
+      "pdf_filename": "2610.19714.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19714",
+      "search_text": "uncertainty-driven self-play for robust multi-agent driving policies 规划 提出不确定性驱动的自博弈：一半智能体因提高邻居的认知不确定性获得奖励，另一半学习安全行驶，探索方持续寻找对手弱点，认知不确定性自动充当场景难度代理，无需人工设计课程即生成困难场景。策略在nuplan val14达99.12%、argoverse 2达82.39%，零样本迁移均优于标准自博弈，lstm隐状态覆盖率提高85%；最高不确定性智能体的碰撞、出界与未完成综合失败率是最低组的14.8倍，可无标签筛选难例。 learning robust driving policies that generalize beyond their training domain remains a central challenge in motion planning. we propose an uncertainty-driven self-play scheme, in which half of the agents are rewarded for increasing their neighbors' epistemic uncertainty, while the other half learn to drive safely as the exploring agents continuously seek out their weaknesses. epistemic uncertainty indicates where the policy is least confident and serves as an automatic proxy for scenario difficulty. exploring agents use this signal to seek out hard cases, generating a challenging curriculum without manual scenario design. the resulting policy outperforms standard self-play, achieving best-in-class zero-shot transfer to nuplan val14 (99.12% vs. 97.97%) and argoverse 2 (82.39% vs. 78.03%) without fine-tuning, while also improving performance over standard self-play on waymo. our diversity-driven approach achieves 85% higher lstm hidden-state coverage than the baseline, indicating a much richer set of behaviors. further analysis shows that epistemic uncertainty serves as a calibrated difficulty detector, with highest-uncertain agents exhibiting 14.8 times the combined failure rate across collision, off-road, and dnf, of lowest-uncertain agents, enabling automatic prioritization of challenging scenarios without ground-truth labels. mercedes-benz ag; university of freiburg sajad marvi, julian schmidt, alessandro canevaro, julian jordan, abhinav valada cs.ro, cs.ai, cs.ma"
+    },
+    {
+      "arxiv_id": "2610.19704",
+      "title": "BANGLAPLAN: A Benchmark for Constraint-Based Planning and Decision-Making in Bangla",
+      "authors": "Md Rayhanul Masud, S M Maksudul Alam, Mohammad Jaminur Islam",
+      "affiliations": "University of California, Riverside",
+      "published_date": "2026-10-14",
+      "categories": "cs.CL",
+      "abstract": "Large language models (LLMs) increasingly help users arrange appointments, plan journeys, and allocate limited resources. These tasks require models to satisfy constraints on time, cost, capacity, and order, or determine that no feasible solution exists. Bangla is the world's seventh most widely spoken language, and existing benchmarks cover many language and reasoning tasks. However, benchmarks for evaluating planning and decision-making in Bangla under explicit constraints remain lacking. We introduce BANGLAPLAN, a benchmark of 1,000 problems across ten task families grounded in everyday life and institutions in Bangladesh. It includes feasible and infeasible problems in four language registers: everyday, formal, colloquial, and Bangla--English mixed. Answers cover eight structured types, including schedules, routes, allocations, and ordered steps, in a common JSON format. We construct the benchmark through language-model-assisted drafting and independent human validation. We evaluate 11 open-weight and proprietary model configurations using exact match, separately reporting feasible-case accuracy, infeasibility detection, and format errors. We find a large performance gap: GPT-6.1 Sol achieves 98.7% accuracy and Qwen3.5-27B with thinking reaches 80.3%, while direct-answer configurations score at most 30.9%. Seven of eleven configurations perform below the always-``infeasible'' baseline. Our findings also suggest that harder problems primarily reduce plan-construction accuracy, while infeasibility detection remains more robust. BANGLAPLAN provides a reproducible basis for evaluating planning and decision-making in Bangla. BANGLAPLAN is available at: https://github.com/mrayhanulmasud/banglaplan.",
+      "summary_cn": "提出BANGLAPLAN，面向孟加拉语的约束型规划与决策基准，含十个任务族共1000道题，覆盖日常与机构场景、四种语体，同时包含可行与不可行问题，答案以统一JSON给出八类结构化输出，经模型起草加人工校验构建。评测11种模型配置：GPT-6.1 Sol达98.7%、Qwen3.5-27B带思考80.3%，而直接作答配置最高仅30.9%，11种中7种低于全部不可行基线。",
+      "pdf_filename": "2610.19704.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19704",
+      "search_text": "banglaplan: a benchmark for constraint-based planning and decision-making in bangla 规划 大语言模型 提出banglaplan，面向孟加拉语的约束型规划与决策基准，含十个任务族共1000道题，覆盖日常与机构场景、四种语体，同时包含可行与不可行问题，答案以统一json给出八类结构化输出，经模型起草加人工校验构建。评测11种模型配置：gpt-6.1 sol达98.7%、qwen3.5-27b带思考80.3%，而直接作答配置最高仅30.9%，11种中7种低于全部不可行基线。 large language models (llms) increasingly help users arrange appointments, plan journeys, and allocate limited resources. these tasks require models to satisfy constraints on time, cost, capacity, and order, or determine that no feasible solution exists. bangla is the world's seventh most widely spoken language, and existing benchmarks cover many language and reasoning tasks. however, benchmarks for evaluating planning and decision-making in bangla under explicit constraints remain lacking. we introduce banglaplan, a benchmark of 1,000 problems across ten task families grounded in everyday life and institutions in bangladesh. it includes feasible and infeasible problems in four language registers: everyday, formal, colloquial, and bangla--english mixed. answers cover eight structured types, including schedules, routes, allocations, and ordered steps, in a common json format. we construct the benchmark through language-model-assisted drafting and independent human validation. we evaluate 11 open-weight and proprietary model configurations using exact match, separately reporting feasible-case accuracy, infeasibility detection, and format errors. we find a large performance gap: gpt-6.1 sol achieves 98.7% accuracy and qwen3.5-27b with thinking reaches 80.3%, while direct-answer configurations score at most 30.9%. seven of eleven configurations perform below the always-``infeasible'' baseline. our findings also suggest that harder problems primarily reduce plan-construction accuracy, while infeasibility detection remains more robust. banglaplan provides a reproducible basis for evaluating planning and decision-making in bangla. banglaplan is available at: https://github.com/mrayhanulmasud/banglaplan. university of california, riverside md rayhanul masud, s m maksudul alam, mohammad jaminur islam cs.cl"
+    },
+    {
+      "arxiv_id": "2610.19683",
+      "title": "Enhancing Latent World Models with Associative Memory",
+      "authors": "Yuwei Sun, Siyu Zhu",
+      "affiliations": "Shanghai Academy of AI for Science; Fudan University",
+      "published_date": "2026-10-14",
+      "categories": "cs.LG, cs.CV",
+      "abstract": "World models trained via latent dynamics offer a scalable path for embodied planning, yet existing methods suffer from representational collapse, computational overhead, and limited long-horizon capability. We introduce a memory-enhanced latent world model that augments JEPA-style prediction with a content-addressable memory bank. Our approach learns high-level representations directly from observations, operating at multiple temporal scales within a shared latent space, and conditions predictions via adaptive layer normalization. To prevent collapse and ensure effective memory usage, we design two complementary losses that encourage slot diversity and balanced temporal utilization. Experiments on PushT, Tworoom, Reacher, and OGBCube demonstrate that our method achieves state-of-the-art performance with a lightweight architecture, outperforming conventional latent world models on long-horizon planning tasks.",
+      "summary_cn": "提出记忆增强的隐世界模型，在JEPA式预测上增加内容可寻址记忆库，直接在观测上学习高层表示，在共享隐空间内跨多个时间尺度工作，并通过自适应层归一化条件化预测；为防表示坍缩并保证记忆有效使用，设计两个鼓励槽位多样性与时间均衡利用的损失。在PushT、Tworoom、Reacher、OGBCube上以轻量架构取得最优，长时域规划明显优于常规隐世界模型。",
+      "pdf_filename": "2610.19683.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19683",
+      "search_text": "enhancing latent world models with associative memory 世界模型 规划 具身智能 提出记忆增强的隐世界模型，在jepa式预测上增加内容可寻址记忆库，直接在观测上学习高层表示，在共享隐空间内跨多个时间尺度工作，并通过自适应层归一化条件化预测；为防表示坍缩并保证记忆有效使用，设计两个鼓励槽位多样性与时间均衡利用的损失。在pusht、tworoom、reacher、ogbcube上以轻量架构取得最优，长时域规划明显优于常规隐世界模型。 world models trained via latent dynamics offer a scalable path for embodied planning, yet existing methods suffer from representational collapse, computational overhead, and limited long-horizon capability. we introduce a memory-enhanced latent world model that augments jepa-style prediction with a content-addressable memory bank. our approach learns high-level representations directly from observations, operating at multiple temporal scales within a shared latent space, and conditions predictions via adaptive layer normalization. to prevent collapse and ensure effective memory usage, we design two complementary losses that encourage slot diversity and balanced temporal utilization. experiments on pusht, tworoom, reacher, and ogbcube demonstrate that our method achieves state-of-the-art performance with a lightweight architecture, outperforming conventional latent world models on long-horizon planning tasks. shanghai academy of ai for science; fudan university yuwei sun, siyu zhu cs.lg, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.19579",
+      "title": "Back on Track: Deployment-time Policy Improvement via World Model Planning",
+      "authors": "Colton Crosby, Hao Wang, Mac Schwager, Somil Bansal",
+      "affiliations": "Stanford University; University of Southern California",
+      "published_date": "2026-10-14",
+      "categories": "cs.RO",
+      "abstract": "State-of-the-art visuomotor policies are increasingly capable of executing complex tasks, yet can fail during deployment in ways they cannot predict or recover from on their own. Improving their performance and robustness typically requires collecting more data, retraining, or modifying the policy architecture, all of which are time- and resource-intensive in practice. We instead propose an offline-trained monitoring-and-intervention framework that improves a policy during deployment using only black-box query access. From a limited set of labeled on-policy rollouts, we learn a policy-conditioned liveness value that measures the nominal policy's progress toward task completion; we additionally train a compact latent world model using these rollouts together with play data. At deployment, the liveness value continuously monitors execution. When it detects a loss of progress, a short-horizon planner searches the world model for corrective actions using the same value as its planning objective, after which control returns to the nominal policy. We evaluate our method on the LIBERO-Goal task suite and on a Franka Panda manipulator, using the vision-language-action model $π_{0.5}$ and a diffusion policy as nominal policies, and demonstrate significant improvements in task success rates, while supporting real-time control. Additional results and videos are available on the project website (https://policy-improvement-wm.pages.dev/).",
+      "summary_cn": "提出离线训练的监控—干预框架，仅靠黑盒查询即可在部署期提升策略：用少量在策略轨迹学一个策略条件活性值度量任务进展，并用这些轨迹加玩乐数据训练紧凑隐世界模型。部署时活性值持续监控，一旦进展停滞，短时域规划器就以同一价值为目标在世界模型中搜索纠正动作，然后交回原策略。在LIBERO-Goal与Franka机械臂上显著提升两类策略成功率并支持实时控制。",
+      "pdf_filename": "2610.19579.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "扩散模型",
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19579",
+      "search_text": "back on track: deployment-time policy improvement via world model planning 世界模型 扩散模型 规划 多模态 提出离线训练的监控—干预框架，仅靠黑盒查询即可在部署期提升策略：用少量在策略轨迹学一个策略条件活性值度量任务进展，并用这些轨迹加玩乐数据训练紧凑隐世界模型。部署时活性值持续监控，一旦进展停滞，短时域规划器就以同一价值为目标在世界模型中搜索纠正动作，然后交回原策略。在libero-goal与franka机械臂上显著提升两类策略成功率并支持实时控制。 state-of-the-art visuomotor policies are increasingly capable of executing complex tasks, yet can fail during deployment in ways they cannot predict or recover from on their own. improving their performance and robustness typically requires collecting more data, retraining, or modifying the policy architecture, all of which are time- and resource-intensive in practice. we instead propose an offline-trained monitoring-and-intervention framework that improves a policy during deployment using only black-box query access. from a limited set of labeled on-policy rollouts, we learn a policy-conditioned liveness value that measures the nominal policy's progress toward task completion; we additionally train a compact latent world model using these rollouts together with play data. at deployment, the liveness value continuously monitors execution. when it detects a loss of progress, a short-horizon planner searches the world model for corrective actions using the same value as its planning objective, after which control returns to the nominal policy. we evaluate our method on the libero-goal task suite and on a franka panda manipulator, using the vision-language-action model $π_{0.5}$ and a diffusion policy as nominal policies, and demonstrate significant improvements in task success rates, while supporting real-time control. additional results and videos are available on the project website (https://policy-improvement-wm.pages.dev/). stanford university; university of southern california colton crosby, hao wang, mac schwager, somil bansal cs.ro"
+    },
+    {
+      "arxiv_id": "2610.19524",
+      "title": "HankelKANet: Lightweight Path Loss Estimation via Physics-Inspired Hankel Convolution",
+      "authors": "Yue Ruan, Xiaoxiao Cheng, Yunan Zhu, Wenlong Huang, Meng Hua",
+      "affiliations": "Anhui University of Technology; Imperial College London",
+      "published_date": "2026-10-14",
+      "categories": "cs.LG, cs.NI",
+      "abstract": "Accurate path loss (PL) estimation is essential for wireless network planning and optimization. This paper proposes HankelKANet, a lightweight physics-inspired network for PL estimation that structurally embeds electromagnetic propagation characteristics into the neural architecture. Built on a single residual UNet backbone, the proposed model integrates urban layout features with a convolutional Kolmogorov-Arnold network(KAN). Specifically, the convolutional kernels are parameterized by the radial amplitudes of the zeroth- and first-order Hankel functions. This formulation acts as a physics-inspired nonlinear distance encoding, enabling the network to capture dominant attenuation characteristics directly without requiring additional physics-based loss terms. Experimental results demonstrate that HankelKANet achieves state-of-the-art accuracy and efficiency on both the simulated RadioMapSeer dataset and the real-world Huawei RSRPSet. Compared with the leading baseline, PEFNet, it reduces the parameter count by 78% and lowers the RMSE by 16.96% on the simulated data, while further exhibiting robust cross-dataset transferability and high data efficiency during target-domain adaptation. To interpret these empirical gains, we mathematically establish a parameter-conditional spatial gradient bound. Using discrete Dirichlet energy (DDE) and Jacobian sensitivity heatmaps, we empirically verify that this physical encoding intrinsically constrains the network's spatial derivatives. This structural smoothness effectively eliminates non-physical spatial ripples, preventing overfitting to simulator artifacts and serving as the fundamental driver for robust real world generalization.",
+      "summary_cn": "提出HankelKANet，用单残差UNet骨干融合城市布局特征与卷积KAN，把卷积核参数化为零阶、一阶Hankel函数的径向幅度，形成物理启发的非线性距离编码，无需额外物理损失项即可捕捉主导衰减。在仿真RadioMapSeer与真实华为RSRPSet上达到最优，参数比PEFNet少78%、RMSE降16.96%，跨数据集迁移与数据效率更好；论文以参数条件空间梯度界与Dirichlet能量解释其平滑性。",
+      "pdf_filename": "2610.19524.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19524",
+      "search_text": "hankelkanet: lightweight path loss estimation via physics-inspired hankel convolution 仿真器 提出hankelkanet，用单残差unet骨干融合城市布局特征与卷积kan，把卷积核参数化为零阶、一阶hankel函数的径向幅度，形成物理启发的非线性距离编码，无需额外物理损失项即可捕捉主导衰减。在仿真radiomapseer与真实华为rsrpset上达到最优，参数比pefnet少78%、rmse降16.96%，跨数据集迁移与数据效率更好；论文以参数条件空间梯度界与dirichlet能量解释其平滑性。 accurate path loss (pl) estimation is essential for wireless network planning and optimization. this paper proposes hankelkanet, a lightweight physics-inspired network for pl estimation that structurally embeds electromagnetic propagation characteristics into the neural architecture. built on a single residual unet backbone, the proposed model integrates urban layout features with a convolutional kolmogorov-arnold network(kan). specifically, the convolutional kernels are parameterized by the radial amplitudes of the zeroth- and first-order hankel functions. this formulation acts as a physics-inspired nonlinear distance encoding, enabling the network to capture dominant attenuation characteristics directly without requiring additional physics-based loss terms. experimental results demonstrate that hankelkanet achieves state-of-the-art accuracy and efficiency on both the simulated radiomapseer dataset and the real-world huawei rsrpset. compared with the leading baseline, pefnet, it reduces the parameter count by 78% and lowers the rmse by 16.96% on the simulated data, while further exhibiting robust cross-dataset transferability and high data efficiency during target-domain adaptation. to interpret these empirical gains, we mathematically establish a parameter-conditional spatial gradient bound. using discrete dirichlet energy (dde) and jacobian sensitivity heatmaps, we empirically verify that this physical encoding intrinsically constrains the network's spatial derivatives. this structural smoothness effectively eliminates non-physical spatial ripples, preventing overfitting to simulator artifacts and serving as the fundamental driver for robust real world generalization. anhui university of technology; imperial college london yue ruan, xiaoxiao cheng, yunan zhu, wenlong huang, meng hua cs.lg, cs.ni"
+    },
+    {
+      "arxiv_id": "2610.19498",
+      "title": "What You Sign Is Not What You Run: The Verifiability Gap in Quantized LLM Supply Chains",
+      "authors": "Wei-Liang Liu, Cheng-Yen Tsai",
+      "affiliations": "National Yang Ming Chiao Tung University; National Taiwan University of Science and Technology",
+      "published_date": "2026-10-14",
+      "categories": "cs.CR, cs.LG",
+      "abstract": "Model signing authenticates the full-precision weights W an LLM is released with, yet users run a quantized artifact Q whose producing transformation is not uniquely determined under current disclosure. We separate the non-environment inputs from the execution environment E and measure a quantity that, to our knowledge, has not been measured before: the Independent Verifiability Rate (IVR), the fraction of a popularity-sampled GGUF ecosystem that a third party can re-derive bit-for-bit. Across the 200 most-downloaded Hugging Face GGUF repositories (198 in scope), no artifact or model card records the build environment, so under a recorded-inputs protocol the IVR is 0/198. Yet the artifacts are not irreproducible. On four in-sample repositories that disclose their inputs, the card's information alone reproduces no Q4_K_M file, but two coordinates the card omits - the build's floating-point-contraction setting and, for hybrid models, the per-tensor quantization recipe - re-derive 7/8 target-quant files bit-for-bit on x86 (5/8 on arm64); the fp16 re-derives from the provider's checkpoint, but the calibration imatrix must be shipped and hash-bound, since recomputing it did not match. An older release additionally pins the instruction set and did not re-derive. Reproducing the divergence reported with llama.cpp PR #25353, we show that E is a necessary coordinate and that one compiler setting yields a unique output across the tested platforms at negligible quality cost (+0.06% perplexity). As a security characterization, benign floating-point non-determinism separates from uniformly placed nibble-flip tampering above a detection floor that grows with the environments a verifier must allow, but a targeted embedding edit evades the statistic, so the proposed protocol rests on exact re-derivation; adversarial-fp16 attacks lie outside it. We release the audit data and a re-runnable harness.",
+      "summary_cn": "论文指出模型签名只认证全精度权重，用户实际运行的量化产物无法唯一复现，定义独立可验证率IVR。在200个最常下载的Hugging Face量化仓库中198个在录，无一记录构建环境，IVR为0/198；但补上浮点收缩设置与混合模型逐张量量化配方后，x86可逐比特复现7/8目标量化文件。实验重现llama.cpp的差异，证明执行环境是必要坐标，并把良性浮点非确定性与均匀篡改区分开。",
+      "pdf_filename": "2610.19498.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19498",
+      "search_text": "what you sign is not what you run: the verifiability gap in quantized llm supply chains 大语言模型 论文指出模型签名只认证全精度权重，用户实际运行的量化产物无法唯一复现，定义独立可验证率ivr。在200个最常下载的hugging face量化仓库中198个在录，无一记录构建环境，ivr为0/198；但补上浮点收缩设置与混合模型逐张量量化配方后，x86可逐比特复现7/8目标量化文件。实验重现llama.cpp的差异，证明执行环境是必要坐标，并把良性浮点非确定性与均匀篡改区分开。 model signing authenticates the full-precision weights w an llm is released with, yet users run a quantized artifact q whose producing transformation is not uniquely determined under current disclosure. we separate the non-environment inputs from the execution environment e and measure a quantity that, to our knowledge, has not been measured before: the independent verifiability rate (ivr), the fraction of a popularity-sampled gguf ecosystem that a third party can re-derive bit-for-bit. across the 200 most-downloaded hugging face gguf repositories (198 in scope), no artifact or model card records the build environment, so under a recorded-inputs protocol the ivr is 0/198. yet the artifacts are not irreproducible. on four in-sample repositories that disclose their inputs, the card's information alone reproduces no q4_k_m file, but two coordinates the card omits - the build's floating-point-contraction setting and, for hybrid models, the per-tensor quantization recipe - re-derive 7/8 target-quant files bit-for-bit on x86 (5/8 on arm64); the fp16 re-derives from the provider's checkpoint, but the calibration imatrix must be shipped and hash-bound, since recomputing it did not match. an older release additionally pins the instruction set and did not re-derive. reproducing the divergence reported with llama.cpp pr #25353, we show that e is a necessary coordinate and that one compiler setting yields a unique output across the tested platforms at negligible quality cost (+0.06% perplexity). as a security characterization, benign floating-point non-determinism separates from uniformly placed nibble-flip tampering above a detection floor that grows with the environments a verifier must allow, but a targeted embedding edit evades the statistic, so the proposed protocol rests on exact re-derivation; adversarial-fp16 attacks lie outside it. we release the audit data and a re-runnable harness. national yang ming chiao tung university; national taiwan university of science and technology wei-liang liu, cheng-yen tsai cs.cr, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.19481",
+      "title": "IMU-Bench: Benchmarking Wrist IMU Representations Across Kinematic, Semantic and Clinical Tasks",
+      "authors": "Yiquan Li, Aidan Bradshaw, Chenfeng Gao, Karan Ahuja",
+      "affiliations": "Northwestern University",
+      "published_date": "2026-10-14",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Wrist-worn inertial measurement units (IMUs) provide a common sensing modality for tasks ranging from activity and gesture recognition to pose estimation, inertial odometry and clinical motor assessment. Existing wearable benchmarks evaluate performance across multiple tasks, but leave open how supervision for one task affects transfer to others and whether these tasks benefit from a shared representation. We present IMU-Bench, a benchmark of ten tasks from eight datasets for studying IMU multi-task performance and cross-task transfer. We compare six self-supervised methods pretrained on unlabeled recorded and simulated wrist motion, evaluating classification, pose and velocity estimation, and IMU-language retrieval. We find that our masked autoencoder, InrtlWrist, achieves the best or joint-best frozen-probe performance on nine of ten tasks, and fine-tuning improves on training from scratch on nine of ten tasks, including full-body pose, odometry and retrieval. Across transfer and joint-training experiments, supervision that benefits one target can reduce performance on others, with supervised sources transferring within kinematic estimation while, under frozen probing, none approaches the pretrained encoder on language retrieval, and joint-training gains that come at a cost to the paired task. These findings distinguish broad downstream usefulness from complementary task supervision. Code, task cards and a leaderboard are publicly available.",
+      "summary_cn": "提出IMU-Bench腕部惯性测量单元基准，覆盖八个数据集十个任务，评测分类、姿态与速度估计、IMU—语言检索，比较六种自监督预训练方法。掩码自编码器InrtlWrist在十项中九项冻结探针最优，微调在九项优于从零训练；但跨任务迁移显示对某任务有益的监督会损害其他任务，无监督源在语言检索上均不及预训练编码器，说明广泛可用与监督互补是两件事。",
+      "pdf_filename": "2610.19481.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.19481",
+      "search_text": "imu-bench: benchmarking wrist imu representations across kinematic, semantic and clinical tasks  提出imu-bench腕部惯性测量单元基准，覆盖八个数据集十个任务，评测分类、姿态与速度估计、imu—语言检索，比较六种自监督预训练方法。掩码自编码器inrtlwrist在十项中九项冻结探针最优，微调在九项优于从零训练；但跨任务迁移显示对某任务有益的监督会损害其他任务，无监督源在语言检索上均不及预训练编码器，说明广泛可用与监督互补是两件事。 wrist-worn inertial measurement units (imus) provide a common sensing modality for tasks ranging from activity and gesture recognition to pose estimation, inertial odometry and clinical motor assessment. existing wearable benchmarks evaluate performance across multiple tasks, but leave open how supervision for one task affects transfer to others and whether these tasks benefit from a shared representation. we present imu-bench, a benchmark of ten tasks from eight datasets for studying imu multi-task performance and cross-task transfer. we compare six self-supervised methods pretrained on unlabeled recorded and simulated wrist motion, evaluating classification, pose and velocity estimation, and imu-language retrieval. we find that our masked autoencoder, inrtlwrist, achieves the best or joint-best frozen-probe performance on nine of ten tasks, and fine-tuning improves on training from scratch on nine of ten tasks, including full-body pose, odometry and retrieval. across transfer and joint-training experiments, supervision that benefits one target can reduce performance on others, with supervised sources transferring within kinematic estimation while, under frozen probing, none approaches the pretrained encoder on language retrieval, and joint-training gains that come at a cost to the paired task. these findings distinguish broad downstream usefulness from complementary task supervision. code, task cards and a leaderboard are publicly available. northwestern university yiquan li, aidan bradshaw, chenfeng gao, karan ahuja cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.19423",
+      "title": "Beyond the Trial-and-Error Loop: Hybrid Projection and Automated Tuning for Distributed Training",
+      "authors": "Anshu Raina, Peyman Razaghi, Yuankai Chen, Cheng Yao, Yao Fu, Vidushi Goyal, Devang Patel, Wen Xie, Zhenyu Gu, Emad Barsoum",
+      "affiliations": "Advanced Micro Devices, Inc. (AMD)",
+      "published_date": "2026-10-14",
+      "categories": "cs.AI, cs.DC",
+      "abstract": "Configuring distributed LLM training across hundreds of GPUs requires jointly optimizing tensor, pipeline, expert, context, and data parallelism alongside micro-batch size, recomputation, sharding, and overlap, a combinatorial space where memory legality can hinge on a single byte of activation accounting. Today, teams navigate it through expensive multi-node trial and error, burning GPU-hours on crashes and suboptimal recipes. We present Primus Projection, which closes this loop with two coupled components. First, a hybrid projection engine that measures what it can and simulates what it cannot: GPU microbenchmarks on as few as a single device capture compute kernels and any in-scope communication; a sub-node downscale-measure-upscale workflow analytically restores out-of-scope collectives, FSDP overlap, and the full pipeline schedule at the multi-node target. A pure simulation mode runs entirely on CPU, enabling pre-silicon planning without any GPU. Second, the Primus Tuning Agent treats the projection engine as a fast scoring oracle (seconds per candidate instead of tens of minutes) and uses it to drive an intelligent search over the configuration space. A deterministic seed planner sweeps single axes; an LLM investigation loop proposes cross-axis combinations the planner cannot reach, with an analytic memory pre-filter that rejects infeasible candidates before any GPU time is spent. Validated on Llama 3.1 (dense) and Mixtral 8x22B (MoE) across two GPU generations, all projections stay within ~10% of measured multi-node throughput, and fidelity holds at production scale: 4.7% error on DeepSeek V3 671B at 1,024 GPUs and 1.9% on Qwen3-235B-A22B at 256 GPUs. In a Mixtral 8x22B case study, the Primus Tuning Agent discovers a configuration delivering +27% throughput over the published 4-node BF16 reference at the same scale, in under 30 minutes of single-node exploration.",
+      "summary_cn": "针对上百GPU上分布式大模型训练配置靠试错的问题，提出Primus Projection：混合投影引擎用单卡微基准测量、对超范围的集合通信与流水线做降尺度—测量—上尺度解析还原，并有纯CPU仿真模式；调优智能体把它当秒级评分预言机驱动搜索。Llama 3.1与Mixtral 8x22B投影误差约10%内，DeepSeek V3 671B在1024卡误差4.7%，MoE案例吞吐提升27%。",
+      "pdf_filename": "2610.19423.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19423",
+      "search_text": "beyond the trial-and-error loop: hybrid projection and automated tuning for distributed training 大语言模型 针对上百gpu上分布式大模型训练配置靠试错的问题，提出primus projection：混合投影引擎用单卡微基准测量、对超范围的集合通信与流水线做降尺度—测量—上尺度解析还原，并有纯cpu仿真模式；调优智能体把它当秒级评分预言机驱动搜索。llama 3.1与mixtral 8x22b投影误差约10%内，deepseek v3 671b在1024卡误差4.7%，moe案例吞吐提升27%。 configuring distributed llm training across hundreds of gpus requires jointly optimizing tensor, pipeline, expert, context, and data parallelism alongside micro-batch size, recomputation, sharding, and overlap, a combinatorial space where memory legality can hinge on a single byte of activation accounting. today, teams navigate it through expensive multi-node trial and error, burning gpu-hours on crashes and suboptimal recipes. we present primus projection, which closes this loop with two coupled components. first, a hybrid projection engine that measures what it can and simulates what it cannot: gpu microbenchmarks on as few as a single device capture compute kernels and any in-scope communication; a sub-node downscale-measure-upscale workflow analytically restores out-of-scope collectives, fsdp overlap, and the full pipeline schedule at the multi-node target. a pure simulation mode runs entirely on cpu, enabling pre-silicon planning without any gpu. second, the primus tuning agent treats the projection engine as a fast scoring oracle (seconds per candidate instead of tens of minutes) and uses it to drive an intelligent search over the configuration space. a deterministic seed planner sweeps single axes; an llm investigation loop proposes cross-axis combinations the planner cannot reach, with an analytic memory pre-filter that rejects infeasible candidates before any gpu time is spent. validated on llama 3.1 (dense) and mixtral 8x22b (moe) across two gpu generations, all projections stay within ~10% of measured multi-node throughput, and fidelity holds at production scale: 4.7% error on deepseek v3 671b at 1,024 gpus and 1.9% on qwen3-235b-a22b at 256 gpus. in a mixtral 8x22b case study, the primus tuning agent discovers a configuration delivering +27% throughput over the published 4-node bf16 reference at the same scale, in under 30 minutes of single-node exploration. advanced micro devices, inc. (amd) anshu raina, peyman razaghi, yuankai chen, cheng yao, yao fu, vidushi goyal, devang patel, wen xie, zhenyu gu, emad barsoum cs.ai, cs.dc"
+    },
+    {
+      "arxiv_id": "2610.19381",
+      "title": "EvoWeave: Composing Reusable Agent Experience through Operation Level Graphs",
+      "authors": "Guanhua Zhu, Bo Shen, Lei Zhang, Fadi Deek, Zhi Wei, Mengnan Du, Chenxi Yuan",
+      "affiliations": "New Jersey Institute of Technology; The Chinese University of Hong Kong, Shenzhen",
+      "published_date": "2026-10-14",
+      "categories": "cs.AI",
+      "abstract": "Different tasks often require interactive agents to perform similar operations at intermediate steps. Retrieving an entire past workflow can introduce irrelevant steps, whereas retrieving isolated operations can discard the dependencies needed to reuse them. We introduce EvoWeave, a framework for experience memory that represents abstract states as nodes and reusable operations as directed edges with input and output contracts, provenance, and capability references. A planner decomposes the current task into a dependency graph; operation retrieval and bounded directed search then assemble relevant experience fragments. An execution agent can inspect these fragments and their referenced capabilities, while reflection separates concrete execution evidence from reusable abstractions. We study the framework across four benchmarks, five evaluation settings, and three language model backbones. Across backbones, AppWorld Normal and Challenge task goal completion average 51.91 and 27.99, respectively, exceeding the baseline without memory by 6.99 and 4.99 percentage points. An AppWorld ablation associates directed connections with an additional improvement of 2.08 points over independent operation cards. The results motivate composition of reusable operations while exposing tradeoffs in retrieval overhead and conditions for valid reuse.",
+      "summary_cn": "提出EvoWeave经验记忆框架，以抽象状态为节点、可复用操作为带输入输出契约和来源的有向边，规划器先把任务分解成依赖图，再用操作检索与有界有向搜索拼装经验片段，执行智能体可检查片段及引用能力。四个基准三种骨干上，AppWorld常规与挑战目标完成率平均51.91与27.99，比无记忆基线高6.99与4.99个点。",
+      "pdf_filename": "2610.19381.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19381",
+      "search_text": "evoweave: composing reusable agent experience through operation level graphs 规划 提出evoweave经验记忆框架，以抽象状态为节点、可复用操作为带输入输出契约和来源的有向边，规划器先把任务分解成依赖图，再用操作检索与有界有向搜索拼装经验片段，执行智能体可检查片段及引用能力。四个基准三种骨干上，appworld常规与挑战目标完成率平均51.91与27.99，比无记忆基线高6.99与4.99个点。 different tasks often require interactive agents to perform similar operations at intermediate steps. retrieving an entire past workflow can introduce irrelevant steps, whereas retrieving isolated operations can discard the dependencies needed to reuse them. we introduce evoweave, a framework for experience memory that represents abstract states as nodes and reusable operations as directed edges with input and output contracts, provenance, and capability references. a planner decomposes the current task into a dependency graph; operation retrieval and bounded directed search then assemble relevant experience fragments. an execution agent can inspect these fragments and their referenced capabilities, while reflection separates concrete execution evidence from reusable abstractions. we study the framework across four benchmarks, five evaluation settings, and three language model backbones. across backbones, appworld normal and challenge task goal completion average 51.91 and 27.99, respectively, exceeding the baseline without memory by 6.99 and 4.99 percentage points. an appworld ablation associates directed connections with an additional improvement of 2.08 points over independent operation cards. the results motivate composition of reusable operations while exposing tradeoffs in retrieval overhead and conditions for valid reuse. new jersey institute of technology; the chinese university of hong kong, shenzhen guanhua zhu, bo shen, lei zhang, fadi deek, zhi wei, mengnan du, chenxi yuan cs.ai"
+    },
+    {
+      "arxiv_id": "2610.19227",
+      "title": "Memento: Communicating Sensor Observations Through Shared Memory",
+      "authors": "Chae Young Lee, Lan Mei, Yifan Yang, Sara Achour, Zerina Kapetanovic",
+      "affiliations": "Stanford University",
+      "published_date": "2026-10-13",
+      "categories": "cs.NI",
+      "abstract": "Wireless sensing systems often transmit highly redundant observations, making communication a bottleneck for low-power devices. We present Memento, a communication system that exploits recurring content by transmitting observations by reference. The sender embeds each observation and searches a shared vector table stored in persistent memory. When it finds a sufficiently similar prior observation, it sends a compact reference; otherwise, it sends the observation itself and adds it to the table. This design shifts work from wireless communication to local computation and storage, without requiring a fixed task-specific model. We implement Memento on a microcontroller with an SD card and evaluate it on three image datasets and one radar dataset. Memento provides favorable accuracy-communication and accuracy-energy tradeoffs against compression-based and task-oriented baselines. At high-accuracy operating points, it matches cloud classification accuracy on three workloads while using 5.5 to 27.1 times less energy, and comes within 0.14 percentage points on a fourth while using 14.7 times less energy. These results show that retrieval over persistent local memory can reduce communication costs in recurrent sensing workloads.",
+      "summary_cn": "针对低功耗无线传感的上行通信瓶颈，提出按引用传输的Memento：发送端把观测嵌入向量并在持久内存的共享向量表中检索，找到足够相似的旧样本就只发紧凑索引，否则发原观测并入表。微控制器+SD卡+LoRa原型在三个图像和一个雷达数据集上获得更优精度—通信/能耗权衡，高精度工作点能耗降低5.5~27.1倍。",
+      "pdf_filename": "2610.19227.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.19227",
+      "search_text": "memento: communicating sensor observations through shared memory  针对低功耗无线传感的上行通信瓶颈，提出按引用传输的memento：发送端把观测嵌入向量并在持久内存的共享向量表中检索，找到足够相似的旧样本就只发紧凑索引，否则发原观测并入表。微控制器+sd卡+lora原型在三个图像和一个雷达数据集上获得更优精度—通信/能耗权衡，高精度工作点能耗降低5.5~27.1倍。 wireless sensing systems often transmit highly redundant observations, making communication a bottleneck for low-power devices. we present memento, a communication system that exploits recurring content by transmitting observations by reference. the sender embeds each observation and searches a shared vector table stored in persistent memory. when it finds a sufficiently similar prior observation, it sends a compact reference; otherwise, it sends the observation itself and adds it to the table. this design shifts work from wireless communication to local computation and storage, without requiring a fixed task-specific model. we implement memento on a microcontroller with an sd card and evaluate it on three image datasets and one radar dataset. memento provides favorable accuracy-communication and accuracy-energy tradeoffs against compression-based and task-oriented baselines. at high-accuracy operating points, it matches cloud classification accuracy on three workloads while using 5.5 to 27.1 times less energy, and comes within 0.14 percentage points on a fourth while using 14.7 times less energy. these results show that retrieval over persistent local memory can reduce communication costs in recurrent sensing workloads. stanford university chae young lee, lan mei, yifan yang, sara achour, zerina kapetanovic cs.ni"
+    },
+    {
+      "arxiv_id": "2610.19158",
+      "title": "AgentCIScope: Grounded Contextual Integrity Evaluation for LLM Agents",
+      "authors": "Chengquan Guo, Zhaorun Chen, Zinan Lin, Xiaodong Liu, Bo Li",
+      "affiliations": "University of Chicago; Microsoft Research; University of Illinois Urbana-Champaign",
+      "published_date": "2026-10-13",
+      "categories": "cs.AI, cs.CR",
+      "abstract": "LLM agents are becoming increasingly capable of handling daily workspace tasks by interacting with application environments through tool calls. However, as agents read and write sensitive user data across email, documents, and other applications, a central privacy question is whether they preserve contextual integrity (CI), that is, whether the information flows they produce comply with context-specific disclosure constraints. Existing work either focuses on model-level privacy leakage or evaluates agents in limited application environments with manually constructed disclosure constraints. In this work, we introduce AgentCIScope, a unified platform and benchmark for evaluating agent-level contextual integrity through executable, multi-step tasks across diverse, realistic application environments. AgentCIScope transforms public and synthetic privacy cases into executable agent tasks, with disclosure constraints grounded in three criteria: governing privacy policies, persona-based agreement, and a predefined sensitive-attribute taxonomy. Based on AgentCIScope, we evaluate 12 agents on 936 tasks and find that strong task-completion capability does not guarantee contextual-integrity preservation: single-run leakage rates range from 32.5% to 94.4%, while repeating each task five times further increases leakage by 4-19 percentage points. Leakage varies substantially across attributes: personal preferences and booking details have average leakage rates of 84.7% and 76.5%, compared with 17.1% for credit-card information and 29.4% for SSNs; environments: calendar has the highest average leakage rate as an information source, while WhatsApp ranks highest as an information destination; and governing privacy policies. AgentCIScope provides deep insights into agent privacy leakage and serves as a unified testbed for developing privacy-preserving agents.",
+      "summary_cn": "提出AgentCIScope平台与基准，把公开与合成隐私案例转成可执行多步智能体任务，用隐私政策、人设约定与敏感属性分类三条准则界定披露约束。在936个任务上评测12个智能体，单次运行上下文完整性泄露率32.5%~94.4%，重复五次再升4~19个百分点；个人偏好与预订信息泄露达84.7%和76.5%，信用卡仅17.1%，说明任务完成能力强不等于隐私合规。",
+      "pdf_filename": "2610.19158.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19158",
+      "search_text": "agentciscope: grounded contextual integrity evaluation for llm agents 大语言模型 提出agentciscope平台与基准，把公开与合成隐私案例转成可执行多步智能体任务，用隐私政策、人设约定与敏感属性分类三条准则界定披露约束。在936个任务上评测12个智能体，单次运行上下文完整性泄露率32.5%~94.4%，重复五次再升4~19个百分点；个人偏好与预订信息泄露达84.7%和76.5%，信用卡仅17.1%，说明任务完成能力强不等于隐私合规。 llm agents are becoming increasingly capable of handling daily workspace tasks by interacting with application environments through tool calls. however, as agents read and write sensitive user data across email, documents, and other applications, a central privacy question is whether they preserve contextual integrity (ci), that is, whether the information flows they produce comply with context-specific disclosure constraints. existing work either focuses on model-level privacy leakage or evaluates agents in limited application environments with manually constructed disclosure constraints. in this work, we introduce agentciscope, a unified platform and benchmark for evaluating agent-level contextual integrity through executable, multi-step tasks across diverse, realistic application environments. agentciscope transforms public and synthetic privacy cases into executable agent tasks, with disclosure constraints grounded in three criteria: governing privacy policies, persona-based agreement, and a predefined sensitive-attribute taxonomy. based on agentciscope, we evaluate 12 agents on 936 tasks and find that strong task-completion capability does not guarantee contextual-integrity preservation: single-run leakage rates range from 32.5% to 94.4%, while repeating each task five times further increases leakage by 4-19 percentage points. leakage varies substantially across attributes: personal preferences and booking details have average leakage rates of 84.7% and 76.5%, compared with 17.1% for credit-card information and 29.4% for ssns; environments: calendar has the highest average leakage rate as an information source, while whatsapp ranks highest as an information destination; and governing privacy policies. agentciscope provides deep insights into agent privacy leakage and serves as a unified testbed for developing privacy-preserving agents. university of chicago; microsoft research; university of illinois urbana-champaign chengquan guo, zhaorun chen, zinan lin, xiaodong liu, bo li cs.ai, cs.cr"
+    },
+    {
+      "arxiv_id": "2610.19102",
+      "title": "The Gap Is in the Geometry: A Convergent Meta-Analysis of Multi-Facet Aerial and Remote Sensing Video Understanding",
+      "authors": "Georgios Angelidis, Aggelos Psiris, Maria Vakalopoulou, Georgios Th. Papadopoulos, Giorgos Sfikas, Iraklis Varlamis",
+      "affiliations": "Harokopio University of Athens; University of West Attica; CentraleSupelec",
+      "published_date": "2026-10-13",
+      "categories": "cs.CV",
+      "abstract": "Aerial and remote sensing video is increasingly evaluated like web video, by posing multiple-choice questions to multimodal large language models (MLLMs) over sampled frames and reporting accuracy. This paper argues that this recipe measures the wrong aspect, and supports the claim with a convergent meta-analysis of a broad set of published results, organized in four evidence tiers, in which a claim becomes a position only when collected evidence agrees. Parameter scale exhibits a median of +3.4 accuracy points per tenfold increase on aerial benchmarks, far below a human gap of at least 19 points, whereas acquisition conditions control perception, as 315 of 318 evaluations in 19 within-paper contrasts lose accuracy when conditions such as altitude, view, object size or time horizon become harder. No aerial benchmark in the corpus combines video input with per-task human and random baselines, competence collapses from answering to acting in closed-loop navigation, and the same MLLMs score higher on the aerial benchmark than on ground spatial ones, but lower on studies that test cross-view geometry. From these findings the current study derives five falsifiable principles and proposes the AVU-Card, a reporting card for aerial video benchmarks",
+      "summary_cn": "论文认为用多模态大模型对航空遥感视频做多选题评测测错了对象：参数量每增十倍仅提升约3.4个点，远低于人类至少19点的差距；19组同论文对照里318项评测有315项在高度、视角、目标尺寸变难时掉点，闭环导航中能力进一步崩塌。据此提出五条可证伪原则与AVU-Card报告卡。",
+      "pdf_filename": "2610.19102.pdf",
+      "crawled_date": "2026-10-15",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "多模态",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19102",
+      "search_text": "the gap is in the geometry: a convergent meta-analysis of multi-facet aerial and remote sensing video understanding 闭环仿真 多模态 大语言模型 论文认为用多模态大模型对航空遥感视频做多选题评测测错了对象：参数量每增十倍仅提升约3.4个点，远低于人类至少19点的差距；19组同论文对照里318项评测有315项在高度、视角、目标尺寸变难时掉点，闭环导航中能力进一步崩塌。据此提出五条可证伪原则与avu-card报告卡。 aerial and remote sensing video is increasingly evaluated like web video, by posing multiple-choice questions to multimodal large language models (mllms) over sampled frames and reporting accuracy. this paper argues that this recipe measures the wrong aspect, and supports the claim with a convergent meta-analysis of a broad set of published results, organized in four evidence tiers, in which a claim becomes a position only when collected evidence agrees. parameter scale exhibits a median of +3.4 accuracy points per tenfold increase on aerial benchmarks, far below a human gap of at least 19 points, whereas acquisition conditions control perception, as 315 of 318 evaluations in 19 within-paper contrasts lose accuracy when conditions such as altitude, view, object size or time horizon become harder. no aerial benchmark in the corpus combines video input with per-task human and random baselines, competence collapses from answering to acting in closed-loop navigation, and the same mllms score higher on the aerial benchmark than on ground spatial ones, but lower on studies that test cross-view geometry. from these findings the current study derives five falsifiable principles and proposes the avu-card, a reporting card for aerial video benchmarks harokopio university of athens; university of west attica; centralesupelec georgios angelidis, aggelos psiris, maria vakalopoulou, georgios th. papadopoulos, giorgos sfikas, iraklis varlamis cs.cv"
+    },
     {
       "arxiv_id": "2610.18867",
       "title": "EmbodiedEvo: Self-improving Coding Agents for Physical Intelligence",
