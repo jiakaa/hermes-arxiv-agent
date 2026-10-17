@@ -1,20 +1,20 @@
 {
-  "count": 1586,
+  "count": 1590,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-16",
+  "crawled_date_max": "2026-10-17",
   "published_date_min": "2025-12-08",
   "published_date_max": "2026-10-15",
   "rating_counts": {
-    "S": 447,
-    "A": 664,
+    "S": 449,
+    "A": 665,
     "B": 258,
-    "C": 217,
+    "C": 218,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 342,
+      "count": 343,
       "group": "3DGS/4DGS"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "name": "多模态",
-      "count": 218,
+      "count": 220,
       "group": "通用"
     },
     {
@@ -48,27 +48,27 @@
       "group": "通用"
     },
     {
+      "name": "点云",
+      "count": 109,
+      "group": "通用"
+    },
+    {
       "name": "强化学习",
       "count": 107,
       "group": "世界模型与仿真"
     },
     {
-      "name": "点云",
-      "count": 107,
-      "group": "通用"
-    },
-    {
       "name": "前馈3D重建",
-      "count": 94,
+      "count": 95,
       "group": "前馈3D重建"
     },
     {
-      "name": "仿真器",
-      "count": 87,
+      "name": "具身智能",
+      "count": 88,
       "group": "通用"
     },
     {
-      "name": "具身智能",
+      "name": "仿真器",
       "count": 87,
       "group": "通用"
     },
@@ -84,7 +84,7 @@
     },
     {
       "name": "视频生成",
-      "count": 46,
+      "count": 47,
       "group": "世界模型与仿真"
     },
     {
@@ -94,17 +94,17 @@
     },
     {
       "name": "深度估计",
-      "count": 42,
+      "count": 43,
       "group": "前馈3D重建"
     },
     {
-      "name": "NeRF",
+      "name": "SLAM",
       "count": 39,
       "group": "通用"
     },
     {
-      "name": "SLAM",
-      "count": 38,
+      "name": "NeRF",
+      "count": 39,
       "group": "通用"
     },
     {
@@ -154,6 +154,88 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.19674",
+      "title": "Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry",
+      "authors": "Soumick Sarker, Mengmi Zhang",
+      "affiliations": "Deep NeuroCognition Lab, Nanyang Technological University, Singapore",
+      "published_date": "2026-10-14",
+      "categories": "cs.CV",
+      "abstract": "Geometry foundation models estimate camera poses and 3D scene structure from video sequences, but maintaining consistent reconstructions over long horizons remains challenging. Feed-forward models process long sequences as independent, fixed-length frame windows and align their predictions, causing pose and reconstruction errors to accumulate across windows. Streaming models retain information from past frames to inform future predictions, but cannot revise earlier estimates when later observations reveal errors. To address this, we introduce Scaffold MemOry for Revision (SMORE), a framework equipping frozen geometry foundation models with a revisable external memory for long-horizon inference. Inspired by hippocampal associative memory in biological brains, which links spatial context with sensory experience, SMORE associates where an observer is with what it observes, enabling past observations to be stored, retrieved, verified against new evidence, and revised when inconsistencies are detected. We evaluate SMORE with eight competitive geometry models on five datasets spanning camera pose estimation, multi-view depth estimation, 3D point-cloud reconstruction, simultaneous localization and mapping (SLAM), and novel view synthesis. Across all evaluated models, SMORE consistently improves long-sequence pose estimation, reduces multi-view depth error by up to 58%, reduces Chamfer distance for 3D point-cloud reconstruction by up to 43%, and achieves average trajectory error as low as 2.9 cm in long-horizon SLAM. By retaining corrected poses and observations, SMORE further improves the fidelity and spatial consistency of large-scale 3D scene reconstruction. These results establish revisable external memory as a flexible interface for extending pretrained geometry models beyond fixed-context prediction toward iterative, error-correcting inference over long visual sequences.",
+      "summary_cn": "针对长视频中前馈几何模型按固定窗口独立处理、拼接后位姿与重建误差逐窗累积的问题，提出免训练的可修订外部记忆 SMORE：把观察者的位置与所见内容关联存储，用新观测校验并可回改历史估计。接入八种几何基础模型后，多视图深度误差最多降 58%，点云 Chamfer 距离降 43%，长时 SLAM 轨迹误差低至 2.9 cm。",
+      "pdf_filename": "2610.19674.pdf",
+      "crawled_date": "2026-10-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "深度估计",
+        "SLAM",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19674",
+      "search_text": "remember, revisit, revise: scaffold memory for long-horizon 3d geometry 深度估计 slam 点云 针对长视频中前馈几何模型按固定窗口独立处理、拼接后位姿与重建误差逐窗累积的问题，提出免训练的可修订外部记忆 smore：把观察者的位置与所见内容关联存储，用新观测校验并可回改历史估计。接入八种几何基础模型后，多视图深度误差最多降 58%，点云 chamfer 距离降 43%，长时 slam 轨迹误差低至 2.9 cm。 geometry foundation models estimate camera poses and 3d scene structure from video sequences, but maintaining consistent reconstructions over long horizons remains challenging. feed-forward models process long sequences as independent, fixed-length frame windows and align their predictions, causing pose and reconstruction errors to accumulate across windows. streaming models retain information from past frames to inform future predictions, but cannot revise earlier estimates when later observations reveal errors. to address this, we introduce scaffold memory for revision (smore), a framework equipping frozen geometry foundation models with a revisable external memory for long-horizon inference. inspired by hippocampal associative memory in biological brains, which links spatial context with sensory experience, smore associates where an observer is with what it observes, enabling past observations to be stored, retrieved, verified against new evidence, and revised when inconsistencies are detected. we evaluate smore with eight competitive geometry models on five datasets spanning camera pose estimation, multi-view depth estimation, 3d point-cloud reconstruction, simultaneous localization and mapping (slam), and novel view synthesis. across all evaluated models, smore consistently improves long-sequence pose estimation, reduces multi-view depth error by up to 58%, reduces chamfer distance for 3d point-cloud reconstruction by up to 43%, and achieves average trajectory error as low as 2.9 cm in long-horizon slam. by retaining corrected poses and observations, smore further improves the fidelity and spatial consistency of large-scale 3d scene reconstruction. these results establish revisable external memory as a flexible interface for extending pretrained geometry models beyond fixed-context prediction toward iterative, error-correcting inference over long visual sequences. deep neurocognition lab, nanyang technological university, singapore soumick sarker, mengmi zhang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.19502",
+      "title": "Holi-Spatial 360: Generative Reconstruction from Sparse Panoramas for Spatial Rendering and Intelligence",
+      "authors": "Yuanyuan Gao, Zhirui Liu, Yuning Gong, Yifei Liu, Yifan Zhan, Kuixuan Jiao, Xiaolong Zhou, Yifan Yang, Hongjie Zhang, Xue Yang, Dan Xu, Zhihang Zhong",
+      "affiliations": "The Hong Kong University of Science and Technology; ShanghaiTech University; Tencent; Shanghai Artificial Intelligence Laboratory; The University of Tokyo; Northwestern Polytechnical University; Shanghai Jiao Tong University",
+      "published_date": "2026-10-14",
+      "categories": "cs.CV",
+      "abstract": "Spatial intelligence requires scalable 3D environments that are both photorealistic and semantically grounded, yet existing indoor datasets are dominated by room-scale captures and costly LiDAR acquisition. Online real-estate platforms offer abundant panoramas of diverse multi-room homes, but sparse viewpoints and texture-poor regions make reconstruction severely under-constrained. We introduce Holi-Spatial 360, a generative reconstruction and data curation framework for converting these panoramas into annotated multi-room 3D environments. Because reconstruction quality bounds subsequent generation, our Correspondence-Guided Geometric Optimization converts feed-forward reconstruction priors into reliable cross-view constraints and builds a coherent 3D Gaussian Splatting representation as 3D spatial memory. Adapted single-image and video priors then restore appearance and complete continuous trajectories while preserving observed content. The reconstructed scenes support arbitrary RGB-D rendering and an automated curation pipeline that combines end-to-end 3D grounding with VLM-based verification. Holi360 contains over 1K multi-room 3DGS scenes, more than 100K instance annotations, and 2M spatial question-answer pairs. We also introduce the Holi360 benchmark to evaluate the spatial understanding of VLMs in real-world, multi-room indoor environments. Experiments demonstrate superior reconstruction and curation quality under sparse panoramic inputs, while fine-tuning VLMs on Holi360 substantially improves spatial reasoning capabilities.",
+      "summary_cn": "针对稀疏全景图重建严重欠约束、室内三维数据规模受限的问题，提出生成式重建与数据整理框架：用对应引导的几何优化把前馈重建先验转成跨视角约束，构建一致的多房间 3DGS 作为空间记忆，再用单图与视频生成先验补全外观与轨迹。产出 1000+ 多房间 3DGS 场景、10 万实例标注和 200 万空间问答。",
+      "pdf_filename": "2610.19502.pdf",
+      "crawled_date": "2026-10-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "3DGS",
+        "视频生成",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19502",
+      "search_text": "holi-spatial 360: generative reconstruction from sparse panoramas for spatial rendering and intelligence 前馈3d重建 3dgs 视频生成 点云 针对稀疏全景图重建严重欠约束、室内三维数据规模受限的问题，提出生成式重建与数据整理框架：用对应引导的几何优化把前馈重建先验转成跨视角约束，构建一致的多房间 3dgs 作为空间记忆，再用单图与视频生成先验补全外观与轨迹。产出 1000+ 多房间 3dgs 场景、10 万实例标注和 200 万空间问答。 spatial intelligence requires scalable 3d environments that are both photorealistic and semantically grounded, yet existing indoor datasets are dominated by room-scale captures and costly lidar acquisition. online real-estate platforms offer abundant panoramas of diverse multi-room homes, but sparse viewpoints and texture-poor regions make reconstruction severely under-constrained. we introduce holi-spatial 360, a generative reconstruction and data curation framework for converting these panoramas into annotated multi-room 3d environments. because reconstruction quality bounds subsequent generation, our correspondence-guided geometric optimization converts feed-forward reconstruction priors into reliable cross-view constraints and builds a coherent 3d gaussian splatting representation as 3d spatial memory. adapted single-image and video priors then restore appearance and complete continuous trajectories while preserving observed content. the reconstructed scenes support arbitrary rgb-d rendering and an automated curation pipeline that combines end-to-end 3d grounding with vlm-based verification. holi360 contains over 1k multi-room 3dgs scenes, more than 100k instance annotations, and 2m spatial question-answer pairs. we also introduce the holi360 benchmark to evaluate the spatial understanding of vlms in real-world, multi-room indoor environments. experiments demonstrate superior reconstruction and curation quality under sparse panoramic inputs, while fine-tuning vlms on holi360 substantially improves spatial reasoning capabilities. the hong kong university of science and technology; shanghaitech university; tencent; shanghai artificial intelligence laboratory; the university of tokyo; northwestern polytechnical university; shanghai jiao tong university yuanyuan gao, zhirui liu, yuning gong, yifei liu, yifan zhan, kuixuan jiao, xiaolong zhou, yifan yang, hongjie zhang, xue yang, dan xu, zhihang zhong cs.cv"
+    },
+    {
+      "arxiv_id": "2610.19494",
+      "title": "Robust Real-Time Monocular Human Pose Estimation with Insole-Based Sensor Fusion",
+      "authors": "Liang Yu, Tao Zhu, Xiangqing Lu, Wenjian Luo, Liming Chen",
+      "affiliations": "University of South China, Hengyang, Hunan, China; Harbin Institute of Technology, Harbin, China; Dalian University of Technology, Dalian, China",
+      "published_date": "2026-10-14",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Real-time monocular human pose estimation is an important sensing component for human-centered intelligent systems. While recent camera-based methods have achieved impressive accuracy, fundamental challenges persist, particularly when visual observations are incomplete, such as during lower-body occlusion or short out-of-frame intervals. In these challenging but common scenarios, vision-only systems often struggle to reconstruct physically plausible lower-limb motion and reliable foot-ground contact. Due to the highly unobtrusive and wearable nature of smart insoles, this paper investigates whether simple plantar pressure and acceleration sensors can effectively resolve these visually induced limitations. To systematically investigate this, we first collect a synchronized multimodal dataset and then propose a part-decoupled temporal fusion framework. The proposed model fuses foot-sensing features into the lower-body branch to compensate for incomplete visual evidence, while a lightweight coordinator exchanges information between the upper- and lower-body temporal representations to maintain whole-body consistency. The framework is evaluated with three representative real-time visual backbones based on 2D keypoints, 3D landmarks, and SMPL-based human mesh recovery. We evaluate our framework on three representative real-time visual backbones. Quantitative experiments demonstrate that incorporating simple foot sensors consistently improves pose accuracy, motion smoothness, and gait-related measurements over vision-only baselines, with the most significant gains observed under occlusion and short visual-dropout conditions. Ultimately, our results demonstrate that unobtrusive foot sensing provides vital and complementary physical observability when camera observations are temporarily unavailable.",
+      "summary_cn": "针对下肢遮挡或短暂出画时纯视觉单目人体位姿估计不可靠的问题，采集足底压力与加速度的同步多模态数据，提出部位解耦时序融合框架：把足部传感特征注入下肢分支补足视觉缺失，由轻量协调器在上、下肢表示间交换信息以保持全身一致。在三种实时视觉骨干上，遮挡与丢帧场景的位姿精度、运动平滑性和步态指标均稳定优于基线。",
+      "pdf_filename": "2610.19494.pdf",
+      "crawled_date": "2026-10-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19494",
+      "search_text": "robust real-time monocular human pose estimation with insole-based sensor fusion 多模态 针对下肢遮挡或短暂出画时纯视觉单目人体位姿估计不可靠的问题，采集足底压力与加速度的同步多模态数据，提出部位解耦时序融合框架：把足部传感特征注入下肢分支补足视觉缺失，由轻量协调器在上、下肢表示间交换信息以保持全身一致。在三种实时视觉骨干上，遮挡与丢帧场景的位姿精度、运动平滑性和步态指标均稳定优于基线。 real-time monocular human pose estimation is an important sensing component for human-centered intelligent systems. while recent camera-based methods have achieved impressive accuracy, fundamental challenges persist, particularly when visual observations are incomplete, such as during lower-body occlusion or short out-of-frame intervals. in these challenging but common scenarios, vision-only systems often struggle to reconstruct physically plausible lower-limb motion and reliable foot-ground contact. due to the highly unobtrusive and wearable nature of smart insoles, this paper investigates whether simple plantar pressure and acceleration sensors can effectively resolve these visually induced limitations. to systematically investigate this, we first collect a synchronized multimodal dataset and then propose a part-decoupled temporal fusion framework. the proposed model fuses foot-sensing features into the lower-body branch to compensate for incomplete visual evidence, while a lightweight coordinator exchanges information between the upper- and lower-body temporal representations to maintain whole-body consistency. the framework is evaluated with three representative real-time visual backbones based on 2d keypoints, 3d landmarks, and smpl-based human mesh recovery. we evaluate our framework on three representative real-time visual backbones. quantitative experiments demonstrate that incorporating simple foot sensors consistently improves pose accuracy, motion smoothness, and gait-related measurements over vision-only baselines, with the most significant gains observed under occlusion and short visual-dropout conditions. ultimately, our results demonstrate that unobtrusive foot sensing provides vital and complementary physical observability when camera observations are temporarily unavailable. university of south china, hengyang, hunan, china; harbin institute of technology, harbin, china; dalian university of technology, dalian, china liang yu, tao zhu, xiangqing lu, wenjian luo, liming chen cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.16160",
+      "title": "FlowVLA: Enabling World Dynamics Understanding through Pluggable 3D Flow Learning",
+      "authors": "Junhyeong Go, Mingyu Jung, Woobin Im, Jongbin Ryu",
+      "affiliations": "Ajou University; Samsung Electronics",
+      "published_date": "2026-10-12",
+      "categories": "cs.RO",
+      "abstract": "Recent advances in 3D reconstruction enable the extraction of temporally consistent 3D motion from RGB observations; however, current Vision-Language-Action (VLA) models still predominantly rely on 2D image-text priors. Therefore, they do not accurately represent the fundamental dynamics of the 3D world associated with physical actions. This over-reliance on static 2D visual cues limits the capacity of VLA models in achieving robust robot manipulation. To address these limitations, we introduce FlowVLA, a reconstruction-guided, pluggable 3D flow learning framework aimed at empowering VLA models with an inherent understanding of action-relevant dynamics. Instead of requiring explicit 3D sensor inputs or altering the inference-time architecture, our method is designed to utilize temporally aligned 3D flow only during training. This allows the model to learn the dynamic evolution of the physical scene while preserving the computational efficiency of conventional 2D VLA backbones. To bridge scene-level dynamics with robotic manipulation, we propose a modular 3D flow learning framework with dual-level flow supervision. Specifically, point-level flow guides the model to forecast the future displacements of task-critical 3D points, while TCP-level flow aggregates these motions to align with the robot's TCP trajectories. This dual-level flow supervision encourages the model to focus on semantically meaningful dynamic regions, effectively coupling scene-level motion with precise control signals. Extensive evaluations across simulation and real-world experiments demonstrate that FlowVLA consistently improves manipulation performance, zero-shot robustness, and optimizes data efficiency. FlowVLA adds only lightweight auxiliary heads during training and discards them at inference. Therefore, FlowVLA introduces no additional 3D sensor inputs, architectural modifications, or inference-time computation.",
+      "summary_cn": "针对 VLA 模型只依赖二维图文先验、缺乏三维世界动态理解的问题，提出重建引导的可插拔 3D 流学习框架，仅在训练期引入时序对齐 3D 流：点级流监督关键点未来位移，TCP 级流聚合运动对齐机械臂末端轨迹，双层监督耦合场景动态与控制信号。推理时丢弃辅助头，不增传感器与算力，操作性能、零样本鲁棒性与数据效率均提升。",
+      "pdf_filename": "2610.16160.pdf",
+      "crawled_date": "2026-10-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.16160",
+      "search_text": "flowvla: enabling world dynamics understanding through pluggable 3d flow learning 多模态 具身智能 针对 vla 模型只依赖二维图文先验、缺乏三维世界动态理解的问题，提出重建引导的可插拔 3d 流学习框架，仅在训练期引入时序对齐 3d 流：点级流监督关键点未来位移，tcp 级流聚合运动对齐机械臂末端轨迹，双层监督耦合场景动态与控制信号。推理时丢弃辅助头，不增传感器与算力，操作性能、零样本鲁棒性与数据效率均提升。 recent advances in 3d reconstruction enable the extraction of temporally consistent 3d motion from rgb observations; however, current vision-language-action (vla) models still predominantly rely on 2d image-text priors. therefore, they do not accurately represent the fundamental dynamics of the 3d world associated with physical actions. this over-reliance on static 2d visual cues limits the capacity of vla models in achieving robust robot manipulation. to address these limitations, we introduce flowvla, a reconstruction-guided, pluggable 3d flow learning framework aimed at empowering vla models with an inherent understanding of action-relevant dynamics. instead of requiring explicit 3d sensor inputs or altering the inference-time architecture, our method is designed to utilize temporally aligned 3d flow only during training. this allows the model to learn the dynamic evolution of the physical scene while preserving the computational efficiency of conventional 2d vla backbones. to bridge scene-level dynamics with robotic manipulation, we propose a modular 3d flow learning framework with dual-level flow supervision. specifically, point-level flow guides the model to forecast the future displacements of task-critical 3d points, while tcp-level flow aggregates these motions to align with the robot's tcp trajectories. this dual-level flow supervision encourages the model to focus on semantically meaningful dynamic regions, effectively coupling scene-level motion with precise control signals. extensive evaluations across simulation and real-world experiments demonstrate that flowvla consistently improves manipulation performance, zero-shot robustness, and optimizes data efficiency. flowvla adds only lightweight auxiliary heads during training and discards them at inference. therefore, flowvla introduces no additional 3d sensor inputs, architectural modifications, or inference-time computation. ajou university; samsung electronics junhyeong go, mingyu jung, woobin im, jongbin ryu cs.ro"
+    },
     {
       "arxiv_id": "2610.22363",
       "title": "Perceive, Predict, and Plan: a Unified World Action Model for Egocentric Dexterous Manipulation",
