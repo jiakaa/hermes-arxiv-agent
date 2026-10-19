@@ -1,50 +1,50 @@
 {
-  "count": 1590,
+  "count": 1616,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-17",
+  "crawled_date_max": "2026-10-19",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-15",
+  "published_date_max": "2026-10-16",
   "rating_counts": {
-    "S": 449,
-    "A": 665,
-    "B": 258,
-    "C": 218,
+    "S": 456,
+    "A": 672,
+    "B": 260,
+    "C": 228,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 343,
+      "count": 349,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 297,
+      "count": 302,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 290,
+      "count": 295,
       "group": "通用"
     },
     {
-      "name": "闭环仿真",
-      "count": 240,
+      "name": "世界模型",
+      "count": 244,
       "group": "世界模型与仿真"
     },
     {
-      "name": "世界模型",
-      "count": 239,
+      "name": "闭环仿真",
+      "count": 242,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 220,
+      "count": 225,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 167,
+      "count": 170,
       "group": "通用"
     },
     {
@@ -54,17 +54,17 @@
     },
     {
       "name": "强化学习",
-      "count": 107,
+      "count": 108,
       "group": "世界模型与仿真"
     },
     {
       "name": "前馈3D重建",
-      "count": 95,
+      "count": 96,
       "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
-      "count": 88,
+      "count": 91,
       "group": "通用"
     },
     {
@@ -74,12 +74,12 @@
     },
     {
       "name": "场景压缩",
-      "count": 73,
+      "count": 76,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 55,
+      "count": 56,
       "group": "世界模型与仿真"
     },
     {
@@ -99,12 +99,12 @@
     },
     {
       "name": "SLAM",
-      "count": 39,
+      "count": 40,
       "group": "通用"
     },
     {
       "name": "NeRF",
-      "count": 39,
+      "count": 40,
       "group": "通用"
     },
     {
@@ -119,17 +119,17 @@
     },
     {
       "name": "轨迹预测",
-      "count": 27,
+      "count": 28,
       "group": "世界模型与仿真"
     },
     {
       "name": "生成式仿真",
-      "count": 22,
+      "count": 23,
       "group": "世界模型与仿真"
     },
     {
       "name": "路面重建",
-      "count": 16,
+      "count": 17,
       "group": "地面重建"
     },
     {
@@ -149,11 +149,520 @@
     },
     {
       "name": "多视角立体",
-      "count": 7,
+      "count": 8,
       "group": "前馈3D重建"
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.23772",
+      "title": "Video Diffusion Avatars: Taming Video Diffusion Models into Controllable 3D Avatars",
+      "authors": "Simon Giebenhain, Tobias Kirschstein, Liam Schoneveld, Davide Davoli, Zhe Chen, Matthias Nießner",
+      "affiliations": "Technical University of Munich; Woven by Toyota; Toyota Motor Europe",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV",
+      "abstract": "Video diffusion models (VDMs) trained on internet-scale data encode a rich prior on appearance, motion, and physics that is difficult to replicate with explicit 3D rendering and costly 3D data capture. We introduce Video Diffusion Avatars (VDAs), a method that creates photo-realistic, multi-view consistent avatars from a single image by fine-tuning a VDM for precise control over camera viewpoint, facial expression, and upper-body pose. Departing from 3D morphable models (3DMMs), VDAs use a learned expression space that lifts the expressiveness ceiling of 3DMMs, e.g., for the tongue and mouth interior. However, learned expression codes exhibit heavy viewpoint bias, as our DISTRACT benchmark reveals. We show that this bias can be removed through disentanglement, enabling their use as driving signals for multi-view consistent avatars. Camera and upper-body pose are controlled jointly via proxy-mesh renderings, giving independent control over expression, pose, and viewpoint. A camera-triplet training strategy makes the approach efficient: our models train for 34 hours on a single A100 using only public multi-view data. VDAs outperform state-of-the-art single-image 3D avatars on novel-view reenactment, reducing face LPIPS by 29% and improving perceptual quality (JOD) by 66% on BecomingLit. A static 3DGS reconstruction probe further confirms that our generations are the most multi-view consistent. Built on a video prior, VDAs produce effects beyond the reach of explicit renderers, including physically plausible hair dynamics, shadows, reflections, and refractions.",
+      "summary_cn": "提出视频扩散虚拟人：微调视频扩散模型，从单张图像生成照片级、多视角一致且相机、表情、上半身姿态可独立控制的虚拟人。放弃三维形变模型改用学习式表情空间，突破舌头与口腔内部的表达上限，并揭示该表情码存在强视角偏置，通过解耦消除；相机与姿态由代理网格渲染联合控制。单张 A100 训练 34 小时，人脸 LPIPS 降低 29%，感知质量提升 66%。",
+      "pdf_filename": "2610.23772.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "3DGS",
+        "扩散模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23772",
+      "search_text": "video diffusion avatars: taming video diffusion models into controllable 3d avatars 3dgs 扩散模型 提出视频扩散虚拟人：微调视频扩散模型，从单张图像生成照片级、多视角一致且相机、表情、上半身姿态可独立控制的虚拟人。放弃三维形变模型改用学习式表情空间，突破舌头与口腔内部的表达上限，并揭示该表情码存在强视角偏置，通过解耦消除；相机与姿态由代理网格渲染联合控制。单张 a100 训练 34 小时，人脸 lpips 降低 29%，感知质量提升 66%。 video diffusion models (vdms) trained on internet-scale data encode a rich prior on appearance, motion, and physics that is difficult to replicate with explicit 3d rendering and costly 3d data capture. we introduce video diffusion avatars (vdas), a method that creates photo-realistic, multi-view consistent avatars from a single image by fine-tuning a vdm for precise control over camera viewpoint, facial expression, and upper-body pose. departing from 3d morphable models (3dmms), vdas use a learned expression space that lifts the expressiveness ceiling of 3dmms, e.g., for the tongue and mouth interior. however, learned expression codes exhibit heavy viewpoint bias, as our distract benchmark reveals. we show that this bias can be removed through disentanglement, enabling their use as driving signals for multi-view consistent avatars. camera and upper-body pose are controlled jointly via proxy-mesh renderings, giving independent control over expression, pose, and viewpoint. a camera-triplet training strategy makes the approach efficient: our models train for 34 hours on a single a100 using only public multi-view data. vdas outperform state-of-the-art single-image 3d avatars on novel-view reenactment, reducing face lpips by 29% and improving perceptual quality (jod) by 66% on becominglit. a static 3dgs reconstruction probe further confirms that our generations are the most multi-view consistent. built on a video prior, vdas produce effects beyond the reach of explicit renderers, including physically plausible hair dynamics, shadows, reflections, and refractions. technical university of munich; woven by toyota; toyota motor europe simon giebenhain, tobias kirschstein, liam schoneveld, davide davoli, zhe chen, matthias nießner cs.cv"
+    },
+    {
+      "arxiv_id": "2610.23655",
+      "title": "Attenuation corrected activity reconstruction for listmode TOF-PET data",
+      "authors": "Ahmadreza Rezaei, Suleman Surti, Samuel Matej, Joel S. Karp, Johan Nuyts",
+      "affiliations": "KU Leuven - University of Leuven, Department of Imaging and Pathology; University of Pennsylvania, Department of Radiology",
+      "published_date": "2026-10-16",
+      "categories": "physics.med-ph",
+      "abstract": "Time-of-flight (TOF) positron emission tomography (PET) emission data allow joint estimation of the activity and attenuation images. The methods proposed so far rely on reconstructions from TOF histograms of the measurements. However, with the rapid data increase of total-body (TB) scanners and the ever improving TOF and intrinsic resolutions, more memory and computation efficient techniques for joint reconstruction need to be developed. In this work, a modified version of the maximum likelihood activity and attenuation correction factors algorithm (MLACF) is presented, that jointly estimates the activity image together with the attenuation factors (AFs) from listmode emission data. The method does not require TOF histogramming of the data, however it still relies on a coarsely sampled (i.e. mashed) non-TOF histogram of the emission data. The activity distribution is subsequently quantified by reconstructing and enforcing known expected tissue attenuation on an attenuation reconstruction from the estimated AF values. The algorithm is evaluated using 3D simulations as well as clinical TOF-PET measurements of a patient scan and compared to reference reconstructions. As could be expected, we find the reconstruction accuracies improve with an \"optimal\" histogramming of the TOF emission data, increasing the signal to noise ratio of the data used for joint estimation. With an \"optimal\" histogramming of the measurements, the attenuation corrected activity distributions from TOF emission data only are comparable to the gold-standard in PET/CT.",
+      "summary_cn": "针对全身飞行时间正电子发射断层数据量激增、需更省内存与算力的联合活度与衰减估计，提出最大似然活度与衰减校正因子算法的列表模式改进版：直接从列表模式发射数据联合估计活度图像与衰减因子，无需飞行时间直方图化，仅需粗采样的非飞行时间直方图；再由衰减因子重建衰减图并施加已知组织衰减约束完成定量。三维仿真与临床数据验证有效。",
+      "pdf_filename": "2610.23655.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.23655",
+      "search_text": "attenuation corrected activity reconstruction for listmode tof-pet data  针对全身飞行时间正电子发射断层数据量激增、需更省内存与算力的联合活度与衰减估计，提出最大似然活度与衰减校正因子算法的列表模式改进版：直接从列表模式发射数据联合估计活度图像与衰减因子，无需飞行时间直方图化，仅需粗采样的非飞行时间直方图；再由衰减因子重建衰减图并施加已知组织衰减约束完成定量。三维仿真与临床数据验证有效。 time-of-flight (tof) positron emission tomography (pet) emission data allow joint estimation of the activity and attenuation images. the methods proposed so far rely on reconstructions from tof histograms of the measurements. however, with the rapid data increase of total-body (tb) scanners and the ever improving tof and intrinsic resolutions, more memory and computation efficient techniques for joint reconstruction need to be developed. in this work, a modified version of the maximum likelihood activity and attenuation correction factors algorithm (mlacf) is presented, that jointly estimates the activity image together with the attenuation factors (afs) from listmode emission data. the method does not require tof histogramming of the data, however it still relies on a coarsely sampled (i.e. mashed) non-tof histogram of the emission data. the activity distribution is subsequently quantified by reconstructing and enforcing known expected tissue attenuation on an attenuation reconstruction from the estimated af values. the algorithm is evaluated using 3d simulations as well as clinical tof-pet measurements of a patient scan and compared to reference reconstructions. as could be expected, we find the reconstruction accuracies improve with an \"optimal\" histogramming of the tof emission data, increasing the signal to noise ratio of the data used for joint estimation. with an \"optimal\" histogramming of the measurements, the attenuation corrected activity distributions from tof emission data only are comparable to the gold-standard in pet/ct. ku leuven - university of leuven, department of imaging and pathology; university of pennsylvania, department of radiology ahmadreza rezaei, suleman surti, samuel matej, joel s. karp, johan nuyts physics.med-ph"
+    },
+    {
+      "arxiv_id": "2610.23615",
+      "title": "Beyond Action Prediction: Learning Search-Free Planning in Latent Space",
+      "authors": "Guanchen Du, Jinhao Du, Yanpeng Sun, Shan Zhang, Na Zhao, Zechao Li",
+      "affiliations": "Nanjing University of Science and Technology; University of Oxford; Singapore University of Technology and Design; Adelaide University",
+      "published_date": "2026-10-16",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Latent world models learn action-conditioned state transitions in a compact representation space, providing a predictive model for visual planning and control. However, planning with these models typically requires costly test-time optimization over action sequences. We propose to replace this online search with a goal-conditioned inverse model that directly predicts actions from current and goal observations. A key challenge is that action prediction alone neither ensures that goal representations encode action-relevant information nor that predicted actions are consistent with the learned latent prediction model. We introduce Hindsight Inverse JEPA Planning (HIJP), a search-free framework that addresses both aspects during training. HIJP relabels future observations along offline trajectories as goals, providing action supervision across multiple temporal horizons. By retaining gradients through the goal representations, this supervision directly shapes the visual representation. HIJP further feeds predicted actions into the latent predictor model and aligns the resulting next-state representations with encoded successor observations, enforcing action-transition consistency. At inference time, the inverse dynamics model and latent predictor models are applied alternately to generate multi-step action sequences without online search. Across four visual control tasks, HIJP achieves 86.8% overall success and a 1.9-16.5x planning speedup over search-based planning.",
+      "summary_cn": "潜在世界模型做视觉规划通常要在测试时对动作序列做昂贵在线优化。本文用目标条件逆模型直接从当前与目标观测预测动作以替代搜索，并提出 HIJP：沿离线轨迹把未来观测重标为目标以提供动作监督，让梯度穿过目标表征以塑造视觉表示，再把预测动作送入潜在预测器对齐后继状态，强制动作与转移一致。四个视觉控制任务总成功率 86.8%，规划加速 1.9 至 16.5 倍。",
+      "pdf_filename": "2610.23615.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23615",
+      "search_text": "beyond action prediction: learning search-free planning in latent space 世界模型 规划 潜在世界模型做视觉规划通常要在测试时对动作序列做昂贵在线优化。本文用目标条件逆模型直接从当前与目标观测预测动作以替代搜索，并提出 hijp：沿离线轨迹把未来观测重标为目标以提供动作监督，让梯度穿过目标表征以塑造视觉表示，再把预测动作送入潜在预测器对齐后继状态，强制动作与转移一致。四个视觉控制任务总成功率 86.8%，规划加速 1.9 至 16.5 倍。 latent world models learn action-conditioned state transitions in a compact representation space, providing a predictive model for visual planning and control. however, planning with these models typically requires costly test-time optimization over action sequences. we propose to replace this online search with a goal-conditioned inverse model that directly predicts actions from current and goal observations. a key challenge is that action prediction alone neither ensures that goal representations encode action-relevant information nor that predicted actions are consistent with the learned latent prediction model. we introduce hindsight inverse jepa planning (hijp), a search-free framework that addresses both aspects during training. hijp relabels future observations along offline trajectories as goals, providing action supervision across multiple temporal horizons. by retaining gradients through the goal representations, this supervision directly shapes the visual representation. hijp further feeds predicted actions into the latent predictor model and aligns the resulting next-state representations with encoded successor observations, enforcing action-transition consistency. at inference time, the inverse dynamics model and latent predictor models are applied alternately to generate multi-step action sequences without online search. across four visual control tasks, hijp achieves 86.8% overall success and a 1.9-16.5x planning speedup over search-based planning. nanjing university of science and technology; university of oxford; singapore university of technology and design; adelaide university guanchen du, jinhao du, yanpeng sun, shan zhang, na zhao, zechao li cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.23574",
+      "title": "Darwin-Claw: Environment-Adaptive Experience Consolidation for Recursively Self-Evolving Agents",
+      "authors": "Mingze Yin, Xiaohan Wang, Dian Li, Longfei Luo, Jiahong Yan, Yiheng Zhu, Chang-Yu Hsieh",
+      "affiliations": "Zhejiang University; Tencent; Zhongguancun Academy",
+      "published_date": "2026-10-16",
+      "categories": "cs.AI",
+      "abstract": "While Large Language Model (LLM) agents have demonstrated remarkable capabilities across complex tasks, they predominantly operate in isolated sessions, lacking the ability to continually learn from historical interactions or adapt to user-specific environments. Existing self-evolution paradigms often indiscriminately inject raw interaction trajectories into memory or skill modules, leading to obscured behavioral patterns and compromised update controllability. Furthermore, as foundational LLM reasoning improves, the bottleneck for agentic evolution shifts from accumulating generic knowledge to effectively managing situational experience. To address this, we propose Darwin-Claw, an environment-adaptive self-evolving framework that systematically distills episodic experiences to drive the comprehensive evolution of operational skills and durable memory. Theoretically grounded in an iterative agent-actor and evolver-critic co-adaptation, Darwin-Claw introduces a Hierarchical Experience Consolidation System that extracts fine-grained error attributions and generalizes them into dynamically updated prototype vectors. This structured situational experience serves as interaction patches for context-sensitive perception and explicit optimization signals for skill refinement. Practically, Darwin-Claw is a readily deployable, automated framework compatible with mainstream agent systems without requiring manual curation. Extensive experiments on WildClawBench demonstrate that Darwin-Claw yields substantial performance improvements, establishing a controllable and stable pathway for the continual, user-centric adaptation of autonomous agents in real-world ecosystems.",
+      "summary_cn": "现有自进化智能体往往把原始交互轨迹不加区分地注入记忆或技能模块，行为模式被淹没且更新不可控。提出 Darwin-Claw：以执行者与进化评论者的迭代协同为理论基础，构建分层经验固化系统，从轨迹中抽取细粒度错误归因并泛化为动态更新的原型向量，既作上下文感知的交互补丁，也作技能精炼的显式优化信号。在 WildClawBench 上取得显著提升且更新更稳定。",
+      "pdf_filename": "2610.23574.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23574",
+      "search_text": "darwin-claw: environment-adaptive experience consolidation for recursively self-evolving agents 大语言模型 现有自进化智能体往往把原始交互轨迹不加区分地注入记忆或技能模块，行为模式被淹没且更新不可控。提出 darwin-claw：以执行者与进化评论者的迭代协同为理论基础，构建分层经验固化系统，从轨迹中抽取细粒度错误归因并泛化为动态更新的原型向量，既作上下文感知的交互补丁，也作技能精炼的显式优化信号。在 wildclawbench 上取得显著提升且更新更稳定。 while large language model (llm) agents have demonstrated remarkable capabilities across complex tasks, they predominantly operate in isolated sessions, lacking the ability to continually learn from historical interactions or adapt to user-specific environments. existing self-evolution paradigms often indiscriminately inject raw interaction trajectories into memory or skill modules, leading to obscured behavioral patterns and compromised update controllability. furthermore, as foundational llm reasoning improves, the bottleneck for agentic evolution shifts from accumulating generic knowledge to effectively managing situational experience. to address this, we propose darwin-claw, an environment-adaptive self-evolving framework that systematically distills episodic experiences to drive the comprehensive evolution of operational skills and durable memory. theoretically grounded in an iterative agent-actor and evolver-critic co-adaptation, darwin-claw introduces a hierarchical experience consolidation system that extracts fine-grained error attributions and generalizes them into dynamically updated prototype vectors. this structured situational experience serves as interaction patches for context-sensitive perception and explicit optimization signals for skill refinement. practically, darwin-claw is a readily deployable, automated framework compatible with mainstream agent systems without requiring manual curation. extensive experiments on wildclawbench demonstrate that darwin-claw yields substantial performance improvements, establishing a controllable and stable pathway for the continual, user-centric adaptation of autonomous agents in real-world ecosystems. zhejiang university; tencent; zhongguancun academy mingze yin, xiaohan wang, dian li, longfei luo, jiahong yan, yiheng zhu, chang-yu hsieh cs.ai"
+    },
+    {
+      "arxiv_id": "2610.23537",
+      "title": "PanoBench: A Panoptic Occupancy Prediction Benchmark for Autonomous Driving",
+      "authors": "Yi Feng, Zizhan Guo, Junwu E, Yu Ma, Mengtan Zhang, Jin Wu, Wei Ye, Hanli Wang, Qijun Chen, Danwei Wang, Rui Fan",
+      "affiliations": "Tongji University",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV",
+      "abstract": "Panoptic occupancy unifies 3D geometry, semantics, and instance identities, but its development is limited by scarce instance-aware annotations. Existing benchmarks mainly provide semantic labels reconstructed from incomplete sensor observations, while panoptic datasets have limited domain coverage or annotation completeness. We introduce PanoBench, a camera-centric panoptic occupancy prediction benchmark spanning synthetic and real-world driving scenes. It combines PanoBench-CarlaOcc, PanoBench-nuScenes, and PanoBench-KITTI360 through canonical data interfaces and unified evaluation protocols, providing multi-resolution annotations with persistent instance identities. The synthetic branch derives complete panoptic geometry from simulated meshes. For real-world data, a new pipeline reconstructs backgrounds using geometric priors and topology constraints, generates foreground mesh assets from multi-frame multi-view images, and fuses them into sparse panoptic voxels. A unified valid-mask protocol evaluates complete thing instances supported by temporal observations while scoring stuff regions at the voxel level. Analyses of observation fidelity, geometric completeness, spatial continuity, and temporal consistency demonstrate the benefits of the resulting annotations over existing occupancy benchmarks. We benchmark representative methods on semantic occupancy prediction, panoptic occupancy prediction, and 4D occupancy forecasting, and study voxel resolution, synthetic-to-real transfer, and storage efficiency. These results reveal complementary strengths of volumetric and ray-based metrics and persistent challenges in real-world instance-aware prediction. PanoBench is available at https://mias.group/PanoBench.",
+      "summary_cn": "全景观测占据统一了几何、语义与实例身份，却受实例级标注稀缺制约。提出 PanoBench 相机中心基准，统一 CarlaOcc、nuScenes、KITTI360 三分支的规范接口与评测协议，提供多分辨率、实例身份持续、时序一致的标注：合成分支由仿真网格导出完整几何，真实分支用几何先验与拓扑约束重建背景、由多帧多视图生成前景网格。并给出统一有效掩码协议与代表性方法基准。",
+      "pdf_filename": "2610.23537.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23537",
+      "search_text": "panobench: a panoptic occupancy prediction benchmark for autonomous driving 自动驾驶 全景观测占据统一了几何、语义与实例身份，却受实例级标注稀缺制约。提出 panobench 相机中心基准，统一 carlaocc、nuscenes、kitti360 三分支的规范接口与评测协议，提供多分辨率、实例身份持续、时序一致的标注：合成分支由仿真网格导出完整几何，真实分支用几何先验与拓扑约束重建背景、由多帧多视图生成前景网格。并给出统一有效掩码协议与代表性方法基准。 panoptic occupancy unifies 3d geometry, semantics, and instance identities, but its development is limited by scarce instance-aware annotations. existing benchmarks mainly provide semantic labels reconstructed from incomplete sensor observations, while panoptic datasets have limited domain coverage or annotation completeness. we introduce panobench, a camera-centric panoptic occupancy prediction benchmark spanning synthetic and real-world driving scenes. it combines panobench-carlaocc, panobench-nuscenes, and panobench-kitti360 through canonical data interfaces and unified evaluation protocols, providing multi-resolution annotations with persistent instance identities. the synthetic branch derives complete panoptic geometry from simulated meshes. for real-world data, a new pipeline reconstructs backgrounds using geometric priors and topology constraints, generates foreground mesh assets from multi-frame multi-view images, and fuses them into sparse panoptic voxels. a unified valid-mask protocol evaluates complete thing instances supported by temporal observations while scoring stuff regions at the voxel level. analyses of observation fidelity, geometric completeness, spatial continuity, and temporal consistency demonstrate the benefits of the resulting annotations over existing occupancy benchmarks. we benchmark representative methods on semantic occupancy prediction, panoptic occupancy prediction, and 4d occupancy forecasting, and study voxel resolution, synthetic-to-real transfer, and storage efficiency. these results reveal complementary strengths of volumetric and ray-based metrics and persistent challenges in real-world instance-aware prediction. panobench is available at https://mias.group/panobench. tongji university yi feng, zizhan guo, junwu e, yu ma, mengtan zhang, jin wu, wei ye, hanli wang, qijun chen, danwei wang, rui fan cs.cv"
+    },
+    {
+      "arxiv_id": "2610.23396",
+      "title": "AWAM: Active Trajectory-Conditioned View Imagination for Robust Robot Manipulation",
+      "authors": "Jiawei Geng, Zhenyang Liu, Yuzheng Wu, Yanwei Fu",
+      "affiliations": "Fudan University; Shanghai Innovation Institute",
+      "published_date": "2026-10-16",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Rapid progress in embodied intelligence has enabled increasingly capable robots to follow language instructions and manipulate diverse objects. However, strong results in structured environments do not automatically transfer to open-world conditions, where clutter, occlusion, and changing viewpoints can obscure the spatial relationships required for action. To address this perceptual gap, a virtual active-perception paradigm is introduced. AWAM, an Active World-Action Model actively plans where to observe and imagines what will be seen along the planned trajectory before acting. Task-related virtual camera motion is predicted and used as a structured query into a geometry-conditioned world model, producing a reusable spatial prior for manipulation, which is later compressed into a fixed memory and fused with live observations through cross-attention for diffusion-based action prediction. AWAM achieves competitive success rates with 75.9% on LIBERO-Occ, 62.4% on LIBERO-Plus, 76.5% on RLBench-OG Occlusion1, and 94.4% in real-robot trials. These results support improved robustness to the evaluated occlusions and distribution shifts, addressing part of the gap between structured manipulation and less controlled environments.",
+      "summary_cn": "开放环境中的遮挡与视角变化会隐藏操作所需空间关系。本文提出主动式世界动作模型 AWAM：先预测任务相关的虚拟相机运动，作为结构化查询送入几何条件世界模型，想象沿该轨迹将看到的画面，形成可复用空间先验；先验压缩为固定记忆后与实时观测经交叉注意力融合，用于扩散策略的动作预测。LIBERO-Occ 达 75.9%，真机试验 94.4%。",
+      "pdf_filename": "2610.23396.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "场景压缩",
+        "世界模型",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23396",
+      "search_text": "awam: active trajectory-conditioned view imagination for robust robot manipulation 场景压缩 世界模型 具身智能 开放环境中的遮挡与视角变化会隐藏操作所需空间关系。本文提出主动式世界动作模型 awam：先预测任务相关的虚拟相机运动，作为结构化查询送入几何条件世界模型，想象沿该轨迹将看到的画面，形成可复用空间先验；先验压缩为固定记忆后与实时观测经交叉注意力融合，用于扩散策略的动作预测。libero-occ 达 75.9%，真机试验 94.4%。 rapid progress in embodied intelligence has enabled increasingly capable robots to follow language instructions and manipulate diverse objects. however, strong results in structured environments do not automatically transfer to open-world conditions, where clutter, occlusion, and changing viewpoints can obscure the spatial relationships required for action. to address this perceptual gap, a virtual active-perception paradigm is introduced. awam, an active world-action model actively plans where to observe and imagines what will be seen along the planned trajectory before acting. task-related virtual camera motion is predicted and used as a structured query into a geometry-conditioned world model, producing a reusable spatial prior for manipulation, which is later compressed into a fixed memory and fused with live observations through cross-attention for diffusion-based action prediction. awam achieves competitive success rates with 75.9% on libero-occ, 62.4% on libero-plus, 76.5% on rlbench-og occlusion1, and 94.4% in real-robot trials. these results support improved robustness to the evaluated occlusions and distribution shifts, addressing part of the gap between structured manipulation and less controlled environments. fudan university; shanghai innovation institute jiawei geng, zhenyang liu, yuzheng wu, yanwei fu cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.23334",
+      "title": "LAW: Unifying Language, Action, and World Modeling for Agentic Physical Intelligence",
+      "authors": "Jiajun Cao, Kai Tang, Bohua Zhang, Zezhong Qian, Ying Li, Xiaozhu Ju, Xiaobao Wei, Jiaming Liu, Yang Ding, Sixiang Chen, Yiding Sun, Siyuan Qian, Tinghao Wang, Jixian Wu, Yichen Guo, Yi Zhang, Shilong Zou, Yong Dai, Jian Tang, Shanghang Zhang",
+      "affiliations": "State Key Laboratory of Multimedia Information Processing, School of Computer Science, Peking University; Beijing Innovation Center of Humanoid Robotics",
+      "published_date": "2026-10-16",
+      "categories": "cs.RO",
+      "abstract": "World-action models jointly predict actions and future world states, but long-horizon manipulation further requires language reasoning to plan subtask objectives, assess execution progress, and guide action selection. We present LAW, a closed-loop VLM--WAM framework that unifies language reasoning, action generation, and world modeling through semantic subtask progress. Within the LAW agent, a hybrid-expert vision-language model plans the remaining subtasks, estimates the values of and fuses actions proposed by a world-action model, and asynchronously assesses execution status to support continued execution and subtask transitions. Within the world-action model, Mixture-of-Transformer Experts integrates modality-specific and shared computation for joint video--action modeling. Dual-stream hierarchical visual memory maintains temporal context for both models, while subtask-local value learning aligns action evaluation with semantic objectives and preserves supervision from successful prefixes of failed trajectories. LAW achieves 94.21% average success across 50 RoboTwin tasks. Replacing the WAM backbone with OpenWAM-$alpha$ further raises the average success rate to 95.56%, establishing a new open-source state of the art on RoboTwin. Despite having only 2B parameters, our VLM also outperforms variants using Embodied-R1.5 and GPT-5.5 High. On three long-horizon real-robot tasks, LAW achieves 65% average success, compared with 28.33% for $pi_{0.5}$ and 25% for Fast-WAM.",
+      "summary_cn": "长程操作不仅需要预测动作与未来状态，还需语言推理来规划子任务与评估进度。提出 LAW 闭环视觉语言与世界动作模型框架：混合专家视觉语言模型规划剩余子任务、估计并融合世界动作模型提议的动作、异步评估执行状态以支持子任务切换；世界动作模型侧用专家混合做视频与动作联合建模。在 50 个 RoboTwin 任务上平均成功率 94.21%，换骨干后达 95.56%。",
+      "pdf_filename": "2610.23334.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "规划",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23334",
+      "search_text": "law: unifying language, action, and world modeling for agentic physical intelligence 世界模型 闭环仿真 规划 多模态 具身智能 长程操作不仅需要预测动作与未来状态，还需语言推理来规划子任务与评估进度。提出 law 闭环视觉语言与世界动作模型框架：混合专家视觉语言模型规划剩余子任务、估计并融合世界动作模型提议的动作、异步评估执行状态以支持子任务切换；世界动作模型侧用专家混合做视频与动作联合建模。在 50 个 robotwin 任务上平均成功率 94.21%，换骨干后达 95.56%。 world-action models jointly predict actions and future world states, but long-horizon manipulation further requires language reasoning to plan subtask objectives, assess execution progress, and guide action selection. we present law, a closed-loop vlm--wam framework that unifies language reasoning, action generation, and world modeling through semantic subtask progress. within the law agent, a hybrid-expert vision-language model plans the remaining subtasks, estimates the values of and fuses actions proposed by a world-action model, and asynchronously assesses execution status to support continued execution and subtask transitions. within the world-action model, mixture-of-transformer experts integrates modality-specific and shared computation for joint video--action modeling. dual-stream hierarchical visual memory maintains temporal context for both models, while subtask-local value learning aligns action evaluation with semantic objectives and preserves supervision from successful prefixes of failed trajectories. law achieves 94.21% average success across 50 robotwin tasks. replacing the wam backbone with openwam-$alpha$ further raises the average success rate to 95.56%, establishing a new open-source state of the art on robotwin. despite having only 2b parameters, our vlm also outperforms variants using embodied-r1.5 and gpt-5.5 high. on three long-horizon real-robot tasks, law achieves 65% average success, compared with 28.33% for $pi_{0.5}$ and 25% for fast-wam. state key laboratory of multimedia information processing, school of computer science, peking university; beijing innovation center of humanoid robotics jiajun cao, kai tang, bohua zhang, zezhong qian, ying li, xiaozhu ju, xiaobao wei, jiaming liu, yang ding, sixiang chen, yiding sun, siyuan qian, tinghao wang, jixian wu, yichen guo, yi zhang, shilong zou, yong dai, jian tang, shanghang zhang cs.ro"
+    },
+    {
+      "arxiv_id": "2610.23262",
+      "title": "Expand-and-Prune: Test-Time Candidate-Space Adaptation for End-to-End Autonomous Driving",
+      "authors": "Fabian Schmidt, Karol Fedurko, Markus Enzweiler, Abhinav Valada",
+      "affiliations": "Esslingen University of Applied Sciences; University of Freiburg",
+      "published_date": "2026-10-16",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Candidate-based end-to-end driving planners reason over a finite set of trajectory hypotheses. However, for sparse planners, a limited candidate set may provide insufficient support for scene-relevant maneuvers, while fixed downstream candidate budgets do not account for prediction uncertainty. To address these challenges, we introduce Expand-and-Prune, a test-time framework that jointly adapts candidate support and capacity without updating learned parameters. The framework expands the native candidate set using semantic driving intent and temporally propagated predictions and then uses uncertainty in intermediate trajectory scores to adaptively prune the resulting candidates. Across four heterogeneous candidate-based planners and four benchmarks, Expand-and-Prune consistently improves planning performance. It achieves state-of-the-art results on LangAuto, increasing the Driving Score from 68.2 to 75.9, while providing further improvement on Bench2Drive, Fail2Drive, and NAVSIMv2, with particularly strong improvements in out-of-distribution scenarios. Moreover, in its full instantiation, 72.5% of selected trajectories originate from the newly introduced intent-guided or temporal candidates, confirming that candidate-space expansion provides useful hypotheses beyond those generated natively by the planner. The code is available at https://github.com/iis-esslingen/Expand-and-Prune.",
+      "summary_cn": "候选式端到端规划器只在小规模轨迹假设集上推理，稀疏候选可能缺少场景所需机动，固定预算也不考虑预测不确定性。提出 Expand-and-Prune 测试时框架：用语义驾驶意图与时序传播预测扩张候选集，再依据中间轨迹分数的不确定性自适应剪枝，全程不更新参数。在四类规划器与四个基准上一致提升，LangAuto 驾驶分由 68.2 升至 75.9，分布外场景增益更大。",
+      "pdf_filename": "2610.23262.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23262",
+      "search_text": "expand-and-prune: test-time candidate-space adaptation for end-to-end autonomous driving 规划 自动驾驶 候选式端到端规划器只在小规模轨迹假设集上推理，稀疏候选可能缺少场景所需机动，固定预算也不考虑预测不确定性。提出 expand-and-prune 测试时框架：用语义驾驶意图与时序传播预测扩张候选集，再依据中间轨迹分数的不确定性自适应剪枝，全程不更新参数。在四类规划器与四个基准上一致提升，langauto 驾驶分由 68.2 升至 75.9，分布外场景增益更大。 candidate-based end-to-end driving planners reason over a finite set of trajectory hypotheses. however, for sparse planners, a limited candidate set may provide insufficient support for scene-relevant maneuvers, while fixed downstream candidate budgets do not account for prediction uncertainty. to address these challenges, we introduce expand-and-prune, a test-time framework that jointly adapts candidate support and capacity without updating learned parameters. the framework expands the native candidate set using semantic driving intent and temporally propagated predictions and then uses uncertainty in intermediate trajectory scores to adaptively prune the resulting candidates. across four heterogeneous candidate-based planners and four benchmarks, expand-and-prune consistently improves planning performance. it achieves state-of-the-art results on langauto, increasing the driving score from 68.2 to 75.9, while providing further improvement on bench2drive, fail2drive, and navsimv2, with particularly strong improvements in out-of-distribution scenarios. moreover, in its full instantiation, 72.5% of selected trajectories originate from the newly introduced intent-guided or temporal candidates, confirming that candidate-space expansion provides useful hypotheses beyond those generated natively by the planner. the code is available at https://github.com/iis-esslingen/expand-and-prune. esslingen university of applied sciences; university of freiburg fabian schmidt, karol fedurko, markus enzweiler, abhinav valada cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.23250",
+      "title": "LonGaussian: Tracking Foundation Priors for Long-Context Feedforward Gaussian Reconstruction",
+      "authors": "Zhoufeng Xie, Guanjun Wu, Shuai Zhang, Xinggang Wang, Wenyu Liu",
+      "affiliations": "Huazhong University of Science and Technology, Wuhan, China",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV",
+      "abstract": "Reconstructing high-quality, renderable 3D scenes from long videos is essential for robotic perception and embodied intelligence. Many feed-forward Gaussian reconstruction methods rapidly predict 3D scenes from a small set of images, but extending them to longer sequences presents two bottlenecks: jointly processing all views increases GPU memory requirements, while accumulating pixel-aligned predictions redundantly represents the same surfaces and increases storage and rendering costs. We present LonGaussian, a streaming feed-forward framework that reconstructs compact, globally renderable Gaussian scenes from long image sequences with known intrinsics and unknown camera poses. Built on a pretrained streaming 3D reconstruction backbone, LonGaussian decodes long-context geometric features into dense Gaussians. Within each chunk, multi-frame point tracks link repeated observations of the same surface and guide a learned merger to consolidate the corresponding Gaussian predictions. Rendered-depth consistency filtering further suppresses Gaussians from other chunks that incorrectly occlude locally reconstructed surfaces. On DL3DV and RealEstate10K benchmarks, LonGaussian improves novel-view rendering quality while using substantially fewer Gaussians than the evaluated feed-forward baselines.",
+      "summary_cn": "长视频前馈高斯重建有两个瓶颈：全视角联合处理显存开销大，逐像素对齐预测又重复表示同一表面。提出 LonGaussian 流式框架：在预训练流式重建骨干上把长上下文几何特征解码为稠密高斯，块内用多帧点跟踪关联同一表面观测并由学习式合并器压缩对应预测，再用渲染深度一致性过滤跨块错误遮挡。在 DL3DV 与 RealEstate10K 上质量更优且高斯更少。",
+      "pdf_filename": "2610.23250.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "场景压缩",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23250",
+      "search_text": "longaussian: tracking foundation priors for long-context feedforward gaussian reconstruction 场景压缩 具身智能 长视频前馈高斯重建有两个瓶颈：全视角联合处理显存开销大，逐像素对齐预测又重复表示同一表面。提出 longaussian 流式框架：在预训练流式重建骨干上把长上下文几何特征解码为稠密高斯，块内用多帧点跟踪关联同一表面观测并由学习式合并器压缩对应预测，再用渲染深度一致性过滤跨块错误遮挡。在 dl3dv 与 realestate10k 上质量更优且高斯更少。 reconstructing high-quality, renderable 3d scenes from long videos is essential for robotic perception and embodied intelligence. many feed-forward gaussian reconstruction methods rapidly predict 3d scenes from a small set of images, but extending them to longer sequences presents two bottlenecks: jointly processing all views increases gpu memory requirements, while accumulating pixel-aligned predictions redundantly represents the same surfaces and increases storage and rendering costs. we present longaussian, a streaming feed-forward framework that reconstructs compact, globally renderable gaussian scenes from long image sequences with known intrinsics and unknown camera poses. built on a pretrained streaming 3d reconstruction backbone, longaussian decodes long-context geometric features into dense gaussians. within each chunk, multi-frame point tracks link repeated observations of the same surface and guide a learned merger to consolidate the corresponding gaussian predictions. rendered-depth consistency filtering further suppresses gaussians from other chunks that incorrectly occlude locally reconstructed surfaces. on dl3dv and realestate10k benchmarks, longaussian improves novel-view rendering quality while using substantially fewer gaussians than the evaluated feed-forward baselines. huazhong university of science and technology, wuhan, china zhoufeng xie, guanjun wu, shuai zhang, xinggang wang, wenyu liu cs.cv"
+    },
+    {
+      "arxiv_id": "2610.23237",
+      "title": "X-Splat: Unified Gaussian Splatting for Joint RGB and X-ray 3D Reconstruction",
+      "authors": "Wangze Xu, Chu Zhou, Mae Yamaguchi, Linrui Dai, I-Chao Shen, Takashi Ijiri, Imari Sato",
+      "affiliations": "The University of Tokyo; National Institute of Informatics; Shibaura Institute of Technology",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "Jointly reconstructing RGB and X-ray provides new insights by connecting external appearance with internal structure, enabling a more complete understanding of real-world objects than single modality. Yet existing methods train separate models per modality and suffer from redundant geometry, alignment artifacts, and loose coupling that limits cross-modal insight discovery. We propose a unified representation in which all Gaussian primitives share a single set of geometric parameters, with only surface-proximal primitives additionally carrying appearance attributes. We perform cross-modal registration through clean multi-view stereo and X-ray geometric proxies instead of aligning two sets of optimized Gaussians, improving alignment stability. We then jointly optimize the unified representation via supervision from both modalities, complemented by a surface-depth consistency loss derived from X-ray geometry to guide RGB reconstruction. Experiments on the InsideOut dataset and our Flower & Insect dataset show that our framework achieves more robust cross-modal alignment, higher RGB rendering quality without compromising X-ray reconstruction, and a more compact representation than maintaining two independent geometries.",
+      "summary_cn": "现有 RGB 与 X 射线联合重建多为各模态独立训练，带来几何冗余、对齐伪影与耦合松散。本文提出统一高斯表示：所有基元共享一套几何参数，仅靠近表面的基元额外携带表观属性；用干净多视图立体与 X 射线几何代理完成跨模态配准，而非对齐两套已优化高斯，并引入由 X 射线几何导出的表面深度一致性损失约束 RGB。结果对齐更稳、表示更紧凑。",
+      "pdf_filename": "2610.23237.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "多视角立体",
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23237",
+      "search_text": "x-splat: unified gaussian splatting for joint rgb and x-ray 3d reconstruction 多视角立体 3dgs 现有 rgb 与 x 射线联合重建多为各模态独立训练，带来几何冗余、对齐伪影与耦合松散。本文提出统一高斯表示：所有基元共享一套几何参数，仅靠近表面的基元额外携带表观属性；用干净多视图立体与 x 射线几何代理完成跨模态配准，而非对齐两套已优化高斯，并引入由 x 射线几何导出的表面深度一致性损失约束 rgb。结果对齐更稳、表示更紧凑。 jointly reconstructing rgb and x-ray provides new insights by connecting external appearance with internal structure, enabling a more complete understanding of real-world objects than single modality. yet existing methods train separate models per modality and suffer from redundant geometry, alignment artifacts, and loose coupling that limits cross-modal insight discovery. we propose a unified representation in which all gaussian primitives share a single set of geometric parameters, with only surface-proximal primitives additionally carrying appearance attributes. we perform cross-modal registration through clean multi-view stereo and x-ray geometric proxies instead of aligning two sets of optimized gaussians, improving alignment stability. we then jointly optimize the unified representation via supervision from both modalities, complemented by a surface-depth consistency loss derived from x-ray geometry to guide rgb reconstruction. experiments on the insideout dataset and our flower & insect dataset show that our framework achieves more robust cross-modal alignment, higher rgb rendering quality without compromising x-ray reconstruction, and a more compact representation than maintaining two independent geometries. the university of tokyo; national institute of informatics; shibaura institute of technology wangze xu, chu zhou, mae yamaguchi, linrui dai, i-chao shen, takashi ijiri, imari sato cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2610.23098",
+      "title": "InstAgent: A Recursively Self-Improving Agent Operating System for Heterogeneous Robot Collaboration",
+      "authors": "Haoyang Luo, Junhao Qin, Jingyan Cao, Yi Huang, Guangjie Yang, Xiaoyu Chen, Haotao Lu, Tianxiang Gui, Ye Shi, Jingya Wang",
+      "affiliations": "ShanghaiTech University; InstAdapt, Shanghai, China",
+      "published_date": "2026-10-16",
+      "categories": "cs.RO",
+      "abstract": "Heterogeneous robot teams enable complex, long-horizon tasks by combining complementary sensing, mobility, and manipulation capabilities across multiple embodiments. Yet existing systems struggle to retain execution-time corrections as reusable experience, maintain task-relevant context memory across space and time for reliable handoffs, and explicitly represent the inter-robot dependencies required for structured collaboration. In order to address these challenges, we present InstAgent, a recursively self-improving (RSI) Agent Operating System for heterogeneous robot collaboration. InstAgent organizes team behaviors as agentic behavior trees (BTs) that explicitly model capability assignment, inter-robot dependencies and handoff checks. The RSI mechanism updates these collaboration programs from execution feedback and preserves successful revisions for reuse in future tasks, while shared multimodal spatio-temporal memory provides context for planning and handoff validation. Experiments on 20 real-world multi-robot tasks with three high-level models show consistent gains in task success, first-attempt completion, and execution efficiency.",
+      "summary_cn": "面向异构机器人团队的长程协作，提出 InstAgent：把团队行为组织为智能体行为树，显式建模能力分配、机器人间依赖与交接校验；递归自改进机制从执行反馈更新协作程序并保留成功修订供复用，共享多模态时空记忆为规划与交接验证提供上下文。在 20 个真实多机器人任务、三种高层模型下，任务成功率、首次尝试完成率与执行效率均稳定提升。",
+      "pdf_filename": "2610.23098.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23098",
+      "search_text": "instagent: a recursively self-improving agent operating system for heterogeneous robot collaboration 规划 多模态 面向异构机器人团队的长程协作，提出 instagent：把团队行为组织为智能体行为树，显式建模能力分配、机器人间依赖与交接校验；递归自改进机制从执行反馈更新协作程序并保留成功修订供复用，共享多模态时空记忆为规划与交接验证提供上下文。在 20 个真实多机器人任务、三种高层模型下，任务成功率、首次尝试完成率与执行效率均稳定提升。 heterogeneous robot teams enable complex, long-horizon tasks by combining complementary sensing, mobility, and manipulation capabilities across multiple embodiments. yet existing systems struggle to retain execution-time corrections as reusable experience, maintain task-relevant context memory across space and time for reliable handoffs, and explicitly represent the inter-robot dependencies required for structured collaboration. in order to address these challenges, we present instagent, a recursively self-improving (rsi) agent operating system for heterogeneous robot collaboration. instagent organizes team behaviors as agentic behavior trees (bts) that explicitly model capability assignment, inter-robot dependencies and handoff checks. the rsi mechanism updates these collaboration programs from execution feedback and preserves successful revisions for reuse in future tasks, while shared multimodal spatio-temporal memory provides context for planning and handoff validation. experiments on 20 real-world multi-robot tasks with three high-level models show consistent gains in task success, first-attempt completion, and execution efficiency. shanghaitech university; instadapt, shanghai, china haoyang luo, junhao qin, jingyan cao, yi huang, guangjie yang, xiaoyu chen, haotao lu, tianxiang gui, ye shi, jingya wang cs.ro"
+    },
+    {
+      "arxiv_id": "2610.23039",
+      "title": "Frame-Consistent Feed-Forward 3D Gaussian Splatting from Sparse Unposed Images",
+      "authors": "Viruthshaan Vinasirajan, Ranga Rodrigo",
+      "affiliations": "University of Moratuwa, Sri Lanka",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV",
+      "abstract": "Feed-forward Gaussian models have made novel view synthesis almost instantaneous. Feed-forward methods predict Gaussians directly, either in two stages or in a single merged pass. Using two separately trained models is attractive because each can specialize in its own objective: one for accurate pose estimation and the other for high-quality reconstruction, rather than forcing a single jointly trained network to compromise between the two. A natural instantiation pairs a frozen pose estimator, VGGT, with a frozen reconstruction backbone, TokenGS. Prior work, such as VGGT-X and 3R-GS, also adopts a two-stage design, but attributes the resulting quality degradation to noisy pose estimates and introduces learned refinement. We show that this is not the primary source of the problem. Through per-camera analysis across 107 scenes from two datasets, DL3DV and MipNeRF360, using COLMAP poses as the reference, we find that the rotation error after alignment is small (median 1.6 degrees), whereas the translation scale is offset by a large, dataset-consistent factor. Controlled ablations over 140 DL3DV scenes show that the primary obstacles are two integration failures rather than pose error: a coordinate-frame inconsistency and a translation-scale mismatch, both of which can be corrected deterministically. With these fixes, a frozen VGGT driving a frozen TokenGS achieves 22.47 PSNR, within 0.51 dB of the COLMAP reference, with no additional training, when poses are estimated from all scene views. In the sparse setting, where reconstruction uses only four context images under the standard pose-free protocol, the same pipeline matches this all-view quality, yielding a fully COLMAP-free pipeline without any refinement step.",
+      "summary_cn": "两阶段前馈高斯方案常把质量下降归因于位姿噪声并引入学习式修正。作者在 DL3DV 与 MipNeRF360 共 107 个场景上以 COLMAP 为参照分析，发现对齐后旋转误差中位数仅 1.6 度，真正瓶颈是坐标系不一致与平移尺度偏差两类集成失效，且可确定性校正。修正后冻结 VGGT 驱动冻结 TokenGS 无需再训练即达 22.47 PSNR，距 COLMAP 参考仅 0.51 dB。",
+      "pdf_filename": "2610.23039.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23039",
+      "search_text": "frame-consistent feed-forward 3d gaussian splatting from sparse unposed images 前馈3d重建 3dgs 两阶段前馈高斯方案常把质量下降归因于位姿噪声并引入学习式修正。作者在 dl3dv 与 mipnerf360 共 107 个场景上以 colmap 为参照分析，发现对齐后旋转误差中位数仅 1.6 度，真正瓶颈是坐标系不一致与平移尺度偏差两类集成失效，且可确定性校正。修正后冻结 vggt 驱动冻结 tokengs 无需再训练即达 22.47 psnr，距 colmap 参考仅 0.51 db。 feed-forward gaussian models have made novel view synthesis almost instantaneous. feed-forward methods predict gaussians directly, either in two stages or in a single merged pass. using two separately trained models is attractive because each can specialize in its own objective: one for accurate pose estimation and the other for high-quality reconstruction, rather than forcing a single jointly trained network to compromise between the two. a natural instantiation pairs a frozen pose estimator, vggt, with a frozen reconstruction backbone, tokengs. prior work, such as vggt-x and 3r-gs, also adopts a two-stage design, but attributes the resulting quality degradation to noisy pose estimates and introduces learned refinement. we show that this is not the primary source of the problem. through per-camera analysis across 107 scenes from two datasets, dl3dv and mipnerf360, using colmap poses as the reference, we find that the rotation error after alignment is small (median 1.6 degrees), whereas the translation scale is offset by a large, dataset-consistent factor. controlled ablations over 140 dl3dv scenes show that the primary obstacles are two integration failures rather than pose error: a coordinate-frame inconsistency and a translation-scale mismatch, both of which can be corrected deterministically. with these fixes, a frozen vggt driving a frozen tokengs achieves 22.47 psnr, within 0.51 db of the colmap reference, with no additional training, when poses are estimated from all scene views. in the sparse setting, where reconstruction uses only four context images under the standard pose-free protocol, the same pipeline matches this all-view quality, yielding a fully colmap-free pipeline without any refinement step. university of moratuwa, sri lanka viruthshaan vinasirajan, ranga rodrigo cs.cv"
+    },
+    {
+      "arxiv_id": "2610.23012",
+      "title": "Adaptation of Computer Use Agents to New Software with User Manuals",
+      "authors": "Chulhoon Yoon, Kyungri Park, Jinyeong Yun, Daeyun Jeong, Sukmin Yun, Woohwan Jung",
+      "affiliations": "Korea University; Hanyang University",
+      "published_date": "2026-10-16",
+      "categories": "cs.AI",
+      "abstract": "Recent advances in multimodal foundation models have significantly improved the ability to operate real-world software through graphical user interfaces (GUIs) using visual observations and natural language instructions. However, maintaining strong performance on unseen applications remains challenging, as practical tasks often require long-horizon procedural knowledge and application-specific operation patterns. In addition, constructing executable tasks and collecting corresponding trajectories for training still heavily rely on human-annotated data, incurring substantial cost. In this paper, we propose MAGE (Manual-augmented computer use AGent Execution and learning), a framework that leverages user manuals as a scalable source of procedural knowledge to improve both inference and training. During execution, MAGE retrieves task-relevant manual content and uses a planner to generate explicit procedural guidance for CUAs. To further account for the discrepancies between manuals and actual GUI environments, such as version differences or user settings, MAGE also adapts the agent policy through environment interaction. During training, MAGE converts manuals into executable task-plan pairs and uses the plans to guide environment rollouts toward task-relevant states; the resulting trajectories are then used to optimize the policy without human-authored demonstrations. This unified design enables effective utilization of manuals for both task execution and training, reducing reliance on human-authored training data. Experimental results across six applications demonstrate improvements in task success rates over strong baselines, highlighting the effectiveness of manual-guided planning and policy adaptation in new software environments. We provide the code and reproduction scripts at https://github.com/ku-autoai/MAGE.",
+      "summary_cn": "针对计算机使用智能体在未见软件上缺乏长程流程知识、且训练依赖人工标注轨迹的问题，提出 MAGE：把用户手册作为可扩展的流程知识源。推理时检索任务相关手册片段并由规划器生成显式步骤指导；为弥合手册与真实图形界面的版本与设置差异，再用环境交互自适应策略；训练时把手册转成可执行的任务计划对，用计划引导采样，无需人工示范即可优化策略。",
+      "pdf_filename": "2610.23012.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23012",
+      "search_text": "adaptation of computer use agents to new software with user manuals 规划 多模态 针对计算机使用智能体在未见软件上缺乏长程流程知识、且训练依赖人工标注轨迹的问题，提出 mage：把用户手册作为可扩展的流程知识源。推理时检索任务相关手册片段并由规划器生成显式步骤指导；为弥合手册与真实图形界面的版本与设置差异，再用环境交互自适应策略；训练时把手册转成可执行的任务计划对，用计划引导采样，无需人工示范即可优化策略。 recent advances in multimodal foundation models have significantly improved the ability to operate real-world software through graphical user interfaces (guis) using visual observations and natural language instructions. however, maintaining strong performance on unseen applications remains challenging, as practical tasks often require long-horizon procedural knowledge and application-specific operation patterns. in addition, constructing executable tasks and collecting corresponding trajectories for training still heavily rely on human-annotated data, incurring substantial cost. in this paper, we propose mage (manual-augmented computer use agent execution and learning), a framework that leverages user manuals as a scalable source of procedural knowledge to improve both inference and training. during execution, mage retrieves task-relevant manual content and uses a planner to generate explicit procedural guidance for cuas. to further account for the discrepancies between manuals and actual gui environments, such as version differences or user settings, mage also adapts the agent policy through environment interaction. during training, mage converts manuals into executable task-plan pairs and uses the plans to guide environment rollouts toward task-relevant states; the resulting trajectories are then used to optimize the policy without human-authored demonstrations. this unified design enables effective utilization of manuals for both task execution and training, reducing reliance on human-authored training data. experimental results across six applications demonstrate improvements in task success rates over strong baselines, highlighting the effectiveness of manual-guided planning and policy adaptation in new software environments. we provide the code and reproduction scripts at https://github.com/ku-autoai/mage. korea university; hanyang university chulhoon yoon, kyungri park, jinyeong yun, daeyun jeong, sukmin yun, woohwan jung cs.ai"
+    },
+    {
+      "arxiv_id": "2610.22899",
+      "title": "Provable Authority: A Protocol for Verifiable Authority Resolution and Control Across Human, Organizational, and Agentic Transactions",
+      "authors": "Jeremy Blackburn, Tim Hines, Matthew Koepp, Russell Lessard, Jason Patrick",
+      "affiliations": "ChainIT",
+      "published_date": "2026-10-16",
+      "categories": "cs.CR, cs.MA",
+      "abstract": "Payment systems authenticate users, devices, accounts, and cryptographic credentials, but a relying party, such as a counterparty, payment rail, marketplace, or autonomous agent runtime, generally cannot obtain compact, independently verifiable evidence that the party presenting one exact transaction holds current organizational authority to execute it under the applicable evidence, policy, budget, and approval state. Agentic commerce makes this gap operationally urgent: a software agent can produce a valid signature while acting outside its delegated purpose, after its sponsor's authority has changed, or on transaction details that differ from those a human approved. We describe the ChainIT Authority Protocol, a subject-neutral and rail-neutral pre-execution authority and evidence control plane. The protocol separates durable identity, a versioned organizational authority record (the Authority Resolution Pactvera), sourced evidence assertions, deterministic reason-coded policy predicates, and organization-configured dispositions; binds each decision and human approval to a canonical transaction digest; reserves capacity atomically so that limits hold under concurrency; and authorizes commit only through a single-use, sender-constrained Execution Authorization Credential consumed at the rail adapter, with append-only lifecycle evidence sealed after the terminal outcome. An Agent Subject Profile adds the workload registration, attested key hierarchy, and sovereignty boundary required when the acting subject is an AI agent, without introducing a separate authority concept. We specify the commit-time execution predicate and bounded-freshness status rules, give enforcement profiles for fiat (ACH, wire, card, instant payment) and stablecoin rails, and state residual risks and non-goals.",
+      "summary_cn": "支付系统能认证用户、设备与凭证，却无法向交易对手或自主智能体运行时提供该方当前确有权执行这笔交易的紧凑可验证证据。本文提出 ChainIT 授权协议：分离持久身份、版本化组织授权记录、来源证据断言、确定性原因码策略谓词与处置策略，将每个决策与人工批准绑定到规范交易摘要，原子预留额度，并以单次、发送方约束的执行授权凭证在支付适配器处放行。",
+      "pdf_filename": "2610.22899.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.22899",
+      "search_text": "provable authority: a protocol for verifiable authority resolution and control across human, organizational, and agentic transactions  支付系统能认证用户、设备与凭证，却无法向交易对手或自主智能体运行时提供该方当前确有权执行这笔交易的紧凑可验证证据。本文提出 chainit 授权协议：分离持久身份、版本化组织授权记录、来源证据断言、确定性原因码策略谓词与处置策略，将每个决策与人工批准绑定到规范交易摘要，原子预留额度，并以单次、发送方约束的执行授权凭证在支付适配器处放行。 payment systems authenticate users, devices, accounts, and cryptographic credentials, but a relying party, such as a counterparty, payment rail, marketplace, or autonomous agent runtime, generally cannot obtain compact, independently verifiable evidence that the party presenting one exact transaction holds current organizational authority to execute it under the applicable evidence, policy, budget, and approval state. agentic commerce makes this gap operationally urgent: a software agent can produce a valid signature while acting outside its delegated purpose, after its sponsor's authority has changed, or on transaction details that differ from those a human approved. we describe the chainit authority protocol, a subject-neutral and rail-neutral pre-execution authority and evidence control plane. the protocol separates durable identity, a versioned organizational authority record (the authority resolution pactvera), sourced evidence assertions, deterministic reason-coded policy predicates, and organization-configured dispositions; binds each decision and human approval to a canonical transaction digest; reserves capacity atomically so that limits hold under concurrency; and authorizes commit only through a single-use, sender-constrained execution authorization credential consumed at the rail adapter, with append-only lifecycle evidence sealed after the terminal outcome. an agent subject profile adds the workload registration, attested key hierarchy, and sovereignty boundary required when the acting subject is an ai agent, without introducing a separate authority concept. we specify the commit-time execution predicate and bounded-freshness status rules, give enforcement profiles for fiat (ach, wire, card, instant payment) and stablecoin rails, and state residual risks and non-goals. chainit jeremy blackburn, tim hines, matthew koepp, russell lessard, jason patrick cs.cr, cs.ma"
+    },
+    {
+      "arxiv_id": "2610.22881",
+      "title": "No One-Size-Fits-All: Adaptive Code Editing with Feature-Based Strategy Selection",
+      "authors": "Jun Wan, Zhongxin Liu, Dajun Chen, Wei Jiang, Yong Li, Xiaoxue Ren",
+      "affiliations": "Zhejiang University; Ant Group",
+      "published_date": "2026-10-16",
+      "categories": "cs.SE",
+      "abstract": "Large language models have shown strong potential in automating code editing (CE) tasks, yet most existing systems rely on a fixed CE strategy (i.e., one-step, search-replace, and plan-apply) across diverse scenarios. In practice, CE tasks vary widely in code context, edit locality, and semantic complexity, causing no single strategy to perform consistently well. Moreover, systematic studies on the relationship between strategies and CE tasks remain scarce, limiting further optimization of LLM-based code editing strategies. To address this gap, we construct CEBench, comprising 500 real-world CE tasks curated from SWE-bench. Then we compare three representative CE strategies (one-step, search-replace, plan-apply). Our study reveals two key findings: (1) each strategy exhibits distinct advantages for specific CE tasks, with no universal optimality; (2) strategy effectiveness is significantly influenced by four core task features: total lines of code, modification type, modification scope, and task type. Motivated by these findings, we propose Ace, an adaptive code editing framework that dynamically selects optimal CE strategies based on task features. Unlike classifier-based or instruction-prompting approaches, Ace employs a fine-tuned LLM that learns feature-strategy mappings from empirical data to recommend strategies with interpretable rationales. Extensive experiments on our CEBench-verified show that Ace outperforms state-of-the-art baselines: it boosts Pass@1 by 21.7% while reducing token consumption by 27.3% compared to the best baseline (AutoCodeRover). Our strategy selector achieves 72.6% selection accuracy with 69.9% rationale accuracy (Cohen's Kappa = 0.807), providing transparent and trustworthy decision-making for developers.",
+      "summary_cn": "现有多数代码编辑系统对所有任务使用固定策略，而任务上下文、改动局部性与语义复杂度差异很大。作者构建 CEBench，含 500 个来自 SWE-bench 的真实任务，系统比较一步、搜索替换、计划应用三种策略，发现无普适最优，且效果受代码行数、修改类型、修改范围与任务类型显著影响；据此提出 Ace，用微调模型学习特征到策略映射并给出可解释理由，Pass@1 提升 21.7%。",
+      "pdf_filename": "2610.22881.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22881",
+      "search_text": "no one-size-fits-all: adaptive code editing with feature-based strategy selection 大语言模型 现有多数代码编辑系统对所有任务使用固定策略，而任务上下文、改动局部性与语义复杂度差异很大。作者构建 cebench，含 500 个来自 swe-bench 的真实任务，系统比较一步、搜索替换、计划应用三种策略，发现无普适最优，且效果受代码行数、修改类型、修改范围与任务类型显著影响；据此提出 ace，用微调模型学习特征到策略映射并给出可解释理由，pass@1 提升 21.7%。 large language models have shown strong potential in automating code editing (ce) tasks, yet most existing systems rely on a fixed ce strategy (i.e., one-step, search-replace, and plan-apply) across diverse scenarios. in practice, ce tasks vary widely in code context, edit locality, and semantic complexity, causing no single strategy to perform consistently well. moreover, systematic studies on the relationship between strategies and ce tasks remain scarce, limiting further optimization of llm-based code editing strategies. to address this gap, we construct cebench, comprising 500 real-world ce tasks curated from swe-bench. then we compare three representative ce strategies (one-step, search-replace, plan-apply). our study reveals two key findings: (1) each strategy exhibits distinct advantages for specific ce tasks, with no universal optimality; (2) strategy effectiveness is significantly influenced by four core task features: total lines of code, modification type, modification scope, and task type. motivated by these findings, we propose ace, an adaptive code editing framework that dynamically selects optimal ce strategies based on task features. unlike classifier-based or instruction-prompting approaches, ace employs a fine-tuned llm that learns feature-strategy mappings from empirical data to recommend strategies with interpretable rationales. extensive experiments on our cebench-verified show that ace outperforms state-of-the-art baselines: it boosts pass@1 by 21.7% while reducing token consumption by 27.3% compared to the best baseline (autocoderover). our strategy selector achieves 72.6% selection accuracy with 69.9% rationale accuracy (cohen's kappa = 0.807), providing transparent and trustworthy decision-making for developers. zhejiang university; ant group jun wan, zhongxin liu, dajun chen, wei jiang, yong li, xiaoxue ren cs.se"
+    },
+    {
+      "arxiv_id": "2610.22840",
+      "title": "Image Moment Estimation for Crowded Datasets",
+      "authors": "Andy Zhang, Oscar Mickelin, Amit Singer",
+      "affiliations": "Princeton University; Yau Mathematical Sciences Center, Tsinghua University",
+      "published_date": "2026-10-16",
+      "categories": "eess.IV, q-bio.QM",
+      "abstract": "Single-particle cryogenic electron microscopy (cryo-EM) is an imaging technique capable of reconstructing high-resolution three-dimensional (3D) structure of biological macromolecules from a set of noisy projection images taken at random viewing directions. The mathematical model for cryo-EM images typically assumes that each image contains exactly one particle, which is centered at the origin. However, many experimental datasets contain particle images which include multiple particles: one central particle and a few crowding particles. This deviation from the model leads to inaccurate estimation of image statistics, such as the low-order image moments. To account for this, we propose a method to estimate image moments while correcting for the effect of crowding particles. This method can be run directly from a set of cryo-EM micrographs with picked particles, and we demonstrate its efficacy on a wide array of synthetic data.",
+      "summary_cn": "单颗粒冷冻电镜成像模型假设每张图只有一个居中颗粒，实际数据常含拥挤颗粒，使低阶图像矩估计出现偏差。本文将拥挤颗粒视为对中心颗粒统计量的污染，提出可直接在已挑粒显微图上运行的矩估计校正方法，对颗粒位置分布建模后修正零阶与一阶矩。在大量合成数据上验证了校正有效性，为后续高分辨三维重建提供更准确的初始化统计量。",
+      "pdf_filename": "2610.22840.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.22840",
+      "search_text": "image moment estimation for crowded datasets  单颗粒冷冻电镜成像模型假设每张图只有一个居中颗粒，实际数据常含拥挤颗粒，使低阶图像矩估计出现偏差。本文将拥挤颗粒视为对中心颗粒统计量的污染，提出可直接在已挑粒显微图上运行的矩估计校正方法，对颗粒位置分布建模后修正零阶与一阶矩。在大量合成数据上验证了校正有效性，为后续高分辨三维重建提供更准确的初始化统计量。 single-particle cryogenic electron microscopy (cryo-em) is an imaging technique capable of reconstructing high-resolution three-dimensional (3d) structure of biological macromolecules from a set of noisy projection images taken at random viewing directions. the mathematical model for cryo-em images typically assumes that each image contains exactly one particle, which is centered at the origin. however, many experimental datasets contain particle images which include multiple particles: one central particle and a few crowding particles. this deviation from the model leads to inaccurate estimation of image statistics, such as the low-order image moments. to account for this, we propose a method to estimate image moments while correcting for the effect of crowding particles. this method can be run directly from a set of cryo-em micrographs with picked particles, and we demonstrate its efficacy on a wide array of synthetic data. princeton university; yau mathematical sciences center, tsinghua university andy zhang, oscar mickelin, amit singer eess.iv, q-bio.qm"
+    },
+    {
+      "arxiv_id": "2610.22825",
+      "title": "World Action Critic (WAC) Model: Joint Foresight and Criticism for Policy Learning",
+      "authors": "Xiangteng Zhang, Haoyuan Liu, Yang Guan, Jingliang Duan, Yao Lyu, Tao Zhang, Shuai Zhang, Kehua Sheng, Bo Zhang, Shengbo Eben Li",
+      "affiliations": "School of Vehicle and Mobility, Tsinghua University; College of AI, Tsinghua University; SunRisingAI Lab; Didi Voyager Labs, Didi Autonomous Driving",
+      "published_date": "2026-10-16",
+      "categories": "cs.AI",
+      "abstract": "World models have shown considerable promise in sequential decision-making by anticipating the consequences of actions and providing predictive foresight for policy learning. However, learning to reason about counterfactual actions remains challenging, since predictive objectives may underemphasize information critical for action evaluation, while unexecuted actions lack observed futures for direct supervision. To address these challenges, we propose the World Action Critic (WAC) Model, which proposes multimodal action candidates and jointly learns candidate-conditioned future prediction and consequence evaluation. In our proposed framework, critic supervision directly shapes intermediate predictive representations during rollout, encouraging them to retain information needed to distinguish action quality. Observed futures supervise prediction for executed actions, while external task-quality targets provide evaluation signals for counterfactual candidates. Through joint optimization, critic signals from these candidates propagate into predictive representations without requiring their observed futures. Our theoretical analysis characterizes critic-guided feature retention and bounds candidate-selection regret. Applied to autonomous driving, WAC achieves 93.4 PDMS on NAVSIM-v1, demonstrating the effectiveness of jointly learning predictive foresight and consequence evaluation.",
+      "summary_cn": "世界模型中反事实动作缺少可观测未来，预测目标又弱化动作评价所需信息。本文提出 World Action Critic：多模态提议动作候选，联合学习以候选为条件的未来预测与后果评价，让评价监督在 rollout 中直接塑形中间预测表征，已执行动作用真实未来监督，未执行动作用外部质量目标监督。理论上给出特征保持与选择后悔界，在 NAVSIM-v1 上达到 93.4 PDMS。",
+      "pdf_filename": "2610.22825.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "强化学习",
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22825",
+      "search_text": "world action critic (wac) model: joint foresight and criticism for policy learning 世界模型 强化学习 自动驾驶 多模态 世界模型中反事实动作缺少可观测未来，预测目标又弱化动作评价所需信息。本文提出 world action critic：多模态提议动作候选，联合学习以候选为条件的未来预测与后果评价，让评价监督在 rollout 中直接塑形中间预测表征，已执行动作用真实未来监督，未执行动作用外部质量目标监督。理论上给出特征保持与选择后悔界，在 navsim-v1 上达到 93.4 pdms。 world models have shown considerable promise in sequential decision-making by anticipating the consequences of actions and providing predictive foresight for policy learning. however, learning to reason about counterfactual actions remains challenging, since predictive objectives may underemphasize information critical for action evaluation, while unexecuted actions lack observed futures for direct supervision. to address these challenges, we propose the world action critic (wac) model, which proposes multimodal action candidates and jointly learns candidate-conditioned future prediction and consequence evaluation. in our proposed framework, critic supervision directly shapes intermediate predictive representations during rollout, encouraging them to retain information needed to distinguish action quality. observed futures supervise prediction for executed actions, while external task-quality targets provide evaluation signals for counterfactual candidates. through joint optimization, critic signals from these candidates propagate into predictive representations without requiring their observed futures. our theoretical analysis characterizes critic-guided feature retention and bounds candidate-selection regret. applied to autonomous driving, wac achieves 93.4 pdms on navsim-v1, demonstrating the effectiveness of jointly learning predictive foresight and consequence evaluation. school of vehicle and mobility, tsinghua university; college of ai, tsinghua university; sunrisingai lab; didi voyager labs, didi autonomous driving xiangteng zhang, haoyuan liu, yang guan, jingliang duan, yao lyu, tao zhang, shuai zhang, kehua sheng, bo zhang, shengbo eben li cs.ai"
+    },
+    {
+      "arxiv_id": "2610.22812",
+      "title": "PASS-VLN: Passability-Aware Local-Command Vision-and-Language Navigation",
+      "authors": "Cong Zou, Xiangsheng Shi, Xuanhui Wang, Fubin Wang, Guangjun Ge, Chao Wang, Yu Wang",
+      "affiliations": "Qiyuan Lab, Beijing, China; Department of Electronic Engineering, Tsinghua University, Beijing, China",
+      "published_date": "2026-10-16",
+      "categories": "cs.RO",
+      "abstract": "Reliable vision-and-language navigation (VLN) requires not only understanding instructions but also determining whether and how a robot can physically execute them. However, existing VLN benchmarks typically assume executable instructions and focus on long-horizon tasks. This leaves body-dependent local execution, including passability and collision-free execution, largely unexamined. Evaluating these factors within long-horizon tasks would entangle local physical execution with task planning and long-term spatial memory, making navigation failures difficult to attribute. We therefore focus on grounding local navigation commands in executable motion under environmental and robot body constraints. We present PASS-VLN, a passability-aware local-command VLN benchmark and model. The benchmark holds the scene, instruction, start pose, and reference route fixed while varying robot body width, requiring target completion when the instructed passage is feasible and stopping before blockage otherwise. Our model encodes body width through obstacle inflation in a depth-derived local bird's-eye view, fuses geometry with visual and linguistic context, and predicts discrete latent action codes for continuous closed-loop execution. Experiments show that PASS-VLN improves collision-free success by approximately 12 percentage points over a strong VLN model fine-tuned on our benchmark, while adapting reach-versus-stop behavior to body constraints and generalizing to unseen body widths. When integrated with a high-level planner, PASS-VLN achieves higher success with fewer local commands, while real-world deployment further demonstrates its effectiveness as a low-level executor. The benchmark and model will be released.",
+      "summary_cn": "现有视觉语言导航基准默认指令物理可执行，忽略机身尺寸相关的可通过性。提出 PASS-VLN：固定场景、指令、起始位姿与参考路线，仅改变机器人宽度，要求可行时到达、不可行时在阻塞前停住；模型在深度导出的局部鸟瞰图上以障碍膨胀编码机身宽度，融合几何、视觉与语言后预测离散潜动作码做闭环执行。无碰撞成功率提升约 12 个百分点。",
+      "pdf_filename": "2610.22812.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22812",
+      "search_text": "pass-vln: passability-aware local-command vision-and-language navigation 闭环仿真 现有视觉语言导航基准默认指令物理可执行，忽略机身尺寸相关的可通过性。提出 pass-vln：固定场景、指令、起始位姿与参考路线，仅改变机器人宽度，要求可行时到达、不可行时在阻塞前停住；模型在深度导出的局部鸟瞰图上以障碍膨胀编码机身宽度，融合几何、视觉与语言后预测离散潜动作码做闭环执行。无碰撞成功率提升约 12 个百分点。 reliable vision-and-language navigation (vln) requires not only understanding instructions but also determining whether and how a robot can physically execute them. however, existing vln benchmarks typically assume executable instructions and focus on long-horizon tasks. this leaves body-dependent local execution, including passability and collision-free execution, largely unexamined. evaluating these factors within long-horizon tasks would entangle local physical execution with task planning and long-term spatial memory, making navigation failures difficult to attribute. we therefore focus on grounding local navigation commands in executable motion under environmental and robot body constraints. we present pass-vln, a passability-aware local-command vln benchmark and model. the benchmark holds the scene, instruction, start pose, and reference route fixed while varying robot body width, requiring target completion when the instructed passage is feasible and stopping before blockage otherwise. our model encodes body width through obstacle inflation in a depth-derived local bird's-eye view, fuses geometry with visual and linguistic context, and predicts discrete latent action codes for continuous closed-loop execution. experiments show that pass-vln improves collision-free success by approximately 12 percentage points over a strong vln model fine-tuned on our benchmark, while adapting reach-versus-stop behavior to body constraints and generalizing to unseen body widths. when integrated with a high-level planner, pass-vln achieves higher success with fewer local commands, while real-world deployment further demonstrates its effectiveness as a low-level executor. the benchmark and model will be released. qiyuan lab, beijing, china; department of electronic engineering, tsinghua university, beijing, china cong zou, xiangsheng shi, xuanhui wang, fubin wang, guangjun ge, chao wang, yu wang cs.ro"
+    },
+    {
+      "arxiv_id": "2610.22800",
+      "title": "Veil-Then-Reveal: Protecting PII Privacy via Reversible Pseudo-Anonymization in Zero-Trust User--LLM Interaction",
+      "authors": "Mohamed Shaaban, Mohamed Elmahallawy, Thomas E. Carroll",
+      "affiliations": "Washington State University; Pacific Northwest National Laboratory",
+      "published_date": "2026-10-16",
+      "categories": "cs.CR, cs.CL",
+      "abstract": "Large language models (LLMs) increasingly process sensitive documents and personal information, yet sending prompts containing personally identifiable information (PII) to remote providers exposes data subjects and organizations to risks from logging, retention, model training, and unintended disclosure. Existing anonymization methods often mask or remove PII, while conventional encryption eliminates the lexical and structural cues needed for effective LLM processing. We present Veil-then-Reveal (VtR), a user-side PII pseudo-anonymization framework for privacy-preserving LLM interaction under a zero-trust threat model. VtR treats remote LLM providers as untrusted and sends only pseudo-anonymized prompts, keeping plaintext PII on the user. VtR first detects PII and replaces it with realistic, same-type, in-vocabulary surrogates before prompts leave the user's device, preserving their linguistic and structural properties. It combines format-preserving encryption (FPE) for structured PII, such as phone and credit-card numbers, with a keyed-hash dictionary and secure vault for semantic PII, such as names, locations, and organizations. Session-specific mappings provide cross-session unlinkability, while user-side restoration reversibly replaces surrogates with their original values in LLM responses. We further introduce a rank-class FPE strategy for dates that preserves format and ambiguity while reducing cipher evaluations. Evaluation on three datasets containing 11,322 annotated PII instances achieves 97.9% detection recall, 95.2% protection of detected values, and 99.9% round trip; 100% of echoed surrogates end-to-end round-trip restoration.",
+      "summary_cn": "面向零信任下的用户与大模型交互，提出 Veil-then-Reveal 伪匿名框架：明文个人身份信息留在用户端，只把同类型、词表内、格式真实的替身发送给远端模型；结构化信息用保格式加密，姓名地点机构等语义信息用键控哈希字典与本地保险库，会话级映射保证跨会话不可关联，响应端可逆还原。在 11322 个标注实例上检测召回 97.9%，还原率 99.9%。",
+      "pdf_filename": "2610.22800.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22800",
+      "search_text": "veil-then-reveal: protecting pii privacy via reversible pseudo-anonymization in zero-trust user--llm interaction 大语言模型 面向零信任下的用户与大模型交互，提出 veil-then-reveal 伪匿名框架：明文个人身份信息留在用户端，只把同类型、词表内、格式真实的替身发送给远端模型；结构化信息用保格式加密，姓名地点机构等语义信息用键控哈希字典与本地保险库，会话级映射保证跨会话不可关联，响应端可逆还原。在 11322 个标注实例上检测召回 97.9%，还原率 99.9%。 large language models (llms) increasingly process sensitive documents and personal information, yet sending prompts containing personally identifiable information (pii) to remote providers exposes data subjects and organizations to risks from logging, retention, model training, and unintended disclosure. existing anonymization methods often mask or remove pii, while conventional encryption eliminates the lexical and structural cues needed for effective llm processing. we present veil-then-reveal (vtr), a user-side pii pseudo-anonymization framework for privacy-preserving llm interaction under a zero-trust threat model. vtr treats remote llm providers as untrusted and sends only pseudo-anonymized prompts, keeping plaintext pii on the user. vtr first detects pii and replaces it with realistic, same-type, in-vocabulary surrogates before prompts leave the user's device, preserving their linguistic and structural properties. it combines format-preserving encryption (fpe) for structured pii, such as phone and credit-card numbers, with a keyed-hash dictionary and secure vault for semantic pii, such as names, locations, and organizations. session-specific mappings provide cross-session unlinkability, while user-side restoration reversibly replaces surrogates with their original values in llm responses. we further introduce a rank-class fpe strategy for dates that preserves format and ambiguity while reducing cipher evaluations. evaluation on three datasets containing 11,322 annotated pii instances achieves 97.9% detection recall, 95.2% protection of detected values, and 99.9% round trip; 100% of echoed surrogates end-to-end round-trip restoration. washington state university; pacific northwest national laboratory mohamed shaaban, mohamed elmahallawy, thomas e. carroll cs.cr, cs.cl"
+    },
+    {
+      "arxiv_id": "2610.22795",
+      "title": "STRIDE: Evaluating Spatiotemporal Reasoning in Driving Edge Cases",
+      "authors": "Lieqi Liu, Rui gao, Jia-Chen Gu, Wenbo Hu, Zhaobin Mo, Ahmadreza Moradipari, Nejib Ammar, Wei Wang, Nanyun Peng",
+      "affiliations": "University of California, Los Angeles; Toyota InfoTech Labs",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "In autonomous driving, perceiving surrounding objects is not enough: failing to understand how they move and interact over time can lead to dangerous decisions. Evaluating vision-language models (VLMs) therefore requires testing whether they connect past spatial observations to future consequences. Yet existing benchmarks often assess edge cases through basic perception questions or test temporal understanding in simple scenarios, leaving complex spatiotemporal reasoning underexplored. We introduce STRIDE (SpatioTemporal Reasoning In Driving Edge Cases), an object-centric benchmark for long-tail, safety-critical driving scenarios. STRIDE covers six task families: spatial perception, spatial understanding, temporal memory, temporal extrapolation, trajectory prediction, and scene-context awareness. It pairs multiple-choice questions probing individual spatiotemporal judgments with related free-form visual question answering (VQA) requiring detailed scene explanations and justifications of driving decisions. We prioritize scenes with unusual object behaviors and complex traffic interactions, generate reference answers from structured dataset annotations through automated procedures, and use limited language-model assistance and human verification to ensure annotation quality. Across 12 proprietary, open-weight, and driving-specialized models, even the best performer, GPT-6-Astra, achieves only 43.4% average multiple-choice accuracy, versus an approximately 20% random-choice baseline. Further analysis reveals that strong performance in describing driving scenes does not necessarily translate to accurate safety-critical judgments, and that models struggle more with reconstructing object motion than recalling past positions. STRIDE thus exposes spatiotemporal driving limitations that aggregate VQA scores can conceal.",
+      "summary_cn": "指出现有驾驶视觉语言模型评测多用基础感知问答、时序理解局限于简单场景，提出 STRIDE 对象级时空推理基准，含空间感知、空间理解、时序记忆、时序外推、轨迹预测与场景语境六大任务族，结合选择题与需给出决策理由的开放式问答，场景聚焦异常行为与复杂交互。12 个模型中最优者选择题平均准确率仅 43.4%，远低于实用水平。",
+      "pdf_filename": "2610.22795.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "轨迹预测",
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22795",
+      "search_text": "stride: evaluating spatiotemporal reasoning in driving edge cases 轨迹预测 自动驾驶 多模态 指出现有驾驶视觉语言模型评测多用基础感知问答、时序理解局限于简单场景，提出 stride 对象级时空推理基准，含空间感知、空间理解、时序记忆、时序外推、轨迹预测与场景语境六大任务族，结合选择题与需给出决策理由的开放式问答，场景聚焦异常行为与复杂交互。12 个模型中最优者选择题平均准确率仅 43.4%，远低于实用水平。 in autonomous driving, perceiving surrounding objects is not enough: failing to understand how they move and interact over time can lead to dangerous decisions. evaluating vision-language models (vlms) therefore requires testing whether they connect past spatial observations to future consequences. yet existing benchmarks often assess edge cases through basic perception questions or test temporal understanding in simple scenarios, leaving complex spatiotemporal reasoning underexplored. we introduce stride (spatiotemporal reasoning in driving edge cases), an object-centric benchmark for long-tail, safety-critical driving scenarios. stride covers six task families: spatial perception, spatial understanding, temporal memory, temporal extrapolation, trajectory prediction, and scene-context awareness. it pairs multiple-choice questions probing individual spatiotemporal judgments with related free-form visual question answering (vqa) requiring detailed scene explanations and justifications of driving decisions. we prioritize scenes with unusual object behaviors and complex traffic interactions, generate reference answers from structured dataset annotations through automated procedures, and use limited language-model assistance and human verification to ensure annotation quality. across 12 proprietary, open-weight, and driving-specialized models, even the best performer, gpt-6-astra, achieves only 43.4% average multiple-choice accuracy, versus an approximately 20% random-choice baseline. further analysis reveals that strong performance in describing driving scenes does not necessarily translate to accurate safety-critical judgments, and that models struggle more with reconstructing object motion than recalling past positions. stride thus exposes spatiotemporal driving limitations that aggregate vqa scores can conceal. university of california, los angeles; toyota infotech labs lieqi liu, rui gao, jia-chen gu, wenbo hu, zhaobin mo, ahmadreza moradipari, nejib ammar, wei wang, nanyun peng cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.22778",
+      "title": "Direct Conditional Parameterization for N-Dimensional Splatting",
+      "authors": "Zhongpai Gao, Benjamin Planche, Van Nguyen Nguyen, Meng Zheng, Anwesa Choudhuri, Arun Innanje, Terrence Chen, Ziyan Wu",
+      "affiliations": "United Imaging Intelligence, Boston, MA, USA",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV",
+      "abstract": "N-dimensional splatting extends 3D Gaussian Splatting with view direction and time to model view-dependent and dynamic effects. Each primitive is lifted into a joint distribution over position and conditioning variables, then conditionally sliced at each rendering query. N-DGS and UBS share this step across Gaussian and Beta kernels: recovering the conditional mean, opacity, and covariance requires per-primitive matrix inversions and regression products in every forward pass. We introduce direct conditional parameterization, replacing this covariance-derived readout with explicit per-effect parameters: a Cholesky precision factor for opacity and a factorized query-to-position regression operator with learnable per-dimension coupling. Unrestricted conditional coordinates recover a valid joint covariance; our factorization adds spatial-scale and coupling priors. Applied to both kernels, the parameterization yields dGS (Gaussian) and dBS (Beta). Across five static and dynamic benchmarks, they match or exceed their covariance-derived counterparts on quality, with gains up to +1.26 dB in the main MCMC evaluation. Production slicing is 6.9-7.7 times faster than on-the-fly covariance-derived conditioning; complete-render profiling gives 1.25-1.91 times speedups on four trained scenes. Direct conditioning provides a structured, kernel-agnostic alternative for N-dimensional splatting. Project page: https://gaozhongpai.github.io/dgs/.",
+      "summary_cn": "N 维泼溅把 3DGS 扩展到视角方向与时间后，每个基元每次前向都需逐基元矩阵求逆与回归乘积来恢复条件均值、不透明度与协方差。本文提出直接条件参数化：用 Cholesky 精度因子直接给出不透明度，用可学习逐维耦合的因式化查询到位置回归算子替代协方差推导。所得 dGS 与 dBS 在五个静态与动态基准上质量持平或更优，切片快 6.9 至 7.7 倍。",
+      "pdf_filename": "2610.22778.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22778",
+      "search_text": "direct conditional parameterization for n-dimensional splatting 3dgs n 维泼溅把 3dgs 扩展到视角方向与时间后，每个基元每次前向都需逐基元矩阵求逆与回归乘积来恢复条件均值、不透明度与协方差。本文提出直接条件参数化：用 cholesky 精度因子直接给出不透明度，用可学习逐维耦合的因式化查询到位置回归算子替代协方差推导。所得 dgs 与 dbs 在五个静态与动态基准上质量持平或更优，切片快 6.9 至 7.7 倍。 n-dimensional splatting extends 3d gaussian splatting with view direction and time to model view-dependent and dynamic effects. each primitive is lifted into a joint distribution over position and conditioning variables, then conditionally sliced at each rendering query. n-dgs and ubs share this step across gaussian and beta kernels: recovering the conditional mean, opacity, and covariance requires per-primitive matrix inversions and regression products in every forward pass. we introduce direct conditional parameterization, replacing this covariance-derived readout with explicit per-effect parameters: a cholesky precision factor for opacity and a factorized query-to-position regression operator with learnable per-dimension coupling. unrestricted conditional coordinates recover a valid joint covariance; our factorization adds spatial-scale and coupling priors. applied to both kernels, the parameterization yields dgs (gaussian) and dbs (beta). across five static and dynamic benchmarks, they match or exceed their covariance-derived counterparts on quality, with gains up to +1.26 db in the main mcmc evaluation. production slicing is 6.9-7.7 times faster than on-the-fly covariance-derived conditioning; complete-render profiling gives 1.25-1.91 times speedups on four trained scenes. direct conditioning provides a structured, kernel-agnostic alternative for n-dimensional splatting. project page: https://gaozhongpai.github.io/dgs/. united imaging intelligence, boston, ma, usa zhongpai gao, benjamin planche, van nguyen nguyen, meng zheng, anwesa choudhuri, arun innanje, terrence chen, ziyan wu cs.cv"
+    },
+    {
+      "arxiv_id": "2610.22652",
+      "title": "Evidence-Gated Bilingual RAG for Reliable Consumer Banking Search",
+      "authors": "Ahmed Mohamed Mahmoud Rayyan, Rana Mahmoud Mohammed, Aya Abdallah Abdelmonem, Mohamed Khaled Goda Othman, Rahatara Ferdousi",
+      "affiliations": "School of Computing, Queen's University, Kingston, Canada",
+      "published_date": "2026-10-15",
+      "categories": "cs.CL",
+      "abstract": "Consumers often describe what they need rather than use the terminology found on a banking website. For example, a natural-language request (\"a card for travel\") may not share the keywords of the relevant product page, and the problem is harder in bilingual services, where the same intent may be expressed in Arabic or English. This paper presents an evidence-gated bilingual retrieval-augmented generation (RAG) framework for consumer banking search that operates entirely on local infrastructure. The framework combines structured web-content refinement, hybrid dense-lexical retrieval, intent-aware evidence selection, cross-encoder reranking, and a three-outcome Answer / Related Mismatch / No Answer decision mechanism. On 210 URL-labeled Arabic and English queries, the proposed approach improves Top-1 hit rate from 50.48% to 79.05% and MRR@5 from 0.571 to 0.797 over a hybrid baseline. A separate 26-case end-to-end evaluation achieved 69.2% strict success, with 72.7% of generated answers classified as supported by an automated faithfulness judge. These results are preliminary: the retrieval queries are paraphrases of a small reference set, and the end-to-end test is small and uses an automated rather than human judge, so they do not establish human-verified answer correctness or generalizable performance.",
+      "summary_cn": "面向阿拉伯语与英语双语银行产品检索，提出全本地部署的证据门控 RAG 框架：结构化网页内容精炼、稠密与词法混合检索、意图感知证据筛选、交叉编码器重排，并以回答、相关但不匹配、无答案三态决策抑制错误作答。在 210 条带标注查询上 Top-1 命中率由 50.48% 升至 79.05%，MRR@5 由 0.571 升至 0.797；端到端 26 例严格成功率 69.2%。",
+      "pdf_filename": "2610.22652.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.22652",
+      "search_text": "evidence-gated bilingual rag for reliable consumer banking search  面向阿拉伯语与英语双语银行产品检索，提出全本地部署的证据门控 rag 框架：结构化网页内容精炼、稠密与词法混合检索、意图感知证据筛选、交叉编码器重排，并以回答、相关但不匹配、无答案三态决策抑制错误作答。在 210 条带标注查询上 top-1 命中率由 50.48% 升至 79.05%，mrr@5 由 0.571 升至 0.797；端到端 26 例严格成功率 69.2%。 consumers often describe what they need rather than use the terminology found on a banking website. for example, a natural-language request (\"a card for travel\") may not share the keywords of the relevant product page, and the problem is harder in bilingual services, where the same intent may be expressed in arabic or english. this paper presents an evidence-gated bilingual retrieval-augmented generation (rag) framework for consumer banking search that operates entirely on local infrastructure. the framework combines structured web-content refinement, hybrid dense-lexical retrieval, intent-aware evidence selection, cross-encoder reranking, and a three-outcome answer / related mismatch / no answer decision mechanism. on 210 url-labeled arabic and english queries, the proposed approach improves top-1 hit rate from 50.48% to 79.05% and mrr@5 from 0.571 to 0.797 over a hybrid baseline. a separate 26-case end-to-end evaluation achieved 69.2% strict success, with 72.7% of generated answers classified as supported by an automated faithfulness judge. these results are preliminary: the retrieval queries are paraphrases of a small reference set, and the end-to-end test is small and uses an automated rather than human judge, so they do not establish human-verified answer correctness or generalizable performance. school of computing, queen's university, kingston, canada ahmed mohamed mahmoud rayyan, rana mahmoud mohammed, aya abdallah abdelmonem, mohamed khaled goda othman, rahatara ferdousi cs.cl"
+    },
+    {
+      "arxiv_id": "2610.22514",
+      "title": "Towards Reconstructing Geographically Diverse Architecture with 3D Foundation Models",
+      "authors": "Nicky Kriplani, Yiwen Zhang, Angelina Wang, Hadar Averbuch-Elor",
+      "affiliations": "Cornell Tech, Cornell University",
+      "published_date": "2026-10-15",
+      "categories": "cs.CV, cs.LG",
+      "abstract": "Internet-scale photo collections of real-world landmarks have driven progress in 3D computer vision yet remain highly challenging for modern 3D foundation models (3DFMs) that estimate scene structure in a single feed-forward pass. In this work, we introduce ArchWorld, a benchmark of 3D architectural landmarks with high geographic coverage and rich metadata. We use this benchmark to conduct a thorough error analysis of current 3DFMs to understand where they fall short and how they can be improved. We examine socially relevant disparities in model error and find that model performance varies by geographic region; however, unlike typical fairness regimes, the trends only partially match training data representation. Our investigation reveals that the observed geographic disparities reflect not only differences in data representation and scene size but also differences in region-specific architectural features and background distractors that make scenes from different regions inherently vary in difficulty. Leveraging insights from these model failings, we introduce an intervention scheme that improves 3DFM performance while simultaneously reducing geographic disparities.",
+      "summary_cn": "提出 ArchWorld：覆盖八个地理区域、396 个野外三维地标共九万余张图像的基准，带度量尺度稠密真值与丰富元数据，可按地区拆解评测单次前馈输出场景结构的三维基础模型。误差分析发现地区间精度差异并不完全对应训练数据占比，还来自区域建筑特征与背景干扰物本身难度不同；据此提出的干预方案在提升重建精度的同时缩小了地区差距。",
+      "pdf_filename": "2610.22514.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.22514",
+      "search_text": "towards reconstructing geographically diverse architecture with 3d foundation models  提出 archworld：覆盖八个地理区域、396 个野外三维地标共九万余张图像的基准，带度量尺度稠密真值与丰富元数据，可按地区拆解评测单次前馈输出场景结构的三维基础模型。误差分析发现地区间精度差异并不完全对应训练数据占比，还来自区域建筑特征与背景干扰物本身难度不同；据此提出的干预方案在提升重建精度的同时缩小了地区差距。 internet-scale photo collections of real-world landmarks have driven progress in 3d computer vision yet remain highly challenging for modern 3d foundation models (3dfms) that estimate scene structure in a single feed-forward pass. in this work, we introduce archworld, a benchmark of 3d architectural landmarks with high geographic coverage and rich metadata. we use this benchmark to conduct a thorough error analysis of current 3dfms to understand where they fall short and how they can be improved. we examine socially relevant disparities in model error and find that model performance varies by geographic region; however, unlike typical fairness regimes, the trends only partially match training data representation. our investigation reveals that the observed geographic disparities reflect not only differences in data representation and scene size but also differences in region-specific architectural features and background distractors that make scenes from different regions inherently vary in difficulty. leveraging insights from these model failings, we introduce an intervention scheme that improves 3dfm performance while simultaneously reducing geographic disparities. cornell tech, cornell university nicky kriplani, yiwen zhang, angelina wang, hadar averbuch-elor cs.cv, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.22505",
+      "title": "KFS$^4$LAM: Adaptive KeyFrame Selection with Structure-Aware Mapping for Endoscopic Gaussian Splatting SLAM",
+      "authors": "Xinwei Ju, Zhehua Mao, Tianyi Song, Danail Stoyanov, Sophia Bano, Francisco Vasconcelos",
+      "affiliations": "Hawkes Institute, University College London, London, UK",
+      "published_date": "2026-10-15",
+      "categories": "cs.CV",
+      "abstract": "Gaussian-splatting Simultaneous Localization and Mapping (SLAM) augments conventional SLAM with a dense, renderable 3D scene representation, enabling high-quality reconstruction and novel-view synthesis. However, its localization, reconstruction, and rendering performance depends strongly on which observations are retained for mapping. Existing systems commonly rely on fixed temporal intervals or simple pose- and overlap-based criteria for keyframe selection. In colonoscopy, non-uniform camera motion, repetitive anatomy, specularities, and visual artifacts can make these criteria unreliable, leading to either redundant keyframes or missed informative viewpoints. We present KFS$^4$LAM (KeyFrame Selection with Structure-aware mapping for endoscopic Gaussian Splatting SLAM), which couples motion-guided adaptive keyframe selection with structurally supervised mapping and restricted temporal deformation. Accumulated motion guides adaptive keyframe selection, with complementary cues suppressing redundant or unreliable candidates. Density-aware mapping with anatomical contour supervision (colon folds) emphasizes structurally informative regions, while restricted temporal deformation accommodates local tissue dynamics without unconstrained geometric drift. We evaluate KFS$^4$LAM against Gaussian-SLAM baselines on C3VD and C3VD-v2, together with cross-backbone and component ablations. KFS$^4$LAM achieves strong overall performance across trajectory, rendering, and depth metrics, with pronounced gains on more challenging C3VD-v2 dataset. In the matched comparison with SplaTAM on C3VD-v2, it reduces rotational relative pose error by 20.3% and depth RMSE by 38.4%, while improving PSNR by 0.78 dB. Cross-backbone experiments further show that the framework is not tied to a single underlying SLAM architecture. Code and visualization results are available at https://xinweiju.github.io/KFSLAM/.",
+      "summary_cn": "针对内窥镜场景相机运动不均、解剖结构重复与镜面高光使固定间隔或位姿重叠式关键帧选择失效的问题，提出 KFS4LAM：以累积运动量驱动自适应关键帧选取，用密度感知建图与肠褶轮廓监督强化结构区域，并以受限时序形变吸收组织局部运动而不产生几何漂移。在 C3VD 与更难的 C3VD-v2 上，轨迹、渲染与深度指标整体优于 Gaussian-SLAM 系列基线。",
+      "pdf_filename": "2610.22505.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "SLAM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22505",
+      "search_text": "kfs$^4$lam: adaptive keyframe selection with structure-aware mapping for endoscopic gaussian splatting slam 3dgs slam 针对内窥镜场景相机运动不均、解剖结构重复与镜面高光使固定间隔或位姿重叠式关键帧选择失效的问题，提出 kfs4lam：以累积运动量驱动自适应关键帧选取，用密度感知建图与肠褶轮廓监督强化结构区域，并以受限时序形变吸收组织局部运动而不产生几何漂移。在 c3vd 与更难的 c3vd-v2 上，轨迹、渲染与深度指标整体优于 gaussian-slam 系列基线。 gaussian-splatting simultaneous localization and mapping (slam) augments conventional slam with a dense, renderable 3d scene representation, enabling high-quality reconstruction and novel-view synthesis. however, its localization, reconstruction, and rendering performance depends strongly on which observations are retained for mapping. existing systems commonly rely on fixed temporal intervals or simple pose- and overlap-based criteria for keyframe selection. in colonoscopy, non-uniform camera motion, repetitive anatomy, specularities, and visual artifacts can make these criteria unreliable, leading to either redundant keyframes or missed informative viewpoints. we present kfs$^4$lam (keyframe selection with structure-aware mapping for endoscopic gaussian splatting slam), which couples motion-guided adaptive keyframe selection with structurally supervised mapping and restricted temporal deformation. accumulated motion guides adaptive keyframe selection, with complementary cues suppressing redundant or unreliable candidates. density-aware mapping with anatomical contour supervision (colon folds) emphasizes structurally informative regions, while restricted temporal deformation accommodates local tissue dynamics without unconstrained geometric drift. we evaluate kfs$^4$lam against gaussian-slam baselines on c3vd and c3vd-v2, together with cross-backbone and component ablations. kfs$^4$lam achieves strong overall performance across trajectory, rendering, and depth metrics, with pronounced gains on more challenging c3vd-v2 dataset. in the matched comparison with splatam on c3vd-v2, it reduces rotational relative pose error by 20.3% and depth rmse by 38.4%, while improving psnr by 0.78 db. cross-backbone experiments further show that the framework is not tied to a single underlying slam architecture. code and visualization results are available at https://xinweiju.github.io/kfslam/. hawkes institute, university college london, london, uk xinwei ju, zhehua mao, tianyi song, danail stoyanov, sophia bano, francisco vasconcelos cs.cv"
+    },
+    {
+      "arxiv_id": "2610.22461",
+      "title": "Mothership: A Two Tier Autonomous Refuse Collection System for Pedestrian Campuses",
+      "authors": "Wei Wang, Yiru Veronika Wang, Yihan Wang, Zihao Li, Xiaohui Liang",
+      "affiliations": "Robostreet Inc., Cambridge, MA, USA",
+      "published_date": "2026-10-15",
+      "categories": "cs.RO",
+      "abstract": "Refuse collection in pedestrian campuses, parks and mixed-use districts remains manual because compaction trucks cannot reach bins located on walkways, courtyards and building service doors. This paper presents Mothership, a two-tier autonomous refuse collection system in which an electric compaction truck (the mothership) carries two low-speed sidewalk robots (RoboCarts) that fetch standard two-wheel bins, deliver them to the truck, return the empty bins to their original positions and re-dock on the truck for charging. The architecture separates responsibilities by scale: the truck performs road driving, compaction, lifting and energy supply, while the carts perform only sidewalk transport and bin grasping. This split removes the lift-and-tip mechanism from the sidewalk vehicle, keeping it light and low, and relaxes cart-to-truck docking tolerance to the +/-100 mm capture window of a standard automated lifter. We describe the system architecture, the bin-handling and docking interfaces, and a mission-planning formulation that decomposes a route into truck stop points and cart tasks. A discrete-event simulation over synthetic campus layouts with 2-16 bins/ha quantifies throughput as a function of bin density, cart count and stop-point radius. A two-cart configuration serves 20-29 bins/h. Throughput is governed by an interaction between cart count and stop-point radius: a single cart performs best with many close stops, whereas three or four carts need wide stops (80 m) to stay busy, reaching 35-49 bins/h at moderate-to-high densities. The best stop radius therefore has to be chosen together with the fleet size, not fixed in advance.",
+      "summary_cn": "面向校园人行道的两级自主垃圾收运系统：电动压缩车作为母船承载两台低速人行道机器人 RoboCarts，小车抓取标准两轮垃圾桶送至母船，由车载提升器完成倾倒，从而把举升翻转机构从人行道车辆上剥离，并把对接容差放宽到自动提升器正负 100 毫米的捕获窗口。离散事件仿真显示双车配置可达 20 至 29 桶每小时，三四车需 80 米宽停靠半径才能保持忙碌。",
+      "pdf_filename": "2610.22461.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "场景压缩"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22461",
+      "search_text": "mothership: a two tier autonomous refuse collection system for pedestrian campuses 场景压缩 面向校园人行道的两级自主垃圾收运系统：电动压缩车作为母船承载两台低速人行道机器人 robocarts，小车抓取标准两轮垃圾桶送至母船，由车载提升器完成倾倒，从而把举升翻转机构从人行道车辆上剥离，并把对接容差放宽到自动提升器正负 100 毫米的捕获窗口。离散事件仿真显示双车配置可达 20 至 29 桶每小时，三四车需 80 米宽停靠半径才能保持忙碌。 refuse collection in pedestrian campuses, parks and mixed-use districts remains manual because compaction trucks cannot reach bins located on walkways, courtyards and building service doors. this paper presents mothership, a two-tier autonomous refuse collection system in which an electric compaction truck (the mothership) carries two low-speed sidewalk robots (robocarts) that fetch standard two-wheel bins, deliver them to the truck, return the empty bins to their original positions and re-dock on the truck for charging. the architecture separates responsibilities by scale: the truck performs road driving, compaction, lifting and energy supply, while the carts perform only sidewalk transport and bin grasping. this split removes the lift-and-tip mechanism from the sidewalk vehicle, keeping it light and low, and relaxes cart-to-truck docking tolerance to the +/-100 mm capture window of a standard automated lifter. we describe the system architecture, the bin-handling and docking interfaces, and a mission-planning formulation that decomposes a route into truck stop points and cart tasks. a discrete-event simulation over synthetic campus layouts with 2-16 bins/ha quantifies throughput as a function of bin density, cart count and stop-point radius. a two-cart configuration serves 20-29 bins/h. throughput is governed by an interaction between cart count and stop-point radius: a single cart performs best with many close stops, whereas three or four carts need wide stops (80 m) to stay busy, reaching 35-49 bins/h at moderate-to-high densities. the best stop radius therefore has to be chosen together with the fleet size, not fixed in advance. robostreet inc., cambridge, ma, usa wei wang, yiru veronika wang, yihan wang, zihao li, xiaohui liang cs.ro"
+    },
+    {
+      "arxiv_id": "2610.22450",
+      "title": "DriveWorld3D Evidence Constrained 3D World Modeling and Generative Simulation for Real-World Autonomous Driving",
+      "authors": "Wei Wang, Yiru Veronika Wang, Yihan Wang, Zihao Li, Xiaohui Liang",
+      "affiliations": "Robostreet Inc., Cambridge, MA, USA",
+      "published_date": "2026-10-15",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Three dimensional modeling for autonomous driving must continuously estimate road geometry, obstacle occupancy, traffic participant behavior, and observational uncertainty under limited computational resources. Existing reconstruction methods can synthesize realistic novel views, but visual fidelity does not sufficiently characterize the geometric reliability required for driving. Generative world models can expand scenarios and predict future observations, yet may introduce content unsupported by measurements. We propose DriveWorld3D, a framework combining temporal video learning, measurement constraints from multiple sensors, and offline generative simulation. Its online component maintains a unified world state comprising road surfaces, volumetric occupancy, dynamic entities, and road relations, while separately representing physical occupancy, observability, and evidence provenance. Action conditioned future prediction and risk sensitive planning connect this representation to driving decisions. Its offline component reconstructs recorded scenes using neural radiance fields or 3D Gaussian Splatting, then expands long tail conditions using generative models while restricting the use of generated content as geometric ground truth. We specify data partitioning, sensor ablations, fault injection, paired closed loop testing, and real to simulation consistency assessment. The central hypothesis is that explicit evidence management can reduce dangerous false free space predictions and occlusion risk within a matched computational budget while retaining acceptable driving efficiency. All performance claims remain subject to experimental validation. Keywords: autonomous driving; 3D occupancy; sensor fusion; uncertainty; generative world models; NeRF; 3D Gaussian Splatting; closed loop simulation",
+      "summary_cn": "针对自动驾驶三维建模中重建画面逼真却缺乏几何可靠性、生成世界模型又易产生无测量支撑内容的问题，提出 DriveWorld3D：在线端维护含路面、体占据、动态实体与道路关系的统一世界状态，并分离物理占据、可观测性与证据来源；离线端用 NeRF 或 3DGS 重建实录场景并生成扩展长尾工况。核心假设是显式证据管理能在同等算力下减少危险的虚假自由空间预测。",
+      "pdf_filename": "2610.22450.pdf",
+      "crawled_date": "2026-10-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "世界模型",
+        "生成式仿真",
+        "路面重建",
+        "自动驾驶",
+        "NeRF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22450",
+      "search_text": "driveworld3d evidence constrained 3d world modeling and generative simulation for real-world autonomous driving 3dgs 世界模型 生成式仿真 路面重建 自动驾驶 nerf 针对自动驾驶三维建模中重建画面逼真却缺乏几何可靠性、生成世界模型又易产生无测量支撑内容的问题，提出 driveworld3d：在线端维护含路面、体占据、动态实体与道路关系的统一世界状态，并分离物理占据、可观测性与证据来源；离线端用 nerf 或 3dgs 重建实录场景并生成扩展长尾工况。核心假设是显式证据管理能在同等算力下减少危险的虚假自由空间预测。 three dimensional modeling for autonomous driving must continuously estimate road geometry, obstacle occupancy, traffic participant behavior, and observational uncertainty under limited computational resources. existing reconstruction methods can synthesize realistic novel views, but visual fidelity does not sufficiently characterize the geometric reliability required for driving. generative world models can expand scenarios and predict future observations, yet may introduce content unsupported by measurements. we propose driveworld3d, a framework combining temporal video learning, measurement constraints from multiple sensors, and offline generative simulation. its online component maintains a unified world state comprising road surfaces, volumetric occupancy, dynamic entities, and road relations, while separately representing physical occupancy, observability, and evidence provenance. action conditioned future prediction and risk sensitive planning connect this representation to driving decisions. its offline component reconstructs recorded scenes using neural radiance fields or 3d gaussian splatting, then expands long tail conditions using generative models while restricting the use of generated content as geometric ground truth. we specify data partitioning, sensor ablations, fault injection, paired closed loop testing, and real to simulation consistency assessment. the central hypothesis is that explicit evidence management can reduce dangerous false free space predictions and occlusion risk within a matched computational budget while retaining acceptable driving efficiency. all performance claims remain subject to experimental validation. keywords: autonomous driving; 3d occupancy; sensor fusion; uncertainty; generative world models; nerf; 3d gaussian splatting; closed loop simulation robostreet inc., cambridge, ma, usa wei wang, yiru veronika wang, yihan wang, zihao li, xiaohui liang cs.ro, cs.ai"
+    },
     {
       "arxiv_id": "2610.19674",
       "title": "Remember, Revisit, Revise: Scaffold Memory for Long-Horizon 3D Geometry",
