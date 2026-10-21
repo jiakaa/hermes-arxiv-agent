@@ -1,45 +1,45 @@
 {
-  "count": 1646,
+  "count": 1671,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-20",
+  "crawled_date_max": "2026-10-21",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-19",
+  "published_date_max": "2026-10-20",
   "rating_counts": {
-    "S": 464,
-    "A": 686,
-    "B": 261,
-    "C": 235,
+    "S": 477,
+    "A": 692,
+    "B": 262,
+    "C": 240,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 356,
+      "count": 361,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 312,
+      "count": 319,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 301,
+      "count": 303,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 251,
+      "count": 255,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 243,
+      "count": 246,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 228,
+      "count": 232,
       "group": "通用"
     },
     {
@@ -49,22 +49,22 @@
     },
     {
       "name": "点云",
-      "count": 111,
+      "count": 112,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 110,
+      "count": 111,
       "group": "世界模型与仿真"
     },
     {
       "name": "前馈3D重建",
-      "count": 97,
+      "count": 100,
       "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
-      "count": 94,
+      "count": 97,
       "group": "通用"
     },
     {
@@ -74,22 +74,22 @@
     },
     {
       "name": "场景压缩",
-      "count": 76,
+      "count": 78,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 59,
+      "count": 60,
       "group": "世界模型与仿真"
     },
     {
       "name": "视频生成",
-      "count": 47,
+      "count": 50,
       "group": "世界模型与仿真"
     },
     {
       "name": "4DGS",
-      "count": 46,
+      "count": 49,
       "group": "3DGS/4DGS"
     },
     {
@@ -104,17 +104,17 @@
     },
     {
       "name": "NeRF",
-      "count": 40,
+      "count": 41,
       "group": "通用"
     },
     {
       "name": "实时渲染",
-      "count": 39,
+      "count": 40,
       "group": "3DGS/4DGS"
     },
     {
       "name": "动态场景重建",
-      "count": 31,
+      "count": 35,
       "group": "3DGS/4DGS"
     },
     {
@@ -154,6 +154,501 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.28631",
+      "title": "AEON: Unifying Video and 3D World Models",
+      "authors": "Weiqi Zhang, Wenyuan Zhang, Yu-Shen Liu, Junsheng Zhou",
+      "affiliations": "Tsinghua University",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Current world models for explicit world simulation typically follow two distinct pathways: (1) video generative models (e.g., Sora), which simulate realistic appearances but fail to preserve 3D consistency; and (2) 3D generative models (e.g., Marble), which generate geometrically consistent scenes but often yield static, less realistic observations. We present AEON, a unified framework that bridges video-based and 3D-based world models and combines the benefits of both. The key insight of AEON lies in a generative model that operates within the text- or image-conditioned video latent space while producing renderable 4D graphics primitives---specifically, 4D Gaussian Splatting (4DGS)---as the explicit world representation. We train a 4D reconstruction model to predict both 4DGS and camera poses from monocular videos, serving as our initialized 4D decoder. Furthermore, we design a domain adapter that translates generative video latents into reconstructive 4D latents through a distillation process on the video VAE. AEON naturally supports video-based world modeling by rendering 4DGS at predicted camera trajectories, and constructs a persistent 4D environment with scene dynamics for realistic world simulation. Consequently, AEON empowers a diverse range of world modeling applications and achieves state-of-the-art performance on standard benchmarks. Project Page: https://weiqi-zhang.github.io/AEON",
+      "summary_cn": "显式世界仿真有两条路线：视频生成模型画面真实但三维不一致，三维生成模型几何一致却静态欠真实。AEON让生成模型在文本或图像条件的视频隐空间内运作，输出可渲染的四维高斯作为显式世界表示：先训练4D重建模型从单目视频预测4DGS与相机位姿作为解码器初始化，再用域适配器把生成隐变量蒸馏为重建隐变量。可构建持久四维环境，基准达SOTA。",
+      "pdf_filename": "2610.28631.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "4DGS",
+        "动态场景重建",
+        "世界模型",
+        "视频生成"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28631",
+      "search_text": "aeon: unifying video and 3d world models 3dgs 4dgs 动态场景重建 世界模型 视频生成 显式世界仿真有两条路线：视频生成模型画面真实但三维不一致，三维生成模型几何一致却静态欠真实。aeon让生成模型在文本或图像条件的视频隐空间内运作，输出可渲染的四维高斯作为显式世界表示：先训练4d重建模型从单目视频预测4dgs与相机位姿作为解码器初始化，再用域适配器把生成隐变量蒸馏为重建隐变量。可构建持久四维环境，基准达sota。 current world models for explicit world simulation typically follow two distinct pathways: (1) video generative models (e.g., sora), which simulate realistic appearances but fail to preserve 3d consistency; and (2) 3d generative models (e.g., marble), which generate geometrically consistent scenes but often yield static, less realistic observations. we present aeon, a unified framework that bridges video-based and 3d-based world models and combines the benefits of both. the key insight of aeon lies in a generative model that operates within the text- or image-conditioned video latent space while producing renderable 4d graphics primitives---specifically, 4d gaussian splatting (4dgs)---as the explicit world representation. we train a 4d reconstruction model to predict both 4dgs and camera poses from monocular videos, serving as our initialized 4d decoder. furthermore, we design a domain adapter that translates generative video latents into reconstructive 4d latents through a distillation process on the video vae. aeon naturally supports video-based world modeling by rendering 4dgs at predicted camera trajectories, and constructs a persistent 4d environment with scene dynamics for realistic world simulation. consequently, aeon empowers a diverse range of world modeling applications and achieves state-of-the-art performance on standard benchmarks. project page: https://weiqi-zhang.github.io/aeon tsinghua university weiqi zhang, wenyuan zhang, yu-shen liu, junsheng zhou cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28626",
+      "title": "UniWALM: Unified World Action Language Model for Embodied Robot Control",
+      "authors": "Rahul Sajnani, Diego Romeres, Mingyuan Zhang, Kai Gao, Carl Qi, Baichuan Huang, Srinath Sridhar, Dylan Randle, Lillian J. Ratliff, Jose Barreiros, Manikantan Nambi, Jeroen Vanbaar",
+      "affiliations": "Brown University; Amazon; Northeastern University; UT Austin; University of Washington",
+      "published_date": "2026-10-20",
+      "categories": "cs.RO, cs.AI, cs.CV",
+      "abstract": "Motivated by the human ability to integrate experience across language, perception, and action, we introduce UniWALM, a unified world-action-language model that learns video, action, and language in a single shared representation, where each modality is both a conditioning signal and a supervision target. We ask: can jointly generating language enrich this shared representation, improving manipulation and supporting memory-dependent behavior? Unlike prior approaches that attach a reasoning or vision-language model to a video-action backbone and run them as distinct stages, UniWALM unifies all three modalities inside a single mixture-of-transformers backbone whose per-modality diffusion heads co-denoise synchronously, decoding subtask and textual memory in the same pass as action with no separate planning stage; the generated language is re-consumed on the next step, closing a language-as-memory loop without an external planner or memory bank. To keep the action stream reliable under this richer objective, we further introduce Flow Matching with Correction (FMC), a training objective that teaches recovery from perturbed action trajectories at no inference-time cost. UniWALM consistently improves over same-backbone baselines (e.g., FastWAM) on compositional pick-and-place (MolmoSpaces) and across the memory-dependent subset of RMBench, where it reaches 34.5% without any pretrained language or reasoning model and exceeds Mem-0's keyframe-equipped setup (28.5%) using only a single anchor frame. On a real-world Find-the-Item task, generating textual memory lifts success from 11.1% to 61.1%, while state-of-the-art VLAs stay at or below chance (<=33.3%).",
+      "summary_cn": "已有方法把推理模型外挂在视频-动作骨干上分阶段执行，语言与动作表示割裂。UniWALM在单个混合Transformer骨干内统一视频、动作、语言，每种模态既是条件也是监督目标，各模态扩散头同步去噪，一次前向即解码动作、子任务与文本记忆，语言下一步被重新消费形成记忆闭环；并提出带纠正流匹配。记忆依赖子集34.5%，实机找物11.1%升至61.1%。",
+      "pdf_filename": "2610.28626.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28626",
+      "search_text": "uniwalm: unified world action language model for embodied robot control 闭环仿真 多模态 具身智能 已有方法把推理模型外挂在视频-动作骨干上分阶段执行，语言与动作表示割裂。uniwalm在单个混合transformer骨干内统一视频、动作、语言，每种模态既是条件也是监督目标，各模态扩散头同步去噪，一次前向即解码动作、子任务与文本记忆，语言下一步被重新消费形成记忆闭环；并提出带纠正流匹配。记忆依赖子集34.5%，实机找物11.1%升至61.1%。 motivated by the human ability to integrate experience across language, perception, and action, we introduce uniwalm, a unified world-action-language model that learns video, action, and language in a single shared representation, where each modality is both a conditioning signal and a supervision target. we ask: can jointly generating language enrich this shared representation, improving manipulation and supporting memory-dependent behavior? unlike prior approaches that attach a reasoning or vision-language model to a video-action backbone and run them as distinct stages, uniwalm unifies all three modalities inside a single mixture-of-transformers backbone whose per-modality diffusion heads co-denoise synchronously, decoding subtask and textual memory in the same pass as action with no separate planning stage; the generated language is re-consumed on the next step, closing a language-as-memory loop without an external planner or memory bank. to keep the action stream reliable under this richer objective, we further introduce flow matching with correction (fmc), a training objective that teaches recovery from perturbed action trajectories at no inference-time cost. uniwalm consistently improves over same-backbone baselines (e.g., fastwam) on compositional pick-and-place (molmospaces) and across the memory-dependent subset of rmbench, where it reaches 34.5% without any pretrained language or reasoning model and exceeds mem-0's keyframe-equipped setup (28.5%) using only a single anchor frame. on a real-world find-the-item task, generating textual memory lifts success from 11.1% to 61.1%, while state-of-the-art vlas stay at or below chance (<=33.3%). brown university; amazon; northeastern university; ut austin; university of washington rahul sajnani, diego romeres, mingyuan zhang, kai gao, carl qi, baichuan huang, srinath sridhar, dylan randle, lillian j. ratliff, jose barreiros, manikantan nambi, jeroen vanbaar cs.ro, cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28521",
+      "title": "Latent Bridge: From Video Latents to 3D Geometry via Feature Alignment",
+      "authors": "Shuai Zhang, Zhanpeng Ouyang, Zhengqing Chen, Ruohong Mei, Shaoyu Chen, Weiqiang Ren, Hui Sun, Qian Zhang, Wenyu Liu, Xinggang Wang",
+      "affiliations": "Huazhong University of Science and Technology; Horizon Robotics",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Video generation and feed-forward 3D reconstruction typically use separate representations, requiring RGB decoding and visual re-encoding to recover geometry from generated latents. We propose Latent Bridge, which connects video generative latent spaces with geometric feature spaces to directly predict 3D geometry from video latents. We develop representation-specific bridges for Wan2.1 and V-RAE, enabling feed-forward prediction of cameras, depth, and 3D point clouds without the intermediate RGB pathway. Each bridge is trained on RGB videos through feature distillation, while the video encoder and geometry model remain frozen. Training requires neither ground-truth geometry nor execution of the downstream geometric aggregator or prediction heads. At inference, the same video latents support both RGB decoding and geometry prediction. The same trained bridge can be reused for image-to-video and text-to-video generation within the same video latent space, without bridge retraining. Experiments on Co3Dv2 and WildRGB-D demonstrate competitive geometric reconstruction quality, efficient end-to-end generation and reconstruction, and faster latent-to-geometry decoding, highlighting latent alignment as a practical and reusable interface between video generation and 3D reconstruction. Our code is available at: https://github.com/hustvl/Latent-Bridge.",
+      "summary_cn": "视频生成与前馈三维重建表示彼此分离，从生成隐变量恢复几何需先解码RGB再重编码，链路冗长。Latent Bridge在视频生成隐空间与几何特征空间间训练表示专用的桥，直接由隐变量预测相机、深度与点云，跳过RGB通路；只需RGB视频特征蒸馏，视频编码器与几何模型全冻结，不需真值几何也不运行下游聚合器。Co3Dv2与WildRGB-D上几何质量有竞争力且解码更快。",
+      "pdf_filename": "2610.28521.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "视频生成",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28521",
+      "search_text": "latent bridge: from video latents to 3d geometry via feature alignment 前馈3d重建 视频生成 点云 视频生成与前馈三维重建表示彼此分离，从生成隐变量恢复几何需先解码rgb再重编码，链路冗长。latent bridge在视频生成隐空间与几何特征空间间训练表示专用的桥，直接由隐变量预测相机、深度与点云，跳过rgb通路；只需rgb视频特征蒸馏，视频编码器与几何模型全冻结，不需真值几何也不运行下游聚合器。co3dv2与wildrgb-d上几何质量有竞争力且解码更快。 video generation and feed-forward 3d reconstruction typically use separate representations, requiring rgb decoding and visual re-encoding to recover geometry from generated latents. we propose latent bridge, which connects video generative latent spaces with geometric feature spaces to directly predict 3d geometry from video latents. we develop representation-specific bridges for wan2.1 and v-rae, enabling feed-forward prediction of cameras, depth, and 3d point clouds without the intermediate rgb pathway. each bridge is trained on rgb videos through feature distillation, while the video encoder and geometry model remain frozen. training requires neither ground-truth geometry nor execution of the downstream geometric aggregator or prediction heads. at inference, the same video latents support both rgb decoding and geometry prediction. the same trained bridge can be reused for image-to-video and text-to-video generation within the same video latent space, without bridge retraining. experiments on co3dv2 and wildrgb-d demonstrate competitive geometric reconstruction quality, efficient end-to-end generation and reconstruction, and faster latent-to-geometry decoding, highlighting latent alignment as a practical and reusable interface between video generation and 3d reconstruction. our code is available at: https://github.com/hustvl/latent-bridge. huazhong university of science and technology; horizon robotics shuai zhang, zhanpeng ouyang, zhengqing chen, ruohong mei, shaoyu chen, weiqiang ren, hui sun, qian zhang, wenyu liu, xinggang wang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28508",
+      "title": "Deep Learning-Based Road Lane Quality Assessment from Egocentric Dashcam Video",
+      "authors": "Shaif Chowdhury, Akhila Yeruvasu, Moshiur Rahman Tonmoy, Ayush Goyal, Dunren Che",
+      "affiliations": "Texas A&M University-Kingsville",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Reliable lane markings are important for both human drivers and automated driving systems, but their condition is still commonly assessed through manual inspection. Existing autonomous-driving datasets primarily support lane detection and scene understanding and usually lack maintenance-oriented labels for lane-marking visibility, continuity, or degradation. In this study, we present a geo-referenced smartphone dashcam dataset and baseline framework for lane-marking quality assessment. The dataset contains 63,839 road-facing frames collected across South Texas using a GPS-enabled dashcam application. A subset of 3,339 frames is matched with OpenStreetMap-derived lane-count labels, which are used as weak supervision for lane-count regression and map-consistency evaluation. We propose three lane-quality measures: Contrast Stability Index (CSI), which captures lane-background contrast using Laplacian responses; Line Continuity Ratio (LCR), which estimates structural continuity using edge and Hough-line evidence; and Regression Lane Confidence Score (RLCS), which measures agreement between predicted and map-derived lane counts on matched frames. The baseline prediction models attained strong performance, with CSI (MAE $0.039$, $R^2=0.97$) and LCR (MAE $0.093$, $R^2=0.84$). Notably, CSI and LCR are no-reference, segmentation-derived quality metrics that can be computed without dense human labels. In a pilot validation using 50 human-ranked images, these proposed lane-specific metrics show stronger rank agreement with human lane-quality ordering (e.g., Spearman's $ρ=0.7316$ and Kendall's $τ=0.5472$ for LCR) than general image-quality measures such as PSNR, SSIM, BRISQUE, NIQE, and LPIPS. We believe the dataset, metrics, and baseline provide an initial step toward scalable, low-cost, location-aware lane-marking quality assessment. Data and code: https://github.com/Shaif95/Road_Quality",
+      "summary_cn": "车道标线可见性、连续性与退化仍靠人工巡检，现有自动驾驶数据集缺面向养护的标注。该文发布南德州采集的63,839帧地理参考行车记录仪数据集与基线框架，3,339帧匹配OpenStreetMap车道数标签作弱监督；提出三项无参考指标：拉普拉斯响应刻画的对比度稳定性CSI、边缘与霍夫线估计的结构连续性LCR、与地图车道数一致性的RLCS。CSI的MAE 0.039；LCR的Spearman ρ=0.73，优于PSNR/SSIM/LPIPS。",
+      "pdf_filename": "2610.28508.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28508",
+      "search_text": "deep learning-based road lane quality assessment from egocentric dashcam video 自动驾驶 车道标线可见性、连续性与退化仍靠人工巡检，现有自动驾驶数据集缺面向养护的标注。该文发布南德州采集的63,839帧地理参考行车记录仪数据集与基线框架，3,339帧匹配openstreetmap车道数标签作弱监督；提出三项无参考指标：拉普拉斯响应刻画的对比度稳定性csi、边缘与霍夫线估计的结构连续性lcr、与地图车道数一致性的rlcs。csi的mae 0.039；lcr的spearman ρ=0.73，优于psnr/ssim/lpips。 reliable lane markings are important for both human drivers and automated driving systems, but their condition is still commonly assessed through manual inspection. existing autonomous-driving datasets primarily support lane detection and scene understanding and usually lack maintenance-oriented labels for lane-marking visibility, continuity, or degradation. in this study, we present a geo-referenced smartphone dashcam dataset and baseline framework for lane-marking quality assessment. the dataset contains 63,839 road-facing frames collected across south texas using a gps-enabled dashcam application. a subset of 3,339 frames is matched with openstreetmap-derived lane-count labels, which are used as weak supervision for lane-count regression and map-consistency evaluation. we propose three lane-quality measures: contrast stability index (csi), which captures lane-background contrast using laplacian responses; line continuity ratio (lcr), which estimates structural continuity using edge and hough-line evidence; and regression lane confidence score (rlcs), which measures agreement between predicted and map-derived lane counts on matched frames. the baseline prediction models attained strong performance, with csi (mae $0.039$, $r^2=0.97$) and lcr (mae $0.093$, $r^2=0.84$). notably, csi and lcr are no-reference, segmentation-derived quality metrics that can be computed without dense human labels. in a pilot validation using 50 human-ranked images, these proposed lane-specific metrics show stronger rank agreement with human lane-quality ordering (e.g., spearman's $ρ=0.7316$ and kendall's $τ=0.5472$ for lcr) than general image-quality measures such as psnr, ssim, brisque, niqe, and lpips. we believe the dataset, metrics, and baseline provide an initial step toward scalable, low-cost, location-aware lane-marking quality assessment. data and code: https://github.com/shaif95/road_quality texas a&m university-kingsville shaif chowdhury, akhila yeruvasu, moshiur rahman tonmoy, ayush goyal, dunren che cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28483",
+      "title": "Exploring Temporal Context-Aware Physical Grounding in Latent World Models",
+      "authors": "Yilei Man, Yang Chen, Jingcai Guo",
+      "affiliations": "The Hong Kong Polytechnic University",
+      "published_date": "2026-10-20",
+      "categories": "cs.AI",
+      "abstract": "Learning latent dynamics is fundamental to building action-conditioned world models for planning. Among existing families, Joint Embedding Predictive Architectures (JEPAs) offer a natural framework by modeling transitions directly in latent space rather than at the pixel level. However, two issues remain in JEPA-based world models: (i) physical grounding lacks explicit aggregation of temporal context and (ii) action planning always overly relies on generic sampling distributions. To this end, we propose $\\mathcal{G}$-JEPA, which incorporates temporal context into physical grounding for latent world models and couples the learned models with prior-guided action planning. Specifically, during learning, we incorporate a shared causal temporal module that aggregates temporal context within observation and prediction sequences under physical state supervision, grounding both in task-relevant physical states. When planning, we further introduce action inference through stepwise conditioning of a generative action distribution on the current and goal latent representations together with their evolving discrepancy, yielding anchored proposals that guide model-based online refinement. Together, physical state supervision guides temporal representation learning, while the action prior guides search through the learned world model. Experiments demonstrate improved planning performance on manipulation tasks, including tasks with increasing temporal separation between initial and goal observations. Code is publicly available at https://github.com/myl11045/G-JEPA.",
+      "summary_cn": "JEPA类世界模型直接在隐空间建模转移，但物理接地缺少时序上下文聚合，规划又过度依赖通用采样分布。G-JEPA在学习阶段引入共享因果时序模块，在物理状态监督下聚合观测与预测序列的时序上下文；规划阶段让生成式动作分布以当前与目标隐表示及其差异为条件逐步推断，给出锚定提议再经模型在线细化。操作任务规划提升，包括初始与目标间隔更大的任务。",
+      "pdf_filename": "2610.28483.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28483",
+      "search_text": "exploring temporal context-aware physical grounding in latent world models 世界模型 规划 jepa类世界模型直接在隐空间建模转移，但物理接地缺少时序上下文聚合，规划又过度依赖通用采样分布。g-jepa在学习阶段引入共享因果时序模块，在物理状态监督下聚合观测与预测序列的时序上下文；规划阶段让生成式动作分布以当前与目标隐表示及其差异为条件逐步推断，给出锚定提议再经模型在线细化。操作任务规划提升，包括初始与目标间隔更大的任务。 learning latent dynamics is fundamental to building action-conditioned world models for planning. among existing families, joint embedding predictive architectures (jepas) offer a natural framework by modeling transitions directly in latent space rather than at the pixel level. however, two issues remain in jepa-based world models: (i) physical grounding lacks explicit aggregation of temporal context and (ii) action planning always overly relies on generic sampling distributions. to this end, we propose $\\mathcal{g}$-jepa, which incorporates temporal context into physical grounding for latent world models and couples the learned models with prior-guided action planning. specifically, during learning, we incorporate a shared causal temporal module that aggregates temporal context within observation and prediction sequences under physical state supervision, grounding both in task-relevant physical states. when planning, we further introduce action inference through stepwise conditioning of a generative action distribution on the current and goal latent representations together with their evolving discrepancy, yielding anchored proposals that guide model-based online refinement. together, physical state supervision guides temporal representation learning, while the action prior guides search through the learned world model. experiments demonstrate improved planning performance on manipulation tasks, including tasks with increasing temporal separation between initial and goal observations. code is publicly available at https://github.com/myl11045/g-jepa. the hong kong polytechnic university yilei man, yang chen, jingcai guo cs.ai"
+    },
+    {
+      "arxiv_id": "2610.28467",
+      "title": "Beyond Trajectory Statistics: Community-Consistent Human Mobility Generation via Evolving User-Location Graphs",
+      "authors": "Bo Liu, Tong Li, Jiapeng Zhang, Zhu Xiao, Zhuo Tang, Kenli Li",
+      "affiliations": "Hunan University; National Supercomputing Center in Changsha",
+      "published_date": "2026-10-20",
+      "categories": "cs.AI",
+      "abstract": "Human mobility data are fundamental to Web-based location services and broader urban applications, and mobility generation provides synthetic trajectories when real data are costly or inaccessible. Although recent mobility generators have incorporated collective mobility patterns, they primarily focus on individual trajectories and aggregate population dynamics, leaving evolving community structures formed by user-location interactions insufficiently modeled. In this paper, we study community-consistent human mobility generation. To this end, we formulate mobility generation as the generation of dynamic user-location graphs to model community structures and propose MOTION, a Multi-agent framework for cOmmuniTy-consIstent human mObility geNeration. MOTION consists of user agents, location agents, and a global manager agent. MOTION first detects coherent communities from historical mobility using the Leiden algorithm and extracts community-conditioned interaction priors to guide the generation process. Guided by these priors, the user agents plan mobility, search destination candidates, and infer user movements from the individual view. In parallel, selectively activated location agents infer likely user arrivals from the community view. The manager coordinates both views, diagnoses interactions causing deviations, and attributes targeted reflection signals to revise user decisions, location attraction, and source-user selection. Experiments on two real-world datasets show that MOTION outperforms baselines by at least 4.05% across reported metrics of individual trajectories, population and flow distributions, and community and graph structures. Further analyses confirm its robustness, privacy preservation, and downstream utility. The code is available at https://anonymous.4open.science/r/MOTION-04C4.",
+      "summary_cn": "合成人类移动轨迹需兼顾个体行为与社区结构，既有生成器只关注个体轨迹与总体人口动力学，忽视用户-位置交互形成的演化社区。MOTION把生成表述为动态用户-位置图生成：先用Leiden检出连贯社区并提取交互先验，用户智能体据此规划移动与搜索目的地，位置智能体从社区视角推断到达，管理器诊断偏差并归因反思。两个真实数据集各指标至少提升4.05%。",
+      "pdf_filename": "2610.28467.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28467",
+      "search_text": "beyond trajectory statistics: community-consistent human mobility generation via evolving user-location graphs 规划 合成人类移动轨迹需兼顾个体行为与社区结构，既有生成器只关注个体轨迹与总体人口动力学，忽视用户-位置交互形成的演化社区。motion把生成表述为动态用户-位置图生成：先用leiden检出连贯社区并提取交互先验，用户智能体据此规划移动与搜索目的地，位置智能体从社区视角推断到达，管理器诊断偏差并归因反思。两个真实数据集各指标至少提升4.05%。 human mobility data are fundamental to web-based location services and broader urban applications, and mobility generation provides synthetic trajectories when real data are costly or inaccessible. although recent mobility generators have incorporated collective mobility patterns, they primarily focus on individual trajectories and aggregate population dynamics, leaving evolving community structures formed by user-location interactions insufficiently modeled. in this paper, we study community-consistent human mobility generation. to this end, we formulate mobility generation as the generation of dynamic user-location graphs to model community structures and propose motion, a multi-agent framework for community-consistent human mobility generation. motion consists of user agents, location agents, and a global manager agent. motion first detects coherent communities from historical mobility using the leiden algorithm and extracts community-conditioned interaction priors to guide the generation process. guided by these priors, the user agents plan mobility, search destination candidates, and infer user movements from the individual view. in parallel, selectively activated location agents infer likely user arrivals from the community view. the manager coordinates both views, diagnoses interactions causing deviations, and attributes targeted reflection signals to revise user decisions, location attraction, and source-user selection. experiments on two real-world datasets show that motion outperforms baselines by at least 4.05% across reported metrics of individual trajectories, population and flow distributions, and community and graph structures. further analyses confirm its robustness, privacy preservation, and downstream utility. the code is available at https://anonymous.4open.science/r/motion-04c4. hunan university; national supercomputing center in changsha bo liu, tong li, jiapeng zhang, zhu xiao, zhuo tang, kenli li cs.ai"
+    },
+    {
+      "arxiv_id": "2610.28351",
+      "title": "RayCo4D: Ray-Conditioned Continuous Motion Model for Monocular 4D Dynamic Reconstruction",
+      "authors": "Yuanxiang Ni, Xianliang Huang, Ruihan Hou, Feng Xie, Hao Zhang",
+      "affiliations": "Southern University of Science and Technology; Fudan University; East China University of Science and Technology; Beijing Technology and Business University; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Reconstructing dynamic 3D scenes from monocular video requires inferring motion from noisy and intermittently visible observations. Long-range tracks provide valuable geometric constraints, but integrating their fragmented temporal coverage into shared, continuous motion remains challenging. We introduce \\textbf{RayCo4D}, a ray-conditioned continuous motion model for monocular 4D reconstruction that explicitly separates visual measurements from latent 3D motion states. Each track is associated with a reference-time 3D query constrained to its camera ray, and its image and depth observations constrain shared latent motion nodes through local many-to-many associations. Each node maintains an $\\mathrm{SE}(3)$ pose and body-frame velocity at sparse support times. A white-noise-on-acceleration process prior couples neighboring states and defines continuous-time interpolation, allowing observations across visibility intervals to jointly constrain the same latent state sequence.The inferred shared motion is transferred to Gaussian primitives through dual-quaternion blending, while reference-anchored local $\\mathrm{SE}(3)$ residuals capture fine-scale non-rigid deformation beyond the shared scaffold. Experiments on diverse monocular dynamic scenes show that RayCo4D achieves competitive novel-view synthesis quality, improves structural and temporal consistency under rapid motion and incomplete tracks, and supports continuous-time rendering.",
+      "summary_cn": "单目视频四维重建要从噪声大、断续可见的观测推断运动，长程轨迹碎片化难融入统一连续运动。RayCo4D把视觉测量与隐三维运动状态分离：每条轨迹关联约束在相机射线上的参考时刻查询，经局部多对多关联约束共享隐运动节点；节点在稀疏时刻维护SE(3)位姿与体系速度，用加速度白噪声先验耦合相邻状态并连续插值，运动经对偶四元数混合传到高斯基元。",
+      "pdf_filename": "2610.28351.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "动态场景重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28351",
+      "search_text": "rayco4d: ray-conditioned continuous motion model for monocular 4d dynamic reconstruction 动态场景重建 单目视频四维重建要从噪声大、断续可见的观测推断运动，长程轨迹碎片化难融入统一连续运动。rayco4d把视觉测量与隐三维运动状态分离：每条轨迹关联约束在相机射线上的参考时刻查询，经局部多对多关联约束共享隐运动节点；节点在稀疏时刻维护se(3)位姿与体系速度，用加速度白噪声先验耦合相邻状态并连续插值，运动经对偶四元数混合传到高斯基元。 reconstructing dynamic 3d scenes from monocular video requires inferring motion from noisy and intermittently visible observations. long-range tracks provide valuable geometric constraints, but integrating their fragmented temporal coverage into shared, continuous motion remains challenging. we introduce \\textbf{rayco4d}, a ray-conditioned continuous motion model for monocular 4d reconstruction that explicitly separates visual measurements from latent 3d motion states. each track is associated with a reference-time 3d query constrained to its camera ray, and its image and depth observations constrain shared latent motion nodes through local many-to-many associations. each node maintains an $\\mathrm{se}(3)$ pose and body-frame velocity at sparse support times. a white-noise-on-acceleration process prior couples neighboring states and defines continuous-time interpolation, allowing observations across visibility intervals to jointly constrain the same latent state sequence.the inferred shared motion is transferred to gaussian primitives through dual-quaternion blending, while reference-anchored local $\\mathrm{se}(3)$ residuals capture fine-scale non-rigid deformation beyond the shared scaffold. experiments on diverse monocular dynamic scenes show that rayco4d achieves competitive novel-view synthesis quality, improves structural and temporal consistency under rapid motion and incomplete tracks, and supports continuous-time rendering. southern university of science and technology; fudan university; east china university of science and technology; beijing technology and business university; shenzhen institutes of advanced technology, chinese academy of sciences yuanxiang ni, xianliang huang, ruihan hou, feng xie, hao zhang cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.28346",
+      "title": "Auto-Director: Leveraging Multi-Agent Collaboration for Autonomous Video Editing",
+      "authors": "Yuxia Chen, Wenbo Zhu, Yangguang Ji, Zhenxiang Jiang, Teng Zhong, Yu Zhang",
+      "affiliations": "University of Electronic Science and Technology of China; University of California, Berkeley; Nanyang Technological University; National University of Singapore; Nanjing Normal University; Beijing Freedo Technology",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Autonomous video editing from open-world resources remains a challenging problem in multimedia content creation. Retrieval-based methods are constrained by fixed source material and lack creative flexibility, while generative models struggle with long-horizon coherence and often diverge from user intent. Both paradigms fail to replicate the structured, multi-stage reasoning that underlies professional post-production. To address these limitations, we present Auto-Director, a tool-augmented multi-agent framework that mirrors professional editorial workflows: a Planning Agent decomposes abstract topics into fact-grounded scripts via retrieval-augmented planning; a Material Agent indexes open-world footage through shot segmentation and visual tagging; an Editor Agent assembles semantically aligned clips with MLLM-driven spatial adaptation; and a Critic Agent governs an iterative Reflect-and-Revise loop that checks scene-level alignment and pacing. To rigorously evaluate this new paradigm, we introduce VEdit-Bench, a benchmark of 100 expert-curated topics with human-annotated Golden Scripts and a five-dimensional metric suite covering Narrative Logic, Factual Accuracy, Semantic Alignment, Compositional Quality, and Stylistic Cohesion. Extensive experiments demonstrate that Auto-Director significantly outperforms baseline methods in both automated metrics and human evaluation, effectively bridging the gap between amateurs and professional-grade video production.",
+      "summary_cn": "开放世界素材自动剪辑要么受限于固定素材库，要么生成模型难保长程连贯、易偏离意图，都未复现专业后期多阶段推理。Auto-Director用工具增强多智能体镜像剪辑流程：规划智能体以检索增强把主题拆成有据脚本，素材智能体做镜头切分与视觉打标，编辑智能体拼装语义对齐片段，评论智能体驱动反思-修订循环；并发布VEdit-Bench百主题五维基准。",
+      "pdf_filename": "2610.28346.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28346",
+      "search_text": "auto-director: leveraging multi-agent collaboration for autonomous video editing 规划 开放世界素材自动剪辑要么受限于固定素材库，要么生成模型难保长程连贯、易偏离意图，都未复现专业后期多阶段推理。auto-director用工具增强多智能体镜像剪辑流程：规划智能体以检索增强把主题拆成有据脚本，素材智能体做镜头切分与视觉打标，编辑智能体拼装语义对齐片段，评论智能体驱动反思-修订循环；并发布vedit-bench百主题五维基准。 autonomous video editing from open-world resources remains a challenging problem in multimedia content creation. retrieval-based methods are constrained by fixed source material and lack creative flexibility, while generative models struggle with long-horizon coherence and often diverge from user intent. both paradigms fail to replicate the structured, multi-stage reasoning that underlies professional post-production. to address these limitations, we present auto-director, a tool-augmented multi-agent framework that mirrors professional editorial workflows: a planning agent decomposes abstract topics into fact-grounded scripts via retrieval-augmented planning; a material agent indexes open-world footage through shot segmentation and visual tagging; an editor agent assembles semantically aligned clips with mllm-driven spatial adaptation; and a critic agent governs an iterative reflect-and-revise loop that checks scene-level alignment and pacing. to rigorously evaluate this new paradigm, we introduce vedit-bench, a benchmark of 100 expert-curated topics with human-annotated golden scripts and a five-dimensional metric suite covering narrative logic, factual accuracy, semantic alignment, compositional quality, and stylistic cohesion. extensive experiments demonstrate that auto-director significantly outperforms baseline methods in both automated metrics and human evaluation, effectively bridging the gap between amateurs and professional-grade video production. university of electronic science and technology of china; university of california, berkeley; nanyang technological university; national university of singapore; nanjing normal university; beijing freedo technology yuxia chen, wenbo zhu, yangguang ji, zhenxiang jiang, teng zhong, yu zhang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28259",
+      "title": "Large Multimodal Models for Direct Robot Control: GPT-6 as a Beginning",
+      "authors": "Youwei Zhou, Bohan Hou, Yankai Fu, Yaoxu Lyu, Yifan Ye, Shilin Shan, Chen Guo, Jiaming Liu, Ran He, Caifeng Shan, Shanghang Zhang, Jianfei Yang, Zhihe Lu",
+      "affiliations": "Nanjing University; Nanyang Technological University; Peking University; Institute of Automation, Chinese Academy of Sciences; Independent Researcher",
+      "published_date": "2026-10-20",
+      "categories": "cs.RO",
+      "abstract": "Recent advances in visuospatial understanding and agentic reasoning enable direct robotic manipulation with general-purpose multimodal models, but their embodied capabilities remain poorly understood. This paper systematically evaluate GPT-6 Astra for closed-loop robotic manipulation using a lightweight agent execution framework. We first probe three fundamental embodied capabilities-depth perception, embodied in-context learning, and tactile understanding-and demonstrate that the model can exploit depth information, acquire simple manipulation strategies from contextual demonstrations, and use tactile feedback to correct its actions. We then evaluate GPT-6 Astra across five established manipulation benchmarks along six capability dimensions. Despite competitive performance on several benchmarks-26.92\\% success on RoboDojo and 76.0\\% on RoboTwin 2.0-our analysis reveals a pronounced gap between semantic reasoning and physical execution, particularly in consequence-aware action planning, precision, and complex motion coordination. To further examine these limitations, we introduce LIBERO-GeoMotion, a new benchmark of geometry-constrained tasks that require precise pose alignment, coordinated translation and rotation, and anticipation of physical action consequences. GPT-6 Astra achieves only 11.1\\% zero-shot success, exposing the difficulty of translating spatial understanding into physically feasible motion. Real-world experiments corroborate these findings: zero-shot execution is feasible for simple tasks, yet persistent deficits remain in motion feasibility, precise control, and physical safety, while substantial inference latency further hinders practical deployment. Overall, our results characterize the emerging embodied capabilities of general-purpose multimodal models and delineate the key challenges toward safe, efficient, and reliable robotic manipulation.",
+      "summary_cn": "该文系统评测GPT-6 Astra在轻量智能体执行框架下的闭环机器人操作能力，先探查深度感知、具身上下文学习与触觉理解三项基础能力，再在五个操作基准、六个能力维度上评测。结果显示RoboDojo 26.92%、RoboTwin 2.0 76.0%，但语义推理与物理执行之间落差明显，尤其在后果感知规划、精度与复杂运动协调；为此提出LIBERO-GeoMotion几何约束基准，零样本成功率仅11.1%，实机显示精度、运动可行性与推理延迟仍是瓶颈。",
+      "pdf_filename": "2610.28259.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28259",
+      "search_text": "large multimodal models for direct robot control: gpt-6 as a beginning 闭环仿真 规划 多模态 具身智能 该文系统评测gpt-6 astra在轻量智能体执行框架下的闭环机器人操作能力，先探查深度感知、具身上下文学习与触觉理解三项基础能力，再在五个操作基准、六个能力维度上评测。结果显示robodojo 26.92%、robotwin 2.0 76.0%，但语义推理与物理执行之间落差明显，尤其在后果感知规划、精度与复杂运动协调；为此提出libero-geomotion几何约束基准，零样本成功率仅11.1%，实机显示精度、运动可行性与推理延迟仍是瓶颈。 recent advances in visuospatial understanding and agentic reasoning enable direct robotic manipulation with general-purpose multimodal models, but their embodied capabilities remain poorly understood. this paper systematically evaluate gpt-6 astra for closed-loop robotic manipulation using a lightweight agent execution framework. we first probe three fundamental embodied capabilities-depth perception, embodied in-context learning, and tactile understanding-and demonstrate that the model can exploit depth information, acquire simple manipulation strategies from contextual demonstrations, and use tactile feedback to correct its actions. we then evaluate gpt-6 astra across five established manipulation benchmarks along six capability dimensions. despite competitive performance on several benchmarks-26.92\\% success on robodojo and 76.0\\% on robotwin 2.0-our analysis reveals a pronounced gap between semantic reasoning and physical execution, particularly in consequence-aware action planning, precision, and complex motion coordination. to further examine these limitations, we introduce libero-geomotion, a new benchmark of geometry-constrained tasks that require precise pose alignment, coordinated translation and rotation, and anticipation of physical action consequences. gpt-6 astra achieves only 11.1\\% zero-shot success, exposing the difficulty of translating spatial understanding into physically feasible motion. real-world experiments corroborate these findings: zero-shot execution is feasible for simple tasks, yet persistent deficits remain in motion feasibility, precise control, and physical safety, while substantial inference latency further hinders practical deployment. overall, our results characterize the emerging embodied capabilities of general-purpose multimodal models and delineate the key challenges toward safe, efficient, and reliable robotic manipulation. nanjing university; nanyang technological university; peking university; institute of automation, chinese academy of sciences; independent researcher youwei zhou, bohan hou, yankai fu, yaoxu lyu, yifan ye, shilin shan, chen guo, jiaming liu, ran he, caifeng shan, shanghang zhang, jianfei yang, zhihe lu cs.ro"
+    },
+    {
+      "arxiv_id": "2610.28257",
+      "title": "SplatFlux: Feed-Forward 4D Gaussian Reconstruction and Generation from Video Latents",
+      "authors": "Runmin Zhang, Binglin Ren, Zhu Yu, Fudong Wang, Jiangke Lin, Yichun Shentu, Si-Yuan Cao, Yi Yuan, Hui-Liang Shen",
+      "affiliations": "Zhejiang University; Ant Group",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "This work presents SplatFlux, a feed-forward latent-to-4DGS framework for both video-based 4D reconstruction and conditional 4D generation. Our key observation is that observed videos and conditionally generated content can be represented in the same pretrained video latent space, allowing both tasks to be formulated as latent-to-4DGS decoding. To construct compact and temporally coherent 4D scenes, SplatFlux introduces a static-dynamic decoupled 4D Gaussian representation that explicitly predicts dynamic probabilities for Gaussian primitives. This representation separates static scene structures from moving regions, enabling complete 4D scene construction in a feed-forward manner through static aggregation and dynamic motion interpolation. To learn static-dynamic decomposition and dynamic Gaussian motion without costly annotations, we further develop an auxiliary distillation strategy that provides pseudo dynamic masks and optical-flow cues. Extensive experiments across 3D and 4D reconstruction and generation demonstrate that SplatFlux achieves state-of-the-art performance.",
+      "summary_cn": "视频重建与条件生成长期分离，作者发现观测视频与生成内容可落在同一预训练视频隐空间，于是统一为隐空间到4DGS解码。SplatFlux提出静动解耦四维高斯表示，为每个基元预测动态概率，静态结构聚合、动态区域做运动插值，前馈完成完整四维构建；并用辅助蒸馏提供伪动态掩码与光流线索，免去昂贵标注。三维四维重建与生成均达SOTA，支持任意时刻视角渲染。",
+      "pdf_filename": "2610.28257.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "4DGS",
+        "动态场景重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28257",
+      "search_text": "splatflux: feed-forward 4d gaussian reconstruction and generation from video latents 4dgs 动态场景重建 视频重建与条件生成长期分离，作者发现观测视频与生成内容可落在同一预训练视频隐空间，于是统一为隐空间到4dgs解码。splatflux提出静动解耦四维高斯表示，为每个基元预测动态概率，静态结构聚合、动态区域做运动插值，前馈完成完整四维构建；并用辅助蒸馏提供伪动态掩码与光流线索，免去昂贵标注。三维四维重建与生成均达sota，支持任意时刻视角渲染。 this work presents splatflux, a feed-forward latent-to-4dgs framework for both video-based 4d reconstruction and conditional 4d generation. our key observation is that observed videos and conditionally generated content can be represented in the same pretrained video latent space, allowing both tasks to be formulated as latent-to-4dgs decoding. to construct compact and temporally coherent 4d scenes, splatflux introduces a static-dynamic decoupled 4d gaussian representation that explicitly predicts dynamic probabilities for gaussian primitives. this representation separates static scene structures from moving regions, enabling complete 4d scene construction in a feed-forward manner through static aggregation and dynamic motion interpolation. to learn static-dynamic decomposition and dynamic gaussian motion without costly annotations, we further develop an auxiliary distillation strategy that provides pseudo dynamic masks and optical-flow cues. extensive experiments across 3d and 4d reconstruction and generation demonstrate that splatflux achieves state-of-the-art performance. zhejiang university; ant group runmin zhang, binglin ren, zhu yu, fudong wang, jiangke lin, yichun shentu, si-yuan cao, yi yuan, hui-liang shen cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28184",
+      "title": "Perceives but Doesn't Brake: A Perception-Action Binding Gap in Reasoning Driving VLAs",
+      "authors": "Matteo Cercola, Katie Z Luo, Simone Formentin, Marco Pavone",
+      "affiliations": "Politecnico di Milano; Stanford University; NVIDIA",
+      "published_date": "2026-10-20",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Reasoning-augmented vision-language-action (VLA) driving models can perceive and reason about safety-critical hazards yet fail to translate that evidence into safe actions. We characterize this failure as a perception-action binding gap: hazard information is available inside the model but exerts insufficient control over trajectory generation. Using matched simulated counterfactuals and logged driving replay, we show that in-path hazards are actually encoded in the visual representation, but longitudinal plans are dominated by ego-speed history and respond only weakly to hazard proximity or the model's own reasoning trace. Further analysis shows that the trajectory generator is capable of braking but sometimes fails to do so due to the perception-action binding gap. Without retraining or modifying any weights, we inject a hazard-conditioned energy into the frozen flow-matching sampler of Alpamayo-1.5, restoring the missing coupling at generation time. With exact obstacle geometry, guidance cuts footprint intrusion from 58.1% to 14.5% and recovers safe braking whenever sufficient stopping distance remains, eliminating collisions entirely in our braking-relevant closed-loop battery. It also reverses the diagnosed dependence of the plan, from tracking ego speed to responding to obstacle range. These results separate hazard perception from hazard control in driving VLAs, show that unsafe behavior can arise even when the model has both the evidence and the ability to act on it, and propose a simple fix for bridging this binding gap.",
+      "summary_cn": "推理增强的驾驶VLA能看见并说出危险却未必刹得住，作者称为感知-动作绑定缺口：危险信息在表示中，但对轨迹生成控制力不足。配对反事实仿真与日志回放显示纵向规划被自车速度历史主导，对障碍距离与自身推理文本反应很弱。不重训不改权重，向冻结流匹配采样器注入危险条件能量项，足迹侵入率由58.1%降至14.5%，制动闭环测试碰撞全消。",
+      "pdf_filename": "2610.28184.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28184",
+      "search_text": "perceives but doesn't brake: a perception-action binding gap in reasoning driving vlas 闭环仿真 规划 多模态 推理增强的驾驶vla能看见并说出危险却未必刹得住，作者称为感知-动作绑定缺口：危险信息在表示中，但对轨迹生成控制力不足。配对反事实仿真与日志回放显示纵向规划被自车速度历史主导，对障碍距离与自身推理文本反应很弱。不重训不改权重，向冻结流匹配采样器注入危险条件能量项，足迹侵入率由58.1%降至14.5%，制动闭环测试碰撞全消。 reasoning-augmented vision-language-action (vla) driving models can perceive and reason about safety-critical hazards yet fail to translate that evidence into safe actions. we characterize this failure as a perception-action binding gap: hazard information is available inside the model but exerts insufficient control over trajectory generation. using matched simulated counterfactuals and logged driving replay, we show that in-path hazards are actually encoded in the visual representation, but longitudinal plans are dominated by ego-speed history and respond only weakly to hazard proximity or the model's own reasoning trace. further analysis shows that the trajectory generator is capable of braking but sometimes fails to do so due to the perception-action binding gap. without retraining or modifying any weights, we inject a hazard-conditioned energy into the frozen flow-matching sampler of alpamayo-1.5, restoring the missing coupling at generation time. with exact obstacle geometry, guidance cuts footprint intrusion from 58.1% to 14.5% and recovers safe braking whenever sufficient stopping distance remains, eliminating collisions entirely in our braking-relevant closed-loop battery. it also reverses the diagnosed dependence of the plan, from tracking ego speed to responding to obstacle range. these results separate hazard perception from hazard control in driving vlas, show that unsafe behavior can arise even when the model has both the evidence and the ability to act on it, and propose a simple fix for bridging this binding gap. politecnico di milano; stanford university; nvidia matteo cercola, katie z luo, simone formentin, marco pavone cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.28120",
+      "title": "PointForward V2: Point-Aligned Interaction for Feedforward Driving Reconstruction",
+      "authors": "Xianqi Wang, Cheng Chi, Yuechuan Pu, Hongcheng Luo, Junda Cheng, Guang Chen, Hangjun Ye, Bing Wang, Xin Yang",
+      "affiliations": "Huazhong University of Science and Technology; Xiaomi EV; HKUST; Beijing Key Laboratory of Intelligent Driving Foundation Models and Simulation",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Feedforward reconstruction of dynamic driving scenes requires integrating observations across multiple views and time steps into a coherent 3D representation. PointForward established state-of-the-art feedforward driving reconstruction by lifting image observations into sparse 3D queries, demonstrating the effectiveness of point-aligned scene representations. However, these queries are largely processed independently, limiting information exchange across space and time, while direct global attention among tens of thousands of point queries is computationally prohibitive. In this work, we present \\textbf{PointForward V2}, which advances point-aligned representation to point-aligned interaction. Our key idea is to mediate query interaction through compact, scene-structured registers. For the static background, frame-wise Static Scene Registers compress point information, communicate across frames, and propagate the aggregated context back to the queries. For each dynamic instance, queries from different frames are aligned in an object-centric canonical space and interact through instance-specific Dynamic Instance Registers. We further employ 4D positional encoding that combines aligned spatial coordinates with original timestamps, enabling spatially aligned yet temporally distinguishable interactions. In this way, PointForward V2 enables scalable spatio-temporal reasoning directly among lifted 3D queries without dense global attention. Experiments on Waymo, nuScenes, and Argoverse 2 demonstrate state-of-the-art performance across large-scale driving benchmarks.",
+      "summary_cn": "PointForward把图像观测提升为稀疏三维查询实现驾驶前馈重建，但查询间几乎独立，跨时空交互不足，对数万查询做全局注意力又不可行。V2推进为点对齐交互：静态背景用逐帧场景寄存器压缩并跨帧通信回传；每个动态实例的查询对齐到规范空间后经实例寄存器交互；四维位置编码结合对齐坐标与时间戳。Waymo、nuScenes、Argoverse 2全面SOTA，无需稠密注意力。",
+      "pdf_filename": "2610.28120.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "场景压缩",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28120",
+      "search_text": "pointforward v2: point-aligned interaction for feedforward driving reconstruction 前馈3d重建 场景压缩 自动驾驶 pointforward把图像观测提升为稀疏三维查询实现驾驶前馈重建，但查询间几乎独立，跨时空交互不足，对数万查询做全局注意力又不可行。v2推进为点对齐交互：静态背景用逐帧场景寄存器压缩并跨帧通信回传；每个动态实例的查询对齐到规范空间后经实例寄存器交互；四维位置编码结合对齐坐标与时间戳。waymo、nuscenes、argoverse 2全面sota，无需稠密注意力。 feedforward reconstruction of dynamic driving scenes requires integrating observations across multiple views and time steps into a coherent 3d representation. pointforward established state-of-the-art feedforward driving reconstruction by lifting image observations into sparse 3d queries, demonstrating the effectiveness of point-aligned scene representations. however, these queries are largely processed independently, limiting information exchange across space and time, while direct global attention among tens of thousands of point queries is computationally prohibitive. in this work, we present \\textbf{pointforward v2}, which advances point-aligned representation to point-aligned interaction. our key idea is to mediate query interaction through compact, scene-structured registers. for the static background, frame-wise static scene registers compress point information, communicate across frames, and propagate the aggregated context back to the queries. for each dynamic instance, queries from different frames are aligned in an object-centric canonical space and interact through instance-specific dynamic instance registers. we further employ 4d positional encoding that combines aligned spatial coordinates with original timestamps, enabling spatially aligned yet temporally distinguishable interactions. in this way, pointforward v2 enables scalable spatio-temporal reasoning directly among lifted 3d queries without dense global attention. experiments on waymo, nuscenes, and argoverse 2 demonstrate state-of-the-art performance across large-scale driving benchmarks. huazhong university of science and technology; xiaomi ev; hkust; beijing key laboratory of intelligent driving foundation models and simulation xianqi wang, cheng chi, yuechuan pu, hongcheng luo, junda cheng, guang chen, hangjun ye, bing wang, xin yang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28074",
+      "title": "Slot-JEPA: Object-Structured Prediction Interfaces for Latent World Models",
+      "authors": "Peisong Wen, Qianqian Xu, Minye Lei, Siran Dai, Yang Liu, Qingming Huang",
+      "affiliations": "University of Chinese Academy of Sciences; Institute of Computing Technology, Chinese Academy of Sciences; Beijing Academy of Artificial Intelligence; Institute of Information Engineering, Chinese Academy of Sciences",
+      "published_date": "2026-10-20",
+      "categories": "cs.AI, cs.CV",
+      "abstract": "As a prototypical latent world model, Joint-Embedding Predictive Architectures (JEPAs) provide strong semantic representations. However, dense patch representations expose a redundant interface to downstream predictors, which must implicitly infer spatial organization and temporal correspondence, presenting three challenges. First, object information is distributed across patches, forcing each downstream predictor to redundantly recover object structure that could otherwise be reused across tasks before modeling interactions. Second, the lack of explicit entity correspondence across time makes historical transitions expensive, restricting the predictor's flexibility in utilizing context. Third, without explicit transport structure, existing JEPA models typically use pointwise l1/l2 distances, which are insensitive to spatial displacement when predicted and goal supports are largely disjoint. We propose the Slot-based Joint-Embedding Predictive Architecture (Slot-JEPA), which decomposes dense representations into stable semantic slots and time-varying spatial masks. Pretrained once and frozen downstream, this decomposition exposes a reusable object-structured interface. Building on it, our Transition Memory Predictor (TMP) stores visual transitions as compact masks and retrieves useful context using statistics of corresponding slots. Its two branches separate slot-specific dynamics from shared cross-slot dynamics. We further use Unbalanced Optimal Transport (UOT) to supervise mask prediction and evaluate candidate plans by transporting mass between aligned predicted and goal masks, providing a signal better aligned with spatial progress. Across seven visual-understanding benchmarks, the slot-reconstructed features remain transferable. Slot-JEPA also improves goal-conditioned planning across six planar environments and four robotic arm planning tasks on the REALM-JEPA benchmark.",
+      "summary_cn": "JEPA类隐世界模型的稠密patch表示是冗余接口：物体信息散落、缺跨时间实体对应、点式L1/L2距离对空间位移不敏感。Slot-JEPA把表示分解为稳定语义槽与随时间变化的空间掩码，预训练一次即可冻结复用；转移记忆预测器以紧凑掩码存转移，双分支分离槽内与跨槽动力学，用非平衡最优传输监督掩码。七个理解基准可迁移，平面环境与机械臂规划均有提升。",
+      "pdf_filename": "2610.28074.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28074",
+      "search_text": "slot-jepa: object-structured prediction interfaces for latent world models 世界模型 规划 jepa类隐世界模型的稠密patch表示是冗余接口：物体信息散落、缺跨时间实体对应、点式l1/l2距离对空间位移不敏感。slot-jepa把表示分解为稳定语义槽与随时间变化的空间掩码，预训练一次即可冻结复用；转移记忆预测器以紧凑掩码存转移，双分支分离槽内与跨槽动力学，用非平衡最优传输监督掩码。七个理解基准可迁移，平面环境与机械臂规划均有提升。 as a prototypical latent world model, joint-embedding predictive architectures (jepas) provide strong semantic representations. however, dense patch representations expose a redundant interface to downstream predictors, which must implicitly infer spatial organization and temporal correspondence, presenting three challenges. first, object information is distributed across patches, forcing each downstream predictor to redundantly recover object structure that could otherwise be reused across tasks before modeling interactions. second, the lack of explicit entity correspondence across time makes historical transitions expensive, restricting the predictor's flexibility in utilizing context. third, without explicit transport structure, existing jepa models typically use pointwise l1/l2 distances, which are insensitive to spatial displacement when predicted and goal supports are largely disjoint. we propose the slot-based joint-embedding predictive architecture (slot-jepa), which decomposes dense representations into stable semantic slots and time-varying spatial masks. pretrained once and frozen downstream, this decomposition exposes a reusable object-structured interface. building on it, our transition memory predictor (tmp) stores visual transitions as compact masks and retrieves useful context using statistics of corresponding slots. its two branches separate slot-specific dynamics from shared cross-slot dynamics. we further use unbalanced optimal transport (uot) to supervise mask prediction and evaluate candidate plans by transporting mass between aligned predicted and goal masks, providing a signal better aligned with spatial progress. across seven visual-understanding benchmarks, the slot-reconstructed features remain transferable. slot-jepa also improves goal-conditioned planning across six planar environments and four robotic arm planning tasks on the realm-jepa benchmark. university of chinese academy of sciences; institute of computing technology, chinese academy of sciences; beijing academy of artificial intelligence; institute of information engineering, chinese academy of sciences peisong wen, qianqian xu, minye lei, siran dai, yang liu, qingming huang cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28011",
+      "title": "Knowing When to Stop Thinking: A Dissection of Expected Free Energy as a Test-Time Compute Controller for Latent World-Model Planning",
+      "authors": "Tong Zhang, Zhiyuan Shi, Yun Peng, Tao Xie",
+      "affiliations": "Fudan University; Peking University",
+      "published_date": "2026-10-20",
+      "categories": "cs.RO",
+      "abstract": "A planner using a learned world model can improve its predicted outcome while choosing a worse action. We study when expected free energy (EFE) can help decide how much computation to spend on a plan. An EFE-inspired objective combines goal distance with disagreement among stochastic predictions. We test candidate scoring, stopping, and online predictor updates separately. Stopping when elite cost stalls reduces refinement on tasks whose success plateaus with depth, with mean success close to fixed-depth references. At the larger tested weights, rewarding disagreement lowers success with a frozen model. Penalizing it helps at some task and weight settings but harms others. When training data omit a region needed to reach the goal, online updates recover part of the resulting loss. The tested cost-stall rule can fail when further optimization exploits model errors, because predicted cost keeps falling after task success peaks. Cost progress can guide computation on a plateau, but protecting performance after a peak requires information about the consequences of the chosen actions.",
+      "summary_cn": "用学习世界模型规划时，预测回报变好未必动作更好，何时停止迭代缺原则。该文把期望自由能拆成候选打分、停止规则与在线更新分别检验：精英解代价停滞即停止，可把细化深度压到与固定深度参照相当；较大权重下奖励预测分歧反降成功率，惩罚分歧因任务而异。并指出代价停滞规则在优化开始利用模型误差时失效，峰值后的保护需要动作后果信息。",
+      "pdf_filename": "2610.28011.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28011",
+      "search_text": "knowing when to stop thinking: a dissection of expected free energy as a test-time compute controller for latent world-model planning 世界模型 规划 用学习世界模型规划时，预测回报变好未必动作更好，何时停止迭代缺原则。该文把期望自由能拆成候选打分、停止规则与在线更新分别检验：精英解代价停滞即停止，可把细化深度压到与固定深度参照相当；较大权重下奖励预测分歧反降成功率，惩罚分歧因任务而异。并指出代价停滞规则在优化开始利用模型误差时失效，峰值后的保护需要动作后果信息。 a planner using a learned world model can improve its predicted outcome while choosing a worse action. we study when expected free energy (efe) can help decide how much computation to spend on a plan. an efe-inspired objective combines goal distance with disagreement among stochastic predictions. we test candidate scoring, stopping, and online predictor updates separately. stopping when elite cost stalls reduces refinement on tasks whose success plateaus with depth, with mean success close to fixed-depth references. at the larger tested weights, rewarding disagreement lowers success with a frozen model. penalizing it helps at some task and weight settings but harms others. when training data omit a region needed to reach the goal, online updates recover part of the resulting loss. the tested cost-stall rule can fail when further optimization exploits model errors, because predicted cost keeps falling after task success peaks. cost progress can guide computation on a plateau, but protecting performance after a peak requires information about the consequences of the chosen actions. fudan university; peking university tong zhang, zhiyuan shi, yun peng, tao xie cs.ro"
+    },
+    {
+      "arxiv_id": "2610.27999",
+      "title": "Matrix-Game 4.0: Harnessing Video Models for Real-Time Playable Game Worlds",
+      "authors": "Jihai Zhang, Runjia Qian, Kaiqin Kong, Biao Jiang, Puyi Wang, Siru Chen, Tianle Li, Guanjie Chen, Junyi Wu, Chubin Chen, Yuanhang Li, Kaichen Huang, Haobo Zhang, Yangguang Li, Wei Yu, Guibin Chen, Yu Cheng, Yahui Zhou",
+      "affiliations": "Skywork AI; The Chinese University of Hong Kong; UC San Diego; University of Science and Technology of China; Shanghai Jiao Tong University; Shanghai AI Lab; Nanyang Technological University",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "Moving from controllable videos to genuinely playable worlds requires persistent world state, executable game rules, and low-latency interaction. We outline a roadmap for the next generation of Matrix-Game that separates game execution from visual generation through an executable game harness, and introduce Matrix-Game 4.0 as the first system built on this design. A lightweight game engine maintains world state and executes interaction rules, a multimodal coding agent translates player ideas into game code and dynamic scene captions, and a renderer based on autoregressive video model transforms engine-rendered low-poly proxies into detailed visuals, conditioned on dynamic captions and memory references. This framework provides continuous guidance for visual generation and enables natural-language creation and modification of scenes and gameplay. Our renderer is trained on aligned low-poly and high-fidelity video pairs and distilled into a causal generator that generates in four-frame chunks with one or two denoising steps. Together with targeted inference optimizations, Matrix-Game 4.0 enables 480p, 60 FPS gameplay on a single NVIDIA RTX5090 with a key-press-to-display latency of 112ms. Single-step generation achieves 83FPS steady-state throughput with 18.2GiB of peak GPU memory usage. With fixed prompts, steady-state throughput also reaches 67FPS on an RTX5080 and 58FPS on an RTX5070Ti. We demonstrate customizable shooter and driving games with engine-enforced mechanics, and release code, model weights, and low-poly game assets to support research and creation of playable game worlds.",
+      "summary_cn": "从可控视频走向真正可玩的世界需要持久状态、可执行规则与低延迟交互。Matrix-Game 4.0把游戏执行与视觉生成解耦：轻量引擎维护状态并执行规则，多模态编码智能体把玩家想法译成游戏代码与场景描述，自回归视频渲染器把低模代理转成高保真画面。渲染器蒸馏为因果生成器，四帧一块、一两步去噪，单张RTX5090上480p达60FPS、按键到显示112ms。",
+      "pdf_filename": "2610.27999.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.27999",
+      "search_text": "matrix-game 4.0: harnessing video models for real-time playable game worlds 多模态 从可控视频走向真正可玩的世界需要持久状态、可执行规则与低延迟交互。matrix-game 4.0把游戏执行与视觉生成解耦：轻量引擎维护状态并执行规则，多模态编码智能体把玩家想法译成游戏代码与场景描述，自回归视频渲染器把低模代理转成高保真画面。渲染器蒸馏为因果生成器，四帧一块、一两步去噪，单张rtx5090上480p达60fps、按键到显示112ms。 moving from controllable videos to genuinely playable worlds requires persistent world state, executable game rules, and low-latency interaction. we outline a roadmap for the next generation of matrix-game that separates game execution from visual generation through an executable game harness, and introduce matrix-game 4.0 as the first system built on this design. a lightweight game engine maintains world state and executes interaction rules, a multimodal coding agent translates player ideas into game code and dynamic scene captions, and a renderer based on autoregressive video model transforms engine-rendered low-poly proxies into detailed visuals, conditioned on dynamic captions and memory references. this framework provides continuous guidance for visual generation and enables natural-language creation and modification of scenes and gameplay. our renderer is trained on aligned low-poly and high-fidelity video pairs and distilled into a causal generator that generates in four-frame chunks with one or two denoising steps. together with targeted inference optimizations, matrix-game 4.0 enables 480p, 60 fps gameplay on a single nvidia rtx5090 with a key-press-to-display latency of 112ms. single-step generation achieves 83fps steady-state throughput with 18.2gib of peak gpu memory usage. with fixed prompts, steady-state throughput also reaches 67fps on an rtx5080 and 58fps on an rtx5070ti. we demonstrate customizable shooter and driving games with engine-enforced mechanics, and release code, model weights, and low-poly game assets to support research and creation of playable game worlds. skywork ai; the chinese university of hong kong; uc san diego; university of science and technology of china; shanghai jiao tong university; shanghai ai lab; nanyang technological university jihai zhang, runjia qian, kaiqin kong, biao jiang, puyi wang, siru chen, tianle li, guanjie chen, junyi wu, chubin chen, yuanhang li, kaichen huang, haobo zhang, yangguang li, wei yu, guibin chen, yu cheng, yahui zhou cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2610.27980",
+      "title": "A Discrete Amplitude-to-Time Conversion Circuit for TDC-Based Readout of Fast Scintillation Detectors",
+      "authors": "Michael Wiebusch",
+      "affiliations": "GSI Helmholtzzentrum für Schwerionenforschung, Darmstadt, Germany",
+      "published_date": "2026-10-20",
+      "categories": "physics.ins-det",
+      "abstract": "Fast timing measurements with scintillation detectors commonly employ leading-edge discriminators and time-to-digital converters (TDCs). Many applications also require an energy-related observable for estimating the deposited energy and correcting time-walk effects. Time-over-threshold (ToT) is frequently used for this purpose, but its relationship to pulse amplitude can be severely degraded by undershoot, ringing, and other distortions of the detector pulse tail.   This work presents a discrete analog front-end circuit for amplitude-to-time conversion that is insensitive to pulse-tail distortions. An analog multiplexer and a high-speed comparator implement a sample-hold-discharge stage: upon leading-edge detection, the detector pulse amplitude is sampled near its peak and stored on a capacitor, which is subsequently discharged at a controlled rate. The resulting digital pulse width encodes the sampled amplitude, while the leading edge preserves the timing information. The circuit was designed for a short recovery time and a total dead time below 100~ns, making it suitable for high-rate detector readout. The approach enables simultaneous timing and amplitude measurements through a single TDC channel.   An eight-channel front-end card implementing this concept was characterized using generated test pulses. The measured transfer function is approximately linear up to input amplitudes of 0.5~V and extends beyond 2~V, with a low-amplitude conversion gain of approximately 27~ps/mV. The estimated relative amplitude precision falls below \\SI{0.5}{\\percent} for input amplitudes above 0.5~V. These results demonstrate the feasibility of a low-complexity, multichannel amplitude-to-time converter for TDC-based detector readout, offering an alternative to conventional ToT measurement when pulse-tail distortions compromise amplitude estimation.",
+      "summary_cn": "快闪烁体探测器的TDC读出需要能量相关观测量修正时间游走，但常用阈上时间受脉冲尾部下冲与振铃严重影响。该文设计离散模拟前端：前沿触发时采样脉冲峰值存入电容再受控放电，输出脉宽编码幅度而前沿保留时间，死时间低于100ns，单通道TDC可同测时间与幅度。八通道样机在0.5V内近线性，低幅增益约27ps/mV，相对幅度精度优于0.5%。",
+      "pdf_filename": "2610.27980.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.27980",
+      "search_text": "a discrete amplitude-to-time conversion circuit for tdc-based readout of fast scintillation detectors  快闪烁体探测器的tdc读出需要能量相关观测量修正时间游走，但常用阈上时间受脉冲尾部下冲与振铃严重影响。该文设计离散模拟前端：前沿触发时采样脉冲峰值存入电容再受控放电，输出脉宽编码幅度而前沿保留时间，死时间低于100ns，单通道tdc可同测时间与幅度。八通道样机在0.5v内近线性，低幅增益约27ps/mv，相对幅度精度优于0.5%。 fast timing measurements with scintillation detectors commonly employ leading-edge discriminators and time-to-digital converters (tdcs). many applications also require an energy-related observable for estimating the deposited energy and correcting time-walk effects. time-over-threshold (tot) is frequently used for this purpose, but its relationship to pulse amplitude can be severely degraded by undershoot, ringing, and other distortions of the detector pulse tail.   this work presents a discrete analog front-end circuit for amplitude-to-time conversion that is insensitive to pulse-tail distortions. an analog multiplexer and a high-speed comparator implement a sample-hold-discharge stage: upon leading-edge detection, the detector pulse amplitude is sampled near its peak and stored on a capacitor, which is subsequently discharged at a controlled rate. the resulting digital pulse width encodes the sampled amplitude, while the leading edge preserves the timing information. the circuit was designed for a short recovery time and a total dead time below 100~ns, making it suitable for high-rate detector readout. the approach enables simultaneous timing and amplitude measurements through a single tdc channel.   an eight-channel front-end card implementing this concept was characterized using generated test pulses. the measured transfer function is approximately linear up to input amplitudes of 0.5~v and extends beyond 2~v, with a low-amplitude conversion gain of approximately 27~ps/mv. the estimated relative amplitude precision falls below \\si{0.5}{\\percent} for input amplitudes above 0.5~v. these results demonstrate the feasibility of a low-complexity, multichannel amplitude-to-time converter for tdc-based detector readout, offering an alternative to conventional tot measurement when pulse-tail distortions compromise amplitude estimation. gsi helmholtzzentrum für schwerionenforschung, darmstadt, germany michael wiebusch physics.ins-det"
+    },
+    {
+      "arxiv_id": "2610.27946",
+      "title": "Decoupling Action from Egocentric Observation for World Simulation",
+      "authors": "Yue Ma, Pengjie Song, Xinyu Wang, Yi He, Zeqian Long, Fangneng Zhan, Kaichen Zhou, Hongyu Liu, Hongfa Wang, Peihao Li, Haoyang Huang, Nan Duan, Qifeng Chen",
+      "affiliations": "HKUST; Tsinghua University; Stanford University; MIT; JD Explore Academy",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Egocentric action transfer aims to decouple the semantic action from egocentric observations and reproduce them in new visual contexts, enabling scalable world simulation, embodied policy learning, and robotic data generation. Existing approaches to transferring actions rely on condition-guided video generation, which converts the observation video into explicit geometric controls (e.g., hand poses or meshes) to drive synthesis. However, these methods introduce geometric estimation errors, making it difficult to preserve physically plausible interactions when transferred to new scenes. Alternatively, motion transfer methods directly extract motion patterns from the observation video, yet motion-level features alone cannot encode rich contact dynamics, frequently leading to severe hand structural collapse and implausible contact layout. To address both limitations, we present EgoACT, a test-time framework for egocentric action transfer that operates directly on the denoising process of video diffusion models without requiring additional geometric estimators. EgoACT uses Velocity-guided Structure Anchoring to stabilize reference-consistent hand-object structure in the early denoising stage, and Sparse Correspondence Calibration to refine reliable local correspondences in the mid-to-late denoising stages. Together, these two components preserve transferable action semantics while improving temporal coherence and interaction realism. We further establish EgoActionBench, a benchmark for evaluating action preservation, visual quality, and hand-object plausibility across diverse egocentric manipulation scenarios. Experiments show that EgoACT generates more coherent and physically plausible interaction videos than strong baselines.",
+      "summary_cn": "第一视角动作迁移要把动作语义从观测解耦并在新场景重现，可用于世界仿真与具身数据生成。条件式视频生成依赖手部姿态或网格等几何控制，估计误差破坏物理合理性；纯运动迁移又丢失接触动力学，常致手部结构崩坏。EgoACT直接在视频扩散去噪中介入：早期速度引导结构锚定稳定手-物结构，中后期稀疏对应校准修正局部对应，无需额外几何估计器，并建立EgoActionBench基准。",
+      "pdf_filename": "2610.27946.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "视频生成",
+        "扩散模型",
+        "强化学习",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.27946",
+      "search_text": "decoupling action from egocentric observation for world simulation 视频生成 扩散模型 强化学习 具身智能 第一视角动作迁移要把动作语义从观测解耦并在新场景重现，可用于世界仿真与具身数据生成。条件式视频生成依赖手部姿态或网格等几何控制，估计误差破坏物理合理性；纯运动迁移又丢失接触动力学，常致手部结构崩坏。egoact直接在视频扩散去噪中介入：早期速度引导结构锚定稳定手-物结构，中后期稀疏对应校准修正局部对应，无需额外几何估计器，并建立egoactionbench基准。 egocentric action transfer aims to decouple the semantic action from egocentric observations and reproduce them in new visual contexts, enabling scalable world simulation, embodied policy learning, and robotic data generation. existing approaches to transferring actions rely on condition-guided video generation, which converts the observation video into explicit geometric controls (e.g., hand poses or meshes) to drive synthesis. however, these methods introduce geometric estimation errors, making it difficult to preserve physically plausible interactions when transferred to new scenes. alternatively, motion transfer methods directly extract motion patterns from the observation video, yet motion-level features alone cannot encode rich contact dynamics, frequently leading to severe hand structural collapse and implausible contact layout. to address both limitations, we present egoact, a test-time framework for egocentric action transfer that operates directly on the denoising process of video diffusion models without requiring additional geometric estimators. egoact uses velocity-guided structure anchoring to stabilize reference-consistent hand-object structure in the early denoising stage, and sparse correspondence calibration to refine reliable local correspondences in the mid-to-late denoising stages. together, these two components preserve transferable action semantics while improving temporal coherence and interaction realism. we further establish egoactionbench, a benchmark for evaluating action preservation, visual quality, and hand-object plausibility across diverse egocentric manipulation scenarios. experiments show that egoact generates more coherent and physically plausible interaction videos than strong baselines. hkust; tsinghua university; stanford university; mit; jd explore academy yue ma, pengjie song, xinyu wang, yi he, zeqian long, fangneng zhan, kaichen zhou, hongyu liu, hongfa wang, peihao li, haoyang huang, nan duan, qifeng chen cs.cv"
+    },
+    {
+      "arxiv_id": "2610.27712",
+      "title": "RLSplat: Resource-Linear Budget Control for Feed-forward 3D Gaussian Splatting",
+      "authors": "Injae Kim, Minseok Joo, Jihwan Park, Sehyung Kim, Minseong Bae, Hyunwoo J. Kim",
+      "affiliations": "KAIST; Korea University",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Feed-forward 3D Gaussian Splatting (FF3DGS) reconstructs 3D scenes from images in a single forward pass, making it well-suited to applications that must operate within limited resource budgets. To further improve its practicality, recent budget-controllable FF3DGS methods allow the number of Gaussians to be adjusted at inference, so that the output meets a given storage limit or rendering-latency constraint. However, these methods overlook the cost of inference itself: to produce a representation with the target number of Gaussians, they first predict a dense set of Gaussians and then prune or select from it, requiring nearly constant latency and peak memory regardless of the budget. We therefore propose RLSplat, a resource-linear budget-controllable FF3DGS framework whose representation size, inference latency, and peak memory all decrease linearly as the Gaussian budget is reduced. Instead of pruning or selection, RLSplat learns a Gaussian allocation policy that distributes the budget across local scene regions, so that exactly the requested number of Gaussians is generated. These Gaussians are then refined through resource-linear Gaussian decoding, in which each Gaussian attends only to nearby Gaussians found via an efficient hierarchical neighbor search, so that the decoding cost decreases linearly with fewer Gaussians. In zero-shot evaluation, RLSplat outperforms prior budget-controllable methods at every budget, surpassing the strongest baseline even with 4$\\times$ fewer Gaussians, while running up to 4.1$\\times$ faster with 9.6$\\times$ less peak memory at low budgets.",
+      "summary_cn": "可预算前馈3DGS虽能在推理时调整高斯数，但需先预测稠密高斯再剪枝，延迟与峰值显存几乎不随预算下降。RLSplat改为学习分配策略，把预算按局部场景区域分配，直接生成恰好所需数量的高斯；再以资源线性解码，每个高斯只关注层次近邻搜索得到的邻近高斯。零样本各预算档全面领先，高斯少4倍仍超最强基线，低预算下快4.1倍、峰值显存省9.6倍。",
+      "pdf_filename": "2610.27712.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.27712",
+      "search_text": "rlsplat: resource-linear budget control for feed-forward 3d gaussian splatting 3dgs 可预算前馈3dgs虽能在推理时调整高斯数，但需先预测稠密高斯再剪枝，延迟与峰值显存几乎不随预算下降。rlsplat改为学习分配策略，把预算按局部场景区域分配，直接生成恰好所需数量的高斯；再以资源线性解码，每个高斯只关注层次近邻搜索得到的邻近高斯。零样本各预算档全面领先，高斯少4倍仍超最强基线，低预算下快4.1倍、峰值显存省9.6倍。 feed-forward 3d gaussian splatting (ff3dgs) reconstructs 3d scenes from images in a single forward pass, making it well-suited to applications that must operate within limited resource budgets. to further improve its practicality, recent budget-controllable ff3dgs methods allow the number of gaussians to be adjusted at inference, so that the output meets a given storage limit or rendering-latency constraint. however, these methods overlook the cost of inference itself: to produce a representation with the target number of gaussians, they first predict a dense set of gaussians and then prune or select from it, requiring nearly constant latency and peak memory regardless of the budget. we therefore propose rlsplat, a resource-linear budget-controllable ff3dgs framework whose representation size, inference latency, and peak memory all decrease linearly as the gaussian budget is reduced. instead of pruning or selection, rlsplat learns a gaussian allocation policy that distributes the budget across local scene regions, so that exactly the requested number of gaussians is generated. these gaussians are then refined through resource-linear gaussian decoding, in which each gaussian attends only to nearby gaussians found via an efficient hierarchical neighbor search, so that the decoding cost decreases linearly with fewer gaussians. in zero-shot evaluation, rlsplat outperforms prior budget-controllable methods at every budget, surpassing the strongest baseline even with 4$\\times$ fewer gaussians, while running up to 4.1$\\times$ faster with 9.6$\\times$ less peak memory at low budgets. kaist; korea university injae kim, minseok joo, jihwan park, sehyung kim, minseong bae, hyunwoo j. kim cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.27616",
+      "title": "EchoNav: Evidential BEV Completion from Historical Observations for Visual Navigation",
+      "authors": "Diwen Liu, Yiyang Shao, Borui Wang, Chi Zhang, Yunhui Liu",
+      "affiliations": "The Chinese University of Hong Kong; The University of Hong Kong",
+      "published_date": "2026-10-20",
+      "categories": "cs.RO",
+      "abstract": "Visual navigation in cluttered environments requires robots to recover previously observed structure and infer obstacles and free space that remain occluded. We present a framework that combines temporal aggregation and occupancy completion in an evidential bird's-eye-view (BEV) representation predicted from short RGB sequences. A decoder adapts frozen VGGT-Omega features and combines historical residual proposals using cellwise weights and a learned no-update option. The BEV predictor produces a local map in the latest ego frame without depth or camera-pose inputs or explicit geometric warping. The evidential model treats observed free space separately and predicts occupancy with associated confidence across the remaining supported region. We train the predictor on simulated RGB sequences paired with complete and visibility-masked occupancy annotations. Our experiments evaluate navigation in simulation and on a wheeled robot, with additional demonstrations on quadruped and humanoid robots. In simulated sequential two-goal navigation, our system achieves 89.6% success, outperforming the strongest evaluated baseline by 32.5 percentage points. Across 60 wheeled-robot trials in 20 scenes, it achieves 73.3% success, compared with 33.3% for the strongest evaluated baseline.",
+      "summary_cn": "杂乱环境视觉导航需恢复已离开视野的结构，并推断长期被遮挡的障碍与自由空间。EchoNav从短RGB序列预测证据式BEV：解码器适配冻结的VGGT-Omega特征，按单元权重融合历史残差提议并学习不更新选项，无需深度、位姿或显式几何变换即在最新自车系输出局部地图；证据模型区分已观测自由空间并给出占据置信度。仿真双目标导航89.6%，超最强基线32.5点；实车60次73.3%对33.3%。",
+      "pdf_filename": "2610.27616.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.27616",
+      "search_text": "echonav: evidential bev completion from historical observations for visual navigation 前馈3d重建 杂乱环境视觉导航需恢复已离开视野的结构，并推断长期被遮挡的障碍与自由空间。echonav从短rgb序列预测证据式bev：解码器适配冻结的vggt-omega特征，按单元权重融合历史残差提议并学习不更新选项，无需深度、位姿或显式几何变换即在最新自车系输出局部地图；证据模型区分已观测自由空间并给出占据置信度。仿真双目标导航89.6%，超最强基线32.5点；实车60次73.3%对33.3%。 visual navigation in cluttered environments requires robots to recover previously observed structure and infer obstacles and free space that remain occluded. we present a framework that combines temporal aggregation and occupancy completion in an evidential bird's-eye-view (bev) representation predicted from short rgb sequences. a decoder adapts frozen vggt-omega features and combines historical residual proposals using cellwise weights and a learned no-update option. the bev predictor produces a local map in the latest ego frame without depth or camera-pose inputs or explicit geometric warping. the evidential model treats observed free space separately and predicts occupancy with associated confidence across the remaining supported region. we train the predictor on simulated rgb sequences paired with complete and visibility-masked occupancy annotations. our experiments evaluate navigation in simulation and on a wheeled robot, with additional demonstrations on quadruped and humanoid robots. in simulated sequential two-goal navigation, our system achieves 89.6% success, outperforming the strongest evaluated baseline by 32.5 percentage points. across 60 wheeled-robot trials in 20 scenes, it achieves 73.3% success, compared with 33.3% for the strongest evaluated baseline. the chinese university of hong kong; the university of hong kong diwen liu, yiyang shao, borui wang, chi zhang, yunhui liu cs.ro"
+    },
+    {
+      "arxiv_id": "2610.27594",
+      "title": "Causal Spatiotemporal State Evolution for Monocular 4D Reconstruction",
+      "authors": "Qiaowei Miao, Yijing Guo, Lipei Zhang, Qifeng Cheng, Yuru Xiao, Ziqian Ni, Sheng Yang",
+      "affiliations": "Zhejiang University; ShanghaiTech University; University of Cambridge; NIO; Harbin Institute of Technology",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "While feed-forward models excel in static 3D geometry estimation, extending them to dynamic 4D scenes requires modeling visual geometry as a causally evolving state. Current methods typically rely on unordered temporal aggregation, which lacks the directional structure of physical time. Furthermore, existing supervision often treats geometry and motion as disjoint objectives, failing to exploit their inherent physical coupling. Consequently, they lack a unified constraint to effectively supervise temporal state transitions, leading to inconsistent 4D scene representations. To address this, we propose a feed-forward framework for causal 4D visual geometry learning from monocular videos. At its core, Causal Spatiotemporal Mamba augments temporal aggregation with directional state propagation. Through complementary Temporal-Spatial and Spatial-Temporal Scans, CSM continuously propagates geometry-aware states across frames to model spatiotemporal evolution. To align this causal state evolution with observable dynamics, we introduce Unified Motion Supervision. Rather than treating motion as an independent objective, UMS leverages geometry-aware predictions from the camera and depth heads to construct a unified forward motion field that is consistent with the underlying 3D structure. This geometry-grounded supervision explicitly constrains inter-frame state transitions, enabling stable states propagation across frames. Extensive evaluations on dynamic benchmarks demonstrate state-of-the-art performance across video depth, camera pose, and optical flow estimation. These results validate that the synergy between the directional state propagation of Causal Spatiotemporal Mamba and Unified Motion Supervision effectively captures continuous scene evolution, significantly reducing temporal drift and reinforcing spatial-temporal consistency in 4D representation learning.",
+      "summary_cn": "前馈模型在静态三维几何上已很强，扩展到动态四维时却多用无序时序聚合，缺乏物理时间方向性，几何与运动也被当作互不相关的监督目标。该文提出因果四维几何学习框架：因果时空Mamba用时间-空间与空间-时间双向扫描逐帧传播几何感知状态；统一运动监督由相机与深度头构造与三维结构一致的前向运动场，约束帧间转移。视频深度、位姿与光流均达SOTA。",
+      "pdf_filename": "2610.27594.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "动态场景重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.27594",
+      "search_text": "causal spatiotemporal state evolution for monocular 4d reconstruction 动态场景重建 前馈模型在静态三维几何上已很强，扩展到动态四维时却多用无序时序聚合，缺乏物理时间方向性，几何与运动也被当作互不相关的监督目标。该文提出因果四维几何学习框架：因果时空mamba用时间-空间与空间-时间双向扫描逐帧传播几何感知状态；统一运动监督由相机与深度头构造与三维结构一致的前向运动场，约束帧间转移。视频深度、位姿与光流均达sota。 while feed-forward models excel in static 3d geometry estimation, extending them to dynamic 4d scenes requires modeling visual geometry as a causally evolving state. current methods typically rely on unordered temporal aggregation, which lacks the directional structure of physical time. furthermore, existing supervision often treats geometry and motion as disjoint objectives, failing to exploit their inherent physical coupling. consequently, they lack a unified constraint to effectively supervise temporal state transitions, leading to inconsistent 4d scene representations. to address this, we propose a feed-forward framework for causal 4d visual geometry learning from monocular videos. at its core, causal spatiotemporal mamba augments temporal aggregation with directional state propagation. through complementary temporal-spatial and spatial-temporal scans, csm continuously propagates geometry-aware states across frames to model spatiotemporal evolution. to align this causal state evolution with observable dynamics, we introduce unified motion supervision. rather than treating motion as an independent objective, ums leverages geometry-aware predictions from the camera and depth heads to construct a unified forward motion field that is consistent with the underlying 3d structure. this geometry-grounded supervision explicitly constrains inter-frame state transitions, enabling stable states propagation across frames. extensive evaluations on dynamic benchmarks demonstrate state-of-the-art performance across video depth, camera pose, and optical flow estimation. these results validate that the synergy between the directional state propagation of causal spatiotemporal mamba and unified motion supervision effectively captures continuous scene evolution, significantly reducing temporal drift and reinforcing spatial-temporal consistency in 4d representation learning. zhejiang university; shanghaitech university; university of cambridge; nio; harbin institute of technology qiaowei miao, yijing guo, lipei zhang, qifeng cheng, yuru xiao, ziqian ni, sheng yang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.27176",
+      "title": "CanvasObs: Structured Spatial Observation for Agent Editing on 2D Infinite Canvases",
+      "authors": "Jiahao Xu, Haohui Wang, Rebecca Faust, Dawei Zhou, Chris North",
+      "affiliations": "Virginia Tech; Tulane University",
+      "published_date": "2026-10-19",
+      "categories": "cs.HC",
+      "abstract": "Editing agents on 2D infinite canvases must reason about application state that pixels may not reveal. Targets may be offscreen or covered, while visual containment and touching arrows may disagree with recorded frame membership or connector bindings. We ask how a structured observation layer can support accurate object selection during agentic editing on 2D infinite canvases. We present CanvasObs, which augments visual context with a structured payload and guidance for reading four components: Identity & State, Visibility & Structure, Relations, and Offscreen Object bounds in action coordinates. A Remote Team Handoff case study illustrates retrieving an editable offscreen copy, choosing a covered chart by color, separating cards by frame membership, and preserving an evidence connection. We turn these cases into ten controlled configurations and compare CanvasObs with the baseline agent in 1,200 browser trials across three models. CanvasObs improves Correct target for every model. Combined across models, it raises Correct target from 16.5% to 48.3%, an increase of 31.8 percentage points (95% confidence interval [29.0, 34.7]), and Full task success from 4.3% to 25.0%. These results show that compact structured observation can improve object choice on 2D infinite canvases without redesigning the editing pipeline.",
+      "summary_cn": "二维无限画布上的编辑智能体常因像素不可见信息（目标在屏外、被遮挡、视觉包含关系与真实帧归属或连线绑定不一致）而选错对象。CanvasObs在视觉上下文之外附加结构化观测载荷，含身份与状态、可见性与结构、关系、屏外目标动作坐标边界四部分。在1200次浏览器受控试验中，三种模型的目标选对率由16.5%提升到48.3%，完整任务成功率由4.3%升至25.0%，且不改变编辑管线。",
+      "pdf_filename": "2610.27176.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.27176",
+      "search_text": "canvasobs: structured spatial observation for agent editing on 2d infinite canvases  二维无限画布上的编辑智能体常因像素不可见信息（目标在屏外、被遮挡、视觉包含关系与真实帧归属或连线绑定不一致）而选错对象。canvasobs在视觉上下文之外附加结构化观测载荷，含身份与状态、可见性与结构、关系、屏外目标动作坐标边界四部分。在1200次浏览器受控试验中，三种模型的目标选对率由16.5%提升到48.3%，完整任务成功率由4.3%升至25.0%，且不改变编辑管线。 editing agents on 2d infinite canvases must reason about application state that pixels may not reveal. targets may be offscreen or covered, while visual containment and touching arrows may disagree with recorded frame membership or connector bindings. we ask how a structured observation layer can support accurate object selection during agentic editing on 2d infinite canvases. we present canvasobs, which augments visual context with a structured payload and guidance for reading four components: identity & state, visibility & structure, relations, and offscreen object bounds in action coordinates. a remote team handoff case study illustrates retrieving an editable offscreen copy, choosing a covered chart by color, separating cards by frame membership, and preserving an evidence connection. we turn these cases into ten controlled configurations and compare canvasobs with the baseline agent in 1,200 browser trials across three models. canvasobs improves correct target for every model. combined across models, it raises correct target from 16.5% to 48.3%, an increase of 31.8 percentage points (95% confidence interval [29.0, 34.7]), and full task success from 4.3% to 25.0%. these results show that compact structured observation can improve object choice on 2d infinite canvases without redesigning the editing pipeline. virginia tech; tulane university jiahao xu, haohui wang, rebecca faust, dawei zhou, chris north cs.hc"
+    },
+    {
+      "arxiv_id": "2610.27107",
+      "title": "RGH-GNN : Risk-Gated Heterogeneous Graph Neural Network for Financial Fraud Detection",
+      "authors": "Mythreyee Hari, Subin Sahayam, Vegesna S M Srinivasavarma",
+      "affiliations": "Shiv Nadar University, Chennai, India",
+      "published_date": "2026-10-19",
+      "categories": "cs.LG",
+      "abstract": "Credit card fraud is a significant problem for financial institutions, resulting in substantial monetary loss each year. Fraud patterns and methods are continuously evolving, with fraudulent transactions often disguised to resemble legitimate activity. Real world transaction data for fraud detection is severely affected by class imbalance making it harder to detect these transactions. Fraudulent transactions are rarely isolated. Accounts, devices, and other common attributes are often shared across fraudulent activity, revealing relational patterns that individual transaction features alone cannot capture. Graph-based approaches model these relationships explicitly. However, standard graph neural networks aggregate neighbourhood information uniformly, which can dilute the already scarce signal carried by fraudulent transactions and limit detection of camouflaged fraud. This work presents RGH-GNN, a heterogeneous graph neural network that addresses this limitation by incorporating transaction-level risk scores, generated by a supervised LightGBM classifier as edge weights. It is used to guide message passing through a learnable risk-gated aggregation mechanism. It ensures that high-risk transactions contribute more strongly to learned representations rather than being diluted by uniform neighbourhood aggregation. RGH-GNN is evaluated on the IEEE-CIS fraud detection dataset against standard graph neural network models that are trained on the same heterogeneous graph. RGH-GNN outperforms all baselines across every evaluation metric, with an AUC-ROC score of 0.914. This demonstrates that incorporating engineered risk signals into graph-based message passing substantially improves fraud detection performance.",
+      "summary_cn": "信用卡欺诈检测受极端类别不平衡与伪装交易困扰，账户、设备等共享属性构成的关联模式难以由单笔交易特征刻画。RGH-GNN构建异构交易图，用监督LightGBM输出的交易级风险分作为边权，经可学习风险门控聚合引导消息传递，使高风险交易在表示中权重更大而不被均匀邻域聚合稀释。在IEEE-CIS数据集上各项指标全面优于同图标准GNN，AUC-ROC达0.914。",
+      "pdf_filename": "2610.27107.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.27107",
+      "search_text": "rgh-gnn : risk-gated heterogeneous graph neural network for financial fraud detection  信用卡欺诈检测受极端类别不平衡与伪装交易困扰，账户、设备等共享属性构成的关联模式难以由单笔交易特征刻画。rgh-gnn构建异构交易图，用监督lightgbm输出的交易级风险分作为边权，经可学习风险门控聚合引导消息传递，使高风险交易在表示中权重更大而不被均匀邻域聚合稀释。在ieee-cis数据集上各项指标全面优于同图标准gnn，auc-roc达0.914。 credit card fraud is a significant problem for financial institutions, resulting in substantial monetary loss each year. fraud patterns and methods are continuously evolving, with fraudulent transactions often disguised to resemble legitimate activity. real world transaction data for fraud detection is severely affected by class imbalance making it harder to detect these transactions. fraudulent transactions are rarely isolated. accounts, devices, and other common attributes are often shared across fraudulent activity, revealing relational patterns that individual transaction features alone cannot capture. graph-based approaches model these relationships explicitly. however, standard graph neural networks aggregate neighbourhood information uniformly, which can dilute the already scarce signal carried by fraudulent transactions and limit detection of camouflaged fraud. this work presents rgh-gnn, a heterogeneous graph neural network that addresses this limitation by incorporating transaction-level risk scores, generated by a supervised lightgbm classifier as edge weights. it is used to guide message passing through a learnable risk-gated aggregation mechanism. it ensures that high-risk transactions contribute more strongly to learned representations rather than being diluted by uniform neighbourhood aggregation. rgh-gnn is evaluated on the ieee-cis fraud detection dataset against standard graph neural network models that are trained on the same heterogeneous graph. rgh-gnn outperforms all baselines across every evaluation metric, with an auc-roc score of 0.914. this demonstrates that incorporating engineered risk signals into graph-based message passing substantially improves fraud detection performance. shiv nadar university, chennai, india mythreyee hari, subin sahayam, vegesna s m srinivasavarma cs.lg"
+    },
+    {
+      "arxiv_id": "2610.26920",
+      "title": "Codec-Compatible Learned Compression for 3D Gaussian Splatting",
+      "authors": "Feiyang Yu, Qi Yang, Wenjie Huang, Yunfeng Guan, Yiling Xu, Zhu Li",
+      "affiliations": "Shanghai Jiao Tong University; University of Missouri-Kansas City",
+      "published_date": "2026-10-17",
+      "categories": "eess.IV, cs.CV",
+      "abstract": "Video-based 3D Gaussian Splatting (3DGS) compression methods provide a practical route by representing Gaussian attributes as 2D maps and coding them with standard video codecs. Among these maps, high-dimensional non-DC spherical harmonics (SH-AC) maps contain the largest number of channels and account for a dominant portion of the bitstream. However, their statistics differ substantially from those of natural images, and the nonlinear dependencies among SH-AC coefficients remain insufficiently exploited. To address these issues, we propose CCT-GS, a Codec-Compatible learned Transform framework for 3DGS compression. CCT-GS first learns a generalized SH-AC transform that captures cross-scene regularities and converts SH-AC maps into compact codec-friendly bottleneck maps. It further introduces LoRA-based scene adaptation to recover scene-specific appearance details with lightweight side information. Experiments on MPEG GSC sequences demonstrate that CCT-GS consistently outperforms representative video-based baselines, achieving an average BD-rate reduction of 51.30% over the video-based anchor.",
+      "summary_cn": "视频编码路线压缩3DGS时，非直流球谐（SH-AC）图通道最多、占码流主体，但其统计特性与自然图像差异大、系数间非线性依赖未被利用。CCT-GS学习跨场景泛化的SH-AC变换，把高维SH-AC映射为紧凑且对编码器友好的瓶颈图，再用LoRA做场景自适应以极小边信息恢复外观细节。在MPEG GSC序列上一致优于代表性视频基线，相对视频锚点平均BD-rate降低51.30%，且保持编解码器兼容、无需改动标准。",
+      "pdf_filename": "2610.26920.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "场景压缩"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.26920",
+      "search_text": "codec-compatible learned compression for 3d gaussian splatting 3dgs 场景压缩 视频编码路线压缩3dgs时，非直流球谐（sh-ac）图通道最多、占码流主体，但其统计特性与自然图像差异大、系数间非线性依赖未被利用。cct-gs学习跨场景泛化的sh-ac变换，把高维sh-ac映射为紧凑且对编码器友好的瓶颈图，再用lora做场景自适应以极小边信息恢复外观细节。在mpeg gsc序列上一致优于代表性视频基线，相对视频锚点平均bd-rate降低51.30%，且保持编解码器兼容、无需改动标准。 video-based 3d gaussian splatting (3dgs) compression methods provide a practical route by representing gaussian attributes as 2d maps and coding them with standard video codecs. among these maps, high-dimensional non-dc spherical harmonics (sh-ac) maps contain the largest number of channels and account for a dominant portion of the bitstream. however, their statistics differ substantially from those of natural images, and the nonlinear dependencies among sh-ac coefficients remain insufficiently exploited. to address these issues, we propose cct-gs, a codec-compatible learned transform framework for 3dgs compression. cct-gs first learns a generalized sh-ac transform that captures cross-scene regularities and converts sh-ac maps into compact codec-friendly bottleneck maps. it further introduces lora-based scene adaptation to recover scene-specific appearance details with lightweight side information. experiments on mpeg gsc sequences demonstrate that cct-gs consistently outperforms representative video-based baselines, achieving an average bd-rate reduction of 51.30% over the video-based anchor. shanghai jiao tong university; university of missouri-kansas city feiyang yu, qi yang, wenjie huang, yunfeng guan, yiling xu, zhu li eess.iv, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.26918",
+      "title": "GTSM: Gaussian Splatting with Thermal State-Space Dynamics for Spatio-Temporal Thermal Field Reconstruction and Prediction",
+      "authors": "Yunpeng Zhao, Haoxiang Zhang, Chao Liu",
+      "affiliations": "Fudan University; Tsinghua University",
+      "published_date": "2026-10-17",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "Temperature-field reconstruction and prediction are important for condition monitoring, process analysis, and state assessment in industrial and dynamic environments. This work aims to recover a four-dimensional spatio-temporal thermal state field directly from two-dimensional observations, without requiring a predefined 3D model, prescribed thermodynamic equation, or predefined heating/cooling trajectory. To this end, we propose the Gaussian Thermal State-Space Model (GTSM), which represents thermal evolution through a shared scene-level latent process and Gaussian-specific local thermal states. The resulting continuous dynamics are propagated using differentiable RK2 integration, allowing thermal evolution to be inferred from multi-view and multi-temporal observations and continuously extrapolated beyond the observed interval. GTSM is designed as a backbone-agnostic thermal dynamics module for Gaussian representations and can be integrated with both static 3D Gaussian Splatting and dynamic 4D Gaussian Splatting, supporting thermal reconstruction and prediction under both static and time-varying target geometry. The reconstructed representation further enables novel-view thermal rendering and future-time thermal-state prediction. Experiments on real infrared sequences and synthetic dynamic thermal data demonstrate improved reconstruction accuracy and substantially stronger temporal extrapolation than representative baselines, while also validating the applicability of GTSM to deforming targets.",
+      "summary_cn": "工业场景需由二维红外观测恢复四维时空温度场，但既有方法依赖预定义三维模型、热传导方程或预设升温轨迹。GTSM用共享场景级隐过程加高斯个体局部热状态表示热演化，以可微RK2积分传播连续动力学，可外推至观测区间之外。作为与骨干无关的热动力学模块，它可挂接静态3DGS与动态4DGS，支持新视角热渲染与未来时刻预测；真实红外序列上精度与时序外推优于基线。",
+      "pdf_filename": "2610.26918.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "4DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.26918",
+      "search_text": "gtsm: gaussian splatting with thermal state-space dynamics for spatio-temporal thermal field reconstruction and prediction 3dgs 4dgs 工业场景需由二维红外观测恢复四维时空温度场，但既有方法依赖预定义三维模型、热传导方程或预设升温轨迹。gtsm用共享场景级隐过程加高斯个体局部热状态表示热演化，以可微rk2积分传播连续动力学，可外推至观测区间之外。作为与骨干无关的热动力学模块，它可挂接静态3dgs与动态4dgs，支持新视角热渲染与未来时刻预测；真实红外序列上精度与时序外推优于基线。 temperature-field reconstruction and prediction are important for condition monitoring, process analysis, and state assessment in industrial and dynamic environments. this work aims to recover a four-dimensional spatio-temporal thermal state field directly from two-dimensional observations, without requiring a predefined 3d model, prescribed thermodynamic equation, or predefined heating/cooling trajectory. to this end, we propose the gaussian thermal state-space model (gtsm), which represents thermal evolution through a shared scene-level latent process and gaussian-specific local thermal states. the resulting continuous dynamics are propagated using differentiable rk2 integration, allowing thermal evolution to be inferred from multi-view and multi-temporal observations and continuously extrapolated beyond the observed interval. gtsm is designed as a backbone-agnostic thermal dynamics module for gaussian representations and can be integrated with both static 3d gaussian splatting and dynamic 4d gaussian splatting, supporting thermal reconstruction and prediction under both static and time-varying target geometry. the reconstructed representation further enables novel-view thermal rendering and future-time thermal-state prediction. experiments on real infrared sequences and synthetic dynamic thermal data demonstrate improved reconstruction accuracy and substantially stronger temporal extrapolation than representative baselines, while also validating the applicability of gtsm to deforming targets. fudan university; tsinghua university yunpeng zhao, haoxiang zhang, chao liu cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2610.26898",
+      "title": "EGGHead: Efficient Generalizable Gaussian Heads from a Single Image",
+      "authors": "Pilseo Park, Andrew Hou, Michel Sarkis, Ning Bi, Yiying Tong, Xiaoming Liu",
+      "affiliations": "Michigan State University; Qualcomm Technologies, Inc.; University of North Carolina at Chapel Hill",
+      "published_date": "2026-10-16",
+      "categories": "cs.CV",
+      "abstract": "Creating photorealistic human heads typically involves trade-offs between representation power, efficiency, and generalizability. Traditional mesh-based solutions relying on 3DMMs generally sacrifice representation power but are efficient to render. On the other hand, NeRF-based methods improve representation power and fidelity while sacrificing efficiency. Gaussian splatting methods attempt to resolve these trade-offs by offering both high representation power and efficiency with real-time rendering. However, their efficiency nonetheless depends on the number of rasterized Gaussians, and the time needed to optimize and prepare the head (the enrollment time) is often high. In light of this, we propose EGGHead, which introduces a novel Gaussian allocation algorithm that efficiently assigns Gaussians to the head's semantic regions given a fixed Gaussian budget. Our algorithm reduces the number of Gaussians needed while minimizing the impact on representation power. EGGHead operates in a single forward pass and outperforms previous single-image face modeling methods in reconstruction quality, novel view synthesis, and rendering speeds.",
+      "summary_cn": "单图人头重建在3DMM网格的高效、NeRF的高保真与高斯泼溅的实时之间难以兼顾，且高斯方案依赖逐场景优化、开销随基元数线性增长。EGGHead提出固定高斯预算下的语义分区分配算法，按头部语义区域（皮肤、发丝、口腔等）分配基元，单次前向即输出可渲染表示，无需注册优化。在重建质量、新视角合成与渲染速度上全面超过同预算单图方法，用更少高斯保住表示力。",
+      "pdf_filename": "2610.26898.pdf",
+      "crawled_date": "2026-10-21",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "实时渲染",
+        "NeRF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.26898",
+      "search_text": "egghead: efficient generalizable gaussian heads from a single image 3dgs 实时渲染 nerf 单图人头重建在3dmm网格的高效、nerf的高保真与高斯泼溅的实时之间难以兼顾，且高斯方案依赖逐场景优化、开销随基元数线性增长。egghead提出固定高斯预算下的语义分区分配算法，按头部语义区域（皮肤、发丝、口腔等）分配基元，单次前向即输出可渲染表示，无需注册优化。在重建质量、新视角合成与渲染速度上全面超过同预算单图方法，用更少高斯保住表示力。 creating photorealistic human heads typically involves trade-offs between representation power, efficiency, and generalizability. traditional mesh-based solutions relying on 3dmms generally sacrifice representation power but are efficient to render. on the other hand, nerf-based methods improve representation power and fidelity while sacrificing efficiency. gaussian splatting methods attempt to resolve these trade-offs by offering both high representation power and efficiency with real-time rendering. however, their efficiency nonetheless depends on the number of rasterized gaussians, and the time needed to optimize and prepare the head (the enrollment time) is often high. in light of this, we propose egghead, which introduces a novel gaussian allocation algorithm that efficiently assigns gaussians to the head's semantic regions given a fixed gaussian budget. our algorithm reduces the number of gaussians needed while minimizing the impact on representation power. egghead operates in a single forward pass and outperforms previous single-image face modeling methods in reconstruction quality, novel view synthesis, and rendering speeds. michigan state university; qualcomm technologies, inc.; university of north carolina at chapel hill pilseo park, andrew hou, michel sarkis, ning bi, yiying tong, xiaoming liu cs.cv"
+    },
     {
       "arxiv_id": "2610.26855",
       "title": "Ropedia W0: Scaling Loco-Manipulation World Models across Embodiments with Human Experience",
