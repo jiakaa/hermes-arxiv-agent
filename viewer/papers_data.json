@@ -1,85 +1,85 @@
 {
-  "count": 1671,
+  "count": 1694,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-21",
+  "crawled_date_max": "2026-10-22",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-20",
+  "published_date_max": "2026-10-21",
   "rating_counts": {
-    "S": 477,
-    "A": 692,
-    "B": 262,
-    "C": 240,
+    "S": 482,
+    "A": 700,
+    "B": 269,
+    "C": 243,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 361,
+      "count": 364,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 319,
+      "count": 322,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 303,
+      "count": 309,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 255,
+      "count": 262,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 246,
+      "count": 251,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 232,
+      "count": 233,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 172,
-      "group": "通用"
-    },
-    {
-      "name": "点云",
-      "count": 112,
+      "count": 175,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 111,
+      "count": 115,
       "group": "世界模型与仿真"
     },
     {
-      "name": "前馈3D重建",
-      "count": 100,
-      "group": "前馈3D重建"
-    },
-    {
-      "name": "具身智能",
-      "count": 97,
+      "name": "点云",
+      "count": 114,
       "group": "通用"
     },
     {
+      "name": "具身智能",
+      "count": 102,
+      "group": "通用"
+    },
+    {
+      "name": "前馈3D重建",
+      "count": 102,
+      "group": "前馈3D重建"
+    },
+    {
       "name": "仿真器",
-      "count": 89,
+      "count": 90,
       "group": "通用"
     },
     {
       "name": "场景压缩",
-      "count": 78,
+      "count": 80,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 60,
+      "count": 61,
       "group": "世界模型与仿真"
     },
     {
@@ -99,12 +99,12 @@
     },
     {
       "name": "SLAM",
-      "count": 42,
+      "count": 43,
       "group": "通用"
     },
     {
       "name": "NeRF",
-      "count": 41,
+      "count": 42,
       "group": "通用"
     },
     {
@@ -154,6 +154,465 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.30136",
+      "title": "Agentic World Action Models",
+      "authors": "Zhuoyang Liu, Dantong Niu, Botong Zhang, Boning Shao, Jing Wang, Ruijie Zheng, Yuvan Sharma, Runyu Lu, Jiaming Liu, Renrui Zhang, Roei Herzig, Yutong Bai, Ken Goldberg, Danfei Xu, Yuke Zhu, Guanzhi Wang, Linxi \"Jim\" Fan, Trevor Darrell",
+      "affiliations": "UC Berkeley; NVIDIA; University of Pennsylvania",
+      "published_date": "2026-10-21",
+      "categories": "cs.RO",
+      "abstract": "Recent world action models provide visual foresight and future prediction for robot manipulation, but lack explicit mechanisms for compositional skill reuse. Agentic robotics combines code-based planning and reasoning with reusable skills, but often lacks predictive grounding in physical dynamics. We introduce AW-0, an agentic world action model framework that integrates code-based planning with joint video and action prediction. We jointly model code, future video, and robot actions as three coupled generative streams within a unified mixture-of-transformers architecture. Within this architecture a code expert generates parameterized skill routines and control logic while video and action experts generate future visual states and low-level motor commands. Code serves two complementary roles: it structures multi-step prediction and control within the world model and represents skills as reusable programs for subsequent agentic execution. We further introduce an automated curation pipeline that labels robot and human video trajectories with aligned programs and consolidates recurring routines into reusable skill libraries. Evaluations on RoboTwin 2.0 and physical bimanual manipulation tasks show improved task performance over VLA and WAM baselines, alongside gains in language following, semantic reasoning and robustness, demonstrating that agentic code enables connection between planning, prediction and execution within WAMs.",
+      "summary_cn": "提出智能体世界动作模型AW-0，在统一混合Transformer中把代码、未来视频与机器人动作作为三路耦合生成流建模，代码专家产出参数化技能与控制逻辑，视频和动作专家预测未来视觉状态与底层指令。配套自动标注流水线把视频轨迹对齐为程序并沉淀技能库，在RoboTwin 2.0与双臂真机操作上验证。",
+      "pdf_filename": "2610.30136.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30136",
+      "search_text": "agentic world action models 世界模型 具身智能 提出智能体世界动作模型aw-0，在统一混合transformer中把代码、未来视频与机器人动作作为三路耦合生成流建模，代码专家产出参数化技能与控制逻辑，视频和动作专家预测未来视觉状态与底层指令。配套自动标注流水线把视频轨迹对齐为程序并沉淀技能库，在robotwin 2.0与双臂真机操作上验证。 recent world action models provide visual foresight and future prediction for robot manipulation, but lack explicit mechanisms for compositional skill reuse. agentic robotics combines code-based planning and reasoning with reusable skills, but often lacks predictive grounding in physical dynamics. we introduce aw-0, an agentic world action model framework that integrates code-based planning with joint video and action prediction. we jointly model code, future video, and robot actions as three coupled generative streams within a unified mixture-of-transformers architecture. within this architecture a code expert generates parameterized skill routines and control logic while video and action experts generate future visual states and low-level motor commands. code serves two complementary roles: it structures multi-step prediction and control within the world model and represents skills as reusable programs for subsequent agentic execution. we further introduce an automated curation pipeline that labels robot and human video trajectories with aligned programs and consolidates recurring routines into reusable skill libraries. evaluations on robotwin 2.0 and physical bimanual manipulation tasks show improved task performance over vla and wam baselines, alongside gains in language following, semantic reasoning and robustness, demonstrating that agentic code enables connection between planning, prediction and execution within wams. uc berkeley; nvidia; university of pennsylvania zhuoyang liu, dantong niu, botong zhang, boning shao, jing wang, ruijie zheng, yuvan sharma, runyu lu, jiaming liu, renrui zhang, roei herzig, yutong bai, ken goldberg, danfei xu, yuke zhu, guanzhi wang, linxi \"jim\" fan, trevor darrell cs.ro"
+    },
+    {
+      "arxiv_id": "2610.30129",
+      "title": "Rethinking Video Autoencoders for Interactive World Models",
+      "authors": "Adrien Ramanana Rahary, Yutong Bai, Nicolas Dufour, Patrick Pérez, David Picard",
+      "affiliations": "Kyutai; LIGM, ENPC, IP Paris, CNRS; UC Berkeley",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV",
+      "abstract": "Video world models predict future frames from past frames and actions. They serve as simulators in which agents train, plan or are evaluated, and that humans can control interactively. They generate in the latent space of a video autoencoder, whose compression sets their cost per frame and how long each action waits to take effect. Yet world models often reuse the autoencoders of text-to-video generators, built for offline generation with no agent waiting and, without their training data and code, not retrainable at another compression. We therefore ask how, where and how much a world model should compress. We build CADRE, an open family of causal diffusion representation autoencoders spanning multiple spatio-temporal compressions. Its members differ only in a small bottleneck on frozen features and share a diffusion decoder self-distilled to one or a few steps. We train the same world model on each autoencoder in two domains, manipulation and navigation, with two environments each. CADRE forms most of the latency-quality frontier, especially with a moving camera. Our study also leads to four findings. At strong compression, a diffusion decoder is sharper than perceptual regression. In robot manipulation, temporal compression is more effective in the autoencoder than in the world model. Manipulation and navigation call for opposite compressions: temporal compression costs little when the camera is still, and spatial compression when it moves. Surprisingly, with a still camera, coarser spatial tokens hurt motion far more than image quality. Code, models and a live demo are at https://kyutai.org/blog/2026-10-21-cadre",
+      "summary_cn": "质疑世界模型直接复用文生视频自编码器的做法，系统研究该在何处、压缩多少。构建CADRE：一族因果扩散表征自编码器，成员仅在冻结特征上的小瓶颈不同，共享自蒸馏到一两步的扩散解码器，并在操作与导航两域各两环境训练同一世界模型作对比。CADRE占据大部分时延-质量前沿，移动相机下优势更明显，并给出强压缩下扩散解码器更锐利等结论。",
+      "pdf_filename": "2610.30129.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "场景压缩",
+        "世界模型",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30129",
+      "search_text": "rethinking video autoencoders for interactive world models 场景压缩 世界模型 具身智能 质疑世界模型直接复用文生视频自编码器的做法，系统研究该在何处、压缩多少。构建cadre：一族因果扩散表征自编码器，成员仅在冻结特征上的小瓶颈不同，共享自蒸馏到一两步的扩散解码器，并在操作与导航两域各两环境训练同一世界模型作对比。cadre占据大部分时延-质量前沿，移动相机下优势更明显，并给出强压缩下扩散解码器更锐利等结论。 video world models predict future frames from past frames and actions. they serve as simulators in which agents train, plan or are evaluated, and that humans can control interactively. they generate in the latent space of a video autoencoder, whose compression sets their cost per frame and how long each action waits to take effect. yet world models often reuse the autoencoders of text-to-video generators, built for offline generation with no agent waiting and, without their training data and code, not retrainable at another compression. we therefore ask how, where and how much a world model should compress. we build cadre, an open family of causal diffusion representation autoencoders spanning multiple spatio-temporal compressions. its members differ only in a small bottleneck on frozen features and share a diffusion decoder self-distilled to one or a few steps. we train the same world model on each autoencoder in two domains, manipulation and navigation, with two environments each. cadre forms most of the latency-quality frontier, especially with a moving camera. our study also leads to four findings. at strong compression, a diffusion decoder is sharper than perceptual regression. in robot manipulation, temporal compression is more effective in the autoencoder than in the world model. manipulation and navigation call for opposite compressions: temporal compression costs little when the camera is still, and spatial compression when it moves. surprisingly, with a still camera, coarser spatial tokens hurt motion far more than image quality. code, models and a live demo are at https://kyutai.org/blog/2026-10-21-cadre kyutai; ligm, enpc, ip paris, cnrs; uc berkeley adrien ramanana rahary, yutong bai, nicolas dufour, patrick pérez, david picard cs.cv"
+    },
+    {
+      "arxiv_id": "2610.30125",
+      "title": "PhysiCalWorld: In-Context Physics Calibration for World Models",
+      "authors": "Yunhao Luo, Wentao He, Yinpei Dai, Hyelin Nam, Hongze Fu, Joyce Chai, Nima Fazeli, Jeong Joon Park",
+      "affiliations": "University of Michigan",
+      "published_date": "2026-10-21",
+      "categories": "cs.RO, cs.AI, cs.CV",
+      "abstract": "Existing world models typically perceive a scene through current visual frame or a narrow history window. However, these observations may not reveal the physics properties that determine transition dynamics, such as an object's mass distribution, joint damping, or surface friction. Without calibrating these physics factors for world models, predictions tend to regress toward an empirical prior and induce severe drift in novel test scenes. To this end, we propose PhysiCalWorld, which calibrates action-conditioned world models to the instance-specific dynamics via in-context prompting, without fine-tuning or analytical physics modeling. Our method encodes an exploratory interaction clip collected within the test scene into a compact physics descriptor token, which grounds subsequent predictions in the scene's actual physical behavior. PhysiCalWorld is trained end-to-end with the latent prediction loss alone, without physics labels. At inference time, the descriptor token is extracted once and can be reused across rollouts with negligible compute overhead. We evaluate PhysiCalWorld across four environments covering diverse physics variations and show that it substantially improves rollout prediction accuracy and visual planning success rate. The learned descriptors also form a physically structured latent space and generalize beyond the physics ranges seen during training.",
+      "summary_cn": "指出现有世界模型只凭当前帧或短历史观测，无法推断质量分布、关节阻尼与摩擦等决定动力学的物理量，导致新场景漂移。提出上下文物理校准：把测试场景内一段探索交互编码为紧凑物理描述符token条件化世界模型，无需微调与解析建模，仅用潜预测损失端到端训练，四个环境上rollout与规划成功率明显提升。",
+      "pdf_filename": "2610.30125.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30125",
+      "search_text": "physicalworld: in-context physics calibration for world models 世界模型 规划 指出现有世界模型只凭当前帧或短历史观测，无法推断质量分布、关节阻尼与摩擦等决定动力学的物理量，导致新场景漂移。提出上下文物理校准：把测试场景内一段探索交互编码为紧凑物理描述符token条件化世界模型，无需微调与解析建模，仅用潜预测损失端到端训练，四个环境上rollout与规划成功率明显提升。 existing world models typically perceive a scene through current visual frame or a narrow history window. however, these observations may not reveal the physics properties that determine transition dynamics, such as an object's mass distribution, joint damping, or surface friction. without calibrating these physics factors for world models, predictions tend to regress toward an empirical prior and induce severe drift in novel test scenes. to this end, we propose physicalworld, which calibrates action-conditioned world models to the instance-specific dynamics via in-context prompting, without fine-tuning or analytical physics modeling. our method encodes an exploratory interaction clip collected within the test scene into a compact physics descriptor token, which grounds subsequent predictions in the scene's actual physical behavior. physicalworld is trained end-to-end with the latent prediction loss alone, without physics labels. at inference time, the descriptor token is extracted once and can be reused across rollouts with negligible compute overhead. we evaluate physicalworld across four environments covering diverse physics variations and show that it substantially improves rollout prediction accuracy and visual planning success rate. the learned descriptors also form a physically structured latent space and generalize beyond the physics ranges seen during training. university of michigan yunhao luo, wentao he, yinpei dai, hyelin nam, hongze fu, joyce chai, nima fazeli, jeong joon park cs.ro, cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2610.30120",
+      "title": "ALPS: Visual State Encoders for World Models",
+      "authors": "Yanqing Liu, Letian Zhang, Chengzhi Liu, Zijun Wang, Jieru Mei, Hongliang Fei, Yuyin Zhou, Cihang Xie",
+      "affiliations": "University of California, Santa Cruz; Google; University of California, Santa Barbara",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV",
+      "abstract": "World models turn visual representations into predictions and actions. We argue that their visual foundation should combine physical-state information, native language alignment, and pixel reconstruction, so that a single representation can support prediction, instruction, and inspection. However, existing encoders typically specialize in only one or two of these capabilities; we therefore introduce ALPS, a pretrained visual state encoder that unifies all three in a single set of patch tokens. Using only still images and text, we pretrain a ViT-B/16 from scratch with language, reconstruction, and spatial correspondence objectives, and then refine it via cross-view self-distillation. In a unified evaluation across fifteen public encoders, ALPS achieves the lowest aggregate LIBERO state-probe error among ViT-B models (matching the 3.5x larger V-JEPA 2-L) while maintaining strong language alignment and accurate pixel reconstruction. Downstream, frozen ALPS tokens reach the highest mean policy success on LIBERO (85.5%) when paired with our native text tower, match or exceed leading encoders on world-model planning across PushT, Wall, and Granular, and allow predicted future tokens to be decoded directly into pixels for visual inspection. We hope this work helps establish visual pretraining as a shared foundation for understanding, prediction, and action in world models.",
+      "summary_cn": "提出面向世界模型的视觉状态编码器，主张单一表征应同时具备物理状态、语言对齐与像素重建能力。仅用静态图像与文本从零预训练ViT-B/16，联合语言、重建与空间对应目标，再用跨视角自蒸馏精炼。在15个公开编码器对比中取得ViT-B级最低LIBERO状态探针误差，冻结特征搭配原生文本塔在LIBERO上达85.5%策略成功率。",
+      "pdf_filename": "2610.30120.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30120",
+      "search_text": "alps: visual state encoders for world models 世界模型 提出面向世界模型的视觉状态编码器，主张单一表征应同时具备物理状态、语言对齐与像素重建能力。仅用静态图像与文本从零预训练vit-b/16，联合语言、重建与空间对应目标，再用跨视角自蒸馏精炼。在15个公开编码器对比中取得vit-b级最低libero状态探针误差，冻结特征搭配原生文本塔在libero上达85.5%策略成功率。 world models turn visual representations into predictions and actions. we argue that their visual foundation should combine physical-state information, native language alignment, and pixel reconstruction, so that a single representation can support prediction, instruction, and inspection. however, existing encoders typically specialize in only one or two of these capabilities; we therefore introduce alps, a pretrained visual state encoder that unifies all three in a single set of patch tokens. using only still images and text, we pretrain a vit-b/16 from scratch with language, reconstruction, and spatial correspondence objectives, and then refine it via cross-view self-distillation. in a unified evaluation across fifteen public encoders, alps achieves the lowest aggregate libero state-probe error among vit-b models (matching the 3.5x larger v-jepa 2-l) while maintaining strong language alignment and accurate pixel reconstruction. downstream, frozen alps tokens reach the highest mean policy success on libero (85.5%) when paired with our native text tower, match or exceed leading encoders on world-model planning across pusht, wall, and granular, and allow predicted future tokens to be decoded directly into pixels for visual inspection. we hope this work helps establish visual pretraining as a shared foundation for understanding, prediction, and action in world models. university of california, santa cruz; google; university of california, santa barbara yanqing liu, letian zhang, chengzhi liu, zijun wang, jieru mei, hongliang fei, yuyin zhou, cihang xie cs.cv"
+    },
+    {
+      "arxiv_id": "2610.30013",
+      "title": "ClunoGS: Compact Language 3D Gaussian Splatting via Unified Optimization",
+      "authors": "Jian Xu, Yi Li, Ying Huang, Siyi Wu, Bingzhe Li, Yuede Ji, Miao Yin",
+      "affiliations": "University of Texas at Arlington; University of Texas at Dallas",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV",
+      "abstract": "Language 3D Gaussian Splatting enables open-vocabulary scene understanding by associating Gaussian primitives with language features. These semantic attributes increase model storage, while most existing 3DGS compression methods are designed mainly to preserve RGB rendering quality. One straightforward approach is to apply sparsification and quantization sequentially. However, pruning based only on rendering quality can remove Gaussians that have small RGB contributions but are important for semantic prediction. Once removed, their semantic information cannot be recovered by later quantization. We propose ClunoGS, a compact framework for Language 3DGS that combines semantics-aware Gaussian sparsification and vector quantization in a unified constrained objective. Semantic supervision is used during sparsification, and the objective jointly considers rendering quality, semantic accuracy, and compactness. We optimize the unified objective with alternating primal, sparsification, quantization, and dual updates. We evaluate ClunoGS on open-vocabulary localization and segmentation using the LERF and ScanNet-10 benchmarks. Under aggressive compression, our unified, semantics-aware formulation substantially alleviates the degradation of semantic representations caused by sequential compression and semantics-agnostic Gaussian sparsification. Ablations further show that jointly coordinating sparsification and quantization better preserves semantic accuracy than applying them independently.",
+      "summary_cn": "针对语言3DGS的语义属性带来巨大存储、而现有压缩只保渲染质量的问题，指出先剪枝后量化的串行流程会不可逆地丢失语义，提出语义感知剪枝与矢量量化统一的约束目标，在稀疏化阶段引入语义监督，交替优化原始、剪枝、量化与对偶变量。在LERF与ScanNet-10上激进压缩下显著缓解语义退化，开放词汇定位与分割精度优于串行方案。",
+      "pdf_filename": "2610.30013.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "场景压缩"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30013",
+      "search_text": "clunogs: compact language 3d gaussian splatting via unified optimization 3dgs 场景压缩 针对语言3dgs的语义属性带来巨大存储、而现有压缩只保渲染质量的问题，指出先剪枝后量化的串行流程会不可逆地丢失语义，提出语义感知剪枝与矢量量化统一的约束目标，在稀疏化阶段引入语义监督，交替优化原始、剪枝、量化与对偶变量。在lerf与scannet-10上激进压缩下显著缓解语义退化，开放词汇定位与分割精度优于串行方案。 language 3d gaussian splatting enables open-vocabulary scene understanding by associating gaussian primitives with language features. these semantic attributes increase model storage, while most existing 3dgs compression methods are designed mainly to preserve rgb rendering quality. one straightforward approach is to apply sparsification and quantization sequentially. however, pruning based only on rendering quality can remove gaussians that have small rgb contributions but are important for semantic prediction. once removed, their semantic information cannot be recovered by later quantization. we propose clunogs, a compact framework for language 3dgs that combines semantics-aware gaussian sparsification and vector quantization in a unified constrained objective. semantic supervision is used during sparsification, and the objective jointly considers rendering quality, semantic accuracy, and compactness. we optimize the unified objective with alternating primal, sparsification, quantization, and dual updates. we evaluate clunogs on open-vocabulary localization and segmentation using the lerf and scannet-10 benchmarks. under aggressive compression, our unified, semantics-aware formulation substantially alleviates the degradation of semantic representations caused by sequential compression and semantics-agnostic gaussian sparsification. ablations further show that jointly coordinating sparsification and quantization better preserves semantic accuracy than applying them independently. university of texas at arlington; university of texas at dallas jian xu, yi li, ying huang, siyi wu, bingzhe li, yuede ji, miao yin cs.cv"
+    },
+    {
+      "arxiv_id": "2610.29969",
+      "title": "FaultGene: LLM-Assisted Fault-Augmented Test Generation for Hardware-in-the-Loop Validation of Autonomous Driving Systems",
+      "authors": "Chaoran Yuan, Fadi Kurdahi",
+      "affiliations": "University of California, Irvine",
+      "published_date": "2026-10-21",
+      "categories": "cs.SE, cs.AI",
+      "abstract": "Reliable validation of autonomous driving cyber-physical systems requires testing not only nominal driving behavior but also failures arising from faults in sensing and embedded computation. Physical road testing provides realistic system behavior but is costly and difficult to reproduce, while simulation enables scalable evaluation but cannot fully capture hardware-dependent behavior and fault propagation. Hardware-in-the-loop (HIL) validation bridges this gap by executing the driving stack on real embedded hardware within a simulated environment. However, preparing fault-augmented scenarios for HIL testing remains largely a manual process, limiting test coverage, scalability, and efficiency.   We present FaultGene, an LLM-assisted framework for automated generation of executable fault-augmented tests for HIL fault-resilience validation. Given a baseline Scenic/CARLA scenario and a structured fault specification, FaultGene generates a fault-augmented test case that captures the effects of HIL-level fault injection. During offline refinement, semantic-consistency checks and execution-level feedback are used to correct candidates that fail to preserve the intended scenario context or produce the desired fault-induced degradation, and to construct high-quality supervision for fine-tuning. The resulting generator then produces fault-augmented tests directly at deployment time without requiring manually engineered reference executions or repeated refinement loops.",
+      "summary_cn": "面向自动驾驶硬件在环验证中故障增强场景依赖人工编写的问题，提出LLM辅助的测试生成框架：输入基线Scenic/CARLA场景与结构化故障规格，自动产出可执行的故障增强测试用例，并在离线阶段用语义一致性检查与执行反馈修正候选。生成的用例能保留原场景语义并触发目标故障传播，提升HIL故障韧性测试的覆盖率与效率。",
+      "pdf_filename": "2610.29969.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "自动驾驶",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29969",
+      "search_text": "faultgene: llm-assisted fault-augmented test generation for hardware-in-the-loop validation of autonomous driving systems 自动驾驶 大语言模型 面向自动驾驶硬件在环验证中故障增强场景依赖人工编写的问题，提出llm辅助的测试生成框架：输入基线scenic/carla场景与结构化故障规格，自动产出可执行的故障增强测试用例，并在离线阶段用语义一致性检查与执行反馈修正候选。生成的用例能保留原场景语义并触发目标故障传播，提升hil故障韧性测试的覆盖率与效率。 reliable validation of autonomous driving cyber-physical systems requires testing not only nominal driving behavior but also failures arising from faults in sensing and embedded computation. physical road testing provides realistic system behavior but is costly and difficult to reproduce, while simulation enables scalable evaluation but cannot fully capture hardware-dependent behavior and fault propagation. hardware-in-the-loop (hil) validation bridges this gap by executing the driving stack on real embedded hardware within a simulated environment. however, preparing fault-augmented scenarios for hil testing remains largely a manual process, limiting test coverage, scalability, and efficiency.   we present faultgene, an llm-assisted framework for automated generation of executable fault-augmented tests for hil fault-resilience validation. given a baseline scenic/carla scenario and a structured fault specification, faultgene generates a fault-augmented test case that captures the effects of hil-level fault injection. during offline refinement, semantic-consistency checks and execution-level feedback are used to correct candidates that fail to preserve the intended scenario context or produce the desired fault-induced degradation, and to construct high-quality supervision for fine-tuning. the resulting generator then produces fault-augmented tests directly at deployment time without requiring manually engineered reference executions or repeated refinement loops. university of california, irvine chaoran yuan, fadi kurdahi cs.se, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.29936",
+      "title": "DewHand: Direct Metric World-Space Hand Motion Reconstruction from Egocentric Videos",
+      "authors": "Naru Suzuki, Satoshi Ikehata, Takehiko Ohkawa, Yoichi Sato, Shuhei Kurita",
+      "affiliations": "The University of Tokyo; National Institute of Informatics",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV",
+      "abstract": "Recovering metric world-space hand motion from egocentric video supports understanding human interactions and transferring them to embodied agents. Three challenges complicate this task: multi-stage pipelines propagate errors from independently estimated hand and camera motion; monocular observations leave physical scale ambiguous; and occlusion and out-of-view hands admit multiple plausible motion trajectories. We present DewHand, a unified model for direct joint reconstruction of world-space hand and camera motion. To avoid compounding errors from multi-stage estimation, DewHand jointly predicts hand and camera motion in a shared world coordinate system within a single-stage pipeline. To resolve metric-scale ambiguity, it combines scene-level geometric features from VGGT-$Ω$ with metric-space supervision, while hand-specific features preserve fine-grained articulation. To handle occlusion and out-of-view hands, we formulate reconstruction as conditional motion generation with flow matching. Under the same architecture, this generative formulation outperforms direct regression in both accuracy and temporal smoothness with only two sampling steps. Experiments on HOT3D and ARCTIC demonstrate improved world-space accuracy and temporal consistency over state-of-the-art methods. DewHand reduces rigid-aligned world-space error relative to StableHand from 32.9 to 28.4 mm on HOT3D and from 76.2 to 36.2 mm on ARCTIC. It also recovers camera scale within 10% on two thirds of HOT3D clips, versus about a quarter for SLAM. Moreover, in zero-shot evaluations on HoloAssist, H2O, and TACO, captured with different devices, DewHand achieves the lowest rigid-aligned world-space error (WA-MPJPE) on each dataset.",
+      "summary_cn": "针对第一视角视频中手部与相机分阶段估计误差累积、单目尺度歧义与遮挡出画问题，提出单阶段统一模型，在世界坐标系中联合重建双手与相机运动，借VGGT-Ω的场景几何特征加度量监督消除尺度歧义，并把重建表述为流匹配条件生成以处理遮挡。在HOT3D与ARCTIC上仅两步采样即优于直接回归，精度与时序平滑性更好。",
+      "pdf_filename": "2610.29936.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "前馈3D重建",
+        "SLAM",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29936",
+      "search_text": "dewhand: direct metric world-space hand motion reconstruction from egocentric videos 前馈3d重建 slam 具身智能 针对第一视角视频中手部与相机分阶段估计误差累积、单目尺度歧义与遮挡出画问题，提出单阶段统一模型，在世界坐标系中联合重建双手与相机运动，借vggt-ω的场景几何特征加度量监督消除尺度歧义，并把重建表述为流匹配条件生成以处理遮挡。在hot3d与arctic上仅两步采样即优于直接回归，精度与时序平滑性更好。 recovering metric world-space hand motion from egocentric video supports understanding human interactions and transferring them to embodied agents. three challenges complicate this task: multi-stage pipelines propagate errors from independently estimated hand and camera motion; monocular observations leave physical scale ambiguous; and occlusion and out-of-view hands admit multiple plausible motion trajectories. we present dewhand, a unified model for direct joint reconstruction of world-space hand and camera motion. to avoid compounding errors from multi-stage estimation, dewhand jointly predicts hand and camera motion in a shared world coordinate system within a single-stage pipeline. to resolve metric-scale ambiguity, it combines scene-level geometric features from vggt-$ω$ with metric-space supervision, while hand-specific features preserve fine-grained articulation. to handle occlusion and out-of-view hands, we formulate reconstruction as conditional motion generation with flow matching. under the same architecture, this generative formulation outperforms direct regression in both accuracy and temporal smoothness with only two sampling steps. experiments on hot3d and arctic demonstrate improved world-space accuracy and temporal consistency over state-of-the-art methods. dewhand reduces rigid-aligned world-space error relative to stablehand from 32.9 to 28.4 mm on hot3d and from 76.2 to 36.2 mm on arctic. it also recovers camera scale within 10% on two thirds of hot3d clips, versus about a quarter for slam. moreover, in zero-shot evaluations on holoassist, h2o, and taco, captured with different devices, dewhand achieves the lowest rigid-aligned world-space error (wa-mpjpe) on each dataset. the university of tokyo; national institute of informatics naru suzuki, satoshi ikehata, takehiko ohkawa, yoichi sato, shuhei kurita cs.cv"
+    },
+    {
+      "arxiv_id": "2610.29845",
+      "title": "RangeNav: Task-Aligned LiDAR Range-Image Pretraining for Robot Navigation",
+      "authors": "Samuel Foo Enze, Manthan Patel, Fan Yang, Linus Kramer, Pascal Roth, Marco Hutter, Cesar Cadena",
+      "affiliations": "ETH Zurich, Robotic Systems Lab (RSL), Switzerland",
+      "published_date": "2026-10-21",
+      "categories": "cs.RO, cs.LG",
+      "abstract": "Autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. While panoramic LiDAR offers full-surround coverage, learning representations within reinforcement learning (RL) is sample-inefficient under sparse rewards, and existing 3D pretrained point-cloud encoders are too memory-heavy for massively parallel RL simulation. We present RangeNav, a compact (183k parameters) LiDAR range-image encoder pretrained entirely on synthetic data. RangeNav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. We pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (BEV) prediction, then freeze it for policy learning. In simulation, adding semantic and BEV supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. Zero-shot real-world deployments on a Unitree B2-W quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. Code and models will be open-sourced.",
+      "summary_cn": "针对全景LiDAR强化学习导航样本效率低、3D编码器显存开销大的问题，提出仅18.3万参数的测距图像编码器，用各向异性卷积与循环填充处理极端长宽比与方位接缝，以测距重建、语义分割与BEV预测联合预训练后冻结供策略学习。成功率较仅重建基线提升32.0与23.7个百分点，并在四足机器人上零样本实机导航。",
+      "pdf_filename": "2610.29845.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "强化学习",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29845",
+      "search_text": "rangenav: task-aligned lidar range-image pretraining for robot navigation 强化学习 点云 针对全景lidar强化学习导航样本效率低、3d编码器显存开销大的问题，提出仅18.3万参数的测距图像编码器，用各向异性卷积与循环填充处理极端长宽比与方位接缝，以测距重建、语义分割与bev预测联合预训练后冻结供策略学习。成功率较仅重建基线提升32.0与23.7个百分点，并在四足机器人上零样本实机导航。 autonomous mobile robots operating in dense crowds and cluttered sites require $360^\\circ$ perception to react to surrounding hazards. while panoramic lidar offers full-surround coverage, learning representations within reinforcement learning (rl) is sample-inefficient under sparse rewards, and existing 3d pretrained point-cloud encoders are too memory-heavy for massively parallel rl simulation. we present rangenav, a compact (183k parameters) lidar range-image encoder pretrained entirely on synthetic data. rangenav uses anisotropic convolutions and circular padding to handle the extreme aspect ratio and azimuthal seam of range images. we pretrain the network using a navigation-aligned objective combining range reconstruction, semantic segmentation, and bird's-eye-view (bev) prediction, then freeze it for policy learning. in simulation, adding semantic and bev supervision increases success rates over a reconstruction-only baseline by an average of 32.03 and 23.73 percentage points (pp) in procedurally generated training and out-of-distribution realistic test environments, respectively. zero-shot real-world deployments on a unitree b2-w quadruped demonstrate robust navigation through dense crowds, low-light settings, and construction zones where limited-field-of-view depth policies struggle. code and models will be open-sourced. eth zurich, robotic systems lab (rsl), switzerland samuel foo enze, manthan patel, fan yang, linus kramer, pascal roth, marco hutter, cesar cadena cs.ro, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.29702",
+      "title": "CausGround: Causal Interaction Grounding for Adaptive Embodied Planning",
+      "authors": "Yijun Shen, Diqi He, Jinbang Guo, Wanyue Zhang, Jiaming Mi, Huan Yang, Zhongyuan Wang, Zhiwei Yu, Kai Zhang",
+      "affiliations": "East China Normal University; Beijing Academy of Artificial Intelligence (BAAI); Northwestern Polytechnical University; University of Chinese Academy of Sciences; Institute of Automation, Chinese Academy of Sciences",
+      "published_date": "2026-10-21",
+      "categories": "cs.RO",
+      "abstract": "Multimodal large language models (MLLMs) show promising reasoning capabilities, but reliable physical interaction requires planning that accounts for when actions are executable and how they change the world. These preconditions and effects are environment-dependent and often not captured by MLLMs, making adaptation challenging. Yet existing approaches either require costly environment-specific training or rely on unstructured interaction experience that is difficult to reuse. Therefore, we introduce CausGround, a non-parametric causal interaction grounding framework that distills interaction experience into reusable action-centered causal knowledge. CausGround identifies action preconditions and effects and organizes them in a factorized world-state representation capturing object attributes and inter-object relations. At planning time, task-relevant causal dependencies are grounded in current observations to support backward reasoning over preconditions and forward reasoning over effects for action selection and multi-step planning. We evaluate CausGround on simulated high-level planning, interaction reasoning, and real-world robot manipulation. On adapted VirtualHome and RoboCasa benchmarks, CausGround improves vision-based high-level planning across MLLM backbones, increasing average task success from 24.9% to 53.3% on VirtualHome and closed-loop planning success from 43.0% to 57.0% on RoboCasa. On SWITCH, average interaction reasoning accuracy increases from 25.8% to 31.9%, indicating improved action selection, recovery, and verification. Moreover, real-world experiments show that CausGround reasons backward from MLLM-interpreted goals to derive executable high-level action sequences for sequential manipulation. These results demonstrate that reusable action preconditions and effects support long-horizon embodied planning across diverse environments without parameter updates.",
+      "summary_cn": "针对MLLM在物理交互中难以把握动作可执行前提与后果的问题，提出非参数的因果交互接地框架，把交互经验蒸馏为以动作为中心、因子化世界状态表示的因果知识，规划时把任务相关因果依赖落地到当前观测，支持对前提的后向推理与对效果的前向推理。在VirtualHome、RoboCAS与真实机器人操作上均有提升。",
+      "pdf_filename": "2610.29702.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "多模态",
+        "大语言模型",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29702",
+      "search_text": "causground: causal interaction grounding for adaptive embodied planning 闭环仿真 规划 多模态 大语言模型 具身智能 针对mllm在物理交互中难以把握动作可执行前提与后果的问题，提出非参数的因果交互接地框架，把交互经验蒸馏为以动作为中心、因子化世界状态表示的因果知识，规划时把任务相关因果依赖落地到当前观测，支持对前提的后向推理与对效果的前向推理。在virtualhome、robocas与真实机器人操作上均有提升。 multimodal large language models (mllms) show promising reasoning capabilities, but reliable physical interaction requires planning that accounts for when actions are executable and how they change the world. these preconditions and effects are environment-dependent and often not captured by mllms, making adaptation challenging. yet existing approaches either require costly environment-specific training or rely on unstructured interaction experience that is difficult to reuse. therefore, we introduce causground, a non-parametric causal interaction grounding framework that distills interaction experience into reusable action-centered causal knowledge. causground identifies action preconditions and effects and organizes them in a factorized world-state representation capturing object attributes and inter-object relations. at planning time, task-relevant causal dependencies are grounded in current observations to support backward reasoning over preconditions and forward reasoning over effects for action selection and multi-step planning. we evaluate causground on simulated high-level planning, interaction reasoning, and real-world robot manipulation. on adapted virtualhome and robocasa benchmarks, causground improves vision-based high-level planning across mllm backbones, increasing average task success from 24.9% to 53.3% on virtualhome and closed-loop planning success from 43.0% to 57.0% on robocasa. on switch, average interaction reasoning accuracy increases from 25.8% to 31.9%, indicating improved action selection, recovery, and verification. moreover, real-world experiments show that causground reasons backward from mllm-interpreted goals to derive executable high-level action sequences for sequential manipulation. these results demonstrate that reusable action preconditions and effects support long-horizon embodied planning across diverse environments without parameter updates. east china normal university; beijing academy of artificial intelligence (baai); northwestern polytechnical university; university of chinese academy of sciences; institute of automation, chinese academy of sciences yijun shen, diqi he, jinbang guo, wanyue zhang, jiaming mi, huan yang, zhongyuan wang, zhiwei yu, kai zhang cs.ro"
+    },
+    {
+      "arxiv_id": "2610.29699",
+      "title": "AirPlayground: Benchmarking Aerial Navigation across Diverse Reconstructed Environments",
+      "authors": "Rangya Zhang, Yujing Shang, Zhuoyuan Yu, Mingsheng Li, Qingsong Yan, Chao Yan, Yuhang Zhang, Mir Feroskhan",
+      "affiliations": "Nanyang Technological University; Wuhan University; Nanjing University of Aeronautics and Astronautics",
+      "published_date": "2026-10-21",
+      "categories": "cs.RO",
+      "abstract": "Large-scale aerial resources provide a foundation for learning navigation across diverse environments. However, existing resources remain limited in providing (1) densely sampled flight demonstrations for learning different policy formulations and (2) broad environment coverage for standardized closed-loop evaluation. To address these limitations, we introduce AirPlayground, a unified benchmark for training and evaluating aerial navigation policies across diverse environments. We first construct 94 photorealistic 3D Gaussian Splatting (3DGS) environments spanning indoor, urban outdoor, and vegetation settings, with aligned collision geometry. Building on these environments, we develop a scene-adaptive pipeline for automated expert flight collection, yielding 94K demonstrations and 46.5M synchronized observation-state-action samples at 50 Hz. We further provide an extensible API that supports training different policy formulations on this shared corpus and evaluating them under unified protocols in the corresponding environments. We benchmark seven baselines spanning four policy paradigms across three navigation settings in seen and unseen environments, and further examine scaling behavior with ACT. Scaling ACT's training corpus from 5 to 70 scenes raises median success rates on seen and unseen environments from 30.6% and 16.8% to 41.2% and 29.4%, respectively. Through this shared training and evaluation framework, AirPlayground supports analysis of how offline prediction errors relate to closed-loop outcomes. Our analyses highlight the roles of prediction errors, execution protocols, and scene interactions in closed-loop performance.",
+      "summary_cn": "面向空中导航策略的训练与评测，构建94个带对齐碰撞几何的真实感3DGS环境，覆盖室内、城市室外与植被场景，配合场景自适应流程自动采集9.4万条专家飞行示范与4650万条50Hz同步观测-状态-动作样本，并提供统一API在已见与未见环境中闭环评测七类基线，还分析了ACT随场景规模扩展的规律。",
+      "pdf_filename": "2610.29699.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29699",
+      "search_text": "airplayground: benchmarking aerial navigation across diverse reconstructed environments 3dgs 闭环仿真 面向空中导航策略的训练与评测，构建94个带对齐碰撞几何的真实感3dgs环境，覆盖室内、城市室外与植被场景，配合场景自适应流程自动采集9.4万条专家飞行示范与4650万条50hz同步观测-状态-动作样本，并提供统一api在已见与未见环境中闭环评测七类基线，还分析了act随场景规模扩展的规律。 large-scale aerial resources provide a foundation for learning navigation across diverse environments. however, existing resources remain limited in providing (1) densely sampled flight demonstrations for learning different policy formulations and (2) broad environment coverage for standardized closed-loop evaluation. to address these limitations, we introduce airplayground, a unified benchmark for training and evaluating aerial navigation policies across diverse environments. we first construct 94 photorealistic 3d gaussian splatting (3dgs) environments spanning indoor, urban outdoor, and vegetation settings, with aligned collision geometry. building on these environments, we develop a scene-adaptive pipeline for automated expert flight collection, yielding 94k demonstrations and 46.5m synchronized observation-state-action samples at 50 hz. we further provide an extensible api that supports training different policy formulations on this shared corpus and evaluating them under unified protocols in the corresponding environments. we benchmark seven baselines spanning four policy paradigms across three navigation settings in seen and unseen environments, and further examine scaling behavior with act. scaling act's training corpus from 5 to 70 scenes raises median success rates on seen and unseen environments from 30.6% and 16.8% to 41.2% and 29.4%, respectively. through this shared training and evaluation framework, airplayground supports analysis of how offline prediction errors relate to closed-loop outcomes. our analyses highlight the roles of prediction errors, execution protocols, and scene interactions in closed-loop performance. nanyang technological university; wuhan university; nanjing university of aeronautics and astronautics rangya zhang, yujing shang, zhuoyuan yu, mingsheng li, qingsong yan, chao yan, yuhang zhang, mir feroskhan cs.ro"
+    },
+    {
+      "arxiv_id": "2610.29676",
+      "title": "DriveMLP: When Training Strategy Outperforms Model Complexity in Autonomous Driving",
+      "authors": "Alessandro Canevaro, Julian Schmidt, Hang Yu, Ye Jin, Sajad Marvi, Georg Martius, Julian Jordan",
+      "affiliations": "Mercedes-Benz AG; University of Tübingen; Karlsruhe Institute of Technology; Technical University of Munich; University of Freiburg",
+      "published_date": "2026-10-21",
+      "categories": "cs.LG, cs.RO",
+      "abstract": "Learning motion planning policies that remain reliable under closed-loop execution is a central challenge in Autonomous Driving (AD). Imitation Learning (IL) scales well to large AD datasets but suffers from distribution shift, causal confusion, and compounding errors under closed-loop execution. In contrast, Reinforcement Learning (RL) typically requires handcrafted rule-based rewards and massive simulation. We study a simple closed-loop IL framework that uses RL purely as an optimization tool, guided by a trajectory-distance reward derived from logged expert data. We refer to this training strategy as Expert-Guided RL (EGRL). Through a controlled empirical study we find evidence that the training procedure, rather than model size and complexity, accounts for a substantial part of the performance gains. We then introduce DriveMLP, a lightweight MLP policy trained with EGRL, as a simple instantiation of these findings. It achieves a score of 86.51 on the nuPlan Val14 Reactive benchmark, a +3.2 point improvement over the previous best IL planner (Flow Planner), with >15x faster inference. Code is available at: https://github.com/alessandro-canevaro/DriveMLP .",
+      "summary_cn": "重新审视闭环规划中训练策略与模型复杂度的关系，提出专家引导强化学习EGRL：仅用日志专家轨迹的距离奖励作信号，把RL当作闭环模仿学习的优化工具。据此得到的轻量MLP策略DriveMLP在nuPlan Val14 Reactive上得86.51分，比最佳IL规划器高3.2分，推理快15倍以上。",
+      "pdf_filename": "2610.29676.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "强化学习",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29676",
+      "search_text": "drivemlp: when training strategy outperforms model complexity in autonomous driving 闭环仿真 强化学习 规划 自动驾驶 重新审视闭环规划中训练策略与模型复杂度的关系，提出专家引导强化学习egrl：仅用日志专家轨迹的距离奖励作信号，把rl当作闭环模仿学习的优化工具。据此得到的轻量mlp策略drivemlp在nuplan val14 reactive上得86.51分，比最佳il规划器高3.2分，推理快15倍以上。 learning motion planning policies that remain reliable under closed-loop execution is a central challenge in autonomous driving (ad). imitation learning (il) scales well to large ad datasets but suffers from distribution shift, causal confusion, and compounding errors under closed-loop execution. in contrast, reinforcement learning (rl) typically requires handcrafted rule-based rewards and massive simulation. we study a simple closed-loop il framework that uses rl purely as an optimization tool, guided by a trajectory-distance reward derived from logged expert data. we refer to this training strategy as expert-guided rl (egrl). through a controlled empirical study we find evidence that the training procedure, rather than model size and complexity, accounts for a substantial part of the performance gains. we then introduce drivemlp, a lightweight mlp policy trained with egrl, as a simple instantiation of these findings. it achieves a score of 86.51 on the nuplan val14 reactive benchmark, a +3.2 point improvement over the previous best il planner (flow planner), with >15x faster inference. code is available at: https://github.com/alessandro-canevaro/drivemlp . mercedes-benz ag; university of tübingen; karlsruhe institute of technology; technical university of munich; university of freiburg alessandro canevaro, julian schmidt, hang yu, ye jin, sajad marvi, georg martius, julian jordan cs.lg, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.29618",
+      "title": "FogTTA: Online Test-Time Adaptation for Robust Transformer-based Object Detection in Foggy Weather",
+      "authors": "Ali Abedi, Q. M. Jonathan Wu, Ning Zhang, Shiqi Tian",
+      "affiliations": "University of Windsor; University of Toronto Mississauga",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Object detection models for autonomous driving commonly experience substantial performance drops when deployed under adverse weather due to the domain shift between training data and real-world operating conditions. This degradation is especially evident when models trained on clear-weather images encounter foggy environments with reduced visibility and contrast. To address this challenge, we introduce FogTTA, an online test-time adaptation framework designed to improve the robustness of Transformer-based object detectors in fog. Using RF-DETR as the underlying object detector, FogTTA enables real-time adaptation to the streaming target domain without requiring source data or retraining. The framework follows a teacher-student design, where the deployed model serves as the teacher and generates pseudo labels from weakly augmented target inputs. These predictions are subsequently refined through non-maximum suppression and confidence filtering. The student model then learns from strongly augmented target sample using the Varifocal loss to mitigate pseudo-label noise. The teacher is updated via exponential moving averaging to ensure stable and continuous adaptation. Experiments show that FogTTA outperforms prior baselines, delivering improved detection accuracy and stability while maintaining real-time performance.",
+      "summary_cn": "针对Transformer检测器在雾天因域偏移性能骤降的问题，提出在线测试时自适应框架，以部署模型为教师对弱增强目标图像生成伪标签，经NMS与置信度过滤后用强增强样本和Varifocal损失训练学生，教师以指数滑动平均持续更新。无需源数据与重训练即可在流式目标域实时适配，在雾天检测上优于已有基线。",
+      "pdf_filename": "2610.29618.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29618",
+      "search_text": "fogtta: online test-time adaptation for robust transformer-based object detection in foggy weather 自动驾驶 针对transformer检测器在雾天因域偏移性能骤降的问题，提出在线测试时自适应框架，以部署模型为教师对弱增强目标图像生成伪标签，经nms与置信度过滤后用强增强样本和varifocal损失训练学生，教师以指数滑动平均持续更新。无需源数据与重训练即可在流式目标域实时适配，在雾天检测上优于已有基线。 object detection models for autonomous driving commonly experience substantial performance drops when deployed under adverse weather due to the domain shift between training data and real-world operating conditions. this degradation is especially evident when models trained on clear-weather images encounter foggy environments with reduced visibility and contrast. to address this challenge, we introduce fogtta, an online test-time adaptation framework designed to improve the robustness of transformer-based object detectors in fog. using rf-detr as the underlying object detector, fogtta enables real-time adaptation to the streaming target domain without requiring source data or retraining. the framework follows a teacher-student design, where the deployed model serves as the teacher and generates pseudo labels from weakly augmented target inputs. these predictions are subsequently refined through non-maximum suppression and confidence filtering. the student model then learns from strongly augmented target sample using the varifocal loss to mitigate pseudo-label noise. the teacher is updated via exponential moving averaging to ensure stable and continuous adaptation. experiments show that fogtta outperforms prior baselines, delivering improved detection accuracy and stability while maintaining real-time performance. university of windsor; university of toronto mississauga ali abedi, q. m. jonathan wu, ning zhang, shiqi tian cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.29534",
+      "title": "Safe World Model for Joint Trajectory and Beamforming Design of Mobile Base Stations",
+      "authors": "Abdolrasoul Sakhaei Gharagezlou, Zeinab Askari Donbeh, Mehdi Monemi, Matti Latva-aho, Mehdi Rasti",
+      "affiliations": "University of Oulu, Centre for Wireless Communications (CWC), Finland",
+      "published_date": "2026-10-21",
+      "categories": "eess.SY",
+      "abstract": "Mobile base stations (MBSs), including aerial and ground-based platforms, provide flexible wireless coverage through adaptive positioning. However, jointly optimizing their trajectories and digital beamforming is challenging because movement changes channel conditions and interference, while beamforming determines the resulting signal and interference powers. These coupled decisions also account for how current movements affect future positions and communication performance under mobility and safety constraints. We formulate this problem as a constrained Markov decision process that maximizes the time-averaged sum signal-to-interference-plus-noise ratio (SINR), subject to mobility, restricted-zone avoidance, and transmit-power constraints. To support long-term planning and reduce the extensive environment interactions required by model-free reinforcement learning, we develop a SafeDreamer-based world model framework that learns latent system dynamics from experience and optimizes a joint trajectory and beamforming policy through imagined trajectories. Feasibility-preserving action mappings and safety cost signals incorporate operational constraints into policy learning. Simulation results demonstrate that the proposed framework improves the time-averaged sum SINR by an average of 7\\% and 9\\% compared with proximal policy and deep Q-network baselines, respectively, while achieving higher sample efficiency and more reliable constraint satisfaction.",
+      "summary_cn": "面向移动基站联合轨迹与波束成形设计，将其建模为带移动性、禁区规避与功率约束的约束马尔可夫决策过程，并基于SafeDreamer世界模型从经验中学习潜动态，用想象轨迹优化联合策略，以保可行性动作映射与安全代价信号嵌入约束。仿真中时间平均和速率较PPO与DQN基线分别提升约7%与9%。",
+      "pdf_filename": "2610.29534.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29534",
+      "search_text": "safe world model for joint trajectory and beamforming design of mobile base stations 世界模型 强化学习 面向移动基站联合轨迹与波束成形设计，将其建模为带移动性、禁区规避与功率约束的约束马尔可夫决策过程，并基于safedreamer世界模型从经验中学习潜动态，用想象轨迹优化联合策略，以保可行性动作映射与安全代价信号嵌入约束。仿真中时间平均和速率较ppo与dqn基线分别提升约7%与9%。 mobile base stations (mbss), including aerial and ground-based platforms, provide flexible wireless coverage through adaptive positioning. however, jointly optimizing their trajectories and digital beamforming is challenging because movement changes channel conditions and interference, while beamforming determines the resulting signal and interference powers. these coupled decisions also account for how current movements affect future positions and communication performance under mobility and safety constraints. we formulate this problem as a constrained markov decision process that maximizes the time-averaged sum signal-to-interference-plus-noise ratio (sinr), subject to mobility, restricted-zone avoidance, and transmit-power constraints. to support long-term planning and reduce the extensive environment interactions required by model-free reinforcement learning, we develop a safedreamer-based world model framework that learns latent system dynamics from experience and optimizes a joint trajectory and beamforming policy through imagined trajectories. feasibility-preserving action mappings and safety cost signals incorporate operational constraints into policy learning. simulation results demonstrate that the proposed framework improves the time-averaged sum sinr by an average of 7\\% and 9\\% compared with proximal policy and deep q-network baselines, respectively, while achieving higher sample efficiency and more reliable constraint satisfaction. university of oulu, centre for wireless communications (cwc), finland abdolrasoul sakhaei gharagezlou, zeinab askari donbeh, mehdi monemi, matti latva-aho, mehdi rasti eess.sy"
+    },
+    {
+      "arxiv_id": "2610.29517",
+      "title": "AutoPhyX: Automatic Text-Condition Physics Property Generation",
+      "authors": "Bei Huang, Yixin Chen, Hongbin Zha, Yuru Pei, Siyuan Huang",
+      "affiliations": "Peking University; Beijing Academy of Artificial Intelligence (BIGAI); Anqing Normal University",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "High-fidelity 4D physical simulation requires accurate physical parameter assignments that align with diverse material properties. Previous methods struggle with critical bottlenecks: they either rely on computationally intensive per-scene optimization or predict parameters from purely visual inputs. The latter suffers from inherent ambiguity, e.g., the inability to distinguish the stiffness of rubber from its appearance alone. To bridge this gap, we propose AutoPhyX, a text-conditioned framework for predicting spatially-varying physical properties. Since training robust feed-forward models requires fine-grained supervision, we first introduce a novel part-controllable data generation pipeline that decomposes complex 3D assets into semantically distinct components and pairs them with physically plausible, diverse parameters and corresponding text descriptions. Leveraging this dataset, AutoPhyX employs a cross-modal modulation mechanism where text features dynamically modulate visual features for precise physical grounding. By formulating property prediction within a voxel field, AutoPhyX ensures compatibility with diverse 3D representations, including meshes, point clouds, Gaussian Splatting, and NeRF. Experiments demonstrate that our method enables physically plausible, text-driven parameter assignment in a single forward pass. It achieves high accuracy and robust generalization to in-the-wild objects, paving the way for future physics-intensive embodied and robotic applications.",
+      "summary_cn": "针对4D物理仿真中材料参数难获取、纯视觉预测存在固有歧义的问题，提出文本条件驱动的空间变化物理属性预测框架。先构建部件可控的数据生成流水线，把3D资产分解为语义部件并配对多样物理参数与文本描述；再用文本特征动态调制视觉特征的跨模态机制，在体素场中预测属性，兼容网格、点云与高斯表示。",
+      "pdf_filename": "2610.29517.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "3DGS",
+        "NeRF",
+        "点云",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29517",
+      "search_text": "autophyx: automatic text-condition physics property generation 3dgs nerf 点云 具身智能 针对4d物理仿真中材料参数难获取、纯视觉预测存在固有歧义的问题，提出文本条件驱动的空间变化物理属性预测框架。先构建部件可控的数据生成流水线，把3d资产分解为语义部件并配对多样物理参数与文本描述；再用文本特征动态调制视觉特征的跨模态机制，在体素场中预测属性，兼容网格、点云与高斯表示。 high-fidelity 4d physical simulation requires accurate physical parameter assignments that align with diverse material properties. previous methods struggle with critical bottlenecks: they either rely on computationally intensive per-scene optimization or predict parameters from purely visual inputs. the latter suffers from inherent ambiguity, e.g., the inability to distinguish the stiffness of rubber from its appearance alone. to bridge this gap, we propose autophyx, a text-conditioned framework for predicting spatially-varying physical properties. since training robust feed-forward models requires fine-grained supervision, we first introduce a novel part-controllable data generation pipeline that decomposes complex 3d assets into semantically distinct components and pairs them with physically plausible, diverse parameters and corresponding text descriptions. leveraging this dataset, autophyx employs a cross-modal modulation mechanism where text features dynamically modulate visual features for precise physical grounding. by formulating property prediction within a voxel field, autophyx ensures compatibility with diverse 3d representations, including meshes, point clouds, gaussian splatting, and nerf. experiments demonstrate that our method enables physically plausible, text-driven parameter assignment in a single forward pass. it achieves high accuracy and robust generalization to in-the-wild objects, paving the way for future physics-intensive embodied and robotic applications. peking university; beijing academy of artificial intelligence (bigai); anqing normal university bei huang, yixin chen, hongbin zha, yuru pei, siyuan huang cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2610.29454",
+      "title": "BlazeVGGT: 13x Faster VGGT at 2,000 Frames via Camera Token without Training",
+      "authors": "Shujun Yao, Junhui Lin, Congying Han, Tiande Guo, Ziwen Liu, Bonan Li",
+      "affiliations": "University of Chinese Academy of Sciences; University of Maryland, College Park; Beijing University of Posts and Telecommunications",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV",
+      "abstract": "Feed-forward visual geometry models, exemplified by VGGT, have demonstrated strong multi-view reconstruction capabilities through dense global attention. However, the resulting all-to-all cross-view computation scales quadratically with the number of input views, making long-sequence inference particularly expensive due to substantial frame-level redundancy among highly overlapping observations. We uncover a topology-first, geometry-later evolution in VGGT camera tokens: shallow-layer tokens reliably capture local view neighborhoods, whereas deeper-layer tokens progressively encode globally organized inter-view geometry. Motivated by this observation, we introduce BlazeVGGT, a training-free framework for structure-aware frame-level key--value sparsification. At each global-attention block, BlazeVGGT constructs a view-level similarity kernel from camera-token relations and employs greedy determinantal point process inference to select a compact set of mutually complementary views. The selected views constitute the key--value context, while all input frames are retained as queries. This asymmetric attention design preserves dense per-frame predictions while eliminating redundant cross-view computation, allowing our method to be directly integrated into pretrained VGGT as a plug-and-play module without parameter updates. Its advantages become increasingly pronounced with sequence length: at 2,000 frames, BlazeVGGT achieves approximately 13$\\times$ faster inference than VGGT while reducing the Chamfer Distance from 0.41 to 0.32. Extensive experiments demonstrate a favorable accuracy--efficiency trade-off in point-cloud reconstruction and camera-pose estimation, compatibility with existing VGGT accelerators such as FastVGGT and LiteVGGT, and transferability to VGGT-based models including StreamVGGT and PAGE-4D. Codes are publicly available at https://github.com/MagiciannnY/BlazeVGGT.git.",
+      "summary_cn": "针对VGGT稠密全局注意力随视角数二次增长、长序列推理昂贵的问题，发现相机token呈“先拓扑后几何”的层级演化，据此提出免训练的结构感知帧级KV稀疏化：由相机token关系构造视图相似核，用贪心行列式点过程选出互补视角作为KV，全部帧仍作查询。在2000帧单次推理下提速13倍，几何重建更干净且无需重新训练。",
+      "pdf_filename": "2610.29454.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29454",
+      "search_text": "blazevggt: 13x faster vggt at 2,000 frames via camera token without training 前馈3d重建 针对vggt稠密全局注意力随视角数二次增长、长序列推理昂贵的问题，发现相机token呈“先拓扑后几何”的层级演化，据此提出免训练的结构感知帧级kv稀疏化：由相机token关系构造视图相似核，用贪心行列式点过程选出互补视角作为kv，全部帧仍作查询。在2000帧单次推理下提速13倍，几何重建更干净且无需重新训练。 feed-forward visual geometry models, exemplified by vggt, have demonstrated strong multi-view reconstruction capabilities through dense global attention. however, the resulting all-to-all cross-view computation scales quadratically with the number of input views, making long-sequence inference particularly expensive due to substantial frame-level redundancy among highly overlapping observations. we uncover a topology-first, geometry-later evolution in vggt camera tokens: shallow-layer tokens reliably capture local view neighborhoods, whereas deeper-layer tokens progressively encode globally organized inter-view geometry. motivated by this observation, we introduce blazevggt, a training-free framework for structure-aware frame-level key--value sparsification. at each global-attention block, blazevggt constructs a view-level similarity kernel from camera-token relations and employs greedy determinantal point process inference to select a compact set of mutually complementary views. the selected views constitute the key--value context, while all input frames are retained as queries. this asymmetric attention design preserves dense per-frame predictions while eliminating redundant cross-view computation, allowing our method to be directly integrated into pretrained vggt as a plug-and-play module without parameter updates. its advantages become increasingly pronounced with sequence length: at 2,000 frames, blazevggt achieves approximately 13$\\times$ faster inference than vggt while reducing the chamfer distance from 0.41 to 0.32. extensive experiments demonstrate a favorable accuracy--efficiency trade-off in point-cloud reconstruction and camera-pose estimation, compatibility with existing vggt accelerators such as fastvggt and litevggt, and transferability to vggt-based models including streamvggt and page-4d. codes are publicly available at https://github.com/magiciannny/blazevggt.git. university of chinese academy of sciences; university of maryland, college park; beijing university of posts and telecommunications shujun yao, junhui lin, congying han, tiande guo, ziwen liu, bonan li cs.cv"
+    },
+    {
+      "arxiv_id": "2610.29435",
+      "title": "Events, Not Pixels: Where World Models Get the Return Wrong",
+      "authors": "Haoyue Liu, Xiaoying Tang",
+      "affiliations": "The Chinese University of Hong Kong, Shenzhen; Shenzhen Future Network of Intelligence Institute (FNii-Shenzhen); Guangdong Provincial Key Laboratory of Future Networks of Intelligence",
+      "published_date": "2026-10-21",
+      "categories": "cs.AI",
+      "abstract": "World models are increasingly used for planning, where a planner ranks candidate actions by returns imagined by the model. However, these models are judged mainly by how well they render frames, even though a visually faithful rollout can still assign the wrong return. To identify where this mismatch arises, we introduce a transition-level diagnostic that replaces imagined transitions with real ones and measures the reduction in return error against a budget-matched random control. Our analysis yields two findings. (1) Event transitions, the few steps where a reward is earned or an episode ends, are rendered as well as other steps (median pixel-error ratio 0.85), yet restoring them removes a median of 70% of the return error. In contrast, restoring transitions with the largest MSE, SSIM or LPIPS error removes less than a random choice. Across the 44 Atari-100k model--collection pairs that pass our reliability checks, including three released families, event patches outperform random patches in 39 (sign test p=1.4 x 10^{-7}), with a median gain of +44 percentage points. (2) The remaining error is structured: a complementary patch separates errors at true events from those elsewhere, while an eight-step timing tolerance recovers few events missed by our deterministic models. This structure also guides repair: a rule recorded before four repair outcomes were known predicts when a diffusion model repairs these failures. Event patches improve plan ranking, and the same concentration appears on control tasks with rare reward events.",
+      "summary_cn": "指出现有世界模型主要以画面渲染质量评价，但视觉逼真的想象轨迹仍可能给出错误回报。论文提出转移级诊断：用真实转移替换想象转移，并与等预算随机对照比较回报误差下降。发现事件转移（获得奖励或回合结束的少数步）渲染并不更好，却能消除中位70%的回报误差，44个Atari模型对中39个显著优于此前的误差补丁选择。",
+      "pdf_filename": "2610.29435.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "扩散模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29435",
+      "search_text": "events, not pixels: where world models get the return wrong 世界模型 扩散模型 指出现有世界模型主要以画面渲染质量评价，但视觉逼真的想象轨迹仍可能给出错误回报。论文提出转移级诊断：用真实转移替换想象转移，并与等预算随机对照比较回报误差下降。发现事件转移（获得奖励或回合结束的少数步）渲染并不更好，却能消除中位70%的回报误差，44个atari模型对中39个显著优于此前的误差补丁选择。 world models are increasingly used for planning, where a planner ranks candidate actions by returns imagined by the model. however, these models are judged mainly by how well they render frames, even though a visually faithful rollout can still assign the wrong return. to identify where this mismatch arises, we introduce a transition-level diagnostic that replaces imagined transitions with real ones and measures the reduction in return error against a budget-matched random control. our analysis yields two findings. (1) event transitions, the few steps where a reward is earned or an episode ends, are rendered as well as other steps (median pixel-error ratio 0.85), yet restoring them removes a median of 70% of the return error. in contrast, restoring transitions with the largest mse, ssim or lpips error removes less than a random choice. across the 44 atari-100k model--collection pairs that pass our reliability checks, including three released families, event patches outperform random patches in 39 (sign test p=1.4 x 10^{-7}), with a median gain of +44 percentage points. (2) the remaining error is structured: a complementary patch separates errors at true events from those elsewhere, while an eight-step timing tolerance recovers few events missed by our deterministic models. this structure also guides repair: a rule recorded before four repair outcomes were known predicts when a diffusion model repairs these failures. event patches improve plan ranking, and the same concentration appears on control tasks with rare reward events. the chinese university of hong kong, shenzhen; shenzhen future network of intelligence institute (fnii-shenzhen); guangdong provincial key laboratory of future networks of intelligence haoyue liu, xiaoying tang cs.ai"
+    },
+    {
+      "arxiv_id": "2610.29382",
+      "title": "RadioDreamer: A World Model for Radio Map Forecasting and Imagination-Based Optimization",
+      "authors": "Haoye Chai, Mugen Peng",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-10-21",
+      "categories": "cs.NI",
+      "abstract": "Radio maps characterize the spatial distribution of wireless conditions and are fundamental to network planning and optimization. However, existing learning-based methods reconstruct isolated radio-map snapshots and do not model how network actions drive the evolution of the radio environment. In this paper, we present RadioDreamer, a two-stage world model that unifies action-conditioned radio-map forecasting and imagination-based network optimization within a latent space. To learn causal environmental transitions from sequential interactions, we introduce a structured spatio-temporal transformer backbone coupled with dynamic-region supervision, enabling accurate modeling of action-sensitive areas. Second, rather than relying on conventional physical trial-and-error, RadioDreamer establishes a general planning paradigm that generates counterfactual latent trajectories to evaluate and optimize long-horizon network parameter configurations. Experiments show that RadioDreamer improves both multi-step rollout forecasting and closed-loop network optimization. It reduces full-map forecasting error by 25.2% on average and achieves approximately 80% accuracy in predicting the evolution direction of radio signals. More importantly, for long-horizon network configuration, imagination-based planning surpasses model-free policies optimized directly on radio-map observations by 8.8% in accumulated return.",
+      "summary_cn": "把无线电台地图预测重构为世界模型问题，用结构化时空Transformer配合动态区域监督学习动作驱动的环境演化，再在潜空间内生成反事实轨迹做长程网络参数优化，替代物理试错。全图预测误差平均降低25.2%，信号演化方向预测准确率约80%，长程配置的累积回报比直接在电地图上优化的无模型策略高8.8%。",
+      "pdf_filename": "2610.29382.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29382",
+      "search_text": "radiodreamer: a world model for radio map forecasting and imagination-based optimization 世界模型 闭环仿真 把无线电台地图预测重构为世界模型问题，用结构化时空transformer配合动态区域监督学习动作驱动的环境演化，再在潜空间内生成反事实轨迹做长程网络参数优化，替代物理试错。全图预测误差平均降低25.2%，信号演化方向预测准确率约80%，长程配置的累积回报比直接在电地图上优化的无模型策略高8.8%。 radio maps characterize the spatial distribution of wireless conditions and are fundamental to network planning and optimization. however, existing learning-based methods reconstruct isolated radio-map snapshots and do not model how network actions drive the evolution of the radio environment. in this paper, we present radiodreamer, a two-stage world model that unifies action-conditioned radio-map forecasting and imagination-based network optimization within a latent space. to learn causal environmental transitions from sequential interactions, we introduce a structured spatio-temporal transformer backbone coupled with dynamic-region supervision, enabling accurate modeling of action-sensitive areas. second, rather than relying on conventional physical trial-and-error, radiodreamer establishes a general planning paradigm that generates counterfactual latent trajectories to evaluate and optimize long-horizon network parameter configurations. experiments show that radiodreamer improves both multi-step rollout forecasting and closed-loop network optimization. it reduces full-map forecasting error by 25.2% on average and achieves approximately 80% accuracy in predicting the evolution direction of radio signals. more importantly, for long-horizon network configuration, imagination-based planning surpasses model-free policies optimized directly on radio-map observations by 8.8% in accumulated return. 未找到单位信息 haoye chai, mugen peng cs.ni"
+    },
+    {
+      "arxiv_id": "2610.29200",
+      "title": "NeuralSRender: G-Buffer Guided Video Diffusion for Sim-to-Real Rendering",
+      "authors": "Yipeng Lu, Youqi Liao, Zhenyu Wang, Yuning Peng, Zhen Dong",
+      "affiliations": "Wuhan University",
+      "published_date": "2026-10-21",
+      "categories": "cs.CV",
+      "abstract": "The scarcity of high-quality annotated visual data remains a critical bottleneck for autonomous-driving perception. Simulators provide training data at scale, but the limited realism of synthetic videos compromises perception performance in real-world applications. To address this limitation, we propose NeuralSRender, a sim-to-real video translation framework that enhances the photorealism of synthetic videos while maintaining geometric consistency with the source scenes. Built on a pretrained video diffusion transformer (DiT), NeuralSRender uses a lightweight projector to inject geometric and material priors from G-buffers, and LoRA enables parameter-efficient adaptation. The model is trained in two stages: it first learns G-buffer conditioning from synthetic videos with accurate G-buffers, then adapts to real-world appearance using real videos with estimated G-buffers. During the second stage, an additional LoRA module is trained while the projector and first-stage LoRA remain frozen to reduce interference from estimation noise. NeuralSRender introduces only 1.45\\% parameter overhead and can be trained on consumer-grade GPUs with 24 GB of memory. To support training and evaluation, we introduce GenReal, a large-scale driving video dataset comprising synthetic and real-world videos with corresponding G-buffers. Experiments demonstrate improved photorealism with competitive geometric consistency. Training perception models on our translated videos instead of raw simulator renders improves detection $\\mathrm{AP}_{50}$ on nuImages from 35.1 to 40.6 and segmentation mIoU on Cityscapes from 32.4 to 40.8. Our code, data, and model weights are available at: https://github.com/WHU-USI3DV/NeuralSRender.",
+      "summary_cn": "针对仿真数据真实感不足制约自动驾驶感知的问题，提出基于视频扩散DiT的sim-to-real翻译框架，用轻量投影器注入G-buffer几何与材质先验，以LoRA两阶段适配真实域，仅增1.45%参数即可在24GB显卡训练。并发布GenReal驾驶视频数据集，其数据训练的检测与分割模型优于其他合成数据。",
+      "pdf_filename": "2610.29200.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "自动驾驶",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.29200",
+      "search_text": "neuralsrender: g-buffer guided video diffusion for sim-to-real rendering 自动驾驶 仿真器 针对仿真数据真实感不足制约自动驾驶感知的问题，提出基于视频扩散dit的sim-to-real翻译框架，用轻量投影器注入g-buffer几何与材质先验，以lora两阶段适配真实域，仅增1.45%参数即可在24gb显卡训练。并发布genreal驾驶视频数据集，其数据训练的检测与分割模型优于其他合成数据。 the scarcity of high-quality annotated visual data remains a critical bottleneck for autonomous-driving perception. simulators provide training data at scale, but the limited realism of synthetic videos compromises perception performance in real-world applications. to address this limitation, we propose neuralsrender, a sim-to-real video translation framework that enhances the photorealism of synthetic videos while maintaining geometric consistency with the source scenes. built on a pretrained video diffusion transformer (dit), neuralsrender uses a lightweight projector to inject geometric and material priors from g-buffers, and lora enables parameter-efficient adaptation. the model is trained in two stages: it first learns g-buffer conditioning from synthetic videos with accurate g-buffers, then adapts to real-world appearance using real videos with estimated g-buffers. during the second stage, an additional lora module is trained while the projector and first-stage lora remain frozen to reduce interference from estimation noise. neuralsrender introduces only 1.45\\% parameter overhead and can be trained on consumer-grade gpus with 24 gb of memory. to support training and evaluation, we introduce genreal, a large-scale driving video dataset comprising synthetic and real-world videos with corresponding g-buffers. experiments demonstrate improved photorealism with competitive geometric consistency. training perception models on our translated videos instead of raw simulator renders improves detection $\\mathrm{ap}_{50}$ on nuimages from 35.1 to 40.6 and segmentation miou on cityscapes from 32.4 to 40.8. our code, data, and model weights are available at: https://github.com/whu-usi3dv/neuralsrender. wuhan university yipeng lu, youqi liao, zhenyu wang, yuning peng, zhen dong cs.cv"
+    },
+    {
+      "arxiv_id": "2610.29015",
+      "title": "On the Number of Iterations in a Kruskal-Type Process",
+      "authors": "Samuel G. Corregidor",
+      "affiliations": "Universidad CEU San Pablo, Madrid, Spain",
+      "published_date": "2026-10-21",
+      "categories": "math.CO",
+      "abstract": "Motivated by the Kruskal counting procedure, this paper investigates a combinatorial elimination process defined on a deck consisting of $m$ copies of each value $1,2,\\ldots,n$. Starting from an arbitrary arrangement of the $mn$ cards, the process repeatedly removes a number of consecutive cards equal to the value of the first remaining card. This generates a sequence of elimination steps whose length determines $T$, representing the total number of iterations required to exhaust the deck. The main objective of this paper is to analyze an upper bound $σ(m,n)$ for $T$, valid for every initial configuration of the deck, and to show that this bound is attained by a specific configuration.",
+      "summary_cn": "研究Kruskal计数过程对应的组合消除模型：牌堆含1到n各m张，每步按首张牌的数值移除连续牌张直至耗尽，总步数记为T。论文给出对任意初始排列都成立的T上界σ(m,n)，并构造出恰好达到该上界的具体排列，从组合计数与更新过程角度刻画了这一离散动力系统的极端迭代行为。",
+      "pdf_filename": "2610.29015.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.29015",
+      "search_text": "on the number of iterations in a kruskal-type process  研究kruskal计数过程对应的组合消除模型：牌堆含1到n各m张，每步按首张牌的数值移除连续牌张直至耗尽，总步数记为t。论文给出对任意初始排列都成立的t上界σ(m,n)，并构造出恰好达到该上界的具体排列，从组合计数与更新过程角度刻画了这一离散动力系统的极端迭代行为。 motivated by the kruskal counting procedure, this paper investigates a combinatorial elimination process defined on a deck consisting of $m$ copies of each value $1,2,\\ldots,n$. starting from an arbitrary arrangement of the $mn$ cards, the process repeatedly removes a number of consecutive cards equal to the value of the first remaining card. this generates a sequence of elimination steps whose length determines $t$, representing the total number of iterations required to exhaust the deck. the main objective of this paper is to analyze an upper bound $σ(m,n)$ for $t$, valid for every initial configuration of the deck, and to show that this bound is attained by a specific configuration. universidad ceu san pablo, madrid, spain samuel g. corregidor math.co"
+    },
+    {
+      "arxiv_id": "2610.28981",
+      "title": "The Butterfly Effect in LLM Social Simulations: From Architecture Sensitivity to Robustness Audits",
+      "authors": "Jinyi Ye, Lei Cao, Ding Chen, Emilio Ferrara",
+      "affiliations": "University of Southern California",
+      "published_date": "2026-10-20",
+      "categories": "cs.MA",
+      "abstract": "A butterfly effect occurs when a local perturbation propagates through a system and produces divergence in its collective outcome. In LLM social simulations, this creates a particular challenge for scientific inference: sensitivity to implementation choices can enter agent interactions and alter the collective outcomes on which scientific claims are based. We study this problem through a repeated Prisoner's Dilemma and a social-media echo chamber, spanning representation- and design-level perturbations across four LLM families. We find that controlled perturbations can substantially alter collective outcomes, with sensitivity varying across both perturbations and models. In the Prisoner's Dilemma, changing only the representation of a matched persona shifts two-agent cooperation by 75.2 percentage points for GPT-5.2, while game framing and memory representation produce smaller or less consistent effects. Multi-agent interaction further reshapes representation sensitivity, producing amplification or attenuation depending on the model and perturbation. In the echo-chamber simulation, persona representation changes interaction targeting and is accompanied by divergence in collective interaction structure, extending representation sensitivity from agent behavior to network-level outcomes. These results show that robustness cannot be inferred from a single simulation configuration and that local sensitivity can change as it propagates through interaction. We introduce TRAILS (Taxonomy for Robustness Audits In LLM Simulations) and the Social Simulation Audit Card as a framework for systematically auditing these dependencies and calibrating the scope of scientific claims to the robustness evidence that supports them.",
+      "summary_cn": "研究LLM社会仿真中微小的实现选择如何放大为集体结论的偏差，构建重复囚徒困境与社交媒体回音室两类实验，跨四个模型家族施加表征层与设计层扰动。结果显示仅改变匹配人格的表征即可让GPT-5.2的双人合作率变动75.2个百分点，多智能体交互会依模型放大或衰减该敏感性，据此主张把鲁棒性审计纳入仿真结论。",
+      "pdf_filename": "2610.28981.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28981",
+      "search_text": "the butterfly effect in llm social simulations: from architecture sensitivity to robustness audits 大语言模型 研究llm社会仿真中微小的实现选择如何放大为集体结论的偏差，构建重复囚徒困境与社交媒体回音室两类实验，跨四个模型家族施加表征层与设计层扰动。结果显示仅改变匹配人格的表征即可让gpt-5.2的双人合作率变动75.2个百分点，多智能体交互会依模型放大或衰减该敏感性，据此主张把鲁棒性审计纳入仿真结论。 a butterfly effect occurs when a local perturbation propagates through a system and produces divergence in its collective outcome. in llm social simulations, this creates a particular challenge for scientific inference: sensitivity to implementation choices can enter agent interactions and alter the collective outcomes on which scientific claims are based. we study this problem through a repeated prisoner's dilemma and a social-media echo chamber, spanning representation- and design-level perturbations across four llm families. we find that controlled perturbations can substantially alter collective outcomes, with sensitivity varying across both perturbations and models. in the prisoner's dilemma, changing only the representation of a matched persona shifts two-agent cooperation by 75.2 percentage points for gpt-5.2, while game framing and memory representation produce smaller or less consistent effects. multi-agent interaction further reshapes representation sensitivity, producing amplification or attenuation depending on the model and perturbation. in the echo-chamber simulation, persona representation changes interaction targeting and is accompanied by divergence in collective interaction structure, extending representation sensitivity from agent behavior to network-level outcomes. these results show that robustness cannot be inferred from a single simulation configuration and that local sensitivity can change as it propagates through interaction. we introduce trails (taxonomy for robustness audits in llm simulations) and the social simulation audit card as a framework for systematically auditing these dependencies and calibrating the scope of scientific claims to the robustness evidence that supports them. university of southern california jinyi ye, lei cao, ding chen, emilio ferrara cs.ma"
+    },
+    {
+      "arxiv_id": "2610.28933",
+      "title": "The Data Differentiator Framework (DDF): Quantifying Marginal Data Value with Information-Theoretic and Game-Theoretic Measures in an Agentic Evaluation Pipeline (SDSAE)",
+      "authors": "Sukesh Kumar, Dilip Singh",
+      "affiliations": "Equifax Inc.",
+      "published_date": "2026-10-20",
+      "categories": "cs.LG",
+      "abstract": "In data-rich enterprises the hard question is not whether a candidate dataset is good in isolation, but whether it adds information beyond what the organization already holds, and whether that increment is worth its price. We present the Data Differentiator Framework (DDF), a composite scoring method for candidate data assets that combines (i) a mutual-information-based redundancy penalty against the existing portfolio, (ii) a cost-normalized, significance-gated marginal utility score derived from an ablation study, and (iii) explicit governance inputs (trust, identity resolution quality, strategic weights) set by the business. The framework is executed by a staged pipeline, the Strategic Data Sourcing Agent Ecosystem (SDSAE), that short-circuits expensive model-retraining steps for assets failing governance or redundancy gates. Conceptually, the DDF extends the relevance-minus-redundancy principle of mRMR feature selection from the feature level to the asset level, and adds cost normalization, a statistical significance gate, and governance terms that per-sample valuation methods such as Data Shapley do not model. We validate the framework on the public credit-card fraud benchmark (284,807 transactions) with five constructed candidate assets spanning the redundancy spectrum. Only the genuinely differentiated asset passes the significance gate ($Δ$AUC = +0.0029, DeLong $p = 1.4\\times 10^{-9}$, Holm-corrected $p = 7.2\\times 10^{-9}$) and receives an acquire recommendation (DDS = +0.663); the fully redundant asset scores lowest (DDS = -0.135). The recommendation is stable across 19 of 22 admissible strategic-weight configurations and across all decision thresholds in [0.15, 0.66]. We state clearly which quantities in the case study are computed from data and which are simulated governance inputs, and we discuss the design limits of a single-dataset evaluation.",
+      "summary_cn": "面向企业数据采购的候选数据资产评分框架，用互信息冗余惩罚、消融实验得到的成本归一化且带显著性门槛的边际效用分数，叠加信任度、身份解析质量与战略权重等治理项构成总分，并由分阶段智能体流水线提前短路昂贵的重训练步骤。在信用卡欺诈基准的五个构造候选资产上验证，可量化数据相对现有组合的增量价值及其性价比。",
+      "pdf_filename": "2610.28933.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.28933",
+      "search_text": "the data differentiator framework (ddf): quantifying marginal data value with information-theoretic and game-theoretic measures in an agentic evaluation pipeline (sdsae)  面向企业数据采购的候选数据资产评分框架，用互信息冗余惩罚、消融实验得到的成本归一化且带显著性门槛的边际效用分数，叠加信任度、身份解析质量与战略权重等治理项构成总分，并由分阶段智能体流水线提前短路昂贵的重训练步骤。在信用卡欺诈基准的五个构造候选资产上验证，可量化数据相对现有组合的增量价值及其性价比。 in data-rich enterprises the hard question is not whether a candidate dataset is good in isolation, but whether it adds information beyond what the organization already holds, and whether that increment is worth its price. we present the data differentiator framework (ddf), a composite scoring method for candidate data assets that combines (i) a mutual-information-based redundancy penalty against the existing portfolio, (ii) a cost-normalized, significance-gated marginal utility score derived from an ablation study, and (iii) explicit governance inputs (trust, identity resolution quality, strategic weights) set by the business. the framework is executed by a staged pipeline, the strategic data sourcing agent ecosystem (sdsae), that short-circuits expensive model-retraining steps for assets failing governance or redundancy gates. conceptually, the ddf extends the relevance-minus-redundancy principle of mrmr feature selection from the feature level to the asset level, and adds cost normalization, a statistical significance gate, and governance terms that per-sample valuation methods such as data shapley do not model. we validate the framework on the public credit-card fraud benchmark (284,807 transactions) with five constructed candidate assets spanning the redundancy spectrum. only the genuinely differentiated asset passes the significance gate ($δ$auc = +0.0029, delong $p = 1.4\\times 10^{-9}$, holm-corrected $p = 7.2\\times 10^{-9}$) and receives an acquire recommendation (dds = +0.663); the fully redundant asset scores lowest (dds = -0.135). the recommendation is stable across 19 of 22 admissible strategic-weight configurations and across all decision thresholds in [0.15, 0.66]. we state clearly which quantities in the case study are computed from data and which are simulated governance inputs, and we discuss the design limits of a single-dataset evaluation. equifax inc. sukesh kumar, dilip singh cs.lg"
+    },
+    {
+      "arxiv_id": "2610.28829",
+      "title": "HorizonComposer: Spatiotemporally Consistent Driving Video Editing with Enriched Traffic Semantics",
+      "authors": "Mauricio Soroco, Yuqiu Liu, Zaid Tasneem, Francesco Pittaluga, Abhishek Aich, Wuyang Chen, Manmohan Chandraker, Ziyu Jiang",
+      "affiliations": "Simon Fraser University; NEC Labs America",
+      "published_date": "2026-10-20",
+      "categories": "cs.CV",
+      "abstract": "Instruction-guided video generative models offer a scalable solution for stress-testing autonomous driving systems by simulating diverse environmental conditions. However, driving scenes operate within a dense Operational Design Domain (ODD) governed by strict traffic semantics. When applied to global driving-condition edits, general-purpose instruction-guided video editors frequently corrupt these semantics, leading to structural hallucinations and ``temporal shock.'' This work distills and protects traffic semantics during video editing at three levels. First, we construct a hybrid dataset by combining temporally aligned real-world videos with synthetic edits, balancing foundational scene structure with unambiguous appearance signals. Second, during training, we adapt advantage conditioning from offline reinforcement learning to align the model using dense rewards. We extract dense, pixel-level rewards from the hybrid data to serve as a localized signal and actively steer generation toward structurally reliable pixels. Finally, our model mitigates temporal shock by introducing thinking frames, a transition mechanism that seamlessly reconciles static image conditioning with dynamic video context. Extensive experiments demonstrate that our method prevents the corruption of multi-actor dynamics, establishing state-of-the-art spatiotemporal consistency, yielding consistent user preference (39% relative improvement in content preservation and 12% in temporal consistency), and achieving a significant 5% gain in downstream road line segmentation and 7% gain in downstream multi-object detection.",
+      "summary_cn": "面向自动驾驶压力测试的指令引导驾驶视频编辑方法，指出通用视频编辑器做全局天气或场景编辑时会破坏稠密交通语义，产生结构幻觉与“时序冲击”。工作构建真实视频与合成编辑对齐的混合数据，把离线强化学习的优势条件改造为像素级稠密奖励引导训练，并引入思考帧衔接静态图像条件与动态视频，在保持时空一致性的同时完成驾驶条件编辑。",
+      "pdf_filename": "2610.28829.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "强化学习",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28829",
+      "search_text": "horizoncomposer: spatiotemporally consistent driving video editing with enriched traffic semantics 强化学习 自动驾驶 面向自动驾驶压力测试的指令引导驾驶视频编辑方法，指出通用视频编辑器做全局天气或场景编辑时会破坏稠密交通语义，产生结构幻觉与“时序冲击”。工作构建真实视频与合成编辑对齐的混合数据，把离线强化学习的优势条件改造为像素级稠密奖励引导训练，并引入思考帧衔接静态图像条件与动态视频，在保持时空一致性的同时完成驾驶条件编辑。 instruction-guided video generative models offer a scalable solution for stress-testing autonomous driving systems by simulating diverse environmental conditions. however, driving scenes operate within a dense operational design domain (odd) governed by strict traffic semantics. when applied to global driving-condition edits, general-purpose instruction-guided video editors frequently corrupt these semantics, leading to structural hallucinations and ``temporal shock.'' this work distills and protects traffic semantics during video editing at three levels. first, we construct a hybrid dataset by combining temporally aligned real-world videos with synthetic edits, balancing foundational scene structure with unambiguous appearance signals. second, during training, we adapt advantage conditioning from offline reinforcement learning to align the model using dense rewards. we extract dense, pixel-level rewards from the hybrid data to serve as a localized signal and actively steer generation toward structurally reliable pixels. finally, our model mitigates temporal shock by introducing thinking frames, a transition mechanism that seamlessly reconciles static image conditioning with dynamic video context. extensive experiments demonstrate that our method prevents the corruption of multi-actor dynamics, establishing state-of-the-art spatiotemporal consistency, yielding consistent user preference (39% relative improvement in content preservation and 12% in temporal consistency), and achieving a significant 5% gain in downstream road line segmentation and 7% gain in downstream multi-object detection. simon fraser university; nec labs america mauricio soroco, yuqiu liu, zaid tasneem, francesco pittaluga, abhishek aich, wuyang chen, manmohan chandraker, ziyu jiang cs.cv"
+    },
+    {
+      "arxiv_id": "2610.28696",
+      "title": "PCLA-Bridge: A Framework for Cross-Domain Deployment of CARLA Agents",
+      "authors": "Masoud Jamshidiyan Tehrani, Jinhan Kim, Paolo Tonella",
+      "affiliations": "Università della Svizzera Italiana, Lugano, Switzerland",
+      "published_date": "2026-10-20",
+      "categories": "cs.SE, cs.RO",
+      "abstract": "Most high-performing end-to-end autonomous driving agents (ADAs) are developed for the CARLA Leaderboard, tightly coupling them to CARLA's APIs, sensor layouts, coordinate systems, and internal clock. Reusing these models on real datasets, alternative simulators, or physical platforms necessitates substantial manual re-engineering. We present PCLA-Bridge, a deployable tool that runs unmodified CARLA Leaderboard agents from any sensor source to any control destination without an active CARLA server. With PCLA-Bridge handling dependency isolation, tensor marshalling, routing, and synthetic timing, integrators only need to provide a minimal interface. We validate the tool across two operational paradigms: offline replay on in-domain CARLA recordings and real-world nuScenes logs, and live closed-loop control across three diverse simulation engines: MetaDrive, AWSIM, and AlpaSim. We analyze the lightweight integration requirements for each platform, highlighting output translation (such as converting agent actions into target trajectory formats) and coordinate-frame transformations, showing that integration requires minimal glue code rather than structural changes. All eight evaluated agents execute across all three simulators without modification, confirming the reliability of PCLA-Bridge and establishing a foundation for systematic sim-to-real, cross-sim, and security testing.",
+      "summary_cn": "针对CARLA端到端驾驶智能体与CARLA的API、传感器布局和时钟强耦合的问题，提出无需CARLA服务器即可跨传感器源与跨控制目标运行的桥接工具，处理依赖隔离与合成时序。在CARLA与nuScenes上离线回放，并在MetaDrive、AWSIM、AlpaSim中闭环控制，八个智能体零改动跑通。",
+      "pdf_filename": "2610.28696.pdf",
+      "crawled_date": "2026-10-22",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28696",
+      "search_text": "pcla-bridge: a framework for cross-domain deployment of carla agents 闭环仿真 自动驾驶 针对carla端到端驾驶智能体与carla的api、传感器布局和时钟强耦合的问题，提出无需carla服务器即可跨传感器源与跨控制目标运行的桥接工具，处理依赖隔离与合成时序。在carla与nuscenes上离线回放，并在metadrive、awsim、alpasim中闭环控制，八个智能体零改动跑通。 most high-performing end-to-end autonomous driving agents (adas) are developed for the carla leaderboard, tightly coupling them to carla's apis, sensor layouts, coordinate systems, and internal clock. reusing these models on real datasets, alternative simulators, or physical platforms necessitates substantial manual re-engineering. we present pcla-bridge, a deployable tool that runs unmodified carla leaderboard agents from any sensor source to any control destination without an active carla server. with pcla-bridge handling dependency isolation, tensor marshalling, routing, and synthetic timing, integrators only need to provide a minimal interface. we validate the tool across two operational paradigms: offline replay on in-domain carla recordings and real-world nuscenes logs, and live closed-loop control across three diverse simulation engines: metadrive, awsim, and alpasim. we analyze the lightweight integration requirements for each platform, highlighting output translation (such as converting agent actions into target trajectory formats) and coordinate-frame transformations, showing that integration requires minimal glue code rather than structural changes. all eight evaluated agents execute across all three simulators without modification, confirming the reliability of pcla-bridge and establishing a foundation for systematic sim-to-real, cross-sim, and security testing. università della svizzera italiana, lugano, switzerland masoud jamshidiyan tehrani, jinhan kim, paolo tonella cs.se, cs.ro"
+    },
     {
       "arxiv_id": "2610.28631",
       "title": "AEON: Unifying Video and 3D World Models",
