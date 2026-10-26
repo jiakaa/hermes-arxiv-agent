@@ -1,55 +1,55 @@
 {
-  "count": 1715,
+  "count": 1733,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-23",
+  "crawled_date_max": "2026-10-26",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-22",
+  "published_date_max": "2026-10-23",
   "rating_counts": {
-    "S": 491,
-    "A": 704,
-    "B": 273,
-    "C": 247,
+    "S": 493,
+    "A": 711,
+    "B": 276,
+    "C": 253,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 367,
+      "count": 368,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 326,
+      "count": 329,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 312,
+      "count": 315,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 265,
+      "count": 266,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 256,
+      "count": 259,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 238,
+      "count": 244,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 177,
+      "count": 179,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 118,
+      "count": 121,
       "group": "世界模型与仿真"
     },
     {
@@ -59,22 +59,22 @@
     },
     {
       "name": "前馈3D重建",
-      "count": 104,
+      "count": 105,
       "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
-      "count": 102,
+      "count": 103,
       "group": "通用"
     },
     {
       "name": "仿真器",
-      "count": 92,
+      "count": 93,
       "group": "通用"
     },
     {
       "name": "场景压缩",
-      "count": 81,
+      "count": 82,
       "group": "3DGS/4DGS"
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "name": "地形重建",
-      "count": 14,
+      "count": 15,
       "group": "地面重建"
     },
     {
@@ -154,6 +154,351 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.32965",
+      "title": "RynnUnify: Towards Unified Embodied Brain",
+      "authors": "Minghao Zhu, Bohan Hou, Kun Xiang, Zixuan Wang, Yinzhou Tang, Yifei Yang, Zhikai Wang, Tianyi Zhang, Kehan Li, Haoyu Zhao, Siteng Huang, Leigang Qu, Sicong Leng, Dongchi Huang, Mingxiu Chen, Shijian Lu, Yue Wang, Xiaodan Liang, Zhenyu Zeng, Deli Zhao, Chengju Liu, Jianfei Yang, Xin Li",
+      "affiliations": "DAMO Academy, Alibaba Group; Hupan Lab",
+      "published_date": "2026-10-23",
+      "categories": "cs.RO",
+      "abstract": "We introduce RynnUnify, a 16B unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. With capabilities spanning spatial reasoning, physical prediction, and grounding, RynnUnify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. Building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. We also develop a world-action extension of the full RynnUnify model, translating its understanding and prediction capabilities into robot control. To evaluate these capabilities, we introduce Rynn-VP and Rynn-GEU for long-horizon visual planning and anticipatory reasoning. Experiments show that RynnUnify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the Rynn-VP overall score by 9.75 points over Cosmos 3 Nano. Its agentic extension improves the Rynn-GEU average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\\% success on 20 selected composite RoboCasa365 tasks and 46.7\\% average success across three real-robot tasks. Together, these results establish RynnUnify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain.",
+      "summary_cn": "提出 16B 统一具身模型，用交错的视频-语言推理把具身理解与长程视觉规划接起来，覆盖空间推理、物理预测与指代定位；再以强化学习扩展成智能体，选择性调用视频预测推断未观测状态，并进一步做 world-action 扩展把理解与预测转成机器人动作。自建 Rynn-VP/Rynn-GEU 上平均理解分最高，RoboCasa365 复合任务成功率 51.5%。",
+      "pdf_filename": "2610.32965.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "强化学习",
+        "规划",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32965",
+      "search_text": "rynnunify: towards unified embodied brain 强化学习 规划 多模态 具身智能 提出 16b 统一具身模型，用交错的视频-语言推理把具身理解与长程视觉规划接起来，覆盖空间推理、物理预测与指代定位；再以强化学习扩展成智能体，选择性调用视频预测推断未观测状态，并进一步做 world-action 扩展把理解与预测转成机器人动作。自建 rynn-vp/rynn-geu 上平均理解分最高，robocasa365 复合任务成功率 51.5%。 we introduce rynnunify, a 16b unified embodied model that combines strong embodied understanding with long-horizon visual planning through interleaved video--language reasoning. with capabilities spanning spatial reasoning, physical prediction, and grounding, rynnunify connects an understanding of the physical world with visual anticipation of how it evolves across successive subtasks. building on these capabilities, we further develop an agentic extension through reinforcement learning to selectively use video predictions for reasoning about unobserved states and interaction outcomes. we also develop a world-action extension of the full rynnunify model, translating its understanding and prediction capabilities into robot control. to evaluate these capabilities, we introduce rynn-vp and rynn-geu for long-horizon visual planning and anticipatory reasoning. experiments show that rynnunify achieves the highest average embodied understanding score among the evaluated unified multimodal models and improves the rynn-vp overall score by 9.75 points over cosmos 3 nano. its agentic extension improves the rynn-geu average by 6.0 points over direct reasoning, while the world-action extension achieves 51.5\\% success on 20 selected composite robocasa365 tasks and 46.7\\% average success across three real-robot tasks. together, these results establish rynnunify as a shared foundation for embodied understanding, visual planning, and robot control, taking a step toward a unified embodied brain. damo academy, alibaba group; hupan lab minghao zhu, bohan hou, kun xiang, zixuan wang, yinzhou tang, yifei yang, zhikai wang, tianyi zhang, kehan li, haoyu zhao, siteng huang, leigang qu, sicong leng, dongchi huang, mingxiu chen, shijian lu, yue wang, xiaodan liang, zhenyu zeng, deli zhao, chengju liu, jianfei yang, xin li cs.ro"
+    },
+    {
+      "arxiv_id": "2610.32719",
+      "title": "Cross-Scenario Controller Parameter Transformation from Real-World Driving Data through Flow Matching",
+      "authors": "Christian Zink, Maik Pfefferkorn, Eric Lenz, Felix Kallmeyer, Rolf Findeisen",
+      "affiliations": "Control and Cyber-Physical Systems Laboratory, Technical University of Darmstadt; Driver Assistance Systems Predevelopment, Volkswagen AG",
+      "published_date": "2026-10-23",
+      "categories": "eess.SY, cs.LG",
+      "abstract": "Advanced Driver Assistance Systems have become increasingly widespread, aiming to support drivers, reduce workload, and improve traffic safety. However, many systems are rarely used because their behavior feels unnatural and does not match individual driving behavior. The growing availability of large-scale, real-world human driving data enables more human-like and driver-individual assistance functions. This paper formulates the adaptation of Adaptive Cruise Control parameters as a driver-individual scenario-to-scenario transport problem, transforming controller parameters from one driving context to another. Using flow matching, we train a generative model to predict the target-scenario behavior of previously unseen drivers from only a few demonstrations in a source scenario. We compare the approach with a linear parameter-shift baseline and evaluate flow-matching variants incorporating driver-consistent coupling, driver embeddings, and classifier-free guidance based on driving profiles extracted from trajectory data using a variational autoencoder.",
+      "summary_cn": "把 ACC 参数的个性化适配表述为跨场景参数传输问题：用流匹配训练生成模型，只凭驾驶员在源场景的少量示范，预测其在新场景下的控制器行为，并比较驾驶员一致耦合、驾驶员嵌入、基于 VAE 驾驶画像的无分类器引导等变体，与线性参数平移基线对比，使辅助驾驶更贴近个体驾驶风格。",
+      "pdf_filename": "2610.32719.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.32719",
+      "search_text": "cross-scenario controller parameter transformation from real-world driving data through flow matching  把 acc 参数的个性化适配表述为跨场景参数传输问题：用流匹配训练生成模型，只凭驾驶员在源场景的少量示范，预测其在新场景下的控制器行为，并比较驾驶员一致耦合、驾驶员嵌入、基于 vae 驾驶画像的无分类器引导等变体，与线性参数平移基线对比，使辅助驾驶更贴近个体驾驶风格。 advanced driver assistance systems have become increasingly widespread, aiming to support drivers, reduce workload, and improve traffic safety. however, many systems are rarely used because their behavior feels unnatural and does not match individual driving behavior. the growing availability of large-scale, real-world human driving data enables more human-like and driver-individual assistance functions. this paper formulates the adaptation of adaptive cruise control parameters as a driver-individual scenario-to-scenario transport problem, transforming controller parameters from one driving context to another. using flow matching, we train a generative model to predict the target-scenario behavior of previously unseen drivers from only a few demonstrations in a source scenario. we compare the approach with a linear parameter-shift baseline and evaluate flow-matching variants incorporating driver-consistent coupling, driver embeddings, and classifier-free guidance based on driving profiles extracted from trajectory data using a variational autoencoder. control and cyber-physical systems laboratory, technical university of darmstadt; driver assistance systems predevelopment, volkswagen ag christian zink, maik pfefferkorn, eric lenz, felix kallmeyer, rolf findeisen eess.sy, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.32666",
+      "title": "Robust Offset-Free Lane-Keeping Control Framework for Vision-Only Automated Vehicles",
+      "authors": "Der-Hau Lee",
+      "affiliations": "Department of Electrophysics, National Yang Ming Chiao Tung University",
+      "published_date": "2026-10-23",
+      "categories": "cs.RO, cs.CV, eess.SY",
+      "abstract": "Achieving accurate, real-time lane-keeping control during high-speed cornering on large-curvature roads while ensuring robust vehicle stability is a critical challenge in autonomous driving. To address this challenge, this study developed a robust offset-free model predictive control (OF-MPC) framework for vision-based autonomous vehicle lane-keeping. The regulation problem in this framework is solved using several algorithms. Numerical simulation results indicated that the interpolation-tube-based constrained iterative linear quadratic regulator (itube-CILQR) algorithm outperformed solvers based on the standard Interior Point Optimizer (IPOPT) and Operator Splitting Quadratic Program (OSQP), achieving a mean computation time of less than 5 ms. The itube-CILQR algorithm was then used for vehicle control in vision-based lane-keeping experiments in a simulation environment to quantify the perceptual uncertainty of a visual perception model (multitask UNet). This quantification was performed using the OF-MPC framework for traffic scenes that were not encountered during model training. Overall, the developed OF-MPC framework and the proposed method for characterizing the perceptual uncertainty of a visual perception system in unseen environments can contribute to the future development of advanced autonomous driving systems.",
+      "summary_cn": "针对大曲率高弯高速车道保持，提出无偏鲁棒模型预测控制框架：调节问题交给插值管约束迭代 LQR（itube-CILQR）求解，与 IPOPT、OSQP 对比平均求解时间低于 5 ms；再用多任务 UNet 视觉感知的输出量化感知不确定性，并在训练未见过的场景中评估闭环车道保持的稳定性与精度。",
+      "pdf_filename": "2610.32666.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32666",
+      "search_text": "robust offset-free lane-keeping control framework for vision-only automated vehicles 闭环仿真 自动驾驶 针对大曲率高弯高速车道保持，提出无偏鲁棒模型预测控制框架：调节问题交给插值管约束迭代 lqr（itube-cilqr）求解，与 ipopt、osqp 对比平均求解时间低于 5 ms；再用多任务 unet 视觉感知的输出量化感知不确定性，并在训练未见过的场景中评估闭环车道保持的稳定性与精度。 achieving accurate, real-time lane-keeping control during high-speed cornering on large-curvature roads while ensuring robust vehicle stability is a critical challenge in autonomous driving. to address this challenge, this study developed a robust offset-free model predictive control (of-mpc) framework for vision-based autonomous vehicle lane-keeping. the regulation problem in this framework is solved using several algorithms. numerical simulation results indicated that the interpolation-tube-based constrained iterative linear quadratic regulator (itube-cilqr) algorithm outperformed solvers based on the standard interior point optimizer (ipopt) and operator splitting quadratic program (osqp), achieving a mean computation time of less than 5 ms. the itube-cilqr algorithm was then used for vehicle control in vision-based lane-keeping experiments in a simulation environment to quantify the perceptual uncertainty of a visual perception model (multitask unet). this quantification was performed using the of-mpc framework for traffic scenes that were not encountered during model training. overall, the developed of-mpc framework and the proposed method for characterizing the perceptual uncertainty of a visual perception system in unseen environments can contribute to the future development of advanced autonomous driving systems. department of electrophysics, national yang ming chiao tung university der-hau lee cs.ro, cs.cv, eess.sy"
+    },
+    {
+      "arxiv_id": "2610.32596",
+      "title": "OWLS: Open-world Language-conditioned Speed Fields for Zero-Shot Rover Navigation",
+      "authors": "Chahyon Ku, Erica Tevere, Georgios Georgakis, Rudra Mukherjee, Bernadette Bucher",
+      "affiliations": "Department of Robotics, University of Michigan; Jet Propulsion Laboratory, California Institute of Technology",
+      "published_date": "2026-10-23",
+      "categories": "cs.RO",
+      "abstract": "Semantics can provide a proxy for physical traversability. Terrain that looks like loose sand or a rock field is likely to have similar physical properties. Open-vocabulary vision-language models (VLMs) enable this physical reasoning over terrain outside any fixed label set. We present Open-world Language-conditioned Speed Fields (OWLS), which plans directly over the dense feature map of a VLM. Prompted with a description of traversable terrain, the VLM scores every pixel of a single camera image; OWLS projects these scores onto the ground, adapts them to the platform with two morphological operations, and uses the result as the speed field of a minimum-time planner, so terrain appearance and obstacle clearance shape one trajectory. OWLS needs no task-specific training, no terrain annotation, no persistent map, and no exteroceptive sensor beyond the camera. We evaluate it on a physical rover indoors and off-road, on simulated Mars and Moon rovers over 200 procedurally generated terrains, and on real planetary imagery.",
+      "summary_cn": "用开放词表 VLM 的稠密特征图直接做局部规划：给定可通行地形描述，VLM 对单张图像逐像素打分，分数经地面投影落到机器人坐标系，再用膨胀/腐蚀两个形态学操作适配平台尺寸与安全间距，最终作为最小时间规划的速度场。无需任务训练、地形标注、持久地图或相机以外的传感器，在实机小车与模拟火星/月球巡视器上验证。",
+      "pdf_filename": "2610.32596.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "规划",
+        "地形重建",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32596",
+      "search_text": "owls: open-world language-conditioned speed fields for zero-shot rover navigation 规划 地形重建 多模态 用开放词表 vlm 的稠密特征图直接做局部规划：给定可通行地形描述，vlm 对单张图像逐像素打分，分数经地面投影落到机器人坐标系，再用膨胀/腐蚀两个形态学操作适配平台尺寸与安全间距，最终作为最小时间规划的速度场。无需任务训练、地形标注、持久地图或相机以外的传感器，在实机小车与模拟火星/月球巡视器上验证。 semantics can provide a proxy for physical traversability. terrain that looks like loose sand or a rock field is likely to have similar physical properties. open-vocabulary vision-language models (vlms) enable this physical reasoning over terrain outside any fixed label set. we present open-world language-conditioned speed fields (owls), which plans directly over the dense feature map of a vlm. prompted with a description of traversable terrain, the vlm scores every pixel of a single camera image; owls projects these scores onto the ground, adapts them to the platform with two morphological operations, and uses the result as the speed field of a minimum-time planner, so terrain appearance and obstacle clearance shape one trajectory. owls needs no task-specific training, no terrain annotation, no persistent map, and no exteroceptive sensor beyond the camera. we evaluate it on a physical rover indoors and off-road, on simulated mars and moon rovers over 200 procedurally generated terrains, and on real planetary imagery. department of robotics, university of michigan; jet propulsion laboratory, california institute of technology chahyon ku, erica tevere, georgios georgakis, rudra mukherjee, bernadette bucher cs.ro"
+    },
+    {
+      "arxiv_id": "2610.32505",
+      "title": "BAARC: Uncertainty-Driven Adaptive Partial Spectral Measurement to Full Reconstruction for Material Classification",
+      "authors": "Adithya Ashok Chalain Valapil, Aishwarya Venkataramanan, Joachim Denzler",
+      "affiliations": "Computer Vision Group, Friedrich Schiller University Jena",
+      "published_date": "2026-10-23",
+      "categories": "cs.LG",
+      "abstract": "Spectroscopic instruments with limited wavenumber coverage require accurate scan positioning or multiple measurements to complete the material analysis. This often requires prerequisite knowledge about the material under diagnosis to measure the spectral regions with distinguishing peaks. In our study, we simulate a Bayesian Adaptive Acquisition with Reconstruction-driven Classification (BAARC) framework for Raman spectral measurements, using masked training to learn spectral features that dynamically drive laser channel selection until the material is identified. We present a jointly trained two-level framework that takes progressive partial measurements of small wavenumber patches across the complete spectral range and, at each step, first attempts to reconstruct the full spectra until the model uncertainty is low. Secondly, material classification is performed at each reconstruction step until stoppage. Uncertainty quantification during reconstruction steps helps determine the measurement position of our next patch, while combining it with classification uncertainty determines measurement termination. By closing the loop between hardware acquisition and deep probabilistic modeling, the proposed system minimizes physical measurement steps while maintaining both spectral fidelity and diagnostic accuracy. Experimental evaluations demonstrate that our framework achieves high-accuracy sample identification using only a fraction of full-spectrum channels, offering a scalable solution for real-time, high-throughput spectroscopic instruments.",
+      "summary_cn": "面向拉曼光谱仪波数覆盖受限的问题，提出贝叶斯自适应采集与重建驱动分类框架：在小波数片段上逐步测量，每步先重建全谱直到不确定性足够低，同时进行材料分类，用重建与分类不确定性共同决定下一步测量位置与终止时机，从而在保持光谱保真度的同时把物理测量步数压到最少，仅用少量通道即达高识别准确率。",
+      "pdf_filename": "2610.32505.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.32505",
+      "search_text": "baarc: uncertainty-driven adaptive partial spectral measurement to full reconstruction for material classification  面向拉曼光谱仪波数覆盖受限的问题，提出贝叶斯自适应采集与重建驱动分类框架：在小波数片段上逐步测量，每步先重建全谱直到不确定性足够低，同时进行材料分类，用重建与分类不确定性共同决定下一步测量位置与终止时机，从而在保持光谱保真度的同时把物理测量步数压到最少，仅用少量通道即达高识别准确率。 spectroscopic instruments with limited wavenumber coverage require accurate scan positioning or multiple measurements to complete the material analysis. this often requires prerequisite knowledge about the material under diagnosis to measure the spectral regions with distinguishing peaks. in our study, we simulate a bayesian adaptive acquisition with reconstruction-driven classification (baarc) framework for raman spectral measurements, using masked training to learn spectral features that dynamically drive laser channel selection until the material is identified. we present a jointly trained two-level framework that takes progressive partial measurements of small wavenumber patches across the complete spectral range and, at each step, first attempts to reconstruct the full spectra until the model uncertainty is low. secondly, material classification is performed at each reconstruction step until stoppage. uncertainty quantification during reconstruction steps helps determine the measurement position of our next patch, while combining it with classification uncertainty determines measurement termination. by closing the loop between hardware acquisition and deep probabilistic modeling, the proposed system minimizes physical measurement steps while maintaining both spectral fidelity and diagnostic accuracy. experimental evaluations demonstrate that our framework achieves high-accuracy sample identification using only a fraction of full-spectrum channels, offering a scalable solution for real-time, high-throughput spectroscopic instruments. computer vision group, friedrich schiller university jena adithya ashok chalain valapil, aishwarya venkataramanan, joachim denzler cs.lg"
+    },
+    {
+      "arxiv_id": "2610.32310",
+      "title": "Supervised Source Separation of Electric Vehicle Interior Noise Using a Hybrid Transformer Architecture",
+      "authors": "Philipp Diel, Zhuo Cao, Arne Hildenbrand, Marco Günther, Stefan Pischinger, Hanno Scharr, Steffen Marburg",
+      "affiliations": "RWTH Aachen University; Forschungszentrum Jülich; Technical University of Munich",
+      "published_date": "2026-10-23",
+      "categories": "cs.SD, cs.LG, eess.AS",
+      "abstract": "The interior sound of an electric vehicle is a superposition of several distinct noise contributions - wind noise, tire noise, powertrain (electric drive unit and inverter) noise, and auxiliary-drive noise - whose relative balance governs both the overall loudness and the perceived sound quality in the vehicle interior. Decomposing a recorded vehicle interior signal into these source contributions is a prerequisite for targeted acoustic engineering, but requires effortful measurement campaigns as well as expertise in the field of transfer path analysis. This work formulates the decomposition as a supervised, binaural source-separation problem with four target source contributions and adapts a hybrid time-spectrogram transformer architecture, originally developed for music demixing, to the domain of sound source separation for technical systems. To disambiguate source contributions, conditioning is introduced in the form of operating-state information, including electric drive speed, electric drive load, vehicle speed, and auxiliary-drive speed. Since isolated real-world reference stems are costly to obtain, the model is trained on a physics-based parametric data generator that synthesizes labeled component sounds from randomized virtual-vehicle hardware configurations and driving scenarios, so that the ground-truth contribution of each source is known by construction. Validation on both synthetic and measured vehicle interior sounds probes the achieved separation performance and underscores the feasibility of applying the proposed method for acoustic contribution analysis in technical systems.",
+      "summary_cn": "把电动车内噪分解为风噪、胎噪、电驱与逆变器噪声、附件噪声四类源的监督双耳分离问题，改造原用于音乐分离的时域-频谱混合 Transformer，并注入电驱转速与负载、车速、附件转速等工况条件消歧；因真实参考信号难获取，用基于物理的参数化生成器合成带标签训练数据，在合成与实测车内音上验证可行性。",
+      "pdf_filename": "2610.32310.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.32310",
+      "search_text": "supervised source separation of electric vehicle interior noise using a hybrid transformer architecture  把电动车内噪分解为风噪、胎噪、电驱与逆变器噪声、附件噪声四类源的监督双耳分离问题，改造原用于音乐分离的时域-频谱混合 transformer，并注入电驱转速与负载、车速、附件转速等工况条件消歧；因真实参考信号难获取，用基于物理的参数化生成器合成带标签训练数据，在合成与实测车内音上验证可行性。 the interior sound of an electric vehicle is a superposition of several distinct noise contributions - wind noise, tire noise, powertrain (electric drive unit and inverter) noise, and auxiliary-drive noise - whose relative balance governs both the overall loudness and the perceived sound quality in the vehicle interior. decomposing a recorded vehicle interior signal into these source contributions is a prerequisite for targeted acoustic engineering, but requires effortful measurement campaigns as well as expertise in the field of transfer path analysis. this work formulates the decomposition as a supervised, binaural source-separation problem with four target source contributions and adapts a hybrid time-spectrogram transformer architecture, originally developed for music demixing, to the domain of sound source separation for technical systems. to disambiguate source contributions, conditioning is introduced in the form of operating-state information, including electric drive speed, electric drive load, vehicle speed, and auxiliary-drive speed. since isolated real-world reference stems are costly to obtain, the model is trained on a physics-based parametric data generator that synthesizes labeled component sounds from randomized virtual-vehicle hardware configurations and driving scenarios, so that the ground-truth contribution of each source is known by construction. validation on both synthetic and measured vehicle interior sounds probes the achieved separation performance and underscores the feasibility of applying the proposed method for acoustic contribution analysis in technical systems. rwth aachen university; forschungszentrum jülich; technical university of munich philipp diel, zhuo cao, arne hildenbrand, marco günther, stefan pischinger, hanno scharr, steffen marburg cs.sd, cs.lg, eess.as"
+    },
+    {
+      "arxiv_id": "2610.32276",
+      "title": "Empirically Calibrated Differential Games for Simulating Driver Interactions",
+      "authors": "Amirmohammad Khakpour, Nachuan Li, Pedram Beigi,  Yu,  Nie",
+      "affiliations": "Department of Civil and Environmental Engineering, Northwestern University; Department of Civil and Environmental Engineering, George Washington University",
+      "published_date": "2026-10-23",
+      "categories": "cs.MA, math.OC",
+      "abstract": "Game-theoretic models can resolve vehicle interactions without hand-written priority rules, but whether they describe human drivers once calibrated has rarely been tested. This study formulates a general-sum differential game of vehicle interactions at urban intersections, calibrates it to observed driving, and evaluates it on data not used for calibration. Each vehicle minimizes a cost that combines speed tracking, adherence to a map-derived lane route, control effort, gap keeping based on the intelligent driver model, a predictive conflict term, and a contact barrier, while perceiving the other vehicles with a delay. The game is solved with a feedback iterative linear-quadratic algorithm, and ten behavioral parameters per vehicle are calibrated by Bayesian optimization on trajectories recorded at four intersections in Washington, D.C. The calibrated game reproduces the trajectories of 819 vehicles with a mean position error of 1.00 m. When only each vehicle's route is known, as in a simulator, it is the most accurate of the compared models on 96 held-out vehicles (7.42 m), and ten-fold cross-validation shows that it is significantly more accurate than calibrated SUMO (by 3.61 m), an inverse reinforcement learning model (by 0.93 m), and independent and cooperative variants of the same model (by 0.33 and 0.32 m). The solutions, computed in 2.1 s for a typical interaction, are verified approximate equilibria. Finally, the conflict and steering weights, which the data do not identify, can be set from safety and comfort targets; together with a stiffer contact barrier, this removes the collisions that otherwise occur in 43% of tight closed-loop conflicts.",
+      "summary_cn": "把城市交叉口车辆交互写成一般和微分博弈，每车最小化速度跟踪、沿地图车道行驶、控制量、基于 IDM 的跟驰间距、预测冲突与接触障碍等代价，并带感知延迟；用反馈迭代 LQR 求解，按贝叶斯优化在华盛顿特区四个交叉口标定每车十个行为参数。819 辆车平均位置误差 1.00 m，紧冲突闭环碰撞由 43% 降为零。",
+      "pdf_filename": "2610.32276.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "强化学习",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32276",
+      "search_text": "empirically calibrated differential games for simulating driver interactions 闭环仿真 强化学习 仿真器 把城市交叉口车辆交互写成一般和微分博弈，每车最小化速度跟踪、沿地图车道行驶、控制量、基于 idm 的跟驰间距、预测冲突与接触障碍等代价，并带感知延迟；用反馈迭代 lqr 求解，按贝叶斯优化在华盛顿特区四个交叉口标定每车十个行为参数。819 辆车平均位置误差 1.00 m，紧冲突闭环碰撞由 43% 降为零。 game-theoretic models can resolve vehicle interactions without hand-written priority rules, but whether they describe human drivers once calibrated has rarely been tested. this study formulates a general-sum differential game of vehicle interactions at urban intersections, calibrates it to observed driving, and evaluates it on data not used for calibration. each vehicle minimizes a cost that combines speed tracking, adherence to a map-derived lane route, control effort, gap keeping based on the intelligent driver model, a predictive conflict term, and a contact barrier, while perceiving the other vehicles with a delay. the game is solved with a feedback iterative linear-quadratic algorithm, and ten behavioral parameters per vehicle are calibrated by bayesian optimization on trajectories recorded at four intersections in washington, d.c. the calibrated game reproduces the trajectories of 819 vehicles with a mean position error of 1.00 m. when only each vehicle's route is known, as in a simulator, it is the most accurate of the compared models on 96 held-out vehicles (7.42 m), and ten-fold cross-validation shows that it is significantly more accurate than calibrated sumo (by 3.61 m), an inverse reinforcement learning model (by 0.93 m), and independent and cooperative variants of the same model (by 0.33 and 0.32 m). the solutions, computed in 2.1 s for a typical interaction, are verified approximate equilibria. finally, the conflict and steering weights, which the data do not identify, can be set from safety and comfort targets; together with a stiffer contact barrier, this removes the collisions that otherwise occur in 43% of tight closed-loop conflicts. department of civil and environmental engineering, northwestern university; department of civil and environmental engineering, george washington university amirmohammad khakpour, nachuan li, pedram beigi,  yu,  nie cs.ma, math.oc"
+    },
+    {
+      "arxiv_id": "2610.32230",
+      "title": "Towards Effective and Transferable Physical Camouflage against Multi-View BEV-based 3D Perception in Autonomous Driving",
+      "authors": "Linye Lyu, Jiawei Zhou, Daojing He, Yu Li",
+      "affiliations": "Harbin Institute of Technology, Shenzhen; Zhejiang University",
+      "published_date": "2026-10-23",
+      "categories": "cs.CV",
+      "abstract": "Modern autonomous driving systems widely adopt multi-view Bird's-Eye-View (BEV) based 3D perception models due to their superior performance. Despite their success, the robustness of these models against adversarial camouflage attacks remains largely unexplored. Existing camouflage attacks primarily target single-view 2D detectors, limiting their effectiveness in multi-view 3D perception settings. To address this gap, we propose BEVCA, a novel adversarial camouflage generation framework tailored for multi-view BEV-based 3D perception. Our framework integrates a BEV-feature-based adversarial loss with a multi-view neural rendering module, enabling effective and transferable camouflage attacks across different models and tasks. Extensive experiments in both digital and physical settings demonstrate that BEVCA outperforms state-of-the-art baselines and exhibits strong robustness under real-world conditions. Our code is available at https://github.com/WAVE-AT-IDEA/BEVCA.",
+      "summary_cn": "针对多视角 BEV 3D 感知模型对对抗伪装鲁棒性未知的问题，提出 BEVCA 伪装生成框架：以 BEV 特征层对抗损失驱动多视角神经渲染，把纹理优化为可在不同模型与任务间迁移的物理伪装。数字与物理实验均优于面向单视角 2D 检测器的攻击基线，并在真实条件下保持较强鲁棒性，代码已开源。",
+      "pdf_filename": "2610.32230.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32230",
+      "search_text": "towards effective and transferable physical camouflage against multi-view bev-based 3d perception in autonomous driving 自动驾驶 针对多视角 bev 3d 感知模型对对抗伪装鲁棒性未知的问题，提出 bevca 伪装生成框架：以 bev 特征层对抗损失驱动多视角神经渲染，把纹理优化为可在不同模型与任务间迁移的物理伪装。数字与物理实验均优于面向单视角 2d 检测器的攻击基线，并在真实条件下保持较强鲁棒性，代码已开源。 modern autonomous driving systems widely adopt multi-view bird's-eye-view (bev) based 3d perception models due to their superior performance. despite their success, the robustness of these models against adversarial camouflage attacks remains largely unexplored. existing camouflage attacks primarily target single-view 2d detectors, limiting their effectiveness in multi-view 3d perception settings. to address this gap, we propose bevca, a novel adversarial camouflage generation framework tailored for multi-view bev-based 3d perception. our framework integrates a bev-feature-based adversarial loss with a multi-view neural rendering module, enabling effective and transferable camouflage attacks across different models and tasks. extensive experiments in both digital and physical settings demonstrate that bevca outperforms state-of-the-art baselines and exhibits strong robustness under real-world conditions. our code is available at https://github.com/wave-at-idea/bevca. harbin institute of technology, shenzhen; zhejiang university linye lyu, jiawei zhou, daojing he, yu li cs.cv"
+    },
+    {
+      "arxiv_id": "2610.32206",
+      "title": "The 3DS Oracle: BIN Attack via the Network",
+      "authors": "Wasif Faisal, Suprava Saha Dibya",
+      "affiliations": "BRAC University",
+      "published_date": "2026-10-23",
+      "categories": "cs.CR",
+      "abstract": "EMV 3-D Secure (3DS) requires a client-visible continuation boundary in browser-mediated flows; in some deployments, that boundary exposes a pre-authorization classification channel. This paper studies 3DS as a protocol, integration surface, and governance problem, combining standards analysis, architectural reconstruction, formal modeling, a documentation audit, disclosure history, and a bounded live evaluation. We show that client-visible integrations can reflect routing and authentication state before financial authorization, allowing 3DS to function as a profiling and screening channel for issuer controls and cardholder/account state rather than only as a defense. In the tested browser-channel Braintree/Cardinal path, the first client-visible result separated researcher-owned anchor cards from bounded adjacent same-range comparison PANs in six of seven distinct ACS/card-range cohorts; separate public evidence, including openly accessible attacker tooling, rotating-proxy support, and illicit paid 3DS card-testing services, shows that comparable signals are already operationalized in the wild. Our live study was deliberately bounded for ethical reasons, so the empirical ceiling reported here reflects researcher restraint rather than an attacker-side scalability limit, although we do not claim network-wide prevalence or candidate issuance. The deeper issue is systemic: decoupled pre-authorization authentication, weak requestor-boundary assumptions, identifier-linked routing invariants, and fragmented accountability let the exposure persist even when individual actors appear locally conformant. Meaningful remediation therefore requires consortium-level reform, including stricter minimization of client-visible pre-authorization responses, more uniform continuation behavior, and stronger client authenticity and session binding.",
+      "summary_cn": "把 EMV 3-D Secure 当作协议、集成面与治理问题研究，结合标准分析、架构重建、形式化建模与受控实测，指出浏览器端可见的续接边界会在金融授权前暴露路由与认证状态，使 3DS 成为发卡行控制与账户状态的筛查通道；七个 ACS/卡段队列中六个可区分锚点卡与同段比较卡，并提出最小化预授权响应等整改方向。",
+      "pdf_filename": "2610.32206.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.32206",
+      "search_text": "the 3ds oracle: bin attack via the network  把 emv 3-d secure 当作协议、集成面与治理问题研究，结合标准分析、架构重建、形式化建模与受控实测，指出浏览器端可见的续接边界会在金融授权前暴露路由与认证状态，使 3ds 成为发卡行控制与账户状态的筛查通道；七个 acs/卡段队列中六个可区分锚点卡与同段比较卡，并提出最小化预授权响应等整改方向。 emv 3-d secure (3ds) requires a client-visible continuation boundary in browser-mediated flows; in some deployments, that boundary exposes a pre-authorization classification channel. this paper studies 3ds as a protocol, integration surface, and governance problem, combining standards analysis, architectural reconstruction, formal modeling, a documentation audit, disclosure history, and a bounded live evaluation. we show that client-visible integrations can reflect routing and authentication state before financial authorization, allowing 3ds to function as a profiling and screening channel for issuer controls and cardholder/account state rather than only as a defense. in the tested browser-channel braintree/cardinal path, the first client-visible result separated researcher-owned anchor cards from bounded adjacent same-range comparison pans in six of seven distinct acs/card-range cohorts; separate public evidence, including openly accessible attacker tooling, rotating-proxy support, and illicit paid 3ds card-testing services, shows that comparable signals are already operationalized in the wild. our live study was deliberately bounded for ethical reasons, so the empirical ceiling reported here reflects researcher restraint rather than an attacker-side scalability limit, although we do not claim network-wide prevalence or candidate issuance. the deeper issue is systemic: decoupled pre-authorization authentication, weak requestor-boundary assumptions, identifier-linked routing invariants, and fragmented accountability let the exposure persist even when individual actors appear locally conformant. meaningful remediation therefore requires consortium-level reform, including stricter minimization of client-visible pre-authorization responses, more uniform continuation behavior, and stronger client authenticity and session binding. brac university wasif faisal, suprava saha dibya cs.cr"
+    },
+    {
+      "arxiv_id": "2610.32130",
+      "title": "TravSUITE: Traversability via Self-Supervised, Uncertainty-Aware IRL and Terrain Estimation",
+      "authors": "Samuel Triest, Amirreza Shaban, David D. Fan, Wenshan Wang, Sebastian Scherer",
+      "affiliations": "Robotics Institute, Carnegie Mellon University; Field AI",
+      "published_date": "2026-10-23",
+      "categories": "cs.RO",
+      "abstract": "Traversability analysis in off-road settings remains a fundamental challenge for mobile robots. Key difficulties include constructing an accurate and expressive local map from multimodal sensor data, and using the map to design traversability rules that yield desirable navigation behavior. Importantly, this system must be resilient to the limited sensing regime brought about by complex environments and high speeds. In this paper, we present TravSUITE, a traversability system suitable for high-speed navigation in off-road environments. TravSUITE consists of two major components: 1) an efficient voxel mapper that leverages visual foundation models (VFMs) to build a rich geometric-semantic local map from streams of on-board sensor data, and 2) a unified neural network that jointly predicts traversability-relevant quantities in bird's eye view (BEV), including geometry, semantics, speed and cost. Our training strategy is entirely annotation-free and self-supervised, leveraging tasks such as map inpainting and inverse reinforcement learning (IRL) to learn both map representations and traversability. We perform a thorough ablation study and comparison to state-of-the-art approaches, and the results indicate that cost learning and auxiliary inpainting each contribute significantly to planning quality, and their combination is critical for achieving state-of-the-art performance in off-road path planning. We also design a simple risk adaptation mechanism to leverage our method's uncertainty estimates at deploy-time, and demonstrate that a combination of inpainting and risk estimation can result in 80% fewer navigation errors and 5% faster autonomous traversal speeds in real-world hardware experiments.",
+      "summary_cn": "面向越野高速导航的可通行性系统：用视觉基础模型从车载多模态流构建几何-语义体素局部地图，再由统一网络在 BEV 下联合预测几何、语义、速度与代价；训练全程自监督、无需人工标注，靠地图修补与逆强化学习学到代价，部署时用不确定性做风险自适应。实机导航错误减少 80%、自主通过速度提升 5%。",
+      "pdf_filename": "2610.32130.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "强化学习",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32130",
+      "search_text": "travsuite: traversability via self-supervised, uncertainty-aware irl and terrain estimation 强化学习 多模态 面向越野高速导航的可通行性系统：用视觉基础模型从车载多模态流构建几何-语义体素局部地图，再由统一网络在 bev 下联合预测几何、语义、速度与代价；训练全程自监督、无需人工标注，靠地图修补与逆强化学习学到代价，部署时用不确定性做风险自适应。实机导航错误减少 80%、自主通过速度提升 5%。 traversability analysis in off-road settings remains a fundamental challenge for mobile robots. key difficulties include constructing an accurate and expressive local map from multimodal sensor data, and using the map to design traversability rules that yield desirable navigation behavior. importantly, this system must be resilient to the limited sensing regime brought about by complex environments and high speeds. in this paper, we present travsuite, a traversability system suitable for high-speed navigation in off-road environments. travsuite consists of two major components: 1) an efficient voxel mapper that leverages visual foundation models (vfms) to build a rich geometric-semantic local map from streams of on-board sensor data, and 2) a unified neural network that jointly predicts traversability-relevant quantities in bird's eye view (bev), including geometry, semantics, speed and cost. our training strategy is entirely annotation-free and self-supervised, leveraging tasks such as map inpainting and inverse reinforcement learning (irl) to learn both map representations and traversability. we perform a thorough ablation study and comparison to state-of-the-art approaches, and the results indicate that cost learning and auxiliary inpainting each contribute significantly to planning quality, and their combination is critical for achieving state-of-the-art performance in off-road path planning. we also design a simple risk adaptation mechanism to leverage our method's uncertainty estimates at deploy-time, and demonstrate that a combination of inpainting and risk estimation can result in 80% fewer navigation errors and 5% faster autonomous traversal speeds in real-world hardware experiments. robotics institute, carnegie mellon university; field ai samuel triest, amirreza shaban, david d. fan, wenshan wang, sebastian scherer cs.ro"
+    },
+    {
+      "arxiv_id": "2610.32069",
+      "title": "DriveMind: Mind-Evolving Belief Tracking for Closed-Loop Autonomous Driving",
+      "authors": "Yan Shi, Kehua Chen, Jiarui Qi, Yihong Tang, Haichen Liao, Yinhai Wang",
+      "affiliations": "University of Washington; McGill University; University of Michigan",
+      "published_date": "2026-10-23",
+      "categories": "cs.AI",
+      "abstract": "Recent multimodal large language models (MLLMs) can perceive a traffic scene, reason about it, and propose a driving action within a single model. However, existing MLLM-based drivers reason from scratch at each frame and commit to a single explanation, discarding earlier hypotheses about the scene. When the scene is ambiguous, the agent locks in on the wrong interpretation and acts on it before evidence accumulates. In this paper, we propose DriveMind, an MLLM-based driving framework that keeps several hypotheses about the scene alive at the same time and updates their weights as new frames arrive. Inspired by particle filtering, DriveMind propagates each hypothesis through a VLM, scores it against the current observation, and resamples to maintain diversity. On Bench2Drive, adding belief tracking to the same driving pipeline improves the Driving Score (DS) from 68.50 to 81.37 and the Success Rate (SR) from 41.36% to 54.09%. The largest gains occur on ambiguous scenarios such as unsignalized intersections (+20.0 DS) and oncoming-traffic interactions (+20.5 DS). Beyond the overall metrics, DriveMind also improves fine-grained interactive driving abilities such as merging, emergency braking, and give-way.",
+      "summary_cn": "针对 MLLM 驾驶模型每帧从零推理、过早锁定单一解释的问题，提出保持多假设的信念跟踪框架：借鉴粒子滤波，让每个场景假设经 VLM 传播、按当前观测打分并重采样以维持多样性，逐帧更新权重。Bench2Drive 上驾驶分数由 68.50 升至 81.37、成功率由 41.36% 升至 54.09%，无信号交叉口与对向车流提升最大。",
+      "pdf_filename": "2610.32069.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶",
+        "多模态",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32069",
+      "search_text": "drivemind: mind-evolving belief tracking for closed-loop autonomous driving 闭环仿真 自动驾驶 多模态 大语言模型 针对 mllm 驾驶模型每帧从零推理、过早锁定单一解释的问题，提出保持多假设的信念跟踪框架：借鉴粒子滤波，让每个场景假设经 vlm 传播、按当前观测打分并重采样以维持多样性，逐帧更新权重。bench2drive 上驾驶分数由 68.50 升至 81.37、成功率由 41.36% 升至 54.09%，无信号交叉口与对向车流提升最大。 recent multimodal large language models (mllms) can perceive a traffic scene, reason about it, and propose a driving action within a single model. however, existing mllm-based drivers reason from scratch at each frame and commit to a single explanation, discarding earlier hypotheses about the scene. when the scene is ambiguous, the agent locks in on the wrong interpretation and acts on it before evidence accumulates. in this paper, we propose drivemind, an mllm-based driving framework that keeps several hypotheses about the scene alive at the same time and updates their weights as new frames arrive. inspired by particle filtering, drivemind propagates each hypothesis through a vlm, scores it against the current observation, and resamples to maintain diversity. on bench2drive, adding belief tracking to the same driving pipeline improves the driving score (ds) from 68.50 to 81.37 and the success rate (sr) from 41.36% to 54.09%. the largest gains occur on ambiguous scenarios such as unsignalized intersections (+20.0 ds) and oncoming-traffic interactions (+20.5 ds). beyond the overall metrics, drivemind also improves fine-grained interactive driving abilities such as merging, emergency braking, and give-way. university of washington; mcgill university; university of michigan yan shi, kehua chen, jiarui qi, yihong tang, haichen liao, yinhai wang cs.ai"
+    },
+    {
+      "arxiv_id": "2610.32015",
+      "title": "Scaling Graph Query Processing: Focused Exploration on Partitions Using Load Balancing",
+      "authors": "Harshit Modi, Abhishek Santra, Sharma Chakravarthy",
+      "affiliations": "IT Lab & CSE Department, University of Texas at Arlington",
+      "published_date": "2026-10-23",
+      "categories": "cs.DB, cs.DC, cs.IR",
+      "abstract": "The focus of this paper is on query processing and not search (approximate or exact). The goal is to find all or k answers and the expressiveness of a query (as opposed to a search expression which is typically simpler) is considered important. Although SQL query processing has matured over the last several decades, query processing over graph data has not received the same attention. Only recently, systems, such as Neo4J, and others have started using graphs for data representation on a large scale. Their approaches and algorithms remain proprietary.   In this paper, we address the problem of answering graph queries and their efficient processing on arbitrary-sized graphs. We propose the partitioning of graphs and the use of the distributed paradigm to achieve efficiency and scalability. Our approach takes a subgraph as query input including wild cards and comparison operations. Our partitioned approach leverages focused exploration and distributed processing to achieve the desired parallelism and improve the response time. We also present heuristics to reduce the number of partitions loaded for query processing. We present our partitioning algorithm, distributed processing architecture used, and load balancing for computing query answers. We establish the correctness of the approach in the presence of partitions, compare heuristics for load balancing, and extensive experimental results over large synthetic and real-world graph data sets.",
+      "summary_cn": "针对图数据上的查询处理（非近似搜索），提出图划分加分布式执行方案：以含通配符与比较操作的子图作为查询输入，通过聚焦式探索只加载相关分区以获得并行度，给出减少分区加载的启发式与负载均衡策略，并在分区情形下论证正确性，配合大规模合成图与真实图实验验证响应时间与可扩展性。",
+      "pdf_filename": "2610.32015.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.32015",
+      "search_text": "scaling graph query processing: focused exploration on partitions using load balancing  针对图数据上的查询处理（非近似搜索），提出图划分加分布式执行方案：以含通配符与比较操作的子图作为查询输入，通过聚焦式探索只加载相关分区以获得并行度，给出减少分区加载的启发式与负载均衡策略，并在分区情形下论证正确性，配合大规模合成图与真实图实验验证响应时间与可扩展性。 the focus of this paper is on query processing and not search (approximate or exact). the goal is to find all or k answers and the expressiveness of a query (as opposed to a search expression which is typically simpler) is considered important. although sql query processing has matured over the last several decades, query processing over graph data has not received the same attention. only recently, systems, such as neo4j, and others have started using graphs for data representation on a large scale. their approaches and algorithms remain proprietary.   in this paper, we address the problem of answering graph queries and their efficient processing on arbitrary-sized graphs. we propose the partitioning of graphs and the use of the distributed paradigm to achieve efficiency and scalability. our approach takes a subgraph as query input including wild cards and comparison operations. our partitioned approach leverages focused exploration and distributed processing to achieve the desired parallelism and improve the response time. we also present heuristics to reduce the number of partitions loaded for query processing. we present our partitioning algorithm, distributed processing architecture used, and load balancing for computing query answers. we establish the correctness of the approach in the presence of partitions, compare heuristics for load balancing, and extensive experimental results over large synthetic and real-world graph data sets. it lab & cse department, university of texas at arlington harshit modi, abhishek santra, sharma chakravarthy cs.db, cs.dc, cs.ir"
+    },
+    {
+      "arxiv_id": "2610.32001",
+      "title": "QuantumMatterExplorer: An Autonomous Agent for the Discovery of Quantum Many-Body Phases of Matter",
+      "authors": "Jannes Nys, Andrew Jreissaty, Juan Carrasquilla",
+      "affiliations": "Institute for Theoretical Physics, ETH Zürich",
+      "published_date": "2026-10-22",
+      "categories": "quant-ph, cond-mat.str-el",
+      "abstract": "Mapping the phase diagram of a new quantum Hamiltonian demands expert judgement at every step: which observables to measure, where in parameter space to compute, or how to separate genuine order from finite-size artefacts. We introduce QuantumMatterExplorer, an autonomous agent that takes only a Hamiltonian and its parameter ranges as input and returns a phase diagram obtained from its own numerical simulations. The agent is built on a large language model and is designed to reason over a long horizon, maintain a persistent written plan, and drive a set of computational tools, with density-matrix renormalization group (DMRG) calculations cross-checked against independent exact diagonalization. The agent combines a large language model with persistent planning, a library of expert computational-physics skills, and density-matrix renormalization group calculations validated against independent exact diagonalization. It adaptively selects quantities to evaluate, refines parameter scans, and performs finite-size analyses as evidence accumulates. After validating the approach on Hamiltonians with known transitions, we challenge it with a frustrated bilinear-biquadratic spin-1 chain with single-ion anisotropy, whose two-dimensional phase diagram was published only recently and is unlikely to appear in any training corpus. Given no hint about the expected physics, the agent proposes which observables to probe, and identifies candidate Néel, Haldane and dimerized phases, in broad agreement with the reference phase diagram. It also detects incommensurate correlations and infers the frustration-dependent geometry of the phase boundaries, all within an eight-hour compute budget. These results open a practical route to the autonomous computational discovery of new phases of quantum matter.",
+      "summary_cn": "构建由大模型驱动的自主智能体，只给哈密顿量与参数范围即可自行产出相图：保持书面长期计划、调度 DMRG 与精确对角化等计算工具，自适应选择观测量、细化参数扫描并做有限尺寸分析。在训练语料中不存在的阻挫自旋-1链上，八小时算力内自行识别 Néel、Haldane 与二聚相，并发现非公度关联。",
+      "pdf_filename": "2610.32001.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32001",
+      "search_text": "quantummatterexplorer: an autonomous agent for the discovery of quantum many-body phases of matter 大语言模型 构建由大模型驱动的自主智能体，只给哈密顿量与参数范围即可自行产出相图：保持书面长期计划、调度 dmrg 与精确对角化等计算工具，自适应选择观测量、细化参数扫描并做有限尺寸分析。在训练语料中不存在的阻挫自旋-1链上，八小时算力内自行识别 néel、haldane 与二聚相，并发现非公度关联。 mapping the phase diagram of a new quantum hamiltonian demands expert judgement at every step: which observables to measure, where in parameter space to compute, or how to separate genuine order from finite-size artefacts. we introduce quantummatterexplorer, an autonomous agent that takes only a hamiltonian and its parameter ranges as input and returns a phase diagram obtained from its own numerical simulations. the agent is built on a large language model and is designed to reason over a long horizon, maintain a persistent written plan, and drive a set of computational tools, with density-matrix renormalization group (dmrg) calculations cross-checked against independent exact diagonalization. the agent combines a large language model with persistent planning, a library of expert computational-physics skills, and density-matrix renormalization group calculations validated against independent exact diagonalization. it adaptively selects quantities to evaluate, refines parameter scans, and performs finite-size analyses as evidence accumulates. after validating the approach on hamiltonians with known transitions, we challenge it with a frustrated bilinear-biquadratic spin-1 chain with single-ion anisotropy, whose two-dimensional phase diagram was published only recently and is unlikely to appear in any training corpus. given no hint about the expected physics, the agent proposes which observables to probe, and identifies candidate néel, haldane and dimerized phases, in broad agreement with the reference phase diagram. it also detects incommensurate correlations and infers the frustration-dependent geometry of the phase boundaries, all within an eight-hour compute budget. these results open a practical route to the autonomous computational discovery of new phases of quantum matter. institute for theoretical physics, eth zürich jannes nys, andrew jreissaty, juan carrasquilla quant-ph, cond-mat.str-el"
+    },
+    {
+      "arxiv_id": "2610.31983",
+      "title": "Interpreting Physics in Video Encoders using Multi-Object Interaction Videos",
+      "authors": "Ayushi Mehrotra, Sai Vidyaranya Nuthalapati",
+      "affiliations": "California Institute of Technology",
+      "published_date": "2026-10-22",
+      "categories": "cs.CV",
+      "abstract": "Video encoder models are increasingly used as world models for physical AI, where a policy plans by rolling out the latent, so what physics the latent holds bounds what the agent can plan over. Moreover, existing interpretability work probes quantities belonging to a single object; the quantities that make physics relational, such as momentum transfer, restitution, and friction, are defined between bodies and have not been examined. We probe relational physics attributes in two frozen self-supervised video encoders (V-JEPA2 and VideoMAE) under two-body settings and test if they transfer across environments. Our early findings are mixed. Both encoders separate elastic from inelastic collisions reliably. V-JEPA2's own predictor is less likely to predict a collision that creates kinetic energy compared to one that loses it. Momentum-violation detection appears in only one of the two encoders, a kinetic-energy readout survives a change of environment for V-JEPA2 but not for VideoMAE, and neither model holds a friction coefficient that survives a change of geometry.",
+      "summary_cn": "把视频编码器当作物理 AI 的世界模型，用两体碰撞视频探测其潜空间中的关系型物理量：动量传递、恢复系数与摩擦。V-JEPA2 与 VideoMAE 都能可靠区分弹性/非弹性碰撞，但动量守恒违背只在其中一个可读出，动能读码在 V-JEPA2 跨环境可迁移而 VideoMAE 不行，二者都未形成可跨几何保持的摩擦系数。",
+      "pdf_filename": "2610.31983.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31983",
+      "search_text": "interpreting physics in video encoders using multi-object interaction videos 世界模型 把视频编码器当作物理 ai 的世界模型，用两体碰撞视频探测其潜空间中的关系型物理量：动量传递、恢复系数与摩擦。v-jepa2 与 videomae 都能可靠区分弹性/非弹性碰撞，但动量守恒违背只在其中一个可读出，动能读码在 v-jepa2 跨环境可迁移而 videomae 不行，二者都未形成可跨几何保持的摩擦系数。 video encoder models are increasingly used as world models for physical ai, where a policy plans by rolling out the latent, so what physics the latent holds bounds what the agent can plan over. moreover, existing interpretability work probes quantities belonging to a single object; the quantities that make physics relational, such as momentum transfer, restitution, and friction, are defined between bodies and have not been examined. we probe relational physics attributes in two frozen self-supervised video encoders (v-jepa2 and videomae) under two-body settings and test if they transfer across environments. our early findings are mixed. both encoders separate elastic from inelastic collisions reliably. v-jepa2's own predictor is less likely to predict a collision that creates kinetic energy compared to one that loses it. momentum-violation detection appears in only one of the two encoders, a kinetic-energy readout survives a change of environment for v-jepa2 but not for videomae, and neither model holds a friction coefficient that survives a change of geometry. california institute of technology ayushi mehrotra, sai vidyaranya nuthalapati cs.cv"
+    },
+    {
+      "arxiv_id": "2610.31908",
+      "title": "PixGR: Pixel-Space Generative Decoding for Fast Feed-Forward 3D Reconstruction",
+      "authors": "Ranran Huang, Wenjing Bian, Weixun Luo, Ye Mao, Krystian Mikolajczyk",
+      "affiliations": "Imperial College London; University of Tübingen",
+      "published_date": "2026-10-22",
+      "categories": "cs.CV",
+      "abstract": "We present PixGR, an efficient framework that integrates lightweight pixel-space generative modeling into feed-forward 3D Gaussian reconstruction to model scene uncertainty. Context observations are encoded once into a scene latent representation, which conditions generative decoding from noisy target views to produce a shared 3D Gaussian representation. We formulate this process using pixel-space flow matching, enabling end-to-end optimization of 3D reconstruction with direct pixel-space generative supervision through differentiable rendering. This avoids VAE-based latent compression and error propagation inherent in previous two-stage pipelines. To preserve feed-forward efficiency, PixGR caches the scene representation and performs iterative inference using a lightweight DiT decoder. Experiments demonstrate that PixGR outperforms regression-based approaches in challenging sparse-view settings, particularly with widely spaced observations and view extrapolation. Meanwhile, it maintains sub-second inference and remains competitive with substantially heavier pretrained generative models. Our project page is available at https://ranrhuang.github.io/pixgr/.",
+      "summary_cn": "在馈送式 3D 高斯重建中引入轻量像素空间生成式解码：上下文视角只编码一次得到场景隐表示，再由像素空间流匹配从带噪目标视角生成共享 3D 高斯，用可微渲染做端到端像素级监督，避开 VAE 隐压缩与两阶段流水线的误差传播；推理缓存场景表示并用轻量 DiT 迭代解码。稀疏视角与大基线外推下优于回归方法，仍保持亚秒级推理。",
+      "pdf_filename": "2610.31908.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "3DGS",
+        "场景压缩"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31908",
+      "search_text": "pixgr: pixel-space generative decoding for fast feed-forward 3d reconstruction 前馈3d重建 3dgs 场景压缩 在馈送式 3d 高斯重建中引入轻量像素空间生成式解码：上下文视角只编码一次得到场景隐表示，再由像素空间流匹配从带噪目标视角生成共享 3d 高斯，用可微渲染做端到端像素级监督，避开 vae 隐压缩与两阶段流水线的误差传播；推理缓存场景表示并用轻量 dit 迭代解码。稀疏视角与大基线外推下优于回归方法，仍保持亚秒级推理。 we present pixgr, an efficient framework that integrates lightweight pixel-space generative modeling into feed-forward 3d gaussian reconstruction to model scene uncertainty. context observations are encoded once into a scene latent representation, which conditions generative decoding from noisy target views to produce a shared 3d gaussian representation. we formulate this process using pixel-space flow matching, enabling end-to-end optimization of 3d reconstruction with direct pixel-space generative supervision through differentiable rendering. this avoids vae-based latent compression and error propagation inherent in previous two-stage pipelines. to preserve feed-forward efficiency, pixgr caches the scene representation and performs iterative inference using a lightweight dit decoder. experiments demonstrate that pixgr outperforms regression-based approaches in challenging sparse-view settings, particularly with widely spaced observations and view extrapolation. meanwhile, it maintains sub-second inference and remains competitive with substantially heavier pretrained generative models. our project page is available at https://ranrhuang.github.io/pixgr/. imperial college london; university of tübingen ranran huang, wenjing bian, weixun luo, ye mao, krystian mikolajczyk cs.cv"
+    },
+    {
+      "arxiv_id": "2610.31852",
+      "title": "Multimodal MPC via Bayesian Set Optimization for Dynamic Manipulation of Deformable Linear Objects",
+      "authors": "Youyuan Long, Gokhan Solak, Arash Ajoudani",
+      "affiliations": "Human-Robot Interfaces and Interaction Lab, Istituto Italiano di Tecnologia, Genova, Italy",
+      "published_date": "2026-10-22",
+      "categories": "cs.RO",
+      "abstract": "Dynamic manipulation of deformable linear objects (DLOs) remains challenging due to underactuated, high-dimensional dynamics, delayed deformation responses, and the presence of multiple feasible motions under obstacle constraints. This paper presents BM2PC, a Bayesian Multimodal MPC framework for agile manipulation of DLOs. Building on the control-as-inference posterior, BM2PC formulates multimodal planning as a set optimization problem that balances control quality and behavioral diversity. An efficient incremental update maintains multiple promising control modes with low additional computational overhead. For real-world deployment, BM2PC incorporates an execution dynamics model that predicts actual end-effector motion and compensates for execution mismatch during fast manipulation. We evaluate BM2PC on rope tracking and obstacle avoidance in simulation and hardware, and on simulated disturbance rejection. In trajectory tracking, BM2PC generalizes better to unseen trajectories than a learning-based baseline without task-specific policy training or fine-tuning. Real-world experiments demonstrate accurate long-horizon tracking, reducing RMSE by 44.0% on the longest task. In obstacle avoidance, BM2PC achieves comparable performance to existing multimodal MPC methods while reducing planning time by 29% to 66%. These results demonstrate accurate dynamic control and efficient multimodal planning within a unified MPC framework. The core implementation of BM2PC and supplementary videos are available at https://github.com/Longyouyuan/BM2PC.",
+      "summary_cn": "面向绳缆等可变形线性物体的动态操作，提出贝叶斯多模态 MPC：把控制即推断的后验写成集合优化，同时兼顾控制质量与行为多样性，并用增量更新低成本维持多个候选模态；另加执行动力学模型补偿高速操作中的末端偏差。实机长时任务 RMSE 降 44%，避障规划时间减少 29%–66%。",
+      "pdf_filename": "2610.31852.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31852",
+      "search_text": "multimodal mpc via bayesian set optimization for dynamic manipulation of deformable linear objects 规划 多模态 面向绳缆等可变形线性物体的动态操作，提出贝叶斯多模态 mpc：把控制即推断的后验写成集合优化，同时兼顾控制质量与行为多样性，并用增量更新低成本维持多个候选模态；另加执行动力学模型补偿高速操作中的末端偏差。实机长时任务 rmse 降 44%，避障规划时间减少 29%–66%。 dynamic manipulation of deformable linear objects (dlos) remains challenging due to underactuated, high-dimensional dynamics, delayed deformation responses, and the presence of multiple feasible motions under obstacle constraints. this paper presents bm2pc, a bayesian multimodal mpc framework for agile manipulation of dlos. building on the control-as-inference posterior, bm2pc formulates multimodal planning as a set optimization problem that balances control quality and behavioral diversity. an efficient incremental update maintains multiple promising control modes with low additional computational overhead. for real-world deployment, bm2pc incorporates an execution dynamics model that predicts actual end-effector motion and compensates for execution mismatch during fast manipulation. we evaluate bm2pc on rope tracking and obstacle avoidance in simulation and hardware, and on simulated disturbance rejection. in trajectory tracking, bm2pc generalizes better to unseen trajectories than a learning-based baseline without task-specific policy training or fine-tuning. real-world experiments demonstrate accurate long-horizon tracking, reducing rmse by 44.0% on the longest task. in obstacle avoidance, bm2pc achieves comparable performance to existing multimodal mpc methods while reducing planning time by 29% to 66%. these results demonstrate accurate dynamic control and efficient multimodal planning within a unified mpc framework. the core implementation of bm2pc and supplementary videos are available at https://github.com/longyouyuan/bm2pc. human-robot interfaces and interaction lab, istituto italiano di tecnologia, genova, italy youyuan long, gokhan solak, arash ajoudani cs.ro"
+    },
+    {
+      "arxiv_id": "2610.31835",
+      "title": "SAGE: A hybrid vision-language and geometry framework for work-zone pathway prediction under temporary traffic control",
+      "authors": "Jiaxi Liu, Keshu Wu, Weizhe Tang, Bofeng Cao, Sikai Chen, Xiaopeng Li, Steven T. Parker, Bin Ran",
+      "affiliations": "Department of Civil & Environmental Engineering, University of Wisconsin-Madison",
+      "published_date": "2026-10-22",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Temporary traffic control redirects vehicles through work zones, requiring automated vehicles to connect an interpretation of the visible devices to a continuous passing path. Geometric predictors can provide several plausible paths, yet selecting the one consistent with the temporary control remains difficult. We propose SAGE (Semantic-to-Action Grounded Execution), a read-decide-execute-check framework that separates path construction, path preference, and control compliance within a shared candidate space. The central idea is to use a vision-language model's (VLM's) trajectory as a preference over intact geometric candidates. A role-decoupled generator constructs the candidates, and rank fusion combines each candidate's geometric score with its agreement with the VLM trajectory. Supervision structured around the Manual on Uniform Traffic Control Devices (MUTCD) trains SAGE-VLM to state the lane status and hazard side before its passage decision and trajectory. The predicted hazard side enters image-space predicates derived from MUTCD provisions, which support a final intervention bounded in score and displacement. On 2,306 real-world ROADWork validation episodes, the candidates include a path within 10 px of the human demonstration in 87% of episodes, yet selection regret accounts for 53% of the geometric ranker's error. SAGE reduces average and final displacement errors by 8.3% and 12.0% relative to the ranker, mostly in the far field, and hard-constraint violations by 37%. The trajectory opinion improves all four tested generator-selector combinations. SAGE is comparable to state-of-the-art VLM modules in accuracy, with a faster-responding VLM, and outperforms four other adapted driving VLMs in displacement error and safety measures. Project page: https://hhjj233.github.io/SAGE-page/.",
+      "summary_cn": "面向临时交通管制施工区的通行路径预测，把 VLM 输出当作对几何候选路径的偏好而非直接回归轨迹：角色解耦生成器构造候选，排名融合结合几何得分与 VLM 轨迹一致性，并按 MUTCD 规范训练 VLM 先判断车道状态与危险侧。2306 个真实 ROADWork 场景上平均/终点位移误差降 8.3%/12.0%，硬约束违规降 37%。",
+      "pdf_filename": "2610.31835.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31835",
+      "search_text": "sage: a hybrid vision-language and geometry framework for work-zone pathway prediction under temporary traffic control 多模态 面向临时交通管制施工区的通行路径预测，把 vlm 输出当作对几何候选路径的偏好而非直接回归轨迹：角色解耦生成器构造候选，排名融合结合几何得分与 vlm 轨迹一致性，并按 mutcd 规范训练 vlm 先判断车道状态与危险侧。2306 个真实 roadwork 场景上平均/终点位移误差降 8.3%/12.0%，硬约束违规降 37%。 temporary traffic control redirects vehicles through work zones, requiring automated vehicles to connect an interpretation of the visible devices to a continuous passing path. geometric predictors can provide several plausible paths, yet selecting the one consistent with the temporary control remains difficult. we propose sage (semantic-to-action grounded execution), a read-decide-execute-check framework that separates path construction, path preference, and control compliance within a shared candidate space. the central idea is to use a vision-language model's (vlm's) trajectory as a preference over intact geometric candidates. a role-decoupled generator constructs the candidates, and rank fusion combines each candidate's geometric score with its agreement with the vlm trajectory. supervision structured around the manual on uniform traffic control devices (mutcd) trains sage-vlm to state the lane status and hazard side before its passage decision and trajectory. the predicted hazard side enters image-space predicates derived from mutcd provisions, which support a final intervention bounded in score and displacement. on 2,306 real-world roadwork validation episodes, the candidates include a path within 10 px of the human demonstration in 87% of episodes, yet selection regret accounts for 53% of the geometric ranker's error. sage reduces average and final displacement errors by 8.3% and 12.0% relative to the ranker, mostly in the far field, and hard-constraint violations by 37%. the trajectory opinion improves all four tested generator-selector combinations. sage is comparable to state-of-the-art vlm modules in accuracy, with a faster-responding vlm, and outperforms four other adapted driving vlms in displacement error and safety measures. project page: https://hhjj233.github.io/sage-page/. department of civil & environmental engineering, university of wisconsin-madison jiaxi liu, keshu wu, weizhe tang, bofeng cao, sikai chen, xiaopeng li, steven t. parker, bin ran cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2610.31834",
+      "title": "WorldMirror: Agentic Real-to-Sim Generation of Interactive Worlds from In-the-Wild Robot Demonstrations",
+      "authors": "Tianling Xu, Weijie Wan, Honghao Su, Kailun Su, Junyuan Tang, Huichi Zhou, Haozheng Zhang, Qi Xiong, Ping Luo, Wenbo Ding, Tianxing Chen, Yue Chen",
+      "affiliations": "Xspark AI; Tsinghua University; The University of Hong Kong; University College London; Peking University",
+      "published_date": "2026-10-22",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Existing approaches for robot learning in simulation often require substantial manual effort to construct scenes and specify tasks, limiting training scalability and data diversity. Meanwhile, in-the-wild robot demonstrations naturally provide diverse and realistic observations of real-world interactions. Leveraging these demonstrations for simulation requires both high-fidelity visual reconstruction and physically consistent interactions. General-purpose agents offer flexible adaptation to diverse scenarios and strong reasoning about 3D spatial relationships, while specialized generative models provide high-fidelity reconstruction of scene appearance and geometry. We introduce WorldMirror, an agentic real-to-sim framework that constructs interactive digital twins from in-the-wild robot demonstrations. Our central idea is to formulate real-to-sim construction as the iterative refinement of an executable world program. A coding agent decomposes the observed scene, plans reconstruction steps, and orchestrates specialized image and 3D generation tools, refining the program through verification feedback. A camera-pose-anchored scene representation organizes the world into static visual context, support geometry, and editable interactive assets while preserving spatial relationships among the scene, objects, and robot. The agent uses this representation to diagnose and correct reconstruction errors, enabling physically consistent interaction and trajectory replay. Experiments on DROID demonstrate that WorldMirror can reconstruct visually faithful and geometrically consistent interactive worlds while preserving the physical validity of recorded robot trajectories.",
+      "summary_cn": "把野外机器人示教视频转成可交互数字孪生，将 real-to-sim 写成“可执行世界程序”的迭代精修：编码智能体拆解场景、调度图像与3D生成工具，用相机位姿锚定的场景表示分离静态背景、支撑几何与可编辑物体，并靠验证反馈自我纠错。在 DROID 上重建出视觉逼真、几何一致且能复现原轨迹物理有效性的交互世界。",
+      "pdf_filename": "2610.31834.pdf",
+      "crawled_date": "2026-10-26",
+      "notes": "",
+      "rating": "A",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.31834",
+      "search_text": "worldmirror: agentic real-to-sim generation of interactive worlds from in-the-wild robot demonstrations  把野外机器人示教视频转成可交互数字孪生，将 real-to-sim 写成“可执行世界程序”的迭代精修：编码智能体拆解场景、调度图像与3d生成工具，用相机位姿锚定的场景表示分离静态背景、支撑几何与可编辑物体，并靠验证反馈自我纠错。在 droid 上重建出视觉逼真、几何一致且能复现原轨迹物理有效性的交互世界。 existing approaches for robot learning in simulation often require substantial manual effort to construct scenes and specify tasks, limiting training scalability and data diversity. meanwhile, in-the-wild robot demonstrations naturally provide diverse and realistic observations of real-world interactions. leveraging these demonstrations for simulation requires both high-fidelity visual reconstruction and physically consistent interactions. general-purpose agents offer flexible adaptation to diverse scenarios and strong reasoning about 3d spatial relationships, while specialized generative models provide high-fidelity reconstruction of scene appearance and geometry. we introduce worldmirror, an agentic real-to-sim framework that constructs interactive digital twins from in-the-wild robot demonstrations. our central idea is to formulate real-to-sim construction as the iterative refinement of an executable world program. a coding agent decomposes the observed scene, plans reconstruction steps, and orchestrates specialized image and 3d generation tools, refining the program through verification feedback. a camera-pose-anchored scene representation organizes the world into static visual context, support geometry, and editable interactive assets while preserving spatial relationships among the scene, objects, and robot. the agent uses this representation to diagnose and correct reconstruction errors, enabling physically consistent interaction and trajectory replay. experiments on droid demonstrate that worldmirror can reconstruct visually faithful and geometrically consistent interactive worlds while preserving the physical validity of recorded robot trajectories. xspark ai; tsinghua university; the university of hong kong; university college london; peking university tianling xu, weijie wan, honghao su, kailun su, junyuan tang, huichi zhou, haozheng zhang, qi xiong, ping luo, wenbo ding, tianxing chen, yue chen cs.ro, cs.cv"
+    },
     {
       "arxiv_id": "2610.31645",
       "title": "OmniRay: Camera-Agnostic Monocular 3D Reconstruction with Composite Ray Fields",
