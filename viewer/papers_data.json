@@ -1,35 +1,35 @@
 {
-  "count": 1834,
+  "count": 1854,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-10-30",
+  "crawled_date_max": "2026-11-02",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-10-29",
+  "published_date_max": "2026-10-30",
   "rating_counts": {
-    "S": 526,
-    "A": 732,
-    "B": 290,
-    "C": 286,
+    "S": 532,
+    "A": 737,
+    "B": 295,
+    "C": 290,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 392,
+      "count": 393,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 346,
+      "count": 347,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 324,
+      "count": 325,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 276,
+      "count": 279,
       "group": "世界模型与仿真"
     },
     {
@@ -39,22 +39,22 @@
     },
     {
       "name": "多模态",
-      "count": 258,
+      "count": 259,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 192,
+      "count": 194,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 134,
+      "count": 135,
       "group": "世界模型与仿真"
     },
     {
       "name": "点云",
-      "count": 122,
+      "count": 125,
       "group": "通用"
     },
     {
@@ -64,12 +64,12 @@
     },
     {
       "name": "具身智能",
-      "count": 106,
+      "count": 108,
       "group": "通用"
     },
     {
       "name": "仿真器",
-      "count": 103,
+      "count": 105,
       "group": "通用"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "name": "扩散模型",
-      "count": 66,
+      "count": 67,
       "group": "世界模型与仿真"
     },
     {
@@ -93,14 +93,14 @@
       "group": "3DGS/4DGS"
     },
     {
+      "name": "深度估计",
+      "count": 46,
+      "group": "前馈3D重建"
+    },
+    {
       "name": "SLAM",
       "count": 46,
       "group": "通用"
-    },
-    {
-      "name": "深度估计",
-      "count": 45,
-      "group": "前馈3D重建"
     },
     {
       "name": "NeRF",
@@ -154,6 +154,377 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2610.42146",
+      "title": "Hierarchical World Models with Implicit Dynamics",
+      "authors": "Gaoyue Zhou, Yvonne Wu, Zichen Jeff Cui, Nicolas Ballas, Mido Assran, Lerrel Pinto, Yann LeCun",
+      "affiliations": "Courant Institute, New York University; Meta-FAIR; AMI Labs",
+      "published_date": "2026-10-30",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. However, long-horizon tasks remain hindered by cumulative errors and search complexity. Existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. We introduce ID-WM (Implicit Dynamics World Models), a hierarchical world model that decouples state-space reachability from local control. Our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. This allows the planner to identify reachable subgoals without being constrained by low-level execution details. By prioritizing local physical feasibility over global behavioral patterns, ID-WM synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. We demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. Crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model MPC, particularly in complex, unseen configurations for long-horizon tasks. Videos can be viewed at https://id-wm.github.io",
+      "summary_cn": "ID-WM 提出分层世界模型，把状态空间可达性与局部控制解耦：高层模型在状态流形上采样可行转移，低层世界模型作为逆动力学求解器把转移落地为精确动作，使规划器不受低层执行细节约束即可找可达子目标。优先局部物理可行性使其能用短片段合成训练中未出现的长程规划，并抑制累积误差。三套导航与操作环境上比 SOTA 策略与扩散规划器提升 38.5%。",
+      "pdf_filename": "2610.42146.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "强化学习",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.42146",
+      "search_text": "hierarchical world models with implicit dynamics 世界模型 强化学习 具身智能 id-wm 提出分层世界模型，把状态空间可达性与局部控制解耦：高层模型在状态流形上采样可行转移，低层世界模型作为逆动力学求解器把转移落地为精确动作，使规划器不受低层执行细节约束即可找可达子目标。优先局部物理可行性使其能用短片段合成训练中未出现的长程规划，并抑制累积误差。三套导航与操作环境上比 sota 策略与扩散规划器提升 38.5%。 planning with world models enables test-time adaptation for embodied agents, offering superior generalization over direct policy learning. however, long-horizon tasks remain hindered by cumulative errors and search complexity. existing hierarchical methods often use rigid macro-actions or latent skills, leading to brittle representations and limited fine-grained control. we introduce id-wm (implicit dynamics world models), a hierarchical world model that decouples state-space reachability from local control. our framework utilizes a high-level model to sample feasible transitions across the state manifold and a low-level world model as an inverse dynamics solver to ground these transitions into precise actions. this allows the planner to identify reachable subgoals without being constrained by low-level execution details. by prioritizing local physical feasibility over global behavioral patterns, id-wm synthesizes novel long-horizon plans from short segments, transcending the specific behavioral modes seen during training. we demonstrate its effectiveness across three navigation and manipulation suites, achieving a 38.5% improvement over state-of-the-art policy and diffusion-based planners. crucially, by leveraging this hierarchical structure to mitigate compounding errors, our approach yields a 135% performance gain over single-level world model mpc, particularly in complex, unseen configurations for long-horizon tasks. videos can be viewed at https://id-wm.github.io courant institute, new york university; meta-fair; ami labs gaoyue zhou, yvonne wu, zichen jeff cui, nicolas ballas, mido assran, lerrel pinto, yann lecun cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.42092",
+      "title": "Rethinking Asymmetry in Self-Supervised 3D Geometry Learning",
+      "authors": "Gyeongjin Kang, Freeman Cheng, Botao Ye, Weijie Lyu, Ming-Hsuan Yang, Eunbyung Park",
+      "affiliations": "Yonsei University; UC Merced; ETH Zurich",
+      "published_date": "2026-10-30",
+      "categories": "cs.CV",
+      "abstract": "Self-supervised learning relies on asymmetry between what a model observes and what it must explain. Recent methods learn 3D geometry from unposed images by predicting cameras and scene structure, then rendering held-out views. To avoid trivial solutions, they impose this asymmetry in the input space, restricting how views interact through separate branches or masked attention. We revisit this design with geometric accuracy, rather than rendering quality, as the main objective. When a held-out view lies between context views, the context already constrains the geometry it observes. We therefore impose the asymmetry in the 3D representation space, excluding held-out views only from the reconstructed scene while a shared backbone uses all views for correspondence. This improves depth and pose estimation over input-space designs. We further exploit view density: sparse and dense observations depict the same scene but provide different amounts of correspondence. Aligning sparse-context features with dense-context features supplies a geometric training signal alongside rendering, without a pretrained geometric teacher. We additionally align features with a frozen vision foundation model, which brings further gains. None of these signals requires geometric annotation, and the resulting model improves geometry estimation over prior self-supervised methods. Controlled experiments isolate the contribution of each component, and self-supervised pretraining also improves subsequent supervised training.",
+      "summary_cn": "重新审视无位姿图像自监督 3D 几何学习中的非对称性设计。作者以几何精度为目标，指出留出视图位于上下文视图之间时其几何已被约束，故把非对称性施加在 3D 表示空间而非输入空间：共享骨干用全部视图建立对应，仅在重建场景时排除留出视图。并利用视图密度，把稀疏上下文特征对齐到稠密特征作为无需几何教师的信号，深度与位姿估计优于既有方法。",
+      "pdf_filename": "2610.42092.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.42092",
+      "search_text": "rethinking asymmetry in self-supervised 3d geometry learning  重新审视无位姿图像自监督 3d 几何学习中的非对称性设计。作者以几何精度为目标，指出留出视图位于上下文视图之间时其几何已被约束，故把非对称性施加在 3d 表示空间而非输入空间：共享骨干用全部视图建立对应，仅在重建场景时排除留出视图。并利用视图密度，把稀疏上下文特征对齐到稠密特征作为无需几何教师的信号，深度与位姿估计优于既有方法。 self-supervised learning relies on asymmetry between what a model observes and what it must explain. recent methods learn 3d geometry from unposed images by predicting cameras and scene structure, then rendering held-out views. to avoid trivial solutions, they impose this asymmetry in the input space, restricting how views interact through separate branches or masked attention. we revisit this design with geometric accuracy, rather than rendering quality, as the main objective. when a held-out view lies between context views, the context already constrains the geometry it observes. we therefore impose the asymmetry in the 3d representation space, excluding held-out views only from the reconstructed scene while a shared backbone uses all views for correspondence. this improves depth and pose estimation over input-space designs. we further exploit view density: sparse and dense observations depict the same scene but provide different amounts of correspondence. aligning sparse-context features with dense-context features supplies a geometric training signal alongside rendering, without a pretrained geometric teacher. we additionally align features with a frozen vision foundation model, which brings further gains. none of these signals requires geometric annotation, and the resulting model improves geometry estimation over prior self-supervised methods. controlled experiments isolate the contribution of each component, and self-supervised pretraining also improves subsequent supervised training. yonsei university; uc merced; eth zurich gyeongjin kang, freeman cheng, botao ye, weijie lyu, ming-hsuan yang, eunbyung park cs.cv"
+    },
+    {
+      "arxiv_id": "2610.42060",
+      "title": "PersonaChatBench: Evaluating Chat Assistants with Diverse Simulated Users",
+      "authors": "Zheyuan Deng, Taoran Li, Jingwen Zhang, Yuante Li, Dachuan Zhao, Fulei Zhang, Yunkai Zhang, Zhikun Xu, Yajie Liao, Haichao Zhang, Haodi Hu, Cong Wang, Chen Yang, Siyang Wu, Defu Cao, Xu Hu, Haoming Li, Haixin Wang, Robert George, Weizhi Zhang, Yuchu Wang, Zhejian Peng, Yueying Li, Wanting Jiang, Shushu Liang, Zhiyuan Yu, Yifan Wang, Jintao Huang, Yijun Wang, Yuexing Hao, Xiaomin Li",
+      "affiliations": "Brown University; Texas A&M University; Harvard University; Carnegie Mellon University; Columbia University; UC Berkeley; Arizona State University; Northeastern University; University of Southern California; University of Chicago; The University of Texas at Dallas; UCLA; California Institute of Technology; University of Illinois Chicago; University of Michigan; University of Illinois at Urbana-Champaign; MIT; Amherst College; Purdue University; The Ohio State University",
+      "published_date": "2026-10-30",
+      "categories": "cs.CL",
+      "abstract": "Conversational assistants are expected to help people with diverse backgrounds, preferences, and communication styles. Yet evaluations centered on a single cooperative user provide limited insight into how reliably an assistant serves users with different personas. We introduce PersonaChatBench, a framework for evaluating task competence and responsiveness to diverse user needs. PersonaChatBench pairs the same underlying task with multiple simulated users, each guided by a private persona card that specifies distinct needs, preferences, and interaction behaviors. By holding the task fixed while varying the user, the framework examines how assistant performance changes across user conditions. We evaluate 20 language models across six domains, separately assessing native task outcomes, fulfillment of expressed persona needs, and simulator fidelity. Our results show that task performance and need fulfillment vary across personas and domains. Strong task performance does not necessarily translate into satisfying individual needs, and models' relative strengths in meeting those needs are not consistent across domains. PersonaChatBench makes these differences measurable, revealing gaps obscured by aggregate scores and helping identify which users an assistant serves well and where adaptation is needed. It provides a basis for evaluating consistency across users and guiding the development of assistants that better accommodate diverse needs in everyday applications.",
+      "summary_cn": "PersonaChatBench 用多样化模拟用户评测对话助手：同一任务配多个由私有 persona 卡驱动的模拟用户，规定不同需求、偏好与交互行为，从而固定任务、变化用户考察助手。评测 20 个语言模型、六个领域，分别衡量任务结果、对 persona 明示需求的满足度与模拟器保真度。结果显示任务表现与需求满足度随 persona 与领域变化，强任务能力不一定带来个体需求满足，聚合分数掩盖了用户差异。",
+      "pdf_filename": "2610.42060.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.42060",
+      "search_text": "personachatbench: evaluating chat assistants with diverse simulated users 仿真器 personachatbench 用多样化模拟用户评测对话助手：同一任务配多个由私有 persona 卡驱动的模拟用户，规定不同需求、偏好与交互行为，从而固定任务、变化用户考察助手。评测 20 个语言模型、六个领域，分别衡量任务结果、对 persona 明示需求的满足度与模拟器保真度。结果显示任务表现与需求满足度随 persona 与领域变化，强任务能力不一定带来个体需求满足，聚合分数掩盖了用户差异。 conversational assistants are expected to help people with diverse backgrounds, preferences, and communication styles. yet evaluations centered on a single cooperative user provide limited insight into how reliably an assistant serves users with different personas. we introduce personachatbench, a framework for evaluating task competence and responsiveness to diverse user needs. personachatbench pairs the same underlying task with multiple simulated users, each guided by a private persona card that specifies distinct needs, preferences, and interaction behaviors. by holding the task fixed while varying the user, the framework examines how assistant performance changes across user conditions. we evaluate 20 language models across six domains, separately assessing native task outcomes, fulfillment of expressed persona needs, and simulator fidelity. our results show that task performance and need fulfillment vary across personas and domains. strong task performance does not necessarily translate into satisfying individual needs, and models' relative strengths in meeting those needs are not consistent across domains. personachatbench makes these differences measurable, revealing gaps obscured by aggregate scores and helping identify which users an assistant serves well and where adaptation is needed. it provides a basis for evaluating consistency across users and guiding the development of assistants that better accommodate diverse needs in everyday applications. brown university; texas a&m university; harvard university; carnegie mellon university; columbia university; uc berkeley; arizona state university; northeastern university; university of southern california; university of chicago; the university of texas at dallas; ucla; california institute of technology; university of illinois chicago; university of michigan; university of illinois at urbana-champaign; mit; amherst college; purdue university; the ohio state university zheyuan deng, taoran li, jingwen zhang, yuante li, dachuan zhao, fulei zhang, yunkai zhang, zhikun xu, yajie liao, haichao zhang, haodi hu, cong wang, chen yang, siyang wu, defu cao, xu hu, haoming li, haixin wang, robert george, weizhi zhang, yuchu wang, zhejian peng, yueying li, wanting jiang, shushu liang, zhiyuan yu, yifan wang, jintao huang, yijun wang, yuexing hao, xiaomin li cs.cl"
+    },
+    {
+      "arxiv_id": "2610.41988",
+      "title": "ID2Pattern: Pretraining Generalizable Identity Behavior Patterns for Transaction Risk Foundation Models",
+      "authors": "Ze Zhao, Haoyu Jiang, Weiyu Han, Ruobing Zuo, Xiao Tan, Shuai Chen, Tianyi Zhang",
+      "affiliations": "Ant International; East China Normal University",
+      "published_date": "2026-10-30",
+      "categories": "cs.AI",
+      "abstract": "Large-scale behavioral pretraining offers a promising route to generalizable representations in online payment systems. However, high-cardinality identity fields such as card, device, and account IDs, though rich in behavioral signals, remain underexploited. Their continually growing vocabularies and limited semantic meaning make existing vocabulary-based and semantics-based encodings ill-suited. Their generalizable signal lies not in specific values, but in the identity behavior patterns they exhibit across a transaction sequence. Building on this insight, we propose ID2Pattern, a pretraining framework that brings these patterns into transaction foundation models. ID2Pattern first encodes identity fields with a Local Anonymous ID (LAID) tokenizer, which captures how each identity appears and recurs within the sequence, independent of its specific value. It then pretrains a multi-scale pattern codebook on unlabeled sequences, which abstracts LAID sequences into discrete behavior patterns for downstream prediction. Experiments on an industrial dataset with over 100M sequences and six public datasets show that ID2Pattern consistently outperforms strong baselines, improving industrial by 4.13% and public datasets by 8.83% on average. Notably, ID2Pattern remains equally effective even when all identity values are unseen during training, highlighting its potential to generalize to new users and markets.",
+      "summary_cn": "ID2Pattern 面向支付风控基础模型，指出高基数身份字段（卡号、设备、账户）的泛化信号不在取值，而在交易序列中的身份行为模式。方法用局部匿名 ID 分词器编码身份字段，捕捉身份在序列中的出现与复现规律；再在无标注序列上预训练多尺度模式码本，把序列抽象为离散行为模式供下游预测。超 1 亿条序列工业数据与六个公开数据集分别提升 4.13% 与 8.83%，完全未见的身份值下依然有效。",
+      "pdf_filename": "2610.41988.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41988",
+      "search_text": "id2pattern: pretraining generalizable identity behavior patterns for transaction risk foundation models  id2pattern 面向支付风控基础模型，指出高基数身份字段（卡号、设备、账户）的泛化信号不在取值，而在交易序列中的身份行为模式。方法用局部匿名 id 分词器编码身份字段，捕捉身份在序列中的出现与复现规律；再在无标注序列上预训练多尺度模式码本，把序列抽象为离散行为模式供下游预测。超 1 亿条序列工业数据与六个公开数据集分别提升 4.13% 与 8.83%，完全未见的身份值下依然有效。 large-scale behavioral pretraining offers a promising route to generalizable representations in online payment systems. however, high-cardinality identity fields such as card, device, and account ids, though rich in behavioral signals, remain underexploited. their continually growing vocabularies and limited semantic meaning make existing vocabulary-based and semantics-based encodings ill-suited. their generalizable signal lies not in specific values, but in the identity behavior patterns they exhibit across a transaction sequence. building on this insight, we propose id2pattern, a pretraining framework that brings these patterns into transaction foundation models. id2pattern first encodes identity fields with a local anonymous id (laid) tokenizer, which captures how each identity appears and recurs within the sequence, independent of its specific value. it then pretrains a multi-scale pattern codebook on unlabeled sequences, which abstracts laid sequences into discrete behavior patterns for downstream prediction. experiments on an industrial dataset with over 100m sequences and six public datasets show that id2pattern consistently outperforms strong baselines, improving industrial by 4.13% and public datasets by 8.83% on average. notably, id2pattern remains equally effective even when all identity values are unseen during training, highlighting its potential to generalize to new users and markets. ant international; east china normal university ze zhao, haoyu jiang, weiyu han, ruobing zuo, xiao tan, shuai chen, tianyi zhang cs.ai"
+    },
+    {
+      "arxiv_id": "2610.41970",
+      "title": "When Does Test-Time Search Help World Action Models? An Empirical Audit of Candidate Selection and Simulator Integrity",
+      "authors": "Jun Liu, Dajie Sun, Zhenglun Kong, Zhenjiang Fan, Peiyan Dong, Fan Yang, Wenbin Zhangg, Geng Yuan, Xue Lin, Yanzhi Wang, Dong Huang",
+      "affiliations": "Carnegie Mellon University; UC Berkeley; Harvard University; Stanford University; MIT; Fujitsu; Florida International University; University of Georgia; Northeastern University; EmbodyX Inc",
+      "published_date": "2026-10-30",
+      "categories": "cs.AI",
+      "abstract": "World-action models increasingly apply test-time scaling, spending extra inference computation on candidate selection and adaptive allocation to improve control. Such gains are credible only when candidates carry exploitable signal, nominal compute savings become real speedup, and evaluation stays reliable. We audit all three on Cosmos Policy and RoboCasa with a premise-first, pre-registered methodology. On clean data, a learned value selector is 1.66 pp worse than random; a hindsight oracle gains only 1.40 pp, with an episode-level interval spanning zero; and 82% of states show identical candidate outcomes, leaving little selection headroom. Token pruning cuts per-forward FLOPs by up to 47% but yields at most a measured 1.15$\\times$ end-to-end speedup on the deployed path (1.25$\\times$ on a decode-excluded path), short of a 1.5$\\times$ target, and our adaptive-allocation experiment is inconclusive under a power gate. We further identify and fix a silent rendering corruption whose rate rises sharply along compute-heavy planning paths while leaving the official direct-policy result unaffected, and release a detector, fix, and scripts. These findings show why test-time scaling should be audited as a chain of premises (decision signal, realized efficiency, evaluationintegrity) rather than by success rate alone. Conclusions are scoped to the tested configuration.",
+      "summary_cn": "本文以预注册方法审计世界动作模型（如 Cosmos Policy）测试时搜索的三个前提：候选是否含可利用信号、标称算力节省能否转为真实加速、评测是否可靠。干净数据上学习的价值选择器比随机差 1.66 个百分点，事后最优 oracle 仅高 1.40 且区间跨零，82% 状态候选结果相同；token 剪枝降 47% 前向 FLOPs，端到端最多 1.15 倍加速，未达 1.5 倍目标。作者还发现并修复规划路径上的静默渲染损坏。",
+      "pdf_filename": "2610.41970.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41970",
+      "search_text": "when does test-time search help world action models? an empirical audit of candidate selection and simulator integrity 仿真器 本文以预注册方法审计世界动作模型（如 cosmos policy）测试时搜索的三个前提：候选是否含可利用信号、标称算力节省能否转为真实加速、评测是否可靠。干净数据上学习的价值选择器比随机差 1.66 个百分点，事后最优 oracle 仅高 1.40 且区间跨零，82% 状态候选结果相同；token 剪枝降 47% 前向 flops，端到端最多 1.15 倍加速，未达 1.5 倍目标。作者还发现并修复规划路径上的静默渲染损坏。 world-action models increasingly apply test-time scaling, spending extra inference computation on candidate selection and adaptive allocation to improve control. such gains are credible only when candidates carry exploitable signal, nominal compute savings become real speedup, and evaluation stays reliable. we audit all three on cosmos policy and robocasa with a premise-first, pre-registered methodology. on clean data, a learned value selector is 1.66 pp worse than random; a hindsight oracle gains only 1.40 pp, with an episode-level interval spanning zero; and 82% of states show identical candidate outcomes, leaving little selection headroom. token pruning cuts per-forward flops by up to 47% but yields at most a measured 1.15$\\times$ end-to-end speedup on the deployed path (1.25$\\times$ on a decode-excluded path), short of a 1.5$\\times$ target, and our adaptive-allocation experiment is inconclusive under a power gate. we further identify and fix a silent rendering corruption whose rate rises sharply along compute-heavy planning paths while leaving the official direct-policy result unaffected, and release a detector, fix, and scripts. these findings show why test-time scaling should be audited as a chain of premises (decision signal, realized efficiency, evaluationintegrity) rather than by success rate alone. conclusions are scoped to the tested configuration. carnegie mellon university; uc berkeley; harvard university; stanford university; mit; fujitsu; florida international university; university of georgia; northeastern university; embodyx inc jun liu, dajie sun, zhenglun kong, zhenjiang fan, peiyan dong, fan yang, wenbin zhangg, geng yuan, xue lin, yanzhi wang, dong huang cs.ai"
+    },
+    {
+      "arxiv_id": "2610.41772",
+      "title": "WorkIng: A Real-World and Synthetic Highway Work-Zone Benchmark Dataset for Autonomous Navigation",
+      "authors": "Xujun Xie, Dominik Rößle, Adithya Mohan, Daniel Cremers, Torsten Schön",
+      "affiliations": "AImotion Bavaria, Technische Hochschule Ingolstadt; Technische Universitat Munchen",
+      "published_date": "2026-10-30",
+      "categories": "cs.CV",
+      "abstract": "Highway work zones are critical edge cases for autonomous vehicles (AVs), combining atypical geometries and jurisdiction-specific regulations that existing benchmarks fail to capture: real-world datasets lack 360° multi-modal, full-scene 3D work zone annotation, and no single recorded site can span the layouts and regulatory variants needed for generalizable models. We present WorkIng, a dual-domain benchmark and training resource. WorkIng-Highway provides a 360° multi-modal work zone benchmark with synchronized 128-channel LiDAR, six RGB cameras, and RTK-GPS across 32 km, yielding 12,000+ annotated frames and 227,399 tracked 3D bounding boxes. WorkIng-CARLA complements this with procedural simulation spanning 24 regulation-aware scenarios across six canonical topologies and six international traffic standards, populated by 100+ custom 3D assets. Benchmarking representative 3D detection and end-to-end planning architectures shows that real-world data remains the primary performance driver, and that scenario-stratified synthetic augmentation improves architectures across 2D recognition, 3D detection, and trajectory planning. Resources: https://github.com/cvims/WorkIng",
+      "summary_cn": "WorkIng 是面向高速公路施工区的双域基准与训练资源。真实部分提供 360 度多模态数据：128 线 LiDAR、六路 RGB 与 RTK-GPS，覆盖 32 公里、1.2 万余标注帧、22.7 万个跟踪 3D 框；合成部分用程序化仿真覆盖六种拓扑、六套国际交通规范下 24 个规范感知场景。基准测试发现真实数据仍是性能主要驱动，按场景分层的合成增强可同时提升 2D 识别、3D 检测与轨迹规划。",
+      "pdf_filename": "2610.41772.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41772",
+      "search_text": "working: a real-world and synthetic highway work-zone benchmark dataset for autonomous navigation 点云 working 是面向高速公路施工区的双域基准与训练资源。真实部分提供 360 度多模态数据：128 线 lidar、六路 rgb 与 rtk-gps，覆盖 32 公里、1.2 万余标注帧、22.7 万个跟踪 3d 框；合成部分用程序化仿真覆盖六种拓扑、六套国际交通规范下 24 个规范感知场景。基准测试发现真实数据仍是性能主要驱动，按场景分层的合成增强可同时提升 2d 识别、3d 检测与轨迹规划。 highway work zones are critical edge cases for autonomous vehicles (avs), combining atypical geometries and jurisdiction-specific regulations that existing benchmarks fail to capture: real-world datasets lack 360° multi-modal, full-scene 3d work zone annotation, and no single recorded site can span the layouts and regulatory variants needed for generalizable models. we present working, a dual-domain benchmark and training resource. working-highway provides a 360° multi-modal work zone benchmark with synchronized 128-channel lidar, six rgb cameras, and rtk-gps across 32 km, yielding 12,000+ annotated frames and 227,399 tracked 3d bounding boxes. working-carla complements this with procedural simulation spanning 24 regulation-aware scenarios across six canonical topologies and six international traffic standards, populated by 100+ custom 3d assets. benchmarking representative 3d detection and end-to-end planning architectures shows that real-world data remains the primary performance driver, and that scenario-stratified synthetic augmentation improves architectures across 2d recognition, 3d detection, and trajectory planning. resources: https://github.com/cvims/working aimotion bavaria, technische hochschule ingolstadt; technische universitat munchen xujun xie, dominik rößle, adithya mohan, daniel cremers, torsten schön cs.cv"
+    },
+    {
+      "arxiv_id": "2610.41704",
+      "title": "GraphNIAH: A Benchmark for Long-Context Reasoning over Real-World Graphs",
+      "authors": "Minh-Nam Tran, Abulhair Saparov",
+      "affiliations": "Department of Computer Science, Purdue University",
+      "published_date": "2026-10-30",
+      "categories": "cs.CL",
+      "abstract": "The needle-in-a-haystack (NIAH) benchmark was introduced as a test for measuring a model's ability to find small relevant facts within a very large body of input text. However, existing NIAH benchmarks each suffer from one or more of the following limitations: (1) reliance on synthetic data, so their evaluations may not generalize to real-world settings; (2) reuse of previously published datasets, leading to the risk of benchmark contamination; (3) dependence on manual annotation, which requires human effort to create and update data and is prone to future benchmark contamination; and (4) unrealistic simplification of long-context multi-hop reasoning where each next step is trivial given previous steps, while real-world reasoning often requires planning over multiple possible proof paths. To address these limitations, we introduce \\Benchmark, a dynamic benchmark built from real citation relationships among scientific papers published after the evaluated models' knowledge cutoff date, which utilizes real-world information while ensuring no benchmark contamination. The fully automated benchmark construction pipeline samples representative subgraphs of the citation graph formed by these papers and converts each subgraph into a long-context QA example with a verifiable answer. We use GraphNIAH to evaluate eight LLMs from the GPT-5.6, Gemini-3, and Qwen3.5 families. We find that accuracy falls as questions require longer reasoning paths: at question depths of 16 and 32, the GPT-5.6 and Qwen3.5 models answer YES/NO questions no better than random guessing, mostly by answering NO; four of the eight models answer no counting example correctly, and the others model get worse as the subgraph size increases. These findings suggest that current LLMs often stop searching the citation relationships in their context before they reach the answer, even though every fact they need is in the context.",
+      "summary_cn": "GraphNIAH 是面向长上下文推理的动态基准，用知识截止后发表的论文真实引用关系构图，采样子图并自动转成有可验证答案的长上下文问答，避免合成数据、基准污染与人工标注。作者评测 GPT-5.6、Gemini-3、Qwen3.5 三个家族八个模型，发现随推理路径变长准确率急剧下降：深度 16 与 32 时部分模型 YES/NO 已等同随机猜测，四个模型计数题全错。",
+      "pdf_filename": "2610.41704.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41704",
+      "search_text": "graphniah: a benchmark for long-context reasoning over real-world graphs  graphniah 是面向长上下文推理的动态基准，用知识截止后发表的论文真实引用关系构图，采样子图并自动转成有可验证答案的长上下文问答，避免合成数据、基准污染与人工标注。作者评测 gpt-5.6、gemini-3、qwen3.5 三个家族八个模型，发现随推理路径变长准确率急剧下降：深度 16 与 32 时部分模型 yes/no 已等同随机猜测，四个模型计数题全错。 the needle-in-a-haystack (niah) benchmark was introduced as a test for measuring a model's ability to find small relevant facts within a very large body of input text. however, existing niah benchmarks each suffer from one or more of the following limitations: (1) reliance on synthetic data, so their evaluations may not generalize to real-world settings; (2) reuse of previously published datasets, leading to the risk of benchmark contamination; (3) dependence on manual annotation, which requires human effort to create and update data and is prone to future benchmark contamination; and (4) unrealistic simplification of long-context multi-hop reasoning where each next step is trivial given previous steps, while real-world reasoning often requires planning over multiple possible proof paths. to address these limitations, we introduce \\benchmark, a dynamic benchmark built from real citation relationships among scientific papers published after the evaluated models' knowledge cutoff date, which utilizes real-world information while ensuring no benchmark contamination. the fully automated benchmark construction pipeline samples representative subgraphs of the citation graph formed by these papers and converts each subgraph into a long-context qa example with a verifiable answer. we use graphniah to evaluate eight llms from the gpt-5.6, gemini-3, and qwen3.5 families. we find that accuracy falls as questions require longer reasoning paths: at question depths of 16 and 32, the gpt-5.6 and qwen3.5 models answer yes/no questions no better than random guessing, mostly by answering no; four of the eight models answer no counting example correctly, and the others model get worse as the subgraph size increases. these findings suggest that current llms often stop searching the citation relationships in their context before they reach the answer, even though every fact they need is in the context. department of computer science, purdue university minh-nam tran, abulhair saparov cs.cl"
+    },
+    {
+      "arxiv_id": "2610.41655",
+      "title": "Fooling Relying Parties of the EUDI Wallet Architecture: Credential Pooling Attacks and CRESTA, a Standard-Compliant Countermeasure",
+      "authors": "Leonardo Rufini, Ivan Visconti",
+      "affiliations": "DIAG, Sapienza University of Rome",
+      "published_date": "2026-10-30",
+      "categories": "cs.CR",
+      "abstract": "The European Digital Identity (EUDI) Wallet will let millions of EU citizens prove who they are and what they are entitled to, disclosing only what is needed. Many services need several credentials at once, such as an identity card and a university degree, so combined presentations are essential.   We present credential pooling attacks on relying parties of the EUDI Wallet reference architecture. Colluding users, each holding some credentials in their own wallet, cooperate through a proxy that acts as a single synthetic user and presents all the requested credentials, although no single user holds them all. Every signature is genuine and computed by certified hardware, and nothing is extracted or forged. We ran the attack against the European Commission's reference implementation, also on two Android phones.   The attack would fail if all credentials of a user carried the same public key, but colluding relying parties could then link all presentations of that user. For this reason, the Architecture and Reference Framework (ARF) requires a fresh key for each credential and recommends batches of single-use copies, each with its own key: precisely what makes pooling possible. One might think that preventing pooling requires giving up unlinkability or adopting non-standard cryptography, such as zero-knowledge proofs.   We show that this is not the case: we present CRESTA (CREdential STApling), an efficient countermeasure that uses only standard cryptography and credential formats and preserves unlinkability. In CRESTA, an ordinary issuer checks at issuance that a set of keys was generated in the same secure hardware, and certifies it in a binding attestation: a standard credential whose attributes can be selectively disclosed. CRESTA works entirely within the EUDI Wallet framework and costs a relying party one additional signature verification per presentation.",
+      "summary_cn": "本文针对欧盟数字身份钱包（EUDI）架构提出凭证池化攻击：多个各持部分凭证的合谋用户经代理伪装成单一用户完成联合出示，签名均真实且由认证硬件计算。作者在参考实现与两台 Android 手机上验证成功，并指出 ARF 要求每凭证独立密钥恰是池化成因。为此提出 CRESTA：签发时证明一组密钥出自同一安全硬件并出具可选择性披露的绑定凭证，仅用标准密码学且保持不可链接。",
+      "pdf_filename": "2610.41655.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41655",
+      "search_text": "fooling relying parties of the eudi wallet architecture: credential pooling attacks and cresta, a standard-compliant countermeasure  本文针对欧盟数字身份钱包（eudi）架构提出凭证池化攻击：多个各持部分凭证的合谋用户经代理伪装成单一用户完成联合出示，签名均真实且由认证硬件计算。作者在参考实现与两台 android 手机上验证成功，并指出 arf 要求每凭证独立密钥恰是池化成因。为此提出 cresta：签发时证明一组密钥出自同一安全硬件并出具可选择性披露的绑定凭证，仅用标准密码学且保持不可链接。 the european digital identity (eudi) wallet will let millions of eu citizens prove who they are and what they are entitled to, disclosing only what is needed. many services need several credentials at once, such as an identity card and a university degree, so combined presentations are essential.   we present credential pooling attacks on relying parties of the eudi wallet reference architecture. colluding users, each holding some credentials in their own wallet, cooperate through a proxy that acts as a single synthetic user and presents all the requested credentials, although no single user holds them all. every signature is genuine and computed by certified hardware, and nothing is extracted or forged. we ran the attack against the european commission's reference implementation, also on two android phones.   the attack would fail if all credentials of a user carried the same public key, but colluding relying parties could then link all presentations of that user. for this reason, the architecture and reference framework (arf) requires a fresh key for each credential and recommends batches of single-use copies, each with its own key: precisely what makes pooling possible. one might think that preventing pooling requires giving up unlinkability or adopting non-standard cryptography, such as zero-knowledge proofs.   we show that this is not the case: we present cresta (credential stapling), an efficient countermeasure that uses only standard cryptography and credential formats and preserves unlinkability. in cresta, an ordinary issuer checks at issuance that a set of keys was generated in the same secure hardware, and certifies it in a binding attestation: a standard credential whose attributes can be selectively disclosed. cresta works entirely within the eudi wallet framework and costs a relying party one additional signature verification per presentation. diag, sapienza university of rome leonardo rufini, ivan visconti cs.cr"
+    },
+    {
+      "arxiv_id": "2610.41434",
+      "title": "Not Everyone Has a Voice, or an Ear, on Social Media: The Poster-Observer Model of Opinion Dynamics",
+      "authors": "Nikos Theologis, Aristides Gionis, Evaggelia Pitoura, Evimaria Terzi, Panayiotis Tsaparas",
+      "affiliations": "University of Ioannina; Archimedes/Athena Research Center; KTH Royal Institute of Technology; Boston University",
+      "published_date": "2026-10-30",
+      "categories": "cs.SI",
+      "abstract": "Classic modeling of opinion dynamics via the Friedkin-Johnsen (FJ) model relies on the unrealistic assumption of synchronous communication among network users. Social media, however, exhibit extreme participation asymmetries: a vast majority of users silently observe, while a tiny minority creates and broadcasts most of the content. To capture this reality, we introduce the Poster-Observer FJ (PO-FJ) model, which decouples user communication into distinct posting and observing behaviors. This formulation fundamentally alters network dynamics by preventing convergence to a static equilibrium, driving opinions into perpetual oscillations. We establish closed-form expressions for these new dynamics and generalize classic metrics of public opinion, polarization, and disagreement under the PO-FJ model. By leveraging the novel Poster-Observer dynamics, we introduce a realistic and scalable intervention algorithm for conflict mitigation. Through experiments on synthetic and real-world networks, we demonstrate the efficacy and efficiency of our approach in reducing social-network conflict.",
+      "summary_cn": "本文指出经典 Friedkin-Johnsen 观点动力学假设用户同步交流，与社交媒体极端参与不对称（多数人只看、极少数人发帖）不符，提出 Poster-Observer FJ 模型，把发帖与观察行为解耦。该形式化使网络不再收敛到静态均衡，观点进入持续振荡；作者给出新动力学的闭式表达并推广舆论、极化与分歧度量，基于此提出可扩展冲突缓解算法，在合成与真实网络上验证有效。",
+      "pdf_filename": "2610.41434.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41434",
+      "search_text": "not everyone has a voice, or an ear, on social media: the poster-observer model of opinion dynamics  本文指出经典 friedkin-johnsen 观点动力学假设用户同步交流，与社交媒体极端参与不对称（多数人只看、极少数人发帖）不符，提出 poster-observer fj 模型，把发帖与观察行为解耦。该形式化使网络不再收敛到静态均衡，观点进入持续振荡；作者给出新动力学的闭式表达并推广舆论、极化与分歧度量，基于此提出可扩展冲突缓解算法，在合成与真实网络上验证有效。 classic modeling of opinion dynamics via the friedkin-johnsen (fj) model relies on the unrealistic assumption of synchronous communication among network users. social media, however, exhibit extreme participation asymmetries: a vast majority of users silently observe, while a tiny minority creates and broadcasts most of the content. to capture this reality, we introduce the poster-observer fj (po-fj) model, which decouples user communication into distinct posting and observing behaviors. this formulation fundamentally alters network dynamics by preventing convergence to a static equilibrium, driving opinions into perpetual oscillations. we establish closed-form expressions for these new dynamics and generalize classic metrics of public opinion, polarization, and disagreement under the po-fj model. by leveraging the novel poster-observer dynamics, we introduce a realistic and scalable intervention algorithm for conflict mitigation. through experiments on synthetic and real-world networks, we demonstrate the efficacy and efficiency of our approach in reducing social-network conflict. university of ioannina; archimedes/athena research center; kth royal institute of technology; boston university nikos theologis, aristides gionis, evaggelia pitoura, evimaria terzi, panayiotis tsaparas cs.si"
+    },
+    {
+      "arxiv_id": "2610.41350",
+      "title": "Operon-S1: a fast decision controller for long-horizon biomedical agents",
+      "authors": "Genoria AI Team, Yuejie Hou, Yueyuxiao Yang, Weiting Tang, Meng Yang",
+      "affiliations": "Genoria AI",
+      "published_date": "2026-10-30",
+      "categories": "cs.AI, cs.LG",
+      "abstract": "Language-model agents now carry out long scientific work in biology, but their judgements about conventions, skills, errors, evidence and stopping are made inside the reasoning that does the work, where they cannot be measured, replaced or improved on their own. Here we present Operon-S1, a fast decision system, a System 1 for the agent, that separates judging from doing. A decision harness poses the agent's recurring judgements as closed questions at 13 decision points and acts only through fixed messages that never contain an answer, so any model that answers the questions can serve as the judge. Across seven life-science benchmarks, a local decision model took over these judgements in 0.6 s at the median for an in-loop request on CPU at no request cost, with no measurable change in the agent's score on five of six benchmarks, whereas the general language model that drives the agent, asked the same questions, accounted for 8.0% to 35.2% of task cost. Every decision is recorded with its consequence. Retraining on labels from task construction, verifiers or execution raised decision accuracy on every question in each of three trained versions, and a new version enters service only through a promotion gate. Task-level results in this study use the public checkpoint. The same closed decisions serve wet-laboratory protocol troubleshooting and the design of a germline target enrichment panel. Like the regulator of an operon, which switches genes on and off without making their products, Operon-S1 steers the agent without doing its work, and makes the agent's judgements a layer that can be measured, replaced and trained.",
+      "summary_cn": "Operon-S1 把智能体的判断与执行解耦，为长程生物学科研智能体提供 System 1 式快速决策器：在 13 个决策点把反复出现的判断转成封闭问题，只通过不含答案的固定消息作用于智能体，任何模型都可充当裁判。七个生命科学基准上，本地决策模型在 CPU 上以 0.6 秒中位延迟接管判断，六个基准中五个分数无可测变化，而这些判断原占总任务成本 8.0%-35.2%。",
+      "pdf_filename": "2610.41350.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41350",
+      "search_text": "operon-s1: a fast decision controller for long-horizon biomedical agents  operon-s1 把智能体的判断与执行解耦，为长程生物学科研智能体提供 system 1 式快速决策器：在 13 个决策点把反复出现的判断转成封闭问题，只通过不含答案的固定消息作用于智能体，任何模型都可充当裁判。七个生命科学基准上，本地决策模型在 cpu 上以 0.6 秒中位延迟接管判断，六个基准中五个分数无可测变化，而这些判断原占总任务成本 8.0%-35.2%。 language-model agents now carry out long scientific work in biology, but their judgements about conventions, skills, errors, evidence and stopping are made inside the reasoning that does the work, where they cannot be measured, replaced or improved on their own. here we present operon-s1, a fast decision system, a system 1 for the agent, that separates judging from doing. a decision harness poses the agent's recurring judgements as closed questions at 13 decision points and acts only through fixed messages that never contain an answer, so any model that answers the questions can serve as the judge. across seven life-science benchmarks, a local decision model took over these judgements in 0.6 s at the median for an in-loop request on cpu at no request cost, with no measurable change in the agent's score on five of six benchmarks, whereas the general language model that drives the agent, asked the same questions, accounted for 8.0% to 35.2% of task cost. every decision is recorded with its consequence. retraining on labels from task construction, verifiers or execution raised decision accuracy on every question in each of three trained versions, and a new version enters service only through a promotion gate. task-level results in this study use the public checkpoint. the same closed decisions serve wet-laboratory protocol troubleshooting and the design of a germline target enrichment panel. like the regulator of an operon, which switches genes on and off without making their products, operon-s1 steers the agent without doing its work, and makes the agent's judgements a layer that can be measured, replaced and trained. genoria ai genoria ai team, yuejie hou, yueyuxiao yang, weiting tang, meng yang cs.ai, cs.lg"
+    },
+    {
+      "arxiv_id": "2610.41330",
+      "title": "Cross-Embodiment Motion Planning by Coupling Body-Agnostic World Model with Differentiable Ego-Dynamics",
+      "authors": "Zhidong Wang, Zirui Li, Haoran Xu, Yujie Yan, Zitong Shan, Jingsong Liang, Han Yu, Chen Lv",
+      "affiliations": "School of Mechanical and Aerospace Engineering, Nanyang Technological University, Singapore",
+      "published_date": "2026-10-30",
+      "categories": "cs.RO",
+      "abstract": "Motion planning in clutter is embodiment-specific: the feasible free space and reachable commands depend on each robot's geometry and dynamics. Existing cross-embodiment policies output normalized commands that disregard these differences, or compensate through per-robot training and distillation. World models can in principle pool cross-embodiment data, yet command-conditioned models bind their latent dynamics to a single action space, while pose-conditioned models omit the mapping from commands to body-specific motion. On flat ground, however, embodiment affects the planner's observations only through the camera ego-motion. This letter proposes Hourglass, an hourglass-shaped architecture that factorizes cross-embodiment motion planning at this interface: a body-agnostic world model and each robot's differentiable ego-dynamics, which map commands to that ego-motion, are coupled only through it. The world model is trained on data pooled across embodiments and camera mounts; each robot's ego-dynamics is a reduced-order template with identified physical parameters. A generalist parameter-conditioned policy is learned once at this junction: each imagined step rolls out the template and then the world model, and imagination training through each robot's template makes the policy body-aware. On seven simulated robots of five locomotion types, the generalist policy outperforms imitation-learning and diffusion-policy baselines on the same world model by 3.8--10.6 percentage points in success rate and matches per-robot specialists without dedicated training, while approaching its parameter-conditioned MPPI teacher within 1.4--2.8 points without an online map. After three minutes of teleoperated driving for identification, the synthetic-data-trained model transfers zero-shot to a real skid-steer robot unseen in training, navigating unseen indoor scenes.",
+      "summary_cn": "Hourglass 架构，把跨具身运动规划分解为与机体无关的世界模型与各机器人可微的自运动动力学，二者仅经相机自运动耦合。世界模型用跨具身数据联合训练，各机器人自运动用辨识物理参数的低阶模板，再学一个参数条件化通用策略。七种运动方式的仿真机器人上成功率比模仿学习与扩散策略基线高 3.8-10.6 个百分点，遥操作辨识后可零样本迁移到未见真实履带车。",
+      "pdf_filename": "2610.41330.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41330",
+      "search_text": "cross-embodiment motion planning by coupling body-agnostic world model with differentiable ego-dynamics 世界模型 规划 hourglass 架构，把跨具身运动规划分解为与机体无关的世界模型与各机器人可微的自运动动力学，二者仅经相机自运动耦合。世界模型用跨具身数据联合训练，各机器人自运动用辨识物理参数的低阶模板，再学一个参数条件化通用策略。七种运动方式的仿真机器人上成功率比模仿学习与扩散策略基线高 3.8-10.6 个百分点，遥操作辨识后可零样本迁移到未见真实履带车。 motion planning in clutter is embodiment-specific: the feasible free space and reachable commands depend on each robot's geometry and dynamics. existing cross-embodiment policies output normalized commands that disregard these differences, or compensate through per-robot training and distillation. world models can in principle pool cross-embodiment data, yet command-conditioned models bind their latent dynamics to a single action space, while pose-conditioned models omit the mapping from commands to body-specific motion. on flat ground, however, embodiment affects the planner's observations only through the camera ego-motion. this letter proposes hourglass, an hourglass-shaped architecture that factorizes cross-embodiment motion planning at this interface: a body-agnostic world model and each robot's differentiable ego-dynamics, which map commands to that ego-motion, are coupled only through it. the world model is trained on data pooled across embodiments and camera mounts; each robot's ego-dynamics is a reduced-order template with identified physical parameters. a generalist parameter-conditioned policy is learned once at this junction: each imagined step rolls out the template and then the world model, and imagination training through each robot's template makes the policy body-aware. on seven simulated robots of five locomotion types, the generalist policy outperforms imitation-learning and diffusion-policy baselines on the same world model by 3.8--10.6 percentage points in success rate and matches per-robot specialists without dedicated training, while approaching its parameter-conditioned mppi teacher within 1.4--2.8 points without an online map. after three minutes of teleoperated driving for identification, the synthetic-data-trained model transfers zero-shot to a real skid-steer robot unseen in training, navigating unseen indoor scenes. school of mechanical and aerospace engineering, nanyang technological university, singapore zhidong wang, zirui li, haoran xu, yujie yan, zitong shan, jingsong liang, han yu, chen lv cs.ro"
+    },
+    {
+      "arxiv_id": "2610.41320",
+      "title": "Learning from Physical Experience:Context-Space Adaptation for Robotic Manipulation",
+      "authors": "Yihan Zeng, Yisu Li, Kaixin Huang, Marc WuDunn, Amelia Kovacs, Mikael Harseno, Kimmy Lin, Porter Hunley, Fred Shentu, Philipp Wu, Zhongyu Li, Zike Yan",
+      "affiliations": "The Chinese University of Hong Kong; xdof.ai; University of Electronic Science and Technology of China",
+      "published_date": "2026-10-30",
+      "categories": "cs.RO",
+      "abstract": "Recent multimodal foundation models exhibit strong perception, reasoning, and in-context learning capabilities, but translating these capabilities into physical action remains challenging. Through real-world experiments across diverse manipulation tasks, we find that ChatGPT-6-Astra, a state-of-the-art general-purpose reasoner, can serve as a physically actionable, context-responsive manipulation policy, demonstrating effective fine manipulation and spatial reasoning. Building on these findings, we introduce LEXP, a harness for learning from physical experience through context-space adaptation. LEXP combines task-level planning with an experience module that interprets execution evidence, extracts and retains lessons with applicability conditions, and reuses relevant lessons to generate contextual feedback for subsequent actions. Model weights and the action interface remain fixed throughout. Across 12 real-world manipulation tasks, LEXP achieves $23/36$ successful trials (63.9\\%), compared with $19/36$ (52.8\\%) with memory alone and $2/36$ (5.6\\%) for vanilla Astra. On three tasks, bread transfer, sort trash and toiletries, and retrieve drawer, removing planning reduces success from $7/9$ to $4/9$, while removing retained experience reduces it to $3/9$. Execution traces illustrate feedback-guided corrections and cross-episode reuse of an inspection strategy. Execution analyses illustrate how task structure and experience-derived feedback guide task progression, action correction, and experience reuse. These results support context-space adaptation as a practical mechanism for turning physical interaction into reusable guidance for robotic manipulation.",
+      "summary_cn": "LEXP 研究如何把多模态基础模型的推理能力转化为机器人动作。作者在真实任务中发现通用推理模型 ChatGPT-6-Astra 本身即可作为上下文响应的操作策略，进而提出 LEXP：任务级规划加经验模块，解析执行证据、抽取带适用条件的经验并在后续动作中复用，模型权重与动作接口全程冻结。12 个真实操作任务成功率 63.9%，优于纯记忆的 52.8% 与原生 Astra 的 5.6%。",
+      "pdf_filename": "2610.41320.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41320",
+      "search_text": "learning from physical experience:context-space adaptation for robotic manipulation 多模态 lexp 研究如何把多模态基础模型的推理能力转化为机器人动作。作者在真实任务中发现通用推理模型 chatgpt-6-astra 本身即可作为上下文响应的操作策略，进而提出 lexp：任务级规划加经验模块，解析执行证据、抽取带适用条件的经验并在后续动作中复用，模型权重与动作接口全程冻结。12 个真实操作任务成功率 63.9%，优于纯记忆的 52.8% 与原生 astra 的 5.6%。 recent multimodal foundation models exhibit strong perception, reasoning, and in-context learning capabilities, but translating these capabilities into physical action remains challenging. through real-world experiments across diverse manipulation tasks, we find that chatgpt-6-astra, a state-of-the-art general-purpose reasoner, can serve as a physically actionable, context-responsive manipulation policy, demonstrating effective fine manipulation and spatial reasoning. building on these findings, we introduce lexp, a harness for learning from physical experience through context-space adaptation. lexp combines task-level planning with an experience module that interprets execution evidence, extracts and retains lessons with applicability conditions, and reuses relevant lessons to generate contextual feedback for subsequent actions. model weights and the action interface remain fixed throughout. across 12 real-world manipulation tasks, lexp achieves $23/36$ successful trials (63.9\\%), compared with $19/36$ (52.8\\%) with memory alone and $2/36$ (5.6\\%) for vanilla astra. on three tasks, bread transfer, sort trash and toiletries, and retrieve drawer, removing planning reduces success from $7/9$ to $4/9$, while removing retained experience reduces it to $3/9$. execution traces illustrate feedback-guided corrections and cross-episode reuse of an inspection strategy. execution analyses illustrate how task structure and experience-derived feedback guide task progression, action correction, and experience reuse. these results support context-space adaptation as a practical mechanism for turning physical interaction into reusable guidance for robotic manipulation. the chinese university of hong kong; xdof.ai; university of electronic science and technology of china yihan zeng, yisu li, kaixin huang, marc wudunn, amelia kovacs, mikael harseno, kimmy lin, porter hunley, fred shentu, philipp wu, zhongyu li, zike yan cs.ro"
+    },
+    {
+      "arxiv_id": "2610.41231",
+      "title": "Coarse3D: Controllable and Faithful Sparse Structure Generation for Image-to-3D",
+      "authors": "Gaige Wang, Bowen Pan, Hao Ren, Jiangjing Lyu, Chengfei Lyu",
+      "affiliations": "Alibaba Group",
+      "published_date": "2026-10-30",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Coarse-to-fine 3D-native generation relies heavily on the first-stage sparse structure, which determines the global orientation and overall geometry for subsequent refinement. However, existing coarse generators suffer from two key limitations: their orientation is difficult to control due to ambiguous semantic canonicalization, and their structures are often inconsistent with input images due to weak 2D-3D grounding. We propose Coarse3D, a sparse-structure generation model that produces orientation-controllable and structurally faithful voxel geometry from arbitrary unposed images. Coarse3D introduces three designs: a first-frame anchored canonical space that aligns generation with the first input view while preserving object-centric normalization; a dual-tower DiT that couples generation with auxiliary feed-forward reconstruction to learn spatially grounded features; and spatial-prior guided attention that regularizes cross-attention with pixel-to-voxel correspondence. Coarse3D can directly replace the coarse stage of existing pipelines. Experiments show that it substantially improves sparse structure quality and consistently enhances final 3D generation, achieving state-of-the-art performance.",
+      "summary_cn": "Coarse3D 面向图生 3D 的稀疏结构首阶段，解决粗生成器朝向不可控、与输入图像 2D-3D 对齐弱的问题。方法从任意无位姿图像生成朝向可控、结构忠实的体素几何：以首帧为锚的规范空间对齐第一视角并保持物体归一化；耦合辅助前馈重建的双塔 DiT 学习空间接地特征；用像素-体素对应正则化交叉注意力。该模块可直接替换现有流程粗阶段，显著提升稀疏结构质量与最终生成，达到 SOTA。",
+      "pdf_filename": "2610.41231.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41231",
+      "search_text": "coarse3d: controllable and faithful sparse structure generation for image-to-3d  coarse3d 面向图生 3d 的稀疏结构首阶段，解决粗生成器朝向不可控、与输入图像 2d-3d 对齐弱的问题。方法从任意无位姿图像生成朝向可控、结构忠实的体素几何：以首帧为锚的规范空间对齐第一视角并保持物体归一化；耦合辅助前馈重建的双塔 dit 学习空间接地特征；用像素-体素对应正则化交叉注意力。该模块可直接替换现有流程粗阶段，显著提升稀疏结构质量与最终生成，达到 sota。 coarse-to-fine 3d-native generation relies heavily on the first-stage sparse structure, which determines the global orientation and overall geometry for subsequent refinement. however, existing coarse generators suffer from two key limitations: their orientation is difficult to control due to ambiguous semantic canonicalization, and their structures are often inconsistent with input images due to weak 2d-3d grounding. we propose coarse3d, a sparse-structure generation model that produces orientation-controllable and structurally faithful voxel geometry from arbitrary unposed images. coarse3d introduces three designs: a first-frame anchored canonical space that aligns generation with the first input view while preserving object-centric normalization; a dual-tower dit that couples generation with auxiliary feed-forward reconstruction to learn spatially grounded features; and spatial-prior guided attention that regularizes cross-attention with pixel-to-voxel correspondence. coarse3d can directly replace the coarse stage of existing pipelines. experiments show that it substantially improves sparse structure quality and consistently enhances final 3d generation, achieving state-of-the-art performance. alibaba group gaige wang, bowen pan, hao ren, jiangjing lyu, chengfei lyu cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2610.41190",
+      "title": "FlowMoDE: Coarse-to-fine Flow Matching for Detail-aware Sim-to-Real Monocular Depth Estimation",
+      "authors": "Liangjing Shao, Wanhao Liu, Jinsong Lin, Zhiwei Fang, Hongliang Ren",
+      "affiliations": "The Chinese University of Hong Kong; Shenzhen Loop Area Institute",
+      "published_date": "2026-10-30",
+      "categories": "cs.CV",
+      "abstract": "Monocular depth estimation is a fundamental capability for 3D spatial perception in robotic and intelligent systems. While data-driven discriminative methods have achieved compelling performance for monocular depth estimation, generative approaches can reconstruct fine structural details with stronger generalization. However, most existing generative diffusion models suffer from low inference efficiency caused by multi-step sampling, whereas single-step diffusion models struggle to recover high-fidelity depth maps. To mitigate these drawbacks, this paper presents FlowMoDE, a coarse-to-fine flow-matching-based framework for efficient, structure-aware monocular depth estimation supporting sim-to-real and cross-scene generalization. The core architecture first conducts coarse-level decoding conditioned on diffused features extracted from a pre-trained semantic encoder, and subsequently restores fine-grained structural patterns via expanded decoding layers. Trained exclusively on a single synthetic indoor dataset, our proposed method outperforms prior methods across five real-world indoor and outdoor datasets, yielding an average 14.1% reduction in relative error against state-of-the-art works as well as 9.9\\% reduction in chamfer distance for point cloud reconstruction. We further validate the generalization capability of FlowMoDE on realistic robotic scenes, with qualitative comparisons against state-of-the-art methods. The project page is https://flowmode-shao.netlify.app/",
+      "summary_cn": "FlowMoDE 针对单目深度估计中扩散模型多步采样过慢、单步模型细节不足的两难，提出由粗到细的流匹配框架：先以预训练语义编码器的扩散特征做粗层解码，再用扩展解码层恢复细粒度结构，仅需单步推理。仅在单一合成室内数据集训练，却在五个真实室内外数据集上平均降低 14.1% 相对误差、点云 Chamfer 距离降低 9.9%，并在真实机器人场景验证跨场景泛化。",
+      "pdf_filename": "2610.41190.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "深度估计",
+        "扩散模型",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41190",
+      "search_text": "flowmode: coarse-to-fine flow matching for detail-aware sim-to-real monocular depth estimation 深度估计 扩散模型 点云 flowmode 针对单目深度估计中扩散模型多步采样过慢、单步模型细节不足的两难，提出由粗到细的流匹配框架：先以预训练语义编码器的扩散特征做粗层解码，再用扩展解码层恢复细粒度结构，仅需单步推理。仅在单一合成室内数据集训练，却在五个真实室内外数据集上平均降低 14.1% 相对误差、点云 chamfer 距离降低 9.9%，并在真实机器人场景验证跨场景泛化。 monocular depth estimation is a fundamental capability for 3d spatial perception in robotic and intelligent systems. while data-driven discriminative methods have achieved compelling performance for monocular depth estimation, generative approaches can reconstruct fine structural details with stronger generalization. however, most existing generative diffusion models suffer from low inference efficiency caused by multi-step sampling, whereas single-step diffusion models struggle to recover high-fidelity depth maps. to mitigate these drawbacks, this paper presents flowmode, a coarse-to-fine flow-matching-based framework for efficient, structure-aware monocular depth estimation supporting sim-to-real and cross-scene generalization. the core architecture first conducts coarse-level decoding conditioned on diffused features extracted from a pre-trained semantic encoder, and subsequently restores fine-grained structural patterns via expanded decoding layers. trained exclusively on a single synthetic indoor dataset, our proposed method outperforms prior methods across five real-world indoor and outdoor datasets, yielding an average 14.1% reduction in relative error against state-of-the-art works as well as 9.9\\% reduction in chamfer distance for point cloud reconstruction. we further validate the generalization capability of flowmode on realistic robotic scenes, with qualitative comparisons against state-of-the-art methods. the project page is https://flowmode-shao.netlify.app/ the chinese university of hong kong; shenzhen loop area institute liangjing shao, wanhao liu, jinsong lin, zhiwei fang, hongliang ren cs.cv"
+    },
+    {
+      "arxiv_id": "2610.41097",
+      "title": "RepGen: Reproducing Deep Learning Bugs through Context-Aware Code Generation and Verification",
+      "authors": "Mehil B Shah, Mohammad Masudur Rahman, Foutse Khomh",
+      "affiliations": "Dalhousie University; Polytechnique Montreal",
+      "published_date": "2026-10-30",
+      "categories": "cs.SE",
+      "abstract": "Reproducing deep learning (DL) bugs is challenging because failures can involve source code, models, data, dependencies, and execution environments. Incomplete bug reports further complicate reproduction by omitting essential details. We present RepGen, an open-source tool for reproducing DL bugs through context-aware code generation and iterative verification. Given a bug report and repository, RepGen explores the codebase to build a learning-enhanced context, develop a reproduction plan, and generate candidate scripts. It refines candidates using static checks and LLM feedback to improve their correctness and relevance. When enabled, the tool prepares the execution environment, runs the script, and assesses its output against the reported failure. RepGen provides an interactive command-line interface supporting local and hosted LLMs, configurable execution budgets, and inspectable artifacts, along with a GitHub Action for automated issue processing. The underlying approach reproduced 85 of 106 real-world DL bugs (80.19%). A controlled study with 27 developers showed a 23.35% improvement in reproduction success and a 56.8% reduction in reproduction time.",
+      "summary_cn": "RepGen 是深度学习缺陷复现的开源工具：输入缺陷报告与仓库后，先探索代码库构建学习增强上下文，生成复现计划与候选脚本，再用静态检查与 LLM 反馈迭代修正，可选地准备环境、执行脚本并比对失败现象。工具提供支持本地/托管 LLM 的交互式 CLI、执行预算、可检查产物与 GitHub Action。在 106 个真实 DL 缺陷上复现 85 个（80.19%），27 名开发者实验显示成功率提升 23.35%、耗时降低 56.8%。",
+      "pdf_filename": "2610.41097.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41097",
+      "search_text": "repgen: reproducing deep learning bugs through context-aware code generation and verification 大语言模型 repgen 是深度学习缺陷复现的开源工具：输入缺陷报告与仓库后，先探索代码库构建学习增强上下文，生成复现计划与候选脚本，再用静态检查与 llm 反馈迭代修正，可选地准备环境、执行脚本并比对失败现象。工具提供支持本地/托管 llm 的交互式 cli、执行预算、可检查产物与 github action。在 106 个真实 dl 缺陷上复现 85 个（80.19%），27 名开发者实验显示成功率提升 23.35%、耗时降低 56.8%。 reproducing deep learning (dl) bugs is challenging because failures can involve source code, models, data, dependencies, and execution environments. incomplete bug reports further complicate reproduction by omitting essential details. we present repgen, an open-source tool for reproducing dl bugs through context-aware code generation and iterative verification. given a bug report and repository, repgen explores the codebase to build a learning-enhanced context, develop a reproduction plan, and generate candidate scripts. it refines candidates using static checks and llm feedback to improve their correctness and relevance. when enabled, the tool prepares the execution environment, runs the script, and assesses its output against the reported failure. repgen provides an interactive command-line interface supporting local and hosted llms, configurable execution budgets, and inspectable artifacts, along with a github action for automated issue processing. the underlying approach reproduced 85 of 106 real-world dl bugs (80.19%). a controlled study with 27 developers showed a 23.35% improvement in reproduction success and a 56.8% reduction in reproduction time. dalhousie university; polytechnique montreal mehil b shah, mohammad masudur rahman, foutse khomh cs.se"
+    },
+    {
+      "arxiv_id": "2610.41015",
+      "title": "Do Language Models Know What Compelling Scientific Evidence Looks Like?",
+      "authors": "Conor Igoe, Gabriel Grand, Zane Koch, Albert Bou, Eli Moss, Michaela M. Hinks, Samuel G. Rodriques, Andrew White, Siddharth Narayanan",
+      "affiliations": "Edison Scientific Inc., San Francisco",
+      "published_date": "2026-10-29",
+      "categories": "cs.LG, cs.AI, cs.CL",
+      "abstract": "Expert scientists excel at weighing empirical findings from multiple sources that vary in both statistical reliability and epistemic relevance. To what extent are language models, which are increasingly driving autonomous discovery systems, capable of such evidence deliberation? We introduce EDB-Bio, a scientific reasoning benchmark curated from real-world data in three biological domains: drug-perturbation transcriptomics, CRISPR screens, and human genome-wide association studies (GWAS). Each of EDB-Bio's 96k episodes presents a sequence of experimental results from published studies and asks the model to predict the probability that a target hypothesis is true. Out-of-the-box, open-weight and frontier models alike demonstrate systematic underconfidence and attain Brier scores comparable to a trivial base-rate forecaster. Post-training against strictly proper scoring rules significantly improves both calibration and discrimination. This calibration pays off downstream: in a sequential experiment selection task, our Ibis0 model is 2.5 times more efficient than the best frontier model. Throughout, quantifying evidence weights as Bayes factors reveals how models update their beliefs over time, whether they agree with expert biologists on relevance, and where they exhibit inconsistencies and biases. Our work extends calibration training and uncertainty analysis to a realistic scientific forecasting setting with applications to human cancer biology. We release all code, data, and trained models.",
+      "summary_cn": "EDB-Bio 基准，检验语言模型能否像科学家一样权衡证据。数据取自药物扰动转录组、CRISPR 筛选与人类 GWAS 三个真实领域，共 9.6 万个情节，要求给出目标假设为真的概率。开权重与前沿模型普遍系统性低估置信度，Brier 分数仅相当于基率预测器；按严格适当评分规则后训练可同时改善校准与区分度。下游序列实验选择任务中 Ibis0 比最强前沿模型高效 2.5 倍，贝叶斯因子揭示模型信念更新偏差。",
+      "pdf_filename": "2610.41015.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2610.41015",
+      "search_text": "do language models know what compelling scientific evidence looks like?  edb-bio 基准，检验语言模型能否像科学家一样权衡证据。数据取自药物扰动转录组、crispr 筛选与人类 gwas 三个真实领域，共 9.6 万个情节，要求给出目标假设为真的概率。开权重与前沿模型普遍系统性低估置信度，brier 分数仅相当于基率预测器；按严格适当评分规则后训练可同时改善校准与区分度。下游序列实验选择任务中 ibis0 比最强前沿模型高效 2.5 倍，贝叶斯因子揭示模型信念更新偏差。 expert scientists excel at weighing empirical findings from multiple sources that vary in both statistical reliability and epistemic relevance. to what extent are language models, which are increasingly driving autonomous discovery systems, capable of such evidence deliberation? we introduce edb-bio, a scientific reasoning benchmark curated from real-world data in three biological domains: drug-perturbation transcriptomics, crispr screens, and human genome-wide association studies (gwas). each of edb-bio's 96k episodes presents a sequence of experimental results from published studies and asks the model to predict the probability that a target hypothesis is true. out-of-the-box, open-weight and frontier models alike demonstrate systematic underconfidence and attain brier scores comparable to a trivial base-rate forecaster. post-training against strictly proper scoring rules significantly improves both calibration and discrimination. this calibration pays off downstream: in a sequential experiment selection task, our ibis0 model is 2.5 times more efficient than the best frontier model. throughout, quantifying evidence weights as bayes factors reveals how models update their beliefs over time, whether they agree with expert biologists on relevance, and where they exhibit inconsistencies and biases. our work extends calibration training and uncertainty analysis to a realistic scientific forecasting setting with applications to human cancer biology. we release all code, data, and trained models. edison scientific inc., san francisco conor igoe, gabriel grand, zane koch, albert bou, eli moss, michaela m. hinks, samuel g. rodriques, andrew white, siddharth narayanan cs.lg, cs.ai, cs.cl"
+    },
+    {
+      "arxiv_id": "2610.41011",
+      "title": "Prior-Guided Single-Exposure HDR Novel View Synthesis via Base-Gain Representation",
+      "authors": "Armin Shafiee Sarvestani, Sheyang Tang, Jialu Xu, Zhou Wang",
+      "affiliations": "Department of Electrical and Computer Engineering, University of Waterloo",
+      "published_date": "2026-10-29",
+      "categories": "cs.CV, cs.MM",
+      "abstract": "Single-exposure high dynamic range (HDR) novel view synthesis (NVS) recovers HDR scenes from low dynamic range (LDR) views captured at a single exposure and estimates camera response function (CRF) for LDR re-exposure. Without HDR ground-truth, using single-exposure LDR views as the sole source of direct supervision underconstrains HDR reconstruction and cannot ensure its faithful recovery, motivating the need for learned LDR-to-HDR reconstruction priors. Moreover, single-exposure LDR views supervise CRF only over a limited range, necessitating a learnable prior for reliable re-exposure beyond it. We propose PriorGS, a 3D Gaussian Splatting framework that addresses both challenges by (1) guiding HDR recovery with pseudo-HDR supervision from 2D single-exposure HDR reconstruction methods while anchoring it to input LDR views through a closed reconstruction loop; and (2) regularizing CRF modeling with a learnable prior that guarantees monotonicity and promotes plausible responses. Yet cross-view inconsistencies in independently generated pseudo-HDR targets impair scene reconstruction when HDR is encoded directly as Gaussian's color attribute. We therefore introduce a 3D base-gain HDR representation that factors HDR radiance into an LDR base and an overlaid 3D gain field, promoting robustness to such inconsistencies and enabling 3D HDR appearance editing. Extensive experiments demonstrate PriorGS's substantial superiority over baselines.",
+      "summary_cn": "PriorGS 解决单曝光 HDR 新视角合成的欠约束问题：仅用 LDR 视图监督无法保证 HDR 忠实恢复，CRF 在曝光范围外也缺乏约束。方法用 2D 单曝光 HDR 重建网络生成伪 HDR 监督，并通过闭环重建锚定输入 LDR；同时以可学习先验正则化 CRF，保证单调性。针对各视图伪标签不一致，提出 3D base-gain 表示，把 HDR 辐照度分解为 LDR 基底与三维增益场，既提升鲁棒性又支持三维 HDR 外观编辑。基于 3DGS 实现，实验显著优于基线。",
+      "pdf_filename": "2610.41011.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41011",
+      "search_text": "prior-guided single-exposure hdr novel view synthesis via base-gain representation 3dgs priorgs 解决单曝光 hdr 新视角合成的欠约束问题：仅用 ldr 视图监督无法保证 hdr 忠实恢复，crf 在曝光范围外也缺乏约束。方法用 2d 单曝光 hdr 重建网络生成伪 hdr 监督，并通过闭环重建锚定输入 ldr；同时以可学习先验正则化 crf，保证单调性。针对各视图伪标签不一致，提出 3d base-gain 表示，把 hdr 辐照度分解为 ldr 基底与三维增益场，既提升鲁棒性又支持三维 hdr 外观编辑。基于 3dgs 实现，实验显著优于基线。 single-exposure high dynamic range (hdr) novel view synthesis (nvs) recovers hdr scenes from low dynamic range (ldr) views captured at a single exposure and estimates camera response function (crf) for ldr re-exposure. without hdr ground-truth, using single-exposure ldr views as the sole source of direct supervision underconstrains hdr reconstruction and cannot ensure its faithful recovery, motivating the need for learned ldr-to-hdr reconstruction priors. moreover, single-exposure ldr views supervise crf only over a limited range, necessitating a learnable prior for reliable re-exposure beyond it. we propose priorgs, a 3d gaussian splatting framework that addresses both challenges by (1) guiding hdr recovery with pseudo-hdr supervision from 2d single-exposure hdr reconstruction methods while anchoring it to input ldr views through a closed reconstruction loop; and (2) regularizing crf modeling with a learnable prior that guarantees monotonicity and promotes plausible responses. yet cross-view inconsistencies in independently generated pseudo-hdr targets impair scene reconstruction when hdr is encoded directly as gaussian's color attribute. we therefore introduce a 3d base-gain hdr representation that factors hdr radiance into an ldr base and an overlaid 3d gain field, promoting robustness to such inconsistencies and enabling 3d hdr appearance editing. extensive experiments demonstrate priorgs's substantial superiority over baselines. department of electrical and computer engineering, university of waterloo armin shafiee sarvestani, sheyang tang, jialu xu, zhou wang cs.cv, cs.mm"
+    },
+    {
+      "arxiv_id": "2610.40935",
+      "title": "Let LiDAR Decide Where to Look: Geometry-Measured Token Selection for Efficient Sparse Latent World Models",
+      "authors": "Zeping Zhang, Zhuoya Zhao, Robert Laganière",
+      "affiliations": "University of Ottawa",
+      "published_date": "2026-10-29",
+      "categories": "cs.CV",
+      "abstract": "Vision-centric autonomous driving models encode thousands of image tokens per frame, yet most depict sky, buildings, or empty road---content irrelevant to planning. Worse, these tokens dilute the planner's attention: we show that randomly discarding 75% of tokens already outperforms the dense model, because the planner can concentrate on the remaining driving-critical content. Building on this finding, we present Geometry-Aware Token Selection (GATS), which uses LiDAR and radar point projections to select a small fraction of image tokens before the vision backbone runs. Because the selector operates on measured 3D geometry rather than visual features, the backbone encodes only the selected patches, cutting end-to-end FLOPs by up to $18\\times$. Each kept token receives a 3D anchor from its LiDAR point and is fed to a self-supervised latent world model that predicts future features and 3D displacements without box annotations. At 25% budget, GATS achieves a 3-sec L2 displacement error of 0.520 m on nuScenes and an EPDMS of 88.9 on NAVSIM---surpassing the dense baseline (0.573 m / 85.9) at $6.6\\times$ fewer total FLOPs. At an extreme 10% budget (24 GFLOPs, $18\\times$ reduction), it still beats the dense baseline on both nuScenes (0.537 m vs. 0.573 m L2) and NAVSIM (87.9 vs. 85.9 EPDMS). On 739 intent-critical scenarios, GATS covers 95.8% of hazardous vehicles and achieves a 0.09% collision rate---73.5% lower than the dense model (0.34%).",
+      "summary_cn": "GATS 针对视觉端到端自动驾驶的图像 token 冗余：发现随机丢弃 75% token 反而优于稠密模型，说明规划器注意力被天空、建筑等无关内容稀释。方法用 LiDAR 与雷达点投影在视觉骨干运行前选出少量关键 patch，为保留 token 附上三维锚点，送入自监督隐世界模型预测未来特征与三维位移，无需框标注。25% 预算下 3 秒 L2 位移误差 0.520 m、NAVSIM EPDMS 88.9，总算力降 6.6 倍；10% 预算仍超稠密基线，碰撞率 0.09%。",
+      "pdf_filename": "2610.40935.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "自动驾驶",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.40935",
+      "search_text": "let lidar decide where to look: geometry-measured token selection for efficient sparse latent world models 世界模型 自动驾驶 点云 gats 针对视觉端到端自动驾驶的图像 token 冗余：发现随机丢弃 75% token 反而优于稠密模型，说明规划器注意力被天空、建筑等无关内容稀释。方法用 lidar 与雷达点投影在视觉骨干运行前选出少量关键 patch，为保留 token 附上三维锚点，送入自监督隐世界模型预测未来特征与三维位移，无需框标注。25% 预算下 3 秒 l2 位移误差 0.520 m、navsim epdms 88.9，总算力降 6.6 倍；10% 预算仍超稠密基线，碰撞率 0.09%。 vision-centric autonomous driving models encode thousands of image tokens per frame, yet most depict sky, buildings, or empty road---content irrelevant to planning. worse, these tokens dilute the planner's attention: we show that randomly discarding 75% of tokens already outperforms the dense model, because the planner can concentrate on the remaining driving-critical content. building on this finding, we present geometry-aware token selection (gats), which uses lidar and radar point projections to select a small fraction of image tokens before the vision backbone runs. because the selector operates on measured 3d geometry rather than visual features, the backbone encodes only the selected patches, cutting end-to-end flops by up to $18\\times$. each kept token receives a 3d anchor from its lidar point and is fed to a self-supervised latent world model that predicts future features and 3d displacements without box annotations. at 25% budget, gats achieves a 3-sec l2 displacement error of 0.520 m on nuscenes and an epdms of 88.9 on navsim---surpassing the dense baseline (0.573 m / 85.9) at $6.6\\times$ fewer total flops. at an extreme 10% budget (24 gflops, $18\\times$ reduction), it still beats the dense baseline on both nuscenes (0.537 m vs. 0.573 m l2) and navsim (87.9 vs. 85.9 epdms). on 739 intent-critical scenarios, gats covers 95.8% of hazardous vehicles and achieves a 0.09% collision rate---73.5% lower than the dense model (0.34%). university of ottawa zeping zhang, zhuoya zhao, robert laganière cs.cv"
+    },
+    {
+      "arxiv_id": "2610.40917",
+      "title": "Towards Portable Specification of the Agent Harness",
+      "authors": "Nicolas Gertler, Claudio Novelli, Luciano Floridi",
+      "affiliations": "Digital Ethics Center, Yale University; Department of Legal Studies, University of Bologna",
+      "published_date": "2026-10-29",
+      "categories": "cs.AI",
+      "abstract": "Large language models act only through the infrastructure that surrounds them. That infrastructure, the harness, determines what a model can accomplish and how it fails, yet it has no settled definition. To address this gap, we decompose the harness into eight functional components that can be specified and compared across systems, and we propose a portable specification framework that records which model ran in which harness. The record is needed because different harness configurations can yield several-fold differences in reported scores for the same model, and because much of an agent's attack surface lies in its harness. Existing model cards and agent cards provide release and operational information, but do not establish the sequence of effective configurations within a run. Harnesses can change between releases and between runs, and, where agents edit their own tools and configuration, within a run. Enacted AI laws contain documentation duties relevant to covered systems, subject to their respective scopes and application dates, but do not prescribe the common harness record proposed here. Therefore, the harness has to be explicitly described and specified as a versioned part of the system.",
+      "summary_cn": "本文把智能体框架 harness 拆解为八个可规格化、可跨系统比较的功能组件，提出可移植描述规范，记录某次运行中哪个模型跑在哪个框架上。作者论证同一模型在不同框架下评分可相差数倍，大量攻击面位于框架层，而模型卡无法刻画运行内配置序列。为此主张把框架作为系统的一部分显式版本化声明，并与现行 AI 法规的文档义务对齐，作为可复用的合规记录。",
+      "pdf_filename": "2610.40917.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.40917",
+      "search_text": "towards portable specification of the agent harness 大语言模型 本文把智能体框架 harness 拆解为八个可规格化、可跨系统比较的功能组件，提出可移植描述规范，记录某次运行中哪个模型跑在哪个框架上。作者论证同一模型在不同框架下评分可相差数倍，大量攻击面位于框架层，而模型卡无法刻画运行内配置序列。为此主张把框架作为系统的一部分显式版本化声明，并与现行 ai 法规的文档义务对齐，作为可复用的合规记录。 large language models act only through the infrastructure that surrounds them. that infrastructure, the harness, determines what a model can accomplish and how it fails, yet it has no settled definition. to address this gap, we decompose the harness into eight functional components that can be specified and compared across systems, and we propose a portable specification framework that records which model ran in which harness. the record is needed because different harness configurations can yield several-fold differences in reported scores for the same model, and because much of an agent's attack surface lies in its harness. existing model cards and agent cards provide release and operational information, but do not establish the sequence of effective configurations within a run. harnesses can change between releases and between runs, and, where agents edit their own tools and configuration, within a run. enacted ai laws contain documentation duties relevant to covered systems, subject to their respective scopes and application dates, but do not prescribe the common harness record proposed here. therefore, the harness has to be explicitly described and specified as a versioned part of the system. digital ethics center, yale university; department of legal studies, university of bologna nicolas gertler, claudio novelli, luciano floridi cs.ai"
+    },
+    {
+      "arxiv_id": "2610.40832",
+      "title": "EgoHSI3R: Online 4D Hand-Scene Interaction Reconstruction from Egocentric Video",
+      "authors": "Mingzhi Pei, Zhangchen Ye, Ruoqu Chen, Liu Cao, Mengdi Xu",
+      "affiliations": "Tsinghua University",
+      "published_date": "2026-10-29",
+      "categories": "cs.CV",
+      "abstract": "Egocentric videos offer an abundant source of hand-scene interactions for embodied learning, which requires recovering hands, camera, and scene consistently in a shared 3D world. Existing methods focus on either camera-frame hands or world-space hand trajectories, without jointly recovering the scene pointmaps or interaction information. Building a complete reconstruction from such specialized predictions therefore typically requires per-sequence optimization. We propose EgoHSI3R, a unified feed-forward framework for online 4D hand-scene interaction reconstruction from egocentric monocular video. To jointly recover these components, it maintains a recurrent scene representation that accumulates geometric evidence over time and provides a shared world space and scale. We introduce hand-centric prompts that fuse pretrained hand priors and local scene context, while MANO vertex queries attend to scene features to predict dense per-vertex contact. These designs enable a single network to jointly estimate camera motion, dense scene geometry, world-space bilateral MANO hands, and per-vertex hand contact. Despite operating causally, EgoHSI3R achieves the lowest world-space hand joint error on ARCTIC among the evaluated methods, while offering faster inference than existing world-space hand reconstruction pipelines and competitive camera and scene reconstruction accuracy.",
+      "summary_cn": "EgoHSI3R 用单一前馈网络从第一视角单目视频流式重建 4D 手-物交互：循环场景表示累积几何证据并给出共享世界尺度，手部提示融合手部先验与局部场景上下文，MANO 顶点查询场景特征预测逐顶点接触。严格因果推理下在 ARCTIC 上取得最低世界坐标手部关节误差，相机与场景重建精度具竞争力，推理快于现有世界坐标手部重建流程，且无需逐序列优化。",
+      "pdf_filename": "2610.40832.pdf",
+      "crawled_date": "2026-11-02",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.40832",
+      "search_text": "egohsi3r: online 4d hand-scene interaction reconstruction from egocentric video 具身智能 egohsi3r 用单一前馈网络从第一视角单目视频流式重建 4d 手-物交互：循环场景表示累积几何证据并给出共享世界尺度，手部提示融合手部先验与局部场景上下文，mano 顶点查询场景特征预测逐顶点接触。严格因果推理下在 arctic 上取得最低世界坐标手部关节误差，相机与场景重建精度具竞争力，推理快于现有世界坐标手部重建流程，且无需逐序列优化。 egocentric videos offer an abundant source of hand-scene interactions for embodied learning, which requires recovering hands, camera, and scene consistently in a shared 3d world. existing methods focus on either camera-frame hands or world-space hand trajectories, without jointly recovering the scene pointmaps or interaction information. building a complete reconstruction from such specialized predictions therefore typically requires per-sequence optimization. we propose egohsi3r, a unified feed-forward framework for online 4d hand-scene interaction reconstruction from egocentric monocular video. to jointly recover these components, it maintains a recurrent scene representation that accumulates geometric evidence over time and provides a shared world space and scale. we introduce hand-centric prompts that fuse pretrained hand priors and local scene context, while mano vertex queries attend to scene features to predict dense per-vertex contact. these designs enable a single network to jointly estimate camera motion, dense scene geometry, world-space bilateral mano hands, and per-vertex hand contact. despite operating causally, egohsi3r achieves the lowest world-space hand joint error on arctic among the evaluated methods, while offering faster inference than existing world-space hand reconstruction pipelines and competitive camera and scene reconstruction accuracy. tsinghua university mingzhi pei, zhangchen ye, ruoqu chen, liu cao, mengdi xu cs.cv"
+    },
     {
       "arxiv_id": "2610.40614",
       "title": "L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory",
