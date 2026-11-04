@@ -1,90 +1,90 @@
 {
-  "count": 1890,
+  "count": 1926,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-11-03",
+  "crawled_date_max": "2026-11-04",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-11-02",
+  "published_date_max": "2026-11-03",
   "rating_counts": {
-    "S": 539,
-    "A": 744,
-    "B": 301,
-    "C": 306,
+    "S": 546,
+    "A": 750,
+    "B": 308,
+    "C": 322,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 400,
+      "count": 406,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 352,
+      "count": 357,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 327,
+      "count": 333,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 284,
+      "count": 287,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 281,
+      "count": 286,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 264,
+      "count": 272,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 199,
+      "count": 203,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 138,
+      "count": 141,
       "group": "世界模型与仿真"
     },
     {
       "name": "点云",
-      "count": 126,
+      "count": 131,
       "group": "通用"
     },
     {
       "name": "前馈3D重建",
-      "count": 116,
+      "count": 118,
       "group": "前馈3D重建"
     },
     {
       "name": "具身智能",
-      "count": 109,
+      "count": 111,
       "group": "通用"
     },
     {
       "name": "仿真器",
-      "count": 107,
+      "count": 109,
       "group": "通用"
     },
     {
       "name": "场景压缩",
-      "count": 84,
+      "count": 88,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 67,
+      "count": 69,
       "group": "世界模型与仿真"
     },
     {
       "name": "4DGS",
-      "count": 53,
+      "count": 56,
       "group": "3DGS/4DGS"
     },
     {
@@ -93,17 +93,17 @@
       "group": "世界模型与仿真"
     },
     {
-      "name": "NeRF",
-      "count": 46,
-      "group": "通用"
-    },
-    {
       "name": "深度估计",
-      "count": 46,
+      "count": 47,
       "group": "前馈3D重建"
     },
     {
       "name": "SLAM",
+      "count": 47,
+      "group": "通用"
+    },
+    {
+      "name": "NeRF",
       "count": 46,
       "group": "通用"
     },
@@ -154,6 +154,709 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2611.05361",
+      "title": "Visibility-Aware Reference Generation for Benchmarking Visual 3D Reconstruction in Vegetation-Rich Environments",
+      "authors": "Zhipeng Zhong, Matthew Coombes, Cunjia Liu",
+      "affiliations": "Loughborough University",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Reliable evaluation of visual 3D reconstruction and depth estimation in vegetation-rich outdoor environments is limited by the scarcity of geometric ground-truth data and the cost of complete scanner surveys. We present a LiDARbased reference-generation pipeline for evaluating the zero-shot performance of feed-forward visual-geometry models alongside conventional structure-from-motion (SfM) methods. The pipeline reuses camera images, LiDAR scans, and reference poses from existing multi-sensor localization datasets to generate per-view depth maps and visible reference point clouds. To address visibility errors in accumulated LiDAR scans, we introduce the LargeDepth-Gap Visibility Score (LDGVS) for point-wise visibility filtering and automatic scale selection in Hidden Point Removal(HPR). Experiments on TartanAirV2 and TartanGround show that, compared with Poisson surface reconstruction, which is an approach suited to completed scan surveys, the combined HPR and LDGVS filtering retains approximately three times the point density at comparable absolute relative error. We also apply the pipeline to the BotanicGarden dataset to systematically compare depth estimation and 3D reconstruction methods. Feedforward methods produce dense depth predictions efficiently, but their 3D reconstructions can contain duplicated structures. Conventional SfM generally produces more coherent geometry, but its reconstructions remain sparse and more prone to failure in challenging vegetated scenes. The benchmark toolkit and datasets will be released.",
+      "summary_cn": "提出面向植被茂密室外场景的 LiDAR 参考生成流程，复用多传感器定位数据集的图像、点云与位姿生成逐视角深度图和可见参考点云，用大深度间隙可见性分数 LDGVS 做过滤与 HPR 尺度自选；在 TartanAirV2、TartanGround 上以约三倍点密度保持可比误差，并比较前馈重建与 SfM。",
+      "pdf_filename": "2611.05361.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "深度估计",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05361",
+      "search_text": "visibility-aware reference generation for benchmarking visual 3d reconstruction in vegetation-rich environments 前馈3d重建 深度估计 点云 提出面向植被茂密室外场景的 lidar 参考生成流程，复用多传感器定位数据集的图像、点云与位姿生成逐视角深度图和可见参考点云，用大深度间隙可见性分数 ldgvs 做过滤与 hpr 尺度自选；在 tartanairv2、tartanground 上以约三倍点密度保持可比误差，并比较前馈重建与 sfm。 reliable evaluation of visual 3d reconstruction and depth estimation in vegetation-rich outdoor environments is limited by the scarcity of geometric ground-truth data and the cost of complete scanner surveys. we present a lidarbased reference-generation pipeline for evaluating the zero-shot performance of feed-forward visual-geometry models alongside conventional structure-from-motion (sfm) methods. the pipeline reuses camera images, lidar scans, and reference poses from existing multi-sensor localization datasets to generate per-view depth maps and visible reference point clouds. to address visibility errors in accumulated lidar scans, we introduce the largedepth-gap visibility score (ldgvs) for point-wise visibility filtering and automatic scale selection in hidden point removal(hpr). experiments on tartanairv2 and tartanground show that, compared with poisson surface reconstruction, which is an approach suited to completed scan surveys, the combined hpr and ldgvs filtering retains approximately three times the point density at comparable absolute relative error. we also apply the pipeline to the botanicgarden dataset to systematically compare depth estimation and 3d reconstruction methods. feedforward methods produce dense depth predictions efficiently, but their 3d reconstructions can contain duplicated structures. conventional sfm generally produces more coherent geometry, but its reconstructions remain sparse and more prone to failure in challenging vegetated scenes. the benchmark toolkit and datasets will be released. loughborough university zhipeng zhong, matthew coombes, cunjia liu cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.05359",
+      "title": "GSCV++: Lightweight 3D Gaussian Splatting Sequence Compression via Standard Video Codecs",
+      "authors": "Qi Yang, Yingzhan Xu, Kai Zhang, Li Zhang",
+      "affiliations": "ByteDance Inc.",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "This paper presents GSCV++, a lightweight pipeline for 3D {G}aussian {S}platting (GS) sequences {C}ompression with standard {V}ideo codecs. To meet the requirements of low-complexity and hardware compatibility from the industry, GSCV++ jointly improves preprocessing, 3D-to-2D mapping, and practical video compression configuration of GS compression. First, for preprocessing, energy-adaptive inter-frame spherical harmonic (SH) alternative current (AC) dimensionality reduction (EA-SHDR) is proposed to produces a compact and stable temporal SH AC feature space. It can reduce the data volume of following mapping and practical compression, as well as less complexity while eliminating redundant information. Second, for 3D-to-2D mapping, prior-based Inter-MiniPLAS (P-MiniPLAS) is designed to generate smooth 2D feature maps through prior-based weighting factor inference and small scale remapping. Compared with vanilla Parallel Linear Assignment Sorting (PLAS) and Morton scan, P-MiniPLAS ensures the generated 2D maps are more suitable for the video codec while maintaining a low level of computational complexity. Third, for practical compression, content-aware generalized compression (CA-GC) is developed to use a non-uniform bit-depth split for coordinate map generation, and a coding unit size selection is introduced for efficient compression complexity control, which fully exploits the performance of video codecs without involving normative changes. Experiments demonstrate that GSCV++ reports over 20\\% in intra- and 60\\% in inter-prediction rate-distortion gains compared with state-of-the-art (SOTA) methods. GSCV++ also achieves faster 2D map generation, encoding, and decoding than other SOTA methods using the same type of video codecs. Ablation studies verify the effectiveness and robustness of the proposed modules and provide insights for subsequent research.",
+      "summary_cn": "提出 GSCV++ 轻量级 3DGS 序列压缩流程，用标准视频编解码器完成压缩：能量自适应帧间球谐 AC 降维构造紧凑稳定特征空间，先验加权 P-MiniPLAS 生成更适合编码的平滑二维特征图，内容感知非均匀位深与编码单元选择提升实用效率，帧内、帧间码率失真增益分别超 20% 与 60%。",
+      "pdf_filename": "2611.05359.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "场景压缩"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05359",
+      "search_text": "gscv++: lightweight 3d gaussian splatting sequence compression via standard video codecs 3dgs 场景压缩 提出 gscv++ 轻量级 3dgs 序列压缩流程，用标准视频编解码器完成压缩：能量自适应帧间球谐 ac 降维构造紧凑稳定特征空间，先验加权 p-miniplas 生成更适合编码的平滑二维特征图，内容感知非均匀位深与编码单元选择提升实用效率，帧内、帧间码率失真增益分别超 20% 与 60%。 this paper presents gscv++, a lightweight pipeline for 3d {g}aussian {s}platting (gs) sequences {c}ompression with standard {v}ideo codecs. to meet the requirements of low-complexity and hardware compatibility from the industry, gscv++ jointly improves preprocessing, 3d-to-2d mapping, and practical video compression configuration of gs compression. first, for preprocessing, energy-adaptive inter-frame spherical harmonic (sh) alternative current (ac) dimensionality reduction (ea-shdr) is proposed to produces a compact and stable temporal sh ac feature space. it can reduce the data volume of following mapping and practical compression, as well as less complexity while eliminating redundant information. second, for 3d-to-2d mapping, prior-based inter-miniplas (p-miniplas) is designed to generate smooth 2d feature maps through prior-based weighting factor inference and small scale remapping. compared with vanilla parallel linear assignment sorting (plas) and morton scan, p-miniplas ensures the generated 2d maps are more suitable for the video codec while maintaining a low level of computational complexity. third, for practical compression, content-aware generalized compression (ca-gc) is developed to use a non-uniform bit-depth split for coordinate map generation, and a coding unit size selection is introduced for efficient compression complexity control, which fully exploits the performance of video codecs without involving normative changes. experiments demonstrate that gscv++ reports over 20\\% in intra- and 60\\% in inter-prediction rate-distortion gains compared with state-of-the-art (sota) methods. gscv++ also achieves faster 2d map generation, encoding, and decoding than other sota methods using the same type of video codecs. ablation studies verify the effectiveness and robustness of the proposed modules and provide insights for subsequent research. bytedance inc. qi yang, yingzhan xu, kai zhang, li zhang cs.cv"
+    },
+    {
+      "arxiv_id": "2611.05249",
+      "title": "Should the Action Expert Train the VLM? Action-Token Supervision and Gradient Routing in Mixture-of-Transformer VLAs",
+      "authors": "Asher James Hancock, Boyi Li, Yuxiao Chen, Shuhan Tan, Wenhao Ding, Thomas Tian, Yan Wang, Boris Ivanovic, Marco Pavone",
+      "affiliations": "NVIDIA; Princeton University; Stanford University",
+      "published_date": "2026-11-03",
+      "categories": "cs.RO",
+      "abstract": "Vision-language-action (VLA) models increasingly pair a pre-trained vision-language model (VLM) with a flow-matching expert that conditions its action predictions on the VLM's key-value representations. Those representations must carry information useful for control, yet the VLM was never trained for the action expert's flow-matching objective. Two signals can address this: gradients backpropagated from the expert's loss (coupling), or VLM supervision to predict discrete tokens encoding the same target actions. Prominent training recipes forgo the first, blocking expert-to-VLM gradients (insulation) to protect the VLM's existing capabilities, while also supervising it on vision-language data and action tokens. Because vision-language co-training also aims to preserve those capabilities, the additional protection provided by insulation is unclear. At the same time, insulation removes a direct signal about which features continuous action prediction requires. On the other hand, action-token supervision offers an alternative way to learn action-relevant representations, which may explain why insulation succeeds in practice. We disentangle these factors in autonomous driving and manipulation by independently varying action-token supervision and whether the expert's loss updates the VLM. In open-loop driving, insulation is competitive with coupling when action tokens are supervised; without them, coupling reduces trajectory-prediction error by roughly 25%. When both components are trained jointly from the outset, coupling increases closed-loop driving route progress by approximately 17% with action-token supervision and 40% without it, and similarly improves robot manipulation performance under both settings. These findings show that the value of gradient insulation depends on the VLM's action supervision and the evaluation setting, challenging insulation as a default VLA training recipe.",
+      "summary_cn": "系统比较 VLA 中让动作专家反传梯度训练 VLM（耦合）与用动作 token 监督 VLM 两条信号路径，并检验屏蔽专家到 VLM 梯度（绝缘）是否仍有必要；结果表明在视觉语言联合训练下绝缘提供的额外保护有限，两类信号的取舍显著影响控制性能与 VLM 原有能力的保持。",
+      "pdf_filename": "2611.05249.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05249",
+      "search_text": "should the action expert train the vlm? action-token supervision and gradient routing in mixture-of-transformer vlas 闭环仿真 自动驾驶 多模态 具身智能 系统比较 vla 中让动作专家反传梯度训练 vlm（耦合）与用动作 token 监督 vlm 两条信号路径，并检验屏蔽专家到 vlm 梯度（绝缘）是否仍有必要；结果表明在视觉语言联合训练下绝缘提供的额外保护有限，两类信号的取舍显著影响控制性能与 vlm 原有能力的保持。 vision-language-action (vla) models increasingly pair a pre-trained vision-language model (vlm) with a flow-matching expert that conditions its action predictions on the vlm's key-value representations. those representations must carry information useful for control, yet the vlm was never trained for the action expert's flow-matching objective. two signals can address this: gradients backpropagated from the expert's loss (coupling), or vlm supervision to predict discrete tokens encoding the same target actions. prominent training recipes forgo the first, blocking expert-to-vlm gradients (insulation) to protect the vlm's existing capabilities, while also supervising it on vision-language data and action tokens. because vision-language co-training also aims to preserve those capabilities, the additional protection provided by insulation is unclear. at the same time, insulation removes a direct signal about which features continuous action prediction requires. on the other hand, action-token supervision offers an alternative way to learn action-relevant representations, which may explain why insulation succeeds in practice. we disentangle these factors in autonomous driving and manipulation by independently varying action-token supervision and whether the expert's loss updates the vlm. in open-loop driving, insulation is competitive with coupling when action tokens are supervised; without them, coupling reduces trajectory-prediction error by roughly 25%. when both components are trained jointly from the outset, coupling increases closed-loop driving route progress by approximately 17% with action-token supervision and 40% without it, and similarly improves robot manipulation performance under both settings. these findings show that the value of gradient insulation depends on the vlm's action supervision and the evaluation setting, challenging insulation as a default vla training recipe. nvidia; princeton university; stanford university asher james hancock, boyi li, yuxiao chen, shuhan tan, wenhao ding, thomas tian, yan wang, boris ivanovic, marco pavone cs.ro"
+    },
+    {
+      "arxiv_id": "2611.05197",
+      "title": "Robust Reconstruction of Power Lines from Incomplete Mobile and Aerial LiDAR Data",
+      "authors": "Mohamed Gaha, Damos Ayobo Abongo, Philippe Massicotte, Eya Ben Kacem, Wael Jaafar, Rami Langar, Christian Buteau",
+      "affiliations": "Hydro-Quebec; École de Technologie Supérieure; LIGM-CNRS, University Gustave Eiffel",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "Accurate vegetation-encroachment assessment and risk mitigation require electric utilities to accurately locate and characterize distribution-network assets, including poles and power lines, and distinguish among medium-voltage, low-voltage, neutral, and telecommunication lines. Mobile and aerial Light Detection and Ranging (LiDAR) point clouds provide detailed 3D representations of these assets and their surroundings. However, power-line detection and reconstruction remain challenging because conductor returns are often sparse, incomplete, noisy, or occluded by vegetation. These challenges are especially significant in distribution networks, where lower pole heights and complex line configurations place conductors close to trees. In addition, mobile and aerial LiDAR datasets differ substantially in point density, viewing geometry, spatial coverage, and occlusion patterns. We propose a robust and automated reconstruction method combining scaled density-based clustering, robust polynomial fitting, and iterative fragment merging to recover individual conductors under severe data incompleteness and occlusion. Following semantic classification, the same reconstruction pipeline processes both mobile and aerial LiDAR data without modality-specific code or parameter tuning. The method is evaluated through degradation experiments, benchmarking, parameter sensitivity analysis, and large-scale validation. On the aerial dataset, it achieves 96.87% precision, 96.66% recall, a 96.76% F$_1$-score, and a geometric RMSE of 0.127 m. On the mobile dataset, where conductor-level reference annotations were unavailable, it achieves a point-to-model RMSE of 0.045 m and a reconstruction coverage of 95.27%. Source code, documentation, and evaluation data are publicly available at https://github.com/varen-project.",
+      "summary_cn": "面向配电网络植被侵入评估，提出从机载与车载不完整 LiDAR 点云鲁棒重建电力线的方法，应对导线回波稀疏、缺失、噪声与被植被遮挡，并区分中压、低压、中性线与通信线；融合两类数据在点密度与视角几何上的差异，提升导线定位与拓扑恢复的完整性。",
+      "pdf_filename": "2611.05197.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05197",
+      "search_text": "robust reconstruction of power lines from incomplete mobile and aerial lidar data 点云 面向配电网络植被侵入评估，提出从机载与车载不完整 lidar 点云鲁棒重建电力线的方法，应对导线回波稀疏、缺失、噪声与被植被遮挡，并区分中压、低压、中性线与通信线；融合两类数据在点密度与视角几何上的差异，提升导线定位与拓扑恢复的完整性。 accurate vegetation-encroachment assessment and risk mitigation require electric utilities to accurately locate and characterize distribution-network assets, including poles and power lines, and distinguish among medium-voltage, low-voltage, neutral, and telecommunication lines. mobile and aerial light detection and ranging (lidar) point clouds provide detailed 3d representations of these assets and their surroundings. however, power-line detection and reconstruction remain challenging because conductor returns are often sparse, incomplete, noisy, or occluded by vegetation. these challenges are especially significant in distribution networks, where lower pole heights and complex line configurations place conductors close to trees. in addition, mobile and aerial lidar datasets differ substantially in point density, viewing geometry, spatial coverage, and occlusion patterns. we propose a robust and automated reconstruction method combining scaled density-based clustering, robust polynomial fitting, and iterative fragment merging to recover individual conductors under severe data incompleteness and occlusion. following semantic classification, the same reconstruction pipeline processes both mobile and aerial lidar data without modality-specific code or parameter tuning. the method is evaluated through degradation experiments, benchmarking, parameter sensitivity analysis, and large-scale validation. on the aerial dataset, it achieves 96.87% precision, 96.66% recall, a 96.76% f$_1$-score, and a geometric rmse of 0.127 m. on the mobile dataset, where conductor-level reference annotations were unavailable, it achieves a point-to-model rmse of 0.045 m and a reconstruction coverage of 95.27%. source code, documentation, and evaluation data are publicly available at https://github.com/varen-project. hydro-quebec; école de technologie supérieure; ligm-cnrs, university gustave eiffel mohamed gaha, damos ayobo abongo, philippe massicotte, eya ben kacem, wael jaafar, rami langar, christian buteau cs.cv"
+    },
+    {
+      "arxiv_id": "2611.05169",
+      "title": "Unified Motion Correction and Reconstruction for Accelerated Zero Echo Time MRI",
+      "authors": "Yan Chen, Curtis A. Corum, James H. Holmes, Mathews Jacob",
+      "affiliations": "University of Virginia; Champaign Imaging LLC; University of Iowa",
+      "published_date": "2026-11-03",
+      "categories": "eess.IV",
+      "abstract": "Zero echo time (ZTE) MRI is near-silent, but dead time gaps, head motion, and undersampling jointly degrade reconstruction. To develop an accelerated ZTE MRI reconstruction framework that jointly estimates the 3D image and rigid-motion parameters, this work introduces Energy-based Motion Correction (EnMoCo), a regularized maximum a posteriori (MAP) formulation that also compensates for missing k-space center data and angular undersampling artifacts. Solved by alternating between k-space rigid-motion updates and conjugate-gradient data-consistency updates, the framework incorporates regularization via a pre-trained Multi-Scale Energy-based model (MuSE) implemented in a data-efficient 2.5D form. Evaluations on simulated and in vivo 3D ZTE data, spanning dead time gaps of 1.5 to 5 samples, rotations up to 17 degrees and translations up to 10 mm, demonstrate that EnMoCo significantly improves PSNR and SSIM relative to CG-SENSE and Autofocusing baselines (achieving roughly 10 to 15 dB higher PSNR for gaps >= 3.5) while reducing motion blur and tissue contrast inconsistencies.",
+      "summary_cn": "提出 EnMoCo，用正则化最大后验框架同时估计 3D 图像与刚体运动参数，交替进行 k 空间运动更新与共轭梯度数据一致性更新，并补偿缺失的 k 空间中心数据与角度欠采样伪影，以 2.5D 形式复用预训练多尺度能量模型做正则，在仿真与在体 ZTE 数据上验证。",
+      "pdf_filename": "2611.05169.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.05169",
+      "search_text": "unified motion correction and reconstruction for accelerated zero echo time mri  提出 enmoco，用正则化最大后验框架同时估计 3d 图像与刚体运动参数，交替进行 k 空间运动更新与共轭梯度数据一致性更新，并补偿缺失的 k 空间中心数据与角度欠采样伪影，以 2.5d 形式复用预训练多尺度能量模型做正则，在仿真与在体 zte 数据上验证。 zero echo time (zte) mri is near-silent, but dead time gaps, head motion, and undersampling jointly degrade reconstruction. to develop an accelerated zte mri reconstruction framework that jointly estimates the 3d image and rigid-motion parameters, this work introduces energy-based motion correction (enmoco), a regularized maximum a posteriori (map) formulation that also compensates for missing k-space center data and angular undersampling artifacts. solved by alternating between k-space rigid-motion updates and conjugate-gradient data-consistency updates, the framework incorporates regularization via a pre-trained multi-scale energy-based model (muse) implemented in a data-efficient 2.5d form. evaluations on simulated and in vivo 3d zte data, spanning dead time gaps of 1.5 to 5 samples, rotations up to 17 degrees and translations up to 10 mm, demonstrate that enmoco significantly improves psnr and ssim relative to cg-sense and autofocusing baselines (achieving roughly 10 to 15 db higher psnr for gaps >= 3.5) while reducing motion blur and tissue contrast inconsistencies. university of virginia; champaign imaging llc; university of iowa yan chen, curtis a. corum, james h. holmes, mathews jacob eess.iv"
+    },
+    {
+      "arxiv_id": "2611.05168",
+      "title": "DSL-Bench: Evaluating and Explaining LLM Code Generation Across Domain-Specific Languages",
+      "authors": "Zihan Zhou, Mingxi Ye, Yan Gao, Guipeng Wei, Zibin Zheng",
+      "affiliations": "Sun Yat-sen University",
+      "published_date": "2026-11-03",
+      "categories": "cs.SE",
+      "abstract": "Large language models (LLMs) are increasingly used in software-engineering workflows, but code-generation benchmarks largely focus on general-purpose languages. Domain-specific languages (DSLs) have distinct syntax, semantics, and validation requirements, making results from individual DSL benchmarks difficult to compare. We present DSL-Bench, an executable benchmark and analysis framework for cross-DSL code generation. Starting from 13,045 DSL-related papers, LLM-assisted open card sorting identifies 18 representative application domains. For each domain, we select an evaluable DSL and provide a syntax checker and task-level semantic oracle. Evaluating 7 LLMs on 18 DSLs, we observe mean syntax and semantic pass rates of 31.37% and 11.64%, respectively, revealing a substantial gap between syntax acceptance and semantic correctness. A variance decomposition attributes 76.99% of semantic pass-rate variation to differences among DSLs and 7.86% to differences among models. Among four DSL-level factors, Knowledge Demand has the strongest negative association with semantic correctness (r = -0.508). We evaluate prompt engineering across all 18 DSLs and study five improvement methods on five targeted DSLs. Prompt engineering yields uneven gains; RAG-Refinement, the strongest targeted method, improves semantic correctness by 16.29 percentage points on average over matched baselines. We further derive capability profiles and DSL-Profiler summaries for interpreting data-scarce DSLs. These results highlight toolchain-specific semantic bottlenecks and the need to evaluate DSL code generation beyond syntax acceptance.",
+      "summary_cn": "提出跨领域专用语言的可执行代码生成基准 DSL-Bench，从 13045 篇 DSL 论文经大模型辅助卡片分类得到 18 个应用领域，每领域选定可评测 DSL 并提供语法检查与任务级语义判定；评测 7 个模型得语法通过率 31.37%、语义通过率 11.64%，暴露语法可接受与语义正确的巨大落差。",
+      "pdf_filename": "2611.05168.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05168",
+      "search_text": "dsl-bench: evaluating and explaining llm code generation across domain-specific languages 大语言模型 提出跨领域专用语言的可执行代码生成基准 dsl-bench，从 13045 篇 dsl 论文经大模型辅助卡片分类得到 18 个应用领域，每领域选定可评测 dsl 并提供语法检查与任务级语义判定；评测 7 个模型得语法通过率 31.37%、语义通过率 11.64%，暴露语法可接受与语义正确的巨大落差。 large language models (llms) are increasingly used in software-engineering workflows, but code-generation benchmarks largely focus on general-purpose languages. domain-specific languages (dsls) have distinct syntax, semantics, and validation requirements, making results from individual dsl benchmarks difficult to compare. we present dsl-bench, an executable benchmark and analysis framework for cross-dsl code generation. starting from 13,045 dsl-related papers, llm-assisted open card sorting identifies 18 representative application domains. for each domain, we select an evaluable dsl and provide a syntax checker and task-level semantic oracle. evaluating 7 llms on 18 dsls, we observe mean syntax and semantic pass rates of 31.37% and 11.64%, respectively, revealing a substantial gap between syntax acceptance and semantic correctness. a variance decomposition attributes 76.99% of semantic pass-rate variation to differences among dsls and 7.86% to differences among models. among four dsl-level factors, knowledge demand has the strongest negative association with semantic correctness (r = -0.508). we evaluate prompt engineering across all 18 dsls and study five improvement methods on five targeted dsls. prompt engineering yields uneven gains; rag-refinement, the strongest targeted method, improves semantic correctness by 16.29 percentage points on average over matched baselines. we further derive capability profiles and dsl-profiler summaries for interpreting data-scarce dsls. these results highlight toolchain-specific semantic bottlenecks and the need to evaluate dsl code generation beyond syntax acceptance. sun yat-sen university zihan zhou, mingxi ye, yan gao, guipeng wei, zibin zheng cs.se"
+    },
+    {
+      "arxiv_id": "2611.05072",
+      "title": "Trajectory Evaluation via Rollout-Free World Model for End-to-end Autonomous Driving",
+      "authors": "Junzhe Wang, Jinqing Zhang, Qingjie Liu",
+      "affiliations": "State Key Laboratory of Virtual Reality Technology and Systems, Beihang University; Xiaomi EV",
+      "published_date": "2026-11-03",
+      "categories": "cs.RO, cs.AI, cs.CV",
+      "abstract": "Although existing candidate trajectory evaluators have substantially improved end-to-end planning accuracy, their underlying mechanism remains suboptimal. Model-based evaluators typically make scoring future-aware by explicitly predicting candidate-conditioned future states over the planning horizon, which we term rollout. However, rollout incurs high inference cost and accumulates prediction errors. We argue that planning does not require reconstructing a full future scene for each candidate, but only future-relevant information for reliable comparison. We therefore propose RFWorld, a Rollout-Free World model for end-to-end trajectory evaluation. RFWorld constructs a shared scene memory and shapes it into a future-readable representation via lightweight training-time temporal readout with semantic supervision, keeping training overhead low. At inference time, candidate trajectories directly query the shared memory via sparse spatial readout for scoring, reducing computation by roughly the planning horizon times the number of candidate trajectories, while avoiding recursive rollout errors. Experiments on NAVSIM and Bench2Drive show that RFWorld learns a more planning-aligned world representation and achieves state-of-the-art performance.",
+      "summary_cn": "提出无推演的轨迹评估世界模型 RFWorld：构建共享场景记忆，经训练期轻量时序读出与语义监督塑造成可读取未来的表示，推理时候选轨迹只用稀疏空间读出查询记忆打分，避开逐步推演的高成本与误差累积，在 NAVSIM 与 Bench2Drive 上达到 SOTA。",
+      "pdf_filename": "2611.05072.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05072",
+      "search_text": "trajectory evaluation via rollout-free world model for end-to-end autonomous driving 世界模型 自动驾驶 提出无推演的轨迹评估世界模型 rfworld：构建共享场景记忆，经训练期轻量时序读出与语义监督塑造成可读取未来的表示，推理时候选轨迹只用稀疏空间读出查询记忆打分，避开逐步推演的高成本与误差累积，在 navsim 与 bench2drive 上达到 sota。 although existing candidate trajectory evaluators have substantially improved end-to-end planning accuracy, their underlying mechanism remains suboptimal. model-based evaluators typically make scoring future-aware by explicitly predicting candidate-conditioned future states over the planning horizon, which we term rollout. however, rollout incurs high inference cost and accumulates prediction errors. we argue that planning does not require reconstructing a full future scene for each candidate, but only future-relevant information for reliable comparison. we therefore propose rfworld, a rollout-free world model for end-to-end trajectory evaluation. rfworld constructs a shared scene memory and shapes it into a future-readable representation via lightweight training-time temporal readout with semantic supervision, keeping training overhead low. at inference time, candidate trajectories directly query the shared memory via sparse spatial readout for scoring, reducing computation by roughly the planning horizon times the number of candidate trajectories, while avoiding recursive rollout errors. experiments on navsim and bench2drive show that rfworld learns a more planning-aligned world representation and achieves state-of-the-art performance. state key laboratory of virtual reality technology and systems, beihang university; xiaomi ev junzhe wang, jinqing zhang, qingjie liu cs.ro, cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04977",
+      "title": "GeoFaham: Domain-Specialized Multi-Agent Geospatial Analytics for Disaster Response",
+      "authors": "Muhammad Sohail Danish, Gilles Q. Hacheme, Akram Zaytar, Satej S. Soman, Inbal Becker-Reshef, Juan Lavista Ferres, Salman Khan, Girmaw Abebe Tadesse",
+      "affiliations": "Microsoft AI for Good Lab; Mohamed bin Zayed University of Artificial Intelligence",
+      "published_date": "2026-11-03",
+      "categories": "cs.MA, cs.AI",
+      "abstract": "Real-world geospatial decision support requires more than single-step retrieval or code generation. Disaster-response questions often involve multi-source workflows that combine spatial databases, map-derived features, satellite imagery, raster products, and reusable geospatial artifacts, where correctness depends on preserving spatial scope, temporal context, and intermediate execution state. While large language models and coding agents offer a promising interface for such workflows, they struggle with geospatial-specific failure modes, including handling large artifacts, selecting the wrong evidence source, losing spatial or temporal metadata, and applying invalid geometric operations. We introduce GeoFaham, a domain-specialized multi-agent system for geospatial disaster analytics. GeoFaham decomposes workflows into specialist agents for vector operations, map feature retrieval, imagery discovery, and raster analysis, coordinated by an Orchestrator with a dual-ledger control loop for dependency-aware planning, progress tracking, validation, and replanning. To support artifact-centric collaboration, GeoFaham uses a Response Store that persists full geospatial outputs and typed metadata outside the LLM context window while agents exchange compact identifiers and summaries. We also introduce GeoFaham-Bench, a 40-task benchmark grounded in 17 real-world disaster records, designed to evaluate multi-step geospatial reasoning, cross-source integration, raster-vector computation, artifact generation, and recovery under non-rigid ground truth. We evaluate GeoFaham on GeoFaham-Bench against strong general-purpose coding-agent baselines, including Codex, Claude Code, and OpenCode. GeoFaham achieves the best overall performance, scoring 0.940 versus the next-best 0.879, while using 7.5 times fewer tokens. Our code and benchmark are publicly available at https://github.com/microsoft/GeoFaham.",
+      "summary_cn": "提出面向灾害响应的领域专用多智能体地理空间分析系统 GeoFaham，把多源工作流拆解给专职智能体，分别处理空间数据库、地图特征、卫星影像与栅格产品，并保持空间范围、时间上下文与中间执行状态，缓解大文件处理、证据源错选与无效几何操作等失败模式。",
+      "pdf_filename": "2611.04977.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04977",
+      "search_text": "geofaham: domain-specialized multi-agent geospatial analytics for disaster response 大语言模型 提出面向灾害响应的领域专用多智能体地理空间分析系统 geofaham，把多源工作流拆解给专职智能体，分别处理空间数据库、地图特征、卫星影像与栅格产品，并保持空间范围、时间上下文与中间执行状态，缓解大文件处理、证据源错选与无效几何操作等失败模式。 real-world geospatial decision support requires more than single-step retrieval or code generation. disaster-response questions often involve multi-source workflows that combine spatial databases, map-derived features, satellite imagery, raster products, and reusable geospatial artifacts, where correctness depends on preserving spatial scope, temporal context, and intermediate execution state. while large language models and coding agents offer a promising interface for such workflows, they struggle with geospatial-specific failure modes, including handling large artifacts, selecting the wrong evidence source, losing spatial or temporal metadata, and applying invalid geometric operations. we introduce geofaham, a domain-specialized multi-agent system for geospatial disaster analytics. geofaham decomposes workflows into specialist agents for vector operations, map feature retrieval, imagery discovery, and raster analysis, coordinated by an orchestrator with a dual-ledger control loop for dependency-aware planning, progress tracking, validation, and replanning. to support artifact-centric collaboration, geofaham uses a response store that persists full geospatial outputs and typed metadata outside the llm context window while agents exchange compact identifiers and summaries. we also introduce geofaham-bench, a 40-task benchmark grounded in 17 real-world disaster records, designed to evaluate multi-step geospatial reasoning, cross-source integration, raster-vector computation, artifact generation, and recovery under non-rigid ground truth. we evaluate geofaham on geofaham-bench against strong general-purpose coding-agent baselines, including codex, claude code, and opencode. geofaham achieves the best overall performance, scoring 0.940 versus the next-best 0.879, while using 7.5 times fewer tokens. our code and benchmark are publicly available at https://github.com/microsoft/geofaham. microsoft ai for good lab; mohamed bin zayed university of artificial intelligence muhammad sohail danish, gilles q. hacheme, akram zaytar, satej s. soman, inbal becker-reshef, juan lavista ferres, salman khan, girmaw abebe tadesse cs.ma, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.04972",
+      "title": "Caging Vision-Language Navigation for Legged Robots via Barrier-Certified Safety Architecture",
+      "authors": "Abhijeet M. Kulkarni, Saimouli Katragadda, Yuze Du, Zijun Sha, Guoquan Huang",
+      "affiliations": "RPNG, University of Delaware",
+      "published_date": "2026-11-03",
+      "categories": "cs.RO, eess.SY",
+      "abstract": "By harnessing the inherent commonsense capabilities of pretrained Large Language Models (LLMs) and Vision-Language Models (VLMs), current Vision-Language Action(VLA) models for legged robots excel at interpreting language-based navigation commands but lack the physical grounding and explicit safety assurance required for real-world operation. Therefore, this paper aims to cage Legged-Vision-Language Navigation (VLN) through a safety architecture that provides physical grounding and ensures navigation safety. The key idea is not to abandon the powerful capabilities of end-to-end VLA planning, but rather to augment and cage them. In particular, we integrate a high-level VLA planner with a low-level physical-grounding layer that leverages efficient state estimation, in-situ 3D spatial perception, and an Signed Distance Field (SDF) representation to generate executable trajectories. We provide a navigation planner with provable collision-avoidance guarantees under the stated assumptions by combining a low-dimensional Bezier-parameterized MPPI planner with Discrete Exponential Barrier Function (dEBF) constraints. The proposed Legged-VLN system is modular, making it compatible with various VLM/VLA models and agnostic to the robot platform. The proposed system is validated with extensive real-world experiments on humanoid and quadrupedal robots, demonstrating versatile, efficient, and safe vision-language driven navigation capabilities.",
+      "summary_cn": "为足式机器人视觉语言导航提出屏障认证的安全架构：不放弃端到端 VLA 规划，而是用高效状态估计、原位 3D 感知与符号距离场构建物理落地层，把高层语言指令约束在可验证的安全集内，兼顾常识泛化能力与实机导航的安全性。",
+      "pdf_filename": "2611.04972.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "规划",
+        "多模态",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04972",
+      "search_text": "caging vision-language navigation for legged robots via barrier-certified safety architecture 规划 多模态 大语言模型 为足式机器人视觉语言导航提出屏障认证的安全架构：不放弃端到端 vla 规划，而是用高效状态估计、原位 3d 感知与符号距离场构建物理落地层，把高层语言指令约束在可验证的安全集内，兼顾常识泛化能力与实机导航的安全性。 by harnessing the inherent commonsense capabilities of pretrained large language models (llms) and vision-language models (vlms), current vision-language action(vla) models for legged robots excel at interpreting language-based navigation commands but lack the physical grounding and explicit safety assurance required for real-world operation. therefore, this paper aims to cage legged-vision-language navigation (vln) through a safety architecture that provides physical grounding and ensures navigation safety. the key idea is not to abandon the powerful capabilities of end-to-end vla planning, but rather to augment and cage them. in particular, we integrate a high-level vla planner with a low-level physical-grounding layer that leverages efficient state estimation, in-situ 3d spatial perception, and an signed distance field (sdf) representation to generate executable trajectories. we provide a navigation planner with provable collision-avoidance guarantees under the stated assumptions by combining a low-dimensional bezier-parameterized mppi planner with discrete exponential barrier function (debf) constraints. the proposed legged-vln system is modular, making it compatible with various vlm/vla models and agnostic to the robot platform. the proposed system is validated with extensive real-world experiments on humanoid and quadrupedal robots, demonstrating versatile, efficient, and safe vision-language driven navigation capabilities. rpng, university of delaware abhijeet m. kulkarni, saimouli katragadda, yuze du, zijun sha, guoquan huang cs.ro, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.04913",
+      "title": "EP-LVMQA: Evidence-Preserving Coarse-to-Fine Localization for Low-Quality Long Video Moment Question Answering",
+      "authors": "Guoning Chen, Zhexun Hu, Yifan Wei, Yixuan Weng, Bin Li, Yufei Zhao",
+      "affiliations": "Nanyang Technological University; ByteDance Inc.; Beihang University; Westlake University; Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "Long instructional videos are increasingly used in medical education, industrial training, and procedural knowledge transfer, yet their evidence is often incomplete or unreliable: subtitles may be missing, ASR noisy, OCR sparse, and decisive actions briefly shown without narration. Existing VideoQA systems typically return labels or free-form text, making answer support difficult to inspect. We study Long Video Moment Question Answering (LVMQA), where a system returns timestamped answer-supporting evidence. We propose EP-LVMQA, an evidence-preserving coarse-to-fine framework comprising an Uncertainty-Aware Multimodal Evidence Timeline, a Coarse Evidence Planner, and an Evidence-Conditioned Fine Localizer. An evidence card transfers planner scores, matched cues, source-confidence proxies, modality-specific evidence, neighboring context, and a temporal prior between the latter two modules. On MedVidQA, EP-LVMQA achieves 26.1 R1@0.5 and 31.8 mIoU, improving the strongest non-ours results by 6.3 and 5.1 points. It raises Suff.@2 and Ver.@2 to 25.4 and 22.6, gains of 9.5 and 8.8 points. Under matched low-quality perturbations, average relative degradation is reduced from the strongest non-ours value of 14.6% to 11.1%. On Ego4D-NLQ and QVHighlights, EP-LVMQA remains broadly comparable to established task-specific localization methods.",
+      "summary_cn": "研究长视频片段问答，要求返回带时间戳的证据支撑，提出 EP-LVMQA 由不确定性感知多模态证据时间线、粗证据规划器与证据条件精定位器组成，用证据卡传递规划分数、匹配线索与置信度，在字幕缺失、ASR 噪声、OCR 稀疏的低质量长视频上保持证据可核查。",
+      "pdf_filename": "2611.04913.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04913",
+      "search_text": "ep-lvmqa: evidence-preserving coarse-to-fine localization for low-quality long video moment question answering 规划 多模态 研究长视频片段问答，要求返回带时间戳的证据支撑，提出 ep-lvmqa 由不确定性感知多模态证据时间线、粗证据规划器与证据条件精定位器组成，用证据卡传递规划分数、匹配线索与置信度，在字幕缺失、asr 噪声、ocr 稀疏的低质量长视频上保持证据可核查。 long instructional videos are increasingly used in medical education, industrial training, and procedural knowledge transfer, yet their evidence is often incomplete or unreliable: subtitles may be missing, asr noisy, ocr sparse, and decisive actions briefly shown without narration. existing videoqa systems typically return labels or free-form text, making answer support difficult to inspect. we study long video moment question answering (lvmqa), where a system returns timestamped answer-supporting evidence. we propose ep-lvmqa, an evidence-preserving coarse-to-fine framework comprising an uncertainty-aware multimodal evidence timeline, a coarse evidence planner, and an evidence-conditioned fine localizer. an evidence card transfers planner scores, matched cues, source-confidence proxies, modality-specific evidence, neighboring context, and a temporal prior between the latter two modules. on medvidqa, ep-lvmqa achieves 26.1 r1@0.5 and 31.8 miou, improving the strongest non-ours results by 6.3 and 5.1 points. it raises suff.@2 and ver.@2 to 25.4 and 22.6, gains of 9.5 and 8.8 points. under matched low-quality perturbations, average relative degradation is reduced from the strongest non-ours value of 14.6% to 11.1%. on ego4d-nlq and qvhighlights, ep-lvmqa remains broadly comparable to established task-specific localization methods. nanyang technological university; bytedance inc.; beihang university; westlake university; shenzhen institutes of advanced technology, chinese academy of sciences guoning chen, zhexun hu, yifan wei, yixuan weng, bin li, yufei zhao cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04912",
+      "title": "MiCaDe: Online LiDAR-Camera Miscalibration Change Detection for Autonomous Driving",
+      "authors": "Carlo Sgaravatti, Riccardo Pieroni, Matteo Corno, Sergio M. Savaresi, Luca Magri, Giacomo Boracchi",
+      "affiliations": "Politecnico di Milano; Niulinx",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV, cs.LG",
+      "abstract": "Reliable multi-sensor perception in autonomous vehicles requires accurate calibration between cameras and LiDAR. However, calibration drift is often unavoidable in long-term deployments: vibrations, thermal effects, and minor mechanical shocks may alter the relative pose between sensors, leading to systematic errors in downstream fusion tasks. We propose MiCaDe (Miscalibration Change Detection), an online solution detecting when the extrinsic LiDAR-camera calibration parameters are no longer accurate by means of sequential change detection. MiCaDe requires no calibration targets, or modification of the perception stack, providing low false-alarm rates with negligible computational overhead. Our key insight is that 3D and 2D bounding boxes produced by standard object detectors should remain geometrically consistent under correct calibration. By matching cross-modal detections, we derive geometric consistency metrics that serve as sensitive indicators of extrinsic drift. These metrics are aggregated into fixed-size batches and scored against a reference distribution, producing a likelihood stream that is monitored by a Change Point Model (CPM). Crucially, the CPM accumulates statistical evidence over time, enabling detection of subtle drifts that would otherwise go unnoticed. Experiments on multiple long-sequence datasets and on a real-world dataset with physically induced miscalibration confirm reliable detection under diverse conditions. Code available at: https://github.com/CarloSgaravatti/MiCaDe.",
+      "summary_cn": "提出 MiCaDe 在线 LiDAR-相机外参失准检测方法，利用标准检测器输出的 3D 与 2D 框在标定正确时应保持几何一致性，对一致性残差做序贯变化检测，无需标定靶标也不改动感知栈，可在振动、热漂移与机械冲击引起标定漂移时以低虚警、低开销报警。",
+      "pdf_filename": "2611.04912.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "自动驾驶",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04912",
+      "search_text": "micade: online lidar-camera miscalibration change detection for autonomous driving 自动驾驶 点云 提出 micade 在线 lidar-相机外参失准检测方法，利用标准检测器输出的 3d 与 2d 框在标定正确时应保持几何一致性，对一致性残差做序贯变化检测，无需标定靶标也不改动感知栈，可在振动、热漂移与机械冲击引起标定漂移时以低虚警、低开销报警。 reliable multi-sensor perception in autonomous vehicles requires accurate calibration between cameras and lidar. however, calibration drift is often unavoidable in long-term deployments: vibrations, thermal effects, and minor mechanical shocks may alter the relative pose between sensors, leading to systematic errors in downstream fusion tasks. we propose micade (miscalibration change detection), an online solution detecting when the extrinsic lidar-camera calibration parameters are no longer accurate by means of sequential change detection. micade requires no calibration targets, or modification of the perception stack, providing low false-alarm rates with negligible computational overhead. our key insight is that 3d and 2d bounding boxes produced by standard object detectors should remain geometrically consistent under correct calibration. by matching cross-modal detections, we derive geometric consistency metrics that serve as sensitive indicators of extrinsic drift. these metrics are aggregated into fixed-size batches and scored against a reference distribution, producing a likelihood stream that is monitored by a change point model (cpm). crucially, the cpm accumulates statistical evidence over time, enabling detection of subtle drifts that would otherwise go unnoticed. experiments on multiple long-sequence datasets and on a real-world dataset with physically induced miscalibration confirm reliable detection under diverse conditions. code available at: https://github.com/carlosgaravatti/micade. politecnico di milano; niulinx carlo sgaravatti, riccardo pieroni, matteo corno, sergio m. savaresi, luca magri, giacomo boracchi cs.cv, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.04804",
+      "title": "GSPIM: A Temporal-Locality-Aware 4DGS Accelerator for PIM-Enabled Edge Devices",
+      "authors": "Zirui Ma, Zhihua Fan, Haibin Wu, Dongrui Fan, Xiaochun Ye, Wenming Li",
+      "affiliations": "Institute of Computing Technology, Chinese Academy of Sciences; University of Chinese Academy of Sciences",
+      "published_date": "2026-11-03",
+      "categories": "cs.AR",
+      "abstract": "4D Gaussian Splatting (4DGS) enables high-quality real-time novel-view synthesis for dynamic scenes, supporting free-viewpoint video, mobile XR, and autonomous systems at the edge. Methods using explicit 4D distributions, keyframe interpolation, or anchor binding share two GPU data-movement bottlenecks. Temporal filtering follows model record loading, wasting LPDDR5 bandwidth on inactive data. Frame-isolated execution also overlooks highly overlapping active sets and depth relationships across adjacent frames, reloading shared attributes when working sets exceed on-chip cache capacity. To address these bottlenecks, we present GSPIM, a temporal-locality-aware 4DGS accelerator for PIM-enabled edge devices. Polymorphic PIM adapts a shared near-memory datapath to representation-specific field layouts and selection procedures. It filters and compacts valid data into contiguous inputs before the GPU accesses complete attributes, reducing ineffective transfers. Multi-Frame Rendering Dataflow reuses active attributes and stable depth relationships within a temporal window, reducing repeated work across frames. Hybrid Dataflow Scheduling overlaps near-memory data preparation with GPU rendering to reduce waiting. Evaluation combines a GPU-PIM model calibrated to Jetson AGX Orin 64 GB with a 1z DRAM physical implementation of the added circuits. Across three 4DGS methods and six dynamic scenes, GSPIM achieves a 4.15x geometric-mean speedup and a 4.99x geometric-mean energy-efficiency improvement over a fully optimized frame-by-frame GPU baseline. The maximum scene-level PSNR difference is 0.011 dB, and the added physical footprint is 18.7172 square millimeters across 32 LPDDR5 dies.",
+      "summary_cn": "提出面向存内计算边缘设备的 4DGS 加速器 GSPIM：针对时间过滤滞后于记录加载、帧间活跃集重叠被忽略两类数据搬运瓶颈，用可重构 PIM 数据通路适配不同表示布局，按时间局部性先行筛选并复用跨帧共享属性，降低 LPDDR5 带宽与重复加载开销。",
+      "pdf_filename": "2611.04804.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "4DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04804",
+      "search_text": "gspim: a temporal-locality-aware 4dgs accelerator for pim-enabled edge devices 3dgs 4dgs 提出面向存内计算边缘设备的 4dgs 加速器 gspim：针对时间过滤滞后于记录加载、帧间活跃集重叠被忽略两类数据搬运瓶颈，用可重构 pim 数据通路适配不同表示布局，按时间局部性先行筛选并复用跨帧共享属性，降低 lpddr5 带宽与重复加载开销。 4d gaussian splatting (4dgs) enables high-quality real-time novel-view synthesis for dynamic scenes, supporting free-viewpoint video, mobile xr, and autonomous systems at the edge. methods using explicit 4d distributions, keyframe interpolation, or anchor binding share two gpu data-movement bottlenecks. temporal filtering follows model record loading, wasting lpddr5 bandwidth on inactive data. frame-isolated execution also overlooks highly overlapping active sets and depth relationships across adjacent frames, reloading shared attributes when working sets exceed on-chip cache capacity. to address these bottlenecks, we present gspim, a temporal-locality-aware 4dgs accelerator for pim-enabled edge devices. polymorphic pim adapts a shared near-memory datapath to representation-specific field layouts and selection procedures. it filters and compacts valid data into contiguous inputs before the gpu accesses complete attributes, reducing ineffective transfers. multi-frame rendering dataflow reuses active attributes and stable depth relationships within a temporal window, reducing repeated work across frames. hybrid dataflow scheduling overlaps near-memory data preparation with gpu rendering to reduce waiting. evaluation combines a gpu-pim model calibrated to jetson agx orin 64 gb with a 1z dram physical implementation of the added circuits. across three 4dgs methods and six dynamic scenes, gspim achieves a 4.15x geometric-mean speedup and a 4.99x geometric-mean energy-efficiency improvement over a fully optimized frame-by-frame gpu baseline. the maximum scene-level psnr difference is 0.011 db, and the added physical footprint is 18.7172 square millimeters across 32 lpddr5 dies. institute of computing technology, chinese academy of sciences; university of chinese academy of sciences zirui ma, zhihua fan, haibin wu, dongrui fan, xiaochun ye, wenming li cs.ar"
+    },
+    {
+      "arxiv_id": "2611.04740",
+      "title": "A RISC-V Simulator for the Tenstorrent Tensix Architecture",
+      "authors": "Nick Brown, Daniyal Arshad",
+      "affiliations": "EPCC, University of Edinburgh",
+      "published_date": "2026-11-03",
+      "categories": "cs.DC, cs.AR",
+      "abstract": "RISC-V based AI accelerators have become popular and not only for AI and ML, but also as vehicles for exploring HPC workloads more generally. Tenstorrent are one example, and whilst they document their Tensix architecture in detail and develop their software stack openly, running code has historically required a physical card, and their recently released simulator targets hardware equivalence rather than introspection. In this paper we present Wolfpine, a community developed RISC-V simulator for the Tensix architecture, supporting both the Wormhole and Blackhole generations and integrating seamlessly with the TT-Metal software stack.   Constructed entirely from publicly available documentation, open source software and measurements on physical hardware, Wolfpine is written in pure Python for readability and ease of modification. An opt-in, provenance-tracked cost model adds timing fidelity incrementally, and typed event streams, per-component tracing and timeline export enable programmers to identify and diagnose performance bottlenecks that the hardware itself hides.",
+      "summary_cn": "发布纯 Python 编写的开源 RISC-V 模拟器 Wolfpine，支持 Tenstorrent Tensix 架构 Wormhole 与 Blackhole 两代芯片并无缝接入 TT-Metal 软件栈，开发者无需实体加速卡即可运行与剖析代码，为架构内省与 HPC 工作负载探索提供开放平台。",
+      "pdf_filename": "2611.04740.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04740",
+      "search_text": "a risc-v simulator for the tenstorrent tensix architecture 仿真器 发布纯 python 编写的开源 risc-v 模拟器 wolfpine，支持 tenstorrent tensix 架构 wormhole 与 blackhole 两代芯片并无缝接入 tt-metal 软件栈，开发者无需实体加速卡即可运行与剖析代码，为架构内省与 hpc 工作负载探索提供开放平台。 risc-v based ai accelerators have become popular and not only for ai and ml, but also as vehicles for exploring hpc workloads more generally. tenstorrent are one example, and whilst they document their tensix architecture in detail and develop their software stack openly, running code has historically required a physical card, and their recently released simulator targets hardware equivalence rather than introspection. in this paper we present wolfpine, a community developed risc-v simulator for the tensix architecture, supporting both the wormhole and blackhole generations and integrating seamlessly with the tt-metal software stack.   constructed entirely from publicly available documentation, open source software and measurements on physical hardware, wolfpine is written in pure python for readability and ease of modification. an opt-in, provenance-tracked cost model adds timing fidelity incrementally, and typed event streams, per-component tracing and timeline export enable programmers to identify and diagnose performance bottlenecks that the hardware itself hides. epcc, university of edinburgh nick brown, daniyal arshad cs.dc, cs.ar"
+    },
+    {
+      "arxiv_id": "2611.04720",
+      "title": "OneTrans-GSR: A Generative Slate Ranking Paradigm Unifying Reranking and Mix-Ranking with One Autoregressive Transformer",
+      "authors": "Feng Cheng, Yu-Hsuan Huang, Fengyi Wang, Chaofan Zhou, Zhennan Zhu, Huan He, Bo Zhang, Ruoqi Zhang, Zhanfeng Mo, Ziwei Liu, Lanyi Li, Yifeng Pan, Junhua Long, Ziqiu Zhou, Yue Lin, Shaowei Liu",
+      "affiliations": "ByteDance",
+      "published_date": "2026-11-03",
+      "categories": "cs.IR",
+      "abstract": "Industrial recommender systems allocate substantial computation to pointwise candidate scoring, yet separate reranking and mix-ranking stages still assemble the final exposure slate using hand-crafted rules and specialized low-capacity models. Mix-ranking combines product cards, short videos, livestreams, and advertising cards supplied by distinct upstream business channels. Although these rules and models encode valuable domain knowledge, they are inherently limited in leveraging additional data and computation. They constrain the combinatorial space of candidate slates and determine objective trade-offs through manual tuning. To enable scalable and effective slate generation, we reformulate reranking and mix-ranking as a unified learning problem whose performance can improve with computation. Specifically, we instantiate this formulation across the reranking and mix-ranking stages and propose OneTrans-GSR, a single decoder-only policy that extends our deployed OneTrans backbone to generate the exposure slate end-to-end. During training, a reward model evaluates complete slates and guides reinforcement learning toward slate-level and long-term objectives. During decoding, business constraints are explicitly enforced. Offline evaluation shows that slate quality consistently improves as reward-model and policy compute increase. Deployed in a large-scale industrial recommendation system, OneTrans-GSR mixes heterogeneous content types within a unified slate. In online A/B tests, it improves GMV/u by 2.63%, advertiser value by 2.06%, and repurchase rate by 2.03%, while reducing end-to-end latency across the reranking and mix-ranking stages by 13%. These results mark a paradigm shift in slate generation: moving beyond human-engineered heuristics toward a general learned policy creates a scalable path for further algorithmic optimization and compute-driven improvement.",
+      "summary_cn": "把重排与混排统一为单个自回归 Transformer 的生成式列表排序问题，OneTrans-GSR 直接生成包含商品卡、短视频、直播与广告卡片的曝光列表，替代手写规则与低容量专用模型，使排序质量可随数据与算力扩展，并在工业推荐场景验证有效性。",
+      "pdf_filename": "2611.04720.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04720",
+      "search_text": "onetrans-gsr: a generative slate ranking paradigm unifying reranking and mix-ranking with one autoregressive transformer 强化学习 把重排与混排统一为单个自回归 transformer 的生成式列表排序问题，onetrans-gsr 直接生成包含商品卡、短视频、直播与广告卡片的曝光列表，替代手写规则与低容量专用模型，使排序质量可随数据与算力扩展，并在工业推荐场景验证有效性。 industrial recommender systems allocate substantial computation to pointwise candidate scoring, yet separate reranking and mix-ranking stages still assemble the final exposure slate using hand-crafted rules and specialized low-capacity models. mix-ranking combines product cards, short videos, livestreams, and advertising cards supplied by distinct upstream business channels. although these rules and models encode valuable domain knowledge, they are inherently limited in leveraging additional data and computation. they constrain the combinatorial space of candidate slates and determine objective trade-offs through manual tuning. to enable scalable and effective slate generation, we reformulate reranking and mix-ranking as a unified learning problem whose performance can improve with computation. specifically, we instantiate this formulation across the reranking and mix-ranking stages and propose onetrans-gsr, a single decoder-only policy that extends our deployed onetrans backbone to generate the exposure slate end-to-end. during training, a reward model evaluates complete slates and guides reinforcement learning toward slate-level and long-term objectives. during decoding, business constraints are explicitly enforced. offline evaluation shows that slate quality consistently improves as reward-model and policy compute increase. deployed in a large-scale industrial recommendation system, onetrans-gsr mixes heterogeneous content types within a unified slate. in online a/b tests, it improves gmv/u by 2.63%, advertiser value by 2.06%, and repurchase rate by 2.03%, while reducing end-to-end latency across the reranking and mix-ranking stages by 13%. these results mark a paradigm shift in slate generation: moving beyond human-engineered heuristics toward a general learned policy creates a scalable path for further algorithmic optimization and compute-driven improvement. bytedance feng cheng, yu-hsuan huang, fengyi wang, chaofan zhou, zhennan zhu, huan he, bo zhang, ruoqi zhang, zhanfeng mo, ziwei liu, lanyi li, yifeng pan, junhua long, ziqiu zhou, yue lin, shaowei liu cs.ir"
+    },
+    {
+      "arxiv_id": "2611.04692",
+      "title": "Just Between Us? Exploring a Wearable-Mediated Channel for Discreet Human-Agent Interaction in a Shared Game Setting",
+      "authors": "Atikkhan Faridkhan Nilgar, Manuel Dietrich, Kristof Van Laerhoven",
+      "affiliations": "Universität Siegen; Honda Research Institute Europe GmbH",
+      "published_date": "2026-11-03",
+      "categories": "cs.HC, cs.RO",
+      "abstract": "In shared settings, social robots may need to exchange information with an individual while limiting co-present others' access to or interpretation of that information. Publicly observable speech and gestures may not adequately support such exchanges. We investigate a wearable-mediated channel for discreet interaction that combines in-ear audio messages with deliberate rightward head tilts as responses. To examine its feasibility and participants' experiences, we studied 20 pairs (40 participants) playing a card game with a screen-based conversational agent representing a social robot, controlled by a researcher in a Wizard-of-Oz setup. Each pair played with and without the channel. One participant wore the device (the wearer), while the other (the non-wearer) was informed about the channel after gameplay. The channel conveyed information that could help the wearer or robot character select an opponent they could defeat. The information exchange and subsequent opponent selection occurred as intended in 39 of 40 channel-mediated turns. Wearers reported low perceived pressure/tension in both conditions, with no statistically significant difference between conditions, and favorable usability immediately after use. Retrospective interviews, however, revealed varied accounts of noticing the interaction among non-wearers and contrasting perceptions of teamwork and unfairness. These findings support the feasibility of wearable-mediated exchanges within this game and identify awareness and fairness as considerations for future designs.",
+      "summary_cn": "研究共享场景下社交机器人的隐蔽交互通道，将入耳式语音与向右偏头作答结合，20 组共 40 名参与者通过纸牌游戏对比有无该通道的体验，考察佩戴者与非佩戴者对信息可及性与社交可接受性的感受，为私密型人机交互设计提供实证依据。",
+      "pdf_filename": "2611.04692.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.04692",
+      "search_text": "just between us? exploring a wearable-mediated channel for discreet human-agent interaction in a shared game setting  研究共享场景下社交机器人的隐蔽交互通道，将入耳式语音与向右偏头作答结合，20 组共 40 名参与者通过纸牌游戏对比有无该通道的体验，考察佩戴者与非佩戴者对信息可及性与社交可接受性的感受，为私密型人机交互设计提供实证依据。 in shared settings, social robots may need to exchange information with an individual while limiting co-present others' access to or interpretation of that information. publicly observable speech and gestures may not adequately support such exchanges. we investigate a wearable-mediated channel for discreet interaction that combines in-ear audio messages with deliberate rightward head tilts as responses. to examine its feasibility and participants' experiences, we studied 20 pairs (40 participants) playing a card game with a screen-based conversational agent representing a social robot, controlled by a researcher in a wizard-of-oz setup. each pair played with and without the channel. one participant wore the device (the wearer), while the other (the non-wearer) was informed about the channel after gameplay. the channel conveyed information that could help the wearer or robot character select an opponent they could defeat. the information exchange and subsequent opponent selection occurred as intended in 39 of 40 channel-mediated turns. wearers reported low perceived pressure/tension in both conditions, with no statistically significant difference between conditions, and favorable usability immediately after use. retrospective interviews, however, revealed varied accounts of noticing the interaction among non-wearers and contrasting perceptions of teamwork and unfairness. these findings support the feasibility of wearable-mediated exchanges within this game and identify awareness and fairness as considerations for future designs. universität siegen; honda research institute europe gmbh atikkhan faridkhan nilgar, manuel dietrich, kristof van laerhoven cs.hc, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.04676",
+      "title": "Outer pressure bumps beyond the dust disc: Missing Outer Rings in the exoALMA Sample: Physical Mechanisms Suppressing Dust Ring Formation Despite Strong Pressure Bumps",
+      "authors": "Lilian Luo, Paola Pinilla, Jochen Stadler",
+      "affiliations": "Mullard Space Science Laboratory, University College London; European Southern Observatory",
+      "published_date": "2026-11-03",
+      "categories": "astro-ph.EP",
+      "abstract": "The exoALMA survey has revealed candidate gas pressure bumps at radii beyond the observed millimetre continuum discs in several protoplanetary systems, raising the question of whether these regions could host undetected dust structures. We investigate this for nine of the exoALMA discs by reconstructing gas surface density profiles from midplane pressure gradient measurements derived from $^{12}$CO and $^{13}$CO ALMA Band 7 observations. We evolve the dust using DustPy across a grid of turbulence and fragmentation parameters ($α\\in \\{10^{-4}, 10^{-3}\\}$; $v_\\mathrm{frag} \\in \\{1, 10\\}\\,\\mathrm{m\\,s^{-1}}$), followed by radiative transfer calculations with RADMC-3D to give predictions for the continuum emission. We find that the dominant outcome across the explored parameter space is efficient outer dust trapping, leading to prominent outer continuum rings that should be detectable at ALMA Band 7, in tension with the observations. The $^{13}$CO-based reconstructions almost universally produce detectable outer rings, whereas the $^{12}$CO-based reconstructions show more variation. We further test delayed formation of the outer pressure bump and enhanced outer-disc turbulence as possible suppression mechanisms of ring formation. Enhanced turbulence weakens the predicted outer continuum emission most effectively, although the efficiency of the mechanism depends on the system explored and on where the turbulence transition is placed. Delayed bump formation generally does not prevent rapid outer dust accumulation.",
+      "summary_cn": "用 12CO、13CO 谱线反演 9 个 exoALMA 盘的赤道面气压梯度与气体面密度，并以 DustPy 在湍流与碎裂速度网格上演化尘埃、用 RADMC-3D 做辐射转移，发现参数空间内主导结果是外侧高效尘埃俘获，与观测中缺失外环形成对比，进而讨论抑制成环的物理机制。",
+      "pdf_filename": "2611.04676.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.04676",
+      "search_text": "outer pressure bumps beyond the dust disc: missing outer rings in the exoalma sample: physical mechanisms suppressing dust ring formation despite strong pressure bumps  用 12co、13co 谱线反演 9 个 exoalma 盘的赤道面气压梯度与气体面密度，并以 dustpy 在湍流与碎裂速度网格上演化尘埃、用 radmc-3d 做辐射转移，发现参数空间内主导结果是外侧高效尘埃俘获，与观测中缺失外环形成对比，进而讨论抑制成环的物理机制。 the exoalma survey has revealed candidate gas pressure bumps at radii beyond the observed millimetre continuum discs in several protoplanetary systems, raising the question of whether these regions could host undetected dust structures. we investigate this for nine of the exoalma discs by reconstructing gas surface density profiles from midplane pressure gradient measurements derived from $^{12}$co and $^{13}$co alma band 7 observations. we evolve the dust using dustpy across a grid of turbulence and fragmentation parameters ($α\\in \\{10^{-4}, 10^{-3}\\}$; $v_\\mathrm{frag} \\in \\{1, 10\\}\\,\\mathrm{m\\,s^{-1}}$), followed by radiative transfer calculations with radmc-3d to give predictions for the continuum emission. we find that the dominant outcome across the explored parameter space is efficient outer dust trapping, leading to prominent outer continuum rings that should be detectable at alma band 7, in tension with the observations. the $^{13}$co-based reconstructions almost universally produce detectable outer rings, whereas the $^{12}$co-based reconstructions show more variation. we further test delayed formation of the outer pressure bump and enhanced outer-disc turbulence as possible suppression mechanisms of ring formation. enhanced turbulence weakens the predicted outer continuum emission most effectively, although the efficiency of the mechanism depends on the system explored and on where the turbulence transition is placed. delayed bump formation generally does not prevent rapid outer dust accumulation. mullard space science laboratory, university college london; european southern observatory lilian luo, paola pinilla, jochen stadler astro-ph.ep"
+    },
+    {
+      "arxiv_id": "2611.04666",
+      "title": "Phase-DGS: Phase-guided Dynamic Gaussian Splatting from Unsynchronized Multi-view Video",
+      "authors": "Hosung Jeon, Jun Young Jeong, Sangwoon Kwak, Joonsoo Kim, Sangmin Kim, Jaesik Park, Won-Sik Cheong, Hyon-Gon Choo",
+      "affiliations": "Electronics and Telecommunications Research Institute (ETRI); Seoul National University",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "Spatiotemporal scene reconstruction with Dynamic Gaussian Splatting (DGS) fundamentally depends on perfect temporal synchronization across all cameras, an assumption rarely achievable in practice. Industry-standard synchronization requires expensive specialized hardware and complex setup, while data-driven alternatives including audio-based alignment, geometry matching, and pose tracking remain limited by restrictive environmental or scene-specific assumptions. To overcome these limitations, we propose Phase-DGS, a framework that replaces conventional timestamps with a semantic phase representing each frame's inherent state within the underlying motion cycle. Frames capturing the same motion state share the same phase regardless of which camera records them or when, naturally establishing spatiotemporal correspondence across unsynchronized cameras. We validate Phase-DGS under temporal offsets, frame drops, and camera freezes, achieving up to +8.5 dB PSNR improvement over baselines while enabling seamless integration with existing DGS backbones including RealTime-4DGS and FreeTimeGS.",
+      "summary_cn": "提出 Phase-DGS，用表征每帧在运动周期中固有状态的语义相位替代时间戳，同相位帧可跨相机自然建立时空对应，从而在无硬件同步的多视角视频上训练动态高斯泼溅，摆脱对昂贵同步设备及音频对齐、位姿跟踪等场景特定假设的依赖，实现时空一致重建。",
+      "pdf_filename": "2611.04666.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "4DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04666",
+      "search_text": "phase-dgs: phase-guided dynamic gaussian splatting from unsynchronized multi-view video 3dgs 4dgs 提出 phase-dgs，用表征每帧在运动周期中固有状态的语义相位替代时间戳，同相位帧可跨相机自然建立时空对应，从而在无硬件同步的多视角视频上训练动态高斯泼溅，摆脱对昂贵同步设备及音频对齐、位姿跟踪等场景特定假设的依赖，实现时空一致重建。 spatiotemporal scene reconstruction with dynamic gaussian splatting (dgs) fundamentally depends on perfect temporal synchronization across all cameras, an assumption rarely achievable in practice. industry-standard synchronization requires expensive specialized hardware and complex setup, while data-driven alternatives including audio-based alignment, geometry matching, and pose tracking remain limited by restrictive environmental or scene-specific assumptions. to overcome these limitations, we propose phase-dgs, a framework that replaces conventional timestamps with a semantic phase representing each frame's inherent state within the underlying motion cycle. frames capturing the same motion state share the same phase regardless of which camera records them or when, naturally establishing spatiotemporal correspondence across unsynchronized cameras. we validate phase-dgs under temporal offsets, frame drops, and camera freezes, achieving up to +8.5 db psnr improvement over baselines while enabling seamless integration with existing dgs backbones including realtime-4dgs and freetimegs. electronics and telecommunications research institute (etri); seoul national university hosung jeon, jun young jeong, sangwoon kwak, joonsoo kim, sangmin kim, jaesik park, won-sik cheong, hyon-gon choo cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2611.04609",
+      "title": "Making Smell Actionable in Design: Lexicon, Movement Patterns, and Gesture Cards",
+      "authors": "Anran Feng, Shengyu Gao, Xingyu Zhao, Zhenyu Qian, Jingrui An",
+      "affiliations": "Patti & Rusty Rueff School of Design, Art, and Performance, Purdue University; Birmingham Institute of Fashion and Creativity, Birmingham City University; School of Digital Technology and Innovation Design, Jiangnan University",
+      "published_date": "2026-11-03",
+      "categories": "cs.HC",
+      "abstract": "Smell is powerful in design, yet it often remains vague and difficult to work with in studios and classrooms. While olfactory HCI has produced devices, toolkits, and scenario-based applications, designers still lack teachable, shareable resources that link smell to bodily action. This paper presents a three-phase research program that makes smell actionable by moving from lived smell experiences to movement patterns and, finally, to gesture resources. We study olfactory-motor mappings and package the results as teachable design representations through a progressively narrowing method: (1) extracting smell-verb-intent relations from user narratives; (2) capturing and clustering embodied enactments into standardized upper-limb trajectory families; and (3) translating these trajectories into gesture card representations for design teaching and ideation through design workshops. We present a three-phase translational framework and empirically derived smell-gesture correspondences that structure the smell-intent-trajectory-gesture pathway, together with reusable assets (lexicon, trajectory atlas, gesture tables, and cards) that support teaching, reuse, and adaptation across contexts.",
+      "summary_cn": "提出三阶段研究计划把气味转化为可教学的设计资源：从用户叙事抽取气味—动词—意图关系，采集并聚类具身动作形成标准化上肢轨迹族，再转译为手势卡片，使气味与身体动作之间建立可共享、可教学的映射，服务设计课堂与工作室实践。",
+      "pdf_filename": "2611.04609.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04609",
+      "search_text": "making smell actionable in design: lexicon, movement patterns, and gesture cards 具身智能 提出三阶段研究计划把气味转化为可教学的设计资源：从用户叙事抽取气味—动词—意图关系，采集并聚类具身动作形成标准化上肢轨迹族，再转译为手势卡片，使气味与身体动作之间建立可共享、可教学的映射，服务设计课堂与工作室实践。 smell is powerful in design, yet it often remains vague and difficult to work with in studios and classrooms. while olfactory hci has produced devices, toolkits, and scenario-based applications, designers still lack teachable, shareable resources that link smell to bodily action. this paper presents a three-phase research program that makes smell actionable by moving from lived smell experiences to movement patterns and, finally, to gesture resources. we study olfactory-motor mappings and package the results as teachable design representations through a progressively narrowing method: (1) extracting smell-verb-intent relations from user narratives; (2) capturing and clustering embodied enactments into standardized upper-limb trajectory families; and (3) translating these trajectories into gesture card representations for design teaching and ideation through design workshops. we present a three-phase translational framework and empirically derived smell-gesture correspondences that structure the smell-intent-trajectory-gesture pathway, together with reusable assets (lexicon, trajectory atlas, gesture tables, and cards) that support teaching, reuse, and adaptation across contexts. patti & rusty rueff school of design, art, and performance, purdue university; birmingham institute of fashion and creativity, birmingham city university; school of digital technology and innovation design, jiangnan university anran feng, shengyu gao, xingyu zhao, zhenyu qian, jingrui an cs.hc"
+    },
+    {
+      "arxiv_id": "2611.04604",
+      "title": "Sparse-View 3D Coronary Reconstruction from Vessel Segmentations Using a Diffusion Prior",
+      "authors": "Tianyuan Wang, Kenan Niu, Stefano Stramigioli",
+      "affiliations": "Robotics and Mechatronics group, University of Twente",
+      "published_date": "2026-11-03",
+      "categories": "eess.IV, cs.CV",
+      "abstract": "Reconstructing three-dimensional (3D) coronary anatomy from sparse angiographic views could support percutaneous coronary intervention, but limited angular coverage and imperfect vessel segmentations introduce substantial geometric ambiguity. We propose a vessel-specific reconstruction framework combining a learned 3D diffusion prior, visual-hull initialization, and projection-based data consistency. The unconditional diffusion model is trained on coronary vessel masks without paired 2D--3D data and reused across different view counts without retraining. During inference, a scaled visual hull initializes reconstruction, while projection-based updates constrain diffusion refinement using patient-specific vessel observations. We evaluated the framework on simulated angiograms derived from ImageCAS computed tomography angiography volumes using two, four, and eight views at two contrast levels. Across 50 evaluation coronary-tree cases, the proposed method achieved higher mean Dice and clDice than visual hull, deep image prior (DIP), and hash-grid implicit neural representation (INR) at all view counts under reduced contrast. With eight views, improvements over DIP, the best-performing baseline at lower contrast, were approximately 0.13 in Dice and 0.22 in clDice. At higher contrast, performance remained competitive with hash-grid INR, the best-performing eight-view baseline. The preferred diffusion starting timestep depended on observation quality and view count, with excessive refinement reducing accuracy at higher contrast. Projection guidance improved both metrics across all conditions. Averaging stochastic reconstructions further improved accuracy, while sample disagreement localized errors with average-precision gains of 0.14--0.21 over error prevalence. These findings support diffusion-prior reconstruction from sparse vessel observations, although clinical validation remains necessary.",
+      "summary_cn": "提出稀疏视角冠脉 3D 重建框架，用无配对的冠脉血管掩码训练无条件 3D 扩散先验，推理时以缩放视觉壳初始化、由投影数据一致性约束扩散细化，同一模型可在不同视角数下复用而无需重训，缓解角度覆盖有限与血管分割不完美带来的几何歧义。",
+      "pdf_filename": "2611.04604.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "扩散模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04604",
+      "search_text": "sparse-view 3d coronary reconstruction from vessel segmentations using a diffusion prior 扩散模型 提出稀疏视角冠脉 3d 重建框架，用无配对的冠脉血管掩码训练无条件 3d 扩散先验，推理时以缩放视觉壳初始化、由投影数据一致性约束扩散细化，同一模型可在不同视角数下复用而无需重训，缓解角度覆盖有限与血管分割不完美带来的几何歧义。 reconstructing three-dimensional (3d) coronary anatomy from sparse angiographic views could support percutaneous coronary intervention, but limited angular coverage and imperfect vessel segmentations introduce substantial geometric ambiguity. we propose a vessel-specific reconstruction framework combining a learned 3d diffusion prior, visual-hull initialization, and projection-based data consistency. the unconditional diffusion model is trained on coronary vessel masks without paired 2d--3d data and reused across different view counts without retraining. during inference, a scaled visual hull initializes reconstruction, while projection-based updates constrain diffusion refinement using patient-specific vessel observations. we evaluated the framework on simulated angiograms derived from imagecas computed tomography angiography volumes using two, four, and eight views at two contrast levels. across 50 evaluation coronary-tree cases, the proposed method achieved higher mean dice and cldice than visual hull, deep image prior (dip), and hash-grid implicit neural representation (inr) at all view counts under reduced contrast. with eight views, improvements over dip, the best-performing baseline at lower contrast, were approximately 0.13 in dice and 0.22 in cldice. at higher contrast, performance remained competitive with hash-grid inr, the best-performing eight-view baseline. the preferred diffusion starting timestep depended on observation quality and view count, with excessive refinement reducing accuracy at higher contrast. projection guidance improved both metrics across all conditions. averaging stochastic reconstructions further improved accuracy, while sample disagreement localized errors with average-precision gains of 0.14--0.21 over error prevalence. these findings support diffusion-prior reconstruction from sparse vessel observations, although clinical validation remains necessary. robotics and mechatronics group, university of twente tianyuan wang, kenan niu, stefano stramigioli eess.iv, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04583",
+      "title": "Multi-Path Mamba Diffusion for 3D Point Cloud Semantic Scene Completion",
+      "authors": "Li Liang, Naveed Akhtar, Jordan Vice, Anwaar Ulhaq, Ajmal Saeed Mian",
+      "affiliations": "The University of Western Australia; The University of Melbourne; Central Queensland University",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "3D semantic scene completion plays a critical role in enabling various downstream tasks within autonomous systems by estimating both missing geometric structures and semantic information in scene data. In this work, we introduce a unique neural framework that integrates state space modeling with diffusion-based generative approaches to enhance 3D point cloud semantic scene completion. We propose \\textit{MPath Mamba} diffusion network, leveraging a skip-triple Mamba structure, dimensional decomposition residuals, and multi-directional dilations within multi-path data to efficiently process long-sequence data for feature extraction. The proposed method operates in the conditioned latent space of a variational autoencoder, enhanced by a state-space mechanism to improve 3D point cloud representation and reconstruction. Extensive experiments conducted on the SemanticKITTI benchmark demonstrate that our approach achieves highly competitive performance for 3D point cloud semantic scene completion.",
+      "summary_cn": "提出 MPath Mamba 扩散网络做 3D 点云语义场景补全，融合状态空间建模与扩散生成：跳连三重 Mamba 结构、维度分解残差与多方向膨胀在多路径数据上高效处理长序列，并在 VAE 条件隐空间中扩散生成，提升缺失几何结构与语义标注的补全精度。",
+      "pdf_filename": "2611.04583.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04583",
+      "search_text": "multi-path mamba diffusion for 3d point cloud semantic scene completion 点云 提出 mpath mamba 扩散网络做 3d 点云语义场景补全，融合状态空间建模与扩散生成：跳连三重 mamba 结构、维度分解残差与多方向膨胀在多路径数据上高效处理长序列，并在 vae 条件隐空间中扩散生成，提升缺失几何结构与语义标注的补全精度。 3d semantic scene completion plays a critical role in enabling various downstream tasks within autonomous systems by estimating both missing geometric structures and semantic information in scene data. in this work, we introduce a unique neural framework that integrates state space modeling with diffusion-based generative approaches to enhance 3d point cloud semantic scene completion. we propose \\textit{mpath mamba} diffusion network, leveraging a skip-triple mamba structure, dimensional decomposition residuals, and multi-directional dilations within multi-path data to efficiently process long-sequence data for feature extraction. the proposed method operates in the conditioned latent space of a variational autoencoder, enhanced by a state-space mechanism to improve 3d point cloud representation and reconstruction. extensive experiments conducted on the semantickitti benchmark demonstrate that our approach achieves highly competitive performance for 3d point cloud semantic scene completion. the university of western australia; the university of melbourne; central queensland university li liang, naveed akhtar, jordan vice, anwaar ulhaq, ajmal saeed mian cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04498",
+      "title": "3DGS-VBench+ and 3DGSV-Assessor: A Multi-Dimensional Subjective Benchmark and a Reference-Flexible Objective Model for 3D Gaussian Splatting Video Quality Assessment",
+      "authors": "Yuke Xing, William Gordon, Jiarui Wang, Yujie Zhang, Guangtao Zhai, Yiling Xu",
+      "affiliations": "School of Information Science and Electronic Engineering, Shanghai Jiao Tong University; JD.COM; Basis Independent Silicon Valley",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "3D Gaussian Splatting (3DGS) enables real-time novel view synthesis (NVS), but its heavy storage makes compression essential, and both training and compression introduce representation-specific distortions. Since generative compression in many methods treats geometric and color attributes via different parameters, it can induce dimension-specific distortions, motivating multi-dimensional assessment. Moreover, real-world captures generally lack an aligned ground-truth video for a synthesized, continuous camera trajectory, leaving only sparse captured views as references. To enable multi-dimensional quality assessment of 3DGS videos with scarce aligned references, we first present 3DGS-VBench+, a large-scale subjective video quality assessment (VQA) benchmark comprising 3{,}036 3DGS reconstructions, each paired with a rendered video, across 11 real-world and 22 synthetic scenes, generated by 6 representative compression algorithms at systematically designed levels and annotated with 9{,}108 MOSs covering overall, geometry, and color quality. Based on 3DGS-VBench+, we propose 3DGSV-Assessor, a reference-flexible, large multimodal framework that scores all three dimensions in one generation pass and fuses a ranking-based reference cue into the frozen regressor through a bounded gate, supporting both reduced-reference (RR) and no-reference (NR) assessment. Extensive experiments demonstrate state-of-the-art correlation with human perception on 3DGS-VBench+ and strong zero-shot generalization to other NVS benchmarks. The dataset and code will be released at https://github.com/YukeXing/3DGSV-Assessor.",
+      "summary_cn": "构建 3DGS 视频质量评估基准 3DGS-VBench+，含 3036 个 3DGS 重建与渲染视频、9108 条三维度主观评分；并提出参考灵活的客观模型 3DGSV-Assessor，在缺少对齐真值视频、只有稀疏视角可参考时仍能多维评估训练与压缩引入的表示特定失真。",
+      "pdf_filename": "2611.04498.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "场景压缩",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04498",
+      "search_text": "3dgs-vbench+ and 3dgsv-assessor: a multi-dimensional subjective benchmark and a reference-flexible objective model for 3d gaussian splatting video quality assessment 3dgs 场景压缩 多模态 构建 3dgs 视频质量评估基准 3dgs-vbench+，含 3036 个 3dgs 重建与渲染视频、9108 条三维度主观评分；并提出参考灵活的客观模型 3dgsv-assessor，在缺少对齐真值视频、只有稀疏视角可参考时仍能多维评估训练与压缩引入的表示特定失真。 3d gaussian splatting (3dgs) enables real-time novel view synthesis (nvs), but its heavy storage makes compression essential, and both training and compression introduce representation-specific distortions. since generative compression in many methods treats geometric and color attributes via different parameters, it can induce dimension-specific distortions, motivating multi-dimensional assessment. moreover, real-world captures generally lack an aligned ground-truth video for a synthesized, continuous camera trajectory, leaving only sparse captured views as references. to enable multi-dimensional quality assessment of 3dgs videos with scarce aligned references, we first present 3dgs-vbench+, a large-scale subjective video quality assessment (vqa) benchmark comprising 3{,}036 3dgs reconstructions, each paired with a rendered video, across 11 real-world and 22 synthetic scenes, generated by 6 representative compression algorithms at systematically designed levels and annotated with 9{,}108 moss covering overall, geometry, and color quality. based on 3dgs-vbench+, we propose 3dgsv-assessor, a reference-flexible, large multimodal framework that scores all three dimensions in one generation pass and fuses a ranking-based reference cue into the frozen regressor through a bounded gate, supporting both reduced-reference (rr) and no-reference (nr) assessment. extensive experiments demonstrate state-of-the-art correlation with human perception on 3dgs-vbench+ and strong zero-shot generalization to other nvs benchmarks. the dataset and code will be released at https://github.com/yukexing/3dgsv-assessor. school of information science and electronic engineering, shanghai jiao tong university; jd.com; basis independent silicon valley yuke xing, william gordon, jiarui wang, yujie zhang, guangtao zhai, yiling xu cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04492",
+      "title": "Hybrid Particle-Voxel Dynamics for Multimodal 3D World Simulation",
+      "authors": "Jimmy Wang, Yifan Chou, Kaifeng Zhang, Yixuan Wang, Binghao Huang, Tao Yu, Saleh Nabi, Yunzhu Li",
+      "affiliations": "Columbia University; UC Berkeley; University of Michigan; NVIDIA; Analog Devices",
+      "published_date": "2026-11-03",
+      "categories": "cs.RO, cs.CV, cs.LG",
+      "abstract": "Predicting how the world evolves in response to robot actions is central to policy learning, evaluation, and planning. However, many action-conditioned world models predict future observations in 2D image or video space without explicitly modeling the underlying 3D scene, making spatial consistency across viewpoints and over long-horizon interactions challenging. We introduce 3D World Simulator, an action-conditioned multimodal world modeling framework that jointly predicts appearance, geometry, and tactile observations from a unified 3D representation. Our approach combines a hybrid particle-voxel autoencoder that compresses point clouds into compact 3D voxel latents with an action-conditioned latent dynamics model that predicts their evolution. The shared 3D representation supports geometrically consistent rendering from arbitrary viewpoints and flexible integration of spatially aligned tactile signals. Our experiments demonstrate interactive, long-horizon, multimodal prediction at 50 Hz. We then show how our model enables scalable data generation for policy training and evaluation using tactile and multi-view visual observations, including wrist-mounted and novel camera views. Furthermore, we scale our method to large datasets containing diverse objects and demonstrate model-based planning with unseen objects and robot configurations. Together, these results highlight the potential of hybrid particle-voxel dynamics as a foundation for multimodal 3D world simulation.",
+      "summary_cn": "提出动作条件多模态 3D 世界模型：粒子-体素混合自编码器把点云压缩为紧凑体素隐变量，动作条件隐动力学预测其演化，统一 3D 表征支持任意视角几何一致渲染与触觉信号生成，实现 50 Hz 长时程交互预测，并可用于策略训练数据生成与未知物体模型规划。",
+      "pdf_filename": "2611.04492.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "场景压缩",
+        "世界模型",
+        "强化学习",
+        "规划",
+        "点云",
+        "多模态",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04492",
+      "search_text": "hybrid particle-voxel dynamics for multimodal 3d world simulation 场景压缩 世界模型 强化学习 规划 点云 多模态 仿真器 提出动作条件多模态 3d 世界模型：粒子-体素混合自编码器把点云压缩为紧凑体素隐变量，动作条件隐动力学预测其演化，统一 3d 表征支持任意视角几何一致渲染与触觉信号生成，实现 50 hz 长时程交互预测，并可用于策略训练数据生成与未知物体模型规划。 predicting how the world evolves in response to robot actions is central to policy learning, evaluation, and planning. however, many action-conditioned world models predict future observations in 2d image or video space without explicitly modeling the underlying 3d scene, making spatial consistency across viewpoints and over long-horizon interactions challenging. we introduce 3d world simulator, an action-conditioned multimodal world modeling framework that jointly predicts appearance, geometry, and tactile observations from a unified 3d representation. our approach combines a hybrid particle-voxel autoencoder that compresses point clouds into compact 3d voxel latents with an action-conditioned latent dynamics model that predicts their evolution. the shared 3d representation supports geometrically consistent rendering from arbitrary viewpoints and flexible integration of spatially aligned tactile signals. our experiments demonstrate interactive, long-horizon, multimodal prediction at 50 hz. we then show how our model enables scalable data generation for policy training and evaluation using tactile and multi-view visual observations, including wrist-mounted and novel camera views. furthermore, we scale our method to large datasets containing diverse objects and demonstrate model-based planning with unseen objects and robot configurations. together, these results highlight the potential of hybrid particle-voxel dynamics as a foundation for multimodal 3d world simulation. columbia university; uc berkeley; university of michigan; nvidia; analog devices jimmy wang, yifan chou, kaifeng zhang, yixuan wang, binghao huang, tao yu, saleh nabi, yunzhu li cs.ro, cs.cv, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.04477",
+      "title": "Spectrally Routed Diffusion Policy for Multi-Task Robotic Manipulation",
+      "authors": "Mingcong Li, Yihan Zhou, Jiayu Qu, Xueyang Guo, Yilin Mo",
+      "affiliations": "School of Automation, Beijing Institute of Technology; Department of Automation, Tsinghua University; Beijing National Research Center for Information Science and Technology (BNRist), Tsinghua University",
+      "published_date": "2026-11-03",
+      "categories": "cs.RO",
+      "abstract": "Diffusion-based policies have achieved strong performance on single-task robotic manipulation. However, a single model trained jointly on multiple tasks consistently underperforms the per-task specialists trained on the same demonstrations. We focus on two challenges. First, the convolutional encoders commonly used in diffusion-based policies produce visual conditions that are not discriminative enough. Second, gradients from incompatible action modes update the shared denoiser's dense parameters along the same directions, causing destructive interference during joint training. To address both, we propose SR-DP (Spectrally Routed Diffusion Policy). A frozen VGGT encoder with a spatial-compression adapter produces compact multi-scale semantic-geometric tokens, a task-discriminative visual condition for tasks that share a workspace. We first train the denoiser as a standard diffusion policy, then decompose selected linear layers by SVD into a frozen basis of orthogonal rank-one experts, adapted through spectral routing and Householder input rotations. On six RoboTwin tasks, SR-DP averages a 68.4% success rate, surpassing multi-task VO-DP by 21.8 points and the strongest per-task baseline by 3.8 points. On four real-world bimanual tasks, Stage 2 reaches a 43.0% average success rate and improves over Stage 1 by 19.0 points.",
+      "summary_cn": "提出 SR-DP 多任务扩散策略：冻结 VGGT 编码器加空间压缩适配器产生判别性多尺度语义几何条件，再将去噪器线性层做 SVD 分解为正交秩一专家基，用谱路由与 Householder 旋转适配抑制任务间梯度干扰；RoboTwin 六任务平均成功率 68.4%，超多任务基线 21.8 点。",
+      "pdf_filename": "2611.04477.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "前馈3D重建",
+        "场景压缩",
+        "扩散模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04477",
+      "search_text": "spectrally routed diffusion policy for multi-task robotic manipulation 前馈3d重建 场景压缩 扩散模型 提出 sr-dp 多任务扩散策略：冻结 vggt 编码器加空间压缩适配器产生判别性多尺度语义几何条件，再将去噪器线性层做 svd 分解为正交秩一专家基，用谱路由与 householder 旋转适配抑制任务间梯度干扰；robotwin 六任务平均成功率 68.4%，超多任务基线 21.8 点。 diffusion-based policies have achieved strong performance on single-task robotic manipulation. however, a single model trained jointly on multiple tasks consistently underperforms the per-task specialists trained on the same demonstrations. we focus on two challenges. first, the convolutional encoders commonly used in diffusion-based policies produce visual conditions that are not discriminative enough. second, gradients from incompatible action modes update the shared denoiser's dense parameters along the same directions, causing destructive interference during joint training. to address both, we propose sr-dp (spectrally routed diffusion policy). a frozen vggt encoder with a spatial-compression adapter produces compact multi-scale semantic-geometric tokens, a task-discriminative visual condition for tasks that share a workspace. we first train the denoiser as a standard diffusion policy, then decompose selected linear layers by svd into a frozen basis of orthogonal rank-one experts, adapted through spectral routing and householder input rotations. on six robotwin tasks, sr-dp averages a 68.4% success rate, surpassing multi-task vo-dp by 21.8 points and the strongest per-task baseline by 3.8 points. on four real-world bimanual tasks, stage 2 reaches a 43.0% average success rate and improves over stage 1 by 19.0 points. school of automation, beijing institute of technology; department of automation, tsinghua university; beijing national research center for information science and technology (bnrist), tsinghua university mingcong li, yihan zhou, jiayu qu, xueyang guo, yilin mo cs.ro"
+    },
+    {
+      "arxiv_id": "2611.04392",
+      "title": "Aero-VPA: Few-Step Flow-Matching Control over Non-Reconstructive JEPA Latents for Agile Flight on Edge Hardware",
+      "authors": "Yeonseok Lee",
+      "affiliations": "SLING AI Inc.",
+      "published_date": "2026-11-03",
+      "categories": "cs.LO, cs.LG, cs.RO",
+      "abstract": "Vision-Language-Action (VLA) models generalize across tasks, but their autoregressive decoders need sequential forward passes in proportion to the action horizon, each bounded below on embedded aerial platforms by streaming billions of parameters from memory. We present Aero-VPA, a lightweight Vision-Predictor-Action architecture for 3D navigation on edge hardware. A compact RGB-D Vision Transformer and a five-head ensemble predictor, trained without pixel reconstruction, forecast the next latent state; a Conditional Flow Matching solver generates a velocity and yaw-rate chunk in two Euler steps, so each decision takes five sequential network evaluations; and the ensemble dispersion drives an uncertainty fallback. Version 1 specified the architecture, deployment and protocol without results. This version reports the first closed-loop evaluation: PX4 software-in-the-loop simulation of quadrotor missions in procedurally generated forests. Behaviour cloning failed on all 60 missions despite open-loop errors of 0.02-0.04 m/s: the policy copies its last command, a copycat form of causal confusion. DAgger with a privileged, safety-gated supervisor gave the first successes but plateaued at 11.1-21.1% across six checkpoints. A map-free runtime shield with a 15 s depth memory, barrier constraints, a cap on motion outside the 73-degree field of view and backoff along the flown path raised the first DAgger policy's success on 180 paired missions from 21.1% to 52.2% (95% CI [45.0, 59.4]; exact McNemar p = 1.2 x 10^-10) and cut its crashes from 72.2% to 22.2%, while timeouts rose from 2.8% to 23.3%. All six checkpoints gained 30.0-34.4 percentage points, at mean speeds of 1.16-1.36 m/s. The code (https://github.com/ylee-sling/Aero-VPA), the trained policy (72.6 MB, https://huggingface.co/ylee-sling/aero-vpa) and the full benchmark dataset are public.",
+      "summary_cn": "提出面向边缘硬件的轻量 Vision-Predictor-Action 架构：紧凑 RGB-D ViT 与五头集成预测器在无像素重建下预测下一隐状态，条件流匹配用两步欧拉求解生成速度与偏航率动作块，单次决策仅五次前向，集成离散度触发不确定性回退，并首次给出闭环飞行评测。",
+      "pdf_filename": "2611.04392.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "闭环仿真",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04392",
+      "search_text": "aero-vpa: few-step flow-matching control over non-reconstructive jepa latents for agile flight on edge hardware 闭环仿真 多模态 提出面向边缘硬件的轻量 vision-predictor-action 架构：紧凑 rgb-d vit 与五头集成预测器在无像素重建下预测下一隐状态，条件流匹配用两步欧拉求解生成速度与偏航率动作块，单次决策仅五次前向，集成离散度触发不确定性回退，并首次给出闭环飞行评测。 vision-language-action (vla) models generalize across tasks, but their autoregressive decoders need sequential forward passes in proportion to the action horizon, each bounded below on embedded aerial platforms by streaming billions of parameters from memory. we present aero-vpa, a lightweight vision-predictor-action architecture for 3d navigation on edge hardware. a compact rgb-d vision transformer and a five-head ensemble predictor, trained without pixel reconstruction, forecast the next latent state; a conditional flow matching solver generates a velocity and yaw-rate chunk in two euler steps, so each decision takes five sequential network evaluations; and the ensemble dispersion drives an uncertainty fallback. version 1 specified the architecture, deployment and protocol without results. this version reports the first closed-loop evaluation: px4 software-in-the-loop simulation of quadrotor missions in procedurally generated forests. behaviour cloning failed on all 60 missions despite open-loop errors of 0.02-0.04 m/s: the policy copies its last command, a copycat form of causal confusion. dagger with a privileged, safety-gated supervisor gave the first successes but plateaued at 11.1-21.1% across six checkpoints. a map-free runtime shield with a 15 s depth memory, barrier constraints, a cap on motion outside the 73-degree field of view and backoff along the flown path raised the first dagger policy's success on 180 paired missions from 21.1% to 52.2% (95% ci [45.0, 59.4]; exact mcnemar p = 1.2 x 10^-10) and cut its crashes from 72.2% to 22.2%, while timeouts rose from 2.8% to 23.3%. all six checkpoints gained 30.0-34.4 percentage points, at mean speeds of 1.16-1.36 m/s. the code (https://github.com/ylee-sling/aero-vpa), the trained policy (72.6 mb, https://huggingface.co/ylee-sling/aero-vpa) and the full benchmark dataset are public. sling ai inc. yeonseok lee cs.lo, cs.lg, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.04374",
+      "title": "IGSW: Multi-Weather Urban Scene Reconstruction with Intrinsic-Decoupled Gaussian Splatting",
+      "authors": "Zhongquan Wang, Long Cao, Peijia Xie, Senlei Ma, Jie Li, Guofa Li",
+      "affiliations": "College of Mechanical and Vehicle Engineering, Chongqing University",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "High-fidelity weather editing of 4D scenes can support end-to-end training and closed-loop simulation for autonomous driving. Combining generative image editing with dynamic Gaussian representations enables multi-weather scene reconstruction, but weather-edited images often contain structural distortions. Directly fitting their appearance may propagate errors from teacher images into the reconstructed 4D scene, compromising the original scene structure and temporal continuity. To address these challenges, we propose IGSW, a two-stage framework that combines intrinsic-decoupled 4D Gaussian scene modeling with structure-preserving weather refinement. In Stage I, background Gaussian appearance is decomposed into weather-shared albedo and normals and weather-specific irradiance and residuals. Weather teacher images generated by a diffusion-based image editing model and intrinsic maps estimated by a diffusion-based inverse renderer provide feature-level soft supervision for stable structure and illumination changes. In Stage II, a structure-preservation gate combines semantic conflicts with cross-weather intrinsic discrepancies to suppress unreliable teacher regions. Per-Gaussian weather transport variables and target-weather branches then strengthen the desired weather appearance over the intrinsic-decoupled scene. Experiments on nuScenes and Waymo show that IGSW achieves the highest content similarity and semantic consistency and the lowest temporal error among the compared methods, while retaining pronounced weather-dependent illumination and atmosphere. The project page is available at https://akaxi6.github.io/IGSW/ .",
+      "summary_cn": "提出 IGSW 两阶段框架做多天气城市场景重建：先把背景高斯外观解耦为天气共享的反照率、法线与天气特定的辐照度、残差，用扩散编辑图像与逆渲染内在图做软监督；再用结构保持门控抑制不可靠教师区域，在 nuScenes、Waymo 上取得最高内容相似度与最低时序误差。",
+      "pdf_filename": "2611.04374.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "4DGS",
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04374",
+      "search_text": "igsw: multi-weather urban scene reconstruction with intrinsic-decoupled gaussian splatting 3dgs 4dgs 闭环仿真 自动驾驶 提出 igsw 两阶段框架做多天气城市场景重建：先把背景高斯外观解耦为天气共享的反照率、法线与天气特定的辐照度、残差，用扩散编辑图像与逆渲染内在图做软监督；再用结构保持门控抑制不可靠教师区域，在 nuscenes、waymo 上取得最高内容相似度与最低时序误差。 high-fidelity weather editing of 4d scenes can support end-to-end training and closed-loop simulation for autonomous driving. combining generative image editing with dynamic gaussian representations enables multi-weather scene reconstruction, but weather-edited images often contain structural distortions. directly fitting their appearance may propagate errors from teacher images into the reconstructed 4d scene, compromising the original scene structure and temporal continuity. to address these challenges, we propose igsw, a two-stage framework that combines intrinsic-decoupled 4d gaussian scene modeling with structure-preserving weather refinement. in stage i, background gaussian appearance is decomposed into weather-shared albedo and normals and weather-specific irradiance and residuals. weather teacher images generated by a diffusion-based image editing model and intrinsic maps estimated by a diffusion-based inverse renderer provide feature-level soft supervision for stable structure and illumination changes. in stage ii, a structure-preservation gate combines semantic conflicts with cross-weather intrinsic discrepancies to suppress unreliable teacher regions. per-gaussian weather transport variables and target-weather branches then strengthen the desired weather appearance over the intrinsic-decoupled scene. experiments on nuscenes and waymo show that igsw achieves the highest content similarity and semantic consistency and the lowest temporal error among the compared methods, while retaining pronounced weather-dependent illumination and atmosphere. the project page is available at https://akaxi6.github.io/igsw/ . college of mechanical and vehicle engineering, chongqing university zhongquan wang, long cao, peijia xie, senlei ma, jie li, guofa li cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04358",
+      "title": "EndoS3:Endoscopic Semantic Splatting SLAM",
+      "authors": "Mona Sheikh Zeinoddin, Benjamin Wright, Zafer Tandogdu, Greg Shaw, Evangelos Mazomenos, Danail Stoyanov",
+      "affiliations": "Hawkes Institute, University College London; Dept of Urology, University College London Hospitals",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "Purpose: Despite advances in 3D surgical scene understanding, semantic simultaneous localisation and mapping (SLAM) remains under-explored for two key reasons. First, it requires solving three challenging tasks in parallel: camera pose tracking, high-fidelity deformable reconstruction, and semantic mapping, making progress particularly demanding. Second, the scarcity of datasets providing the necessary ground truth to evaluate all three tasks comprehensively under conditions that closely reflect real surgical procedures environments. Method: We propose EndoS3, a Gaussian Splatting-based semantic SLAM framework that uses instance masks to guide all three tasks. An instance-level motion decomposition module separates static and dynamic instances by evaluating residual flow after compensating for camera motion, accounting for flow noise and comparing motion across neighbouring instances. The camera is tracked against the static Gaussians, while an instance-aware warp field gives each dynamic instance its own control nodes and deformation network. A semantic node allocation module redistributes a fixed node budget across instances according to their size and non-rigidity. We also introduce CRCD++, an ex-vivo Cholecystectomy dataset with RGB-D frames, camera pose and instance annotations for full semantic SLAM evaluation. Results: EndoS3 surpasses all state-of-the-art general-purpose and surgical semantic SLAM methods in tracking, reconstruction and semantic mapping on the CRCD++ and SemSup datasets. Conclusion: Semantic-aware motion and deformation modelling is vital to surgical semantic SLAM. EndoS3 and CRCD++ offer a method and benchmark for improved geometric and semantic understanding in endoscopy.",
+      "summary_cn": "提出 EndoS3，基于高斯泼溅的语义 SLAM 框架，用实例掩码统一引导位姿跟踪、可变形重建与语义建图；实例级运动分解通过补偿相机运动后的残差流区分静态与动态实例，并构建覆盖三项任务真值的内镜数据集，提升手术场景语义重建与定位质量。",
+      "pdf_filename": "2611.04358.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "SLAM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04358",
+      "search_text": "endos3:endoscopic semantic splatting slam 3dgs slam 提出 endos3，基于高斯泼溅的语义 slam 框架，用实例掩码统一引导位姿跟踪、可变形重建与语义建图；实例级运动分解通过补偿相机运动后的残差流区分静态与动态实例，并构建覆盖三项任务真值的内镜数据集，提升手术场景语义重建与定位质量。 purpose: despite advances in 3d surgical scene understanding, semantic simultaneous localisation and mapping (slam) remains under-explored for two key reasons. first, it requires solving three challenging tasks in parallel: camera pose tracking, high-fidelity deformable reconstruction, and semantic mapping, making progress particularly demanding. second, the scarcity of datasets providing the necessary ground truth to evaluate all three tasks comprehensively under conditions that closely reflect real surgical procedures environments. method: we propose endos3, a gaussian splatting-based semantic slam framework that uses instance masks to guide all three tasks. an instance-level motion decomposition module separates static and dynamic instances by evaluating residual flow after compensating for camera motion, accounting for flow noise and comparing motion across neighbouring instances. the camera is tracked against the static gaussians, while an instance-aware warp field gives each dynamic instance its own control nodes and deformation network. a semantic node allocation module redistributes a fixed node budget across instances according to their size and non-rigidity. we also introduce crcd++, an ex-vivo cholecystectomy dataset with rgb-d frames, camera pose and instance annotations for full semantic slam evaluation. results: endos3 surpasses all state-of-the-art general-purpose and surgical semantic slam methods in tracking, reconstruction and semantic mapping on the crcd++ and semsup datasets. conclusion: semantic-aware motion and deformation modelling is vital to surgical semantic slam. endos3 and crcd++ offer a method and benchmark for improved geometric and semantic understanding in endoscopy. hawkes institute, university college london; dept of urology, university college london hospitals mona sheikh zeinoddin, benjamin wright, zafer tandogdu, greg shaw, evangelos mazomenos, danail stoyanov cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04346",
+      "title": "Trail systems self-organize through individual route optimization",
+      "authors": "Brendan Wallace, Andrew Berdahl",
+      "affiliations": "Center for Quantitative Sciences, University of Washington; School of Aquatic and Fishery Sciences, University of Washington",
+      "published_date": "2026-11-03",
+      "categories": "nlin.AO, q-bio.QM",
+      "abstract": "As animals, including humans, walk, they compact the vegetation and ground beneath them, reducing the cost of movement for subsequent travelers. From this positive feedback emerge networks of trails which allow for efficient movement and store generational-scale information about the environment. Models simulating this process show how individuals following local cues produce trail systems with many of the features of real-world networks. However, little has been done to investigate walkers with more complete knowledge of their environment and the abilities to plan their behavior intelligently. Here we introduce a simple general model for trail formation, based on minimizing cost of movement by individuals. As in real environments, our simulations produce a striking variety of complex trail networks. We show that these trail systems optimally connect space according to the spatial needs of the walkers, that the geometry of those trail systems matches theoretical predictions and that the systems they generate may fall into multiple attracting states. As technological advances allow us to quantify trail systems across diverse habitats and species, our model provides a theoretical foundation for empirical research on animal trails and for understanding the emergence of human transportation networks, with implications for urban design.",
+      "summary_cn": "提出以个体移动代价最小化为核心的通用小径形成模型，让行走者具备环境知识与路径规划能力，模拟出多种复杂小径网络，并表明这些网络按空间需求最优地连接空间，说明个体层次的路线优化足以自组织出真实小径系统的结构特征。",
+      "pdf_filename": "2611.04346.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04346",
+      "search_text": "trail systems self-organize through individual route optimization 规划 提出以个体移动代价最小化为核心的通用小径形成模型，让行走者具备环境知识与路径规划能力，模拟出多种复杂小径网络，并表明这些网络按空间需求最优地连接空间，说明个体层次的路线优化足以自组织出真实小径系统的结构特征。 as animals, including humans, walk, they compact the vegetation and ground beneath them, reducing the cost of movement for subsequent travelers. from this positive feedback emerge networks of trails which allow for efficient movement and store generational-scale information about the environment. models simulating this process show how individuals following local cues produce trail systems with many of the features of real-world networks. however, little has been done to investigate walkers with more complete knowledge of their environment and the abilities to plan their behavior intelligently. here we introduce a simple general model for trail formation, based on minimizing cost of movement by individuals. as in real environments, our simulations produce a striking variety of complex trail networks. we show that these trail systems optimally connect space according to the spatial needs of the walkers, that the geometry of those trail systems matches theoretical predictions and that the systems they generate may fall into multiple attracting states. as technological advances allow us to quantify trail systems across diverse habitats and species, our model provides a theoretical foundation for empirical research on animal trails and for understanding the emergence of human transportation networks, with implications for urban design. center for quantitative sciences, university of washington; school of aquatic and fishery sciences, university of washington brendan wallace, andrew berdahl nlin.ao, q-bio.qm"
+    },
+    {
+      "arxiv_id": "2611.04339",
+      "title": "Optimal no-feedback card guessing after a fixed number of riffle shuffles",
+      "authors": "Tipaluck Krityakierne, Thotsaporn Aek Thanatipanonda",
+      "affiliations": "Department of Mathematics, Faculty of Science, Mahidol University; Centre of Excellence in Mathematics, MHESI; Science Division, Mahidol University International College",
+      "published_date": "2026-11-03",
+      "categories": "math.PR, math.CO",
+      "abstract": "An ordered deck of $n$ cards is subjected to $k$ independent Gilbert--Shannon--Reeds riffle shuffles. A player then guesses each card without feedback, with repeated guesses allowed. For every fixed $k\\ge1$, we prove that, once $n$ is sufficiently large, an optimal guess at position $i$ in the top half of the deck is $\\lfloor i/2^k\\rfloor+1$; the bottom-half strategy is obtained by reflection. We also show that the optimal expected number of correct guesses is $2\\sqrt{n/((2^k-1)π)}+O_k(1)$. Our starting point is the result of our earlier work that the label at each position is distributed as an equally weighted mixture of $2^k$ components, each a shifted sum of two independent binomial random variables (a Poisson-binomial distribution). The proof of the optimal strategy combines three ingredients: a uniform concentration estimate that separates the mixture components, exact binomial inequalities that control the gaps between competing peaks, and a coefficient comparison that resolves modal ties. The expected-score asymptotic is proved independently of the strategy, using only the peak heights of the mixture components.",
+      "summary_cn": "研究 k 次 GSR 洗牌后的无反馈猜牌问题，证明 n 足够大时上半部分第 i 位最优猜测为 ⌊i/2^k⌋+1、下半部分镜像，且最优期望正确数为 2√(n/((2^k−1)π))+O_k(1)；证明综合了混合分量集中估计、精确二项不等式与泊松二项分布性质。",
+      "pdf_filename": "2611.04339.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.04339",
+      "search_text": "optimal no-feedback card guessing after a fixed number of riffle shuffles  研究 k 次 gsr 洗牌后的无反馈猜牌问题，证明 n 足够大时上半部分第 i 位最优猜测为 ⌊i/2^k⌋+1、下半部分镜像，且最优期望正确数为 2√(n/((2^k−1)π))+o_k(1)；证明综合了混合分量集中估计、精确二项不等式与泊松二项分布性质。 an ordered deck of $n$ cards is subjected to $k$ independent gilbert--shannon--reeds riffle shuffles. a player then guesses each card without feedback, with repeated guesses allowed. for every fixed $k\\ge1$, we prove that, once $n$ is sufficiently large, an optimal guess at position $i$ in the top half of the deck is $\\lfloor i/2^k\\rfloor+1$; the bottom-half strategy is obtained by reflection. we also show that the optimal expected number of correct guesses is $2\\sqrt{n/((2^k-1)π)}+o_k(1)$. our starting point is the result of our earlier work that the label at each position is distributed as an equally weighted mixture of $2^k$ components, each a shifted sum of two independent binomial random variables (a poisson-binomial distribution). the proof of the optimal strategy combines three ingredients: a uniform concentration estimate that separates the mixture components, exact binomial inequalities that control the gaps between competing peaks, and a coefficient comparison that resolves modal ties. the expected-score asymptotic is proved independently of the strategy, using only the peak heights of the mixture components. department of mathematics, faculty of science, mahidol university; centre of excellence in mathematics, mhesi; science division, mahidol university international college tipaluck krityakierne, thotsaporn aek thanatipanonda math.pr, math.co"
+    },
+    {
+      "arxiv_id": "2611.04269",
+      "title": "Integrating Machine Learning and Uncertainty Quantification for Real-Time Decision-Making in Digital Twins: A System-Centric Review and Perspective",
+      "authors": "Yi-Ping Chen, Ying-Kuan Tsai, Seul Lee, Vispi Karkaria, Dex Doksoo Lee, Wei Chen",
+      "affiliations": "Department of Mechanical Engineering, Northwestern University; Ingram School of Engineering, Texas State University",
+      "published_date": "2026-11-03",
+      "categories": "stat.AP, cs.LG",
+      "abstract": "Digital Twins are evolving from passive virtual representations into closed-loop systems that continuously synchronize with physical assets and drive real-time decisions. Yet predictive modeling, machine learning (ML), uncertainty quantification (UQ), and decision-making have been studied as separate capabilities, leaving limited understanding of their integration and maintenance during online operation. This narrative review, scoped by the functional requirements of real-time decision-making rather than by Digital Twin terminology alone, examines how such decisions are generated and sustained in engineering Digital Twins. We first examine foundational decision-making architectures and representative engineering applications, followed by methods that address their limitations across the decision loop. We identify optimization-based, policy-based, and knowledge-based approaches as the major pathways from virtual representation to action. Across them, ML plays three roles in decision-making: enabling efficient surrogate modeling, transforming heterogeneous physical feedback into decision-relevant information, and accelerating or directly generating decisions. UQ supports uncertainty-aware decisions and model adaptation, while continual validation, drift detection, and adaptation help maintain reliable operation as the physical system evolves. Together, these findings underscore the need for a shift from a model-centric to a system-centric perspective on Digital Twins, where its performance depends on the interactions with sensing, state estimation, computation, decision-making, and adaptation rather than on their standalone performance. Therefore, future research should shift from isolated algorithm development toward system-level co-design, scalable decision-making, and approaches to design, and data-efficient continual adaptation and validation for AI-enabled autonomous systems.",
+      "summary_cn": "面向工程数字孪生实时决策的综述，以决策闭环的功能需求而非孪生术语为线索，梳理基于优化、基于策略与基于知识的决策架构及代表性应用，并讨论机器学习、不确定性量化与在线维护如何在闭环中长期集成，指出各项能力割裂研究的现状与整合方向。",
+      "pdf_filename": "2611.04269.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04269",
+      "search_text": "integrating machine learning and uncertainty quantification for real-time decision-making in digital twins: a system-centric review and perspective 闭环仿真 面向工程数字孪生实时决策的综述，以决策闭环的功能需求而非孪生术语为线索，梳理基于优化、基于策略与基于知识的决策架构及代表性应用，并讨论机器学习、不确定性量化与在线维护如何在闭环中长期集成，指出各项能力割裂研究的现状与整合方向。 digital twins are evolving from passive virtual representations into closed-loop systems that continuously synchronize with physical assets and drive real-time decisions. yet predictive modeling, machine learning (ml), uncertainty quantification (uq), and decision-making have been studied as separate capabilities, leaving limited understanding of their integration and maintenance during online operation. this narrative review, scoped by the functional requirements of real-time decision-making rather than by digital twin terminology alone, examines how such decisions are generated and sustained in engineering digital twins. we first examine foundational decision-making architectures and representative engineering applications, followed by methods that address their limitations across the decision loop. we identify optimization-based, policy-based, and knowledge-based approaches as the major pathways from virtual representation to action. across them, ml plays three roles in decision-making: enabling efficient surrogate modeling, transforming heterogeneous physical feedback into decision-relevant information, and accelerating or directly generating decisions. uq supports uncertainty-aware decisions and model adaptation, while continual validation, drift detection, and adaptation help maintain reliable operation as the physical system evolves. together, these findings underscore the need for a shift from a model-centric to a system-centric perspective on digital twins, where its performance depends on the interactions with sensing, state estimation, computation, decision-making, and adaptation rather than on their standalone performance. therefore, future research should shift from isolated algorithm development toward system-level co-design, scalable decision-making, and approaches to design, and data-efficient continual adaptation and validation for ai-enabled autonomous systems. department of mechanical engineering, northwestern university; ingram school of engineering, texas state university yi-ping chen, ying-kuan tsai, seul lee, vispi karkaria, dex doksoo lee, wei chen stat.ap, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.04173",
+      "title": "ReconDreamer#: Self-Evolving Closed-Loop Synergy of Reconstruction and Generation for Dynamic Driving Scenes",
+      "authors": "Songling Liu, Guosheng Zhao, Xiaofeng Wang, Chaojun Ni, Guan Huang, Jiwen Lu, Xingang Wang, Zheng Zhu",
+      "affiliations": "CAS Engineering Laboratory for Intelligent Industrial Vision, Institute of Automation, Chinese Academy of Sciences; School of Artificial Intelligence, University of Chinese Academy of Sciences; Department of Automation, Tsinghua University; Giga AI",
+      "published_date": "2026-11-03",
+      "categories": "cs.CV",
+      "abstract": "Dynamic driving scene reconstruction has made remarkable strides in recent years by leveraging generative priors, particularly in the quality of novel trajectory rendering. Nevertheless, a significant gap remains between the generated data and real-world sensor observations, severely hindering further improvements in reconstruction fidelity. In this paper, we present ReconDreamer#, a self-evolving framework that synergizes reconstruction and generation for dynamic driving scenes, which substantially bridges the gap between synthesized novel trajectory data and recorded real-world observations. Within this self-evolving closed-loop framework, the generative and reconstruction models mutually reinforce each other through iterative refinement, ultimately yielding a significant enhancement in the 3D representation capability of the reconstruction model. Additionally, we introduce a geometry-prior-based adaptive ground model to further enhance the rendering quality of the reconstruction model. To validate the effectiveness of the proposed method, we conduct comprehensive evaluations on Waymo, nuScenes, PandaSet, and EUVS benchmarks. Specifically on Waymo, at a 6-m lateral shift, ReconDreamer# improves NTA-IoU and NTL-IoU by 8.8% and 3.0%, respectively, and reduces FID by 15.1% relative to ReconDreamer++.",
+      "summary_cn": "提出 ReconDreamer#，让生成模型与重建模型在自演化闭环中互相增强，用生成的新轨迹数据弥合合成与真实观测之间的差距，并引入几何先验自适应地面模型改善渲染；Waymo 上 6 米横移时 NTA-IoU、NTL-IoU 分别提升 8.8%、3.0%，FID 降低 15.1%。",
+      "pdf_filename": "2611.04173.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04173",
+      "search_text": "recondreamer#: self-evolving closed-loop synergy of reconstruction and generation for dynamic driving scenes 闭环仿真 自动驾驶 提出 recondreamer#，让生成模型与重建模型在自演化闭环中互相增强，用生成的新轨迹数据弥合合成与真实观测之间的差距，并引入几何先验自适应地面模型改善渲染；waymo 上 6 米横移时 nta-iou、ntl-iou 分别提升 8.8%、3.0%，fid 降低 15.1%。 dynamic driving scene reconstruction has made remarkable strides in recent years by leveraging generative priors, particularly in the quality of novel trajectory rendering. nevertheless, a significant gap remains between the generated data and real-world sensor observations, severely hindering further improvements in reconstruction fidelity. in this paper, we present recondreamer#, a self-evolving framework that synergizes reconstruction and generation for dynamic driving scenes, which substantially bridges the gap between synthesized novel trajectory data and recorded real-world observations. within this self-evolving closed-loop framework, the generative and reconstruction models mutually reinforce each other through iterative refinement, ultimately yielding a significant enhancement in the 3d representation capability of the reconstruction model. additionally, we introduce a geometry-prior-based adaptive ground model to further enhance the rendering quality of the reconstruction model. to validate the effectiveness of the proposed method, we conduct comprehensive evaluations on waymo, nuscenes, pandaset, and euvs benchmarks. specifically on waymo, at a 6-m lateral shift, recondreamer# improves nta-iou and ntl-iou by 8.8% and 3.0%, respectively, and reduces fid by 15.1% relative to recondreamer++. cas engineering laboratory for intelligent industrial vision, institute of automation, chinese academy of sciences; school of artificial intelligence, university of chinese academy of sciences; department of automation, tsinghua university; giga ai songling liu, guosheng zhao, xiaofeng wang, chaojun ni, guan huang, jiwen lu, xingang wang, zheng zhu cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04079",
+      "title": "AlgoPilot: Cross-Paradigm Reasoning in Language Models via Strategy Selection and Guidance",
+      "authors": "Yilun Hao, Ruixiao Yang, Hudson Hilal, Yongchao Chen, Kaizhi Qian, Yada Zhu, Yang Zhang, Chuchu Fan",
+      "affiliations": "Massachusetts Institute of Technology; Harvard University; MIT-IBM Watson AI Lab",
+      "published_date": "2026-11-02",
+      "categories": "cs.AI, cs.CL, cs.LG",
+      "abstract": "Real-world problems span diverse domains, including program synthesis, symbolic reasoning, planning, and optimization, and often require fundamentally different solution paradigms. A central challenge for LLM-based reasoning is twofold: identifying an appropriate problem-solving approach and formulating it correctly. In this paper, we propose AlgoPilot, a cross-paradigm reasoning framework that enables adaptive selection of the solving approaches and structured problem formulation prior to execution. The AlgoPilot framework contains three components: 1) a SteerLM, trained via supervised fine-tuning (SFT) and reinforcement learning (RL), that adaptively selects the solving strategy (paradigm and modes) based on input problems, 2) the corresponding expert GuideLM, trained via SFT, that generates structured formulation guidance tailored to the selected strategy, and 3) an ExecutionLM that generates solutions conditioned on both the selected strategy and its formulation. Unlike prompting-based methods that rely on fixed reasoning templates, our approach learns to adaptively choose and structure problem-solving strategies based on the input. We build AlgoPilot on Qwen3-8B and evaluate across 5 problem categories and 13 benchmarks with 66 unique domains, comparing against both the latest similarly scaled small models and large LLMs. AlgoPilot significantly improves average accuracy for the same model from 38.4% to 72.9%, outperforming the best large LLM prompting baseline GLM-5 by 11.7%. Ablation studies confirm the effectiveness of each component. Notably, we show that the learned steering and formulation modules can transfer across execution models, suggesting their potential to improve other LLMs. Project page: https://sites.google.com/view/algopilot.",
+      "summary_cn": "提出 AlgoPilot 跨范式推理框架：SteerLM 经监督微调与强化学习自适应选择解题范式，GuideLM 生成结构化建模指导，ExecutionLM 负责实际求解，使模型在程序合成、符号推理、规划与优化等异构任务上先选策略再执行，提升整体正确率。",
+      "pdf_filename": "2611.04079.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "强化学习",
+        "规划",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04079",
+      "search_text": "algopilot: cross-paradigm reasoning in language models via strategy selection and guidance 强化学习 规划 大语言模型 提出 algopilot 跨范式推理框架：steerlm 经监督微调与强化学习自适应选择解题范式，guidelm 生成结构化建模指导，executionlm 负责实际求解，使模型在程序合成、符号推理、规划与优化等异构任务上先选策略再执行，提升整体正确率。 real-world problems span diverse domains, including program synthesis, symbolic reasoning, planning, and optimization, and often require fundamentally different solution paradigms. a central challenge for llm-based reasoning is twofold: identifying an appropriate problem-solving approach and formulating it correctly. in this paper, we propose algopilot, a cross-paradigm reasoning framework that enables adaptive selection of the solving approaches and structured problem formulation prior to execution. the algopilot framework contains three components: 1) a steerlm, trained via supervised fine-tuning (sft) and reinforcement learning (rl), that adaptively selects the solving strategy (paradigm and modes) based on input problems, 2) the corresponding expert guidelm, trained via sft, that generates structured formulation guidance tailored to the selected strategy, and 3) an executionlm that generates solutions conditioned on both the selected strategy and its formulation. unlike prompting-based methods that rely on fixed reasoning templates, our approach learns to adaptively choose and structure problem-solving strategies based on the input. we build algopilot on qwen3-8b and evaluate across 5 problem categories and 13 benchmarks with 66 unique domains, comparing against both the latest similarly scaled small models and large llms. algopilot significantly improves average accuracy for the same model from 38.4% to 72.9%, outperforming the best large llm prompting baseline glm-5 by 11.7%. ablation studies confirm the effectiveness of each component. notably, we show that the learned steering and formulation modules can transfer across execution models, suggesting their potential to improve other llms. project page: https://sites.google.com/view/algopilot. massachusetts institute of technology; harvard university; mit-ibm watson ai lab yilun hao, ruixiao yang, hudson hilal, yongchao chen, kaizhi qian, yada zhu, yang zhang, chuchu fan cs.ai, cs.cl, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.04073",
+      "title": "Computer-Use Agents Gain Little Benefit from a World Model When Conditioned on Tutorials",
+      "authors": "Anh Nguyen, Tianyi Xu, Phat Tran, Harry Yu, Huazheng Wang, Stefan Lee",
+      "affiliations": "Oregon State University",
+      "published_date": "2026-11-02",
+      "categories": "cs.LG",
+      "abstract": "Recent work has improved computer-use agents (CUAs) by combining retrieved task-relevant tutorials and look-ahead planning using world models with MLLM judges. However, the contribution of each component -- tutorials, the judge, and the world model -- to overall improvement has not been evaluated in isolation. To fill this gap, we first construct OSWorld-Tutorial and ScienceBoard-Tutorial: two datasets for CUAs with curated multimodal tutorials, covering everyday and scientific domains. We then propose RAG-PolicyJudge (RAG-PJ), a policy-judge framework for CUAs conditioned on task-specific tutorials: the policy proposes candidate actions, and the judge selects among them. To isolate the effect of world models given tutorials, we compare RAG-PJ with and without common world models: using either zero-shot text-based descriptions of next states or an oracle that returns ground-truth visual observations. We find that RAG-PJ gains little benefit from these rollouts when tutorials are present, even with perfect visual futures. This suggests prior world-model gains in tutorial-conditioned methods come mainly from tutorial understanding and the judge's ability to select the proposed actions, rather than from predicted rollouts. Error analysis reveals that the bottleneck is not rollout fidelity, but the judge's ability to reason over future states and recognize task completion. This highlights the need to improve not just next-state prediction in world models, but also reasoning over their predicted rollouts. Datasets and code are available at https://github.com/realjoenguyen/RAGPJ-official.",
+      "summary_cn": "构造 OSWorld-Tutorial 与 ScienceBoard-Tutorial 两个带多模态教程的计算机使用智能体数据集，提出 RAG-PolicyJudge 框架，并用有无世界模型的对照实验说明：给定教程后，世界模型无论用文本预测还是真值视觉都收益很小，增益主要来自教程检索与评判器选择。",
+      "pdf_filename": "2611.04073.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04073",
+      "search_text": "computer-use agents gain little benefit from a world model when conditioned on tutorials 世界模型 多模态 构造 osworld-tutorial 与 scienceboard-tutorial 两个带多模态教程的计算机使用智能体数据集，提出 rag-policyjudge 框架，并用有无世界模型的对照实验说明：给定教程后，世界模型无论用文本预测还是真值视觉都收益很小，增益主要来自教程检索与评判器选择。 recent work has improved computer-use agents (cuas) by combining retrieved task-relevant tutorials and look-ahead planning using world models with mllm judges. however, the contribution of each component -- tutorials, the judge, and the world model -- to overall improvement has not been evaluated in isolation. to fill this gap, we first construct osworld-tutorial and scienceboard-tutorial: two datasets for cuas with curated multimodal tutorials, covering everyday and scientific domains. we then propose rag-policyjudge (rag-pj), a policy-judge framework for cuas conditioned on task-specific tutorials: the policy proposes candidate actions, and the judge selects among them. to isolate the effect of world models given tutorials, we compare rag-pj with and without common world models: using either zero-shot text-based descriptions of next states or an oracle that returns ground-truth visual observations. we find that rag-pj gains little benefit from these rollouts when tutorials are present, even with perfect visual futures. this suggests prior world-model gains in tutorial-conditioned methods come mainly from tutorial understanding and the judge's ability to select the proposed actions, rather than from predicted rollouts. error analysis reveals that the bottleneck is not rollout fidelity, but the judge's ability to reason over future states and recognize task completion. this highlights the need to improve not just next-state prediction in world models, but also reasoning over their predicted rollouts. datasets and code are available at https://github.com/realjoenguyen/ragpj-official. oregon state university anh nguyen, tianyi xu, phat tran, harry yu, huazheng wang, stefan lee cs.lg"
+    },
+    {
+      "arxiv_id": "2611.04053",
+      "title": "Spatial and Temporal Super-Resolution and Denoising of Intracardiac 4D Flow MRI",
+      "authors": "Yusuf A. Ozturk, Jie Zheng, Fanwei Kong",
+      "affiliations": "Department of Mechanical Engineering and Materials Science, Washington University in St. Louis; Mallinckrodt Institute of Radiology, Washington University School of Medicine",
+      "published_date": "2026-11-02",
+      "categories": "cs.CV",
+      "abstract": "Intracardiac flow is driven by complex, and time-varying cardiac motion and interaction with the heart valves, producing complex flow features that may provide valuable information for disease diagnosis and treatment planning. 4D Flow MRI enables non-invasive, time-resolved measurement of three-dimensional cardiovascular velocity fields. However, substantial noise and limited spatial and temporal resolution limit its ability to accurately resolve flow features. We propose 4D-MRAR (4D Magnetic Resonance Augmented Reconstruction), a deep learning (DL) method to super-resolve and denoise 4D Flow MRI data. Unlike prior DL methods that train and infer on static vascular regions, our method predicts intracardiac flow within hearts undergoing large deformation. Moreover, it uniquely allows for simultaneous super-resolution in 3D space and time. The method combines a residual convolutional neural network, a recurrent neural network, and an implicit neural field to predict high-resolution velocity and pressure fields while efficiently enforcing the governing equations of fluid flow during training. Trained on a synthetic dataset obtained from computational fluid dynamics (CFD) simulations of left ventricle (LV) flow, our method generalizes to synthetic whole-heart 4D flow MRI data, and demonstrated promising performance on real 4D Flow MRI. The produced super-resolved flow fields exhibit significantly improved accuracy and greater consistency with the governing equations of blood flow compared with prior methods.",
+      "summary_cn": "提出 4D-MRAR 深度学习方法，对心脏内 4D Flow MRI 同时做空间与时间超分辨和去噪，可在心脏大幅形变条件下预测血流，突破以往只在静态血管区域训练推理的局限，提升速度场细节恢复与噪声抑制效果。",
+      "pdf_filename": "2611.04053.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.04053",
+      "search_text": "spatial and temporal super-resolution and denoising of intracardiac 4d flow mri  提出 4d-mrar 深度学习方法，对心脏内 4d flow mri 同时做空间与时间超分辨和去噪，可在心脏大幅形变条件下预测血流，突破以往只在静态血管区域训练推理的局限，提升速度场细节恢复与噪声抑制效果。 intracardiac flow is driven by complex, and time-varying cardiac motion and interaction with the heart valves, producing complex flow features that may provide valuable information for disease diagnosis and treatment planning. 4d flow mri enables non-invasive, time-resolved measurement of three-dimensional cardiovascular velocity fields. however, substantial noise and limited spatial and temporal resolution limit its ability to accurately resolve flow features. we propose 4d-mrar (4d magnetic resonance augmented reconstruction), a deep learning (dl) method to super-resolve and denoise 4d flow mri data. unlike prior dl methods that train and infer on static vascular regions, our method predicts intracardiac flow within hearts undergoing large deformation. moreover, it uniquely allows for simultaneous super-resolution in 3d space and time. the method combines a residual convolutional neural network, a recurrent neural network, and an implicit neural field to predict high-resolution velocity and pressure fields while efficiently enforcing the governing equations of fluid flow during training. trained on a synthetic dataset obtained from computational fluid dynamics (cfd) simulations of left ventricle (lv) flow, our method generalizes to synthetic whole-heart 4d flow mri data, and demonstrated promising performance on real 4d flow mri. the produced super-resolved flow fields exhibit significantly improved accuracy and greater consistency with the governing equations of blood flow compared with prior methods. department of mechanical engineering and materials science, washington university in st. louis; mallinckrodt institute of radiology, washington university school of medicine yusuf a. ozturk, jie zheng, fanwei kong cs.cv"
+    },
+    {
+      "arxiv_id": "2611.04034",
+      "title": "Do Pretrained Backbones Transfer to Physical Sensors? A Systematic Study of Multimodal Initialization Across the Sensor Stack",
+      "authors": "Fabio Montello, Ronja Güldenring, Lucas Mogensen Sandby, Christoffer Koo Øhrstrøm, Lazaros Nalpantidis",
+      "affiliations": "Technical University of Denmark",
+      "published_date": "2026-11-02",
+      "categories": "cs.CV",
+      "abstract": "Transfer learning from pretrained backbones has become standard practice in multi-sensor computer vision---yet two questions remain open: which pretrained weights transfer best to multi-sensor setups, and can in-domain pretraining outperform off-the-shelf solutions? Frameworks like MultiMAE demonstrate the utility of masked autoencoding in a multi-modal context, but rely entirely on dense, model-derived modalities. It is unclear how robustly these methods translate to real-world applications that use physical sensors, where the aggregation of diverse public datasets for large-scale pretraining inherently introduces modality sparsity. To investigate this systematically, we curate a multi-sensor autonomous driving collection of $2.82M$ images from 16 publicly available datasets, incorporating both physical hardware modalities (RGB, LWIR, NIR, Event) and model-derived modalities (Stereo Depth, Segmentation). We use this collection for in-domain pretraining based on the MultiMAE approach. We adapt MultiMAE's loss formulation to accommodate sparse samples, and study the effect of an enforced encoder bottleneck for modality alignment and of additional losses specific to dense reconstruction (SSIM and FFT). We then systematically compare against common pretrained backbones (ViT, MAE, DINO and MultiMAE) across downstream sensor fusion tasks. We find that MultiMAE is a surprisingly strong out-of-the-box baseline, transferring effectively even to modalities it has never seen, while our targeted modifications yield incremental but consistent improvements on multi-sensor transfer and overall robustness.",
+      "summary_cn": "在 282 万张图像、16 个公开数据集上构建含 RGB、LWIR、NIR、事件与立体深度、分割的多传感器自动驾驶预训练集，改造 MultiMAE 以适应稀疏模态并加入 SSIM、FFT 重建损失，系统比较 ViT、MAE、DINO 等主干，发现 MultiMAE 即使对未见模态也是很强的开箱基线。",
+      "pdf_filename": "2611.04034.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04034",
+      "search_text": "do pretrained backbones transfer to physical sensors? a systematic study of multimodal initialization across the sensor stack 自动驾驶 多模态 在 282 万张图像、16 个公开数据集上构建含 rgb、lwir、nir、事件与立体深度、分割的多传感器自动驾驶预训练集，改造 multimae 以适应稀疏模态并加入 ssim、fft 重建损失，系统比较 vit、mae、dino 等主干，发现 multimae 即使对未见模态也是很强的开箱基线。 transfer learning from pretrained backbones has become standard practice in multi-sensor computer vision---yet two questions remain open: which pretrained weights transfer best to multi-sensor setups, and can in-domain pretraining outperform off-the-shelf solutions? frameworks like multimae demonstrate the utility of masked autoencoding in a multi-modal context, but rely entirely on dense, model-derived modalities. it is unclear how robustly these methods translate to real-world applications that use physical sensors, where the aggregation of diverse public datasets for large-scale pretraining inherently introduces modality sparsity. to investigate this systematically, we curate a multi-sensor autonomous driving collection of $2.82m$ images from 16 publicly available datasets, incorporating both physical hardware modalities (rgb, lwir, nir, event) and model-derived modalities (stereo depth, segmentation). we use this collection for in-domain pretraining based on the multimae approach. we adapt multimae's loss formulation to accommodate sparse samples, and study the effect of an enforced encoder bottleneck for modality alignment and of additional losses specific to dense reconstruction (ssim and fft). we then systematically compare against common pretrained backbones (vit, mae, dino and multimae) across downstream sensor fusion tasks. we find that multimae is a surprisingly strong out-of-the-box baseline, transferring effectively even to modalities it has never seen, while our targeted modifications yield incremental but consistent improvements on multi-sensor transfer and overall robustness. technical university of denmark fabio montello, ronja güldenring, lucas mogensen sandby, christoffer koo øhrstrøm, lazaros nalpantidis cs.cv"
+    },
+    {
+      "arxiv_id": "2611.03959",
+      "title": "Mixing Time of the Random-Pair Monte Shuffle",
+      "authors": "Ilya Mironov",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-11-02",
+      "categories": "cs.DM, math.PR",
+      "abstract": "In the random-pair Monte shuffle on $n$ cards, each step chooses two positions independently and uniformly and exchanges their cards with probability $1/2$. The chosen positions are public; the decisions to exchange cards remain hidden. We prove that the mixing time in expected conditional total variation distance is $2n\\log n+O(n)$, with an exact leading constant and an $O(n)$ cutoff window. To our knowledge, this is the first public-schedule Monte shuffle whose full-permutation mixing time has been determined up to an additive $O(n)$ term.   The upper bound follows by comparing two executions with the same public schedule to a classical random-transposition walk. For the lower bound, we construct a schedule-dependent test function and estimate its variance using a matrix-averaging operator. Combined with the depth bound of Czumaj and Lingas, the mixing estimate gives public switching networks with at most $2n\\log n+O(n)$ switches and $O(\\log n)$ depth for fixed error and failure probabilities.   The author obtained this result through interaction with GPT-6 Astra.",
+      "summary_cn": "证明随机对 Monte 洗牌在期望条件全变差距离下的混合时间为 2n log n+O(n)，给出精确主常数与 O(n) 截断窗；上界通过与随机换位游走对比得到，下界构造依赖公开调度表的检验函数并用矩阵平均算子估计方差，首次确定该类公开调度洗牌的全置换混合时间。",
+      "pdf_filename": "2611.03959.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.03959",
+      "search_text": "mixing time of the random-pair monte shuffle  证明随机对 monte 洗牌在期望条件全变差距离下的混合时间为 2n log n+o(n)，给出精确主常数与 o(n) 截断窗；上界通过与随机换位游走对比得到，下界构造依赖公开调度表的检验函数并用矩阵平均算子估计方差，首次确定该类公开调度洗牌的全置换混合时间。 in the random-pair monte shuffle on $n$ cards, each step chooses two positions independently and uniformly and exchanges their cards with probability $1/2$. the chosen positions are public; the decisions to exchange cards remain hidden. we prove that the mixing time in expected conditional total variation distance is $2n\\log n+o(n)$, with an exact leading constant and an $o(n)$ cutoff window. to our knowledge, this is the first public-schedule monte shuffle whose full-permutation mixing time has been determined up to an additive $o(n)$ term.   the upper bound follows by comparing two executions with the same public schedule to a classical random-transposition walk. for the lower bound, we construct a schedule-dependent test function and estimate its variance using a matrix-averaging operator. combined with the depth bound of czumaj and lingas, the mixing estimate gives public switching networks with at most $2n\\log n+o(n)$ switches and $o(\\log n)$ depth for fixed error and failure probabilities.   the author obtained this result through interaction with gpt-6 astra. 未找到单位信息 ilya mironov cs.dm, math.pr"
+    },
+    {
+      "arxiv_id": "2611.03912",
+      "title": "From Triples to Cards: A Web Component for Human-Readable Linked Open Data",
+      "authors": "Puyu Wang, Hang Dong, Rui Zhao",
+      "affiliations": "Oxford e-Research Centre, Department of Engineering Science, University of Oxford; Department of Computer Science, University of Exeter; School of Cybersecurity, Tianjin University",
+      "published_date": "2026-11-02",
+      "categories": "cs.DL",
+      "abstract": "JSON-LD is getting increasing attention for publishing Linked Data, especially within cultural heritage. We present LODox Data Viewer, a reusable web component library for data presentation and visualization in semantic portals. It renders JSON-LD as human-readable, themeable cards, embeddable in any semantic portal page with a single script tag. Package URL: https://www.npmjs.com/package/lodox-data-viewer",
+      "summary_cn": "发布 LODox Data Viewer 网页组件库，把 JSON-LD 链接数据渲染为可主题化的人类可读卡片，只需一段 script 标签即可嵌入任意语义门户页面，降低了文化遗产等领域链接数据的展示与复用门槛。",
+      "pdf_filename": "2611.03912.pdf",
+      "crawled_date": "2026-11-04",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.03912",
+      "search_text": "from triples to cards: a web component for human-readable linked open data  发布 lodox data viewer 网页组件库，把 json-ld 链接数据渲染为可主题化的人类可读卡片，只需一段 script 标签即可嵌入任意语义门户页面，降低了文化遗产等领域链接数据的展示与复用门槛。 json-ld is getting increasing attention for publishing linked data, especially within cultural heritage. we present lodox data viewer, a reusable web component library for data presentation and visualization in semantic portals. it renders json-ld as human-readable, themeable cards, embeddable in any semantic portal page with a single script tag. package url: https://www.npmjs.com/package/lodox-data-viewer oxford e-research centre, department of engineering science, university of oxford; department of computer science, university of exeter; school of cybersecurity, tianjin university puyu wang, hang dong, rui zhao cs.dl"
+    },
     {
       "arxiv_id": "2611.03605",
       "title": "ufakzeka-kulak: Building and Evaluating a 31.6M-Parameter Turkish Speech Recognizer from Scratch",
