@@ -1,14 +1,14 @@
 {
-  "count": 1973,
+  "count": 1984,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-11-06",
+  "crawled_date_max": "2026-11-09",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-11-05",
+  "published_date_max": "2026-11-06",
   "rating_counts": {
-    "S": 563,
-    "A": 766,
-    "B": 312,
-    "C": 332,
+    "S": 566,
+    "A": 768,
+    "B": 316,
+    "C": 334,
     "": 0
   },
   "tags": [
@@ -19,37 +19,37 @@
     },
     {
       "name": "规划",
-      "count": 362,
+      "count": 364,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 343,
+      "count": 344,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 294,
+      "count": 296,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 292,
+      "count": 294,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 278,
+      "count": 279,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 209,
+      "count": 211,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 144,
+      "count": 147,
       "group": "世界模型与仿真"
     },
     {
@@ -64,12 +64,12 @@
     },
     {
       "name": "仿真器",
-      "count": 113,
+      "count": 114,
       "group": "通用"
     },
     {
       "name": "具身智能",
-      "count": 111,
+      "count": 113,
       "group": "通用"
     },
     {
@@ -114,12 +114,12 @@
     },
     {
       "name": "动态场景重建",
-      "count": 40,
+      "count": 41,
       "group": "3DGS/4DGS"
     },
     {
       "name": "轨迹预测",
-      "count": 29,
+      "count": 30,
       "group": "世界模型与仿真"
     },
     {
@@ -134,7 +134,7 @@
     },
     {
       "name": "地形重建",
-      "count": 15,
+      "count": 16,
       "group": "地面重建"
     },
     {
@@ -154,6 +154,222 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2611.09888",
+      "title": "Scenario Orchestration for Closed-loop Policy Evaluation of Autonomous Driving",
+      "authors": "Frieda Rong, Zhaoyue Wang, Veer Kapadia, Vishaka Rajani, Aren A. Babikian, Xujie Si, Mahsa Golchoubian, Raquel Urtasun, Igor Gilitschenski",
+      "affiliations": "Department of Computer Science, University of Toronto, Canada; Department of Electrical and Computer Engineering, McGill University, Canada",
+      "published_date": "2026-11-06",
+      "categories": "cs.RO",
+      "abstract": "Scenario-based simulation is central to evaluating autonomous-driving policies, but a scenario scripted before execution (i.e., with predetermined, fixed actor routes and speeds) may not preserve its intended interaction once the tested ego policy responds in closed loop. Scripted scenarios cannot adapt to unanticipated ego behavior, while learned traffic actors may remain reactive without reliably realizing a particular scenario intent. We introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors through re-timing, re-routing, and role reassignment for creating a specific scenario intent. At each step, the orchestrator solves a constrained optimization problem that preserves the intended interaction while limiting interventions and maintaining traffic feasibility. We further distinguish scenario realization from policy failure, allowing a test to first be judged based on whether the intended interaction occurred and then by how the ego policy responded. Experiments in the CARLA simulator across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior. These results support closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation.",
+      "summary_cn": "针对脚本化场景在闭环执行中因自车策略反应而偏离预设交互的问题，提出场景编排器：持续监测联合交通状态，通过重新计时、重新路由、角色重分配调整非自车参与者，每步求解约束优化，在限制干预、保持交通可行的同时复现目标交互，并区分场景未实现与策略失败。CARLA 多类场景下交互复现率优于脚本化与学习型基线。",
+      "pdf_filename": "2611.09888.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09888",
+      "search_text": "scenario orchestration for closed-loop policy evaluation of autonomous driving 闭环仿真 自动驾驶 仿真器 针对脚本化场景在闭环执行中因自车策略反应而偏离预设交互的问题，提出场景编排器：持续监测联合交通状态，通过重新计时、重新路由、角色重分配调整非自车参与者，每步求解约束优化，在限制干预、保持交通可行的同时复现目标交互，并区分场景未实现与策略失败。carla 多类场景下交互复现率优于脚本化与学习型基线。 scenario-based simulation is central to evaluating autonomous-driving policies, but a scenario scripted before execution (i.e., with predetermined, fixed actor routes and speeds) may not preserve its intended interaction once the tested ego policy responds in closed loop. scripted scenarios cannot adapt to unanticipated ego behavior, while learned traffic actors may remain reactive without reliably realizing a particular scenario intent. we introduce a scenario orchestrator that continuously monitors the joint traffic state and adapts non-ego actors through re-timing, re-routing, and role reassignment for creating a specific scenario intent. at each step, the orchestrator solves a constrained optimization problem that preserves the intended interaction while limiting interventions and maintaining traffic feasibility. we further distinguish scenario realization from policy failure, allowing a test to first be judged based on whether the intended interaction occurred and then by how the ego policy responded. experiments in the carla simulator across multiple scenario families and driving policies show that orchestration realizes targeted interactions more reliably than scripted and learned actor-level baselines, particularly under variations in initial conditions and ego behavior. these results support closed-loop scenario orchestration as a tool for controlled and reproducible policy evaluation. department of computer science, university of toronto, canada; department of electrical and computer engineering, mcgill university, canada frieda rong, zhaoyue wang, veer kapadia, vishaka rajani, aren a. babikian, xujie si, mahsa golchoubian, raquel urtasun, igor gilitschenski cs.ro"
+    },
+    {
+      "arxiv_id": "2611.09625",
+      "title": "Encoding Memory in World Models with Test-Time Model-Based Reinforcement Learning",
+      "authors": "Maxime Burchi, Fayaz Ali Dharejo, Radu Timofte",
+      "affiliations": "Computer Vision Lab, CAIDAS & IFI, University of Wuerzburg, Germany",
+      "published_date": "2026-11-06",
+      "categories": "cs.LG, cs.AI, cs.CV",
+      "abstract": "Model-based reinforcement learning (MBRL) approaches have demonstrated strong performance across diverse domains in recent years, learning accurate world models from agent trajectories. However, despite this progress, current approaches still struggle to surpass human performance on tasks that require long-term memory and planning. In this work, we address the problem of long-term memory in MBRL by moving beyond the commonly studied paradigm of architecture design. We introduce Test-Time Model-Based Reinforcement Learning (TT-MBRL), using gradient descent at test time to encode the memory of episode observations into world model parameters. This enables the agent to learn a distinct world model for each episode, improving memory capabilities compared to traditional approaches that solely rely on contextual memory. We first establish a proof of concept on a simplified two-dimensional variant of the Memory Maze environment, which we refer to as Memory Maze 2D, showing consistent improvements across different world model architectures. We then demonstrate the effectiveness of TT-MBRL in the 3D domain, achieving new state-of-the-art results on the Memory Maze benchmark. Finally, we show that TT-MBRL maintains strong performance on non-memory benchmarks such as DeepMind Control and Atari 100k.",
+      "summary_cn": "针对基于模型强化学习在长时记忆任务上难以超越人类的问题，提出测试时基于模型的强化学习：用梯度下降把本回合观测写入世界模型参数，使每个回合拥有独立世界模型。在 Memory Maze 2D 与三维版本上刷新最优，并保持 DeepMind Control、Atari 100k 的性能。",
+      "pdf_filename": "2611.09625.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09625",
+      "search_text": "encoding memory in world models with test-time model-based reinforcement learning 世界模型 强化学习 针对基于模型强化学习在长时记忆任务上难以超越人类的问题，提出测试时基于模型的强化学习：用梯度下降把本回合观测写入世界模型参数，使每个回合拥有独立世界模型。在 memory maze 2d 与三维版本上刷新最优，并保持 deepmind control、atari 100k 的性能。 model-based reinforcement learning (mbrl) approaches have demonstrated strong performance across diverse domains in recent years, learning accurate world models from agent trajectories. however, despite this progress, current approaches still struggle to surpass human performance on tasks that require long-term memory and planning. in this work, we address the problem of long-term memory in mbrl by moving beyond the commonly studied paradigm of architecture design. we introduce test-time model-based reinforcement learning (tt-mbrl), using gradient descent at test time to encode the memory of episode observations into world model parameters. this enables the agent to learn a distinct world model for each episode, improving memory capabilities compared to traditional approaches that solely rely on contextual memory. we first establish a proof of concept on a simplified two-dimensional variant of the memory maze environment, which we refer to as memory maze 2d, showing consistent improvements across different world model architectures. we then demonstrate the effectiveness of tt-mbrl in the 3d domain, achieving new state-of-the-art results on the memory maze benchmark. finally, we show that tt-mbrl maintains strong performance on non-memory benchmarks such as deepmind control and atari 100k. computer vision lab, caidas & ifi, university of wuerzburg, germany maxime burchi, fayaz ali dharejo, radu timofte cs.lg, cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.09270",
+      "title": "EGT: Execution-Grounded Traversability through Learned Closed-Loop Trajectory Distributions",
+      "authors": "Chinmay Mundane, Amith Manoharan, Arun Kumar Singh",
+      "affiliations": "Institute of Technology, University of Tartu, Estonia",
+      "published_date": "2026-11-06",
+      "categories": "cs.RO",
+      "abstract": "Rough terrain traversability is often estimated through point-wise roll, pitch, or force-angle margins along a planned path. However, these metrics are often inaccurate and overly conservative because they ignore how terrain disturbances and low-level controller corrections can affect the vehicle's motions. To overcome these limitations, we introduce Execution-Grounded Traversability (EGT), defined as the probability that a vehicle-controller pair can execute a candidate path while meeting trajectory-level tracking and progress requirements. We estimate EGT by predicting the distribution of closed-loop trajectories using a latent-space flow matching (FM) model conditioned on multi-resolution terrain features and 3D vehicle attitude and wheel-ground contact points prior. Across 650 simulated trials on unseen terrains, EGT reduces safe-path rejection to 2.2% (versus 11.4%-39.5% for pose-margin and force-angle baselines) and unsafe acceptance to 7.7%. Integrated into a receding-horizon sampling-based planner, EGT reduces navigation failure rates by 24-42 and 30-44 percentage points over [1] and [2], respectively, while cutting goal-reaching time by up to 20.5% and 45%. Finally, we demonstrate zero-shot transfer of our simulation-trained model to real-world outdoor experiments.",
+      "summary_cn": "把崎岖地形可通行性定义为车—控制器组合按轨迹级跟踪要求执行候选路径的概率，用潜空间流匹配在多重分辨率地形特征与车辆姿态、轮地接触先验下预测闭环轨迹分布。650 次未见地形仿真中安全路径误拒率降至 2.2%，接入滚动时域规划器后导航失败率降低 24 至 44 个百分点，并零样本迁移真实室外。",
+      "pdf_filename": "2611.09270.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "地形重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09270",
+      "search_text": "egt: execution-grounded traversability through learned closed-loop trajectory distributions 闭环仿真 规划 地形重建 把崎岖地形可通行性定义为车—控制器组合按轨迹级跟踪要求执行候选路径的概率，用潜空间流匹配在多重分辨率地形特征与车辆姿态、轮地接触先验下预测闭环轨迹分布。650 次未见地形仿真中安全路径误拒率降至 2.2%，接入滚动时域规划器后导航失败率降低 24 至 44 个百分点，并零样本迁移真实室外。 rough terrain traversability is often estimated through point-wise roll, pitch, or force-angle margins along a planned path. however, these metrics are often inaccurate and overly conservative because they ignore how terrain disturbances and low-level controller corrections can affect the vehicle's motions. to overcome these limitations, we introduce execution-grounded traversability (egt), defined as the probability that a vehicle-controller pair can execute a candidate path while meeting trajectory-level tracking and progress requirements. we estimate egt by predicting the distribution of closed-loop trajectories using a latent-space flow matching (fm) model conditioned on multi-resolution terrain features and 3d vehicle attitude and wheel-ground contact points prior. across 650 simulated trials on unseen terrains, egt reduces safe-path rejection to 2.2% (versus 11.4%-39.5% for pose-margin and force-angle baselines) and unsafe acceptance to 7.7%. integrated into a receding-horizon sampling-based planner, egt reduces navigation failure rates by 24-42 and 30-44 percentage points over [1] and [2], respectively, while cutting goal-reaching time by up to 20.5% and 45%. finally, we demonstrate zero-shot transfer of our simulation-trained model to real-world outdoor experiments. institute of technology, university of tartu, estonia chinmay mundane, amith manoharan, arun kumar singh cs.ro"
+    },
+    {
+      "arxiv_id": "2611.09210",
+      "title": "TPS-A*: Path Planning for Any-Shape Vehicles with Certified Collision Checking in Trajectory Parameter Space",
+      "authors": "Jose Luis Blanco-Claraco, Shravan S. Rai, Fernando Cañadas-Aránega, José Luis Torres-Moreno, José Carlos Moreno-Úbeda",
+      "affiliations": "Department of Engineering, CIESOL, CeiA3, University of Almeria, Spain; Teladoc Health, Santa Barbara, CA, USA",
+      "published_date": "2026-11-06",
+      "categories": "cs.RO",
+      "abstract": "Global planners for ground vehicles usually approximate the vehicle by a disk, trading safety against conservativeness, while exact-footprint checking pays for every candidate motion, pose, and footprint edge. We present TPS-A*, a lattice planner whose edges are kinematically feasible trajectories from parameterized trajectory generators, built on certified collision checking in trajectory parameter space. A grid precomputed per footprint returns, in one pass over the local obstacles, a certified free distance along every candidate trajectory, so the per-node collision cost is independent of footprint complexity and trajectory count. We prove that this grid never overestimates the free distance of the continuously swept, possibly non-convex footprint, and state the planner's guarantees: collision-free paths and bounded suboptimality relative to its lattice abstraction. Goals with or without heading are reached exactly by Reeds-Shepp shots certified as trajectories of the same generators. An exact independent test finds no collision in its paths. On 300 cluttered worlds, with the true footprint and the same goal pose for all planners, it solves every query with a collision-free goal pose in a median of three milliseconds on an AMD Ryzen 7 2700X, on par with hybrid A*, 45\\% of whose paths overlap obstacles, and nearly sixty times faster than a state-lattice planner, the only other collision-free one; with position goals, eighty-nine times faster than hybrid A*. It matches hybrid A* in automated parking and on narrow doorways, docks a non-convex fork footprint that no convex model admits, and drove a real robot across a university campus among people.",
+      "summary_cn": "提出在轨迹参数空间做可认证碰撞检测的栅格规划器 TPS-A*：用参数化轨迹生成器产生运动学可行边，按足迹预计算栅格，一次扫描局部障碍即给出每条候选轨迹的认证自由距离，代价与足迹复杂度无关，且不高估连续扫掠非凸足迹的自由距离。300 个杂乱场景中位 3 毫秒无碰撞求解，实测可停靠非凸叉形足迹。",
+      "pdf_filename": "2611.09210.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09210",
+      "search_text": "tps-a*: path planning for any-shape vehicles with certified collision checking in trajectory parameter space 规划 提出在轨迹参数空间做可认证碰撞检测的栅格规划器 tps-a*：用参数化轨迹生成器产生运动学可行边，按足迹预计算栅格，一次扫描局部障碍即给出每条候选轨迹的认证自由距离，代价与足迹复杂度无关，且不高估连续扫掠非凸足迹的自由距离。300 个杂乱场景中位 3 毫秒无碰撞求解，实测可停靠非凸叉形足迹。 global planners for ground vehicles usually approximate the vehicle by a disk, trading safety against conservativeness, while exact-footprint checking pays for every candidate motion, pose, and footprint edge. we present tps-a*, a lattice planner whose edges are kinematically feasible trajectories from parameterized trajectory generators, built on certified collision checking in trajectory parameter space. a grid precomputed per footprint returns, in one pass over the local obstacles, a certified free distance along every candidate trajectory, so the per-node collision cost is independent of footprint complexity and trajectory count. we prove that this grid never overestimates the free distance of the continuously swept, possibly non-convex footprint, and state the planner's guarantees: collision-free paths and bounded suboptimality relative to its lattice abstraction. goals with or without heading are reached exactly by reeds-shepp shots certified as trajectories of the same generators. an exact independent test finds no collision in its paths. on 300 cluttered worlds, with the true footprint and the same goal pose for all planners, it solves every query with a collision-free goal pose in a median of three milliseconds on an amd ryzen 7 2700x, on par with hybrid a*, 45\\% of whose paths overlap obstacles, and nearly sixty times faster than a state-lattice planner, the only other collision-free one; with position goals, eighty-nine times faster than hybrid a*. it matches hybrid a* in automated parking and on narrow doorways, docks a non-convex fork footprint that no convex model admits, and drove a real robot across a university campus among people. department of engineering, ciesol, ceia3, university of almeria, spain; teladoc health, santa barbara, ca, usa jose luis blanco-claraco, shravan s. rai, fernando cañadas-aránega, josé luis torres-moreno, josé carlos moreno-úbeda cs.ro"
+    },
+    {
+      "arxiv_id": "2611.09036",
+      "title": "ToolDex: An Ego-Exo Human Demonstration Dataset for Creative Physical Tool Use",
+      "authors": "Mohamed Elmoghany, Kehan Li, Ruoqu Chen, Tarun Chiruvolu, Shutong Zhang, Ryan Wang, Stephen Tian, Yaru Niu, Michelle Guo, Ding Zhao, Weiyu Liu, Mengdi Xu, Li Fei-Fei, Jiajun Wu",
+      "affiliations": "Stanford University; Carnegie Mellon University",
+      "published_date": "2026-11-06",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Creative tool use is a fundamental human capability and an important step toward general-purpose embodied intelligence. It requires agents to reason about object affordances, physical constraints, and manipulation strategies, especially when standard tools are unavailable. However, progress in this area is limited by the lack of real-world datasets that capture human tool-use behavior with sufficient scale, fidelity, and diversity. Existing benchmarks are often simulation-based, focus on simplified interactions, or lack detailed observations and annotations.   We introduce ToolDex, a large-scale egocentric-exocentric (ego-exo) human demonstration dataset for creative physical tool use. ToolDex captures scenarios in which humans select, adapt, and repurpose available objects as tools. Using synchronized egocentric cameras and eight exocentric cameras, the dataset provides high-fidelity multi-view observations and rich annotations for hands, tools, target objects, and their deformable interactions. Beyond data collection, we establish a benchmark suite characterizing three core capabilities: physical tool-use reasoning, sparse-view 3D and 4D reconstruction, and robot policy learning. ToolDex provides a foundation for studying human tool-use behavior and developing embodied agents that can adaptively use tools in complex real-world environments.   Dataset visualizations and benchmarking results are available at https://tooluse-dataset.github.io/.",
+      "summary_cn": "ToolDex 是自我中心—外中心联合的人类工具使用演示数据集，同步第一人称相机与八台外中心相机记录人类选、改、替代工具的过程，标注手、工具、目标物体与形变交互。基于它建立物理工具推理、稀疏视角 3D 与 4D 重建、策略学习三项基准，为稀疏视角与动态 4D 重建提供真实多视角监督。",
+      "pdf_filename": "2611.09036.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "动态场景重建",
+        "强化学习",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09036",
+      "search_text": "tooldex: an ego-exo human demonstration dataset for creative physical tool use 动态场景重建 强化学习 具身智能 tooldex 是自我中心—外中心联合的人类工具使用演示数据集，同步第一人称相机与八台外中心相机记录人类选、改、替代工具的过程，标注手、工具、目标物体与形变交互。基于它建立物理工具推理、稀疏视角 3d 与 4d 重建、策略学习三项基准，为稀疏视角与动态 4d 重建提供真实多视角监督。 creative tool use is a fundamental human capability and an important step toward general-purpose embodied intelligence. it requires agents to reason about object affordances, physical constraints, and manipulation strategies, especially when standard tools are unavailable. however, progress in this area is limited by the lack of real-world datasets that capture human tool-use behavior with sufficient scale, fidelity, and diversity. existing benchmarks are often simulation-based, focus on simplified interactions, or lack detailed observations and annotations.   we introduce tooldex, a large-scale egocentric-exocentric (ego-exo) human demonstration dataset for creative physical tool use. tooldex captures scenarios in which humans select, adapt, and repurpose available objects as tools. using synchronized egocentric cameras and eight exocentric cameras, the dataset provides high-fidelity multi-view observations and rich annotations for hands, tools, target objects, and their deformable interactions. beyond data collection, we establish a benchmark suite characterizing three core capabilities: physical tool-use reasoning, sparse-view 3d and 4d reconstruction, and robot policy learning. tooldex provides a foundation for studying human tool-use behavior and developing embodied agents that can adaptively use tools in complex real-world environments.   dataset visualizations and benchmarking results are available at https://tooluse-dataset.github.io/. stanford university; carnegie mellon university mohamed elmoghany, kehan li, ruoqu chen, tarun chiruvolu, shutong zhang, ryan wang, stephen tian, yaru niu, michelle guo, ding zhao, weiyu liu, mengdi xu, li fei-fei, jiajun wu cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.09015",
+      "title": "SIMBAD: Spatio-Temporal Traffic Forecasting Robust to Aperiodicity",
+      "authors": "Daniel Y. Lee, Seungwon Shin, Seunghoon Han, Sungsu Lim, Susik Yoon",
+      "affiliations": "Korea University; Chungnam National University",
+      "published_date": "2026-11-06",
+      "categories": "cs.AI",
+      "abstract": "Accurate traffic prediction is essential for urban planning but remains challenging due to the irregular patterns caused by unexpected events. While Spatio-Temporal Graph Neural Networks (STGNNs) effectively model periodic data, they often struggle with these aperiodic fluctuations. To address this, we propose SIMBAD, which improves generalization irregular patterns via two key mechanisms: 1) adaptive regulation of periodic signals to prioritize recent signals, and 2) dynamic spatial modeling that adjusts influence between connected nodes based on contextual relations. Built upon simple similarity metrics to adapt to aperiodic patterns, SIMBAD outperforms existing methods on real-world benchmark datasets, demonstrating superior performance in predicting unseen and irregular traffic events.",
+      "summary_cn": "针对突发事件导致交通流出现非周期波动、时空图神经网络依赖周期性而失效的问题，提出 SIMBAD：一方面自适应调节周期信号权重以突出近期信号，另一方面依据上下文关系动态调整相连节点间的影响强度，均建立在简单相似度度量之上。在真实交通基准数据集上优于现有方法，对未见过的不规则交通事件预测更稳健。",
+      "pdf_filename": "2611.09015.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.09015",
+      "search_text": "simbad: spatio-temporal traffic forecasting robust to aperiodicity  针对突发事件导致交通流出现非周期波动、时空图神经网络依赖周期性而失效的问题，提出 simbad：一方面自适应调节周期信号权重以突出近期信号，另一方面依据上下文关系动态调整相连节点间的影响强度，均建立在简单相似度度量之上。在真实交通基准数据集上优于现有方法，对未见过的不规则交通事件预测更稳健。 accurate traffic prediction is essential for urban planning but remains challenging due to the irregular patterns caused by unexpected events. while spatio-temporal graph neural networks (stgnns) effectively model periodic data, they often struggle with these aperiodic fluctuations. to address this, we propose simbad, which improves generalization irregular patterns via two key mechanisms: 1) adaptive regulation of periodic signals to prioritize recent signals, and 2) dynamic spatial modeling that adjusts influence between connected nodes based on contextual relations. built upon simple similarity metrics to adapt to aperiodic patterns, simbad outperforms existing methods on real-world benchmark datasets, demonstrating superior performance in predicting unseen and irregular traffic events. korea university; chungnam national university daniel y. lee, seungwon shin, seunghoon han, sungsu lim, susik yoon cs.ai"
+    },
+    {
+      "arxiv_id": "2611.08672",
+      "title": "Real-World Adoption, Use, and Governance of an LLM-Based Electronic Health Record Search and Synthesis Platform",
+      "authors": "Jiunn-Tyng Yeh, Michael Gao, Marshall Nichols, Anika Mohan, Tareq Aljurf, Michael Revoir, Matthew Gardner, Bradley Hintze, William Ratliff, Suresh Balu, Will Knechtle",
+      "affiliations": "Duke Institute for Health Innovation, Duke University Health System, Durham, North Carolina, USA",
+      "published_date": "2026-11-05",
+      "categories": "cs.CY",
+      "abstract": "We evaluated the longitudinal adoption and use of Scout, an electronic health record-integrated large language model platform that provides cited search and synthesis of patient records, during staged deployment across a multi-hospital academic health system. Over 11 months, 2,635 users completed 80,465 tasks. 1,768 clinical users initiated use within the first 29 days of system-wide launch, which included a required training. Daily initiation increased 21.2-fold at launch, from 2.9 to 61.0 users per day. Of the 495 users who initiated use during the launch week, 310 did so in the first two days. Use spanned more than 20 recorded specialty categories, five care-practitioner roles, and 46,485 distinct prompts involving retrieval, synthesis, extraction, evaluation, and drafting, with 752 tasks saved for reuse. Among care practitioners who completed the required course, 77.9% went on to use Scout, with a median of 1.7 days after course completion. The highest-intensity user quintile accounted for 59.0% of tasks and 61.9% of tokens. Exploratory prompt analysis showed use across retrieval, synthesis, extraction, evaluation, and note-drafting. These findings suggest that rapid, broad adoption requires clinician-led task design and evaluation, traceable governance proportional to reach, centralized capacity planning and user support, and training integrated with access.",
+      "summary_cn": "评估多院区学术医疗系统内集成电子病历的大模型检索平台 Scout 在 11 个月推广中的采用情况：2635 名用户完成 80465 项任务，覆盖 20 多个专科与 4.6 万余条提示，高频两成用户贡献近六成任务量。结论是快速推广依赖临床医生主导的任务设计、可追溯治理与培训同步开放。",
+      "pdf_filename": "2611.08672.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.08672",
+      "search_text": "real-world adoption, use, and governance of an llm-based electronic health record search and synthesis platform 大语言模型 评估多院区学术医疗系统内集成电子病历的大模型检索平台 scout 在 11 个月推广中的采用情况：2635 名用户完成 80465 项任务，覆盖 20 多个专科与 4.6 万余条提示，高频两成用户贡献近六成任务量。结论是快速推广依赖临床医生主导的任务设计、可追溯治理与培训同步开放。 we evaluated the longitudinal adoption and use of scout, an electronic health record-integrated large language model platform that provides cited search and synthesis of patient records, during staged deployment across a multi-hospital academic health system. over 11 months, 2,635 users completed 80,465 tasks. 1,768 clinical users initiated use within the first 29 days of system-wide launch, which included a required training. daily initiation increased 21.2-fold at launch, from 2.9 to 61.0 users per day. of the 495 users who initiated use during the launch week, 310 did so in the first two days. use spanned more than 20 recorded specialty categories, five care-practitioner roles, and 46,485 distinct prompts involving retrieval, synthesis, extraction, evaluation, and drafting, with 752 tasks saved for reuse. among care practitioners who completed the required course, 77.9% went on to use scout, with a median of 1.7 days after course completion. the highest-intensity user quintile accounted for 59.0% of tasks and 61.9% of tokens. exploratory prompt analysis showed use across retrieval, synthesis, extraction, evaluation, and note-drafting. these findings suggest that rapid, broad adoption requires clinician-led task design and evaluation, traceable governance proportional to reach, centralized capacity planning and user support, and training integrated with access. duke institute for health innovation, duke university health system, durham, north carolina, usa jiunn-tyng yeh, michael gao, marshall nichols, anika mohan, tareq aljurf, michael revoir, matthew gardner, bradley hintze, william ratliff, suresh balu, will knechtle cs.cy"
+    },
+    {
+      "arxiv_id": "2611.08664",
+      "title": "ForPC: Force-Aware Whole-Body Control for Precise Humanoid Cart Pushing",
+      "authors": "ZhenYu Zou, Xing Liu, ShiChuang Wang, YunLong Dong, LiNan Deng, Feng Hua, Jun Wan, Cheng Cheng",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-11-05",
+      "categories": "cs.RO",
+      "abstract": "Humanoid robots are expected to take over strenuous material handling in manufacturing, logistics, and healthcare, where operating existing wheeled carts would let them move heavy loads without modifying the workplace. However, humanoid cart pushing remains challenging because the bimanual grasp closes a force-coupled loop in which the contact wrenches that drive the cart also disturb the robot's balance, and payload changes alter the coupled dynamics. We propose ForPC, a force-aware whole-body control framework that regulates cart velocity through two-stage reinforcement learning. A locomotion prior is first trained under varied hand loads and upper-body postures to provide balance support. A force latent and a state latent are then inferred from onboard observations, without external force sensors, and fed to a residual policy that coordinates bounded arm, waist, and leg adjustments with base-velocity commands. Multi-objective rewards penalize bimanual internal opposition, grasp slip, and actuator saturation, encouraging the policy to apply contact force on demand without human demonstrations. Sim-to-sim experiments show that ForPC reduces cart-velocity RMSE by up to 68.2% relative to a locomotion-only baseline (Loco-only) and cross-track RMSE by up to 74.2% on the multi-bend route. Trained solely in simulation, the policy also transfers to a physical Unitree G1 without real-world training or fine-tuning and, with no payload-specific adjustment, pushes a cart carrying up to 30 kg at 0.5 m/s. These results suggest that humanoid robots could eventually replace humans for efficient material handling in daily life.",
+      "summary_cn": "针对人形机器人双手推车时接触力与平衡强耦合、载荷变化使动力学漂移的问题，提出力感知全身控制框架 ForPC：先训行走先验，再从机载观测推断力与状态潜变量，由残差策略协调手臂、腰、腿与底盘速度。仿真车速误差降低最多 68.2%，仅仿真训练即零样本迁移到 Unitree G1 推动 30 kg 车。",
+      "pdf_filename": "2611.08664.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.08664",
+      "search_text": "forpc: force-aware whole-body control for precise humanoid cart pushing 强化学习 针对人形机器人双手推车时接触力与平衡强耦合、载荷变化使动力学漂移的问题，提出力感知全身控制框架 forpc：先训行走先验，再从机载观测推断力与状态潜变量，由残差策略协调手臂、腰、腿与底盘速度。仿真车速误差降低最多 68.2%，仅仿真训练即零样本迁移到 unitree g1 推动 30 kg 车。 humanoid robots are expected to take over strenuous material handling in manufacturing, logistics, and healthcare, where operating existing wheeled carts would let them move heavy loads without modifying the workplace. however, humanoid cart pushing remains challenging because the bimanual grasp closes a force-coupled loop in which the contact wrenches that drive the cart also disturb the robot's balance, and payload changes alter the coupled dynamics. we propose forpc, a force-aware whole-body control framework that regulates cart velocity through two-stage reinforcement learning. a locomotion prior is first trained under varied hand loads and upper-body postures to provide balance support. a force latent and a state latent are then inferred from onboard observations, without external force sensors, and fed to a residual policy that coordinates bounded arm, waist, and leg adjustments with base-velocity commands. multi-objective rewards penalize bimanual internal opposition, grasp slip, and actuator saturation, encouraging the policy to apply contact force on demand without human demonstrations. sim-to-sim experiments show that forpc reduces cart-velocity rmse by up to 68.2% relative to a locomotion-only baseline (loco-only) and cross-track rmse by up to 74.2% on the multi-bend route. trained solely in simulation, the policy also transfers to a physical unitree g1 without real-world training or fine-tuning and, with no payload-specific adjustment, pushes a cart carrying up to 30 kg at 0.5 m/s. these results suggest that humanoid robots could eventually replace humans for efficient material handling in daily life. 未找到单位信息 zhenyu zou, xing liu, shichuang wang, yunlong dong, linan deng, feng hua, jun wan, cheng cheng cs.ro"
+    },
+    {
+      "arxiv_id": "2611.08583",
+      "title": "DarkMatterFM-Registry: A Machine-Readable Registry of Dark-Matter Models Extracted from the arXiv Literature",
+      "authors": "Ioana A. Zelko, Jo Bovy, Nolan Koblischke",
+      "affiliations": "University of Toronto, Canada",
+      "published_date": "2026-11-05",
+      "categories": "astro-ph.CO, astro-ph.IM, hep-ph",
+      "abstract": "To use a dark-matter model one needs to know what defines it, which observables it affects, which codes and likelihoods evaluate it, and under what assumptions a published bound applies. That information is scattered across tens of thousands of papers. We present DarkMatterFM-Registry, a machine-readable registry of dark-matter models extracted from arXiv full texts by a staged large-language-model (LLM) pipeline: 6,145 structured model cards, validated against a seven-file JSON Schema suite, ranked by expected value for observational follow-up, and enriched for the top ~2,000 with observables, constraints, and theory-to-observable routes. Schema checks pass 97.8% of cards, and an LLM-judged accuracy study on a stratified card sample finds 81% of section verdicts correct, 18% partially correct, and none hallucinated. As a first application we turn the registry into a priority-weighted roadmap of 25 concrete projects the community could build. The roadmap is built by judging every computational step of every enriched model's theory-to-observable routes as available, partial, or missing, and aggregating the resulting typed gaps weighted by model priority. We find that what blocks the most high-priority models is not missing theory but missing shared infrastructure: model files for existing relic-abundance solvers, a general non-cold Boltzmann-code framework, reusable indirect-detection likelihoods, and a Lyman-$α$ forest likelihood for non-cold dark matter (the largest gap for structure-formation probes). The model cards, schemas, roadmap, and ranking are released making the project reproducible and the cards available for the community.",
+      "summary_cn": "构建 DarkMatterFM-Registry，用分阶段大模型流水线从全文抽取暗物质模型信息，形成 6145 张结构化模型卡，JSON Schema 校验通过率 97.8%，人工抽样判定 81% 的章节结论正确且无幻觉。发现阻塞高优先级模型的不是理论缺失，而是遗迹丰度求解器等共享基础设施缺失。",
+      "pdf_filename": "2611.08583.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.08583",
+      "search_text": "darkmatterfm-registry: a machine-readable registry of dark-matter models extracted from the arxiv literature 大语言模型 构建 darkmatterfm-registry，用分阶段大模型流水线从全文抽取暗物质模型信息，形成 6145 张结构化模型卡，json schema 校验通过率 97.8%，人工抽样判定 81% 的章节结论正确且无幻觉。发现阻塞高优先级模型的不是理论缺失，而是遗迹丰度求解器等共享基础设施缺失。 to use a dark-matter model one needs to know what defines it, which observables it affects, which codes and likelihoods evaluate it, and under what assumptions a published bound applies. that information is scattered across tens of thousands of papers. we present darkmatterfm-registry, a machine-readable registry of dark-matter models extracted from arxiv full texts by a staged large-language-model (llm) pipeline: 6,145 structured model cards, validated against a seven-file json schema suite, ranked by expected value for observational follow-up, and enriched for the top ~2,000 with observables, constraints, and theory-to-observable routes. schema checks pass 97.8% of cards, and an llm-judged accuracy study on a stratified card sample finds 81% of section verdicts correct, 18% partially correct, and none hallucinated. as a first application we turn the registry into a priority-weighted roadmap of 25 concrete projects the community could build. the roadmap is built by judging every computational step of every enriched model's theory-to-observable routes as available, partial, or missing, and aggregating the resulting typed gaps weighted by model priority. we find that what blocks the most high-priority models is not missing theory but missing shared infrastructure: model files for existing relic-abundance solvers, a general non-cold boltzmann-code framework, reusable indirect-detection likelihoods, and a lyman-$α$ forest likelihood for non-cold dark matter (the largest gap for structure-formation probes). the model cards, schemas, roadmap, and ranking are released making the project reproducible and the cards available for the community. university of toronto, canada ioana a. zelko, jo bovy, nolan koblischke astro-ph.co, astro-ph.im, hep-ph"
+    },
+    {
+      "arxiv_id": "2611.08577",
+      "title": "Meituan-Robotics-0: A Vision-Language-Action Foundation Model for Desktop Manipulation",
+      "authors": "Meituan Robotics Team, Caicheng Wang, Chen Zhao, Chengpeng Jin, Duo Xu, Fengjiao Chen, Guanglu Wan, Heqing Yang, Jia Wang, Jiacong Zhou, Jie Hu, Jiyuan Ru, Lingfeng Zhang, Linjiang Huang, Manyuan Zhang, Ningchu Liu, Shijie Zhou, Si Liu, Shuo Li, Tianyi Zhang, Xi Zhang, Xin Chen, Xuezhi Cao, Xunliang Cai, Yanbin Zeng, Yang Yang, Yang Yi, Yanli Tan, Yifu Xu, Yimeng Jia, Yuchen Tang, Yuchen Xie, Yuxiang Zheng, Zerwei Chng, Zilong Huang, Zipeng Ye, Ziyuan Qin, Ziqin Wang",
+      "affiliations": "Meituan",
+      "published_date": "2026-11-05",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "We present Meituan-Robotics-0 (MR0), a vision-language-action foundation model and embodied-agent system for stationary-base desktop manipulation. MR0 combines 147 million vision-language samples with 15,060 hours of curated robot trajectories spanning 12 embodiments. A three-stage training recipe aligns multimodal representations with robot behavior through discrete action-token pre-training, transfers these priors to continuous cross-embodiment control through flow-matching mid-training, and adapts the policy through real-world post-training. We introduce Rollback, which pairs replaced policy segments with human corrections to provide positive and negative supervision for CFG-DAgger without value learning or advantage labeling. A unified end-effector interface supports heterogeneous embodiments, while asynchronous action-chunk merging maintains smooth execution under variable inference latency. An event-driven agent maintains persistent task events and reassesses plans when progress or feasibility changes, enabling cross-task retrieval and conditional task resumption. MR0 achieves 93.6% success on RoboTwin 2.0 and ranks fifth in the RoboDojo VLA track. Under matched HG-DAgger post-training, MR0 achieves higher average success rate and progress score than $π_{0.5}$ across three real-robot tasks. On Ethernet insertion, CFG-DAgger trained with Rollback data reaches 70% success and a progress score of 0.90. Qualitative agent deployments demonstrate cross-task event retrieval and recovery from temporarily unsatisfied task conditions.",
+      "summary_cn": "美团机器人提出面向桌面操作的运动—语言—动作基础模型 MR0，融合 1.47 亿视觉语言样本与 1.5 万小时跨 12 种本体机器人轨迹，先做离散动作词元预训练，再经流匹配跨本体中训练与真实世界后训练，并用回滚机制为 DAgger 补充正负监督。RoboTwin 2.0 成功率 93.6%。",
+      "pdf_filename": "2611.08577.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.08577",
+      "search_text": "meituan-robotics-0: a vision-language-action foundation model for desktop manipulation 多模态 具身智能 美团机器人提出面向桌面操作的运动—语言—动作基础模型 mr0，融合 1.47 亿视觉语言样本与 1.5 万小时跨 12 种本体机器人轨迹，先做离散动作词元预训练，再经流匹配跨本体中训练与真实世界后训练，并用回滚机制为 dagger 补充正负监督。robotwin 2.0 成功率 93.6%。 we present meituan-robotics-0 (mr0), a vision-language-action foundation model and embodied-agent system for stationary-base desktop manipulation. mr0 combines 147 million vision-language samples with 15,060 hours of curated robot trajectories spanning 12 embodiments. a three-stage training recipe aligns multimodal representations with robot behavior through discrete action-token pre-training, transfers these priors to continuous cross-embodiment control through flow-matching mid-training, and adapts the policy through real-world post-training. we introduce rollback, which pairs replaced policy segments with human corrections to provide positive and negative supervision for cfg-dagger without value learning or advantage labeling. a unified end-effector interface supports heterogeneous embodiments, while asynchronous action-chunk merging maintains smooth execution under variable inference latency. an event-driven agent maintains persistent task events and reassesses plans when progress or feasibility changes, enabling cross-task retrieval and conditional task resumption. mr0 achieves 93.6% success on robotwin 2.0 and ranks fifth in the robodojo vla track. under matched hg-dagger post-training, mr0 achieves higher average success rate and progress score than $π_{0.5}$ across three real-robot tasks. on ethernet insertion, cfg-dagger trained with rollback data reaches 70% success and a progress score of 0.90. qualitative agent deployments demonstrate cross-task event retrieval and recovery from temporarily unsatisfied task conditions. meituan meituan robotics team, caicheng wang, chen zhao, chengpeng jin, duo xu, fengjiao chen, guanglu wan, heqing yang, jia wang, jiacong zhou, jie hu, jiyuan ru, lingfeng zhang, linjiang huang, manyuan zhang, ningchu liu, shijie zhou, si liu, shuo li, tianyi zhang, xi zhang, xin chen, xuezhi cao, xunliang cai, yanbin zeng, yang yang, yang yi, yanli tan, yifu xu, yimeng jia, yuchen tang, yuchen xie, yuxiang zheng, zerwei chng, zilong huang, zipeng ye, ziyuan qin, ziqin wang cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.08568",
+      "title": "Personalized health coaching via coachable health age and counterfactual wearable trajectories",
+      "authors": "Simon A. Lee, Zeinab Esmaeilpour, Menglian Zhou, Marius Guerard, Sohrab Sidhu, Alexandru Solot, Hamid Palangi, Pramod Rudrapatna, Ming-Zher Poh, Max A. Xu, Daniel McDuff, Dimitrios Antos, Yuzhe Yang, Jeffrey N. Chiang, Anthony Z. Faranesh, Lindsey Sunden, Mark Malhotra, Shwetak Patel, A. Ali Heydari, Ahmed A. Metwally",
+      "affiliations": "Google Research; University of California, Los Angeles",
+      "published_date": "2026-11-05",
+      "categories": "q-bio.QM, cs.LG",
+      "abstract": "Personalized health coaching requires moving beyond retrospective wearable summaries toward quantitative, actionable behavioral prescriptions. We introduce Coachable Health Age (CHA), an interpretable health-age metric built from modifiable physiological and behavioral signals passively captured by consumer wearables. Across the WEAR-ME (N=2,780), All of Us (N=22,748), and longitudinal Fitbit (N=1,464) cohorts, CHA aligns with established cardiometabolic health constructs and improves prognostic discrimination for incident cardiovascular and metabolic disease beyond age, sex, and body mass index. To enable prospective behavioral optimization, we developed Sensor World Model (SensorWM), an action-conditioned wearable world model pretrained on over 2.2 million person-weeks of longitudinal sensor data from approximately 100,000 participants. SensorWM accurately forecasts multi-week physiological responses to candidate lifestyle changes ($R^2=0.664$), outperforming generic time-series foundation models while preserving downstream clinical signal for diabetes, hypertension, and other health outcomes. Finally, we integrate CHA and SensorWM into an agentic counterfactual coaching system to synthesize personalized 12-week coaching plans. In blinded paired reviews, certified lifestyle coaches preferred counterfactual-grounded plans over plans grounded in wearable history alone for overall quality (71.4%, P < 0.001) and anticipated adherence (71.0%, P < 0.001), and board-certified clinicians judged 99.2% of counterfactual-grounded plans to meet clinical safety criteria (vs. 97.6% of comparison plans). Automated evaluations across the full cohort (N=2,780) also favored counterfactual-grounded plans. By closing the loop between longitudinal tracking, trajectory prediction, and counterfactual coaching, our framework provides a scalable path to systematically improve cardiometabolic health.",
+      "summary_cn": "提出可解释的可干预健康年龄指标 CHA，并构建动作条件化可穿戴世界模型 SensorWM，在约 10 万人、220 万人周纵向数据上预训练，可按候选生活方式预测多周生理轨迹，再与 CHA 组合成反事实教练系统生成 12 周方案。盲评中教练更偏好反事实方案，临床医生判定 99.2% 符合安全标准。",
+      "pdf_filename": "2611.08568.pdf",
+      "crawled_date": "2026-11-09",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "轨迹预测"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.08568",
+      "search_text": "personalized health coaching via coachable health age and counterfactual wearable trajectories 世界模型 轨迹预测 提出可解释的可干预健康年龄指标 cha，并构建动作条件化可穿戴世界模型 sensorwm，在约 10 万人、220 万人周纵向数据上预训练，可按候选生活方式预测多周生理轨迹，再与 cha 组合成反事实教练系统生成 12 周方案。盲评中教练更偏好反事实方案，临床医生判定 99.2% 符合安全标准。 personalized health coaching requires moving beyond retrospective wearable summaries toward quantitative, actionable behavioral prescriptions. we introduce coachable health age (cha), an interpretable health-age metric built from modifiable physiological and behavioral signals passively captured by consumer wearables. across the wear-me (n=2,780), all of us (n=22,748), and longitudinal fitbit (n=1,464) cohorts, cha aligns with established cardiometabolic health constructs and improves prognostic discrimination for incident cardiovascular and metabolic disease beyond age, sex, and body mass index. to enable prospective behavioral optimization, we developed sensor world model (sensorwm), an action-conditioned wearable world model pretrained on over 2.2 million person-weeks of longitudinal sensor data from approximately 100,000 participants. sensorwm accurately forecasts multi-week physiological responses to candidate lifestyle changes ($r^2=0.664$), outperforming generic time-series foundation models while preserving downstream clinical signal for diabetes, hypertension, and other health outcomes. finally, we integrate cha and sensorwm into an agentic counterfactual coaching system to synthesize personalized 12-week coaching plans. in blinded paired reviews, certified lifestyle coaches preferred counterfactual-grounded plans over plans grounded in wearable history alone for overall quality (71.4%, p < 0.001) and anticipated adherence (71.0%, p < 0.001), and board-certified clinicians judged 99.2% of counterfactual-grounded plans to meet clinical safety criteria (vs. 97.6% of comparison plans). automated evaluations across the full cohort (n=2,780) also favored counterfactual-grounded plans. by closing the loop between longitudinal tracking, trajectory prediction, and counterfactual coaching, our framework provides a scalable path to systematically improve cardiometabolic health. google research; university of california, los angeles simon a. lee, zeinab esmaeilpour, menglian zhou, marius guerard, sohrab sidhu, alexandru solot, hamid palangi, pramod rudrapatna, ming-zher poh, max a. xu, daniel mcduff, dimitrios antos, yuzhe yang, jeffrey n. chiang, anthony z. faranesh, lindsey sunden, mark malhotra, shwetak patel, a. ali heydari, ahmed a. metwally q-bio.qm, cs.lg"
+    },
     {
       "arxiv_id": "2611.08449",
       "title": "VFlash: Fast, Accurate Visual Planning via Flash Primitive Decoding",
