@@ -1,75 +1,75 @@
 {
-  "count": 2024,
+  "count": 2048,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-11-10",
+  "crawled_date_max": "2026-11-11",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-11-09",
+  "published_date_max": "2026-11-10",
   "rating_counts": {
-    "S": 577,
-    "A": 781,
-    "B": 322,
-    "C": 344,
+    "S": 583,
+    "A": 789,
+    "B": 326,
+    "C": 350,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 426,
+      "count": 430,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 372,
+      "count": 379,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 350,
+      "count": 353,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 304,
+      "count": 311,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 302,
+      "count": 304,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 284,
+      "count": 285,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 214,
+      "count": 216,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 148,
+      "count": 150,
       "group": "世界模型与仿真"
     },
     {
       "name": "点云",
-      "count": 136,
+      "count": 139,
       "group": "通用"
     },
     {
       "name": "前馈3D重建",
-      "count": 127,
+      "count": 128,
       "group": "前馈3D重建"
     },
     {
       "name": "仿真器",
-      "count": 115,
+      "count": 116,
       "group": "通用"
     },
     {
       "name": "具身智能",
-      "count": 114,
+      "count": 115,
       "group": "通用"
     },
     {
@@ -79,7 +79,7 @@
     },
     {
       "name": "扩散模型",
-      "count": 70,
+      "count": 71,
       "group": "世界模型与仿真"
     },
     {
@@ -89,12 +89,12 @@
     },
     {
       "name": "视频生成",
-      "count": 53,
+      "count": 54,
       "group": "世界模型与仿真"
     },
     {
       "name": "SLAM",
-      "count": 50,
+      "count": 51,
       "group": "通用"
     },
     {
@@ -119,7 +119,7 @@
     },
     {
       "name": "轨迹预测",
-      "count": 32,
+      "count": 33,
       "group": "世界模型与仿真"
     },
     {
@@ -154,6 +154,471 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2611.14420",
+      "title": "OnlyAct: Extracting Action Representations from Foundation Models for World Models",
+      "authors": "Runjia Li, Minghao Chen, Junyu Xie, Philip Torr, Andrea Vedaldi, Tomas Jakab",
+      "affiliations": "University of Oxford",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV",
+      "abstract": "Video world models promise general-purpose interactive simulators, but their training is limited by action supervision: action labels are scarce, fragmented across incompatible specifications, and do not scale with the unlabeled video pretraining corpus. A common workaround jointly trains an action encoder to compress consecutive frames into a latent action and a decoder to reconstruct the next frame from the previous frame and that latent, forcing the latent to capture only new information. This has two limitations: learning the action space from scratch can limit generalization to unseen domains, and the bottleneck trades expressiveness for separation, with tighter settings losing nuance and looser ones risking scene leakage under domain shifts. We argue for a different starting point: rather than learning actions from scratch, we start from a pretrained foundation model (V-JEPA 2), whose embeddings of a frame pair already carry substantial action information after large-scale, diverse video pretraining. The remaining challenge is to extract the action while discarding the scene. We propose a label-free contrastive adaptation framework that pulls together frame pairs sharing the same motion under a different scene and pushes apart pairs from the same scene with different motion, reshaping the geometry of the pretrained space without imposing a reconstruction bottleneck. We introduce a unified evaluation protocol along three axes (action expressiveness, scene invariance, and action-conditioned video generation quality) across robot manipulation, camera navigation, game, and driving benchmarks, most of which are unseen during adaptation. Compared with annotation-free latent-action methods, our representations are substantially more expressive while matching their scene invariance, and they yield world models that transfer demonstrated actions to new scenes more faithfully.",
+      "summary_cn": "视频世界模型受限于动作标注稀缺且规格不统一。OnlyAct不改动预训练基础模型，直接从视频帧学习无标注动作表征：把不同领域动作映射到同一共享动作空间，只保留动作、丢弃发生场景，继承大规模视频预训练时空先验；该嵌入可跨初始图像生成同动作视频，也能适配真实动作用于控制。",
+      "pdf_filename": "2611.14420.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "视频生成",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14420",
+      "search_text": "onlyact: extracting action representations from foundation models for world models 世界模型 视频生成 具身智能 视频世界模型受限于动作标注稀缺且规格不统一。onlyact不改动预训练基础模型，直接从视频帧学习无标注动作表征：把不同领域动作映射到同一共享动作空间，只保留动作、丢弃发生场景，继承大规模视频预训练时空先验；该嵌入可跨初始图像生成同动作视频，也能适配真实动作用于控制。 video world models promise general-purpose interactive simulators, but their training is limited by action supervision: action labels are scarce, fragmented across incompatible specifications, and do not scale with the unlabeled video pretraining corpus. a common workaround jointly trains an action encoder to compress consecutive frames into a latent action and a decoder to reconstruct the next frame from the previous frame and that latent, forcing the latent to capture only new information. this has two limitations: learning the action space from scratch can limit generalization to unseen domains, and the bottleneck trades expressiveness for separation, with tighter settings losing nuance and looser ones risking scene leakage under domain shifts. we argue for a different starting point: rather than learning actions from scratch, we start from a pretrained foundation model (v-jepa 2), whose embeddings of a frame pair already carry substantial action information after large-scale, diverse video pretraining. the remaining challenge is to extract the action while discarding the scene. we propose a label-free contrastive adaptation framework that pulls together frame pairs sharing the same motion under a different scene and pushes apart pairs from the same scene with different motion, reshaping the geometry of the pretrained space without imposing a reconstruction bottleneck. we introduce a unified evaluation protocol along three axes (action expressiveness, scene invariance, and action-conditioned video generation quality) across robot manipulation, camera navigation, game, and driving benchmarks, most of which are unseen during adaptation. compared with annotation-free latent-action methods, our representations are substantially more expressive while matching their scene invariance, and they yield world models that transfer demonstrated actions to new scenes more faithfully. university of oxford runjia li, minghao chen, junyu xie, philip torr, andrea vedaldi, tomas jakab cs.cv"
+    },
+    {
+      "arxiv_id": "2611.14419",
+      "title": "Evaluating LLM-Generated World Models for Neuro-Symbolic Reasoning",
+      "authors": "Souhaila Djaffal, Amna Jamal, Gagana Madhugiri Devaraja, Anidipta Pal, Jobst Heitzig",
+      "affiliations": "PRISM AI Safety Research; Potsdam Institute for Climate Impact Research",
+      "published_date": "2026-11-10",
+      "categories": "cs.AI",
+      "abstract": "Formal world models can support planning, verification, and safety reasoning, but constructing them from open-ended natural-language situations is difficult, particularly in multi-agent settings where several formalizations may be plausible. We study whether five LLMs can generate such world models as partially observable stochastic games and whether mechanical validity is sufficient to establish that the resulting model faithfully represents the intended decision problem. We introduce a benchmark of 44 scenarios spanning game, situational, and cultural settings and evaluate generated world models along three dimensions: mechanical validity, reference-relative structural agreement, and semantic criteria. Across three empirical tracks, we analyze 410 first-pass generations. In the reference-backed game track, 134/135 generated world models pass a strict mechanical audit, yet mean permutation-invariant structural F1 is only 0.366, with just 28/134 mechanically valid models exactly matching the authored reference. In the cultural track, explicitly naming the country changes the generated structural representation for most LLMs while producing only small changes in automated semantic scores. These results show that executability is a necessary but insufficient criterion for LLM-generated world models: models that are mechanically valid can still differ substantially in the structure used by downstream neuro-symbolic reasoning and planning.",
+      "summary_cn": "考察五个LLM能否把开放式自然语言情境生成为部分可观测随机博弈形式的“世界模型”，并追问机械合法性是否等于忠实性。构建44个场景基准、评测410次生成：博弈赛道134/135通过严格机械审计，但结构F1仅0.366，仅28个与人工参考完全一致，说明形式正确远不等于建模正确。",
+      "pdf_filename": "2611.14419.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14419",
+      "search_text": "evaluating llm-generated world models for neuro-symbolic reasoning 世界模型 大语言模型 考察五个llm能否把开放式自然语言情境生成为部分可观测随机博弈形式的“世界模型”，并追问机械合法性是否等于忠实性。构建44个场景基准、评测410次生成：博弈赛道134/135通过严格机械审计，但结构f1仅0.366，仅28个与人工参考完全一致，说明形式正确远不等于建模正确。 formal world models can support planning, verification, and safety reasoning, but constructing them from open-ended natural-language situations is difficult, particularly in multi-agent settings where several formalizations may be plausible. we study whether five llms can generate such world models as partially observable stochastic games and whether mechanical validity is sufficient to establish that the resulting model faithfully represents the intended decision problem. we introduce a benchmark of 44 scenarios spanning game, situational, and cultural settings and evaluate generated world models along three dimensions: mechanical validity, reference-relative structural agreement, and semantic criteria. across three empirical tracks, we analyze 410 first-pass generations. in the reference-backed game track, 134/135 generated world models pass a strict mechanical audit, yet mean permutation-invariant structural f1 is only 0.366, with just 28/134 mechanically valid models exactly matching the authored reference. in the cultural track, explicitly naming the country changes the generated structural representation for most llms while producing only small changes in automated semantic scores. these results show that executability is a necessary but insufficient criterion for llm-generated world models: models that are mechanically valid can still differ substantially in the structure used by downstream neuro-symbolic reasoning and planning. prism ai safety research; potsdam institute for climate impact research souhaila djaffal, amna jamal, gagana madhugiri devaraja, anidipta pal, jobst heitzig cs.ai"
+    },
+    {
+      "arxiv_id": "2611.14414",
+      "title": "SIGMO: Sigmoid Gated Interaction-Aware Motion Planning",
+      "authors": "Avinash Singh, Manish Saroya, Fatemeh Cheraghi Pouria, Faizan Tariq, Jovin D'sa, David Isele, Yosuke Sakamoto, Sangjae Bae",
+      "affiliations": "Honda Research Institute USA; University of Illinois Urbana-Champaign",
+      "published_date": "2026-11-10",
+      "categories": "cs.RO",
+      "abstract": "Despite the widespread adoption of autonomous vehicle technologies, reliable navigation within cluttered environments remains arduous due to the necessity of interaction-aware strategies; example scenarios include: narrow passages with multiple agents, lane changing in dense traffic, and crossing unsignalized intersections. These scenarios often require highly proactive strategies, simultaneously demanding interpretability and quick adaptability, which challenge end-to-end and data-driven methods. An effective strategy requires: scalability to multiple agents, adaptability to changes in other agents' behavior, and harmony with surrounding traffic without freezing or becoming overly conservative. To meet these requirements, we present SIGMO, a sigmoid-gated interaction-aware motion planner, with two main contributions. First, we formulate polynomial sigmoid functions that analytically estimate yield scores of surrounding agents using physics-grounded interaction features that capture driving intuitions. Second, we integrate the polynomial sigmoid functions into a receding-horizon planner, which facilitates interaction-aware planning with arbitrary trajectory predictions. We validate SIGMO in interaction-intensive simulations and hardware experiments. The results show that SIGMO balances proactive and defensive behavior while remaining computationally lightweight, serving as a strong baseline in a mobility stack. The simulation and hardware experiment videos are available here: https://sites.google.com/view/sigmoid-polygate.",
+      "summary_cn": "面向密集交互场景的运动规划：用多项式sigmoid函数从物理化交互特征（相对位置、速度、让行直觉）解析估计周围智能体的让行概率，再把该打分嵌入滚动时域规划器，使其在任意轨迹预测下做交互感知决策。在窄通道多车会车、密集车流变道、无信号交叉口等仿真与硬件实验中兼顾主动协商与防御性，计算量小且可解释。",
+      "pdf_filename": "2611.14414.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "轨迹预测",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14414",
+      "search_text": "sigmo: sigmoid gated interaction-aware motion planning 轨迹预测 规划 面向密集交互场景的运动规划：用多项式sigmoid函数从物理化交互特征（相对位置、速度、让行直觉）解析估计周围智能体的让行概率，再把该打分嵌入滚动时域规划器，使其在任意轨迹预测下做交互感知决策。在窄通道多车会车、密集车流变道、无信号交叉口等仿真与硬件实验中兼顾主动协商与防御性，计算量小且可解释。 despite the widespread adoption of autonomous vehicle technologies, reliable navigation within cluttered environments remains arduous due to the necessity of interaction-aware strategies; example scenarios include: narrow passages with multiple agents, lane changing in dense traffic, and crossing unsignalized intersections. these scenarios often require highly proactive strategies, simultaneously demanding interpretability and quick adaptability, which challenge end-to-end and data-driven methods. an effective strategy requires: scalability to multiple agents, adaptability to changes in other agents' behavior, and harmony with surrounding traffic without freezing or becoming overly conservative. to meet these requirements, we present sigmo, a sigmoid-gated interaction-aware motion planner, with two main contributions. first, we formulate polynomial sigmoid functions that analytically estimate yield scores of surrounding agents using physics-grounded interaction features that capture driving intuitions. second, we integrate the polynomial sigmoid functions into a receding-horizon planner, which facilitates interaction-aware planning with arbitrary trajectory predictions. we validate sigmo in interaction-intensive simulations and hardware experiments. the results show that sigmo balances proactive and defensive behavior while remaining computationally lightweight, serving as a strong baseline in a mobility stack. the simulation and hardware experiment videos are available here: https://sites.google.com/view/sigmoid-polygate. honda research institute usa; university of illinois urbana-champaign avinash singh, manish saroya, fatemeh cheraghi pouria, faizan tariq, jovin d'sa, david isele, yosuke sakamoto, sangjae bae cs.ro"
+    },
+    {
+      "arxiv_id": "2611.14394",
+      "title": "On operators with infinitely many spectral components",
+      "authors": "Janko Bračič, Marko Kandić",
+      "affiliations": "University of Ljubljana; Institute of Mathematics, Physics, and Mechanics",
+      "published_date": "2026-11-10",
+      "categories": "math.FA",
+      "abstract": "For a unital complex Banach algebra $\\mathscr A$ and $n\\in\\mathbb N$, let $\\mathcal C_n(\\mathscr A)$ be the set of all elements whose spectrum has at least $n$ connected components, and let $\\mathcal C_\\infty(\\mathscr A)=\\bigcap_{n\\in\\mathbb N}\\mathcal C_n(\\mathscr A)$. We prove that $\\mathcal C_\\infty(\\mathscr A)\\neq\\varnothing$ if and only if $\\mathscr A$ contains a sequence of non-zero pairwise orthogonal idempotents, and that the number of components of a spectrum is always finite, $\\aleph_0$ or $\\mathfrak c$. This allows us to extend the spectral depth $d_σ(\\mathscr A)$ to a cardinal-valued invariant with values in $\\mathbb N\\cup\\{\\aleph_0,\\mathfrak c\\}$. We show that $d_σ(\\mathscr A)=\\mathfrak c$ precisely when $\\mathscr A$ contains a dyadic family of idempotents indexed by the full binary tree. In that case, some element has spectrum homeomorphic to the Cantor space $\\mathbf 2^{\\mathbb N}$. The supremum defining $d_σ(\\mathscr A)$ is attained when the spectral classes of $\\mathscr A$ are dense and when $\\mathscr A$ is commutative, but not in general. We construct a unital complex Banach algebra with $d_σ(\\mathscr A)=\\aleph_0$ and $\\mathcal C_\\infty(\\mathscr A)=\\varnothing$. If $Δ$ is the character space of a commutative $\\mathscr A$ and $π_0(Δ)$ is the space of all components of $Δ$, then $d_σ(\\mathscr A)=\\card\\bigl(π_0(Δ)\\bigr)$ when $π_0(Δ)$ is finite, $d_σ(\\mathscr A)=\\aleph_0$ when $π_0(Δ)$ is infinite and scattered, and $d_σ(\\mathscr A)=\\mathfrak c$ when $π_0(Δ)$ is not scattered. We also prove that the spectral depth is additive with respect to finite direct sums and that the spectral classes are invariant under injective holomorphic functions.",
+      "summary_cn": "在含单位元的复Banach代数中研究谱具有无穷多连通分支的元素：证明C∞(A)非空当且仅当A含一列非零两两正交幂等元，谱的分支数只能是有限、ℵ0或连续统c，并把谱深度推广为基数不变量；dσ=c恰对应以满二叉树索引的幂等族，此时存在谱同胚于Cantor集的元素。属泛函分析，与视觉无关。",
+      "pdf_filename": "2611.14394.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.14394",
+      "search_text": "on operators with infinitely many spectral components  在含单位元的复banach代数中研究谱具有无穷多连通分支的元素：证明c∞(a)非空当且仅当a含一列非零两两正交幂等元，谱的分支数只能是有限、ℵ0或连续统c，并把谱深度推广为基数不变量；dσ=c恰对应以满二叉树索引的幂等族，此时存在谱同胚于cantor集的元素。属泛函分析，与视觉无关。 for a unital complex banach algebra $\\mathscr a$ and $n\\in\\mathbb n$, let $\\mathcal c_n(\\mathscr a)$ be the set of all elements whose spectrum has at least $n$ connected components, and let $\\mathcal c_\\infty(\\mathscr a)=\\bigcap_{n\\in\\mathbb n}\\mathcal c_n(\\mathscr a)$. we prove that $\\mathcal c_\\infty(\\mathscr a)\\neq\\varnothing$ if and only if $\\mathscr a$ contains a sequence of non-zero pairwise orthogonal idempotents, and that the number of components of a spectrum is always finite, $\\aleph_0$ or $\\mathfrak c$. this allows us to extend the spectral depth $d_σ(\\mathscr a)$ to a cardinal-valued invariant with values in $\\mathbb n\\cup\\{\\aleph_0,\\mathfrak c\\}$. we show that $d_σ(\\mathscr a)=\\mathfrak c$ precisely when $\\mathscr a$ contains a dyadic family of idempotents indexed by the full binary tree. in that case, some element has spectrum homeomorphic to the cantor space $\\mathbf 2^{\\mathbb n}$. the supremum defining $d_σ(\\mathscr a)$ is attained when the spectral classes of $\\mathscr a$ are dense and when $\\mathscr a$ is commutative, but not in general. we construct a unital complex banach algebra with $d_σ(\\mathscr a)=\\aleph_0$ and $\\mathcal c_\\infty(\\mathscr a)=\\varnothing$. if $δ$ is the character space of a commutative $\\mathscr a$ and $π_0(δ)$ is the space of all components of $δ$, then $d_σ(\\mathscr a)=\\card\\bigl(π_0(δ)\\bigr)$ when $π_0(δ)$ is finite, $d_σ(\\mathscr a)=\\aleph_0$ when $π_0(δ)$ is infinite and scattered, and $d_σ(\\mathscr a)=\\mathfrak c$ when $π_0(δ)$ is not scattered. we also prove that the spectral depth is additive with respect to finite direct sums and that the spectral classes are invariant under injective holomorphic functions. university of ljubljana; institute of mathematics, physics, and mechanics janko bračič, marko kandić math.fa"
+    },
+    {
+      "arxiv_id": "2611.14383",
+      "title": "An Energy-Based Perspective on Machine Learning",
+      "authors": "Bo Dai, Yilun Du",
+      "affiliations": "Georgia Institute of Technology; Harvard University",
+      "published_date": "2026-11-10",
+      "categories": "cs.AI, cs.LG",
+      "abstract": "Energy-based models (EBMs) define a distribution through a scalar energy, $p_θ(x)\\propto\\exp(-E_θ(x))$, and are usually presented as one model family among many. This tutorial has a broader goal: beyond introducing EBMs, it uses them as a single lens that connects the different aspects of machine learning. Any EBM is specified by three choices, the energy, which determines what the model represents; the inference procedure, which samples from or optimizes the energy; and the learning method, which fits the energy to data. We first develop these components, including sampling, variational inference, and learning by maximum likelihood, noise contrastive estimation, pseudolikelihood, score matching, and adversarial training, and show that the learning methods share one contrastive structure. We then show that discriminative models, generative models such as GANs, normalizing flows, diffusion and autoregressive models, representation learning methods such as contrastive learning, word2vec, BERT, denoising auto-encoders, and diffusion representations, reinforcement learning with EBM policies and world models, inverse reinforcement learning, and planning, as well as inference-time computation with verifiers, are all EBMs that differ in these three choices, mostly in how they handle the partition function and sampling. This view explains existing methods, organizes them into a common framework, and suggests new algorithms by replacing one component while keeping the others, with composition of energies as a principled way to combine learned models at inference time.",
+      "summary_cn": "把能量模型当作统一透镜重述机器学习：EBM由能量、推断过程与学习方法三要素确定，最大似然、噪声对比估计、伪似然、得分匹配与对抗训练共享同一对比结构；并说明判别模型、GAN/流/扩散/自回归、对比学习与BERT类表征，以及EBM策略的强化学习、世界模型、规划都可纳入该框架。",
+      "pdf_filename": "2611.14383.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "强化学习",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14383",
+      "search_text": "an energy-based perspective on machine learning 世界模型 强化学习 规划 把能量模型当作统一透镜重述机器学习：ebm由能量、推断过程与学习方法三要素确定，最大似然、噪声对比估计、伪似然、得分匹配与对抗训练共享同一对比结构；并说明判别模型、gan/流/扩散/自回归、对比学习与bert类表征，以及ebm策略的强化学习、世界模型、规划都可纳入该框架。 energy-based models (ebms) define a distribution through a scalar energy, $p_θ(x)\\propto\\exp(-e_θ(x))$, and are usually presented as one model family among many. this tutorial has a broader goal: beyond introducing ebms, it uses them as a single lens that connects the different aspects of machine learning. any ebm is specified by three choices, the energy, which determines what the model represents; the inference procedure, which samples from or optimizes the energy; and the learning method, which fits the energy to data. we first develop these components, including sampling, variational inference, and learning by maximum likelihood, noise contrastive estimation, pseudolikelihood, score matching, and adversarial training, and show that the learning methods share one contrastive structure. we then show that discriminative models, generative models such as gans, normalizing flows, diffusion and autoregressive models, representation learning methods such as contrastive learning, word2vec, bert, denoising auto-encoders, and diffusion representations, reinforcement learning with ebm policies and world models, inverse reinforcement learning, and planning, as well as inference-time computation with verifiers, are all ebms that differ in these three choices, mostly in how they handle the partition function and sampling. this view explains existing methods, organizes them into a common framework, and suggests new algorithms by replacing one component while keeping the others, with composition of energies as a principled way to combine learned models at inference time. georgia institute of technology; harvard university bo dai, yilun du cs.ai, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.14309",
+      "title": "MMDM: Measuring Massive Multitask Decision Making",
+      "authors": "Junhao Shen, Qing Zong, Yue Guo, Zhanqiu Zhang, Yiwen Guo, Hong Cheng",
+      "affiliations": "The Chinese University of Hong Kong; Hong Kong University of Science and Technology; LIGHTSPEED; Independent Researcher",
+      "published_date": "2026-11-10",
+      "categories": "cs.LG, cs.CL",
+      "abstract": "System-1 Decision Models directly make structured probabilistic decisions over query-specified options given a state in a single forward pass, without autoregressively generating reasoning trajectories or textual responses. Recent evaluations cover diverse tasks but often rely on existing benchmarks, where prior exposure to test material can obscure generalization. Moreover, real-world decision making often involves long contexts, large option spaces, and complex logical dependencies, challenges that existing benchmarks do not adequately capture together. Thus, we introduce MMDM (Massive Multitask Decision Making), a benchmark of 5,448 high-quality questions across 16 task categories, combining newly constructed tasks with source-grounded recompositions and rewrites for single-select, multi-select, and soft-label decision making in fresh contexts. It covers realistic scenarios such as agent state tracking, tool and skill selection, preference judgments, and rubric scoring, with option spaces ranging from 2 to 1,024 and inputs extending to 64,817 tokens. With MMDM, we conduct a comprehensive quantitative evaluation of 28 decision models, showing that many perform well on common knowledge yet struggle with interdependent options, constrained decisions, and multi-select tasks. For example, Perplexity Decider-V1.2 reaches 78.75% Hard Single-select Accuracy on world knowledge, but only 53.95% on option logic and 47.95% on constraint planning, while the best Hard Multi-select Accuracy across all models is 36.81%. These results highlight joint reasoning, constraint-aware selection, and complete multi-select recovery as key priorities for decision model development, with MMDM providing a testbed for measuring this progress.",
+      "summary_cn": "提出MMDM基准评测“系统1”决策模型：模型在单次前向中直接对查询给定选项输出结构化概率决策，而非自回归生成推理轨迹。基准覆盖16类任务的硬单选（约束规划、工作流决策、策略与例外、证据校验、工具选择等）与软目标（评分与评分细则），用Brier误差等指标给出能力画像，横向比较若干决策模型。",
+      "pdf_filename": "2611.14309.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14309",
+      "search_text": "mmdm: measuring massive multitask decision making 规划 提出mmdm基准评测“系统1”决策模型：模型在单次前向中直接对查询给定选项输出结构化概率决策，而非自回归生成推理轨迹。基准覆盖16类任务的硬单选（约束规划、工作流决策、策略与例外、证据校验、工具选择等）与软目标（评分与评分细则），用brier误差等指标给出能力画像，横向比较若干决策模型。 system-1 decision models directly make structured probabilistic decisions over query-specified options given a state in a single forward pass, without autoregressively generating reasoning trajectories or textual responses. recent evaluations cover diverse tasks but often rely on existing benchmarks, where prior exposure to test material can obscure generalization. moreover, real-world decision making often involves long contexts, large option spaces, and complex logical dependencies, challenges that existing benchmarks do not adequately capture together. thus, we introduce mmdm (massive multitask decision making), a benchmark of 5,448 high-quality questions across 16 task categories, combining newly constructed tasks with source-grounded recompositions and rewrites for single-select, multi-select, and soft-label decision making in fresh contexts. it covers realistic scenarios such as agent state tracking, tool and skill selection, preference judgments, and rubric scoring, with option spaces ranging from 2 to 1,024 and inputs extending to 64,817 tokens. with mmdm, we conduct a comprehensive quantitative evaluation of 28 decision models, showing that many perform well on common knowledge yet struggle with interdependent options, constrained decisions, and multi-select tasks. for example, perplexity decider-v1.2 reaches 78.75% hard single-select accuracy on world knowledge, but only 53.95% on option logic and 47.95% on constraint planning, while the best hard multi-select accuracy across all models is 36.81%. these results highlight joint reasoning, constraint-aware selection, and complete multi-select recovery as key priorities for decision model development, with mmdm providing a testbed for measuring this progress. the chinese university of hong kong; hong kong university of science and technology; lightspeed; independent researcher junhao shen, qing zong, yue guo, zhanqiu zhang, yiwen guo, hong cheng cs.lg, cs.cl"
+    },
+    {
+      "arxiv_id": "2611.14218",
+      "title": "ViGA-FLAME: Aligning Latent Visual and Geometric Representations for Robust 3D Head Expression Estimation",
+      "authors": "Wen Hao He, Jiacheng Wu, Jie Chen",
+      "affiliations": "Hong Kong Baptist University",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV",
+      "abstract": "Estimating 3D head expression from a single image requires mapping visual appearance to underlying facial geometry. We propose ViGA-FLAME, a two-stage framework that aligns semantic visual features with a structured geometric latent space. First, a Parametric-Geometric Variational Autoencoder (PG-VAE) learns a unified representation of canonical head surfaces and FLAME parameters, supporting both detailed surface reconstruction and interpretable parameter recovery. Supervision on geometry and parameters, together with consistency between the two decoding branches, connects surface detail with parametric structure. Second, a trainable Visual-Geometric Adapter (ViGA) maps features from a pretrained semantic visual encoder into this latent space. Asymmetric attention enables ViGA to align semantic image features from the visual encoder with the structured geometric information represented in the PG-VAE latent space, without altering the original visual stream. By grounding image evidence in this latent prior, ViGA-FLAME enables robust 3D head expression estimation across severe facial deformations and large viewing angles, efficiently improving robustness over competing feed-forward methods.",
+      "summary_cn": "单图三维头部表情估计：先用参数-几何变分自编码器把规范头部曲面与FLAME参数编码进统一潜空间，几何与参数双分支解码并保持一致性；再用可训练的视觉-几何适配器把预训练语义视觉特征经非对称注意力对齐到该潜空间，且不改动原视觉主干。在大幅面部形变与大视角下比同类前馈方法更鲁棒、更高效。",
+      "pdf_filename": "2611.14218.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.14218",
+      "search_text": "viga-flame: aligning latent visual and geometric representations for robust 3d head expression estimation  单图三维头部表情估计：先用参数-几何变分自编码器把规范头部曲面与flame参数编码进统一潜空间，几何与参数双分支解码并保持一致性；再用可训练的视觉-几何适配器把预训练语义视觉特征经非对称注意力对齐到该潜空间，且不改动原视觉主干。在大幅面部形变与大视角下比同类前馈方法更鲁棒、更高效。 estimating 3d head expression from a single image requires mapping visual appearance to underlying facial geometry. we propose viga-flame, a two-stage framework that aligns semantic visual features with a structured geometric latent space. first, a parametric-geometric variational autoencoder (pg-vae) learns a unified representation of canonical head surfaces and flame parameters, supporting both detailed surface reconstruction and interpretable parameter recovery. supervision on geometry and parameters, together with consistency between the two decoding branches, connects surface detail with parametric structure. second, a trainable visual-geometric adapter (viga) maps features from a pretrained semantic visual encoder into this latent space. asymmetric attention enables viga to align semantic image features from the visual encoder with the structured geometric information represented in the pg-vae latent space, without altering the original visual stream. by grounding image evidence in this latent prior, viga-flame enables robust 3d head expression estimation across severe facial deformations and large viewing angles, efficiently improving robustness over competing feed-forward methods. hong kong baptist university wen hao he, jiacheng wu, jie chen cs.cv"
+    },
+    {
+      "arxiv_id": "2611.14135",
+      "title": "Sim(3)-TurboReg: Robust and Efficient Scale-Aware Registration via Tri-Scale Consistency",
+      "authors": "Zijun Zhou, Shaocheng Yan, Zhenjun Zhao, Yutong Hu, Ke Yang, Yingdong Gu, Pengcheng Shi, Jiayuan Li",
+      "affiliations": "Wuhan University; University of Zaragoza",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV",
+      "abstract": "Feed-forward 3D foundation models recover geometry at high fidelity, yet inference memory constraints keep them from processing long sequences natively. Current streaming systems work around this limit with sliding-window chunking, which introduces severe monocular scale ambiguity. Resolving this ambiguity requires Sim(3) registration that stays accurate and efficient under outlier contamination. We introduce Sim(3)-TurboReg, which reformulates the compatibility graph construction of TurboReg by replacing absolute distance constraints with a strict Tri-Scale Consistency (TSC) criterion. Our analysis shows that TSC suppresses both mismatching and coordinate-distortion outliers. We integrate the resulting solver into existing streaming systems and obtain high-fidelity, kilometer-scale reconstruction for feed-forward models. On controlled unknown-scale registration at 90% outliers, ours matches RANSAC accuracy with 92.5% lower median latency. In DA3-Streaming on KITTI, ours improves mean ATE RMSE by 22.2% and reduces mean end-to-end time by 16.6%. Code: https://github.com/ivan-zzj/Sim3-TurboReg",
+      "summary_cn": "前馈三维基础模型受显存限制只能用滑窗分块处理长序列，产生严重单目尺度歧义，需要鲁棒Sim(3)配准。作者把TurboReg兼容图构建从绝对距离约束改为严格三尺度一致性判据，可同时压制错误匹配与坐标畸变外点：90%外点下精度与RANSAC相当而延迟低92.5%，KITTI上ATE降22.2%。",
+      "pdf_filename": "2611.14135.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "S",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.14135",
+      "search_text": "sim(3)-turboreg: robust and efficient scale-aware registration via tri-scale consistency  前馈三维基础模型受显存限制只能用滑窗分块处理长序列，产生严重单目尺度歧义，需要鲁棒sim(3)配准。作者把turboreg兼容图构建从绝对距离约束改为严格三尺度一致性判据，可同时压制错误匹配与坐标畸变外点：90%外点下精度与ransac相当而延迟低92.5%，kitti上ate降22.2%。 feed-forward 3d foundation models recover geometry at high fidelity, yet inference memory constraints keep them from processing long sequences natively. current streaming systems work around this limit with sliding-window chunking, which introduces severe monocular scale ambiguity. resolving this ambiguity requires sim(3) registration that stays accurate and efficient under outlier contamination. we introduce sim(3)-turboreg, which reformulates the compatibility graph construction of turboreg by replacing absolute distance constraints with a strict tri-scale consistency (tsc) criterion. our analysis shows that tsc suppresses both mismatching and coordinate-distortion outliers. we integrate the resulting solver into existing streaming systems and obtain high-fidelity, kilometer-scale reconstruction for feed-forward models. on controlled unknown-scale registration at 90% outliers, ours matches ransac accuracy with 92.5% lower median latency. in da3-streaming on kitti, ours improves mean ate rmse by 22.2% and reduces mean end-to-end time by 16.6%. code: https://github.com/ivan-zzj/sim3-turboreg wuhan university; university of zaragoza zijun zhou, shaocheng yan, zhenjun zhao, yutong hu, ke yang, yingdong gu, pengcheng shi, jiayuan li cs.cv"
+    },
+    {
+      "arxiv_id": "2611.14029",
+      "title": "Where do we Jam? - The Impact of Real and Virtual XR Spaces on Musical Creativity, Co-Presence, Affect, and Flow",
+      "authors": "Ruben Schlagowski, Jonas Bordewick, Luca Turchet, Hannes Ritschel, Elisabeth André",
+      "affiliations": "University of Augsburg; University of Trento",
+      "published_date": "2026-11-10",
+      "categories": "cs.HC",
+      "abstract": "Extended Reality (XR) technologies can place musicians in virtual, mixed, or real environments during networked music performance (NMP). To examine how NMP applications in XR should be positioned on the reality-virtuality continuum, we conducted a laboratory study (N = 28) comparing a simulated NMP experience in Virtual Reality (VR) with one in Augmented Reality (AR). In both conditions, musicians saw their remote partners in real time as 3D point clouds rendered with an optimized Gaussian Splatting shader. While VR allowed participants to select and customize fully virtual 3D environments, AR showed a pass-through view of the laboratory environment. We measured creativity support, flow, involvement, co-presence, and affect, and complemented these data with qualitative interviews on participants' preferences and requirements for creative environments. Our results show that participants felt significantly more involved by the immersive XR experience in VR than in AR. Positive affect, flow, and creativity support were strongly correlated in both conditions, whereas involvement correlated with flow and creativity support only in VR. Qualitative findings showed substantial variation in participants' preferences for AR or VR and also regarding the design of creative virtual environments. Together, these findings suggest that the surrounding environment is a critical design dimension in networked Musical XR, shaping collaborative musical experiences beyond merely representing remote collaborators and mitigating communication latency. Future XR-mediated NMP systems should therefore treat the surrounding space as an integral component of the collaborative musical experience, rather than as a mere visual backdrop. At the same time, they should support experiences across a broad spectrum of the reality-virtuality continuum to accommodate highly individual user requirements.",
+      "summary_cn": "通过28人实验比较虚拟现实与增强现实下的远程音乐合奏：两端乐手以实时三维点云呈现（用优化的Gaussian Splatting着色器渲染），VR可自选虚拟环境而AR为实验室透视图。测量创造力支持、心流、投入感、共在感与情绪，并结合访谈讨论XR音乐协作应落在现实-虚拟连续体的何处及创作环境的设计需求。",
+      "pdf_filename": "2611.14029.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "3DGS",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14029",
+      "search_text": "where do we jam? - the impact of real and virtual xr spaces on musical creativity, co-presence, affect, and flow 3dgs 点云 通过28人实验比较虚拟现实与增强现实下的远程音乐合奏：两端乐手以实时三维点云呈现（用优化的gaussian splatting着色器渲染），vr可自选虚拟环境而ar为实验室透视图。测量创造力支持、心流、投入感、共在感与情绪，并结合访谈讨论xr音乐协作应落在现实-虚拟连续体的何处及创作环境的设计需求。 extended reality (xr) technologies can place musicians in virtual, mixed, or real environments during networked music performance (nmp). to examine how nmp applications in xr should be positioned on the reality-virtuality continuum, we conducted a laboratory study (n = 28) comparing a simulated nmp experience in virtual reality (vr) with one in augmented reality (ar). in both conditions, musicians saw their remote partners in real time as 3d point clouds rendered with an optimized gaussian splatting shader. while vr allowed participants to select and customize fully virtual 3d environments, ar showed a pass-through view of the laboratory environment. we measured creativity support, flow, involvement, co-presence, and affect, and complemented these data with qualitative interviews on participants' preferences and requirements for creative environments. our results show that participants felt significantly more involved by the immersive xr experience in vr than in ar. positive affect, flow, and creativity support were strongly correlated in both conditions, whereas involvement correlated with flow and creativity support only in vr. qualitative findings showed substantial variation in participants' preferences for ar or vr and also regarding the design of creative virtual environments. together, these findings suggest that the surrounding environment is a critical design dimension in networked musical xr, shaping collaborative musical experiences beyond merely representing remote collaborators and mitigating communication latency. future xr-mediated nmp systems should therefore treat the surrounding space as an integral component of the collaborative musical experience, rather than as a mere visual backdrop. at the same time, they should support experiences across a broad spectrum of the reality-virtuality continuum to accommodate highly individual user requirements. university of augsburg; university of trento ruben schlagowski, jonas bordewick, luca turchet, hannes ritschel, elisabeth andré cs.hc"
+    },
+    {
+      "arxiv_id": "2611.13997",
+      "title": "Specify Privacy Yourself: Assessing Inference-Time Personalized Privacy Preservation Ability of Large Vision-Language Models",
+      "authors": "Xingqi Wang, Xiaoyuan Yi, Xing Xie, Jia Jia",
+      "affiliations": "Tsinghua University; Microsoft Research Asia",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV, cs.AI, cs.CL, cs.CY, cs.LG",
+      "abstract": "Large Vision-Language Models (LVLMs) have demonstrated remarkable capabilities but raise significant privacy concerns due to their abilities to infer sensitive personal information from images with high precision. While current LVLMs are relatively well aligned to protect universal privacy, e.g., credit card data, we argue that privacy is inherently personalized and context-dependent. This work pivots towards a novel task: can LVLMs achieve Inference-Time Personalized Privacy Protection (ITP$^3$), allowing users to dynamically specify privacy boundaries through language specifications? To this end, we present SPY-Bench, the first systematic assessment of ITP$^3$ ability, which comprises (1) 32,700 unique samples with image-question pairs and personalized privacy instructions across 67 categories and 24 real-world scenarios, and (2) novel metrics grounded in user specifications and context awareness. Benchmarking the ITP$^3$ ability of 21 SOTA LVLMs, we reveal that: (i) most models, even the top-performing o4-mini, perform poorly, with only $\\sim$24% compliance accuracy; (ii) they show quite limited contextual privacy understanding capability. Therefore, we implemented initial ITP$^3$ alignment methods, including a novel Noise Contrastive Alignment variant which achieves 96.88% accuracy while maintaining reasonable general performance. These results mark an initial step towards the ethical deployment of more controllable LVLMs. Code and data are available at https://github.com/achernarwang/specify-privacy-yourself",
+      "summary_cn": "提出推理时个性化隐私保护任务ITP3：用户用自然语言即时指定隐私边界，模型据此判断图像中哪些信息可披露。作者构建SPY-Bench（32700条样本、67类隐私、24个场景）与基于用户规范和上下文的新指标，评测21个SOTA视觉语言模型，发现通用隐私对齐良好者在个性化边界上仍普遍失效。",
+      "pdf_filename": "2611.13997.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13997",
+      "search_text": "specify privacy yourself: assessing inference-time personalized privacy preservation ability of large vision-language models 多模态 提出推理时个性化隐私保护任务itp3：用户用自然语言即时指定隐私边界，模型据此判断图像中哪些信息可披露。作者构建spy-bench（32700条样本、67类隐私、24个场景）与基于用户规范和上下文的新指标，评测21个sota视觉语言模型，发现通用隐私对齐良好者在个性化边界上仍普遍失效。 large vision-language models (lvlms) have demonstrated remarkable capabilities but raise significant privacy concerns due to their abilities to infer sensitive personal information from images with high precision. while current lvlms are relatively well aligned to protect universal privacy, e.g., credit card data, we argue that privacy is inherently personalized and context-dependent. this work pivots towards a novel task: can lvlms achieve inference-time personalized privacy protection (itp$^3$), allowing users to dynamically specify privacy boundaries through language specifications? to this end, we present spy-bench, the first systematic assessment of itp$^3$ ability, which comprises (1) 32,700 unique samples with image-question pairs and personalized privacy instructions across 67 categories and 24 real-world scenarios, and (2) novel metrics grounded in user specifications and context awareness. benchmarking the itp$^3$ ability of 21 sota lvlms, we reveal that: (i) most models, even the top-performing o4-mini, perform poorly, with only $\\sim$24% compliance accuracy; (ii) they show quite limited contextual privacy understanding capability. therefore, we implemented initial itp$^3$ alignment methods, including a novel noise contrastive alignment variant which achieves 96.88% accuracy while maintaining reasonable general performance. these results mark an initial step towards the ethical deployment of more controllable lvlms. code and data are available at https://github.com/achernarwang/specify-privacy-yourself tsinghua university; microsoft research asia xingqi wang, xiaoyuan yi, xing xie, jia jia cs.cv, cs.ai, cs.cl, cs.cy, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.13790",
+      "title": "RiSE-Drive: Risk-Sensitive Long-Horizon Candidate Evaluation for End-to-End Autonomous Driving",
+      "authors": "Yu Zhao, Hongyi Duan, Ming Yin, Hongyuan Zhang, Fan Yang, Hongzhi Wang, Xiubo Liang",
+      "affiliations": "Zhejiang University",
+      "published_date": "2026-11-10",
+      "categories": "cs.RO",
+      "abstract": "End-to-end autonomous driving systems increasingly rely on generating multiple trajectory candidates and selecting one for execution. In this setting, a central challenge is no longer only candidate generation, but how to evaluate candidates according to their long-horizon consequences under uncertainty. Existing methods still mainly use deterministic point scores, heuristic subscores, or single-outcome evaluations, which makes it difficult to capture delayed failures, tail risk, and ranking instability under plausible future perturbations. We present RiSE-Drive, a framework for risk-sensitive long-horizon candidate evaluation in end-to-end autonomous driving. RiSE-Drive first performs candidate-conditioned latent future rollout, then estimates long-horizon outcome distributions instead of single scalar scores, and finally ranks candidates using a tail-risk-aware and perturbation-robust decision criterion. This reformulates candidate scoring from deterministic oracle-style evaluation into distributional outcome assessment with explicit risk control. As a result, the evaluator is encouraged to prefer candidates that are not only strong under nominal conditions, but also reliable under long-horizon rollout and safety-critical deviations. Experiments on the NAVSIM-v1 and NAVSIM-v2 benchmarks, as well as the closed-loop HUGSIM benchmark, show that RiSE-Drive achieves state-of-the-art performance and significantly improves the robustness of candidate selection.",
+      "summary_cn": "指出现有端到端驾驶用候选轨迹平均分评估会把少数灾难性未来条件藏在均值之后。RiSE-Drive把候选评估改写为风险敏感的长时程评价：对未来条件打分并计算M-分位数与下尾短缺（shortfall），从而在均值相近时区分隐含高风险分支的候选与真正稳健的候选，并把该准则接入端到端规划器完成轨迹选择。",
+      "pdf_filename": "2611.13790.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13790",
+      "search_text": "rise-drive: risk-sensitive long-horizon candidate evaluation for end-to-end autonomous driving 闭环仿真 规划 自动驾驶 指出现有端到端驾驶用候选轨迹平均分评估会把少数灾难性未来条件藏在均值之后。rise-drive把候选评估改写为风险敏感的长时程评价：对未来条件打分并计算m-分位数与下尾短缺（shortfall），从而在均值相近时区分隐含高风险分支的候选与真正稳健的候选，并把该准则接入端到端规划器完成轨迹选择。 end-to-end autonomous driving systems increasingly rely on generating multiple trajectory candidates and selecting one for execution. in this setting, a central challenge is no longer only candidate generation, but how to evaluate candidates according to their long-horizon consequences under uncertainty. existing methods still mainly use deterministic point scores, heuristic subscores, or single-outcome evaluations, which makes it difficult to capture delayed failures, tail risk, and ranking instability under plausible future perturbations. we present rise-drive, a framework for risk-sensitive long-horizon candidate evaluation in end-to-end autonomous driving. rise-drive first performs candidate-conditioned latent future rollout, then estimates long-horizon outcome distributions instead of single scalar scores, and finally ranks candidates using a tail-risk-aware and perturbation-robust decision criterion. this reformulates candidate scoring from deterministic oracle-style evaluation into distributional outcome assessment with explicit risk control. as a result, the evaluator is encouraged to prefer candidates that are not only strong under nominal conditions, but also reliable under long-horizon rollout and safety-critical deviations. experiments on the navsim-v1 and navsim-v2 benchmarks, as well as the closed-loop hugsim benchmark, show that rise-drive achieves state-of-the-art performance and significantly improves the robustness of candidate selection. zhejiang university yu zhao, hongyi duan, ming yin, hongyuan zhang, fan yang, hongzhi wang, xiubo liang cs.ro"
+    },
+    {
+      "arxiv_id": "2611.13728",
+      "title": "Two Types of Cards in Kelly-Ulam Conjecture",
+      "authors": "Max Zinchenko",
+      "affiliations": "Novosibirsk State University",
+      "published_date": "2026-11-10",
+      "categories": "math.CO",
+      "abstract": "We consider the case in Kelly-Ulam conjecture where there are only two types of cards in deck. It was possible to prove that graphs with this property are uniquely reconstructed by their card deck.",
+      "summary_cn": "研究Kelly-Ulam图重构猜想的特例：当牌组中只有两种同构类型的顶点删除子图时，证明此类图可被其牌组唯一重构（同构意义下）。属于纯图论组合结果，给出重构数与小牌组结构的关系，与视觉、三维重建和自动驾驶无关。",
+      "pdf_filename": "2611.13728.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13728",
+      "search_text": "two types of cards in kelly-ulam conjecture 自动驾驶 研究kelly-ulam图重构猜想的特例：当牌组中只有两种同构类型的顶点删除子图时，证明此类图可被其牌组唯一重构（同构意义下）。属于纯图论组合结果，给出重构数与小牌组结构的关系，与视觉、三维重建和自动驾驶无关。 we consider the case in kelly-ulam conjecture where there are only two types of cards in deck. it was possible to prove that graphs with this property are uniquely reconstructed by their card deck. novosibirsk state university max zinchenko math.co"
+    },
+    {
+      "arxiv_id": "2611.13628",
+      "title": "DepthGS: Depth-Guided Gaussian Splatting with Adaptive Regularization for High-Quality Surface Reconstruction",
+      "authors": "Xiao Ren, Yu Liu, Ning An, Jian Cheng, Xin Qiao, You-Fu Li, He Kong",
+      "affiliations": "Southern University of Science and Technology; China Coal Research Institute; Xi'an Jiaotong University; City University of Hong Kong",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV",
+      "abstract": "Recently, 3D Gaussian Splatting (3DGS) has emerged as an efficient representation for novel view synthesis, offering fast differentiable rendering and high visual fidelity, and has increasingly been extended to surface reconstruction. However, the relationship between depth information and reconstruction error remains insufficiently explored, limiting the principled design of geometric optimization strategies. To fill the above gap, we propose DepthGS, a depth-guided Gaussian splatting framework. We derive theoretical relations between depth discrepancies and reconstruction error under single-view and multi-view settings, and rigorously establish corresponding upper bounds on reconstruction error. The above analysis informs the design of adaptive regularization strategies in both single-view and multi-view optimization. More specifically, for single-view optimization, we propose a depth-difference-guided adaptive normal regularization strategy that modulates the normal constraint strength using a geometric reliability weight computed from local depth differences. For multi-view optimization, we introduce a cross-view depth consistency regularization strategy that promotes consistency between neighboring-view depth maps and the corresponding depth predictions obtained by transforming the current view's depth predictions into those neighboring views. Extensive experiments on DTU, Mip-NeRF360, and Tanks and Temples demonstrate that DepthGS achieves competitive performance in both surface reconstruction and novel view synthesis.",
+      "summary_cn": "从理论上建立单/多视图下深度差异与重建误差的关系并给出误差上界，据此设计自适应正则：单视图用局部深度差异算出的可信度调制法向约束强度，多视图把当前深度投影到邻视图做跨视图一致性约束。DTU、Mip-NeRF360、Tanks and Temples上重建与新视角合成均有竞争力。",
+      "pdf_filename": "2611.13628.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13628",
+      "search_text": "depthgs: depth-guided gaussian splatting with adaptive regularization for high-quality surface reconstruction 3dgs 从理论上建立单/多视图下深度差异与重建误差的关系并给出误差上界，据此设计自适应正则：单视图用局部深度差异算出的可信度调制法向约束强度，多视图把当前深度投影到邻视图做跨视图一致性约束。dtu、mip-nerf360、tanks and temples上重建与新视角合成均有竞争力。 recently, 3d gaussian splatting (3dgs) has emerged as an efficient representation for novel view synthesis, offering fast differentiable rendering and high visual fidelity, and has increasingly been extended to surface reconstruction. however, the relationship between depth information and reconstruction error remains insufficiently explored, limiting the principled design of geometric optimization strategies. to fill the above gap, we propose depthgs, a depth-guided gaussian splatting framework. we derive theoretical relations between depth discrepancies and reconstruction error under single-view and multi-view settings, and rigorously establish corresponding upper bounds on reconstruction error. the above analysis informs the design of adaptive regularization strategies in both single-view and multi-view optimization. more specifically, for single-view optimization, we propose a depth-difference-guided adaptive normal regularization strategy that modulates the normal constraint strength using a geometric reliability weight computed from local depth differences. for multi-view optimization, we introduce a cross-view depth consistency regularization strategy that promotes consistency between neighboring-view depth maps and the corresponding depth predictions obtained by transforming the current view's depth predictions into those neighboring views. extensive experiments on dtu, mip-nerf360, and tanks and temples demonstrate that depthgs achieves competitive performance in both surface reconstruction and novel view synthesis. southern university of science and technology; china coal research institute; xi'an jiaotong university; city university of hong kong xiao ren, yu liu, ning an, jian cheng, xin qiao, you-fu li, he kong cs.cv"
+    },
+    {
+      "arxiv_id": "2611.13592",
+      "title": "Few-Shot Residual Adaptation of Pretrained Latent World Models",
+      "authors": "Jakub Suliga, Pankhuri Vanjani, Nisarga Nilavadi, Wolfram Burgard, Rudolf Lioutikov",
+      "affiliations": "Karlsruhe Institute of Technology; University of Technology Nuremberg",
+      "published_date": "2026-11-10",
+      "categories": "cs.RO",
+      "abstract": "Pretrained latent world models can support visual planning and control, but their predictions may fail when physical dynamics change at deployment. We study whether such models can adapt from only a few interactions without modifying their pretrained weights or identifying the changed physical parameters. We introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors. The corrections are applied both inside the latent predictor and directly to its predicted latent state, while the pretrained world model remains frozen. We evaluate the approach in simulation and on a real robot under center-of-mass and friction shifts. These changes reduce the success of the frozen model to near zero. Using three interaction episodes for adaptation, our dual-site approach recovers 90\\% success under the center-of-mass shift and 100\\% under the modified friction on the real robot. Ablations show that correcting both locations outperforms single-site adaptation. Our diagnostics further suggest that much of the learned correction reduces a general prediction mismatch, while successful control also depends on shift-specific information captured during adaptation.",
+      "summary_cn": "预训练潜空间世界模型在部署时遇到质心、摩擦等物理条件变化会严重失效。作者冻结预训练权重，用极少交互片段从潜空间预测误差中自监督学习残差修正，并同时施加于潜空间预测器内部与其输出的潜状态。真实机器人上冻结模型成功率降至近零，仅用3个交互片段即在质心偏移下恢复到90%、摩擦改变下恢复到100%。",
+      "pdf_filename": "2611.13592.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13592",
+      "search_text": "few-shot residual adaptation of pretrained latent world models 世界模型 预训练潜空间世界模型在部署时遇到质心、摩擦等物理条件变化会严重失效。作者冻结预训练权重，用极少交互片段从潜空间预测误差中自监督学习残差修正，并同时施加于潜空间预测器内部与其输出的潜状态。真实机器人上冻结模型成功率降至近零，仅用3个交互片段即在质心偏移下恢复到90%、摩擦改变下恢复到100%。 pretrained latent world models can support visual planning and control, but their predictions may fail when physical dynamics change at deployment. we study whether such models can adapt from only a few interactions without modifying their pretrained weights or identifying the changed physical parameters. we introduce a few-shot residual adaptation approach that learns self-supervised corrections from latent prediction errors. the corrections are applied both inside the latent predictor and directly to its predicted latent state, while the pretrained world model remains frozen. we evaluate the approach in simulation and on a real robot under center-of-mass and friction shifts. these changes reduce the success of the frozen model to near zero. using three interaction episodes for adaptation, our dual-site approach recovers 90\\% success under the center-of-mass shift and 100\\% under the modified friction on the real robot. ablations show that correcting both locations outperforms single-site adaptation. our diagnostics further suggest that much of the learned correction reduces a general prediction mismatch, while successful control also depends on shift-specific information captured during adaptation. karlsruhe institute of technology; university of technology nuremberg jakub suliga, pankhuri vanjani, nisarga nilavadi, wolfram burgard, rudolf lioutikov cs.ro"
+    },
+    {
+      "arxiv_id": "2611.13581",
+      "title": "Lightweight Deep Learning Framework for Astrocyte-Centric 3D Reconstruction across Normal and Stress-associated Ultrastructural States",
+      "authors": "Bowen Deng, Gwang-Jin Jeong, Seulgi Noh, Ji Young Mun, Na Young Kim",
+      "affiliations": "University of Waterloo; Korea Brain Research Institute; Daegu Gyeongbuk Institute of Science and Technology",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV, q-bio.NC",
+      "abstract": "The morphology of astrocytes is closely associated with their ability to support and modulate neural circuit functions; however, its reconstruction from volume electron microscopy (vEM) data remains labor-intensive and computationally resource-intensive, placing substantial barriers on its broader adoption and scalability despite the high spatial resolution of vEM. We present AstroSeg-vEM, a lightweight, astrocyte-centric framework for morphology-preserving astrocyte segmentation, 3D reconstruction, and quantitative morphological analysis in vEM images. AstroSeg-vEM combines transformer-based 2D segmentation with dedicated post-processing methods and operates directly on high-resolution EM sections, making it well suited to anisotropic vEM data and downstream proofreading workflows while preserving the full in-plane resolution of the original EM data. Across four mouse hippocampal datasets representing normal and morphologically defined stress-associated astrocyte ultrastructural states, AstroSeg-vEM demonstrates robust performance and generalization, achieving average Dice and weighted Dice values of 0.92 and 0.95, respectively, on a held-out test dataset. Its lightweight architecture enables efficient, high-fidelity reconstruction on consumer-grade hardware, providing a scalable and accessible platform for large-scale astrocyte ultrastructure analysis and future astrocyte-neuron interaction studies.",
+      "summary_cn": "针对体积电镜（vEM）中星形胶质细胞形态重建耗时耗算力的问题，提出轻量框架AstroSeg-vEM：用Transformer做二维分割并配合专门后处理直接在高分辨率切片上工作，适配各向异性数据、保留面内分辨率，同时输出三维重建与定量形态学指标，覆盖正常与应激状态。",
+      "pdf_filename": "2611.13581.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.13581",
+      "search_text": "lightweight deep learning framework for astrocyte-centric 3d reconstruction across normal and stress-associated ultrastructural states  针对体积电镜（vem）中星形胶质细胞形态重建耗时耗算力的问题，提出轻量框架astroseg-vem：用transformer做二维分割并配合专门后处理直接在高分辨率切片上工作，适配各向异性数据、保留面内分辨率，同时输出三维重建与定量形态学指标，覆盖正常与应激状态。 the morphology of astrocytes is closely associated with their ability to support and modulate neural circuit functions; however, its reconstruction from volume electron microscopy (vem) data remains labor-intensive and computationally resource-intensive, placing substantial barriers on its broader adoption and scalability despite the high spatial resolution of vem. we present astroseg-vem, a lightweight, astrocyte-centric framework for morphology-preserving astrocyte segmentation, 3d reconstruction, and quantitative morphological analysis in vem images. astroseg-vem combines transformer-based 2d segmentation with dedicated post-processing methods and operates directly on high-resolution em sections, making it well suited to anisotropic vem data and downstream proofreading workflows while preserving the full in-plane resolution of the original em data. across four mouse hippocampal datasets representing normal and morphologically defined stress-associated astrocyte ultrastructural states, astroseg-vem demonstrates robust performance and generalization, achieving average dice and weighted dice values of 0.92 and 0.95, respectively, on a held-out test dataset. its lightweight architecture enables efficient, high-fidelity reconstruction on consumer-grade hardware, providing a scalable and accessible platform for large-scale astrocyte ultrastructure analysis and future astrocyte-neuron interaction studies. university of waterloo; korea brain research institute; daegu gyeongbuk institute of science and technology bowen deng, gwang-jin jeong, seulgi noh, ji young mun, na young kim cs.cv, q-bio.nc"
+    },
+    {
+      "arxiv_id": "2611.13528",
+      "title": "GEMOR-GS: Global Extrinsic-calibration-refined Mapping and Online Relocalization for 3D Gaussian-Splatting SLAM",
+      "authors": "Yuchen Yang, Ming Ding, Xinyu Wu, Hesheng Wang",
+      "affiliations": "Nanchang University; Nanjing 4D Vector Technology Co., Ltd.",
+      "published_date": "2026-11-10",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Photorealistic and metrically consistent world representations are a primary requirement for LiDAR--inertial--visual SLAM systems that serve robots over continuous operation. 3D Gaussian splatting makes such representations attainable by supplying an explicit, renderable, and queryable scene model. We present GEMOR-GS (Global Extrinsic-calibration-refined Mapping and Online Relocalization for 3D Gaussian-Splatting SLAM) to make the Gaussian map geometrically accurate, globally refined, and re-enterable, providing a better appearance for robot perception and decision-making. To improve the 3DGS map, the LiDAR--camera extrinsic is first estimated offline by direct-method alignment over dedicated calibration segments and reused by all following online and offline processes. Under the calibrated geometry, keyframe poses and Gaussian parameters are refined alternately under a gated differentiable-rendering and LiDAR--projection objective. The final global reconstruction is then rebuilt from the refined keyframe schema with all online constraints lifted. For the robot SLAM lifecycle, the method recovers the pose from the 3DGS map after tracking loss through an XFeat bypass map, RANSAC-PnP coarse localization, and Gaussian RGB-D warp refinement. Experiments on one self-collected and five public sequences quantify each element: the offline reconstruction wins all paired keyframes against the online map by 14.3--19.9 dB, improves PSNR by approximately 9 dB over Gaussian-LIC2, and achieves 86--100% held-out relocalization success tied to extrinsic quality. The results show that GEMOR-GS improves the geometric accuracy, appearance fidelity, and re-enterability of the 3DGS map, serving as a dependable robot world model for SLAM and downstream tasks.",
+      "summary_cn": "面向连续作业机器人，用3DGS构建可渲染、可查询的显式地图，并强调几何精度与可重入性：先在标定路段用直接法离线估计LiDAR-相机外参，供后续在线与离线流程复用；再在标定几何下带门控地交替优化关键帧位姿与高斯参数，最后实现在线重定位，使高斯地图可作为检测、路径规划与建图的底层表示。",
+      "pdf_filename": "2611.13528.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "世界模型",
+        "规划",
+        "SLAM",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13528",
+      "search_text": "gemor-gs: global extrinsic-calibration-refined mapping and online relocalization for 3d gaussian-splatting slam 3dgs 世界模型 规划 slam 点云 面向连续作业机器人，用3dgs构建可渲染、可查询的显式地图，并强调几何精度与可重入性：先在标定路段用直接法离线估计lidar-相机外参，供后续在线与离线流程复用；再在标定几何下带门控地交替优化关键帧位姿与高斯参数，最后实现在线重定位，使高斯地图可作为检测、路径规划与建图的底层表示。 photorealistic and metrically consistent world representations are a primary requirement for lidar--inertial--visual slam systems that serve robots over continuous operation. 3d gaussian splatting makes such representations attainable by supplying an explicit, renderable, and queryable scene model. we present gemor-gs (global extrinsic-calibration-refined mapping and online relocalization for 3d gaussian-splatting slam) to make the gaussian map geometrically accurate, globally refined, and re-enterable, providing a better appearance for robot perception and decision-making. to improve the 3dgs map, the lidar--camera extrinsic is first estimated offline by direct-method alignment over dedicated calibration segments and reused by all following online and offline processes. under the calibrated geometry, keyframe poses and gaussian parameters are refined alternately under a gated differentiable-rendering and lidar--projection objective. the final global reconstruction is then rebuilt from the refined keyframe schema with all online constraints lifted. for the robot slam lifecycle, the method recovers the pose from the 3dgs map after tracking loss through an xfeat bypass map, ransac-pnp coarse localization, and gaussian rgb-d warp refinement. experiments on one self-collected and five public sequences quantify each element: the offline reconstruction wins all paired keyframes against the online map by 14.3--19.9 db, improves psnr by approximately 9 db over gaussian-lic2, and achieves 86--100% held-out relocalization success tied to extrinsic quality. the results show that gemor-gs improves the geometric accuracy, appearance fidelity, and re-enterability of the 3dgs map, serving as a dependable robot world model for slam and downstream tasks. nanchang university; nanjing 4d vector technology co., ltd. yuchen yang, ming ding, xinyu wu, hesheng wang cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.13494",
+      "title": "Route-Time Conflict Maps for Cooperative End-to-End Autonomous Driving",
+      "authors": "Haohua Que, Mingkai Liu, Tianle Zhu, Zhipeng Bao, Yiping Li, Handong Yao",
+      "affiliations": "University of Georgia",
+      "published_date": "2026-11-10",
+      "categories": "cs.RO",
+      "abstract": "Existing cooperative end-to-end driving works at Class A (status-sharing) of the SAE J3216 classes of cooperative driving automation (CDA): vehicles exchange what they perceive, not what they intend, so each plans alone when to go, which limits cooperation and leads to deadlock when both vehicles yield or to collisions when both go. We present When2Go, a cooperative end-to-end driving system that learns when to go by sharing intent under CDA Class B or higher. Each vehicle broadcasts its LiDAR detections with forecast motion as instance tokens, together with its plan and intended trajectory. The receiver draws the fused detections, forecasts and partner plans into a route-time conflict map, the occupancy along its route over the planning horizon, on which a planner scores candidate speed profiles. Where two intended trajectories conflict, an order gate, a precedence network distilled from a right-of-way rule, decides who goes first; both vehicles evaluate it on the same messages and so reach the same order. When2Go imitates the rule-based expert of V2Xverse, which sees the simulator's ground truth; stops that When2Go cannot observe within its 2 s planning horizon are relabelled, so that it does not learn to wait without an observable cause. For our runs only, the benchmarks' PID controller steers by When2Go's waypoints instead of the route, and its forced push of long-waiting vehicles is off. With one model, When2Go sets the state of the art on three closed-loop CARLA benchmarks: 97.8 and 90.7 driving score on InterDrive without and with traffic (best published 90.1 and 78.9), 70.0 on the public V2Xverse protocol (best of sixteen rerun methods 59.1) and 88.2 on MDrive (best rerun 85.1), with 95.0% of its vehicles collision-free (87.7%).",
+      "summary_cn": "把协同驾驶从状态共享推进到意图协商：每车广播自身检测与2秒规划，用路径-时间冲突图把他人规划表示为沿路线位置s与时间t的占据，据此生成通行顺序并保证多车一致。CARLA三个闭环基准SOTA：InterDrive含交通驾驶分90.7（原最好78.9），95%车辆无碰撞。",
+      "pdf_filename": "2611.13494.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "自动驾驶",
+        "点云",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13494",
+      "search_text": "route-time conflict maps for cooperative end-to-end autonomous driving 闭环仿真 规划 自动驾驶 点云 仿真器 把协同驾驶从状态共享推进到意图协商：每车广播自身检测与2秒规划，用路径-时间冲突图把他人规划表示为沿路线位置s与时间t的占据，据此生成通行顺序并保证多车一致。carla三个闭环基准sota：interdrive含交通驾驶分90.7（原最好78.9），95%车辆无碰撞。 existing cooperative end-to-end driving works at class a (status-sharing) of the sae j3216 classes of cooperative driving automation (cda): vehicles exchange what they perceive, not what they intend, so each plans alone when to go, which limits cooperation and leads to deadlock when both vehicles yield or to collisions when both go. we present when2go, a cooperative end-to-end driving system that learns when to go by sharing intent under cda class b or higher. each vehicle broadcasts its lidar detections with forecast motion as instance tokens, together with its plan and intended trajectory. the receiver draws the fused detections, forecasts and partner plans into a route-time conflict map, the occupancy along its route over the planning horizon, on which a planner scores candidate speed profiles. where two intended trajectories conflict, an order gate, a precedence network distilled from a right-of-way rule, decides who goes first; both vehicles evaluate it on the same messages and so reach the same order. when2go imitates the rule-based expert of v2xverse, which sees the simulator's ground truth; stops that when2go cannot observe within its 2 s planning horizon are relabelled, so that it does not learn to wait without an observable cause. for our runs only, the benchmarks' pid controller steers by when2go's waypoints instead of the route, and its forced push of long-waiting vehicles is off. with one model, when2go sets the state of the art on three closed-loop carla benchmarks: 97.8 and 90.7 driving score on interdrive without and with traffic (best published 90.1 and 78.9), 70.0 on the public v2xverse protocol (best of sixteen rerun methods 59.1) and 88.2 on mdrive (best rerun 85.1), with 95.0% of its vehicles collision-free (87.7%). university of georgia haohua que, mingkai liu, tianle zhu, zhipeng bao, yiping li, handong yao cs.ro"
+    },
+    {
+      "arxiv_id": "2611.13453",
+      "title": "Camera3R: Feed-Forward 3D Reconstruction from Heterogeneous Camera Models",
+      "authors": "Ruxiao Duan, Yunwen Zhou, Erin Hong, Dongxu Zhao, Eric Turner, Federico Tombari, Alex Wong",
+      "affiliations": "Yale University; Google",
+      "published_date": "2026-11-10",
+      "categories": "cs.CV",
+      "abstract": "Feed-forward 3D reconstruction (3R) from unconstrained multi-view images has recently emerged as a prominent research direction in 3D computer vision. Various foundational reconstruction models have been proposed with different architectures and reconstruction paradigms. Despite being trained on large-scale perspective datasets with substantial computational resources, these models generally struggle to generalize to non-perspective images. This limitation hinders their deployment in applications involving arbitrary, unknown, and potentially heterogeneous camera models. To build on the capabilities of existing reconstruction models with minimal retraining, we propose Camera3R, a low-rank adaptation framework that efficiently extends perspective-pretrained 3R networks to any other camera models. Extensive experiments demonstrate that, with only 0.5% additional parameters and less than a day of training, Camera3R adapts a foundational 3D reconstruction model to non-perspective cameras while fully preserving its original performance on perspective inputs. Code is available at https://github.com/android-xr/camera3r.",
+      "summary_cn": "现有前馈三维重建基础模型在大规模透视数据上训练，却难以泛化到鱼眼、全景等非透视相机，限制了在未知异构相机上的部署。Camera3R用低秩适配把透视预训练的3R网络扩展到任意相机模型：仅增加0.5%参数、训练不到一天即可在新相机模型上取得可用重建，同时完整保留原有透视输入上的性能，避免从头重训的开销。",
+      "pdf_filename": "2611.13453.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13453",
+      "search_text": "camera3r: feed-forward 3d reconstruction from heterogeneous camera models 前馈3d重建 现有前馈三维重建基础模型在大规模透视数据上训练，却难以泛化到鱼眼、全景等非透视相机，限制了在未知异构相机上的部署。camera3r用低秩适配把透视预训练的3r网络扩展到任意相机模型：仅增加0.5%参数、训练不到一天即可在新相机模型上取得可用重建，同时完整保留原有透视输入上的性能，避免从头重训的开销。 feed-forward 3d reconstruction (3r) from unconstrained multi-view images has recently emerged as a prominent research direction in 3d computer vision. various foundational reconstruction models have been proposed with different architectures and reconstruction paradigms. despite being trained on large-scale perspective datasets with substantial computational resources, these models generally struggle to generalize to non-perspective images. this limitation hinders their deployment in applications involving arbitrary, unknown, and potentially heterogeneous camera models. to build on the capabilities of existing reconstruction models with minimal retraining, we propose camera3r, a low-rank adaptation framework that efficiently extends perspective-pretrained 3r networks to any other camera models. extensive experiments demonstrate that, with only 0.5% additional parameters and less than a day of training, camera3r adapts a foundational 3d reconstruction model to non-perspective cameras while fully preserving its original performance on perspective inputs. code is available at https://github.com/android-xr/camera3r. yale university; google ruxiao duan, yunwen zhou, erin hong, dongxu zhao, eric turner, federico tombari, alex wong cs.cv"
+    },
+    {
+      "arxiv_id": "2611.13312",
+      "title": "Towards Scalable Network-Based Interventions for HIV Treatment and Prevention via R2C-Agent",
+      "authors": "Akseli Kangaslahti, Milind Tambe, Alastair van Heerden, Cheryl Johnson",
+      "affiliations": "Harvard University; University of the Witwatersrand; World Health Organization",
+      "published_date": "2026-11-09",
+      "categories": "cs.AI",
+      "abstract": "Human Immunodeficiency Virus (HIV) remains a pressing public health challenge worldwide. Targeting limited HIV prevention and treatment resources effectively with network-based algorithms is a long-standing problem with a rich history at AAMAS and other computational venues. However, optimizing targeted biomedical interventions for minimizing spread of HIV often requires observability of the contact network of HIV transmission risk behavior among individuals, which is prohibitively expensive to collect at scale. Peer referral networks, i.e., networks collected through a recursive peer referral process, are an alternative network class often used to study HIV in hidden populations that can be collected digitally at scale, but they deviate from the underlying contact network: referrals can follow non-risk social ties and participants accept only one referral, hiding contacts among already-recruited individuals. In this work, we first formalize the novel problem of planning network-based interventions to minimize HIV spread in the hidden contact network while observing only the peer referral network. Second, we implement R2C-Agent, a decision making agent for interventions that is designed around our new conditional graph diffusion model called Referral-to-Contact Diffusion (R2C-Diff). R2C-Diff positions the peer referral process as incremental corruption of the underlying contact network and learns to reverse it. R2C-Agent plans its interventions over contact networks sampled from R2C-Diff, so its decisions account for uncertainty about the hidden contact network. Finally, we conduct simulated experiments using real-world HIV network data that demonstrate that R2C-Agent empirically plans more effective interventions than baselines from interdisciplinary literature and highlight key tradeoffs and assumptions driving performance.",
+      "summary_cn": "针对HIV防治资源投放，形式化新问题：只能观测同伴推荐网络而无法获得真实接触网络时，如何规划干预以最小化隐藏网络中的传播。作者刻画推荐网络与接触网络的偏差结构，并实现R2C-Agent决策智能体做干预对象选择与资源分配，在仿真中评估其大规模可扩展性。",
+      "pdf_filename": "2611.13312.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "扩散模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13312",
+      "search_text": "towards scalable network-based interventions for hiv treatment and prevention via r2c-agent 扩散模型 规划 针对hiv防治资源投放，形式化新问题：只能观测同伴推荐网络而无法获得真实接触网络时，如何规划干预以最小化隐藏网络中的传播。作者刻画推荐网络与接触网络的偏差结构，并实现r2c-agent决策智能体做干预对象选择与资源分配，在仿真中评估其大规模可扩展性。 human immunodeficiency virus (hiv) remains a pressing public health challenge worldwide. targeting limited hiv prevention and treatment resources effectively with network-based algorithms is a long-standing problem with a rich history at aamas and other computational venues. however, optimizing targeted biomedical interventions for minimizing spread of hiv often requires observability of the contact network of hiv transmission risk behavior among individuals, which is prohibitively expensive to collect at scale. peer referral networks, i.e., networks collected through a recursive peer referral process, are an alternative network class often used to study hiv in hidden populations that can be collected digitally at scale, but they deviate from the underlying contact network: referrals can follow non-risk social ties and participants accept only one referral, hiding contacts among already-recruited individuals. in this work, we first formalize the novel problem of planning network-based interventions to minimize hiv spread in the hidden contact network while observing only the peer referral network. second, we implement r2c-agent, a decision making agent for interventions that is designed around our new conditional graph diffusion model called referral-to-contact diffusion (r2c-diff). r2c-diff positions the peer referral process as incremental corruption of the underlying contact network and learns to reverse it. r2c-agent plans its interventions over contact networks sampled from r2c-diff, so its decisions account for uncertainty about the hidden contact network. finally, we conduct simulated experiments using real-world hiv network data that demonstrate that r2c-agent empirically plans more effective interventions than baselines from interdisciplinary literature and highlight key tradeoffs and assumptions driving performance. harvard university; university of the witwatersrand; world health organization akseli kangaslahti, milind tambe, alastair van heerden, cheryl johnson cs.ai"
+    },
+    {
+      "arxiv_id": "2611.13280",
+      "title": "RetinexGS: Retinex-Inspired Gaussian Splatting for Low-Light RAW Reconstruction",
+      "authors": "Yulang Fei, Huaiyuan Weng, Chul Min Yeum",
+      "affiliations": "University of Waterloo",
+      "published_date": "2026-11-09",
+      "categories": "cs.CV",
+      "abstract": "Standard 3D Gaussian Splatting (3DGS) pipelines struggle with severely underexposed images, producing unstable colors, floating artifacts, and incomplete reconstructions in dark regions. To better account for noise in these low-light observations, RAW images offer a natural basis for noise-aware reconstruction by preserving linear sensor measurements and providing access to noise metadata. We present RetinexGS, a RAW-domain 3DGS framework that combines Retinex-inspired appearance modeling with sensor-informed optimization for low-light novel-view synthesis. We factorize each Gaussian's color into a view-independent base color and a shared, position- and view-dependent modulation field, regularizing the two components separately to constrain appearance learning from noisy observations. We use DNG noise metadata to weight the reconstruction loss for signal-dependent noise, while distortion-aware rendering avoids spatially resampling RAW targets. To address sparse geometry in dark regions, we introduce depth-guided initialization. We evaluate RetinexGS on three public RawNeRF scenes and two custom-captured low-light RAW scenes. With all methods trained on the same RAW inputs for each scene, RetinexGS outperforms LE3D and RawNeRF in mean sRGB PSNR by 2.18 dB and 2.71 dB respectively, across the five scenes, while supporting real-time novel-view rendering.",
+      "summary_cn": "把每个高斯颜色分解为视角无关基色与共享的位置-视角相关调制场并分别正则化，以约束暗光噪声下的外观学习；用DNG噪声元数据按信号相关噪声加权重建损失，配合畸变感知渲染与深度引导初始化缓解暗区几何稀疏。五个场景上sRGB PSNR比LE3D、RawNeRF高2.18dB与2.71dB。",
+      "pdf_filename": "2611.13280.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13280",
+      "search_text": "retinexgs: retinex-inspired gaussian splatting for low-light raw reconstruction 3dgs 把每个高斯颜色分解为视角无关基色与共享的位置-视角相关调制场并分别正则化，以约束暗光噪声下的外观学习；用dng噪声元数据按信号相关噪声加权重建损失，配合畸变感知渲染与深度引导初始化缓解暗区几何稀疏。五个场景上srgb psnr比le3d、rawnerf高2.18db与2.71db。 standard 3d gaussian splatting (3dgs) pipelines struggle with severely underexposed images, producing unstable colors, floating artifacts, and incomplete reconstructions in dark regions. to better account for noise in these low-light observations, raw images offer a natural basis for noise-aware reconstruction by preserving linear sensor measurements and providing access to noise metadata. we present retinexgs, a raw-domain 3dgs framework that combines retinex-inspired appearance modeling with sensor-informed optimization for low-light novel-view synthesis. we factorize each gaussian's color into a view-independent base color and a shared, position- and view-dependent modulation field, regularizing the two components separately to constrain appearance learning from noisy observations. we use dng noise metadata to weight the reconstruction loss for signal-dependent noise, while distortion-aware rendering avoids spatially resampling raw targets. to address sparse geometry in dark regions, we introduce depth-guided initialization. we evaluate retinexgs on three public rawnerf scenes and two custom-captured low-light raw scenes. with all methods trained on the same raw inputs for each scene, retinexgs outperforms le3d and rawnerf in mean srgb psnr by 2.18 db and 2.71 db respectively, across the five scenes, while supporting real-time novel-view rendering. university of waterloo yulang fei, huaiyuan weng, chul min yeum cs.cv"
+    },
+    {
+      "arxiv_id": "2611.13265",
+      "title": "Effect of car-centric social norms on traffic congestion in a compartmental model of transit mode utilization",
+      "authors": "Alia Valentine, Anastasia Bizyaeva",
+      "affiliations": "Cornell University",
+      "published_date": "2026-11-09",
+      "categories": "math.DS",
+      "abstract": "Vehicle traffic congestion is a persistent feature of urban transportation systems around the world.Importantly, congestion is in part a consequence of human decision-making: car traffic is reduced when people choose modes of transportation such as metro trains, buses, or trams, over cars, and it is amplified when there is a persistent social bias towards driving. The underlying feedback loop in which traffic levels influence transportation mode choices, which in turn affect traffic levels themselves, is poorly understood and we study its consequences in the presented work using a compartmental modeling approach. We first consider a simplified model of only car traffic and show that it predicts a hysteresis between congested and uncongested states, which is consistent with broader literature on on traffic modeling. Next, we add buses and trains to the model as alternative transit modes, confirm the existence of hysteresis in this generalization, and derive the relative trip completion rates of each mode. Finally, to account for decision-making, we take the demand rates for the different transit modes to be dynamic, closing the feedback loop between mode choice and utilization. This redistributes demand for each mode of transportation, highlighting that traffic conditions may be a key aspect of mode choice. Furthermore, our model predicts that increasing public awareness of congestion can be an effective control strategy to increase utilization of public transit. However, car-centric social norms must be sufficiently small, or car use is instead amplified.",
+      "summary_cn": "用分舱模型研究小汽车导向的社会规范如何放大城市拥堵：先建立仅含小汽车的通勤模型并复现拥堵／非拥堵双稳态迟滞，再引入公交与地铁推导各方式相对出行完成率，最后把各方式需求率设为动态以闭合反馈回路。模型预测交通状况本身会反过来影响方式选择，且提升公众对拥堵的认知可作为有效控制手段。",
+      "pdf_filename": "2611.13265.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.13265",
+      "search_text": "effect of car-centric social norms on traffic congestion in a compartmental model of transit mode utilization  用分舱模型研究小汽车导向的社会规范如何放大城市拥堵：先建立仅含小汽车的通勤模型并复现拥堵／非拥堵双稳态迟滞，再引入公交与地铁推导各方式相对出行完成率，最后把各方式需求率设为动态以闭合反馈回路。模型预测交通状况本身会反过来影响方式选择，且提升公众对拥堵的认知可作为有效控制手段。 vehicle traffic congestion is a persistent feature of urban transportation systems around the world.importantly, congestion is in part a consequence of human decision-making: car traffic is reduced when people choose modes of transportation such as metro trains, buses, or trams, over cars, and it is amplified when there is a persistent social bias towards driving. the underlying feedback loop in which traffic levels influence transportation mode choices, which in turn affect traffic levels themselves, is poorly understood and we study its consequences in the presented work using a compartmental modeling approach. we first consider a simplified model of only car traffic and show that it predicts a hysteresis between congested and uncongested states, which is consistent with broader literature on on traffic modeling. next, we add buses and trains to the model as alternative transit modes, confirm the existence of hysteresis in this generalization, and derive the relative trip completion rates of each mode. finally, to account for decision-making, we take the demand rates for the different transit modes to be dynamic, closing the feedback loop between mode choice and utilization. this redistributes demand for each mode of transportation, highlighting that traffic conditions may be a key aspect of mode choice. furthermore, our model predicts that increasing public awareness of congestion can be an effective control strategy to increase utilization of public transit. however, car-centric social norms must be sufficiently small, or car use is instead amplified. cornell university alia valentine, anastasia bizyaeva math.ds"
+    },
+    {
+      "arxiv_id": "2611.13241",
+      "title": "FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification",
+      "authors": "Melika Sepidband, Jiho Shin, Song Wang, Hadi Hemmati",
+      "affiliations": "York University",
+      "published_date": "2026-11-09",
+      "categories": "cs.SE",
+      "abstract": "LLM-based coding agents such as Claude Code can resolve real-world repository issues, but their iterative interaction loop can be expensive. Existing approaches reduce this cost primarily by limiting, compressing, or selectively avoiding information and actions within the repair process. We investigate a complementary question: Can an agent reason about a repair at an abstract program level, rather than repeatedly operating over raw source code, to reduce both the exploration needed to identify a repair and the repeated checking needed to verify it afterward?   We present FlowPlan, an abstraction-guided repair approach that structures localization, planning, and verification around per-function control-flow or data-flow graphs. The agent first localizes the candidate fault location on the program abstraction and expresses the intended repair as explicit graph deltas before modifying the concrete source. After the edit, FlowPlan reconstructs the same abstraction and compares the observed structural change with the planned one. Then, a verification checks the complete repair before termination.   Across all six benchmark-model settings, FlowPlan does not significantly change resolution rate relative to the vanilla agent while reducing token consumption in every setting, significantly in five of six settings. With Claude Haiku 4.5, it uses only 0.46-0.47x the baseline tokens on SWE-bench Pro, 0.32-0.35x on SWE-bench Verified, and 0.68-0.74x on SecBench; with Sonnet 5, it uses 0.72-0.76x, 0.73-0.74x, and 0.92-0.94x, respectively. Overall, FlowPlan achieves the largest token reduction among the compared methods in three of the six settings and ties the strongest compared method in a fourth. Trajectory analysis shows that FlowPlan saves tokens by replacing much of the costly post-edit re-reading and testing with explicit verification and reducing per-call context.",
+      "summary_cn": "针对LLM编码智能体修复仓库缺陷时token开销过大的问题，FlowPlan让智能体在函数级控制流／数据流图上定位故障，先用显式图增量表达修复意图再改动源码，改完重建同一抽象并比对结构变化，把“是否按计划改对”变成可机器校验的判据。六个基准上在维持修复效果的同时显著降低探索与验证的token消耗。",
+      "pdf_filename": "2611.13241.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13241",
+      "search_text": "flowplan: reducing the token cost of coding agents with abstraction-guided planning and verification 大语言模型 针对llm编码智能体修复仓库缺陷时token开销过大的问题，flowplan让智能体在函数级控制流／数据流图上定位故障，先用显式图增量表达修复意图再改动源码，改完重建同一抽象并比对结构变化，把“是否按计划改对”变成可机器校验的判据。六个基准上在维持修复效果的同时显著降低探索与验证的token消耗。 llm-based coding agents such as claude code can resolve real-world repository issues, but their iterative interaction loop can be expensive. existing approaches reduce this cost primarily by limiting, compressing, or selectively avoiding information and actions within the repair process. we investigate a complementary question: can an agent reason about a repair at an abstract program level, rather than repeatedly operating over raw source code, to reduce both the exploration needed to identify a repair and the repeated checking needed to verify it afterward?   we present flowplan, an abstraction-guided repair approach that structures localization, planning, and verification around per-function control-flow or data-flow graphs. the agent first localizes the candidate fault location on the program abstraction and expresses the intended repair as explicit graph deltas before modifying the concrete source. after the edit, flowplan reconstructs the same abstraction and compares the observed structural change with the planned one. then, a verification checks the complete repair before termination.   across all six benchmark-model settings, flowplan does not significantly change resolution rate relative to the vanilla agent while reducing token consumption in every setting, significantly in five of six settings. with claude haiku 4.5, it uses only 0.46-0.47x the baseline tokens on swe-bench pro, 0.32-0.35x on swe-bench verified, and 0.68-0.74x on secbench; with sonnet 5, it uses 0.72-0.76x, 0.73-0.74x, and 0.92-0.94x, respectively. overall, flowplan achieves the largest token reduction among the compared methods in three of the six settings and ties the strongest compared method in a fourth. trajectory analysis shows that flowplan saves tokens by replacing much of the costly post-edit re-reading and testing with explicit verification and reducing per-call context. york university melika sepidband, jiho shin, song wang, hadi hemmati cs.se"
+    },
+    {
+      "arxiv_id": "2611.13229",
+      "title": "Incorporating World Models in Decision Making for Next Best View Selection in Active Sensing",
+      "authors": "Nikita Sarawgi, Omey M. Manyar, Satyandra K. Gupta",
+      "affiliations": "GrayMatter Robotics Inc.",
+      "published_date": "2026-11-09",
+      "categories": "cs.RO",
+      "abstract": "Efficient robotic 3D reconstruction requires selecting views that contribute new surface measurements with few physical captures. Pretrained world models can guide this choice, but a predicted surface may not produce valid depth measurements under the operating conditions of the deployed sensor. We present a deployment adaptation methodology for next-best-view selection that learns a sensor-return adapter from limited local calibration data while keeping the pretrained predictor fixed. The adapter estimates measurement dropout over each predicted surface, allowing the selection method to favor views likely to fill gaps in the measured reconstruction. In a real-robot experiment with a structured-light sensor, the adapted method achieves higher measured surface coverage with 60% fewer captures than nominal selection. The adapted method recovers a surface region that the nominal method repeatedly targets but fails to measure. These results suggest that robots can reuse pretrained predictive models while adapting their decisions to local operating conditions in data-scarce environments.",
+      "summary_cn": "预训练世界模型能预测机器人主动重建时的候选表面，但预测表面未必产生有效深度。作者固定预测器，仅用少量标定数据学习传感器回波适配器，估计每个表面的测量丢失概率，使下一最佳视角偏向能填补实测空洞的方向；真实结构光实验在少采集60%的情况下覆盖更高。",
+      "pdf_filename": "2611.13229.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13229",
+      "search_text": "incorporating world models in decision making for next best view selection in active sensing 世界模型 预训练世界模型能预测机器人主动重建时的候选表面，但预测表面未必产生有效深度。作者固定预测器，仅用少量标定数据学习传感器回波适配器，估计每个表面的测量丢失概率，使下一最佳视角偏向能填补实测空洞的方向；真实结构光实验在少采集60%的情况下覆盖更高。 efficient robotic 3d reconstruction requires selecting views that contribute new surface measurements with few physical captures. pretrained world models can guide this choice, but a predicted surface may not produce valid depth measurements under the operating conditions of the deployed sensor. we present a deployment adaptation methodology for next-best-view selection that learns a sensor-return adapter from limited local calibration data while keeping the pretrained predictor fixed. the adapter estimates measurement dropout over each predicted surface, allowing the selection method to favor views likely to fill gaps in the measured reconstruction. in a real-robot experiment with a structured-light sensor, the adapted method achieves higher measured surface coverage with 60% fewer captures than nominal selection. the adapted method recovers a surface region that the nominal method repeatedly targets but fails to measure. these results suggest that robots can reuse pretrained predictive models while adapting their decisions to local operating conditions in data-scarce environments. graymatter robotics inc. nikita sarawgi, omey m. manyar, satyandra k. gupta cs.ro"
+    },
+    {
+      "arxiv_id": "2611.13113",
+      "title": "Building World Models from Intrinsic Motivation",
+      "authors": "Reece Keller, Declan Kutscher, Xaq Pitkow, Aran Nayebi",
+      "affiliations": "Carnegie Mellon University; University of Maryland, College Park",
+      "published_date": "2026-11-09",
+      "categories": "cs.AI, cs.LG",
+      "abstract": "In the absence of extrinsic rewards or task supervision, human behavior is guided by intrinsic motivation---neural signals that drive curiosity, creativity, play, and other essential facets of intelligence. Intrinsic motivation plays an important developmental role in building robust world models that enable generalization and adaptation. Yet existing studies leave open how a broad range of intrinsic motivations interacts with world-model representation learning to support downstream control. This limits our understanding of which intrinsically collected experiences build reusable models. To address these gaps, we integrate 24 intrinsic objectives, including established methods and explicit variants spanning curiosity, entropy, and competency, into a common model-based reinforcement learning framework. We evaluate the world models they build through zero-shot, few-shot, and multi-task control in locomotion, manipulation, and open-ended gaming environments, using three representation-learning strategies: observation reconstruction, latent prediction, and redundancy reduction. Curiosity-driven exploration with observation reconstruction yields the strongest aggregate family profile, although the best individual pairing depends on the experiment. In compositional vision-based tasks, intrinsic motivation derived from both episodic and lifelong novelty---providing a complementary memory to the world model's generic recurrent state---achieves the best zero-shot transfer and few-shot adaptation. These findings motivate designing intrinsic motivation and representation learning jointly. Our results demonstrate world models as a powerful tool for measuring the quality of intrinsically motivated experience, and positions intrinsic motivation as a key ingredient for building world models autonomously.",
+      "summary_cn": "把24种内在动机目标（好奇心、熵、胜任力等）统一接入同一基于模型的强化学习框架，用观测重建、潜空间预测、冗余消除三种方式训练世界模型。结果显示好奇心探索加观测重建的表征在零样本、少样本与多任务控制中泛化最好，不同内在奖励塑造出结构不同的世界模型，为无外部奖励下构建可复用世界模型提供系统对照。",
+      "pdf_filename": "2611.13113.pdf",
+      "crawled_date": "2026-11-11",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13113",
+      "search_text": "building world models from intrinsic motivation 世界模型 强化学习 把24种内在动机目标（好奇心、熵、胜任力等）统一接入同一基于模型的强化学习框架，用观测重建、潜空间预测、冗余消除三种方式训练世界模型。结果显示好奇心探索加观测重建的表征在零样本、少样本与多任务控制中泛化最好，不同内在奖励塑造出结构不同的世界模型，为无外部奖励下构建可复用世界模型提供系统对照。 in the absence of extrinsic rewards or task supervision, human behavior is guided by intrinsic motivation---neural signals that drive curiosity, creativity, play, and other essential facets of intelligence. intrinsic motivation plays an important developmental role in building robust world models that enable generalization and adaptation. yet existing studies leave open how a broad range of intrinsic motivations interacts with world-model representation learning to support downstream control. this limits our understanding of which intrinsically collected experiences build reusable models. to address these gaps, we integrate 24 intrinsic objectives, including established methods and explicit variants spanning curiosity, entropy, and competency, into a common model-based reinforcement learning framework. we evaluate the world models they build through zero-shot, few-shot, and multi-task control in locomotion, manipulation, and open-ended gaming environments, using three representation-learning strategies: observation reconstruction, latent prediction, and redundancy reduction. curiosity-driven exploration with observation reconstruction yields the strongest aggregate family profile, although the best individual pairing depends on the experiment. in compositional vision-based tasks, intrinsic motivation derived from both episodic and lifelong novelty---providing a complementary memory to the world model's generic recurrent state---achieves the best zero-shot transfer and few-shot adaptation. these findings motivate designing intrinsic motivation and representation learning jointly. our results demonstrate world models as a powerful tool for measuring the quality of intrinsically motivated experience, and positions intrinsic motivation as a key ingredient for building world models autonomously. carnegie mellon university; university of maryland, college park reece keller, declan kutscher, xaq pitkow, aran nayebi cs.ai, cs.lg"
+    },
     {
       "arxiv_id": "2611.12875",
       "title": "Click3R: Interactive Stereo 3D Reconstruction with Sparse Correspondence Clicks",
