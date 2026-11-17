@@ -1,55 +1,55 @@
 {
-  "count": 2100,
+  "count": 2139,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-11-16",
+  "crawled_date_max": "2026-11-17",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-11-13",
+  "published_date_max": "2026-11-16",
   "rating_counts": {
-    "S": 600,
-    "A": 797,
-    "B": 337,
-    "C": 366,
+    "S": 606,
+    "A": 805,
+    "B": 349,
+    "C": 379,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 436,
+      "count": 439,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 386,
+      "count": 392,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 362,
+      "count": 371,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 316,
+      "count": 321,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 309,
+      "count": 314,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 295,
+      "count": 301,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 226,
+      "count": 228,
       "group": "通用"
     },
     {
       "name": "强化学习",
-      "count": 152,
+      "count": 157,
       "group": "世界模型与仿真"
     },
     {
@@ -59,12 +59,12 @@
     },
     {
       "name": "前馈3D重建",
-      "count": 135,
+      "count": 136,
       "group": "前馈3D重建"
     },
     {
       "name": "仿真器",
-      "count": 119,
+      "count": 126,
       "group": "通用"
     },
     {
@@ -79,22 +79,22 @@
     },
     {
       "name": "扩散模型",
-      "count": 74,
+      "count": 75,
       "group": "世界模型与仿真"
     },
     {
       "name": "4DGS",
-      "count": 60,
+      "count": 61,
       "group": "3DGS/4DGS"
     },
     {
       "name": "视频生成",
-      "count": 55,
+      "count": 56,
       "group": "世界模型与仿真"
     },
     {
       "name": "深度估计",
-      "count": 53,
+      "count": 54,
       "group": "前馈3D重建"
     },
     {
@@ -119,18 +119,18 @@
     },
     {
       "name": "轨迹预测",
-      "count": 33,
+      "count": 34,
       "group": "世界模型与仿真"
+    },
+    {
+      "name": "路面重建",
+      "count": 24,
+      "group": "地面重建"
     },
     {
       "name": "生成式仿真",
       "count": 23,
       "group": "世界模型与仿真"
-    },
-    {
-      "name": "路面重建",
-      "count": 22,
-      "group": "地面重建"
     },
     {
       "name": "地形重建",
@@ -139,21 +139,774 @@
     },
     {
       "name": "训练加速",
-      "count": 14,
+      "count": 15,
       "group": "通用"
     },
     {
       "name": "事件相机",
-      "count": 13,
+      "count": 14,
       "group": "通用"
     },
     {
       "name": "多视角立体",
-      "count": 11,
+      "count": 13,
       "group": "前馈3D重建"
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2611.21594",
+      "title": "Surrogate-Assisted Compact-Model Extraction for SKY130 CMOS at 77 K",
+      "authors": "Aaron Wang, Olivia Gzamouranis, Vaibhav Lohia, Hershel Fei Xun Weiner, Olivia Seidel, Richard Cavanaugh, Giuseppe Di Guglielmo, Nhan Tran, Davide Braga",
+      "affiliations": "University of Illinois Chicago; Purdue University; The University of Texas at Arlington; Fermi National Accelerator Laboratory",
+      "published_date": "2026-11-16",
+      "categories": "physics.ins-det, cs.ET, cs.LG, physics.app-ph",
+      "abstract": "Cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. We fit BSIM4 parameters to measured I-V curves of SkyWater 130 nm (SKY130) transistors at 77 K using a neural surrogate of NGSpice. The surrogate maps compact-model parameters and device geometry to the complete set of output and transfer characteristics. Extraction is a bounded least-squares search: a bank of NGSpice simulations supplies initial candidates, finite differences of the surrogate supply the local Jacobian, and NGSpice re-simulates the resulting cards before selection. On 18 measured geometries, we compare a search over seven card parameters with a search over 43 parameters selected by NGSpice sensitivity. Relative to NGSpice re-simulations of the previously released cards, the two searches reduce the in-sample mean relative root-mean-square error (RRMS) by 17% and 26%, respectively. The 43-parameter search has the lower overall error, but the seven-parameter search has the lower mean on high-bias curves, and some individual curves have higher error than with the released cards under both searches.",
+      "summary_cn": "针对低温电路设计需要能在标准仿真器复现 77 K 实测特性的紧凑模型的问题，提出用 NGSpice 神经代理辅助提取 BSIM4 参数：代理把模型参数与器件几何映射到完整输出与转移特性，提取转为有界最小二乘搜索，NGSpice 给初值、代理有限差分给雅可比、再复算候选卡。18 个实测几何上比较 7 参数与 43 参数搜索，相对此前模型卡降低样本内误差。",
+      "pdf_filename": "2611.21594.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21594",
+      "search_text": "surrogate-assisted compact-model extraction for sky130 cmos at 77 k 仿真器 针对低温电路设计需要能在标准仿真器复现 77 k 实测特性的紧凑模型的问题，提出用 ngspice 神经代理辅助提取 bsim4 参数：代理把模型参数与器件几何映射到完整输出与转移特性，提取转为有界最小二乘搜索，ngspice 给初值、代理有限差分给雅可比、再复算候选卡。18 个实测几何上比较 7 参数与 43 参数搜索，相对此前模型卡降低样本内误差。 cryogenic circuit design requires compact transistor models that reproduce measured low-temperature behavior and run in standard circuit simulators. we fit bsim4 parameters to measured i-v curves of skywater 130 nm (sky130) transistors at 77 k using a neural surrogate of ngspice. the surrogate maps compact-model parameters and device geometry to the complete set of output and transfer characteristics. extraction is a bounded least-squares search: a bank of ngspice simulations supplies initial candidates, finite differences of the surrogate supply the local jacobian, and ngspice re-simulates the resulting cards before selection. on 18 measured geometries, we compare a search over seven card parameters with a search over 43 parameters selected by ngspice sensitivity. relative to ngspice re-simulations of the previously released cards, the two searches reduce the in-sample mean relative root-mean-square error (rrms) by 17% and 26%, respectively. the 43-parameter search has the lower overall error, but the seven-parameter search has the lower mean on high-bias curves, and some individual curves have higher error than with the released cards under both searches. university of illinois chicago; purdue university; the university of texas at arlington; fermi national accelerator laboratory aaron wang, olivia gzamouranis, vaibhav lohia, hershel fei xun weiner, olivia seidel, richard cavanaugh, giuseppe di guglielmo, nhan tran, davide braga physics.ins-det, cs.et, cs.lg, physics.app-ph"
+    },
+    {
+      "arxiv_id": "2611.21517",
+      "title": "Lazy-MOSAIC: Accelerating Skill-Centric Manipulation Planning with Learned Skill-Effect World Models",
+      "authors": "Itamar Mishani, Mukund Krishnakumar, Oren Salzman, Maxim Likhachev",
+      "affiliations": "Carnegie Mellon University; Technion",
+      "published_date": "2026-11-16",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Long-horizon manipulation tasks require a robot to perform a sequence of physical interactions with its environment, typically combining several different skills. Planning such behaviors efficiently is challenging: given a library of parameterized skills, solutions lie in a vast hybrid space of skill sequences and their parameters, and evaluating each candidate skill's feasibility and effect with a high-fidelity world model such as a physics simulator is computationally expensive. MOSAIC, a recent skill-centric approach, lets the skills guide a non-sequential search toward the regions of this space where they are likely to succeed; however, it pays the full cost of simulation for every parameterized skill it considers. In this work, we introduce Lazy-MOSAIC, a lazy planning framework that instead searches over hypothesized skill outcomes. A cheap learned skill-effect world model predicts, in a fraction of a millisecond, a skill's feasibility and the world state it produces. Lazy-MOSAIC then uses these predictions to focus expensive simulation on promising candidate skills and, when a hypothesis is invalidated, repairs only the affected part of the search, while ensuring that every skill in a returned plan is validated in simulation. We evaluate Lazy-MOSAIC on cluttered-shelf retrieval tasks of increasing difficulty and demonstrate it on a physical robot, showing that it plans substantially faster than baselines with fewer simulator queries, while matching or exceeding their success rate in every setting. Visit skill-mosaic.github.io.",
+      "summary_cn": "针对长时程操作规划中技能序列与参数空间巨大、用物理仿真核验每个候选代价高的问题，提出 Lazy-MOSAIC：用学到的技能效果世界模型廉价扩展乐观图，只在需要时把有希望的假设送入物理仿真认证，成功的 rollout 才进入已认证图，最终计划只含已认证技能。相比 MOSAIC 不再为每个参数化技能支付完整仿真代价，显著降低规划时间并保持成功率。",
+      "pdf_filename": "2611.21517.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "规划",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21517",
+      "search_text": "lazy-mosaic: accelerating skill-centric manipulation planning with learned skill-effect world models 世界模型 规划 仿真器 针对长时程操作规划中技能序列与参数空间巨大、用物理仿真核验每个候选代价高的问题，提出 lazy-mosaic：用学到的技能效果世界模型廉价扩展乐观图，只在需要时把有希望的假设送入物理仿真认证，成功的 rollout 才进入已认证图，最终计划只含已认证技能。相比 mosaic 不再为每个参数化技能支付完整仿真代价，显著降低规划时间并保持成功率。 long-horizon manipulation tasks require a robot to perform a sequence of physical interactions with its environment, typically combining several different skills. planning such behaviors efficiently is challenging: given a library of parameterized skills, solutions lie in a vast hybrid space of skill sequences and their parameters, and evaluating each candidate skill's feasibility and effect with a high-fidelity world model such as a physics simulator is computationally expensive. mosaic, a recent skill-centric approach, lets the skills guide a non-sequential search toward the regions of this space where they are likely to succeed; however, it pays the full cost of simulation for every parameterized skill it considers. in this work, we introduce lazy-mosaic, a lazy planning framework that instead searches over hypothesized skill outcomes. a cheap learned skill-effect world model predicts, in a fraction of a millisecond, a skill's feasibility and the world state it produces. lazy-mosaic then uses these predictions to focus expensive simulation on promising candidate skills and, when a hypothesis is invalidated, repairs only the affected part of the search, while ensuring that every skill in a returned plan is validated in simulation. we evaluate lazy-mosaic on cluttered-shelf retrieval tasks of increasing difficulty and demonstrate it on a physical robot, showing that it plans substantially faster than baselines with fewer simulator queries, while matching or exceeding their success rate in every setting. visit skill-mosaic.github.io. carnegie mellon university; technion itamar mishani, mukund krishnakumar, oren salzman, maxim likhachev cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.21465",
+      "title": "Warm Starting Neural Dynamics Models From Few Jacobian Samples",
+      "authors": "Maxime Rochkoulets, Joppe De Jonghe, Mariya Ishteva",
+      "affiliations": "Independent Researcher; KU Leuven",
+      "published_date": "2026-11-16",
+      "categories": "cs.LG, cs.AI, eess.SY",
+      "abstract": "Model-based reinforcement learning (MBRL) leverages a model of the environment, used for planning and generating samples without interacting with the real world. Motivated by evidence that informed initialization significantly improves the efficiency of MBRL, we propose TDec-Init, an algorithm to warm-start neural dynamics models using transition Jacobians. Using a decoupling algorithm based on the decomposition of a tensor of stacked Jacobian samples, we recover weights and flexible nonlinearities, and use them to initialize a feedforward neural network. In the low-data regime, we show on several benchmark environments that our approach outperforms random initialization and value training, and either matches or outperforms Sobolev training, while requiring fewer training steps between episodes.",
+      "summary_cn": "针对基于模型的强化学习中动力学模型初始化敏感、样本效率低的问题，提出 TDec-Init：用转移雅可比样本热启动神经网络动力学模型。方法把堆叠雅可比张量分解，解耦出权重与灵活非线性并用于初始化前馈网络，在低数据条件下注入正确的局部动力学结构。多个基准环境优于随机初始化与 value training，与 Sobolev 训练相当且回合间所需训练步数更少。",
+      "pdf_filename": "2611.21465.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "强化学习"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21465",
+      "search_text": "warm starting neural dynamics models from few jacobian samples 强化学习 针对基于模型的强化学习中动力学模型初始化敏感、样本效率低的问题，提出 tdec-init：用转移雅可比样本热启动神经网络动力学模型。方法把堆叠雅可比张量分解，解耦出权重与灵活非线性并用于初始化前馈网络，在低数据条件下注入正确的局部动力学结构。多个基准环境优于随机初始化与 value training，与 sobolev 训练相当且回合间所需训练步数更少。 model-based reinforcement learning (mbrl) leverages a model of the environment, used for planning and generating samples without interacting with the real world. motivated by evidence that informed initialization significantly improves the efficiency of mbrl, we propose tdec-init, an algorithm to warm-start neural dynamics models using transition jacobians. using a decoupling algorithm based on the decomposition of a tensor of stacked jacobian samples, we recover weights and flexible nonlinearities, and use them to initialize a feedforward neural network. in the low-data regime, we show on several benchmark environments that our approach outperforms random initialization and value training, and either matches or outperforms sobolev training, while requiring fewer training steps between episodes. independent researcher; ku leuven maxime rochkoulets, joppe de jonghe, mariya ishteva cs.lg, cs.ai, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.21302",
+      "title": "Déjà-Events: Multi-view 3D Geometry with Event Cameras via Sparsity-Aware Adaptive Gating",
+      "authors": "Arda Cinar Demirtas, Pablo Varela Bernal, Marc Pollefeys, Sunghwan Hong",
+      "affiliations": "ETH Zürich; TU Delft",
+      "published_date": "2026-11-16",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Event cameras keep capturing structure where conventional cameras blur or saturate, which makes them attractive for 3D perception in fast or poorly lit scenes. Event datasets with dense 3D ground truth, however, are far smaller and less diverse than the image collections behind feed-forward 3D reconstruction models. We present Déjà-Events, an event-only model that predicts depth, camera pose and pointmaps from multiple views in a single forward pass. Rather than relying on scarce 3D labels, we distil it from Déjà View, a feed-forward RGB model that refines its tokens by repeatedly applying one shared transformer block. On paired RGB and event recordings, the event student learns to reproduce the frozen teacher's final tokens, which requires no depth or pose ground truth and trains only about 1% of its parameters. Because events are dense at edges and moving texture but nearly absent in textureless regions, we further introduce sparsity-aware adaptive gating, which adapts the shared block's gates to events and adjusts them per patch by event density, so that accuracy holds as refinement steps are added. Trained only on simulated data, Déjà-Events achieves the lowest pointmap error among the event-based methods we evaluate, on EventScape and zero-shot on the real MVSEC and DSEC datasets. On DSEC it halves the error of the strongest baseline (0.15 vs. 0.30 AbsRel) with about a tenth of its parameters. It also has the lowest depth error on EventScape and DSEC and the lowest trajectory error on EventScape.",
+      "summary_cn": "针对事件相机缺乏稠密三维真值、难训练前馈重建模型的问题，提出仅用事件的 Déjà-Events：从多视角事件一次前向预测深度、位姿与 pointmap，通过蒸馏前馈 RGB 模型 Déjà View 的最终 token 摆脱深度与位姿监督、只训练约 1% 参数；并按 patch 事件密度做稀疏感知自适应门控。仅用模拟数据训练，DSEC 上 AbsRel 0.15 对最强基线 0.30，参数约其十分之一。",
+      "pdf_filename": "2611.21302.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "事件相机"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21302",
+      "search_text": "déjà-events: multi-view 3d geometry with event cameras via sparsity-aware adaptive gating 前馈3d重建 事件相机 针对事件相机缺乏稠密三维真值、难训练前馈重建模型的问题，提出仅用事件的 déjà-events：从多视角事件一次前向预测深度、位姿与 pointmap，通过蒸馏前馈 rgb 模型 déjà view 的最终 token 摆脱深度与位姿监督、只训练约 1% 参数；并按 patch 事件密度做稀疏感知自适应门控。仅用模拟数据训练，dsec 上 absrel 0.15 对最强基线 0.30，参数约其十分之一。 event cameras keep capturing structure where conventional cameras blur or saturate, which makes them attractive for 3d perception in fast or poorly lit scenes. event datasets with dense 3d ground truth, however, are far smaller and less diverse than the image collections behind feed-forward 3d reconstruction models. we present déjà-events, an event-only model that predicts depth, camera pose and pointmaps from multiple views in a single forward pass. rather than relying on scarce 3d labels, we distil it from déjà view, a feed-forward rgb model that refines its tokens by repeatedly applying one shared transformer block. on paired rgb and event recordings, the event student learns to reproduce the frozen teacher's final tokens, which requires no depth or pose ground truth and trains only about 1% of its parameters. because events are dense at edges and moving texture but nearly absent in textureless regions, we further introduce sparsity-aware adaptive gating, which adapts the shared block's gates to events and adjusts them per patch by event density, so that accuracy holds as refinement steps are added. trained only on simulated data, déjà-events achieves the lowest pointmap error among the event-based methods we evaluate, on eventscape and zero-shot on the real mvsec and dsec datasets. on dsec it halves the error of the strongest baseline (0.15 vs. 0.30 absrel) with about a tenth of its parameters. it also has the lowest depth error on eventscape and dsec and the lowest trajectory error on eventscape. eth zürich; tu delft arda cinar demirtas, pablo varela bernal, marc pollefeys, sunghwan hong cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.21232",
+      "title": "A Generative AI-Driven Architecture for Whole-Home Intelligent Services: Edge Models, Memory Management, and Household Applications",
+      "authors": "Mo Zhou",
+      "affiliations": "Nanjing Normal University",
+      "published_date": "2026-11-16",
+      "categories": "cs.CL, cs.AI",
+      "abstract": "Generative artificial intelligence is entering the home. Cloud-based assistants face governance limitations in data transmission, continuous availability, and the reliability of physical actions, which are especially salient in households where devices remain online, data accumulate over time, and commands trigger real-world actions. Using the home local server as a unifying organizing axis, this article develops a design-oriented review framework. Sources from arXiv, CNKI, ACL Anthology, and official documentation were searched through November 2026 and coded into five evidence categories: reviews, system prototypes, benchmarks, HCI and eldercare studies, and official documentation. System designs were mapped onto shared architectural modules, identifying nine recurrent responsibilities of the home local server. Generative models support perceptual interpretation, intent understanding, and candidate planning, while deterministic validation, knowledge-graph constraints, and authorization leases confine candidate actions to an inspectable space. Home control, emotional companionship, and intelligent guarding can be compared within a common framework: they share state and memory but differ in latency, false positive and negative rates, proactivity, and permissions. Existing benchmarks rely on virtual environments and cannot substitute for real-deployment evaluation. Local deployment is not inherently safer, and technical continuity alone does not establish the social or medical effects of companionship and guarding. The article proposes a five-dimensional evaluation framework covering architectural capability, system resources, privacy, safety and reliability, and human experience, together with six design principles and a future research agenda for local-first intelligent home systems.",
+      "summary_cn": "论文以家庭本地服务器为组织轴，提出全屋智能的生成式 AI 架构综述框架：检索 arXiv、CNKI、ACL Anthology 与官方文档至 2026 年 11 月，把证据分为五类并映射到共享架构模块，归纳本地服务器的九项常态职责，说明生成模型负责感知解释、意图理解与候选规划，确定性校验与知识库负责可执行性与安全。",
+      "pdf_filename": "2611.21232.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21232",
+      "search_text": "a generative ai-driven architecture for whole-home intelligent services: edge models, memory management, and household applications 规划 论文以家庭本地服务器为组织轴，提出全屋智能的生成式 ai 架构综述框架：检索 arxiv、cnki、acl anthology 与官方文档至 2026 年 11 月，把证据分为五类并映射到共享架构模块，归纳本地服务器的九项常态职责，说明生成模型负责感知解释、意图理解与候选规划，确定性校验与知识库负责可执行性与安全。 generative artificial intelligence is entering the home. cloud-based assistants face governance limitations in data transmission, continuous availability, and the reliability of physical actions, which are especially salient in households where devices remain online, data accumulate over time, and commands trigger real-world actions. using the home local server as a unifying organizing axis, this article develops a design-oriented review framework. sources from arxiv, cnki, acl anthology, and official documentation were searched through november 2026 and coded into five evidence categories: reviews, system prototypes, benchmarks, hci and eldercare studies, and official documentation. system designs were mapped onto shared architectural modules, identifying nine recurrent responsibilities of the home local server. generative models support perceptual interpretation, intent understanding, and candidate planning, while deterministic validation, knowledge-graph constraints, and authorization leases confine candidate actions to an inspectable space. home control, emotional companionship, and intelligent guarding can be compared within a common framework: they share state and memory but differ in latency, false positive and negative rates, proactivity, and permissions. existing benchmarks rely on virtual environments and cannot substitute for real-deployment evaluation. local deployment is not inherently safer, and technical continuity alone does not establish the social or medical effects of companionship and guarding. the article proposes a five-dimensional evaluation framework covering architectural capability, system resources, privacy, safety and reliability, and human experience, together with six design principles and a future research agenda for local-first intelligent home systems. nanjing normal university mo zhou cs.cl, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.21105",
+      "title": "CivilBench: Benchmarking Vision-Language Models for Multimodal Information Integration in Civil Engineering",
+      "authors": "Dan Yuan, Yue Wen, Zhili He, Zhenkui Zhou, Shicen Liu, Ziqiang Zheng",
+      "affiliations": "Kyushu University; Sichuan University of Science & Engineering; HKUST; University of Electronic Science and Technology of China",
+      "published_date": "2026-11-16",
+      "categories": "cs.AI, cs.CV",
+      "abstract": "Artificial intelligence (AI), particularly large language models (LLMs) and vision-language models (VLMs), is increasingly applied in civil and structural engineering for disaster assessment, structural analysis, and engineering decision support. However, the extent to which current VLMs possess the reasoning capabilities required for reliable engineering judgments remains unclear. In this work, we introduce CivilBench, a comprehensive benchmark for evaluating VLMs in civil engineering and disaster-related scenarios. CivilBench covers three major task families: Sequential Reasoning, Image-based Structural Understanding, and Open-world Understanding, encompassing numerical reasoning, structural damage assessment, risk inference, causal analysis, and repair planning. The benchmark is constructed through a systematic pipeline of domain-specific data collection, engineering-oriented captioning, expert annotation, question design, and quality verification. Evaluation of representative state-of-the-art VLMs reveals substantial limitations in domain-specific reasoning, with Sequential Reasoning emerging as a major bottleneck, particularly when models must infer numerical relationships from sparse structured observations. Further experiments show that numerical priors and external knowledge can alleviate these limitations, although their effectiveness depends on the model's ability to reliably interpret and use the available evidence. CivilBench provides a capability-oriented testbed for identifying reasoning limitations and evaluating progress toward reliable AI-assisted engineering decision-making. The benchmark will be publicly available at https://huggingface.co/datasets/traceuryuan/CivilBench.",
+      "summary_cn": "论文提出 CivilBench，系统评测视觉语言模型在土木与灾害场景的多模态信息整合能力：含序列推理、基于图像的结构理解与开放世界理解三大任务族，覆盖数值推理、损伤评估、风险推断、因果分析与修复规划。评测显示主流 VLM 在跨图跨文整合与工程数值判断上准确率明显低于人类专家，常见失败为规范引用错误与损伤等级混淆。",
+      "pdf_filename": "2611.21105.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划",
+        "多模态",
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21105",
+      "search_text": "civilbench: benchmarking vision-language models for multimodal information integration in civil engineering 规划 多模态 大语言模型 论文提出 civilbench，系统评测视觉语言模型在土木与灾害场景的多模态信息整合能力：含序列推理、基于图像的结构理解与开放世界理解三大任务族，覆盖数值推理、损伤评估、风险推断、因果分析与修复规划。评测显示主流 vlm 在跨图跨文整合与工程数值判断上准确率明显低于人类专家，常见失败为规范引用错误与损伤等级混淆。 artificial intelligence (ai), particularly large language models (llms) and vision-language models (vlms), is increasingly applied in civil and structural engineering for disaster assessment, structural analysis, and engineering decision support. however, the extent to which current vlms possess the reasoning capabilities required for reliable engineering judgments remains unclear. in this work, we introduce civilbench, a comprehensive benchmark for evaluating vlms in civil engineering and disaster-related scenarios. civilbench covers three major task families: sequential reasoning, image-based structural understanding, and open-world understanding, encompassing numerical reasoning, structural damage assessment, risk inference, causal analysis, and repair planning. the benchmark is constructed through a systematic pipeline of domain-specific data collection, engineering-oriented captioning, expert annotation, question design, and quality verification. evaluation of representative state-of-the-art vlms reveals substantial limitations in domain-specific reasoning, with sequential reasoning emerging as a major bottleneck, particularly when models must infer numerical relationships from sparse structured observations. further experiments show that numerical priors and external knowledge can alleviate these limitations, although their effectiveness depends on the model's ability to reliably interpret and use the available evidence. civilbench provides a capability-oriented testbed for identifying reasoning limitations and evaluating progress toward reliable ai-assisted engineering decision-making. the benchmark will be publicly available at https://huggingface.co/datasets/traceuryuan/civilbench. kyushu university; sichuan university of science & engineering; hkust; university of electronic science and technology of china dan yuan, yue wen, zhili he, zhenkui zhou, shicen liu, ziqiang zheng cs.ai, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.21044",
+      "title": "Body of Evidence: Triangulating 3D Human Pose with Geometry-Conditioned Depth",
+      "authors": "Erik Brorsson, Kilian Freitag, Josef Bengtson, Kristofer Bengtsson, Lars Hammarstrand, Knut Åkesson, Fredrik Kahl",
+      "affiliations": "Chalmers University of Technology; Volvo Group",
+      "published_date": "2026-11-16",
+      "categories": "cs.CV",
+      "abstract": "Even in multi-camera setups, occlusions can leave individual body joints with only a single usable 2D observation. Such an observation defines a viewing ray but leaves the joint's depth undetermined. We introduce Body of Evidence (BoE), a multi-view 3D human pose estimator that predicts per-camera joint depths alongside 2D joint locations. To reduce monocular depth ambiguity, we propose geometry-conditioned depth prediction, which combines image features with previously reconstructed 3D body geometry as contextual depth cues. We further introduce learnable depth-aware triangulation (LDAT), which augments differentiable algebraic triangulation with predicted depth constraints, enabling reconstruction even from a single contributing camera while preserving the benefits of geometric triangulation when multiple views are available. The reconstructed 3D poses subsequently guide depth prediction in the next iteration, allowing depth estimates and 3D geometry to progressively refine each other. Experiments on CMU Panoptic demonstrate state-of-the-art in-domain performance and superior average performance across evaluated camera subsets and unseen camera arrangements. BoE is particularly effective under sparse camera coverage, outperforming the previous state of the art by 10.6 AP25 points in the challenging three-camera setting.",
+      "summary_cn": "针对多相机下人体关节常只剩单一 2D 观测、深度不可定的问题，提出 Body of Evidence：在预测 2D 关节位置的同时预测各相机下关节深度，以已重建的三维人体几何为上下文缓解单目歧义；并提出可学习深度感知三角化，在可微代数三角化中引入预测深度约束，使单相机也能重建。CMU Panoptic 域内最优，三相机设置较此前最好方法提升 10.6 AP25。",
+      "pdf_filename": "2611.21044.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "深度估计"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21044",
+      "search_text": "body of evidence: triangulating 3d human pose with geometry-conditioned depth 深度估计 针对多相机下人体关节常只剩单一 2d 观测、深度不可定的问题，提出 body of evidence：在预测 2d 关节位置的同时预测各相机下关节深度，以已重建的三维人体几何为上下文缓解单目歧义；并提出可学习深度感知三角化，在可微代数三角化中引入预测深度约束，使单相机也能重建。cmu panoptic 域内最优，三相机设置较此前最好方法提升 10.6 ap25。 even in multi-camera setups, occlusions can leave individual body joints with only a single usable 2d observation. such an observation defines a viewing ray but leaves the joint's depth undetermined. we introduce body of evidence (boe), a multi-view 3d human pose estimator that predicts per-camera joint depths alongside 2d joint locations. to reduce monocular depth ambiguity, we propose geometry-conditioned depth prediction, which combines image features with previously reconstructed 3d body geometry as contextual depth cues. we further introduce learnable depth-aware triangulation (ldat), which augments differentiable algebraic triangulation with predicted depth constraints, enabling reconstruction even from a single contributing camera while preserving the benefits of geometric triangulation when multiple views are available. the reconstructed 3d poses subsequently guide depth prediction in the next iteration, allowing depth estimates and 3d geometry to progressively refine each other. experiments on cmu panoptic demonstrate state-of-the-art in-domain performance and superior average performance across evaluated camera subsets and unseen camera arrangements. boe is particularly effective under sparse camera coverage, outperforming the previous state of the art by 10.6 ap25 points in the challenging three-camera setting. chalmers university of technology; volvo group erik brorsson, kilian freitag, josef bengtson, kristofer bengtsson, lars hammarstrand, knut åkesson, fredrik kahl cs.cv"
+    },
+    {
+      "arxiv_id": "2611.20924",
+      "title": "Navital Gym: Rule-Graded Agent Environments for Indian Workflows",
+      "authors": "Daksh Bathla",
+      "affiliations": "Navital Labs, Delhi, India",
+      "published_date": "2026-11-16",
+      "categories": "cs.CL",
+      "abstract": "AI agents are being deployed on Indian workflows such as payments, tax, forms, travel and customer support in Hindi and Hinglish. Public agent evaluations rarely cover these workflows, and many score with another language model. We present Navital Gym, a set of six open environments with 321 public tasks in five task families: trip planning, UPI payments and disputes, GST invoicing and returns, form filling (including a multi-document split) and customer support in Hindi, Hinglish and three experimental Indian languages. Every task is graded by named, deterministic rules that recompute the outcome from a synthetic sandbox world. No language model judges any score. We report one run per task for three models on all six environments, Claude Opus 5.5, Claude Sonnet 5.5 and Claude Haiku 4.5, and for Gemini 3.1 Flash-Lite on two (UPI and the Support core). Opus solves 315 of 321 tasks, Sonnet 302 and Haiku 205. Trip planning and Hindi/Hinglish support separate the models most. We also describe a private held-out set that is not published, and a 7B adapter trained in the gym. Code is Apache-2.0 and task data is CC BY 4.0. The rules are a documented simplification of Indian practice, not the live systems.",
+      "summary_cn": "论文发布 Navital Gym，面向印度本地工作流的智能体评测环境：六个开放环境、321 个公开任务，覆盖行程规划、UPI 支付与纠纷、GST 开票报税、表单填写与印地语客服，全部由确定性规则从合成沙箱重算结果评分，不用语言模型判分。Opus 解出 315/321、Sonnet 302、Haiku 205，行程规划与印地语支持最能区分模型。",
+      "pdf_filename": "2611.20924.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20924",
+      "search_text": "navital gym: rule-graded agent environments for indian workflows 规划 论文发布 navital gym，面向印度本地工作流的智能体评测环境：六个开放环境、321 个公开任务，覆盖行程规划、upi 支付与纠纷、gst 开票报税、表单填写与印地语客服，全部由确定性规则从合成沙箱重算结果评分，不用语言模型判分。opus 解出 315/321、sonnet 302、haiku 205，行程规划与印地语支持最能区分模型。 ai agents are being deployed on indian workflows such as payments, tax, forms, travel and customer support in hindi and hinglish. public agent evaluations rarely cover these workflows, and many score with another language model. we present navital gym, a set of six open environments with 321 public tasks in five task families: trip planning, upi payments and disputes, gst invoicing and returns, form filling (including a multi-document split) and customer support in hindi, hinglish and three experimental indian languages. every task is graded by named, deterministic rules that recompute the outcome from a synthetic sandbox world. no language model judges any score. we report one run per task for three models on all six environments, claude opus 5.5, claude sonnet 5.5 and claude haiku 4.5, and for gemini 3.1 flash-lite on two (upi and the support core). opus solves 315 of 321 tasks, sonnet 302 and haiku 205. trip planning and hindi/hinglish support separate the models most. we also describe a private held-out set that is not published, and a 7b adapter trained in the gym. code is apache-2.0 and task data is cc by 4.0. the rules are a documented simplification of indian practice, not the live systems. navital labs, delhi, india daksh bathla cs.cl"
+    },
+    {
+      "arxiv_id": "2611.20811",
+      "title": "Auditing World-Model Explanations in Retail Forecasting: Faithfulness, Accuracy and Price Response",
+      "authors": "Kathik Iyer",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-11-16",
+      "categories": "cs.LG, cs.AI",
+      "abstract": "Forecasting models that read the price and promotion plan explain each forecast as a baseline, what would sell with nothing planned, plus the lift the plan adds. We test such explanations with eight checks, six with a pass rule fixed before any result, and find that passing them does not make an explanation right. In generated store data with known effects, a world model passes the checks of construction, stability, price direction and agreement with sales and with LightGBM, yet its lifts are 1.33 to 1.40 times the truth when merchants plan into high-demand weeks, and 1.23 to 1.42 times in eight variants of that world. It still picks the right weeks to promote, but stock ordered to its lift is off by 0.44 to 0.48 of the true lift. Its stated response to a lasting regular-price change is 4.7 to 6.5 times the true -0.5, and only a measured cause finds this. On Dominick's, 38 episodes in which a store's regular prices sat apart from its zone peers give a noisy benchmark: a pooled 8-week response of -0.33 (95% interval -0.68 to 0.01). For the final tuned world models of our companion paper on nine data sets, baseline and lift add up under each model's own plan, but a deeper price cut lowers the forecast in 29% to 83% of item-week steps on Dominick's (23% to 80% within prices seen in training), and the world model and LightGBM both state about twice the measured response. Across 703 configurations from the settings searches, checks passed were not related to forecast accuracy (Spearman 0.02, 95% interval -0.02 to 0.05); with no known answer for those versions, this concerns accuracy, while whether an explanation is right is measured only in the generated data.",
+      "summary_cn": "论文审计零售预测中基线加促销增量式的世界模型解释：用八项检查评估忠实性、稳定性与价格响应。在效应已知的生成门店数据中该模型能通过构造与稳定性等检查，但在高需求周把增量高估 1.33–1.40 倍，据其增量备货偏差达真实增量的 0.44–0.48，对持续标价变化的响应高估 4.7–6.5 倍，说明通过检查不等于解释正确。",
+      "pdf_filename": "2611.20811.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20811",
+      "search_text": "auditing world-model explanations in retail forecasting: faithfulness, accuracy and price response 世界模型 论文审计零售预测中基线加促销增量式的世界模型解释：用八项检查评估忠实性、稳定性与价格响应。在效应已知的生成门店数据中该模型能通过构造与稳定性等检查，但在高需求周把增量高估 1.33–1.40 倍，据其增量备货偏差达真实增量的 0.44–0.48，对持续标价变化的响应高估 4.7–6.5 倍，说明通过检查不等于解释正确。 forecasting models that read the price and promotion plan explain each forecast as a baseline, what would sell with nothing planned, plus the lift the plan adds. we test such explanations with eight checks, six with a pass rule fixed before any result, and find that passing them does not make an explanation right. in generated store data with known effects, a world model passes the checks of construction, stability, price direction and agreement with sales and with lightgbm, yet its lifts are 1.33 to 1.40 times the truth when merchants plan into high-demand weeks, and 1.23 to 1.42 times in eight variants of that world. it still picks the right weeks to promote, but stock ordered to its lift is off by 0.44 to 0.48 of the true lift. its stated response to a lasting regular-price change is 4.7 to 6.5 times the true -0.5, and only a measured cause finds this. on dominick's, 38 episodes in which a store's regular prices sat apart from its zone peers give a noisy benchmark: a pooled 8-week response of -0.33 (95% interval -0.68 to 0.01). for the final tuned world models of our companion paper on nine data sets, baseline and lift add up under each model's own plan, but a deeper price cut lowers the forecast in 29% to 83% of item-week steps on dominick's (23% to 80% within prices seen in training), and the world model and lightgbm both state about twice the measured response. across 703 configurations from the settings searches, checks passed were not related to forecast accuracy (spearman 0.02, 95% interval -0.02 to 0.05); with no known answer for those versions, this concerns accuracy, while whether an explanation is right is measured only in the generated data. 未找到单位信息 kathik iyer cs.lg, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.20807",
+      "title": "QuarkDB: A Hybrid Database System for Quantum Data Management",
+      "authors": "Wenrui Zhang, Yu Wang, Xiao Zhang",
+      "affiliations": "Renmin University of China",
+      "published_date": "2026-11-16",
+      "categories": "cs.DB, cs.AR",
+      "abstract": "Emerging quantum applications like quantum communication generate large volumes of high-dimensional quantum data, requiring efficient data analysis and storage. However, classical database systems often struggle to meet requirements such as quantum processing or version management. This paper presents QuarkDB designed for efficient quantum data management. QuarkDB establishes a unified object model for relational and quantum data and defines the syntax of Quantum Structured Query Language. To support efficient quantum data management, QuarkDB integrates three key components: (1) a Hybrid Query Engine with cost-based hybrid plan selection over classical and quantum operators, (2) an Execution Engine with a three-level instructions intermediate representation, QuarkDB-IR, to support quantum execution and reduce quantum processing costs, and (3) a Storage Engine supporting quantum data version management, state reconstruction and data reuse. Compared with classical databases such as SQLite and PostgreSQL or quantum databases like Qute, our QuarkDB achieves query-latency speedups ranging from 2.14x to 25.86x speedup under extensive real-world workloads.",
+      "summary_cn": "针对量子通信等应用产生的高维量子数据难以被经典数据库管理的问题，提出 QuarkDB 混合数据库：建立关系与量子数据的统一对象模型并定义 QSQL，混合查询引擎做代价驱动的经典/量子算子计划选择，执行引擎用三级指令中间表示支持量子执行，存储引擎支持版本管理、态重建与复用，在量子查询与版本管理场景下减少量子处理开销。",
+      "pdf_filename": "2611.20807.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.20807",
+      "search_text": "quarkdb: a hybrid database system for quantum data management  针对量子通信等应用产生的高维量子数据难以被经典数据库管理的问题，提出 quarkdb 混合数据库：建立关系与量子数据的统一对象模型并定义 qsql，混合查询引擎做代价驱动的经典/量子算子计划选择，执行引擎用三级指令中间表示支持量子执行，存储引擎支持版本管理、态重建与复用，在量子查询与版本管理场景下减少量子处理开销。 emerging quantum applications like quantum communication generate large volumes of high-dimensional quantum data, requiring efficient data analysis and storage. however, classical database systems often struggle to meet requirements such as quantum processing or version management. this paper presents quarkdb designed for efficient quantum data management. quarkdb establishes a unified object model for relational and quantum data and defines the syntax of quantum structured query language. to support efficient quantum data management, quarkdb integrates three key components: (1) a hybrid query engine with cost-based hybrid plan selection over classical and quantum operators, (2) an execution engine with a three-level instructions intermediate representation, quarkdb-ir, to support quantum execution and reduce quantum processing costs, and (3) a storage engine supporting quantum data version management, state reconstruction and data reuse. compared with classical databases such as sqlite and postgresql or quantum databases like qute, our quarkdb achieves query-latency speedups ranging from 2.14x to 25.86x speedup under extensive real-world workloads. renmin university of china wenrui zhang, yu wang, xiao zhang cs.db, cs.ar"
+    },
+    {
+      "arxiv_id": "2611.20765",
+      "title": "STA: A Split Temporal Adversary Method for Evaluating Robustness of Multimodal RL-based Driving Policies",
+      "authors": "Shenghao Xiong, Xiaolin Chang",
+      "affiliations": "Beijing Jiaotong University",
+      "published_date": "2026-11-16",
+      "categories": "cs.CR, cs.LG, cs.RO",
+      "abstract": "Multimodal reinforcement learning (MRL) offers a promising paradigm for autonomous driving by jointly leveraging complementary sensor observations to learn effective decision-making policies. However, its effectiveness critically depends on temporal alignment across modalities, making temporal inconsistency a fundamental vulnerability. Even subtle misalignment or latency can corrupt fused representations and ultimately lead to decision failures. Existing studies have explored adversarial attacks to induce cross-modal temporal inconsistencies, thereby enabling systematic evaluation of the temporal robustness of MRL policies. However, existing methods remain limited in generality, realism, and adaptivity. To address these limitations, we propose the Split Temporal Adversary (STA), which formulates multimodal temporal attacks as a unified decision process that jointly optimizes attack timing and modality selection under realistic policy-aware and budget-constrained settings. STA includes two mechanisms: a) a unified multimodal temporal perturbation mechanism that delays observations via historical states, removing the need for modality-specific noise; b) a split multimodal adversarial decision mechanism that jointly optimizes attack timing and modality selection through adaptive optimization while leveraging the victim policy's clean actions to identify sensitive decision patterns. We provide a theoretical analysis of the induced distribution shift and a modality selection principle. Experiments in the CARLA simulator show that STA more than doubles the collision rate of the strongest baseline against PPO while using 17.8\\% fewer attack attempts, and that it generalizes to a VLM-based driving policy. These results reveal temporal consistency as a critical vulnerability, highlighting temporal robustness as essential for safe autonomous driving.",
+      "summary_cn": "针对多模态强化学习驾驶策略依赖跨模态时间对齐、易受时序错位攻击的问题，提出分裂时序对抗方法 STA：把攻击建模为统一决策过程，在策略感知与预算约束下联合优化攻击时机与模态选择，用历史状态延迟观测实现统一扰动，并利用受害策略的干净动作识别敏感模式。CARLA 中对 PPO 的攻击使碰撞率超过最强基线两倍且攻击次数减少 17.8%，可迁移到 VLM 策略。",
+      "pdf_filename": "2611.20765.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "强化学习",
+        "自动驾驶",
+        "多模态",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20765",
+      "search_text": "sta: a split temporal adversary method for evaluating robustness of multimodal rl-based driving policies 强化学习 自动驾驶 多模态 仿真器 针对多模态强化学习驾驶策略依赖跨模态时间对齐、易受时序错位攻击的问题，提出分裂时序对抗方法 sta：把攻击建模为统一决策过程，在策略感知与预算约束下联合优化攻击时机与模态选择，用历史状态延迟观测实现统一扰动，并利用受害策略的干净动作识别敏感模式。carla 中对 ppo 的攻击使碰撞率超过最强基线两倍且攻击次数减少 17.8%，可迁移到 vlm 策略。 multimodal reinforcement learning (mrl) offers a promising paradigm for autonomous driving by jointly leveraging complementary sensor observations to learn effective decision-making policies. however, its effectiveness critically depends on temporal alignment across modalities, making temporal inconsistency a fundamental vulnerability. even subtle misalignment or latency can corrupt fused representations and ultimately lead to decision failures. existing studies have explored adversarial attacks to induce cross-modal temporal inconsistencies, thereby enabling systematic evaluation of the temporal robustness of mrl policies. however, existing methods remain limited in generality, realism, and adaptivity. to address these limitations, we propose the split temporal adversary (sta), which formulates multimodal temporal attacks as a unified decision process that jointly optimizes attack timing and modality selection under realistic policy-aware and budget-constrained settings. sta includes two mechanisms: a) a unified multimodal temporal perturbation mechanism that delays observations via historical states, removing the need for modality-specific noise; b) a split multimodal adversarial decision mechanism that jointly optimizes attack timing and modality selection through adaptive optimization while leveraging the victim policy's clean actions to identify sensitive decision patterns. we provide a theoretical analysis of the induced distribution shift and a modality selection principle. experiments in the carla simulator show that sta more than doubles the collision rate of the strongest baseline against ppo while using 17.8\\% fewer attack attempts, and that it generalizes to a vlm-based driving policy. these results reveal temporal consistency as a critical vulnerability, highlighting temporal robustness as essential for safe autonomous driving. beijing jiaotong university shenghao xiong, xiaolin chang cs.cr, cs.lg, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.20703",
+      "title": "Efficient Multi-View Generation with Iterative Global-Local Proxy Attention",
+      "authors": "Wei Tan, Kunming Luo, Hongyu Yan, Yu Zhang, Zihao Zhang, Xiatian Zhu, Lei Xie",
+      "affiliations": "Southeast University; HKUST; Southwest University; Chinese Academy of Sciences; University of Surrey",
+      "published_date": "2026-11-16",
+      "categories": "cs.CV",
+      "abstract": "Generating consistent multi-view RGB images and normal maps from a single input image provides complementary appearance and geometric cues for 3D reconstruction. However, maintaining cross-view consistency requires information exchange across viewpoints, and dense cross-view attention becomes computationally expensive as the number of views and spatial resolution increase. In this paper, we propose Global-Local Proxy Attention (GLPA) to reduce cross-view communication costs while preserving fine-grained within-view processing. Specifically, GLPA retains full-resolution interactions within each view and uses compact global proxies for cross-view communication. To further leverage the exchanged information, GLPA incorporates iterative proxy refinement, which rebuilds the proxies from updated features and reuses the same attention parameters for subsequent interactions within a single denoising step. We evaluate GLPA on two structurally different diffusion backbones, FLUX and Stable Diffusion. Experiments on FLUX show that GLPA achieves a $2.65\\times$ speedup in attention computation per denoising step over dense attention, while improving reconstruction IoU from 0.6849 to 0.7019 and reducing NVS LPIPS from 0.086 to 0.076. Results on Stable Diffusion further demonstrate the effectiveness of GLPA, with a $1.80\\times$ attention speedup and improvements across all five quality metrics.",
+      "summary_cn": "针对单图生成多视角 RGB 与法向图时跨视角注意力随视角与分辨率增长而昂贵的问题，提出全局-局部代理注意力 GLPA：视角内保留全分辨率交互，跨视角只用紧凑全局代理通信，并在单步去噪内迭代重建代理、复用同一套参数。FLUX 上注意力加速 2.65 倍，重建 IoU 从 0.6849 升至 0.7019、新视角 LPIPS 从 0.086 降至 0.076；Stable Diffusion 上加速 1.80 倍。",
+      "pdf_filename": "2611.20703.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.20703",
+      "search_text": "efficient multi-view generation with iterative global-local proxy attention  针对单图生成多视角 rgb 与法向图时跨视角注意力随视角与分辨率增长而昂贵的问题，提出全局-局部代理注意力 glpa：视角内保留全分辨率交互，跨视角只用紧凑全局代理通信，并在单步去噪内迭代重建代理、复用同一套参数。flux 上注意力加速 2.65 倍，重建 iou 从 0.6849 升至 0.7019、新视角 lpips 从 0.086 降至 0.076；stable diffusion 上加速 1.80 倍。 generating consistent multi-view rgb images and normal maps from a single input image provides complementary appearance and geometric cues for 3d reconstruction. however, maintaining cross-view consistency requires information exchange across viewpoints, and dense cross-view attention becomes computationally expensive as the number of views and spatial resolution increase. in this paper, we propose global-local proxy attention (glpa) to reduce cross-view communication costs while preserving fine-grained within-view processing. specifically, glpa retains full-resolution interactions within each view and uses compact global proxies for cross-view communication. to further leverage the exchanged information, glpa incorporates iterative proxy refinement, which rebuilds the proxies from updated features and reuses the same attention parameters for subsequent interactions within a single denoising step. we evaluate glpa on two structurally different diffusion backbones, flux and stable diffusion. experiments on flux show that glpa achieves a $2.65\\times$ speedup in attention computation per denoising step over dense attention, while improving reconstruction iou from 0.6849 to 0.7019 and reducing nvs lpips from 0.086 to 0.076. results on stable diffusion further demonstrate the effectiveness of glpa, with a $1.80\\times$ attention speedup and improvements across all five quality metrics. southeast university; hkust; southwest university; chinese academy of sciences; university of surrey wei tan, kunming luo, hongyu yan, yu zhang, zihao zhang, xiatian zhu, lei xie cs.cv"
+    },
+    {
+      "arxiv_id": "2611.20648",
+      "title": "Competent Autonomous Driving Through Fine Tuning Vision Language Action Models with Symbolic Traffic Rules",
+      "authors": "Barkin Dagda, Vinal Asodia, Iman Sharifi, Peng Wei, Saber Fallah",
+      "affiliations": "University of Surrey; George Washington University",
+      "published_date": "2026-11-16",
+      "categories": "cs.CV",
+      "abstract": "Vision-language-action (VLA) models offer a unified approach to perception, reasoning, and control for autonomous driving, but accurate action prediction alone does not establish compliance with traffic regulations. This paper presents a rule-guided VLA framework that incorporates symbolic traffic-rule feedback into policy optimisation. The framework combines supervised fine-tuning on expert demonstrations with reinforcement learning (RL) refinement using a reward that encourages encoded-rule compliance while penalising deviations from expert actions. Selected provisions of the United Kingdom Highway Code are formalised as executable first-order logic rules using PyReason, covering speed adaptation, following distance, and road-user priority. A frozen vision-language model extracts scene predicates, which are combined with vehicle-state information to assess the projected consequences of candidate control actions. Offline evaluation on held-out data collected in the CARLA simulator compares three group-based RL methods. The results show improvements in both action prediction accuracy and encoded-rule compliance over the supervised baseline. The best-performing variant increases the overall rule pass rate from 92.9% to 97.6%, with zero observed violations of the encoded road-user-priority check in the evaluated samples. These findings support symbolic rule feedback as a means of improving VLA policy alignment with explicit traffic-rule criteria.",
+      "summary_cn": "针对 VLA 驾驶模型动作预测准确但不保证遵守法规的问题，提出规则引导框架：把英国 Highway Code 部分条款用 PyReason 形式化为一阶逻辑规则，覆盖限速、跟车距离与路权；冻结视觉语言模型抽取场景谓词，与车辆状态一起评估候选动作后果，并以合规奖励加专家偏离惩罚做强化学习精调。CARLA 留出数据上整体规则通过率从 92.9% 提升到 97.6%，路权零违规。",
+      "pdf_filename": "2611.20648.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "强化学习",
+        "自动驾驶",
+        "多模态",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20648",
+      "search_text": "competent autonomous driving through fine tuning vision language action models with symbolic traffic rules 强化学习 自动驾驶 多模态 仿真器 针对 vla 驾驶模型动作预测准确但不保证遵守法规的问题，提出规则引导框架：把英国 highway code 部分条款用 pyreason 形式化为一阶逻辑规则，覆盖限速、跟车距离与路权；冻结视觉语言模型抽取场景谓词，与车辆状态一起评估候选动作后果，并以合规奖励加专家偏离惩罚做强化学习精调。carla 留出数据上整体规则通过率从 92.9% 提升到 97.6%，路权零违规。 vision-language-action (vla) models offer a unified approach to perception, reasoning, and control for autonomous driving, but accurate action prediction alone does not establish compliance with traffic regulations. this paper presents a rule-guided vla framework that incorporates symbolic traffic-rule feedback into policy optimisation. the framework combines supervised fine-tuning on expert demonstrations with reinforcement learning (rl) refinement using a reward that encourages encoded-rule compliance while penalising deviations from expert actions. selected provisions of the united kingdom highway code are formalised as executable first-order logic rules using pyreason, covering speed adaptation, following distance, and road-user priority. a frozen vision-language model extracts scene predicates, which are combined with vehicle-state information to assess the projected consequences of candidate control actions. offline evaluation on held-out data collected in the carla simulator compares three group-based rl methods. the results show improvements in both action prediction accuracy and encoded-rule compliance over the supervised baseline. the best-performing variant increases the overall rule pass rate from 92.9% to 97.6%, with zero observed violations of the encoded road-user-priority check in the evaluated samples. these findings support symbolic rule feedback as a means of improving vla policy alignment with explicit traffic-rule criteria. university of surrey; george washington university barkin dagda, vinal asodia, iman sharifi, peng wei, saber fallah cs.cv"
+    },
+    {
+      "arxiv_id": "2611.20574",
+      "title": "ExtremeDrive: A Real-World Dataset and Benchmark for Critical Driving",
+      "authors": "Xinhan Li, Yuhong Jiang, Shiyue Zhao, Junzhi Zhang, Chengkun He, Ruihai Ma, Shijie Zhao, Wenxuan Cheng, Jinbo Lv, Tao Liu",
+      "affiliations": "Tsinghua University; Xibu Zhiche (Chongqing) Technology Co., Ltd.",
+      "published_date": "2026-11-16",
+      "categories": "cs.RO, eess.SY",
+      "abstract": "Existing autonomous driving datasets and benchmarks provide extensive resources for routine driving, yet real-world data covering safety-critical scenarios and extreme environmental conditions remain limited. To address this gap, we present ExtremeDrive, a real-world dataset and benchmark covering emergency maneuvers, complex traffic interactions, and adverse conditions such as slippery or snow-covered roads, alongside routine driving. The dataset comprises 589 driving scenes curated from a larger pool of real-world driving recordings, with calibrated and aligned multisensor data and reviewed annotations of road structure and traffic participants. We further establish a benchmark to evaluate planned trajectories through simulated vehicle execution, measuring safety-related metrics and driving performance. Experiments at equal training set sizes show that incorporating critical driving data reduces trajectory prediction errors and improves mean critical-success rates in critical scenarios. ExtremeDrive provides a unified resource for learning and evaluating autonomous driving in safety-critical scenarios and extreme environmental conditions.",
+      "summary_cn": "论文发布 ExtremeDrive，面向安全关键与极端环境的真实驾驶数据集与基准：从真实行车记录筛选 589 个场景，覆盖紧急机动、复杂交通交互与湿滑积雪路面，提供标定对齐的多传感器数据与经复核的道路结构、交通参与者标注，并建立以仿真执行规划轨迹评估安全与驾驶性能的基准。等训练量对比显示加入关键场景数据可降低轨迹预测误差并提升关键场景成功率。",
+      "pdf_filename": "2611.20574.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "轨迹预测",
+        "规划",
+        "路面重建",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20574",
+      "search_text": "extremedrive: a real-world dataset and benchmark for critical driving 轨迹预测 规划 路面重建 自动驾驶 论文发布 extremedrive，面向安全关键与极端环境的真实驾驶数据集与基准：从真实行车记录筛选 589 个场景，覆盖紧急机动、复杂交通交互与湿滑积雪路面，提供标定对齐的多传感器数据与经复核的道路结构、交通参与者标注，并建立以仿真执行规划轨迹评估安全与驾驶性能的基准。等训练量对比显示加入关键场景数据可降低轨迹预测误差并提升关键场景成功率。 existing autonomous driving datasets and benchmarks provide extensive resources for routine driving, yet real-world data covering safety-critical scenarios and extreme environmental conditions remain limited. to address this gap, we present extremedrive, a real-world dataset and benchmark covering emergency maneuvers, complex traffic interactions, and adverse conditions such as slippery or snow-covered roads, alongside routine driving. the dataset comprises 589 driving scenes curated from a larger pool of real-world driving recordings, with calibrated and aligned multisensor data and reviewed annotations of road structure and traffic participants. we further establish a benchmark to evaluate planned trajectories through simulated vehicle execution, measuring safety-related metrics and driving performance. experiments at equal training set sizes show that incorporating critical driving data reduces trajectory prediction errors and improves mean critical-success rates in critical scenarios. extremedrive provides a unified resource for learning and evaluating autonomous driving in safety-critical scenarios and extreme environmental conditions. tsinghua university; xibu zhiche (chongqing) technology co., ltd. xinhan li, yuhong jiang, shiyue zhao, junzhi zhang, chengkun he, ruihai ma, shijie zhao, wenxuan cheng, jinbo lv, tao liu cs.ro, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.20546",
+      "title": "A Gaussian Primitive Data Management Framework for Efficient 3DGS Trajectory Rendering",
+      "authors": "Haolun Ma, Ziyi Liu, Zizhuo Xu, Chuhan Hu, Lei Li",
+      "affiliations": "HKUST (Guangzhou); Soochow University; HKUST",
+      "published_date": "2026-11-16",
+      "categories": "cs.DB, cs.CV, cs.GR",
+      "abstract": "Trajectory rendering, which renders novel views of a reconstructed 3D scene along a camera path, is a core operation in digital twins and autonomous inspection. Structured 3D Gaussian Splatting (3DGS) renders a single view in real time by decoding sparse anchors into Gaussians on demand, but it renders a trajectory view by view: every view projects all anchors to select them, re-decodes anchors already requested by neighboring views, and runs all steps on the GPU while the CPU idles. We treat this as a spatial data management problem, where anchors are spatial objects, views are range queries, and decoded Gaussians are shared derived data, and propose GDM-GS, which removes redundancy at three levels. Within a view, an anchor index and an occluder index answer each view as a holed-frustum range query, so out-of-view and provably hidden anchors are never decoded. Across views, shared materialization decodes each requested anchor once per group of consecutive views while preserving each view's selection. Across processors, a hybrid pipeline balances selections between the CPU and the GPU before grouped decoding under bounded memory. Experiments on large-scale public scenes show that GDM-GS substantially reduces trajectory rendering latency while preserving image quality.",
+      "summary_cn": "针对结构化 3DGS 沿轨迹渲染时逐视角重复投影与解码、GPU 独忙的问题，把轨迹渲染建模为空间数据管理，提出 GDM-GS 三层去冗余：视角内用锚点与遮挡索引做带洞视锥查询跳过不可见锚点，跨视角按连续视角组共享物化只解码一次，处理器间用 CPU/GPU 混合流水线均衡选择并有界内存下分组解码。大规模场景实验显著降低轨迹渲染延迟且保持画质。",
+      "pdf_filename": "2611.20546.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20546",
+      "search_text": "a gaussian primitive data management framework for efficient 3dgs trajectory rendering 3dgs 针对结构化 3dgs 沿轨迹渲染时逐视角重复投影与解码、gpu 独忙的问题，把轨迹渲染建模为空间数据管理，提出 gdm-gs 三层去冗余：视角内用锚点与遮挡索引做带洞视锥查询跳过不可见锚点，跨视角按连续视角组共享物化只解码一次，处理器间用 cpu/gpu 混合流水线均衡选择并有界内存下分组解码。大规模场景实验显著降低轨迹渲染延迟且保持画质。 trajectory rendering, which renders novel views of a reconstructed 3d scene along a camera path, is a core operation in digital twins and autonomous inspection. structured 3d gaussian splatting (3dgs) renders a single view in real time by decoding sparse anchors into gaussians on demand, but it renders a trajectory view by view: every view projects all anchors to select them, re-decodes anchors already requested by neighboring views, and runs all steps on the gpu while the cpu idles. we treat this as a spatial data management problem, where anchors are spatial objects, views are range queries, and decoded gaussians are shared derived data, and propose gdm-gs, which removes redundancy at three levels. within a view, an anchor index and an occluder index answer each view as a holed-frustum range query, so out-of-view and provably hidden anchors are never decoded. across views, shared materialization decodes each requested anchor once per group of consecutive views while preserving each view's selection. across processors, a hybrid pipeline balances selections between the cpu and the gpu before grouped decoding under bounded memory. experiments on large-scale public scenes show that gdm-gs substantially reduces trajectory rendering latency while preserving image quality. hkust (guangzhou); soochow university; hkust haolun ma, ziyi liu, zizhuo xu, chuhan hu, lei li cs.db, cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2611.20502",
+      "title": "Pointillist Maize: 3D Reconstruction of Field-Grown Maize Using RGB UAV Imagery",
+      "authors": "Dewi Endah Kharismawati, Toni Kazic",
+      "affiliations": "University of Missouri; The Ohio State University",
+      "published_date": "2026-11-16",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "Three-dimensional reconstruction can extend field phenotyping to individual maize organs, but thin, flexible, occluding structures and plant movement complicate reconstruction. We evaluated whether consumer-grade UAV RGB video processed with Structure from Motion and multi-view stereo could recover recognizable field-grown maize structures, and examined the effects of acquisition trajectories and frame sampling. COLMAP reconstructions preserved recognizable leaves, stems, tassel branches, ears, silks, and brace roots. For an equal-frame comparison, we reconstructed one plant from two sets of 295 frames from the same video: a single orbit sampled at 5 frames/second and three orbits at different altitudes (ribbon skirt) sampled at 2 frames/second. After ground removal, the reconstructions contained 520,601 and 375,318 points, respectively. The single orbit yielded greater point concentration within plant structures and fewer visible gaps, while the ribbon skirt yielded fewer scattered points and slightly lower proportions of isolated points. In densely planted nursery rows, visible voids occupied 17.57% of the rendered scene with one orbit at 1 frame/second, decreasing to 5.07% with additional serpentine passes and 2.68% when the original orbit was sampled at 3 frames/second. Additional observations also increased point dispersion associated with plant movement. A curlicue trajectory tested in a different field in 2024 produced distinguishable individual plants without visible duplicated structures, although substantial voids remained, mainly on the soil surface. These results demonstrate the feasibility of recovering recognizable maize organs from consumer UAV imagery and reveal trade-offs between acquisition strategies, reconstruction completeness, and point dispersion. Independent geometric validation is still needed before quantitative phenotyping.",
+      "summary_cn": "论文评估消费级无人机 RGB 视频经 SfM 与多视立体能否重建田间玉米器官：COLMAP 保留了可辨识的叶片、茎、雄穗分枝、果穗、花丝与气生根。同帧数对比中单轨道 5 帧每秒与三层裙摆轨迹 2 帧每秒分别得 52 万与 37.5 万点；密植行空洞占比从 17.57% 随补充航线降至 5.07%，提高采样帧率可降至 2.68%，但观察增多会带来植株运动引起的点散布。",
+      "pdf_filename": "2611.20502.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多视角立体"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20502",
+      "search_text": "pointillist maize: 3d reconstruction of field-grown maize using rgb uav imagery 多视角立体 论文评估消费级无人机 rgb 视频经 sfm 与多视立体能否重建田间玉米器官：colmap 保留了可辨识的叶片、茎、雄穗分枝、果穗、花丝与气生根。同帧数对比中单轨道 5 帧每秒与三层裙摆轨迹 2 帧每秒分别得 52 万与 37.5 万点；密植行空洞占比从 17.57% 随补充航线降至 5.07%，提高采样帧率可降至 2.68%，但观察增多会带来植株运动引起的点散布。 three-dimensional reconstruction can extend field phenotyping to individual maize organs, but thin, flexible, occluding structures and plant movement complicate reconstruction. we evaluated whether consumer-grade uav rgb video processed with structure from motion and multi-view stereo could recover recognizable field-grown maize structures, and examined the effects of acquisition trajectories and frame sampling. colmap reconstructions preserved recognizable leaves, stems, tassel branches, ears, silks, and brace roots. for an equal-frame comparison, we reconstructed one plant from two sets of 295 frames from the same video: a single orbit sampled at 5 frames/second and three orbits at different altitudes (ribbon skirt) sampled at 2 frames/second. after ground removal, the reconstructions contained 520,601 and 375,318 points, respectively. the single orbit yielded greater point concentration within plant structures and fewer visible gaps, while the ribbon skirt yielded fewer scattered points and slightly lower proportions of isolated points. in densely planted nursery rows, visible voids occupied 17.57% of the rendered scene with one orbit at 1 frame/second, decreasing to 5.07% with additional serpentine passes and 2.68% when the original orbit was sampled at 3 frames/second. additional observations also increased point dispersion associated with plant movement. a curlicue trajectory tested in a different field in 2024 produced distinguishable individual plants without visible duplicated structures, although substantial voids remained, mainly on the soil surface. these results demonstrate the feasibility of recovering recognizable maize organs from consumer uav imagery and reveal trade-offs between acquisition strategies, reconstruction completeness, and point dispersion. independent geometric validation is still needed before quantitative phenotyping. university of missouri; the ohio state university dewi endah kharismawati, toni kazic cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2611.20385",
+      "title": "DominoBench: Evaluating Multi-Step Physical Reasoning from Still Images",
+      "authors": "Emilio Ferrara",
+      "affiliations": "University of Southern California",
+      "published_date": "2026-11-16",
+      "categories": "cs.CV",
+      "abstract": "Can a vision-language model look at a picture of a chain reaction and tell what will happen? Recent multimodal models describe scenes fluently and solve textbook physics problems, which suggests they should also predict how a scene of ramps, ledges, pendulums, seesaws and dominoes plays out once a ball is pushed. We tested this claim on 30 models from 10 families and reached a clear conclusion: unaided, no model predicts the outcome reliably. We built DominoBench, a benchmark of still images of 2D rigid-body scenes whose outcome a physics simulator computes. It holds 854 items in 427 minimal pairs, in which a change of one to three grid steps in one quantity decides whether one person survives, and every item comes with a four-rung hint ladder ending in the exact calculation that decides the outcome. Unaided, frontier models from Anthropic, Google and OpenAI are right about the person whose fate flips in at most 72% of items and answer both twins of a pair correctly in at most 34%. Pointing at the deciding step helps little, and exact geometry given as text barely helps, yet once the deciding calculation and the quantities it needs, including speeds that a still image cannot show, are written out, the same models reach 82-92% on the deciding person, while small open-weight models stay near chance. Physical prediction from a still image therefore fails at the quantitative step: the strongest models use the deciding quantity when they are given it, but do not produce it on their own. For models that plan or act in the physical world, a fluent account of a scene is thus no evidence of a correct prediction: such models must find and compute the deciding quantity unprompted, and DominoBench tests whether they do.",
+      "summary_cn": "论文提出 DominoBench，用 854 张二维刚体场景静态图（427 个最小对）考察视觉语言模型能否预测连锁反应结果，每项配四阶提示梯度直至给出决定性计算。测试 30 个模型：无辅助时最强模型在命运翻转者上正确率不超过 72%，同对全对不超过 34%；把决定量（含静态图无法显示的速度）写出后可达 82–92%，说明失败点在数量化推理。",
+      "pdf_filename": "2611.20385.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多模态",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20385",
+      "search_text": "dominobench: evaluating multi-step physical reasoning from still images 多模态 仿真器 论文提出 dominobench，用 854 张二维刚体场景静态图（427 个最小对）考察视觉语言模型能否预测连锁反应结果，每项配四阶提示梯度直至给出决定性计算。测试 30 个模型：无辅助时最强模型在命运翻转者上正确率不超过 72%，同对全对不超过 34%；把决定量（含静态图无法显示的速度）写出后可达 82–92%，说明失败点在数量化推理。 can a vision-language model look at a picture of a chain reaction and tell what will happen? recent multimodal models describe scenes fluently and solve textbook physics problems, which suggests they should also predict how a scene of ramps, ledges, pendulums, seesaws and dominoes plays out once a ball is pushed. we tested this claim on 30 models from 10 families and reached a clear conclusion: unaided, no model predicts the outcome reliably. we built dominobench, a benchmark of still images of 2d rigid-body scenes whose outcome a physics simulator computes. it holds 854 items in 427 minimal pairs, in which a change of one to three grid steps in one quantity decides whether one person survives, and every item comes with a four-rung hint ladder ending in the exact calculation that decides the outcome. unaided, frontier models from anthropic, google and openai are right about the person whose fate flips in at most 72% of items and answer both twins of a pair correctly in at most 34%. pointing at the deciding step helps little, and exact geometry given as text barely helps, yet once the deciding calculation and the quantities it needs, including speeds that a still image cannot show, are written out, the same models reach 82-92% on the deciding person, while small open-weight models stay near chance. physical prediction from a still image therefore fails at the quantitative step: the strongest models use the deciding quantity when they are given it, but do not produce it on their own. for models that plan or act in the physical world, a fluent account of a scene is thus no evidence of a correct prediction: such models must find and compute the deciding quantity unprompted, and dominobench tests whether they do. university of southern california emilio ferrara cs.cv"
+    },
+    {
+      "arxiv_id": "2611.20324",
+      "title": "High-Speed Forward and Reverse Tractor-Trailer Driving with Learned Vehicle Dynamics",
+      "authors": "Aaron Chen, David Shen, Taekyung Kim, Kaleb Ben Naveed, Dimitra Panagou",
+      "affiliations": "University of Michigan",
+      "published_date": "2026-11-15",
+      "categories": "cs.RO, eess.SY",
+      "abstract": "Tractor-trailer systems are difficult to control, especially unstable during reverse motion, and their dynamics depend on difficult-to-measure factors, including road friction and suspension coefficients. We introduce a learned dynamics model for tractor-trailer control and compare it with a reduced-order dynamics model with Fiala tire forces as an analytic baseline. Specifically, we compare a model predictive path integral (MPPI) controller that uses the learned dynamics model to an MPPI controller that uses the analytic model, as well as to three additional baseline controllers. In the main closed-loop tracking experiments across four simulated environments, MPPI with learned dynamics achieves mean speeds closer to the target magnitudes and lower root-mean-square (RMS) hitch angles than MPPI with the analytic model at every tested setpoint, with higher completion rates in seven of eight reverse configurations.",
+      "summary_cn": "针对牵引-挂车系统高速前进与倒车时动力学不确定的问题，提出以定长状态动作历史为输入的学习动力学模型，与含 Fiala 轮胎力的降阶解析模型分别驱动 MPPI，并设三个基线控制器。四个仿真环境的闭环跟踪中，学习模型版 MPPI 在每个设定速度上更接近目标、挂车角 RMS 更小，八种倒车配置中七种完成率更高，说明学习动力学能补偿路面摩擦与悬架等难测因素。",
+      "pdf_filename": "2611.20324.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "路面重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20324",
+      "search_text": "high-speed forward and reverse tractor-trailer driving with learned vehicle dynamics 闭环仿真 路面重建 针对牵引-挂车系统高速前进与倒车时动力学不确定的问题，提出以定长状态动作历史为输入的学习动力学模型，与含 fiala 轮胎力的降阶解析模型分别驱动 mppi，并设三个基线控制器。四个仿真环境的闭环跟踪中，学习模型版 mppi 在每个设定速度上更接近目标、挂车角 rms 更小，八种倒车配置中七种完成率更高，说明学习动力学能补偿路面摩擦与悬架等难测因素。 tractor-trailer systems are difficult to control, especially unstable during reverse motion, and their dynamics depend on difficult-to-measure factors, including road friction and suspension coefficients. we introduce a learned dynamics model for tractor-trailer control and compare it with a reduced-order dynamics model with fiala tire forces as an analytic baseline. specifically, we compare a model predictive path integral (mppi) controller that uses the learned dynamics model to an mppi controller that uses the analytic model, as well as to three additional baseline controllers. in the main closed-loop tracking experiments across four simulated environments, mppi with learned dynamics achieves mean speeds closer to the target magnitudes and lower root-mean-square (rms) hitch angles than mppi with the analytic model at every tested setpoint, with higher completion rates in seven of eight reverse configurations. university of michigan aaron chen, david shen, taekyung kim, kaleb ben naveed, dimitra panagou cs.ro, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.20307",
+      "title": "PoCoAttn: Position-Content Collaborative Sparse Attention for Fast and High-Fidelity Video Generation",
+      "authors": "Jianwen Wu, Meiling Wang, Junkang Zhou, Yipeng Shen, Haoran You",
+      "affiliations": "Purdue University",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV, cs.LG",
+      "abstract": "Video diffusion transformers rely on 3D full attention over tens of thousands of spatiotemporal tokens, and its quadratic cost dominates inference latency. Sparse attention reduces this cost, but existing methods face a dilemma: static methods apply predefined masks and cannot capture input-dependent attention, whereas dynamic methods reconstruct the sparse mask repeatedly, paying online to rediscover positional structure that is largely stable across inputs. To this end, we propose PoCoAttn, a training-free sparse attention framework that separates input-stable from input-dependent attention and resolves the former offline and the latter online. PoCoAttn features: (1) A relative-offset analysis of 3D query-key pairs, which shows that video attention decomposes into an input-stable positional prior that carries most of the attention mass and a small content-dependent residual. (2) A position-content collaborative sparse attention mechanism, which retrieves positional keys from offline-calibrated tables, selects content keys online with a head-adaptive ratio between the two sources, and compensates for the discarded keys to approximate full attention. (3) A step-adaptive budget allocation algorithm, which models how early-step sparse attention errors are amplified along the denoising trajectory and derives the optimal sparsity budget per step. Extensive experiments across four video diffusion models and three tasks show that PoCoAttn consistently achieves a better speed-fidelity Pareto frontier than state-of-the-art (SOTA) methods, improving PSNR by 1.9 to 5.0 dB over baselines and delivering up to 4.1$\\times$ attention and 2.0$\\times$ denoising speedups over dense FlashAttention-3 attention.",
+      "summary_cn": "针对视频扩散 Transformer 三维全注意力二次复杂度的瓶颈，提出免训练稀疏注意力 PoCoAttn：相对偏移分析表明注意力可分解为随输入稳定的定位先验与少量内容残差，前者用离线标定表检索、后者在线选取并按头自适应融合，再补偿被丢弃键并按去噪步分配预算。四个视频模型三类任务上 PSNR 提升 1.9–5.0 dB，注意力加速最高 4.1 倍。",
+      "pdf_filename": "2611.20307.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "视频生成",
+        "扩散模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20307",
+      "search_text": "pocoattn: position-content collaborative sparse attention for fast and high-fidelity video generation 视频生成 扩散模型 针对视频扩散 transformer 三维全注意力二次复杂度的瓶颈，提出免训练稀疏注意力 pocoattn：相对偏移分析表明注意力可分解为随输入稳定的定位先验与少量内容残差，前者用离线标定表检索、后者在线选取并按头自适应融合，再补偿被丢弃键并按去噪步分配预算。四个视频模型三类任务上 psnr 提升 1.9–5.0 db，注意力加速最高 4.1 倍。 video diffusion transformers rely on 3d full attention over tens of thousands of spatiotemporal tokens, and its quadratic cost dominates inference latency. sparse attention reduces this cost, but existing methods face a dilemma: static methods apply predefined masks and cannot capture input-dependent attention, whereas dynamic methods reconstruct the sparse mask repeatedly, paying online to rediscover positional structure that is largely stable across inputs. to this end, we propose pocoattn, a training-free sparse attention framework that separates input-stable from input-dependent attention and resolves the former offline and the latter online. pocoattn features: (1) a relative-offset analysis of 3d query-key pairs, which shows that video attention decomposes into an input-stable positional prior that carries most of the attention mass and a small content-dependent residual. (2) a position-content collaborative sparse attention mechanism, which retrieves positional keys from offline-calibrated tables, selects content keys online with a head-adaptive ratio between the two sources, and compensates for the discarded keys to approximate full attention. (3) a step-adaptive budget allocation algorithm, which models how early-step sparse attention errors are amplified along the denoising trajectory and derives the optimal sparsity budget per step. extensive experiments across four video diffusion models and three tasks show that pocoattn consistently achieves a better speed-fidelity pareto frontier than state-of-the-art (sota) methods, improving psnr by 1.9 to 5.0 db over baselines and delivering up to 4.1$\\times$ attention and 2.0$\\times$ denoising speedups over dense flashattention-3 attention. purdue university jianwen wu, meiling wang, junkang zhou, yipeng shen, haoran you cs.cv, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.20227",
+      "title": "Learning From the Best: What Makes Popular Hugging Face Models?",
+      "authors": "Yinan Wu, Zhou Yang, Bowen Xu, Bo Wang, Bach Le, David Lo",
+      "affiliations": "North Carolina State University; University of Alberta; Alberta Machine Intelligence Institute; Beijing Jiaotong University; The University of Melbourne; Singapore Management University",
+      "published_date": "2026-11-15",
+      "categories": "cs.SE",
+      "abstract": "Hugging Face has become a central platform for sharing and reusing pre-trained models, yet it remains unclear which practices are associated with higher visibility and adoption. Prior studies describe model reuse and model-card quality but do not systematically compare popular and unpopular models across documentation, repository structure, platform metadata, and technical metadata. We studied 66,909 Hugging Face models collected on 2026-02-28 and extracted 31 features across four dimensions: Documentation, Models, Platforms, and Techniques. For downloads and likes, we compared the top 10% popular models with the bottom 80% using statistical tests and effect sizes, trained five classifiers to predict popularity, ranked feature importance with the best-performing model, and tested whether predictions held across model domains and contributor affiliations. Popular models consistently had longer model cards, more code examples, and more GitHub and arXiv links, while quantized models showed contrasting patterns under downloads and likes. A Random Forest reached AUC 0.861 for downloads and 0.848 for likes, with root-level file counts and model size also among the most important features. Cross-group transfer stayed mostly above random but dropped by 0.12-0.17 AUC on average, showing that prediction performance was partly group-specific. The findings remained stable after removing download outliers and under alternative popularity thresholds, and a manual review of popular model cards linked the key documentation features to concrete content. We derive recommendations for model practitioners and directions for future research on model-sharing platforms.",
+      "summary_cn": "论文以 2026 年 2 月抓取的 66,909 个 Hugging Face 模型为样本，从文档、模型、平台与技术四维度提取 31 个特征，比较下载量与点赞前 10% 与后 80% 的差异并训练五个分类器预测流行度。结果显示模型卡完整度、许可证与框架标注等可解释特征与流行度显著相关，但整体可预测性有限，可见度更多由发布实践与生态位决定。",
+      "pdf_filename": "2611.20227.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.20227",
+      "search_text": "learning from the best: what makes popular hugging face models?  论文以 2026 年 2 月抓取的 66,909 个 hugging face 模型为样本，从文档、模型、平台与技术四维度提取 31 个特征，比较下载量与点赞前 10% 与后 80% 的差异并训练五个分类器预测流行度。结果显示模型卡完整度、许可证与框架标注等可解释特征与流行度显著相关，但整体可预测性有限，可见度更多由发布实践与生态位决定。 hugging face has become a central platform for sharing and reusing pre-trained models, yet it remains unclear which practices are associated with higher visibility and adoption. prior studies describe model reuse and model-card quality but do not systematically compare popular and unpopular models across documentation, repository structure, platform metadata, and technical metadata. we studied 66,909 hugging face models collected on 2026-02-28 and extracted 31 features across four dimensions: documentation, models, platforms, and techniques. for downloads and likes, we compared the top 10% popular models with the bottom 80% using statistical tests and effect sizes, trained five classifiers to predict popularity, ranked feature importance with the best-performing model, and tested whether predictions held across model domains and contributor affiliations. popular models consistently had longer model cards, more code examples, and more github and arxiv links, while quantized models showed contrasting patterns under downloads and likes. a random forest reached auc 0.861 for downloads and 0.848 for likes, with root-level file counts and model size also among the most important features. cross-group transfer stayed mostly above random but dropped by 0.12-0.17 auc on average, showing that prediction performance was partly group-specific. the findings remained stable after removing download outliers and under alternative popularity thresholds, and a manual review of popular model cards linked the key documentation features to concrete content. we derive recommendations for model practitioners and directions for future research on model-sharing platforms. north carolina state university; university of alberta; alberta machine intelligence institute; beijing jiaotong university; the university of melbourne; singapore management university yinan wu, zhou yang, bowen xu, bo wang, bach le, david lo cs.se"
+    },
+    {
+      "arxiv_id": "2611.20218",
+      "title": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
+      "authors": "Xinping Lei, Minghao Liu, Ruijie Zhu, Xiaohui Hu, Xingqiao Li, Ao Zhang, Wenhao Chai, Han Li, Tao Wang, Jingyuan Zhang, Enduo Zhao, Yunfeng Shi, Yiming Liang, Zetao Yang, Xingjian Wang, Yifan Yao, Xinkai Ma, Yingru Li, Tianhan Yang, Huan Zhou, Weiran Shi, Shen Yan, Jiaheng Liu, Stephen Huang, Eli Cheung, Weihao Xuan",
+      "affiliations": "TokenWave AI",
+      "published_date": "2026-11-15",
+      "categories": "cs.SE, cs.AI",
+      "abstract": "A coding agent working within a software organization must establish what to build, collaborate with colleagues, and verify what it delivers. We introduce SWE-CoWork, a benchmark comprising 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains. Each assignment places an agent in a simulated engineering organization with 26 colleagues who have distinct responsibilities, bounded knowledge, and controlled collaboration behavior. Starting from a brief handoff, agents must recover requirements distributed across colleagues and workplace records, reconcile conflicting evidence, and implement changes evaluated by private executable tests. We evaluate eleven models and find a substantial gap between partial implementation and complete task delivery. The two leading models satisfy approximately 63% of fail-to-pass (F2P) tests but complete fewer than 8% of assignments. Providing complete requirements upfront improves F2P by approximately 16 percentage points for Seed Evolving and GPT-6 Astra, yet leaves complete task success unchanged. Requirement-level trajectory analysis reveals failures throughout the delivery process: Claude-Opus-5.5 directs a mean of 93% of first questions about queried cards to their accountable owners across runs but obtains only 64% of colleague-held requirements. Deferred questions go unfollowed, implementations remain incomplete even after requirements are acquired, and 31% of requirements reported as completed fail their tests. These findings highlight sustained requirement tracking, from clarification through implementation, verification, and handoff, as a key challenge for reliable autonomous software engineering.",
+      "summary_cn": "论文提出 SWE-CoWork，把编码智能体放进模拟软件组织：101 个任务覆盖 101 个真实仓库、11 种语言、12 类应用，每个任务配 26 个职责与知识边界不同的同事，智能体需追问需求、消解冲突证据并通过私有测试。评测 11 个模型发现部分实现与完整交付差距巨大：最强两个模型通过约 63% 的测试，但完成任务不足 8%。",
+      "pdf_filename": "2611.20218.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.20218",
+      "search_text": "swe-cowork: benchmarking coding agents as digital employees in organizations  论文提出 swe-cowork，把编码智能体放进模拟软件组织：101 个任务覆盖 101 个真实仓库、11 种语言、12 类应用，每个任务配 26 个职责与知识边界不同的同事，智能体需追问需求、消解冲突证据并通过私有测试。评测 11 个模型发现部分实现与完整交付差距巨大：最强两个模型通过约 63% 的测试，但完成任务不足 8%。 a coding agent working within a software organization must establish what to build, collaborate with colleagues, and verify what it delivers. we introduce swe-cowork, a benchmark comprising 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains. each assignment places an agent in a simulated engineering organization with 26 colleagues who have distinct responsibilities, bounded knowledge, and controlled collaboration behavior. starting from a brief handoff, agents must recover requirements distributed across colleagues and workplace records, reconcile conflicting evidence, and implement changes evaluated by private executable tests. we evaluate eleven models and find a substantial gap between partial implementation and complete task delivery. the two leading models satisfy approximately 63% of fail-to-pass (f2p) tests but complete fewer than 8% of assignments. providing complete requirements upfront improves f2p by approximately 16 percentage points for seed evolving and gpt-6 astra, yet leaves complete task success unchanged. requirement-level trajectory analysis reveals failures throughout the delivery process: claude-opus-5.5 directs a mean of 93% of first questions about queried cards to their accountable owners across runs but obtains only 64% of colleague-held requirements. deferred questions go unfollowed, implementations remain incomplete even after requirements are acquired, and 31% of requirements reported as completed fail their tests. these findings highlight sustained requirement tracking, from clarification through implementation, verification, and handoff, as a key challenge for reliable autonomous software engineering. tokenwave ai xinping lei, minghao liu, ruijie zhu, xiaohui hu, xingqiao li, ao zhang, wenhao chai, han li, tao wang, jingyuan zhang, enduo zhao, yunfeng shi, yiming liang, zetao yang, xingjian wang, yifan yao, xinkai ma, yingru li, tianhan yang, huan zhou, weiran shi, shen yan, jiaheng liu, stephen huang, eli cheung, weihao xuan cs.se, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.20112",
+      "title": "Washout-free synchronization, parameter estimation and uncertainty quantification of echo state networks",
+      "authors": "Andrea Nóvoa",
+      "affiliations": "Imperial College London",
+      "published_date": "2026-11-15",
+      "categories": "nlin.CD, cs.LG",
+      "abstract": "Echo state networks (ESNs) forecast chaotic systems for several Lyapunov times. Like all recurrent networks, ESNs require a washout before forecasting, i.e., a phase in which the full state drives the network until the reservoir state synchronizes with the system. At deployment, however, sensors measure only part of the state, with noise and at a lower sampling rate than the training data. We propose a washout-free deployment of ESNs via ensemble data assimilation. In closed loop, the ESN is a Markovian dynamical system; hence, a sequential filter can correct its reservoir state whenever data are available. The filter synchronizes an ensemble of reservoir states, drawn from the training data, with the system, and quantifies the forecast uncertainty. We extend the method to parametric ESNs, to infer physical parameters, and to parallel ESNs with localization, to forecast high-dimensional systems. We test the method on the Lorenz-63 and Lorenz-96 systems. First, the filter synchronizes the ESN with a fraction of the data of a washout. Second, the filter deploys one full-state ESN from a subset of its components, which a washout cannot do. Third, the filter estimates a forcing that is not in the training data, and the estimated forcing lengthens the forecast. Fourth, localization synchronizes a parallel ESN with eight times fewer members than the global filter. Fifth, the ensemble spread signals, without the true state, when the ESN synchronizes and when the filter fails. This work enables the deployment of ESNs from partial, sparse and noisy observations.",
+      "summary_cn": "针对回声状态网络部署时无法获得全状态、需要预热同步的问题，提出用集合数据同化实现免预热部署：闭环下网络是马尔可夫动力系统，可在有观测时用序贯滤波校正水库状态；滤波器把训练数据抽取的状态集合与系统同步并给出不确定性，方法可扩展到参数化网络做在线估计。多个混沌系统上验证了稀疏含噪观测下仍能稳定预测数倍 Lyapunov 时间。",
+      "pdf_filename": "2611.20112.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20112",
+      "search_text": "washout-free synchronization, parameter estimation and uncertainty quantification of echo state networks 闭环仿真 针对回声状态网络部署时无法获得全状态、需要预热同步的问题，提出用集合数据同化实现免预热部署：闭环下网络是马尔可夫动力系统，可在有观测时用序贯滤波校正水库状态；滤波器把训练数据抽取的状态集合与系统同步并给出不确定性，方法可扩展到参数化网络做在线估计。多个混沌系统上验证了稀疏含噪观测下仍能稳定预测数倍 lyapunov 时间。 echo state networks (esns) forecast chaotic systems for several lyapunov times. like all recurrent networks, esns require a washout before forecasting, i.e., a phase in which the full state drives the network until the reservoir state synchronizes with the system. at deployment, however, sensors measure only part of the state, with noise and at a lower sampling rate than the training data. we propose a washout-free deployment of esns via ensemble data assimilation. in closed loop, the esn is a markovian dynamical system; hence, a sequential filter can correct its reservoir state whenever data are available. the filter synchronizes an ensemble of reservoir states, drawn from the training data, with the system, and quantifies the forecast uncertainty. we extend the method to parametric esns, to infer physical parameters, and to parallel esns with localization, to forecast high-dimensional systems. we test the method on the lorenz-63 and lorenz-96 systems. first, the filter synchronizes the esn with a fraction of the data of a washout. second, the filter deploys one full-state esn from a subset of its components, which a washout cannot do. third, the filter estimates a forcing that is not in the training data, and the estimated forcing lengthens the forecast. fourth, localization synchronizes a parallel esn with eight times fewer members than the global filter. fifth, the ensemble spread signals, without the true state, when the esn synchronizes and when the filter fails. this work enables the deployment of esns from partial, sparse and noisy observations. imperial college london andrea nóvoa nlin.cd, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.20107",
+      "title": "SAFER: Navigating the Exploration-Exploitation Dilemma in World-Model-Based Planning for Autonomous Driving",
+      "authors": "Yansong Qu, Zilin Huang, Zihao Sheng, Sikai Chen, Samuel Labi",
+      "affiliations": "Purdue University; University of Wisconsin–Madison",
+      "published_date": "2026-11-15",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "An autonomous vehicle must foresee the consequences of its actions, especially in the rare, time-critical situations where crashes happen. A world model offers this foresight, but only within the coverage of its training data, which poses an exploration-exploitation dilemma. Within this coverage a planner can hardly improve on the data, and beyond it the model's errors mislead it. Logs of competent driving rarely contain the failures that would widen the coverage, and agents that learn from interaction gain them only by failing themselves, without being shown what to do instead. We propose SAFER, a framework that learns offline from failures that others make, judged by an expert, and keeps learning online from its own driving. Offline, partially trained agents and scripted, recoverable perturbations Stage failures in simulation, and an expert Annotates every visited state with its action and value, so that much of what the planner explores is covered before it drives. In planning, a chunked latent world model Foresees the consequences fast enough for real-time use, and a risk-aware sampling-based planner Evaluates candidate maneuvers by their return minus a bounded collision penalty. Online, a loop continuously Refines the model wherever this driving leaves the coverage of the offline data. In closed-loop evaluation against the compared methods, SAFER reaches the highest route completion and reward per step on the CARLA Leaderboard routes, 0.95 and 0.77 from a privileged bird's-eye view, and the highest episode reward in MetaDrive, 53.4 in regular and 49.0 in safety-critical traffic. Project page: https://ys-qu.github.io/safer-website.",
+      "summary_cn": "针对世界模型规划受限于数据覆盖、超出覆盖即被模型误差误导的问题，提出 SAFER：离线用部分训练智能体与脚本化扰动在仿真中制造失败，由专家标注动作与价值；规划时用分块隐变量世界模型快速预测后果，风险感知采样规划器以回报减有界碰撞惩罚选机动；在线用自车数据修正模型。CARLA 闭环完成率 0.95、每步回报 0.77，MetaDrive 回报 53.4/49.0 均最优。",
+      "pdf_filename": "2611.20107.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20107",
+      "search_text": "safer: navigating the exploration-exploitation dilemma in world-model-based planning for autonomous driving 世界模型 闭环仿真 规划 自动驾驶 针对世界模型规划受限于数据覆盖、超出覆盖即被模型误差误导的问题，提出 safer：离线用部分训练智能体与脚本化扰动在仿真中制造失败，由专家标注动作与价值；规划时用分块隐变量世界模型快速预测后果，风险感知采样规划器以回报减有界碰撞惩罚选机动；在线用自车数据修正模型。carla 闭环完成率 0.95、每步回报 0.77，metadrive 回报 53.4/49.0 均最优。 an autonomous vehicle must foresee the consequences of its actions, especially in the rare, time-critical situations where crashes happen. a world model offers this foresight, but only within the coverage of its training data, which poses an exploration-exploitation dilemma. within this coverage a planner can hardly improve on the data, and beyond it the model's errors mislead it. logs of competent driving rarely contain the failures that would widen the coverage, and agents that learn from interaction gain them only by failing themselves, without being shown what to do instead. we propose safer, a framework that learns offline from failures that others make, judged by an expert, and keeps learning online from its own driving. offline, partially trained agents and scripted, recoverable perturbations stage failures in simulation, and an expert annotates every visited state with its action and value, so that much of what the planner explores is covered before it drives. in planning, a chunked latent world model foresees the consequences fast enough for real-time use, and a risk-aware sampling-based planner evaluates candidate maneuvers by their return minus a bounded collision penalty. online, a loop continuously refines the model wherever this driving leaves the coverage of the offline data. in closed-loop evaluation against the compared methods, safer reaches the highest route completion and reward per step on the carla leaderboard routes, 0.95 and 0.77 from a privileged bird's-eye view, and the highest episode reward in metadrive, 53.4 in regular and 49.0 in safety-critical traffic. project page: https://ys-qu.github.io/safer-website. purdue university; university of wisconsin–madison yansong qu, zilin huang, zihao sheng, sikai chen, samuel labi cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.20092",
+      "title": "Geo2Gcode: From 3D Geometry to CNC Programs through Structured Machining Primitives",
+      "authors": "Sangmin Hong, Dohee Cho, Mohsen Yavartanoo, Kyoung Mu Lee",
+      "affiliations": "Seoul National University",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV",
+      "abstract": "Turning a 3D shape into a Computer Numerical Control (CNC) program is still largely manual. For every part, a machinist chooses setups, tools, step-downs, and toolpath patterns. We present Geo2Gcode, which converts a target mesh directly into standard G-code through structured machining primitives. Each primitive couples an indexed machining direction, a closed per-view reconstruction of the target, and explicit tool-radius, layer-height, and clearing-pattern parameters, and compiles deterministically into layerwise toolpaths via signed-distance queries. Most of the fidelity comes from this compiler. A lightweight selector trained with a voxel stock simulator fills in primitive parameters without per-part manual settings, approaching the finest fixed setting at about a quarter of its toolpath length. In simulation on ABC parts, Geo2Gcode reaches roughing fidelity comparable to an expert-tuned commercial CAM setup with a moderately longer toolpath, and clearly improves on a default CAM configuration. Generated programs run in a commercial G-code simulator, and one part is machined on a physical CNC mill. These results demonstrate that roughing programs can be generated directly from geometry without per-part CAM tuning.",
+      "summary_cn": "针对三维模型到 CNC 程序仍依赖人工设定工序的问题，提出 Geo2Gcode：把网格分解为结构化加工基元，每个基元绑定加工方向、逐视角闭合重建与刀具半径、层高、清角模式等参数，再经有符号距离查询确定性编译成分层刀路；轻量选择器借助体素毛坯模拟器自动填参数。ABC 零件上以约四分之一刀路长度接近最细设置，保真度与专家调优 CAM 相当。",
+      "pdf_filename": "2611.20092.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20092",
+      "search_text": "geo2gcode: from 3d geometry to cnc programs through structured machining primitives 仿真器 针对三维模型到 cnc 程序仍依赖人工设定工序的问题，提出 geo2gcode：把网格分解为结构化加工基元，每个基元绑定加工方向、逐视角闭合重建与刀具半径、层高、清角模式等参数，再经有符号距离查询确定性编译成分层刀路；轻量选择器借助体素毛坯模拟器自动填参数。abc 零件上以约四分之一刀路长度接近最细设置，保真度与专家调优 cam 相当。 turning a 3d shape into a computer numerical control (cnc) program is still largely manual. for every part, a machinist chooses setups, tools, step-downs, and toolpath patterns. we present geo2gcode, which converts a target mesh directly into standard g-code through structured machining primitives. each primitive couples an indexed machining direction, a closed per-view reconstruction of the target, and explicit tool-radius, layer-height, and clearing-pattern parameters, and compiles deterministically into layerwise toolpaths via signed-distance queries. most of the fidelity comes from this compiler. a lightweight selector trained with a voxel stock simulator fills in primitive parameters without per-part manual settings, approaching the finest fixed setting at about a quarter of its toolpath length. in simulation on abc parts, geo2gcode reaches roughing fidelity comparable to an expert-tuned commercial cam setup with a moderately longer toolpath, and clearly improves on a default cam configuration. generated programs run in a commercial g-code simulator, and one part is machined on a physical cnc mill. these results demonstrate that roughing programs can be generated directly from geometry without per-part cam tuning. seoul national university sangmin hong, dohee cho, mohsen yavartanoo, kyoung mu lee cs.cv"
+    },
+    {
+      "arxiv_id": "2611.20089",
+      "title": "See the Lives of Stars in a Handful of Light",
+      "authors": "Shuhong Liu, Gengjia Chang, Quanfeng Xu, Ziteng Cui, Qianyu Zhou, Xiaoyu Dong, Lin Gu, Tatsuya Harada",
+      "affiliations": "The University of Tokyo; I2WM; Shanghai Astronomical Observatory; Tohoku University; RIKEN AIP",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV",
+      "abstract": "Galaxies evolve over hundreds of millions of years, and no telescope has ever watched one move. Cosmological simulations make this evolution visible as a sequence of multi-view images, inviting the question of whether a galaxy can be recovered in four dimensions from its images. This setting defeats existing dynamic scene methods, since millions of stars span only a few pixels each, faint populations blend into diffuse light, and free deformations reproduce the images without obeying gravity. We present Cosmos4D, which rests on two components. Gravitational 4D Gaussian Splatting represents each star as a self-luminous Gaussian whose motion is integrated through a gravitational potential and a low-dimensional force field shared by all stars. Luminosity-stratified dynamics give bright stars individual orbits supervised across image scales and carry faint populations with a velocity field estimated from optical flow. We further build a 4D dataset of eight galaxies from four cosmological simulations, on which Cosmos4D outperforms dynamic Gaussian baselines in both photometric quality and physical accuracy. With these advancements, we glimpse eight hundred million years of a galaxy's life in ninety-six frames.",
+      "summary_cn": "论文提出 Cosmos4D，从少量多视角图像重建星系四维演化：每颗恒星建模为自发光高斯，运动由引力势与全体共享的低维力场积分得到；按光度分层，亮星用跨尺度监督的个体轨道，暗星群体用光流速度场承载。构建四个宇宙学模拟、八个星系的 4D 数据集，光度质量与物理精度均优于动态高斯基线，用 96 帧呈现八亿年演化。",
+      "pdf_filename": "2611.20089.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS",
+        "4DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20089",
+      "search_text": "see the lives of stars in a handful of light 3dgs 4dgs 论文提出 cosmos4d，从少量多视角图像重建星系四维演化：每颗恒星建模为自发光高斯，运动由引力势与全体共享的低维力场积分得到；按光度分层，亮星用跨尺度监督的个体轨道，暗星群体用光流速度场承载。构建四个宇宙学模拟、八个星系的 4d 数据集，光度质量与物理精度均优于动态高斯基线，用 96 帧呈现八亿年演化。 galaxies evolve over hundreds of millions of years, and no telescope has ever watched one move. cosmological simulations make this evolution visible as a sequence of multi-view images, inviting the question of whether a galaxy can be recovered in four dimensions from its images. this setting defeats existing dynamic scene methods, since millions of stars span only a few pixels each, faint populations blend into diffuse light, and free deformations reproduce the images without obeying gravity. we present cosmos4d, which rests on two components. gravitational 4d gaussian splatting represents each star as a self-luminous gaussian whose motion is integrated through a gravitational potential and a low-dimensional force field shared by all stars. luminosity-stratified dynamics give bright stars individual orbits supervised across image scales and carry faint populations with a velocity field estimated from optical flow. we further build a 4d dataset of eight galaxies from four cosmological simulations, on which cosmos4d outperforms dynamic gaussian baselines in both photometric quality and physical accuracy. with these advancements, we glimpse eight hundred million years of a galaxy's life in ninety-six frames. the university of tokyo; i2wm; shanghai astronomical observatory; tohoku university; riken aip shuhong liu, gengjia chang, quanfeng xu, ziteng cui, qianyu zhou, xiaoyu dong, lin gu, tatsuya harada cs.cv"
+    },
+    {
+      "arxiv_id": "2611.20067",
+      "title": "World-Model-Guided Plan Search for Cooperative Mixed-Traffic Control at Bottlenecks",
+      "authors": "Jinghan Peng, Ning Liu, Xiangrui Kong, Sen Shen, Dongkun Han",
+      "affiliations": "University of California, Los Angeles; The University of Western Australia; The Chinese University of Hong Kong",
+      "published_date": "2026-11-15",
+      "categories": "cs.MA",
+      "abstract": "Cooperative speed control by connected and automated vehicles can reduce congestion at lane drop bottlenecks. However, effective coordination depends on vehicle roles and execution timing, while initial holding costs may be offset by later traffic benefits. This paper proposes an offline plan search framework that combines world model guidance with simulator verification. A traffic world model incorporating physical dynamics guides evolutionary search over vehicle roles, target speeds, holding durations, and start times. Paired SUMO simulations screen candidates for total delay reduction and limits on additional mean delay across vehicle groups. Accepted plans form a reusable library whose actions temporarily override a frozen MAPPO policy. Across 192 paired test scenarios at 60% penetration and a demand of 2,800 vehicles per hour, the searched library reduces mean total delay by 14.3% relative to MAPPO and by 3.8% relative to a handwritten plan library. The largest increase in group mean delay is 6.2 s, below the prescribed 10 s limit. In a separate screening experiment, the guided search achieves a 30.0% pass rate compared with 2.6% for random sampling. These results support the use of predictive search and independent verification for discovering cooperative plans under group delay constraints.",
+      "summary_cn": "针对车道收窄瓶颈处网联车协同控速问题，提出离线方案搜索：用含物理动力学的交通世界模型引导进化搜索车辆角色、目标车速、保持时长与启动时刻，再用成对 SUMO 仿真筛选总延误下降且组均延误不超限的方案，形成方案库覆盖冻结的 MAPPO 策略。192 个场景、60% 渗透率下总延误降 14.3%，引导搜索通过率 30.0% 而随机采样 2.6%。",
+      "pdf_filename": "2611.20067.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20067",
+      "search_text": "world-model-guided plan search for cooperative mixed-traffic control at bottlenecks 世界模型 仿真器 针对车道收窄瓶颈处网联车协同控速问题，提出离线方案搜索：用含物理动力学的交通世界模型引导进化搜索车辆角色、目标车速、保持时长与启动时刻，再用成对 sumo 仿真筛选总延误下降且组均延误不超限的方案，形成方案库覆盖冻结的 mappo 策略。192 个场景、60% 渗透率下总延误降 14.3%，引导搜索通过率 30.0% 而随机采样 2.6%。 cooperative speed control by connected and automated vehicles can reduce congestion at lane drop bottlenecks. however, effective coordination depends on vehicle roles and execution timing, while initial holding costs may be offset by later traffic benefits. this paper proposes an offline plan search framework that combines world model guidance with simulator verification. a traffic world model incorporating physical dynamics guides evolutionary search over vehicle roles, target speeds, holding durations, and start times. paired sumo simulations screen candidates for total delay reduction and limits on additional mean delay across vehicle groups. accepted plans form a reusable library whose actions temporarily override a frozen mappo policy. across 192 paired test scenarios at 60% penetration and a demand of 2,800 vehicles per hour, the searched library reduces mean total delay by 14.3% relative to mappo and by 3.8% relative to a handwritten plan library. the largest increase in group mean delay is 6.2 s, below the prescribed 10 s limit. in a separate screening experiment, the guided search achieves a 30.0% pass rate compared with 2.6% for random sampling. these results support the use of predictive search and independent verification for discovering cooperative plans under group delay constraints. university of california, los angeles; the university of western australia; the chinese university of hong kong jinghan peng, ning liu, xiangrui kong, sen shen, dongkun han cs.ma"
+    },
+    {
+      "arxiv_id": "2611.20050",
+      "title": "Clinician Assessment of Laryngeal Disease with Auditory AI before Laryngoscopy: A Paired Reader Study",
+      "authors": "Siyuan Hou, Shuting Yang, Zengrui Jin, Liyu Cheng, Siyin Wang, Yunhan Shi, Xueyan Li, Rong Hu, Yuhong Lin, Qiyu Chen, Yanru Li, Ji Wu, Bowen Zhou, Mangsuo Zhao, Wen Xu, Chao Zhang",
+      "affiliations": "Tsinghua University; Capital Medical University; Shanghai Artificial Intelligence Laboratory; University College London",
+      "published_date": "2026-11-15",
+      "categories": "eess.AS, cs.AI",
+      "abstract": "Background: Before laryngoscopy, clinicians assess the likely cause of hoarseness and whether to suspect a precancerous or malignant lesion. Whether voice-based artificial intelligence (AI) supports pre-laryngoscopic categorization is unknown.   Methods: We developed an auditory large language model that generates a patient-level assessment card (provisional category, voice-quality ratings, and rationale) and a prespecified malignancy alert from voice recordings, patient information, and acoustic measures obtained before laryngoscopy at one center. We evaluated both in a held-out test set and a later cohort. In a sequential reader study, 32 otolaryngology clinicians categorized held-out cases without AI and, 1 to 2 weeks later, reviewed their initial categories with the card (without the alert).   Results: Across 800 paired assessments, reader accuracy was 49.8% before and 56.8% after review (difference, 7.0 percentage points; 95% CI, 1.7 to 13.5; P < 0.001); 99 categories changed from incorrect to correct and 43 from correct to incorrect (ratio, 2.30; 95% CI, 1.22 to 5.31). Accuracy rose 14.7 points when the model was correct and fell 8.7 when incorrect. Provisional-category accuracy was 72% in held-out testing and 67% in temporal validation. The malignancy alert flagged 85.7% and 86.8% of precancerous or malignant lesions. Sensitivity for precancerous or malignant lesions increased from 53.9% to 75.0% after AI-assisted review (difference, 21.1 percentage points; 95% CI, 4.3 to 42.0).   Conclusions: In this single-center study, clinicians' pre-laryngoscopic categorization accuracy was higher after reviewing the AI assessment card, although the sequential design cannot fully separate AI assistance from reassessment; gains depended on model correctness without clearly selective adoption. Randomized and external evaluations, including of the malignancy alert, are needed.",
+      "summary_cn": "论文构建基于语音的听觉大模型，在喉镜检查前据录音、患者信息与声学特征生成患者级评估卡（临时分类、嗓音质量评分、理由）与恶性预警，并在留出集与后续队列验证。32 名耳鼻喉科医生参与的序贯阅读研究显示，借助 AI 评估卡后声带病变分类一致性与恶性识别有所提升，属临床验证类工作。",
+      "pdf_filename": "2611.20050.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20050",
+      "search_text": "clinician assessment of laryngeal disease with auditory ai before laryngoscopy: a paired reader study 大语言模型 论文构建基于语音的听觉大模型，在喉镜检查前据录音、患者信息与声学特征生成患者级评估卡（临时分类、嗓音质量评分、理由）与恶性预警，并在留出集与后续队列验证。32 名耳鼻喉科医生参与的序贯阅读研究显示，借助 ai 评估卡后声带病变分类一致性与恶性识别有所提升，属临床验证类工作。 background: before laryngoscopy, clinicians assess the likely cause of hoarseness and whether to suspect a precancerous or malignant lesion. whether voice-based artificial intelligence (ai) supports pre-laryngoscopic categorization is unknown.   methods: we developed an auditory large language model that generates a patient-level assessment card (provisional category, voice-quality ratings, and rationale) and a prespecified malignancy alert from voice recordings, patient information, and acoustic measures obtained before laryngoscopy at one center. we evaluated both in a held-out test set and a later cohort. in a sequential reader study, 32 otolaryngology clinicians categorized held-out cases without ai and, 1 to 2 weeks later, reviewed their initial categories with the card (without the alert).   results: across 800 paired assessments, reader accuracy was 49.8% before and 56.8% after review (difference, 7.0 percentage points; 95% ci, 1.7 to 13.5; p < 0.001); 99 categories changed from incorrect to correct and 43 from correct to incorrect (ratio, 2.30; 95% ci, 1.22 to 5.31). accuracy rose 14.7 points when the model was correct and fell 8.7 when incorrect. provisional-category accuracy was 72% in held-out testing and 67% in temporal validation. the malignancy alert flagged 85.7% and 86.8% of precancerous or malignant lesions. sensitivity for precancerous or malignant lesions increased from 53.9% to 75.0% after ai-assisted review (difference, 21.1 percentage points; 95% ci, 4.3 to 42.0).   conclusions: in this single-center study, clinicians' pre-laryngoscopic categorization accuracy was higher after reviewing the ai assessment card, although the sequential design cannot fully separate ai assistance from reassessment; gains depended on model correctness without clearly selective adoption. randomized and external evaluations, including of the malignancy alert, are needed. tsinghua university; capital medical university; shanghai artificial intelligence laboratory; university college london siyuan hou, shuting yang, zengrui jin, liyu cheng, siyin wang, yunhan shi, xueyan li, rong hu, yuhong lin, qiyu chen, yanru li, ji wu, bowen zhou, mangsuo zhao, wen xu, chao zhang eess.as, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.20025",
+      "title": "acuSimNet: Multi-View Self-Occlusion-Awared Visibility Learning for Cranio-Cervical Acupuncture Points",
+      "authors": "Jiatao Ma, Qilei Sun",
+      "affiliations": "Georgia Institute of Technology; University of Derby",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "The localization of acupuncture points (acupoints) in Traditional Chinese Medicine (TCM) presents unique challenges since they are defined by abstract principles rather than distinct anatomical landmarks. Existing approaches are typically constrained to single view or rely on indirect calculations of relative positions with respect to other landmarks, thereby overlooking human anatomical variations. Furthermore, acupoint visibility assessment, which determins whether points are occluded by human itself, hair, clothing, or other objects, has received limited attention in practical applications. Acupoint localization itself does not require 3D reconstruction, but inferring their occlusion relationships with anatomical surfaces does, which adds computational cost and limits real-time inference. In this work, we introduce acuSimNet, an efficient hierarchical multi-task learning architecture for multi-view, self-occlusion-aware visibility prediction of acupoints, achieving 99.97% accuracy on the validation set. Our approach also addresses the challenges of high-dimensional classification (174 acupoints in cervicocranial region), negative convergence issues for visible acupoints, and inter-task scheduling optimization, resulting in substantially accelerated convergence. We improved the training efficiency from the exisiting methods of 3000 epochs to achieve 99% validation accuracy, to our optimized framework achieving 90% accuracy in 39 epochs and 99% accuracy in 86 epochs. This architecture overcomes the limitations of existing methods, could enable practical applications in acupoints detection and visualization, advancing the automation of TCM.",
+      "summary_cn": "针对中医穴位定义抽象、单视角定位难处理遮挡的问题，提出 acuSimNet 分层多任务网络，在多视角下同时预测穴位位置与被人体、毛发、衣物遮挡的可见性，避免显式三维重建的额外开销以支持实时推理，验证集准确率 99.97%。属医学视觉应用，与多视角几何有交集但与自动驾驶场景重建无关。",
+      "pdf_filename": "2611.20025.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "自动驾驶",
+        "训练加速"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20025",
+      "search_text": "acusimnet: multi-view self-occlusion-awared visibility learning for cranio-cervical acupuncture points 自动驾驶 训练加速 针对中医穴位定义抽象、单视角定位难处理遮挡的问题，提出 acusimnet 分层多任务网络，在多视角下同时预测穴位位置与被人体、毛发、衣物遮挡的可见性，避免显式三维重建的额外开销以支持实时推理，验证集准确率 99.97%。属医学视觉应用，与多视角几何有交集但与自动驾驶场景重建无关。 the localization of acupuncture points (acupoints) in traditional chinese medicine (tcm) presents unique challenges since they are defined by abstract principles rather than distinct anatomical landmarks. existing approaches are typically constrained to single view or rely on indirect calculations of relative positions with respect to other landmarks, thereby overlooking human anatomical variations. furthermore, acupoint visibility assessment, which determins whether points are occluded by human itself, hair, clothing, or other objects, has received limited attention in practical applications. acupoint localization itself does not require 3d reconstruction, but inferring their occlusion relationships with anatomical surfaces does, which adds computational cost and limits real-time inference. in this work, we introduce acusimnet, an efficient hierarchical multi-task learning architecture for multi-view, self-occlusion-aware visibility prediction of acupoints, achieving 99.97% accuracy on the validation set. our approach also addresses the challenges of high-dimensional classification (174 acupoints in cervicocranial region), negative convergence issues for visible acupoints, and inter-task scheduling optimization, resulting in substantially accelerated convergence. we improved the training efficiency from the exisiting methods of 3000 epochs to achieve 99% validation accuracy, to our optimized framework achieving 90% accuracy in 39 epochs and 99% accuracy in 86 epochs. this architecture overcomes the limitations of existing methods, could enable practical applications in acupoints detection and visualization, advancing the automation of tcm. georgia institute of technology; university of derby jiatao ma, qilei sun cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.20019",
+      "title": "D'BEAST: Logged Bad Experiences as Explanation for Autonomous Driving Agents",
+      "authors": "Ahmad Alfan Alfian Irfan, Nur Ahmad Khatim, Mansur Arief",
+      "affiliations": "Universitas Muhammadiyah Yogyakarta; Nara Institute of Science and Technology; King Fahd University of Petroleum and Minerals",
+      "published_date": "2026-11-15",
+      "categories": "cs.LG, cs.AI, cs.RO",
+      "abstract": "Reinforcement learning agents learn from mistakes, yet their decisions can be difficult to trace back to those experiences. We investigate whether a tabular agent's decisions can be explained by its bad experiences, defined as the training transitions associated with safety or task events. A fixed training log is replayed from the same initial Q-table under three conditions. FULL retains all updates, SKIP omits bad-experience updates, and NEUTRALIZE retains those updates without their event penalties. We illustrate the method on six classic Markov decision processes and evaluate it in closed-loop driving in CARLA. On the full driving task, FULL reached the goal from 33 of 40 test starts, whereas SKIP and NEUTRALIZE reached it from none, indicating that the bad experiences carry decision-relevant information. At the local level, for 47 decisions shortly before a failure of SKIP or NEUTRALIZE, removing or neutralizing a small group of bad experiences, with a median size of one, caused the trained agent to select the failing policy's action in 46 cases. For this agent, the results indicate that its decisions can be explained by its bad experiences.",
+      "summary_cn": "论文研究能否用坏经验解释强化学习驾驶智能体的决策：固定训练日志从同一初始 Q 表重放，分别保留全部更新、剔除坏经验、保留但去惩罚。六个经典 MDP 与 CARLA 闭环实验显示，完整训练 40 个起点中 33 个成功，剔除或中和坏经验后无一成功；47 个失败前决策中移除中位数仅 1 条坏经验即可复现失败动作。",
+      "pdf_filename": "2611.20019.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "闭环仿真",
+        "强化学习",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20019",
+      "search_text": "d'beast: logged bad experiences as explanation for autonomous driving agents 闭环仿真 强化学习 自动驾驶 论文研究能否用坏经验解释强化学习驾驶智能体的决策：固定训练日志从同一初始 q 表重放，分别保留全部更新、剔除坏经验、保留但去惩罚。六个经典 mdp 与 carla 闭环实验显示，完整训练 40 个起点中 33 个成功，剔除或中和坏经验后无一成功；47 个失败前决策中移除中位数仅 1 条坏经验即可复现失败动作。 reinforcement learning agents learn from mistakes, yet their decisions can be difficult to trace back to those experiences. we investigate whether a tabular agent's decisions can be explained by its bad experiences, defined as the training transitions associated with safety or task events. a fixed training log is replayed from the same initial q-table under three conditions. full retains all updates, skip omits bad-experience updates, and neutralize retains those updates without their event penalties. we illustrate the method on six classic markov decision processes and evaluate it in closed-loop driving in carla. on the full driving task, full reached the goal from 33 of 40 test starts, whereas skip and neutralize reached it from none, indicating that the bad experiences carry decision-relevant information. at the local level, for 47 decisions shortly before a failure of skip or neutralize, removing or neutralizing a small group of bad experiences, with a median size of one, caused the trained agent to select the failing policy's action in 46 cases. for this agent, the results indicate that its decisions can be explained by its bad experiences. universitas muhammadiyah yogyakarta; nara institute of science and technology; king fahd university of petroleum and minerals ahmad alfan alfian irfan, nur ahmad khatim, mansur arief cs.lg, cs.ai, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.20011",
+      "title": "ReactBench-AD: Do Driving VLAs and World-Action Models React to Imminent Hazards in Their Path?",
+      "authors": "Nikos Theodoridis, Reenu Mohandas, Sushil Sharma, Ciarán Hogan, Ganesh Sistu, Anthony Scanlan, Tim Brophy, Ciarán Eising",
+      "affiliations": "University of Limerick; Valeo Vision Systems",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV, cs.AI, cs.RO",
+      "abstract": "Vision-Language-Action models (VLAs) and World-Action Models (WAMs) have emerged in autonomous driving with the promise of strong generalization to long-tail scenarios. Although these models achieve state-of-the-art results on autonomous driving benchmarks, most existing benchmarks are dominated by nominal scenarios and therefore cannot test this promise. To test one such long-tail capability that is critical for safety, we introduce ReactBench-AD, a benchmark that measures how driving models react to objects that appear in the ego vehicle's path. Built on real NAVSIM and PhysicalAI-Autonomous-Vehicles scenes, ReactBench-AD composites a crossing pedestrian, a standing pedestrian, or a stationary car consistently across all camera views and history frames. Each edited scene thus forms an exact, pixel-level counterfactual pair with its original, which allows us to isolate the causal effect of the inserted object on the predicted trajectory. Evaluating four VLAs and two WAMs, we find that they react weakly, often barely at all. Finally, we test how easily one of the evaluated VLAs, ReCogDrive, can be taught to brake hard for imminent hazards: a short fine-tuning stage on edited scenes substantially improves its reactions, with the learned behavior generalizing to unseen objects and fully real scenes, at minimal cost to nominal driving. These results call into question the out-of-the-box long-tail capabilities of these models, but suggest that they can be a strong foundation for acquiring them with little additional training, highlighting the value of real or synthetic data that demonstrates the long-tail behaviors nominal datasets rarely contain. Code and data will be made publicly available.",
+      "summary_cn": "针对现有基准以常规场景为主、无法检验长尾能力的问题，提出 ReactBench-AD：在 NAVSIM 与 PhysicalAI 真实场景上，把横穿行人、站立行人或静止车辆一致地合成到所有视角与历史帧，构造像素级反事实对以隔离因果影响。评测四个 VLA 与两个 World-Action 模型，发现对 imminent hazard 反应微弱；用编辑场景短时微调 ReCogDrive 后刹车反应显著改善。",
+      "pdf_filename": "2611.20011.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20011",
+      "search_text": "reactbench-ad: do driving vlas and world-action models react to imminent hazards in their path? 自动驾驶 多模态 针对现有基准以常规场景为主、无法检验长尾能力的问题，提出 reactbench-ad：在 navsim 与 physicalai 真实场景上，把横穿行人、站立行人或静止车辆一致地合成到所有视角与历史帧，构造像素级反事实对以隔离因果影响。评测四个 vla 与两个 world-action 模型，发现对 imminent hazard 反应微弱；用编辑场景短时微调 recogdrive 后刹车反应显著改善。 vision-language-action models (vlas) and world-action models (wams) have emerged in autonomous driving with the promise of strong generalization to long-tail scenarios. although these models achieve state-of-the-art results on autonomous driving benchmarks, most existing benchmarks are dominated by nominal scenarios and therefore cannot test this promise. to test one such long-tail capability that is critical for safety, we introduce reactbench-ad, a benchmark that measures how driving models react to objects that appear in the ego vehicle's path. built on real navsim and physicalai-autonomous-vehicles scenes, reactbench-ad composites a crossing pedestrian, a standing pedestrian, or a stationary car consistently across all camera views and history frames. each edited scene thus forms an exact, pixel-level counterfactual pair with its original, which allows us to isolate the causal effect of the inserted object on the predicted trajectory. evaluating four vlas and two wams, we find that they react weakly, often barely at all. finally, we test how easily one of the evaluated vlas, recogdrive, can be taught to brake hard for imminent hazards: a short fine-tuning stage on edited scenes substantially improves its reactions, with the learned behavior generalizing to unseen objects and fully real scenes, at minimal cost to nominal driving. these results call into question the out-of-the-box long-tail capabilities of these models, but suggest that they can be a strong foundation for acquiring them with little additional training, highlighting the value of real or synthetic data that demonstrates the long-tail behaviors nominal datasets rarely contain. code and data will be made publicly available. university of limerick; valeo vision systems nikos theodoridis, reenu mohandas, sushil sharma, ciarán hogan, ganesh sistu, anthony scanlan, tim brophy, ciarán eising cs.cv, cs.ai, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.19969",
+      "title": "Value and Policy Calibration from Execution Feedback for Socially Compatible Driving",
+      "authors": "Sen Shen, Ning Liu, Xiangrui Kong, Yingwei Li, Dongkun Han",
+      "affiliations": "The Chinese University of Hong Kong; The University of Western Australia",
+      "published_date": "2026-11-15",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Autonomous vehicle (AV) decisions at intersections affect the delay, braking, and motion smoothness of surrounding human-driven vehicles (HDVs). Learning socially compatible behavior requires connecting imagined interaction outcomes with feedback from executed actions. We propose a world-model reinforcement learning framework combines imagined policy improvement with direct value and policy calibration from finalized interactions, balancing AV progress with HDV interaction burden. An interaction-aware latent model supports imagination, while off-policy correction and replay updates enable observed rewards and transitions to supervise both the critic and actor. Simulation experiments at an unsignalized intersection achieve a 100% success and reductions in following-HDV acceleration variation of 65.5% and 44.0% relative to PIWM and DreamerV3, respectively. Ablations identify complementary roles for value calibration in reducing HDV burden and policy calibration in improving passage efficiency. Tests under out-of-distribution traffic shifts further show lower ego jerk and HDV acceleration variation than PIWM at comparable passage times.",
+      "summary_cn": "针对路口自动驾驶决策会影响周围人类驾驶车辆延误与舒适性的问题，提出世界模型强化学习框架：用交互感知隐变量模型做想象推演，同时用已执行交互的真实回报对 critic 与 actor 做价值与策略校准。无信号路口仿真成功率 100%，跟驰车辆加速度波动比 PIWM 与 DreamerV3 分别降低 65.5% 与 44.0%，分布外交通下更平顺。",
+      "pdf_filename": "2611.19969.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "强化学习",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19969",
+      "search_text": "value and policy calibration from execution feedback for socially compatible driving 世界模型 强化学习 自动驾驶 针对路口自动驾驶决策会影响周围人类驾驶车辆延误与舒适性的问题，提出世界模型强化学习框架：用交互感知隐变量模型做想象推演，同时用已执行交互的真实回报对 critic 与 actor 做价值与策略校准。无信号路口仿真成功率 100%，跟驰车辆加速度波动比 piwm 与 dreamerv3 分别降低 65.5% 与 44.0%，分布外交通下更平顺。 autonomous vehicle (av) decisions at intersections affect the delay, braking, and motion smoothness of surrounding human-driven vehicles (hdvs). learning socially compatible behavior requires connecting imagined interaction outcomes with feedback from executed actions. we propose a world-model reinforcement learning framework combines imagined policy improvement with direct value and policy calibration from finalized interactions, balancing av progress with hdv interaction burden. an interaction-aware latent model supports imagination, while off-policy correction and replay updates enable observed rewards and transitions to supervise both the critic and actor. simulation experiments at an unsignalized intersection achieve a 100% success and reductions in following-hdv acceleration variation of 65.5% and 44.0% relative to piwm and dreamerv3, respectively. ablations identify complementary roles for value calibration in reducing hdv burden and policy calibration in improving passage efficiency. tests under out-of-distribution traffic shifts further show lower ego jerk and hdv acceleration variation than piwm at comparable passage times. the chinese university of hong kong; the university of western australia sen shen, ning liu, xiangrui kong, yingwei li, dongkun han cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.19960",
+      "title": "Anatomy of an Agent Harness: Decisions, Invariants and Corner Cases",
+      "authors": "Resham Joshi",
+      "affiliations": "Codeburn",
+      "published_date": "2026-11-15",
+      "categories": "cs.CL, cs.SE",
+      "abstract": "An agent harness is the program around a language model that turns its replies into actions: it builds each request, runs the tools the model asks for, decides what the model may do without asking, stores the conversation, recovers from failures, and shows a person what happened. Most of these decisions are made in code and rarely written down, so each harness meets the same corner cases again. This paper writes them down as invariants to test. It gives a system model with trust boundaries; 30 decision cards in six groups, each with options and costs, an invariant, the corner cases that break it, a test and an evidence tag; six cause classes for failures; a test method built on scripted providers, recorded behaviour and planted changes; and a checklist. The cards come from building one desktop harness, Crewroom, the author's own, and from manually testing ten other harnesses and studying open-source harnesses as reference; some patterns in the cards were adopted from those, so the catalogue is not independent of them. Of the 83 invariant clauses, 56 are tagged Tested, 12 Believed and 15 Open. The checklist is applied to the author's harness as one worked example, by its builder with no second rater: of its 30 items, 11 hold, 14 do not and 5 were not tested. It is not a ranking. The paper makes no claims about answer quality or cost or other platforms, and does not evaluate or rank other harnesses.",
+      "summary_cn": "论文把 agent harness 中隐式写在代码里的决策系统化：给出含信任边界的系统模型、六组 30 张决策卡（选项、代价、不变量、边界情形、测试与证据标签）、六类失败成因与检查清单。83 条不变量中 56 条已测、12 条推测、15 条待定，并以作者自建桌面 harness 为案例演示，属工程实践总结。",
+      "pdf_filename": "2611.19960.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.19960",
+      "search_text": "anatomy of an agent harness: decisions, invariants and corner cases  论文把 agent harness 中隐式写在代码里的决策系统化：给出含信任边界的系统模型、六组 30 张决策卡（选项、代价、不变量、边界情形、测试与证据标签）、六类失败成因与检查清单。83 条不变量中 56 条已测、12 条推测、15 条待定，并以作者自建桌面 harness 为案例演示，属工程实践总结。 an agent harness is the program around a language model that turns its replies into actions: it builds each request, runs the tools the model asks for, decides what the model may do without asking, stores the conversation, recovers from failures, and shows a person what happened. most of these decisions are made in code and rarely written down, so each harness meets the same corner cases again. this paper writes them down as invariants to test. it gives a system model with trust boundaries; 30 decision cards in six groups, each with options and costs, an invariant, the corner cases that break it, a test and an evidence tag; six cause classes for failures; a test method built on scripted providers, recorded behaviour and planted changes; and a checklist. the cards come from building one desktop harness, crewroom, the author's own, and from manually testing ten other harnesses and studying open-source harnesses as reference; some patterns in the cards were adopted from those, so the catalogue is not independent of them. of the 83 invariant clauses, 56 are tagged tested, 12 believed and 15 open. the checklist is applied to the author's harness as one worked example, by its builder with no second rater: of its 30 items, 11 hold, 14 do not and 5 were not tested. it is not a ranking. the paper makes no claims about answer quality or cost or other platforms, and does not evaluate or rank other harnesses. codeburn resham joshi cs.cl, cs.se"
+    },
+    {
+      "arxiv_id": "2611.19922",
+      "title": "Lao Siji: Adapting openpilot to Closed-Loop End-to-End Driving in Neural Reconstruction",
+      "authors": "Chengzhi Gao, Yongzhi Liu, Jinchang Xu, Weichao Zhuang, Guodong Yin",
+      "affiliations": "Southeast University",
+      "published_date": "2026-11-15",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "We present Lao Siji, an end-to-end driving policy that ranks third in the 2026 NVIDIA AlpaSim E2E Driving Challenge, ahead of most entries built on foundation models. Instead of training from scratch on a general-purpose vision backbone, we adapt openpilot, an open-source L2 production model. We freeze its vision encoder and fine-tune the policy layers with an ego-state adapter and a route memory. On closed-loop rollouts in neural-reconstructed scenes, we supervise the policy with a privileged map teacher for lateral self-correction and a body-extent loss for road and obstacle clearance, while distilling the base model's remaining outputs to retain car following. Ablations show that self-correction samples carry the gain, while the clearance loss substitutes for them where no teacher exists. Longitudinal safety instead rests on the base model's lead-vehicle estimate behind a rule-based speed layer. Longer training, imitating human logs, and human-log speed targets yield either no measurable gain or adverse effects. Without further training, Lao Siji also places among the leaders on HUGSIM and Odyssey. The final training takes only one GPU-hour and shifts the weights by 3.9% from the shipped model. Code will be released after review.",
+      "summary_cn": "论文把量产 L2 模型 openpilot 适配到闭环端到端驾驶：冻结视觉编码器，只微调策略层并加自车状态适配器与路线记忆，在神经重建场景的闭环 rollout 中用特权地图教师监督横向自纠正、用车身范围损失约束净空，并蒸馏原输出保留跟车。该方案在 2026 NVIDIA AlpaSim 挑战赛获第三，训练仅 1 GPU 小时、权重偏移 3.9%。",
+      "pdf_filename": "2611.19922.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19922",
+      "search_text": "lao siji: adapting openpilot to closed-loop end-to-end driving in neural reconstruction 闭环仿真 论文把量产 l2 模型 openpilot 适配到闭环端到端驾驶：冻结视觉编码器，只微调策略层并加自车状态适配器与路线记忆，在神经重建场景的闭环 rollout 中用特权地图教师监督横向自纠正、用车身范围损失约束净空，并蒸馏原输出保留跟车。该方案在 2026 nvidia alpasim 挑战赛获第三，训练仅 1 gpu 小时、权重偏移 3.9%。 we present lao siji, an end-to-end driving policy that ranks third in the 2026 nvidia alpasim e2e driving challenge, ahead of most entries built on foundation models. instead of training from scratch on a general-purpose vision backbone, we adapt openpilot, an open-source l2 production model. we freeze its vision encoder and fine-tune the policy layers with an ego-state adapter and a route memory. on closed-loop rollouts in neural-reconstructed scenes, we supervise the policy with a privileged map teacher for lateral self-correction and a body-extent loss for road and obstacle clearance, while distilling the base model's remaining outputs to retain car following. ablations show that self-correction samples carry the gain, while the clearance loss substitutes for them where no teacher exists. longitudinal safety instead rests on the base model's lead-vehicle estimate behind a rule-based speed layer. longer training, imitating human logs, and human-log speed targets yield either no measurable gain or adverse effects. without further training, lao siji also places among the leaders on hugsim and odyssey. the final training takes only one gpu-hour and shifts the weights by 3.9% from the shipped model. code will be released after review. southeast university chengzhi gao, yongzhi liu, jinchang xu, weichao zhuang, guodong yin cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.19830",
+      "title": "Beyond Vehicle-Centric Data: Scaling Autonomous Driving through Roadside-to-Vehicle Generation",
+      "authors": "Yichen Zhang, Zihan Wang, Hao Chen, Runyi Huang, Ruixue Zong, Jing Wang, Yunong Mao, Lei He, Keqiang Li",
+      "affiliations": "Tsinghua University; Shanghai Jiao Tong University",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV",
+      "abstract": "Training autonomous driving models requires large and diverse datasets, collected primarily by vehicles. Scaling them entails investment in fleet operation, data processing and annotation. Road infrastructure records traffic and multi-vehicle interactions, yet the viewpoint gap between roadside and onboard sensors limits its direct use for training. Here we introduce AnyR2V, a framework that transforms multimodal roadside observations into seven-camera surround-view videos for different vehicle perspectives. It aggregates sequential observations into a shared scene representation of geometry and road-user motion, then renders appearance, depth and layout conditions along target-vehicle trajectories. Supervised by spatiotemporally aligned roadside-vehicle pairs, AnyR2V generates surround-view videos guided by scene structure and road-user motion. Existing roadside 3D bounding boxes are transformed into target-vehicle coordinates and paired with generated images, allowing one traffic recording and its annotations to yield training data from multiple vehicle perspectives. We construct R2V360, a dataset of 89 real traffic sequences at an urban intersection, with aligned multimodal roadside data and onboard surround-view videos. AnyR2V outperforms six scene reconstruction methods in image fidelity and in depth and semantic agreement between generated and real onboard images. We further evaluate generated videos along other vehicles' trajectories by adding them to real training data. Adding generated frames equal to 50% of the original real training frame count improves mean average precision (mAP) by 3.3-3.4 AP-points across three 3D object detectors on the real onboard test set, relative to real-data-only baselines. These results demonstrate that roadside traffic records can provide training data from multiple vehicle perspectives, offering a new data source for autonomous driving.",
+      "summary_cn": "针对自动驾驶数据依赖车队采集、路侧记录因视角差异难直接使用的问题，提出 AnyR2V：把路侧序列聚合成含几何与交通参与者运动的共享表示，沿目标车轨迹渲染七路环视视频并自动迁移 3D 框标注。构建 89 段路口数据集 R2V360，保真与深度一致性优于六个重建方法；加入相当于真实数据一半的生成帧让三个 3D 检测器 mAP 提升 3.3–3.4。",
+      "pdf_filename": "2611.19830.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19830",
+      "search_text": "beyond vehicle-centric data: scaling autonomous driving through roadside-to-vehicle generation 自动驾驶 多模态 针对自动驾驶数据依赖车队采集、路侧记录因视角差异难直接使用的问题，提出 anyr2v：把路侧序列聚合成含几何与交通参与者运动的共享表示，沿目标车轨迹渲染七路环视视频并自动迁移 3d 框标注。构建 89 段路口数据集 r2v360，保真与深度一致性优于六个重建方法；加入相当于真实数据一半的生成帧让三个 3d 检测器 map 提升 3.3–3.4。 training autonomous driving models requires large and diverse datasets, collected primarily by vehicles. scaling them entails investment in fleet operation, data processing and annotation. road infrastructure records traffic and multi-vehicle interactions, yet the viewpoint gap between roadside and onboard sensors limits its direct use for training. here we introduce anyr2v, a framework that transforms multimodal roadside observations into seven-camera surround-view videos for different vehicle perspectives. it aggregates sequential observations into a shared scene representation of geometry and road-user motion, then renders appearance, depth and layout conditions along target-vehicle trajectories. supervised by spatiotemporally aligned roadside-vehicle pairs, anyr2v generates surround-view videos guided by scene structure and road-user motion. existing roadside 3d bounding boxes are transformed into target-vehicle coordinates and paired with generated images, allowing one traffic recording and its annotations to yield training data from multiple vehicle perspectives. we construct r2v360, a dataset of 89 real traffic sequences at an urban intersection, with aligned multimodal roadside data and onboard surround-view videos. anyr2v outperforms six scene reconstruction methods in image fidelity and in depth and semantic agreement between generated and real onboard images. we further evaluate generated videos along other vehicles' trajectories by adding them to real training data. adding generated frames equal to 50% of the original real training frame count improves mean average precision (map) by 3.3-3.4 ap-points across three 3d object detectors on the real onboard test set, relative to real-data-only baselines. these results demonstrate that roadside traffic records can provide training data from multiple vehicle perspectives, offering a new data source for autonomous driving. tsinghua university; shanghai jiao tong university yichen zhang, zihan wang, hao chen, runyi huang, ruixue zong, jing wang, yunong mao, lei he, keqiang li cs.cv"
+    },
+    {
+      "arxiv_id": "2611.19773",
+      "title": "SemLite-GS: Semantic-Selective Parallel Gaussian Splatting for Lightweight Building Reconstruction from UAV Oblique Imagery",
+      "authors": "Tengfei Wang, Xin Wang, Zihan Li, Quanjian Ji, Yifei Yu, Dong Lin, Zongqian Zhan",
+      "affiliations": "Wuhan University; Space Engineering University",
+      "published_date": "2026-11-15",
+      "categories": "cs.CV",
+      "abstract": "Lightweight 3D building models support urban spatial analysis, but their production often requires dense scene reconstruction, building extraction, and mesh simplification. Although 3D Gaussian Splatting (3DGS) is more efficient than conventional multi-view stereo, existing large-scale methods lack semantic selection and parallel instance-level training. We present SemLite-GS, a building-centric framework that reconstructs lightweight building meshes from large-scale UAV oblique imagery. First, an orthographic reference map establishes globally consistent building identities, which are propagated to oblique views to form camera-instance pairs and regions of interest. Second, semantic-selective parallel PGSR training jointly processes multiple pairs within relevant image regions while updating only target Gaussians; contextual Gaussians remain fixed to preserve visibility. Third, architectural planes extracted from rendered depth, opacity, and normal maps guide signed distance field optimization, producing meshes with adaptive polygon allocation and well-defined structural boundaries. Experiments on multiple large-scale UAV datasets demonstrate that our SemLite-GS substantially reduces building reconstruction time compared with representative full-scene 3DGS methods. With comparable polygon budgets, SemLite-GS achieves superior preservation of dominant planar structures and sharp architectural transitions compared with conventional dense reconstruction followed by mesh decimation. The source code is available at https://github.com/IRIS-LAB-whu/SemLite-GS.",
+      "summary_cn": "针对无人机倾斜影像生成轻量建筑模型流程冗长的问题，提出以建筑为中心的 3DGS 框架 SemLite-GS：用正射参考图建立全局一致的建筑身份并传播到斜视影像形成相机-实例对，在感兴趣区域并行训练目标高斯、固定上下文高斯保持可见性，再由平面约束 SDF 生成自适应面数网格。实验显著缩短重建时间，同等面数下更好保留平面与棱线。",
+      "pdf_filename": "2611.19773.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "多视角立体",
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19773",
+      "search_text": "semlite-gs: semantic-selective parallel gaussian splatting for lightweight building reconstruction from uav oblique imagery 多视角立体 3dgs 针对无人机倾斜影像生成轻量建筑模型流程冗长的问题，提出以建筑为中心的 3dgs 框架 semlite-gs：用正射参考图建立全局一致的建筑身份并传播到斜视影像形成相机-实例对，在感兴趣区域并行训练目标高斯、固定上下文高斯保持可见性，再由平面约束 sdf 生成自适应面数网格。实验显著缩短重建时间，同等面数下更好保留平面与棱线。 lightweight 3d building models support urban spatial analysis, but their production often requires dense scene reconstruction, building extraction, and mesh simplification. although 3d gaussian splatting (3dgs) is more efficient than conventional multi-view stereo, existing large-scale methods lack semantic selection and parallel instance-level training. we present semlite-gs, a building-centric framework that reconstructs lightweight building meshes from large-scale uav oblique imagery. first, an orthographic reference map establishes globally consistent building identities, which are propagated to oblique views to form camera-instance pairs and regions of interest. second, semantic-selective parallel pgsr training jointly processes multiple pairs within relevant image regions while updating only target gaussians; contextual gaussians remain fixed to preserve visibility. third, architectural planes extracted from rendered depth, opacity, and normal maps guide signed distance field optimization, producing meshes with adaptive polygon allocation and well-defined structural boundaries. experiments on multiple large-scale uav datasets demonstrate that our semlite-gs substantially reduces building reconstruction time compared with representative full-scene 3dgs methods. with comparable polygon budgets, semlite-gs achieves superior preservation of dominant planar structures and sharp architectural transitions compared with conventional dense reconstruction followed by mesh decimation. the source code is available at https://github.com/iris-lab-whu/semlite-gs. wuhan university; space engineering university tengfei wang, xin wang, zihan li, quanjian ji, yifei yu, dong lin, zongqian zhan cs.cv"
+    },
+    {
+      "arxiv_id": "2611.19463",
+      "title": "Semantics First, Pixels Later: Mission-Driven Event Streams for Drone Video over Bandwidth-Starved Links",
+      "authors": "Cong Xu",
+      "affiliations": "Independent Researcher",
+      "published_date": "2026-11-14",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "A surveillance drone on a bandwidth-starved link cannot send the video its operator would need, yet the operator's questions are often not about pixels: did three people converge, when, and where? We study what should cross a link of 1 Mbps down to 1 kbps instead, and in what order. BPS, a behavior-primitive stream, sends semantics first and pixels later: it runs a detector and a tracker onboard and sends short records (25 bytes on average) of multi-frame events selected by a mission card of 16-125 bytes, ahead of positions and pictures. We measure it by what a ground-side language model answers from it, under a preregistered protocol with a held-out set, against H.265 read by the vision fine-tune of the same model, H.265 on which the ground runs our own perception, a stream of quantized tracks, and onboard captions. On the development set (84% of questions about convergence, mostly one location) the event stream answers 74.3% of questions at 0.13 kbps. A reader that receives nothing answers 57.4%, and the video reader 59.6% at 100 kbps and 64.7% on the source frames. When the ground instead runs our perception on the video, video matches the stream at 100 kbps, about 800 times the stream's rate, and falls behind at 64 kbps and below. A track stream matches it at 96 times the bytes and loses 0.03 at 17 times. On held-out data the result is weaker: with events taken from annotated tracks, an oracle, the stream beats H.265 at 100 kbps (+0.13), but with onboard perception it does not (+0.01 [-0.04, +0.06]) and is no better than receiving nothing. Sent alone through emulated links the event records answer 0.739 at 1 Mbps and still 0.724 at 0.3 kbps; an every-frame track stream holds down to 1 kbps and video with ground-side perception down to about 100 kbps. On a Jetson Orin Nano the unchanged pipeline runs at 4.5 fps and misses most events.",
+      "summary_cn": "针对 1 Mbps 至 1 kbps 极低带宽链路上无人机无法回传视频的问题，提出 BPS 语义优先事件流：机载检测跟踪后只发送平均 25 字节的多帧行为事件记录，像素按需补充。10 kbps 下地面语言模型读事件流答对 74%，远高于读 H.265 帧的 49.8%，说明任务语义比像素更适合受限链路。",
+      "pdf_filename": "2611.19463.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.19463",
+      "search_text": "semantics first, pixels later: mission-driven event streams for drone video over bandwidth-starved links  针对 1 mbps 至 1 kbps 极低带宽链路上无人机无法回传视频的问题，提出 bps 语义优先事件流：机载检测跟踪后只发送平均 25 字节的多帧行为事件记录，像素按需补充。10 kbps 下地面语言模型读事件流答对 74%，远高于读 h.265 帧的 49.8%，说明任务语义比像素更适合受限链路。 a surveillance drone on a bandwidth-starved link cannot send the video its operator would need, yet the operator's questions are often not about pixels: did three people converge, when, and where? we study what should cross a link of 1 mbps down to 1 kbps instead, and in what order. bps, a behavior-primitive stream, sends semantics first and pixels later: it runs a detector and a tracker onboard and sends short records (25 bytes on average) of multi-frame events selected by a mission card of 16-125 bytes, ahead of positions and pictures. we measure it by what a ground-side language model answers from it, under a preregistered protocol with a held-out set, against h.265 read by the vision fine-tune of the same model, h.265 on which the ground runs our own perception, a stream of quantized tracks, and onboard captions. on the development set (84% of questions about convergence, mostly one location) the event stream answers 74.3% of questions at 0.13 kbps. a reader that receives nothing answers 57.4%, and the video reader 59.6% at 100 kbps and 64.7% on the source frames. when the ground instead runs our perception on the video, video matches the stream at 100 kbps, about 800 times the stream's rate, and falls behind at 64 kbps and below. a track stream matches it at 96 times the bytes and loses 0.03 at 17 times. on held-out data the result is weaker: with events taken from annotated tracks, an oracle, the stream beats h.265 at 100 kbps (+0.13), but with onboard perception it does not (+0.01 [-0.04, +0.06]) and is no better than receiving nothing. sent alone through emulated links the event records answer 0.739 at 1 mbps and still 0.724 at 0.3 kbps; an every-frame track stream holds down to 1 kbps and video with ground-side perception down to about 100 kbps. on a jetson orin nano the unchanged pipeline runs at 4.5 fps and misses most events. independent researcher cong xu cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.19348",
+      "title": "Attention U-Net Cellular Automata for Multi-Class Land Use and Land Cover Change Simulation in Lucknow, India: Evaluation Against Null and Classical Baselines",
+      "authors": "Shubham Phapale, Poonam Sharma",
+      "affiliations": "Visvesvaraya National Institute of Technology, Nagpur, India",
+      "published_date": "2026-11-14",
+      "categories": "cs.AI, cs.CV, cs.LG",
+      "abstract": "Convolutional networks are often used to learn the transition rules of land-use cellular automata (CA), yet their predictions are seldom compared with a null model that predicts no change. We built AttentionUNet-CA, which reads a 32 x 32 neighbourhood of land-cover states with four drivers (elevation, distance to major roads, distance to the central business district (CBD) and population density) and predicts the state of each cell ten years later. We tested it on Lucknow, India, with GLC_FCS30D land cover for 1990, 2000, 2010 and 2020, a 30 m series mapped consistently over time, and compared its built-up class with GHSL and ESA WorldCover. AttentionUNet-CA was trained on 1990-2010, selected on held-out spatial blocks and evaluated once on 2010-2020, with three seeds. Baselines were the null model, a random-forest CA (RF-CA) and a U-Net CA without attention; each network was trained with and without class weights. Only 8.1% of the study area changed in the test decade, so no model matched the overall agreement of the null model (91.9%). On change, measured by the figure of merit, the class-weighted networks scored highest (U-Net CA 22.0 +/- 1.2%, AttentionUNet-CA 21.0 +/- 1.4%), ahead of RF-CA (20.3%), but by margins comparable to seed-to-seed variation; the networks estimated the amount of change better than RF-CA. The attention gates did not improve accuracy. Population density and distance to the CBD were the most useful drivers. Projected to 2030, built-up land grows by 22-35%, mostly at the city edge.",
+      "summary_cn": "论文构建 AttentionUNet-CA，以 32×32 邻域加高程、路网距离、CBD 距离、人口密度四类驱动因子预测十年后土地利用类型，在印度勒克瑙 1990–2020 的 30 米序列上训练并单次测试，与空模型、随机森林 CA、无注意力 U-Net 对比，显示注意力结构优于经典基线，并强调必须与无变化空模型比较。",
+      "pdf_filename": "2611.19348.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.19348",
+      "search_text": "attention u-net cellular automata for multi-class land use and land cover change simulation in lucknow, india: evaluation against null and classical baselines  论文构建 attentionunet-ca，以 32×32 邻域加高程、路网距离、cbd 距离、人口密度四类驱动因子预测十年后土地利用类型，在印度勒克瑙 1990–2020 的 30 米序列上训练并单次测试，与空模型、随机森林 ca、无注意力 u-net 对比，显示注意力结构优于经典基线，并强调必须与无变化空模型比较。 convolutional networks are often used to learn the transition rules of land-use cellular automata (ca), yet their predictions are seldom compared with a null model that predicts no change. we built attentionunet-ca, which reads a 32 x 32 neighbourhood of land-cover states with four drivers (elevation, distance to major roads, distance to the central business district (cbd) and population density) and predicts the state of each cell ten years later. we tested it on lucknow, india, with glc_fcs30d land cover for 1990, 2000, 2010 and 2020, a 30 m series mapped consistently over time, and compared its built-up class with ghsl and esa worldcover. attentionunet-ca was trained on 1990-2010, selected on held-out spatial blocks and evaluated once on 2010-2020, with three seeds. baselines were the null model, a random-forest ca (rf-ca) and a u-net ca without attention; each network was trained with and without class weights. only 8.1% of the study area changed in the test decade, so no model matched the overall agreement of the null model (91.9%). on change, measured by the figure of merit, the class-weighted networks scored highest (u-net ca 22.0 +/- 1.2%, attentionunet-ca 21.0 +/- 1.4%), ahead of rf-ca (20.3%), but by margins comparable to seed-to-seed variation; the networks estimated the amount of change better than rf-ca. the attention gates did not improve accuracy. population density and distance to the cbd were the most useful drivers. projected to 2030, built-up land grows by 22-35%, mostly at the city edge. visvesvaraya national institute of technology, nagpur, india shubham phapale, poonam sharma cs.ai, cs.cv, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.18998",
+      "title": "Model Maps: A Documentation Framework for Tracing Foundation Model Ancestry and Understanding AI Entanglement",
+      "authors": "Rachel Hong, Madeleine Grunde-McLaughlin, Sarah Cen, Jevan Hutson, Jamie Morgenstern, Tadayoshi Kohno",
+      "affiliations": "University of Washington; Carnegie Mellon University; Amazon; Georgetown University",
+      "published_date": "2026-11-13",
+      "categories": "cs.CY, cs.AI",
+      "abstract": "The development of foundation models incorporates pre-existing AI artifacts like models, datasets, and benchmarks. These relationships, as part of the broader AI supply chain, produce \"entangled\" webs in which properties of artifacts upstream can influence the outputs of a foundation model downstream - a phenomenon known as AI entanglement. Without visibility into these connections, a black-box model can inherit upstream properties that result in security vulnerabilities, hallucinations, or biased predictions, yet developers are left with no recourse to identify or mitigate the root issue. To address these concerns, we introduce model maps as a conceptual documentation framework for tracing model ancestry that builds on previous documentation frameworks like ecosystem graphs, datasheets, and model cards. A model map for a given foundation model is a detailed knowledge graph that represents the relationships between artifacts that influence the resulting foundation model. Our framework incorporates a taxonomy of 13 dependency mechanisms including model fine-tuning and synthetic data generation. We apply this framework to construct model maps of 15 closed and open-weight foundation models to illustrate the complexity of AI entanglement in current model development practices. From our model maps, we record 2,778 unique dependencies and trace artifacts that are located up to 9 hops away from a resulting foundation model. Our findings suggest that AI transparency requirements should extend beyond individual models and training-data disclosures to encompass upstream dependencies, which would enable more effective risk assessment, auditing, and accountability across the AI supply chain. To help developers, regulators, and researchers understand and analyze the interactions that can influence the behavior of a foundation model, we release these these model maps at https://modelmaps.ai.",
+      "summary_cn": "针对基础模型上游模型、数据与基准相互纠缠、难以追溯的问题，提出 Model Maps 文档框架：以血缘图记录派生关系并给出可操作字段，使开发者与审计者能沿供应链定位漏洞、幻觉或偏见来源。论文以案例说明如何在模型卡基础上补充跨构件追溯能力，属治理层面工作，无新模型实验。",
+      "pdf_filename": "2611.18998.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.18998",
+      "search_text": "model maps: a documentation framework for tracing foundation model ancestry and understanding ai entanglement  针对基础模型上游模型、数据与基准相互纠缠、难以追溯的问题，提出 model maps 文档框架：以血缘图记录派生关系并给出可操作字段，使开发者与审计者能沿供应链定位漏洞、幻觉或偏见来源。论文以案例说明如何在模型卡基础上补充跨构件追溯能力，属治理层面工作，无新模型实验。 the development of foundation models incorporates pre-existing ai artifacts like models, datasets, and benchmarks. these relationships, as part of the broader ai supply chain, produce \"entangled\" webs in which properties of artifacts upstream can influence the outputs of a foundation model downstream - a phenomenon known as ai entanglement. without visibility into these connections, a black-box model can inherit upstream properties that result in security vulnerabilities, hallucinations, or biased predictions, yet developers are left with no recourse to identify or mitigate the root issue. to address these concerns, we introduce model maps as a conceptual documentation framework for tracing model ancestry that builds on previous documentation frameworks like ecosystem graphs, datasheets, and model cards. a model map for a given foundation model is a detailed knowledge graph that represents the relationships between artifacts that influence the resulting foundation model. our framework incorporates a taxonomy of 13 dependency mechanisms including model fine-tuning and synthetic data generation. we apply this framework to construct model maps of 15 closed and open-weight foundation models to illustrate the complexity of ai entanglement in current model development practices. from our model maps, we record 2,778 unique dependencies and trace artifacts that are located up to 9 hops away from a resulting foundation model. our findings suggest that ai transparency requirements should extend beyond individual models and training-data disclosures to encompass upstream dependencies, which would enable more effective risk assessment, auditing, and accountability across the ai supply chain. to help developers, regulators, and researchers understand and analyze the interactions that can influence the behavior of a foundation model, we release these these model maps at https://modelmaps.ai. university of washington; carnegie mellon university; amazon; georgetown university rachel hong, madeleine grunde-mclaughlin, sarah cen, jevan hutson, jamie morgenstern, tadayoshi kohno cs.cy, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.18914",
+      "title": "How Much Do Foundation Models Add to Gradient Boosting on Financial Event Sequences?",
+      "authors": "Carlos Eduardo Martins Relvas, Gustavo di Giovanni Bernardo",
+      "affiliations": "WeCogno",
+      "published_date": "2026-11-13",
+      "categories": "cs.LG",
+      "abstract": "Foundation models pretrained on raw transaction sequences are proposed for credit, fraud and churn modeling, with reported gains over gradient boosting, but the data and baselines behind these gains are rarely public. We measure how much the pretraining and adaptation recipes of these models add to a baseline of point-in-time window aggregates and LightGBM, and we propose TBS (Temporal Boosting-Sequence ensemble), which averages the ranks of a boosting model enriched with label-free event-transition features and of a pretrained sequence network fine-tuned jointly with the aggregates. On a synthetic credit-card dataset, the public MBD-mini banking dataset and two proprietary datasets of trade credit and B2B churn, we compare 27 methods at three label budgets with five seeds and paired bootstrap intervals, using sequence models of about 0.4 million parameters pretrained per dataset. Frozen self-supervised embeddings rarely improve the baseline, and a fine-tuned sequence network alone clears it in 9 of 21 target-budget cells. TBS clears it in 19 of 21 cells (18 after FDR adjustment), with a median gain of +1.8 AUC points, and the controls suggest that combining boosting with the pretrained network is the main source of the observed gain. Gains shrink as labels grow and with rich tabular data: with both, the gain on the proprietary datasets is +0.7 and +0.8 points, the latter with an interval including zero. We also re-examine two benchmarks. On IBM TabFormer, the test follows a change in the fraud pattern and the published baseline has no history; with the training period the vendor states, our history-aware LightGBM and our own foundation model stay below the published scores of a commercial model. On IBM AML, a simulation artifact lets a date rule reach F1 0.482, and a point-in-time LightGBM reaches the F1 of graph neural networks whose test graph includes later transactions.",
+      "summary_cn": "论文在合成信用卡、公开 MBD-mini 与两套自有数据上，用 27 种方法、三档标签预算做配对比较，量化预训练序列模型相对 LightGBM 基线的真实增益。结果显示冻结自监督嵌入几乎无提升，作者提出的 TBS 按秩融合提升树与微调序列网络仅在标签稀少时小幅获益，说明预训练收益被高估。",
+      "pdf_filename": "2611.18914.pdf",
+      "crawled_date": "2026-11-17",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.18914",
+      "search_text": "how much do foundation models add to gradient boosting on financial event sequences?  论文在合成信用卡、公开 mbd-mini 与两套自有数据上，用 27 种方法、三档标签预算做配对比较，量化预训练序列模型相对 lightgbm 基线的真实增益。结果显示冻结自监督嵌入几乎无提升，作者提出的 tbs 按秩融合提升树与微调序列网络仅在标签稀少时小幅获益，说明预训练收益被高估。 foundation models pretrained on raw transaction sequences are proposed for credit, fraud and churn modeling, with reported gains over gradient boosting, but the data and baselines behind these gains are rarely public. we measure how much the pretraining and adaptation recipes of these models add to a baseline of point-in-time window aggregates and lightgbm, and we propose tbs (temporal boosting-sequence ensemble), which averages the ranks of a boosting model enriched with label-free event-transition features and of a pretrained sequence network fine-tuned jointly with the aggregates. on a synthetic credit-card dataset, the public mbd-mini banking dataset and two proprietary datasets of trade credit and b2b churn, we compare 27 methods at three label budgets with five seeds and paired bootstrap intervals, using sequence models of about 0.4 million parameters pretrained per dataset. frozen self-supervised embeddings rarely improve the baseline, and a fine-tuned sequence network alone clears it in 9 of 21 target-budget cells. tbs clears it in 19 of 21 cells (18 after fdr adjustment), with a median gain of +1.8 auc points, and the controls suggest that combining boosting with the pretrained network is the main source of the observed gain. gains shrink as labels grow and with rich tabular data: with both, the gain on the proprietary datasets is +0.7 and +0.8 points, the latter with an interval including zero. we also re-examine two benchmarks. on ibm tabformer, the test follows a change in the fraud pattern and the published baseline has no history; with the training period the vendor states, our history-aware lightgbm and our own foundation model stay below the published scores of a commercial model. on ibm aml, a simulation artifact lets a date rule reach f1 0.482, and a point-in-time lightgbm reaches the f1 of graph neural networks whose test graph includes later transactions. wecogno carlos eduardo martins relvas, gustavo di giovanni bernardo cs.lg"
+    },
     {
       "arxiv_id": "2611.18561",
       "title": "FETTUCCINE: Fast and efficient brain-to-text decoding on mobile devices",
