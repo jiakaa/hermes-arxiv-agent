@@ -1,45 +1,45 @@
 {
-  "count": 2165,
+  "count": 2198,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-11-18",
+  "crawled_date_max": "2026-11-19",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-11-17",
+  "published_date_max": "2026-11-18",
   "rating_counts": {
-    "S": 617,
-    "A": 809,
-    "B": 351,
-    "C": 388,
+    "S": 630,
+    "A": 817,
+    "B": 355,
+    "C": 396,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 443,
+      "count": 448,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 399,
+      "count": 404,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 375,
+      "count": 383,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 328,
+      "count": 338,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 321,
+      "count": 328,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 304,
+      "count": 308,
       "group": "通用"
     },
     {
@@ -49,22 +49,22 @@
     },
     {
       "name": "强化学习",
-      "count": 161,
+      "count": 162,
       "group": "世界模型与仿真"
     },
     {
       "name": "点云",
-      "count": 147,
+      "count": 150,
       "group": "通用"
     },
     {
       "name": "前馈3D重建",
-      "count": 137,
+      "count": 142,
       "group": "前馈3D重建"
     },
     {
       "name": "仿真器",
-      "count": 127,
+      "count": 129,
       "group": "通用"
     },
     {
@@ -84,7 +84,7 @@
     },
     {
       "name": "4DGS",
-      "count": 62,
+      "count": 63,
       "group": "3DGS/4DGS"
     },
     {
@@ -94,12 +94,12 @@
     },
     {
       "name": "深度估计",
-      "count": 54,
+      "count": 55,
       "group": "前馈3D重建"
     },
     {
       "name": "SLAM",
-      "count": 52,
+      "count": 53,
       "group": "通用"
     },
     {
@@ -108,13 +108,13 @@
       "group": "通用"
     },
     {
-      "name": "实时渲染",
+      "name": "动态场景重建",
       "count": 45,
       "group": "3DGS/4DGS"
     },
     {
-      "name": "动态场景重建",
-      "count": 43,
+      "name": "实时渲染",
+      "count": 45,
       "group": "3DGS/4DGS"
     },
     {
@@ -123,14 +123,14 @@
       "group": "世界模型与仿真"
     },
     {
+      "name": "生成式仿真",
+      "count": 24,
+      "group": "世界模型与仿真"
+    },
+    {
       "name": "路面重建",
       "count": 24,
       "group": "地面重建"
-    },
-    {
-      "name": "生成式仿真",
-      "count": 23,
-      "group": "世界模型与仿真"
     },
     {
       "name": "地形重建",
@@ -154,6 +154,648 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2611.24894",
+      "title": "ProvCards: Artifact-Oriented Provenance for Heterogeneous Scientific Workflows",
+      "authors": "Tanja Auge, Marinus Holitschke, Meike Klettke",
+      "affiliations": "University of Regensburg",
+      "published_date": "2026-11-18",
+      "categories": "cs.DB",
+      "abstract": "Reproducibility in scientific workflows is hindered by heterogeneous components and execution environments, as well as fragmented provenance capture. Although existing approaches offer established semantics and workflow-specific solutions, provenance remains difficult to capture, exchange, and compose across workflow boundaries. We present ProvCards, an artifact-oriented approach that treats provenance as a first-class artifact grounded in the W3C PROV Data Model. Individual workflow components can generate cards that are stored, exchanged, reused, and composed independently of any workflow system or centralized execution context. ProvDecks group related cards into portable scopes while preserving their identities. ProvGraphs provide derived views for provenance reconstruction, querying, visualization, and analysis. Together, these representations support coherent, task-specific provenance views across heterogeneous components, facilitating traceability, reuse, and reproducibility. We implement ProvCards using a graph-based infrastructure and evaluate them in a scientific data-processing workflow. The results demonstrate independent provenance capture at the component level, composition across component boundaries, and reconstruction for querying and analysis. ProvCards provide a portable, composable, and incrementally extensible foundation for provenance management in heterogeneous scientific workflows.",
+      "summary_cn": "把溯源当作一等工件：基于W3C PROV数据模型提出ProvCards，由各工作流组件直接生成并独立存储、交换、复用与组合，ProvDecks把相关卡片聚成可移植作用域并保留身份，ProvGraphs给出溯源重建、查询、可视化与分析的派生视图。在图式基础设施上实现并在科学数据处理流程中验证了组件级独立捕获、跨组件组合与重建查询。",
+      "pdf_filename": "2611.24894.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24894",
+      "search_text": "provcards: artifact-oriented provenance for heterogeneous scientific workflows  把溯源当作一等工件：基于w3c prov数据模型提出provcards，由各工作流组件直接生成并独立存储、交换、复用与组合，provdecks把相关卡片聚成可移植作用域并保留身份，provgraphs给出溯源重建、查询、可视化与分析的派生视图。在图式基础设施上实现并在科学数据处理流程中验证了组件级独立捕获、跨组件组合与重建查询。 reproducibility in scientific workflows is hindered by heterogeneous components and execution environments, as well as fragmented provenance capture. although existing approaches offer established semantics and workflow-specific solutions, provenance remains difficult to capture, exchange, and compose across workflow boundaries. we present provcards, an artifact-oriented approach that treats provenance as a first-class artifact grounded in the w3c prov data model. individual workflow components can generate cards that are stored, exchanged, reused, and composed independently of any workflow system or centralized execution context. provdecks group related cards into portable scopes while preserving their identities. provgraphs provide derived views for provenance reconstruction, querying, visualization, and analysis. together, these representations support coherent, task-specific provenance views across heterogeneous components, facilitating traceability, reuse, and reproducibility. we implement provcards using a graph-based infrastructure and evaluate them in a scientific data-processing workflow. the results demonstrate independent provenance capture at the component level, composition across component boundaries, and reconstruction for querying and analysis. provcards provide a portable, composable, and incrementally extensible foundation for provenance management in heterogeneous scientific workflows. university of regensburg tanja auge, marinus holitschke, meike klettke cs.db"
+    },
+    {
+      "arxiv_id": "2611.24880",
+      "title": "Local AI Agents in Power Electronics Simulation: Deployment, Measurements and Costs",
+      "authors": "Yuzhuo Li, Pasan Gunawardena, Yunwei Li",
+      "affiliations": "University of Alberta",
+      "published_date": "2026-11-18",
+      "categories": "cs.AI, eess.SY",
+      "abstract": "Agentic artificial intelligence (AI) is emerging in power electronics, where it drives the simulation loop that engineers used to close largely by hand. In this loop, a converter design, or a study of the network it connects to, is built, run, measured and revised until it satisfies its specification. Such an agent can be served from a cloud API or from an inference device on the premises. For organizations whose designs, customer data or export-controlled material cannot leave the site, and whose simulators are licensed there, local deployment is the natural choice. In such a deployment, the agent becomes an electrical load on the organization's own equipment, i.e., every run consumes power and energy on a local device, generates tokens and takes time. However, existing work focuses mainly on what the agent can achieve with cloud-hosted models. What a local deployment costs in power, energy, tokens and time on real simulation tasks, and what its choices trade against one another, has received little quantitative investigation under comparable conditions. To address this gap, a systematic evaluation framework is presented in this paper. It applies locally served models to agentic power electronics tasks, from the converter level to the system level, and measures their power, energy, token and time costs. Based on these measurements, the capability boundary of a local agent on such tasks and the cost per solved task are characterized. The results are expected to provide practical insight for the use of agentic AI in power electronics and the power systems it serves.",
+      "summary_cn": "面向电力电子仿真回路中本地部署智能体的成本问题，建立系统评测框架：把本地服务模型用于从变换器级到系统级的agentic任务，测量功耗、能耗、token与时间开销，据此刻画本地智能体的能力边界与单任务成本。指出设计数据或受出口管制资料不能出内网时本地部署是自然选择，但每轮运行都是自有设备上的电负载。",
+      "pdf_filename": "2611.24880.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24880",
+      "search_text": "local ai agents in power electronics simulation: deployment, measurements and costs  面向电力电子仿真回路中本地部署智能体的成本问题，建立系统评测框架：把本地服务模型用于从变换器级到系统级的agentic任务，测量功耗、能耗、token与时间开销，据此刻画本地智能体的能力边界与单任务成本。指出设计数据或受出口管制资料不能出内网时本地部署是自然选择，但每轮运行都是自有设备上的电负载。 agentic artificial intelligence (ai) is emerging in power electronics, where it drives the simulation loop that engineers used to close largely by hand. in this loop, a converter design, or a study of the network it connects to, is built, run, measured and revised until it satisfies its specification. such an agent can be served from a cloud api or from an inference device on the premises. for organizations whose designs, customer data or export-controlled material cannot leave the site, and whose simulators are licensed there, local deployment is the natural choice. in such a deployment, the agent becomes an electrical load on the organization's own equipment, i.e., every run consumes power and energy on a local device, generates tokens and takes time. however, existing work focuses mainly on what the agent can achieve with cloud-hosted models. what a local deployment costs in power, energy, tokens and time on real simulation tasks, and what its choices trade against one another, has received little quantitative investigation under comparable conditions. to address this gap, a systematic evaluation framework is presented in this paper. it applies locally served models to agentic power electronics tasks, from the converter level to the system level, and measures their power, energy, token and time costs. based on these measurements, the capability boundary of a local agent on such tasks and the cost per solved task are characterized. the results are expected to provide practical insight for the use of agentic ai in power electronics and the power systems it serves. university of alberta yuzhuo li, pasan gunawardena, yunwei li cs.ai, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.24876",
+      "title": "Learning to Interact in Multi-Agent Self-Play for Controllable Autonomous Driving Scenario Generation",
+      "authors": "Beyazit Yalcinkaya, Ethan Pronovost, Maximilian Naumann, Marcell Vazquez-Chanlatte",
+      "affiliations": "Zoox, Inc.",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO, cs.LG",
+      "abstract": "Large-scale, multi-agent self-play trains robust driving policies effectively in simulation, but controlling these models to generate specific, safety-critical edge cases remains a key challenge. Existing goal-conditioned self-play frameworks rely primarily on static map-location goals and fail to reliably produce complex agent interactions such as aggressive tailgating or adversarial cut-offs. These agent interactions are necessary for rigorous autonomous vehicle (AV) testing. To address this, we present an extended multi-agent self-play framework that introduces agent-relative dynamic goals. By conditioning policies on this extended goal representation, our framework enables targeted, controllable scenario synthesis. We demonstrate that our approach successfully generates interactive driving behaviors that static-goal baselines cannot simulate, providing a flexible tool for long-tail scenario generation in AV testing.",
+      "summary_cn": "针对目标条件自博弈只能用静态地图位置目标、难以产生紧跟与恶意加塞等交互的问题，提出智能体相对的动态目标表示，并把策略条件化在扩展目标上，实现可控的长尾交互场景合成。实验表明能生成静态目标基线无法模拟的交互驾驶行为，为自动驾驶闭环测试提供灵活的场景生成工具。",
+      "pdf_filename": "2611.24876.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "生成式仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24876",
+      "search_text": "learning to interact in multi-agent self-play for controllable autonomous driving scenario generation 闭环仿真 生成式仿真 自动驾驶 针对目标条件自博弈只能用静态地图位置目标、难以产生紧跟与恶意加塞等交互的问题，提出智能体相对的动态目标表示，并把策略条件化在扩展目标上，实现可控的长尾交互场景合成。实验表明能生成静态目标基线无法模拟的交互驾驶行为，为自动驾驶闭环测试提供灵活的场景生成工具。 large-scale, multi-agent self-play trains robust driving policies effectively in simulation, but controlling these models to generate specific, safety-critical edge cases remains a key challenge. existing goal-conditioned self-play frameworks rely primarily on static map-location goals and fail to reliably produce complex agent interactions such as aggressive tailgating or adversarial cut-offs. these agent interactions are necessary for rigorous autonomous vehicle (av) testing. to address this, we present an extended multi-agent self-play framework that introduces agent-relative dynamic goals. by conditioning policies on this extended goal representation, our framework enables targeted, controllable scenario synthesis. we demonstrate that our approach successfully generates interactive driving behaviors that static-goal baselines cannot simulate, providing a flexible tool for long-tail scenario generation in av testing. zoox, inc. beyazit yalcinkaya, ethan pronovost, maximilian naumann, marcell vazquez-chanlatte cs.ro, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.24858",
+      "title": "Communications-free Collective Intelligence Via Allocentric Belief",
+      "authors": "Cameron Mehlman, Arjun Mulchandani, Hovik Grigoryan, Anurag Koyyada, Gregory Falco",
+      "affiliations": "Cornell University",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO, eess.SY",
+      "abstract": "A team of skilled card players share no information amongst each other, and yet still are able to coordinate their play by watching the same players and reading the same tells. Autonomous systems have failed to exploit this logic, relying instead on explicit communication or complex state estimation schemes that can fail when it matters most. Without it, decentralized agents diverge in their world beliefs, and coordination collapses. Here we show that anchoring all agents to a single shared external actor, a common witness whose reactions encode team state, produces spontaneous, communication-free coordination. An allocentric belief network trained on witness behavior allows each agent to independently reconstruct full team state, keeping group beliefs consistent with no inter-agent exchange. Across five competitive environments allocentric belief alignment outperforms egocentric approaches in collective performance, and even scales to sixty-agent teams where standard methods fail. These results establish a new principle for collective intelligence: in the absence of communication, a shared gaze replaces a shared channel.",
+      "summary_cn": "提出无需通信的协同机制：把所有智能体锚定到同一个共享外部见证者（其反应编码团队状态），用在该见证者行为上训练的他者中心信念网络，让每个智能体独立重建完整团队状态。五个竞争环境中协同表现优于自我中心方案，并可扩展到60个智能体，给出无通信多智能体协同的共享注视替代共享信道的原理。",
+      "pdf_filename": "2611.24858.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24858",
+      "search_text": "communications-free collective intelligence via allocentric belief  提出无需通信的协同机制：把所有智能体锚定到同一个共享外部见证者（其反应编码团队状态），用在该见证者行为上训练的他者中心信念网络，让每个智能体独立重建完整团队状态。五个竞争环境中协同表现优于自我中心方案，并可扩展到60个智能体，给出无通信多智能体协同的共享注视替代共享信道的原理。 a team of skilled card players share no information amongst each other, and yet still are able to coordinate their play by watching the same players and reading the same tells. autonomous systems have failed to exploit this logic, relying instead on explicit communication or complex state estimation schemes that can fail when it matters most. without it, decentralized agents diverge in their world beliefs, and coordination collapses. here we show that anchoring all agents to a single shared external actor, a common witness whose reactions encode team state, produces spontaneous, communication-free coordination. an allocentric belief network trained on witness behavior allows each agent to independently reconstruct full team state, keeping group beliefs consistent with no inter-agent exchange. across five competitive environments allocentric belief alignment outperforms egocentric approaches in collective performance, and even scales to sixty-agent teams where standard methods fail. these results establish a new principle for collective intelligence: in the absence of communication, a shared gaze replaces a shared channel. cornell university cameron mehlman, arjun mulchandani, hovik grigoryan, anurag koyyada, gregory falco cs.ro, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.24853",
+      "title": "Beyond corridor averages: Lane-level validation of microscopic freeway simulation with empirically parameterized arrivals",
+      "authors": "Korede R. Bishi, Casey Bowman, John A. Miller",
+      "affiliations": "University of Georgia; University of North Georgia",
+      "published_date": "2026-11-18",
+      "categories": "cs.CE",
+      "abstract": "Traffic flow modeling is an essential part of civil planning around the world, and traffic simulation is an important component of the analyses that city planners must perform to ensure safe and efficient road networks for their citizens. This work advances microscopic traffic simulation through lane-level validation of speed and flow dynamics, addressing a critical gap in conventional macro-aggregated approaches. We systematically evaluate the trade-offs between numerical integration methods and vehicle arrival processes when reproducing empirical trajectory data from California's freeway network. Results demonstrate that numerical-integrator choice has negligible impact on simulation accuracy, with less than one percent variation across eight methods, while vehicle arrival-process modeling substantially affects fidelity. The shifted Erlang-2 distribution reduces flow-prediction error by approximately 28% compared to Poisson processes by enforcing a realistic minimum headway. Lane-level validation across five detector stations reveals lane-specific dynamics that aggregated metrics often obscure.",
+      "summary_cn": "针对宏观聚合指标掩盖车道级差异，用加州高速实测轨迹对微观交通仿真做车道级校验：八种数值积分方法对精度影响不足1%，车辆到达过程才是保真度关键，移位Erlang-2分布靠强制最小车头时距把流量预测误差比泊松过程降约28%；五个检测站的车道级校验还揭示了聚合指标看不到的车道特异动态。",
+      "pdf_filename": "2611.24853.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24853",
+      "search_text": "beyond corridor averages: lane-level validation of microscopic freeway simulation with empirically parameterized arrivals  针对宏观聚合指标掩盖车道级差异，用加州高速实测轨迹对微观交通仿真做车道级校验：八种数值积分方法对精度影响不足1%，车辆到达过程才是保真度关键，移位erlang-2分布靠强制最小车头时距把流量预测误差比泊松过程降约28%；五个检测站的车道级校验还揭示了聚合指标看不到的车道特异动态。 traffic flow modeling is an essential part of civil planning around the world, and traffic simulation is an important component of the analyses that city planners must perform to ensure safe and efficient road networks for their citizens. this work advances microscopic traffic simulation through lane-level validation of speed and flow dynamics, addressing a critical gap in conventional macro-aggregated approaches. we systematically evaluate the trade-offs between numerical integration methods and vehicle arrival processes when reproducing empirical trajectory data from california's freeway network. results demonstrate that numerical-integrator choice has negligible impact on simulation accuracy, with less than one percent variation across eight methods, while vehicle arrival-process modeling substantially affects fidelity. the shifted erlang-2 distribution reduces flow-prediction error by approximately 28% compared to poisson processes by enforcing a realistic minimum headway. lane-level validation across five detector stations reveals lane-specific dynamics that aggregated metrics often obscure. university of georgia; university of north georgia korede r. bishi, casey bowman, john a. miller cs.ce"
+    },
+    {
+      "arxiv_id": "2611.24840",
+      "title": "Does the Action Matter? Probing Action-Conditioned Semantic Forecasting as a World Model for Autonomous Driving",
+      "authors": "Binay Kumar Singh, Niels Da Vitoria Lobo",
+      "affiliations": "University of Central Florida",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV, cs.AI, cs.LG, cs.RO",
+      "abstract": "World models are increasingly used in autonomous driving to predict how a scene evolves under the ego vehicle's actions, supporting counterfactual reasoning and model-based planning. However, existing evaluations focus on prediction fidelity and planning performance, and rarely verify that the predictions depend on the conditioning action. In this paper, we study action dependence in action-conditioned semantic forecasting, which predicts future semantic segmentation from past segmentations and the ego action. We compare a forecaster with feature-wise and input-level action conditioning against an identical model without action input, and measure action dependence with test-time action interventions scored by standard segmentation metrics. The evaluation is validated in a synthetic environment with known action-dependent dynamics and applied to Cityscapes and BDD100K, both within each dataset and across the two vehicle platforms. Experiments show that the executed action improves mid-term mIoU by at most 2.5 points on Cityscapes and 0.6 points on BDD100K, whereas a wrong action reduces it by up to 23.2 and 7.0 points, below the model without action input. On real data, feature-wise conditioning depends 1.6 times more on the action than input-level conditioning at similar accuracy, whereas both depend on it equally in the synthetic environment, where the history does not determine the action. These results show that an accuracy gain indicates that a driving world model uses its action, but not how strongly its forecasts depend on it. Code is available at https://github.com/binayksingh/does-action-matter.",
+      "summary_cn": "检验动作条件语义预测世界模型是否真依赖动作：比较特征级与输入级条件化和无动作输入的孪生模型，用测试时动作干预打分。合成环境验证后用于Cityscapes与BDD100K及跨平台，执行动作最多只提中期mIoU 2.5和0.6点，错误动作最多降23.2和7.0点、低于无动作模型；真实数据上特征级对动作依赖是输入级的1.6倍，说明精度提升不等于真用上了动作。",
+      "pdf_filename": "2611.24840.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24840",
+      "search_text": "does the action matter? probing action-conditioned semantic forecasting as a world model for autonomous driving 世界模型 自动驾驶 检验动作条件语义预测世界模型是否真依赖动作：比较特征级与输入级条件化和无动作输入的孪生模型，用测试时动作干预打分。合成环境验证后用于cityscapes与bdd100k及跨平台，执行动作最多只提中期miou 2.5和0.6点，错误动作最多降23.2和7.0点、低于无动作模型；真实数据上特征级对动作依赖是输入级的1.6倍，说明精度提升不等于真用上了动作。 world models are increasingly used in autonomous driving to predict how a scene evolves under the ego vehicle's actions, supporting counterfactual reasoning and model-based planning. however, existing evaluations focus on prediction fidelity and planning performance, and rarely verify that the predictions depend on the conditioning action. in this paper, we study action dependence in action-conditioned semantic forecasting, which predicts future semantic segmentation from past segmentations and the ego action. we compare a forecaster with feature-wise and input-level action conditioning against an identical model without action input, and measure action dependence with test-time action interventions scored by standard segmentation metrics. the evaluation is validated in a synthetic environment with known action-dependent dynamics and applied to cityscapes and bdd100k, both within each dataset and across the two vehicle platforms. experiments show that the executed action improves mid-term miou by at most 2.5 points on cityscapes and 0.6 points on bdd100k, whereas a wrong action reduces it by up to 23.2 and 7.0 points, below the model without action input. on real data, feature-wise conditioning depends 1.6 times more on the action than input-level conditioning at similar accuracy, whereas both depend on it equally in the synthetic environment, where the history does not determine the action. these results show that an accuracy gain indicates that a driving world model uses its action, but not how strongly its forecasts depend on it. code is available at https://github.com/binayksingh/does-action-matter. university of central florida binay kumar singh, niels da vitoria lobo cs.cv, cs.ai, cs.lg, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.24778",
+      "title": "Counterfactual World Models: JEPAs That Reason About \"What If\"",
+      "authors": "Randall Balestriero, Yann LeCun, Kerda Varaku",
+      "affiliations": "Brown University; New York University; AMI Labs",
+      "published_date": "2026-11-18",
+      "categories": "cs.LG, cs.AI, cs.CV, cs.RO, stat.ML",
+      "abstract": "World models operate in a world they cannot fully observe. When a hidden disturbance, such as a current pushing a boat, changes the outcome of an action, a counterfactual question follows: what would have happened under a different action, subject to the same disturbance? Its answer separates bad decisions from bad luck. We prove that world models trained on factual transitions cannot answer it on their own, whatever their data or capacity. For many physical systems, the observed outcome and a simple property of the dynamics suffice: natura non facit saltus, nature makes no leaps. When actions and disturbances act as separate forces, their interaction is second-order in time, so the counterfactual outcome is, to first order, the observed outcome plus the difference between the world model's predictions under the alternative and factual actions. This yields a counterfactual world model with no counterfactual data, extra parameters, or retraining. For transitions of duration $h$, we prove an $O(h^2)$ bound on the counterfactual error relative to the disturbance variance, establish a matching minimax lower bound from unpaired factual data, and characterize failures at discontinuities, coordinate folds, and disturbances that scale the command. We validate these predictions from pixels with JEPA world models on frozen DINOv2 and masked autoencoder (MAE) encoders. On four rendered simulators, our approach improves counterfactual $R^2$ from $38$--$46\\%$ to $86$--$96\\%$ with the same world models; on a fifth, an underwater vehicle, it reaches $90$--$94\\%$ with sixteen times more factual data. Four further frozen encoders, DINOv3, SigLIP~2, CLIP and EVA-02, give $81$--$95\\%$ on the same simulators. In hindsight planning, it finds the action that would have reached the goal in $35$--$69\\%$ of events, against $14$--$23\\%$ for an oracle planner that knows the simulator but not the outcome.",
+      "summary_cn": "证明仅用事实转移训练的世界模型原理上答不出同一扰动下换动作会怎样，但若动作与扰动作为独立力作用，反事实结果一阶近似等于观测结果加上模型在替代动作与事实动作下预测之差，故无需反事实数据、额外参数或重训即可构建；给出O(h²)误差界与匹配的极小极大下界。冻结DINOv2与MAE的JEPA上，四个渲染仿真器反事实R²由38-46%升到86-96%。",
+      "pdf_filename": "2611.24778.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24778",
+      "search_text": "counterfactual world models: jepas that reason about \"what if\" 世界模型 仿真器 证明仅用事实转移训练的世界模型原理上答不出同一扰动下换动作会怎样，但若动作与扰动作为独立力作用，反事实结果一阶近似等于观测结果加上模型在替代动作与事实动作下预测之差，故无需反事实数据、额外参数或重训即可构建；给出o(h²)误差界与匹配的极小极大下界。冻结dinov2与mae的jepa上，四个渲染仿真器反事实r²由38-46%升到86-96%。 world models operate in a world they cannot fully observe. when a hidden disturbance, such as a current pushing a boat, changes the outcome of an action, a counterfactual question follows: what would have happened under a different action, subject to the same disturbance? its answer separates bad decisions from bad luck. we prove that world models trained on factual transitions cannot answer it on their own, whatever their data or capacity. for many physical systems, the observed outcome and a simple property of the dynamics suffice: natura non facit saltus, nature makes no leaps. when actions and disturbances act as separate forces, their interaction is second-order in time, so the counterfactual outcome is, to first order, the observed outcome plus the difference between the world model's predictions under the alternative and factual actions. this yields a counterfactual world model with no counterfactual data, extra parameters, or retraining. for transitions of duration $h$, we prove an $o(h^2)$ bound on the counterfactual error relative to the disturbance variance, establish a matching minimax lower bound from unpaired factual data, and characterize failures at discontinuities, coordinate folds, and disturbances that scale the command. we validate these predictions from pixels with jepa world models on frozen dinov2 and masked autoencoder (mae) encoders. on four rendered simulators, our approach improves counterfactual $r^2$ from $38$--$46\\%$ to $86$--$96\\%$ with the same world models; on a fifth, an underwater vehicle, it reaches $90$--$94\\%$ with sixteen times more factual data. four further frozen encoders, dinov3, siglip~2, clip and eva-02, give $81$--$95\\%$ on the same simulators. in hindsight planning, it finds the action that would have reached the goal in $35$--$69\\%$ of events, against $14$--$23\\%$ for an oracle planner that knows the simulator but not the outcome. brown university; new york university; ami labs randall balestriero, yann lecun, kerda varaku cs.lg, cs.ai, cs.cv, cs.ro, stat.ml"
+    },
+    {
+      "arxiv_id": "2611.24747",
+      "title": "Cross-Vehicle Transferability of Lateral Velocity Estimation on Production Vehicles through Input Selection and Data Augmentation",
+      "authors": "Hendrik Schäfke, Simon F. G. Ehlers, Thomas Seel, Askar Vagapov, Christoph Schweers, Ahmed Trabelsi, Daniel O. M. Weber",
+      "affiliations": "Leibniz University Hannover; IAV GmbH; L3S Research Center",
+      "published_date": "2026-11-18",
+      "categories": "eess.SY, cs.LG",
+      "abstract": "Lateral velocity is safety-critical for vehicle-dynamics control but cannot be measured with production sensors. Model-based estimators such as Kalman filters are established, whereas data-driven estimators are more accurate within the training regime but suspected to lose accuracy beyond it. Their transfer to a structurally different vehicle has rarely been tested. We record real-world test drives of three series-production vehicles, train a neural-network estimator on production CAN signals of a compact car, and evaluate it zero-shot on an SUV and a van against a GNSS-aided inertial reference. On the unseen vehicles, the network's error exceeds that on the training vehicle by an order of magnitude, a gap not quantified on production vehicles before. A systematic comparison of input sets from ten production CAN signals identifies a five-signal set that transfers most robustly. To narrow this gap, we introduce three physically motivated augmentations of training data. Two improve generalization, namely exploiting the vehicle's left-right symmetry and emulating accelerometer bias. Combined, they reduce the error on the validation maneuvers of the SUV and van by 13% and 15%. Contrary to common expectation, on the SUV the data-driven estimator trained with both augmentations matches a model-based estimator tuned on the same training data.",
+      "summary_cn": "在紧凑车量产CAN信号上训练神经网络估计横向速度，零样本迁到SUV与厢式车，实测未见车型误差比训练车型高一个数量级；比较十种CAN信号组合找出最稳健的五信号集，并提出利用车身左右对称与模拟加速度计零偏两种物理增广，使SUV与厢式车验证工况误差分别降13%和15%，两增广齐用时SUV上已与同数据调参的模型法估计器相当。",
+      "pdf_filename": "2611.24747.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "B",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24747",
+      "search_text": "cross-vehicle transferability of lateral velocity estimation on production vehicles through input selection and data augmentation  在紧凑车量产can信号上训练神经网络估计横向速度，零样本迁到suv与厢式车，实测未见车型误差比训练车型高一个数量级；比较十种can信号组合找出最稳健的五信号集，并提出利用车身左右对称与模拟加速度计零偏两种物理增广，使suv与厢式车验证工况误差分别降13%和15%，两增广齐用时suv上已与同数据调参的模型法估计器相当。 lateral velocity is safety-critical for vehicle-dynamics control but cannot be measured with production sensors. model-based estimators such as kalman filters are established, whereas data-driven estimators are more accurate within the training regime but suspected to lose accuracy beyond it. their transfer to a structurally different vehicle has rarely been tested. we record real-world test drives of three series-production vehicles, train a neural-network estimator on production can signals of a compact car, and evaluate it zero-shot on an suv and a van against a gnss-aided inertial reference. on the unseen vehicles, the network's error exceeds that on the training vehicle by an order of magnitude, a gap not quantified on production vehicles before. a systematic comparison of input sets from ten production can signals identifies a five-signal set that transfers most robustly. to narrow this gap, we introduce three physically motivated augmentations of training data. two improve generalization, namely exploiting the vehicle's left-right symmetry and emulating accelerometer bias. combined, they reduce the error on the validation maneuvers of the suv and van by 13% and 15%. contrary to common expectation, on the suv the data-driven estimator trained with both augmentations matches a model-based estimator tuned on the same training data. leibniz university hannover; iav gmbh; l3s research center hendrik schäfke, simon f. g. ehlers, thomas seel, askar vagapov, christoph schweers, ahmed trabelsi, daniel o. m. weber eess.sy, cs.lg"
+    },
+    {
+      "arxiv_id": "2611.24719",
+      "title": "DRIFT: Detachable Reasoning for Runtime-Flexible and Efficient End-to-End Driving",
+      "authors": "Emad Aghajanzadeh, Bethany Anne Wong, Leonhard Kunze, Moritz Thoma, Maximilian Forstenhäusler, Nael Fasfous, Manoj Rohit Vemparala, Pierpaolo Mori, Christos Anagnostopoulos, Daniel Mueller-Gritschneder, Ulf Schlichtmann",
+      "affiliations": "Technical University of Munich; BMW Group; University of Glasgow; TU Wien",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV, cs.CL, cs.LG, cs.RO",
+      "abstract": "The integration of vision-language models (VLMs) into end-to-end (E2E) autonomous driving has demonstrated strong potential by providing scene description and reasoning capabilities. However, VLMs are computationally expensive, and switching language reasoning on and off at runtime without hurting closed-loop performance has not been demonstrated, which hinders practical adoption. To address these issues, we propose DRIFT, an E2E autonomous driving framework that integrates a lightweight language model (LM) for visual question answering and action commentary. By efficiently projecting intermediate driving representations into the language embedding space, we demonstrate that a compact LM (<150M parameters) can achieve strong scene description and action commentary. Furthermore, we introduce a runtime-flexible planning module that is trained on surrogate reasoning features distilled from the LM and can be conditioned on either the LM or the surrogate reasoning features at inference. This design enables bypassing the LM entirely when required by deployment constraints, without sacrificing driving performance. With only 255M parameters, DRIFT reaches up to a Driving Score (DS) of 97.03 and a Success Rate of 89.39% (mean over three runs) on Bench2Drive by interleaving its LM and surrogate reasoning at a chosen reasoning rate. This is on par with the strongest non-language models while being far more compact than existing VLM-based models. DRIFT further achieves competitive results on the real-world NAVSIM and AlpaSim benchmarks at significantly lower computational cost than existing VLM-based approaches. Project page: https://drift-e2e.github.io/",
+      "summary_cn": "提出端到端驾驶框架DRIFT：把中间驾驶表示投影进语言嵌入空间，使小于150M的轻量LM完成场景描述与动作解说，并设计推理时可切换用真LM或用蒸馏替代推理特征的规划模块，必要时完全绕过LM而不损驾驶性能。仅255M参数，Bench2Drive上按选定推理率交替使用可达97.03 DS、89.39%成功率，接近最强非语言模型且远小于现有VLM方案。",
+      "pdf_filename": "2611.24719.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24719",
+      "search_text": "drift: detachable reasoning for runtime-flexible and efficient end-to-end driving 闭环仿真 规划 自动驾驶 多模态 提出端到端驾驶框架drift：把中间驾驶表示投影进语言嵌入空间，使小于150m的轻量lm完成场景描述与动作解说，并设计推理时可切换用真lm或用蒸馏替代推理特征的规划模块，必要时完全绕过lm而不损驾驶性能。仅255m参数，bench2drive上按选定推理率交替使用可达97.03 ds、89.39%成功率，接近最强非语言模型且远小于现有vlm方案。 the integration of vision-language models (vlms) into end-to-end (e2e) autonomous driving has demonstrated strong potential by providing scene description and reasoning capabilities. however, vlms are computationally expensive, and switching language reasoning on and off at runtime without hurting closed-loop performance has not been demonstrated, which hinders practical adoption. to address these issues, we propose drift, an e2e autonomous driving framework that integrates a lightweight language model (lm) for visual question answering and action commentary. by efficiently projecting intermediate driving representations into the language embedding space, we demonstrate that a compact lm (<150m parameters) can achieve strong scene description and action commentary. furthermore, we introduce a runtime-flexible planning module that is trained on surrogate reasoning features distilled from the lm and can be conditioned on either the lm or the surrogate reasoning features at inference. this design enables bypassing the lm entirely when required by deployment constraints, without sacrificing driving performance. with only 255m parameters, drift reaches up to a driving score (ds) of 97.03 and a success rate of 89.39% (mean over three runs) on bench2drive by interleaving its lm and surrogate reasoning at a chosen reasoning rate. this is on par with the strongest non-language models while being far more compact than existing vlm-based models. drift further achieves competitive results on the real-world navsim and alpasim benchmarks at significantly lower computational cost than existing vlm-based approaches. project page: https://drift-e2e.github.io/ technical university of munich; bmw group; university of glasgow; tu wien emad aghajanzadeh, bethany anne wong, leonhard kunze, moritz thoma, maximilian forstenhäusler, nael fasfous, manoj rohit vemparala, pierpaolo mori, christos anagnostopoulos, daniel mueller-gritschneder, ulf schlichtmann cs.cv, cs.cl, cs.lg, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.24491",
+      "title": "Probing agent overeagerness in realistic settings with continuation audits",
+      "authors": "Sean Lim, Clement Neo",
+      "affiliations": "Neo Research",
+      "published_date": "2026-11-18",
+      "categories": "cs.CR, cs.AI, cs.SE",
+      "abstract": "Frontier coding agents increasingly exhibit overeagerness, taking surprising, sometimes reckless actions beyond a user's mandate --- reported in recent system cards from frontier model developers. These cases are surfaced through internal deployment monitoring, which requires private traffic and is out of reach for open-weight models and independent evaluators. Automated alignment audits are the natural alternative, but capable models increasingly recognise the synthetic setup and adjust their behaviour. We introduce Continuation Audits, a pipeline that grounds the auditor on a prefix drawn from a real coding-agent transcript and directs it to continue the trajectory toward a seeded behaviour. Because the prefix is drawn from a real session, the auditor only needs to maintain a realistic setting rather than manufacturing it. We validate the method on SWE-Chat prefixes: on a paired subset of 90 audits a judge cannot reliably distinguish continuations from their source sessions (realism win rate 0.42 vs.\\ 0.43), and across all 900 audits verbalized eval-awareness does not exceed the rate observed in the unaudited real sessions. Applying the pipeline to three recent models across three seeds, we find each model leads a different seed --- DeepSeek~V4~Pro on colleague-credentials misuse, GPT-5.6~Terra on file-permission bypasses, and Kimi~K3 on treating diagnostic questions as instructions. Kimi~K3 additionally continues to bypass file-permission protections after an explicit CLAUDE.md prohibition while the other two stop entirely, corroborating Moonshot's own report of excessive proactiveness.",
+      "summary_cn": "提出续写审计探测编码智能体的越权倾向：以真实编码会话片段为前缀让审计者续写走向预设行为，不必伪造环境；90组配对审计中判别器无法可靠区分续写与原会话（0.42对0.43），900次审计自述处于评测的比例不高于真实会话。对三个近期模型各跑三种子，DeepSeek V4 Pro、GPT-5.6 Terra、Kimi K3分别在冒用同事凭证、绕过文件权限、把诊断提问当指令上领先。",
+      "pdf_filename": "2611.24491.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24491",
+      "search_text": "probing agent overeagerness in realistic settings with continuation audits  提出续写审计探测编码智能体的越权倾向：以真实编码会话片段为前缀让审计者续写走向预设行为，不必伪造环境；90组配对审计中判别器无法可靠区分续写与原会话（0.42对0.43），900次审计自述处于评测的比例不高于真实会话。对三个近期模型各跑三种子，deepseek v4 pro、gpt-5.6 terra、kimi k3分别在冒用同事凭证、绕过文件权限、把诊断提问当指令上领先。 frontier coding agents increasingly exhibit overeagerness, taking surprising, sometimes reckless actions beyond a user's mandate --- reported in recent system cards from frontier model developers. these cases are surfaced through internal deployment monitoring, which requires private traffic and is out of reach for open-weight models and independent evaluators. automated alignment audits are the natural alternative, but capable models increasingly recognise the synthetic setup and adjust their behaviour. we introduce continuation audits, a pipeline that grounds the auditor on a prefix drawn from a real coding-agent transcript and directs it to continue the trajectory toward a seeded behaviour. because the prefix is drawn from a real session, the auditor only needs to maintain a realistic setting rather than manufacturing it. we validate the method on swe-chat prefixes: on a paired subset of 90 audits a judge cannot reliably distinguish continuations from their source sessions (realism win rate 0.42 vs.\\ 0.43), and across all 900 audits verbalized eval-awareness does not exceed the rate observed in the unaudited real sessions. applying the pipeline to three recent models across three seeds, we find each model leads a different seed --- deepseek~v4~pro on colleague-credentials misuse, gpt-5.6~terra on file-permission bypasses, and kimi~k3 on treating diagnostic questions as instructions. kimi~k3 additionally continues to bypass file-permission protections after an explicit claude.md prohibition while the other two stop entirely, corroborating moonshot's own report of excessive proactiveness. neo research sean lim, clement neo cs.cr, cs.ai, cs.se"
+    },
+    {
+      "arxiv_id": "2611.24470",
+      "title": "When to Refine: Selective Search for Frozen Visual World Models",
+      "authors": "Jingni Huang",
+      "affiliations": "University of Oxford",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO",
+      "abstract": "Planning with a visual world model requires deciding both which actions to execute and how long to search for them. We introduce Selective CEM Refinement (SCR), a learned rule for deciding whether to continue cross-entropy method (CEM) search with a frozen LeWorldModel. After five it- erations, the gate measures how far the mean first action chunk has moved, how much the mean terminal cost of elite plans has fallen, and how widely their first chunks vary. It returns the current plan for execution or continues the same search for ten more iterations. The gate requires no addi- tional world-model rollout. On 16 PushT scenes evaluated with two planning seeds, SCR succeeded in 25 of 32 trials, compared with 28 of 32 for fixed 15-iteration search (Fixed-15). All 25 SCR suc- cesses occurred in trials that Fixed-15 also solved, yield- ing 89.29% paired success retention. Across complete episodes, including replanning, SCR evaluated 23.81% fewer candidate plans and reduced mean controller time per eight-environment batch by 17.22%. Its observed suc- cess rate was 5.36 percentage points above an analytic mix- ture of the two fixed-depth controllers at the same expected candidate workload, although the difference changed sign across planning seeds. Compared with gating only at the initial solve under the same random-draw padding proto- col, gating again at replanning produced nine additional early exits. This reduced total candidate evaluations by 15.79%, while successes fell from 27 to 25.",
+      "summary_cn": "研究冻结视觉世界模型下搜索多久的问题，提出选择性CEM细化SCR：5次迭代后用首段动作均值位移、精英终止代价降幅与首段离散度学习判断是直接执行还是再搜10次，且不需额外模型rollout。16个PushT场景两种种子下成功25/32（固定15次为28/32），保留89.29%配对成功，整体少评估23.81%候选、控制器时间降17.22%。",
+      "pdf_filename": "2611.24470.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24470",
+      "search_text": "when to refine: selective search for frozen visual world models 世界模型 研究冻结视觉世界模型下搜索多久的问题，提出选择性cem细化scr：5次迭代后用首段动作均值位移、精英终止代价降幅与首段离散度学习判断是直接执行还是再搜10次，且不需额外模型rollout。16个pusht场景两种种子下成功25/32（固定15次为28/32），保留89.29%配对成功，整体少评估23.81%候选、控制器时间降17.22%。 planning with a visual world model requires deciding both which actions to execute and how long to search for them. we introduce selective cem refinement (scr), a learned rule for deciding whether to continue cross-entropy method (cem) search with a frozen leworldmodel. after five it- erations, the gate measures how far the mean first action chunk has moved, how much the mean terminal cost of elite plans has fallen, and how widely their first chunks vary. it returns the current plan for execution or continues the same search for ten more iterations. the gate requires no addi- tional world-model rollout. on 16 pusht scenes evaluated with two planning seeds, scr succeeded in 25 of 32 trials, compared with 28 of 32 for fixed 15-iteration search (fixed-15). all 25 scr suc- cesses occurred in trials that fixed-15 also solved, yield- ing 89.29% paired success retention. across complete episodes, including replanning, scr evaluated 23.81% fewer candidate plans and reduced mean controller time per eight-environment batch by 17.22%. its observed suc- cess rate was 5.36 percentage points above an analytic mix- ture of the two fixed-depth controllers at the same expected candidate workload, although the difference changed sign across planning seeds. compared with gating only at the initial solve under the same random-draw padding proto- col, gating again at replanning produced nine additional early exits. this reduced total candidate evaluations by 15.79%, while successes fell from 27 to 25. university of oxford jingni huang cs.ro"
+    },
+    {
+      "arxiv_id": "2611.24409",
+      "title": "Risk-Triggered Search: Behavior-Preserving Safe Control",
+      "authors": "Xinyu Deng, Bohao Lan, Kunpeng Li, Mingkai Yuan, Weihang Pan, Binbin Lin",
+      "affiliations": "Zhejiang University",
+      "published_date": "2026-11-18",
+      "categories": "cs.AI",
+      "abstract": "Pre-trained visual world models generate multi-step action plans from current and goal observations, yet terminal-proximity objectives fail to prevent forbidden-zone traversal or rigid-body collision sliding. Purely visual interfaces may lack analytical dynamics, structured states, or explicit collision geometry, requiring internal prediction of action-conditioned process risk. We propose Risk-Triggered Search (RTS) for frozen Joint-Embedding Predictive Architecture (JEPA) world models. Rather than relying on static state features that cannot distinguish candidate plans sharing an observation, RTS unrolls action-conditioned future latent prefixes in the frozen world model and trains a lightweight risk head with process-violation supervision. To intervene selectively while preserving safe nominal behavior, RTS uses the same predicted prefix-risk criterion as both the search trigger gate and hard feasibility gate: safe nominal plans execute directly, whereas alarms trigger local Cross-Entropy Method (CEM) search to minimize nominal deviation within the feasible set. To prevent isotropic Euclidean minimal modification from shrinking obstacle-directed actions into zero-amplitude stalling, we introduce an amplitude-preserving metric $d_{\\mathrm{AP}}$ that retains tangential progression while maintaining a unique zero at the nominal plan. Under unified gating and this unique-zero condition, bypassing safe-state search yields closed-loop trajectories strictly identical to every-step same-kernel search. Evaluated under a process-safety benchmark and Safe Arrival Rate (SAR) metric across five tasks, RTS improves SAR over Direct by 12.67--41.67 percentage points on navigation and articulated control and +2.08/+4.17 pp on Cube/PushT boundary cohorts, maintaining 100% action identity with every-step search while cutting controller time by 17.71%--70.41% across 1,968 paired trajectories.",
+      "summary_cn": "针对冻结JEPA视觉世界模型只盯终点接近、会中途越界或贴体滑移的缺陷，提出风险触发搜索RTS：在冻结模型内展开动作条件未来潜前缀并训练轻量风险头做过程违规监督，同一前缀风险准则兼作搜索触发门与可行性硬门，安全名义规划直接执行、告警才在可行集内局部CEM搜索，并用保幅散度防止最小改动把避障动作缩成零幅值停驻。",
+      "pdf_filename": "2611.24409.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24409",
+      "search_text": "risk-triggered search: behavior-preserving safe control 世界模型 闭环仿真 规划 针对冻结jepa视觉世界模型只盯终点接近、会中途越界或贴体滑移的缺陷，提出风险触发搜索rts：在冻结模型内展开动作条件未来潜前缀并训练轻量风险头做过程违规监督，同一前缀风险准则兼作搜索触发门与可行性硬门，安全名义规划直接执行、告警才在可行集内局部cem搜索，并用保幅散度防止最小改动把避障动作缩成零幅值停驻。 pre-trained visual world models generate multi-step action plans from current and goal observations, yet terminal-proximity objectives fail to prevent forbidden-zone traversal or rigid-body collision sliding. purely visual interfaces may lack analytical dynamics, structured states, or explicit collision geometry, requiring internal prediction of action-conditioned process risk. we propose risk-triggered search (rts) for frozen joint-embedding predictive architecture (jepa) world models. rather than relying on static state features that cannot distinguish candidate plans sharing an observation, rts unrolls action-conditioned future latent prefixes in the frozen world model and trains a lightweight risk head with process-violation supervision. to intervene selectively while preserving safe nominal behavior, rts uses the same predicted prefix-risk criterion as both the search trigger gate and hard feasibility gate: safe nominal plans execute directly, whereas alarms trigger local cross-entropy method (cem) search to minimize nominal deviation within the feasible set. to prevent isotropic euclidean minimal modification from shrinking obstacle-directed actions into zero-amplitude stalling, we introduce an amplitude-preserving metric $d_{\\mathrm{ap}}$ that retains tangential progression while maintaining a unique zero at the nominal plan. under unified gating and this unique-zero condition, bypassing safe-state search yields closed-loop trajectories strictly identical to every-step same-kernel search. evaluated under a process-safety benchmark and safe arrival rate (sar) metric across five tasks, rts improves sar over direct by 12.67--41.67 percentage points on navigation and articulated control and +2.08/+4.17 pp on cube/pusht boundary cohorts, maintaining 100% action identity with every-step search while cutting controller time by 17.71%--70.41% across 1,968 paired trajectories. zhejiang university xinyu deng, bohao lan, kunpeng li, mingkai yuan, weihang pan, binbin lin cs.ai"
+    },
+    {
+      "arxiv_id": "2611.24408",
+      "title": "StrideWorld: Benchmarking Scene Rigidity and Action Consistency in Interactive Video World Model",
+      "authors": "Chuang Wang, Rui Nie, Jie Song, Junyuan Gao, Jiahe Song, Haitao Zhou, Boyu Zhu, Xing Li, Jiang Wu, Conghui He, Qian Yu, Weijia Li",
+      "affiliations": "Shanghai Jiao Tong University; Shanghai Artificial Intelligence Laboratory; Tsinghua University; Beihang University; Tianjin University",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Interactive video world models turn user commands into the exploration of a generated scene, which requires the scene to keep its 3D structure as the camera moves and each action to keep a stable effect. Existing benchmarks mostly evaluate these properties against references fitted to the video under test, either a scene reconstructed from its own frames or a camera trajectory aligned to the command path with a free scale. Such references can absorb gradual scene deformation and changes in pace and route length, so these errors can pass undetected. We therefore introduce StrideWorld, a benchmark whose references are fixed before the motion they judge. It evaluates scene rigidity against the ground-truth geometry of the start view, and action consistency against the stride of each action, the camera motion of one command. The stride is measured on the model's first steps and then used to test the steps that follow, so each model is judged only against its own steps. Its measurements are validated on rendered videos with known camera motion, and its scores agree with human judgments. Across \\nvideos{} videos generated by \\nmodels{} open models from $140$ start views, all models but one deform their scenes as the camera moves, with offsets up to $7.3$ times those of a rigid rendering along the same camera path. Most models keep a steady pace when a single action is held. Along composed routes, several models often stall, and most completed routes end away from the positions predicted by each model's own strides. Only the two models that scale commands by the estimated scene depth bring most routes close to these positions. Fine-tuning two models on a few rendered clips removes most of their mid-route stalls. Code, data, and a leaderboard are publicly available at https://github.com/chuangwang123/strideworld.",
+      "summary_cn": "提出交互式视频世界模型基准StrideWorld，参照在被判定的运动之前固定：用起始视图真值几何检验场景刚性，用每个动作最初几步测得的步幅相机运动检验后续一致性，避免自拟合参照吞掉形变与节奏误差。用已知相机运动的渲染视频验证且与人工判断一致；140个起始视图下除一个模型外都随相机移动形变，偏移最高达刚性渲染的7.3倍。",
+      "pdf_filename": "2611.24408.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24408",
+      "search_text": "strideworld: benchmarking scene rigidity and action consistency in interactive video world model 世界模型 提出交互式视频世界模型基准strideworld，参照在被判定的运动之前固定：用起始视图真值几何检验场景刚性，用每个动作最初几步测得的步幅相机运动检验后续一致性，避免自拟合参照吞掉形变与节奏误差。用已知相机运动的渲染视频验证且与人工判断一致；140个起始视图下除一个模型外都随相机移动形变，偏移最高达刚性渲染的7.3倍。 interactive video world models turn user commands into the exploration of a generated scene, which requires the scene to keep its 3d structure as the camera moves and each action to keep a stable effect. existing benchmarks mostly evaluate these properties against references fitted to the video under test, either a scene reconstructed from its own frames or a camera trajectory aligned to the command path with a free scale. such references can absorb gradual scene deformation and changes in pace and route length, so these errors can pass undetected. we therefore introduce strideworld, a benchmark whose references are fixed before the motion they judge. it evaluates scene rigidity against the ground-truth geometry of the start view, and action consistency against the stride of each action, the camera motion of one command. the stride is measured on the model's first steps and then used to test the steps that follow, so each model is judged only against its own steps. its measurements are validated on rendered videos with known camera motion, and its scores agree with human judgments. across \\nvideos{} videos generated by \\nmodels{} open models from $140$ start views, all models but one deform their scenes as the camera moves, with offsets up to $7.3$ times those of a rigid rendering along the same camera path. most models keep a steady pace when a single action is held. along composed routes, several models often stall, and most completed routes end away from the positions predicted by each model's own strides. only the two models that scale commands by the estimated scene depth bring most routes close to these positions. fine-tuning two models on a few rendered clips removes most of their mid-route stalls. code, data, and a leaderboard are publicly available at https://github.com/chuangwang123/strideworld. shanghai jiao tong university; shanghai artificial intelligence laboratory; tsinghua university; beihang university; tianjin university chuang wang, rui nie, jie song, junyuan gao, jiahe song, haitao zhou, boyu zhu, xing li, jiang wu, conghui he, qian yu, weijia li cs.cv"
+    },
+    {
+      "arxiv_id": "2611.24404",
+      "title": "RAPID: Reconstruction Accelerated by Polarization-Informed Depth for 2D Gaussian Splatting",
+      "authors": "Daisong Ouyang, Linlin Xia, Liangkun Yan, Song Gu, Shedong Zhao, Xin Dai, Yi Zheng",
+      "affiliations": "Northeast Electric Power University",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Efficient and accurate 3D surface reconstruction from multi-view images remains a fundamental challenge in Gaussian splatting. Many existing methods rely on sparse geometric initialization and iterative densification, resulting in substantial optimization overhead and difficulties in balancing rendering quality and geometric accuracy, particularly in reflective and weakly textured regions. To address these limitations, we propose RAPID, a geometry-first framework that uses multiview polarization cues to recover dense surface priors. We integrate surface normals into depth maps using sparse geometric anchors. These depth maps are then fused across views. Curvature-adaptive sampling and oriented Gaussian initialization then support efficient optimization. Experiments on the PISR dataset demonstrate an approximately \\(5\\times\\) speedup over PhyGaP, which is a state-of-the-art Gaussian-based reconstruction method. RAPID reduces the average optimization time from approximately 21 minutes (PhyGaP) to 4 minutes while maintaining competitive novel-view synthesis quality and mesh reconstruction accuracy. These results demonstrate the effectiveness of RAPID in accelerating Gaussian optimization from polarimetric multi-view inputs.",
+      "summary_cn": "提出几何优先的多视角高斯重建框架RAPID：先用多视角偏振法向与稀疏几何锚点恢复稠密深度图并跨视角融合，再做曲率自适应采样与有向高斯初始化、表面约束优化与插入分裂合并剪枝。PISR数据集上比SOTA的PhyGaP约快5倍，平均优化时间由约21分钟降到4分钟，同时保持新视角合成质量与网格精度。",
+      "pdf_filename": "2611.24404.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24404",
+      "search_text": "rapid: reconstruction accelerated by polarization-informed depth for 2d gaussian splatting 3dgs 提出几何优先的多视角高斯重建框架rapid：先用多视角偏振法向与稀疏几何锚点恢复稠密深度图并跨视角融合，再做曲率自适应采样与有向高斯初始化、表面约束优化与插入分裂合并剪枝。pisr数据集上比sota的phygap约快5倍，平均优化时间由约21分钟降到4分钟，同时保持新视角合成质量与网格精度。 efficient and accurate 3d surface reconstruction from multi-view images remains a fundamental challenge in gaussian splatting. many existing methods rely on sparse geometric initialization and iterative densification, resulting in substantial optimization overhead and difficulties in balancing rendering quality and geometric accuracy, particularly in reflective and weakly textured regions. to address these limitations, we propose rapid, a geometry-first framework that uses multiview polarization cues to recover dense surface priors. we integrate surface normals into depth maps using sparse geometric anchors. these depth maps are then fused across views. curvature-adaptive sampling and oriented gaussian initialization then support efficient optimization. experiments on the pisr dataset demonstrate an approximately \\(5\\times\\) speedup over phygap, which is a state-of-the-art gaussian-based reconstruction method. rapid reduces the average optimization time from approximately 21 minutes (phygap) to 4 minutes while maintaining competitive novel-view synthesis quality and mesh reconstruction accuracy. these results demonstrate the effectiveness of rapid in accelerating gaussian optimization from polarimetric multi-view inputs. northeast electric power university daisong ouyang, linlin xia, liangkun yan, song gu, shedong zhao, xin dai, yi zheng cs.cv"
+    },
+    {
+      "arxiv_id": "2611.24381",
+      "title": "How to Turn an Attention Neural Network into an Interpretable Hard-Logic Predicate Circuit: Truth-Table Predicate Extraction and State-Machine Merging under Ship-of-Theseus Replacement",
+      "authors": "Yuchen Li, Zongqi Fan, Xintong Li, Nguyen H. Tran, Ken-Tye Yong",
+      "affiliations": "The University of Sydney",
+      "published_date": "2026-11-18",
+      "categories": "cs.LG, cs.AR",
+      "abstract": "We convert a trained attention network as a whole, attention included, into a hard-logic predicate circuit that runs in its place. Every unit of the circuit is a 0/1 predicate on tokens, and every map between predicates is a minimised truth table. Short tables, such as the product of a query code and a key code, are minimised exactly, and wide feature-to-feature transitions become implication rules by noise-tolerant minimisation. Blocks are replaced one at a time from the output down, in the manner of the Ship of Theseus, and after each replacement the remaining soft part re-adapts to the frozen circuit. Attention selection takes two forms, a row-wise comparison of integer scores (order selection) and a learned rule (rule selection). Both are fitted on the ordinary training set alone, and only on the examples that the teacher classifies correctly, so that the circuit imitates the teacher where the teacher is right. On TweetEval-emotion, the complete circuit of DistilGPT2 reaches a test gold accuracy of 66.5 $\\pm$ 1.3% with order selection and 57.4 $\\pm$ 2.5% with rule selection over three seeds, against 74.7% for the teacher and 64.0% for a bag of word pieces fitted on the same tweets, and that of BERT-base reaches 70.0 $\\pm$ 0.5% with order selection and 63.7 $\\pm$ 1.2% with rule selection against 77.8%. The circuit needs no multiplier and no weight traffic, and its exported hardware description reproduces it bit for bit. By a synthesis-based estimate it classifies one tweet in about 1-2 $μ$s (DistilGPT2) and 3-5 $μ$s (BERT) on an FPGA card and in 5-9 $μ$s on a palm-sized board whose module draws 7.5-15 W, two to three orders of magnitude faster than the network on a GPU at batch 1 (measured, 0.9-2.6 ms for DistilGPT2 including an optimised CUDA-graph baseline), at a cost of 8.5 (DistilGPT2) and 8.6 (BERT) points of gold accuracy for the synthesised seed-0 circuits.",
+      "summary_cn": "把训练好的注意力网络整体（含注意力）逐块替换成硬逻辑谓词电路：每单元是token上的0/1谓词，单元间映射为最小化真值表，短表精确最小化，宽特征转移用容错最小化化为蕴含规则，自输出向输入按忒修斯之船方式替换、余下软部分再适配。DistilGPT2全电路在TweetEval-emotion上达66.5%，无需乘法与权重搬运，导出硬件描述可逐位复现。",
+      "pdf_filename": "2611.24381.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.24381",
+      "search_text": "how to turn an attention neural network into an interpretable hard-logic predicate circuit: truth-table predicate extraction and state-machine merging under ship-of-theseus replacement  把训练好的注意力网络整体（含注意力）逐块替换成硬逻辑谓词电路：每单元是token上的0/1谓词，单元间映射为最小化真值表，短表精确最小化，宽特征转移用容错最小化化为蕴含规则，自输出向输入按忒修斯之船方式替换、余下软部分再适配。distilgpt2全电路在tweeteval-emotion上达66.5%，无需乘法与权重搬运，导出硬件描述可逐位复现。 we convert a trained attention network as a whole, attention included, into a hard-logic predicate circuit that runs in its place. every unit of the circuit is a 0/1 predicate on tokens, and every map between predicates is a minimised truth table. short tables, such as the product of a query code and a key code, are minimised exactly, and wide feature-to-feature transitions become implication rules by noise-tolerant minimisation. blocks are replaced one at a time from the output down, in the manner of the ship of theseus, and after each replacement the remaining soft part re-adapts to the frozen circuit. attention selection takes two forms, a row-wise comparison of integer scores (order selection) and a learned rule (rule selection). both are fitted on the ordinary training set alone, and only on the examples that the teacher classifies correctly, so that the circuit imitates the teacher where the teacher is right. on tweeteval-emotion, the complete circuit of distilgpt2 reaches a test gold accuracy of 66.5 $\\pm$ 1.3% with order selection and 57.4 $\\pm$ 2.5% with rule selection over three seeds, against 74.7% for the teacher and 64.0% for a bag of word pieces fitted on the same tweets, and that of bert-base reaches 70.0 $\\pm$ 0.5% with order selection and 63.7 $\\pm$ 1.2% with rule selection against 77.8%. the circuit needs no multiplier and no weight traffic, and its exported hardware description reproduces it bit for bit. by a synthesis-based estimate it classifies one tweet in about 1-2 $μ$s (distilgpt2) and 3-5 $μ$s (bert) on an fpga card and in 5-9 $μ$s on a palm-sized board whose module draws 7.5-15 w, two to three orders of magnitude faster than the network on a gpu at batch 1 (measured, 0.9-2.6 ms for distilgpt2 including an optimised cuda-graph baseline), at a cost of 8.5 (distilgpt2) and 8.6 (bert) points of gold accuracy for the synthesised seed-0 circuits. the university of sydney yuchen li, zongqi fan, xintong li, nguyen h. tran, ken-tye yong cs.lg, cs.ar"
+    },
+    {
+      "arxiv_id": "2611.24376",
+      "title": "Teaching VLMs What to Say, Not How to Reason: Rethinking Counterfactual Reasoning in Autonomous Driving",
+      "authors": "Hayeon Oh, Donghwan Lee",
+      "affiliations": "Korea Advanced Institute of Science and Technology",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO",
+      "abstract": "End-to-end autonomous driving systems have been shown to suffer from shortcut learning and causal confusion, limiting their ability to generalize robustly under distribution shift. To mitigate these limitations, recent works based on Vision-Language Models (VLMs) have explored incorporating linguistic reasoning capabilities into driving decision-making, reporting improvements in driving performance. In particular, counterfactual (CF) reasoning has been proposed to enable self-reflective, high-level causal understanding. However, it remains unclear whether the language-based reasoning mitigates shortcut learning or merely shifts it from visual representations to linguistic patterns, creating an illusion of causal understanding. Moreover, existing approaches often conflate intervention-based reasoning with CF reasoning, leaving the effects of genuine CF reasoning unexplored. In this work, we examine what CF reasoning actually induces in VLM-based autonomous driving and observe that it shifts the action distribution toward more conservative behaviors while increasing uncertainty in reasoning and decision-making. This effect persists under reinforcement fine-tuning, suggesting that it is not merely a transient artifact. Furthermore, visual attention analysis shows that CF reasoning does not alter visual grounding, while causal intervention experiments reveal that masking causally relevant and non-causal factors in accident scenarios results in comparable decision change rates. Overall, these results suggest that CF reasoning does not induce genuine causal reasoning grounded in visual evidence. Instead, it acts as a linguistic shortcut that reshapes the action distribution, teaching models what to say but not how to reason, highlighting a gap between language-based reasoning and causal understanding in autonomous driving.",
+      "summary_cn": "追问VLM驾驶模型里的反事实推理是缓解捷径学习还是把捷径从视觉搬到语言：实验发现反事实推理只把动作分布推向更保守、并抬高推理与决策不确定性，强化微调后依然存在；视觉注意力分析显示未改变视觉grounding，事故场景中屏蔽因果与非因果因素引起的决策变化率相当，说明它更像语言层面的因果错觉。",
+      "pdf_filename": "2611.24376.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "自动驾驶",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24376",
+      "search_text": "teaching vlms what to say, not how to reason: rethinking counterfactual reasoning in autonomous driving 自动驾驶 多模态 追问vlm驾驶模型里的反事实推理是缓解捷径学习还是把捷径从视觉搬到语言：实验发现反事实推理只把动作分布推向更保守、并抬高推理与决策不确定性，强化微调后依然存在；视觉注意力分析显示未改变视觉grounding，事故场景中屏蔽因果与非因果因素引起的决策变化率相当，说明它更像语言层面的因果错觉。 end-to-end autonomous driving systems have been shown to suffer from shortcut learning and causal confusion, limiting their ability to generalize robustly under distribution shift. to mitigate these limitations, recent works based on vision-language models (vlms) have explored incorporating linguistic reasoning capabilities into driving decision-making, reporting improvements in driving performance. in particular, counterfactual (cf) reasoning has been proposed to enable self-reflective, high-level causal understanding. however, it remains unclear whether the language-based reasoning mitigates shortcut learning or merely shifts it from visual representations to linguistic patterns, creating an illusion of causal understanding. moreover, existing approaches often conflate intervention-based reasoning with cf reasoning, leaving the effects of genuine cf reasoning unexplored. in this work, we examine what cf reasoning actually induces in vlm-based autonomous driving and observe that it shifts the action distribution toward more conservative behaviors while increasing uncertainty in reasoning and decision-making. this effect persists under reinforcement fine-tuning, suggesting that it is not merely a transient artifact. furthermore, visual attention analysis shows that cf reasoning does not alter visual grounding, while causal intervention experiments reveal that masking causally relevant and non-causal factors in accident scenarios results in comparable decision change rates. overall, these results suggest that cf reasoning does not induce genuine causal reasoning grounded in visual evidence. instead, it acts as a linguistic shortcut that reshapes the action distribution, teaching models what to say but not how to reason, highlighting a gap between language-based reasoning and causal understanding in autonomous driving. korea advanced institute of science and technology hayeon oh, donghwan lee cs.ro"
+    },
+    {
+      "arxiv_id": "2611.24254",
+      "title": "FedE2E: One-Shot Federated Learning for End-to-End Autonomous Driving with Closed-Loop Evaluation",
+      "authors": "Tao Lian, Antonio M. López",
+      "affiliations": "Computer Vision Center, Universitat Autonoma de Barcelona",
+      "published_date": "2026-11-18",
+      "categories": "cs.AI, stat.ML",
+      "abstract": "Federated learning enables collaborative model training without sharing datasets. However, existing federated learning methods for autonomous driving typically require multi-round communication and lack closed-loop evaluation, while one-shot methods mainly focus on perception tasks. To address these limitations, we propose \\method, a one-shot federated learning method for end-to-end autonomous driving. It comprises multi-client calibration, anchor-based feature alignment, and token-wise consensus distillation to distill knowledge from heterogeneous models. Closed-loop evaluation on Bench2Drive demonstrates the effectiveness of \\method in both one-shot and multi-round federated learning. In the one-shot setting, it achieves a Driving Score of 55.85, which is 4.07 points higher than prior work. In the multi-round setting, it reaches 60.35 after five communication rounds, the best performance among all compared methods under the same number of communication rounds.",
+      "summary_cn": "首个面向端到端自动驾驶的单轮联邦学习方法：通过多客户端校准、基于锚点的特征对齐与token级共识蒸馏，从异构模型聚合知识。Bench2Drive闭环评测中单轮即达55.85 DS，比已有工作高4.07分；五轮通信后达60.35 DS，为同等通信轮数下最优，弥补了联邦端到端驾驶缺乏闭环验证的空白。",
+      "pdf_filename": "2611.24254.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24254",
+      "search_text": "fede2e: one-shot federated learning for end-to-end autonomous driving with closed-loop evaluation 闭环仿真 自动驾驶 首个面向端到端自动驾驶的单轮联邦学习方法：通过多客户端校准、基于锚点的特征对齐与token级共识蒸馏，从异构模型聚合知识。bench2drive闭环评测中单轮即达55.85 ds，比已有工作高4.07分；五轮通信后达60.35 ds，为同等通信轮数下最优，弥补了联邦端到端驾驶缺乏闭环验证的空白。 federated learning enables collaborative model training without sharing datasets. however, existing federated learning methods for autonomous driving typically require multi-round communication and lack closed-loop evaluation, while one-shot methods mainly focus on perception tasks. to address these limitations, we propose \\method, a one-shot federated learning method for end-to-end autonomous driving. it comprises multi-client calibration, anchor-based feature alignment, and token-wise consensus distillation to distill knowledge from heterogeneous models. closed-loop evaluation on bench2drive demonstrates the effectiveness of \\method in both one-shot and multi-round federated learning. in the one-shot setting, it achieves a driving score of 55.85, which is 4.07 points higher than prior work. in the multi-round setting, it reaches 60.35 after five communication rounds, the best performance among all compared methods under the same number of communication rounds. computer vision center, universitat autonoma de barcelona tao lian, antonio m. lópez cs.ai, stat.ml"
+    },
+    {
+      "arxiv_id": "2611.24253",
+      "title": "One Shot, Any View: High-Fidelity Video Reshooting with Geometry Guidance and Visual References",
+      "authors": "Kai Huang, Runze Xu, Hui Ren, Taiyi Wu, Xinyuan Li, Xun Gao, Quande Liu, Dong Tang, Tongtong Shen, Xuefeng Su, Alan Zhao",
+      "affiliations": "Tencent Online Video BU",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Filming a scene from an additional angle after production usually requires a costly reshoot. We present One Shot Any View, a system that takes a recorded clip and generates a reshot video of the same performance along a user-specified camera trajectory. As in recent geometry-grounded methods, the system conditions generation on the source video and an explicit 3D prior, namely a point video rendered along the requested trajectory from a feed-forward reconstruction of the source video. We target human-centric cinematic videos, which are often shot with long lenses, shallow depth of field, and low-key lighting, all of which degrade feed-forward reconstruction. Existing geometry-grounded methods tend to inherit the degraded point video, and their output quality drops visibly. Two designs make such point videos usable. First, in addition to rendered videos of 3D assets, we train on real-world multi-camera videos, whose point videos are produced by the same reconstruction pipeline as at inference. This training-inference consistency enables the generator to take only the composition of people and scene elements from the point video, and their appearance from the source video. Second, a geometry-anchored RoPE offset keeps the generated video temporally synchronized with the source while largely preventing the output from copying the degraded appearance of the point video. Meanwhile, since the generator is a pretrained reference-to-video (R2V) model, the system also accepts optional character and scene reference images, which supply the appearance of regions that the source never shows. In both objective and human evaluations, One Shot Any View outperforms existing reshooting methods.",
+      "summary_cn": "提出后期补拍系统One Shot Any View：输入实拍视频与目标相机轨迹，用前馈重建生成沿新轨迹的点视频作为3D先验，再条件化生成同一表演的新视角视频。针对长焦浅景深人像镜头下前馈重建退化，加入真实多机位视频训练以对齐训练与推理的点视频分布，并用几何锚定RoPE偏移保持与源视频时间同步、抑制复制退化外观；客观与人工评测均优于已有重拍方法。",
+      "pdf_filename": "2611.24253.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24253",
+      "search_text": "one shot, any view: high-fidelity video reshooting with geometry guidance and visual references 前馈3d重建 提出后期补拍系统one shot any view：输入实拍视频与目标相机轨迹，用前馈重建生成沿新轨迹的点视频作为3d先验，再条件化生成同一表演的新视角视频。针对长焦浅景深人像镜头下前馈重建退化，加入真实多机位视频训练以对齐训练与推理的点视频分布，并用几何锚定rope偏移保持与源视频时间同步、抑制复制退化外观；客观与人工评测均优于已有重拍方法。 filming a scene from an additional angle after production usually requires a costly reshoot. we present one shot any view, a system that takes a recorded clip and generates a reshot video of the same performance along a user-specified camera trajectory. as in recent geometry-grounded methods, the system conditions generation on the source video and an explicit 3d prior, namely a point video rendered along the requested trajectory from a feed-forward reconstruction of the source video. we target human-centric cinematic videos, which are often shot with long lenses, shallow depth of field, and low-key lighting, all of which degrade feed-forward reconstruction. existing geometry-grounded methods tend to inherit the degraded point video, and their output quality drops visibly. two designs make such point videos usable. first, in addition to rendered videos of 3d assets, we train on real-world multi-camera videos, whose point videos are produced by the same reconstruction pipeline as at inference. this training-inference consistency enables the generator to take only the composition of people and scene elements from the point video, and their appearance from the source video. second, a geometry-anchored rope offset keeps the generated video temporally synchronized with the source while largely preventing the output from copying the degraded appearance of the point video. meanwhile, since the generator is a pretrained reference-to-video (r2v) model, the system also accepts optional character and scene reference images, which supply the appearance of regions that the source never shows. in both objective and human evaluations, one shot any view outperforms existing reshooting methods. tencent online video bu kai huang, runze xu, hui ren, taiyi wu, xinyuan li, xun gao, quande liu, dong tang, tongtong shen, xuefeng su, alan zhao cs.cv"
+    },
+    {
+      "arxiv_id": "2611.24244",
+      "title": "CommDreamer: Radio-Geometric World Models for Mapless Cellular-Connected UAV Trajectory Planning",
+      "authors": "Yuqi Ping, Tianhao Liang, Tingting Zhang",
+      "affiliations": "Harbin Institute of Technology, Shenzhen; Peng Cheng Laboratory",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO, eess.SY",
+      "abstract": "Reliable cellular connectivity and collision-free flight are essential for unmanned aerial vehicle (UAV) operations in low-altitude urban canyons, where dense 3D buildings obstruct flight clearance, shadow serving base stations, and create strong co-channel interference at street intersections. Existing planners either require prior 3D city meshes and channel knowledge maps unavailable onboard, or rely on model-free reinforcement learning with low sample efficiency and poor cross-city generalization. We propose CommDreamer, a mapless radio-geometric world model that fuses raw onboard 3D LiDAR scans, multicell cellular reports, and shift-invariant relative kinematics to jointly infer local obstacle clearance and directional signal-to-interference-plus-noise ratio (SINR) dynamics. Using a categorical recurrent state-space model, CommDreamer compresses multimodal measurement histories into a coordinate-invariant latent belief, enabling the UAV to foresee deep shadow zones and train a lightweight online policy purely via multi-step latent imagination without prior maps or antenna patterns. Zero-shot evaluations across unseen urban morphologies in our open-source ray-tracing simulator, AeroCity-RT, show that CommDreamer converges within 150 episodes where model-free reinforcement learning fails to complete flights, achieving 100.0% mission success with zero collisions while lifting median route SINR to 8.02 dB and cutting effective SINR outage by over 50% relative to radio-blind world-model and reactive LiDAR baselines.",
+      "summary_cn": "面向无地图蜂窝联网无人机航迹规划，提出融合机载3D LiDAR、多小区蜂窝报告与平移不变相对运动学的无线电几何世界模型，用类别循环状态空间模型把多模态历史压成坐标不变潜信念，从而预判深阴影区并仅靠多步潜空间想象训练轻量在线策略。自建射线追踪仿真器AeroCity-RT上未见过城区零样本成功率100%、零碰撞，中位SINR升至8.02 dB。",
+      "pdf_filename": "2611.24244.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "强化学习",
+        "规划",
+        "点云",
+        "多模态",
+        "仿真器"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24244",
+      "search_text": "commdreamer: radio-geometric world models for mapless cellular-connected uav trajectory planning 世界模型 强化学习 规划 点云 多模态 仿真器 面向无地图蜂窝联网无人机航迹规划，提出融合机载3d lidar、多小区蜂窝报告与平移不变相对运动学的无线电几何世界模型，用类别循环状态空间模型把多模态历史压成坐标不变潜信念，从而预判深阴影区并仅靠多步潜空间想象训练轻量在线策略。自建射线追踪仿真器aerocity-rt上未见过城区零样本成功率100%、零碰撞，中位sinr升至8.02 db。 reliable cellular connectivity and collision-free flight are essential for unmanned aerial vehicle (uav) operations in low-altitude urban canyons, where dense 3d buildings obstruct flight clearance, shadow serving base stations, and create strong co-channel interference at street intersections. existing planners either require prior 3d city meshes and channel knowledge maps unavailable onboard, or rely on model-free reinforcement learning with low sample efficiency and poor cross-city generalization. we propose commdreamer, a mapless radio-geometric world model that fuses raw onboard 3d lidar scans, multicell cellular reports, and shift-invariant relative kinematics to jointly infer local obstacle clearance and directional signal-to-interference-plus-noise ratio (sinr) dynamics. using a categorical recurrent state-space model, commdreamer compresses multimodal measurement histories into a coordinate-invariant latent belief, enabling the uav to foresee deep shadow zones and train a lightweight online policy purely via multi-step latent imagination without prior maps or antenna patterns. zero-shot evaluations across unseen urban morphologies in our open-source ray-tracing simulator, aerocity-rt, show that commdreamer converges within 150 episodes where model-free reinforcement learning fails to complete flights, achieving 100.0% mission success with zero collisions while lifting median route sinr to 8.02 db and cutting effective sinr outage by over 50% relative to radio-blind world-model and reactive lidar baselines. harbin institute of technology, shenzhen; peng cheng laboratory yuqi ping, tianhao liang, tingting zhang cs.ro, eess.sy"
+    },
+    {
+      "arxiv_id": "2611.24229",
+      "title": "ProbeShare: Probing a Few, Sharing Across Many for Fast World-Model Planning",
+      "authors": "Zejian Kang, Xiantao Lin, Zekai Chen, Boyang Shen, Mingyu Ma, Shengwen Zheng, Chengtai Guo, Xiangru Huang",
+      "affiliations": "Zhejiang University; Westlake University; Southwest Jiaotong University; Beijing Institute of Technology; Huazhong University of Science and Technology; Northwestern Polytechnical University; National University of Defense Technology",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO",
+      "abstract": "Visual planning with a frozen joint-embedding world model supports robotic reaching and object manipulation by evaluating candidate action sequences against an image goal before execution. Standard cross-entropy method (CEM) planners roll out every candidate independently through a billion-parameter predictor, even when nearby actions induce similar scene changes. This redundant computation grows with population size and search rounds, slowing closed-loop replanning. We observe that candidates within a planning step share an observation history and thus a common action-to-feature map. Based on this insight, we propose ProbeShare, which measures local responses with a few representative probes and reconstructs each candidate's feature grid through scene-conditioned, geometry-aware weighting. When promising candidates move beyond existing probe coverage, ProbeShare evaluates a new probe to rescore nearby candidates. Across four RoboCasa tasks, ProbeShare accelerates episode planning by 43.8--128.9 times over dense RoboJEPA and at least $14.2\\times$ over competitive baselines, with greater mean goal progress in a matched-time comparison.",
+      "summary_cn": "针对冻结JEPA世界模型CEM规划中每个候选都独立rollout的冗余，利用同一步候选共享观测历史与动作到特征的映射，用少量代表探针测局部响应，再按场景条件与几何感知加权重建各候选特征网格，候选越出覆盖范围时增补探针重打分。4个RoboCasa任务比稠密RoboJEPA快43.8至128.9倍、比最强基线快至少14.2倍，同等时间目标进度更高。",
+      "pdf_filename": "2611.24229.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24229",
+      "search_text": "probeshare: probing a few, sharing across many for fast world-model planning 世界模型 闭环仿真 规划 针对冻结jepa世界模型cem规划中每个候选都独立rollout的冗余，利用同一步候选共享观测历史与动作到特征的映射，用少量代表探针测局部响应，再按场景条件与几何感知加权重建各候选特征网格，候选越出覆盖范围时增补探针重打分。4个robocasa任务比稠密robojepa快43.8至128.9倍、比最强基线快至少14.2倍，同等时间目标进度更高。 visual planning with a frozen joint-embedding world model supports robotic reaching and object manipulation by evaluating candidate action sequences against an image goal before execution. standard cross-entropy method (cem) planners roll out every candidate independently through a billion-parameter predictor, even when nearby actions induce similar scene changes. this redundant computation grows with population size and search rounds, slowing closed-loop replanning. we observe that candidates within a planning step share an observation history and thus a common action-to-feature map. based on this insight, we propose probeshare, which measures local responses with a few representative probes and reconstructs each candidate's feature grid through scene-conditioned, geometry-aware weighting. when promising candidates move beyond existing probe coverage, probeshare evaluates a new probe to rescore nearby candidates. across four robocasa tasks, probeshare accelerates episode planning by 43.8--128.9 times over dense robojepa and at least $14.2\\times$ over competitive baselines, with greater mean goal progress in a matched-time comparison. zhejiang university; westlake university; southwest jiaotong university; beijing institute of technology; huazhong university of science and technology; northwestern polytechnical university; national university of defense technology zejian kang, xiantao lin, zekai chen, boyang shen, mingyu ma, shengwen zheng, chengtai guo, xiangru huang cs.ro"
+    },
+    {
+      "arxiv_id": "2611.24222",
+      "title": "Target-Consistent Action Guidance via Semi-Unbalanced Optimal Transport for Drifting World Models",
+      "authors": "Md Abtahi Majeed Chowdhury, Md Rifat Ur Rahman, Md Sakib Hossain Shovon, Jaesik Choi, Minhyuk Sung",
+      "affiliations": "Bangladesh University of Engineering and Technology; KAIST",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Action-conditioned world models let robots imagine the outcomes of their actions for planning and offline policy evaluation, but these uses need many rollouts, which multi-step diffusion makes expensive. Drifting models move the iteration from inference to training and generate samples in one network pass. DriftWorld brought this paradigm to action-conditioned world models; to strengthen action following, it repels predictions from the current frame, a construction borrowed from classifier-free guidance. We show that this accentuation has a target bias: the push persists even when a prediction matches the recorded future, in kernel, balanced, and unbalanced Wasserstein drifting fields alike. We introduce Mass-Share Accentuation (MSA) to remove this bias. MSA treats the current frame as a counterfactual destination competing with the recorded future in a semi-relaxed optimal transport problem; subtracting the closed-form share of the correct future makes the guidance vanish at the target, and the remainder is shared by all predictions. We prove that the recorded future is the unique fixed point along the motion direction for collapsed predictions, and that the guidance fades with prediction error. On Push-T, Robomimic, and BridgeV2, where trained models under-react rather than overshoot, MSA improves action ranking, response slope, and moving-region error over latent-space baselines at no inference cost, though these benchmarks do not isolate bias removal as the cause.",
+      "summary_cn": "揭示DriftWorld式从当前帧外推的动作引导有目标偏置：即便预测已匹配真实未来，排斥项仍在作用。提出Mass-Share Accentuation，把当前帧当作与真实未来在半松弛最优传输中竞争的反事实终点，减去正确未来的闭式份额使引导在目标处归零、余量由所有预测共享；证明真实未来是唯一不动点且引导随误差衰减，在Push-T、Robomimic、BridgeV2上零推理开销提升动作排序。",
+      "pdf_filename": "2611.24222.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24222",
+      "search_text": "target-consistent action guidance via semi-unbalanced optimal transport for drifting world models 世界模型 揭示driftworld式从当前帧外推的动作引导有目标偏置：即便预测已匹配真实未来，排斥项仍在作用。提出mass-share accentuation，把当前帧当作与真实未来在半松弛最优传输中竞争的反事实终点，减去正确未来的闭式份额使引导在目标处归零、余量由所有预测共享；证明真实未来是唯一不动点且引导随误差衰减，在push-t、robomimic、bridgev2上零推理开销提升动作排序。 action-conditioned world models let robots imagine the outcomes of their actions for planning and offline policy evaluation, but these uses need many rollouts, which multi-step diffusion makes expensive. drifting models move the iteration from inference to training and generate samples in one network pass. driftworld brought this paradigm to action-conditioned world models; to strengthen action following, it repels predictions from the current frame, a construction borrowed from classifier-free guidance. we show that this accentuation has a target bias: the push persists even when a prediction matches the recorded future, in kernel, balanced, and unbalanced wasserstein drifting fields alike. we introduce mass-share accentuation (msa) to remove this bias. msa treats the current frame as a counterfactual destination competing with the recorded future in a semi-relaxed optimal transport problem; subtracting the closed-form share of the correct future makes the guidance vanish at the target, and the remainder is shared by all predictions. we prove that the recorded future is the unique fixed point along the motion direction for collapsed predictions, and that the guidance fades with prediction error. on push-t, robomimic, and bridgev2, where trained models under-react rather than overshoot, msa improves action ranking, response slope, and moving-region error over latent-space baselines at no inference cost, though these benchmarks do not isolate bias removal as the cause. bangladesh university of engineering and technology; kaist md abtahi majeed chowdhury, md rifat ur rahman, md sakib hossain shovon, jaesik choi, minhyuk sung cs.cv"
+    },
+    {
+      "arxiv_id": "2611.24171",
+      "title": "Efficient World-Model Planning via Physics-Guided Search Distillation",
+      "authors": "Hongyu Zhang, Xiaoshuai Hao, Heye Huang, Qingwen Meng, Wenjun Shi, Jianao Xu, Xin Hu, Xuanru Jin, Jingyi Zhang, Baicang Guo",
+      "affiliations": "Yanshan University; Xiaomi Corporation; KAIST; Tsinghua University; Beijing Automotive Technology Center Co., Ltd.",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "World models support autonomous driving by evaluating candidate trajectories through predicted future scene evolution. However, accurate future prediction does not ensure road-compliant execution; when all candidates violate road boundaries, re-ranking cannot select a feasible trajectory. We propose Physics-Guided Search Distillation (PGSD), a single-view planning framework that combines future representations and execution feedback for verified beyond-pool repair through three components: (1) Execution-Aware Selection checks ego-vehicle road compliance under simulated execution and selects the highest-scoring feasible trajectory; (2) a Clearance-Aware Search Teacher generates beyond-pool corrections and selects demonstrations with larger minimum road-boundary clearance during execution to buffer imitation errors; and (3) a Future-Conditioned Repair Student predicts one correction from rewarder features and execution feedback for single-rollout verification. The pretrained planner and rewarder remain frozen; no future scenes are generated online. On NAVSIM v1, single-view PGSD achieves 90.97 PDMS, exceeding all compared prior single-view planners and retaining 73.2% of the search teacher's PDMS gain over execution-aware selection. On NAVSIM v2 navhard, it reaches 38.96 EPDMS, improving on WorldDrive by 11.24 points (40.5%). The student replaces up to ten search rollouts with a single verification rollout per repair trigger. HUGSIM Hard examples provide qualitative evidence of zero-shot transfer.",
+      "summary_cn": "指出世界模型预测准不等于轨迹合规，候选全越界时重排序无解，提出物理引导搜索蒸馏PGSD：执行感知选择在模拟执行下查道路合规，间隙感知搜索教师生成池外修正并按最小边界间隙筛示范，未来条件修复学生用rewarder特征与执行反馈单次预测修正。NAVSIM v1单视图90.97 PDMS，v2 navhard 38.96 EPDMS，比WorldDrive高11.24。",
+      "pdf_filename": "2611.24171.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24171",
+      "search_text": "efficient world-model planning via physics-guided search distillation 世界模型 自动驾驶 指出世界模型预测准不等于轨迹合规，候选全越界时重排序无解，提出物理引导搜索蒸馏pgsd：执行感知选择在模拟执行下查道路合规，间隙感知搜索教师生成池外修正并按最小边界间隙筛示范，未来条件修复学生用rewarder特征与执行反馈单次预测修正。navsim v1单视图90.97 pdms，v2 navhard 38.96 epdms，比worlddrive高11.24。 world models support autonomous driving by evaluating candidate trajectories through predicted future scene evolution. however, accurate future prediction does not ensure road-compliant execution; when all candidates violate road boundaries, re-ranking cannot select a feasible trajectory. we propose physics-guided search distillation (pgsd), a single-view planning framework that combines future representations and execution feedback for verified beyond-pool repair through three components: (1) execution-aware selection checks ego-vehicle road compliance under simulated execution and selects the highest-scoring feasible trajectory; (2) a clearance-aware search teacher generates beyond-pool corrections and selects demonstrations with larger minimum road-boundary clearance during execution to buffer imitation errors; and (3) a future-conditioned repair student predicts one correction from rewarder features and execution feedback for single-rollout verification. the pretrained planner and rewarder remain frozen; no future scenes are generated online. on navsim v1, single-view pgsd achieves 90.97 pdms, exceeding all compared prior single-view planners and retaining 73.2% of the search teacher's pdms gain over execution-aware selection. on navsim v2 navhard, it reaches 38.96 epdms, improving on worlddrive by 11.24 points (40.5%). the student replaces up to ten search rollouts with a single verification rollout per repair trigger. hugsim hard examples provide qualitative evidence of zero-shot transfer. yanshan university; xiaomi corporation; kaist; tsinghua university; beijing automotive technology center co., ltd. hongyu zhang, xiaoshuai hao, heye huang, qingwen meng, wenjun shi, jianao xu, xin hu, xuanru jin, jingyi zhang, baicang guo cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.24007",
+      "title": "Freeforward4d: Annotation-free feed-forward 4d reconstruction of driving scenes",
+      "authors": "Luosong Guo, Xiang Yang, Chaoyang Li, Ao Gao, Jiangming Shi, Yanyun Qu, Zhizhong Zhang, Jingyu Gong, Yuan Xie",
+      "affiliations": "East China Normal University; Shanghai Innovation Institute; Xiamen University",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Feed-forward 4D reconstruction enables efficient creation of renderable driving scenes for autonomous driving simulation. However, most existing methods rely heavily on dataset-provided cameras, LiDAR depth, or 3D box annotations, limiting their applicability to unannotated driving videos. Pretrained visual models can predict cameras, depth, and object tracks from RGB alone, but their geometry is mutually inconsistent: multi-view predictions come in short windows with independent scales and frames, while monocular depth is metric only per image. Our key insight is that, once reconciled into a single metric frame, these priors can replace dataset annotations for feed-forward 4D reconstruction. We present \\textbf{FreeForward4D}, which calibrates overlapping prediction windows against monocular metric depth and registers them into one frame across time. On this geometry, 2D tracks are associated across cameras in 3D, and objects move through hierarchical motion that combines a shared object velocity with local Gaussian corrections, so that both training and inference use only RGB videos. On Waymo, FreeForward4D achieves 27.66 dB PSNR and 0.836 SSIM while recovering metric-scale cameras and depth without scale alignment. It surpasses STORM, SLARM-F, UFO, DGGT, and StreetForward, which rely on dataset annotations, in full-image PSNR and attains the best RGB fidelity on 8-second windows. RGB-only fine-tuning further adapts the framework to nuScenes and Argoverse 2. Code will be released.",
+      "summary_cn": "无需相机、LiDAR深度与3D框标注的前馈4D驾驶场景重建：先用单目米制深度校准重叠预测窗口并跨时间配准到统一米制坐标系，再在3D中跨相机关联2D轨迹，用共享目标速度加局部高斯修正的分层运动建模，训练与推理只用多视角RGB。Waymo上27.66 dB PSNR、0.836 SSIM，超过依赖标注的STORM、SLARM-F、UFO、DGGT与StreetForward。",
+      "pdf_filename": "2611.24007.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "深度估计",
+        "动态场景重建",
+        "自动驾驶",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24007",
+      "search_text": "freeforward4d: annotation-free feed-forward 4d reconstruction of driving scenes 前馈3d重建 深度估计 动态场景重建 自动驾驶 点云 无需相机、lidar深度与3d框标注的前馈4d驾驶场景重建：先用单目米制深度校准重叠预测窗口并跨时间配准到统一米制坐标系，再在3d中跨相机关联2d轨迹，用共享目标速度加局部高斯修正的分层运动建模，训练与推理只用多视角rgb。waymo上27.66 db psnr、0.836 ssim，超过依赖标注的storm、slarm-f、ufo、dggt与streetforward。 feed-forward 4d reconstruction enables efficient creation of renderable driving scenes for autonomous driving simulation. however, most existing methods rely heavily on dataset-provided cameras, lidar depth, or 3d box annotations, limiting their applicability to unannotated driving videos. pretrained visual models can predict cameras, depth, and object tracks from rgb alone, but their geometry is mutually inconsistent: multi-view predictions come in short windows with independent scales and frames, while monocular depth is metric only per image. our key insight is that, once reconciled into a single metric frame, these priors can replace dataset annotations for feed-forward 4d reconstruction. we present \\textbf{freeforward4d}, which calibrates overlapping prediction windows against monocular metric depth and registers them into one frame across time. on this geometry, 2d tracks are associated across cameras in 3d, and objects move through hierarchical motion that combines a shared object velocity with local gaussian corrections, so that both training and inference use only rgb videos. on waymo, freeforward4d achieves 27.66 db psnr and 0.836 ssim while recovering metric-scale cameras and depth without scale alignment. it surpasses storm, slarm-f, ufo, dggt, and streetforward, which rely on dataset annotations, in full-image psnr and attains the best rgb fidelity on 8-second windows. rgb-only fine-tuning further adapts the framework to nuscenes and argoverse 2. code will be released. east china normal university; shanghai innovation institute; xiamen university luosong guo, xiang yang, chaoyang li, ao gao, jiangming shi, yanyun qu, zhizhong zhang, jingyu gong, yuan xie cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23935",
+      "title": "Facet-SLAM: Real-Time Triangle Splatting SLAM",
+      "authors": "Edward Beng Wai Tan, Siew-Kei Lam",
+      "affiliations": "Nanyang Technological University",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Dense SLAM systems based on 3D Gaussian splatting build maps that render photorealistically, but their surface geometry is poor, and obtaining a mesh requires extraction or fusion stages. Triangle splatting avoids this with surface primitives whose vertices can be triangulated directly into a connected mesh, yet SLAM with this representation has so far relied on photometric tracking, which is too slow for localization at sensor rate. We present Facet-SLAM, the first real-time triangle splatting SLAM system for RGB-D cameras. Fast geometric registration is the natural alternative, but it is not sufficient alone, since the mapper's optimization displaces triangles from the observed surface and makes them unreliable registration targets. We therefore separate the two roles: the tracker sets each triangle's centroid from fused depth and registers frames to these centroids by GICP, while the mapper is restricted to non-translating updates via a change of variables. Our system achieves competitive tracking accuracy at around 100 FPS on a desktop GPU and runs at sensor rate on a Jetson AGX Orin. Compared with the photometric approach, it is over 20 times faster, matches rendering quality, and improves surface accuracy, reducing the chamfer distance of the Delaunay mesh on Replica from 1.55 to 0.86 cm. We will release the implementation at https://github.com/edward62740/Facet-SLAM.",
+      "summary_cn": "首个面向RGB-D的实时三角面片splatting SLAM：为绕开过慢的光度跟踪，也避免mapper优化把面片推离观测表面，改为跟踪器用融合深度设定每个面片质心并以GICP配准，mapper通过变量替换只做非平移更新。桌面GPU约100 FPS、Jetson AGX Orin达传感器帧率，比光度法快20倍以上，Replica网格chamfer距离由1.55 cm降至0.86 cm。",
+      "pdf_filename": "2611.23935.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "SLAM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23935",
+      "search_text": "facet-slam: real-time triangle splatting slam 3dgs slam 首个面向rgb-d的实时三角面片splatting slam：为绕开过慢的光度跟踪，也避免mapper优化把面片推离观测表面，改为跟踪器用融合深度设定每个面片质心并以gicp配准，mapper通过变量替换只做非平移更新。桌面gpu约100 fps、jetson agx orin达传感器帧率，比光度法快20倍以上，replica网格chamfer距离由1.55 cm降至0.86 cm。 dense slam systems based on 3d gaussian splatting build maps that render photorealistically, but their surface geometry is poor, and obtaining a mesh requires extraction or fusion stages. triangle splatting avoids this with surface primitives whose vertices can be triangulated directly into a connected mesh, yet slam with this representation has so far relied on photometric tracking, which is too slow for localization at sensor rate. we present facet-slam, the first real-time triangle splatting slam system for rgb-d cameras. fast geometric registration is the natural alternative, but it is not sufficient alone, since the mapper's optimization displaces triangles from the observed surface and makes them unreliable registration targets. we therefore separate the two roles: the tracker sets each triangle's centroid from fused depth and registers frames to these centroids by gicp, while the mapper is restricted to non-translating updates via a change of variables. our system achieves competitive tracking accuracy at around 100 fps on a desktop gpu and runs at sensor rate on a jetson agx orin. compared with the photometric approach, it is over 20 times faster, matches rendering quality, and improves surface accuracy, reducing the chamfer distance of the delaunay mesh on replica from 1.55 to 0.86 cm. we will release the implementation at https://github.com/edward62740/facet-slam. nanyang technological university edward beng wai tan, siew-kei lam cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23930",
+      "title": "A Hierarchical Onboard Vision-Language-Navigation Framework for Aerial Robots in Complex Environments",
+      "authors": "Yuze Wu, Mo Zhu, Xingxing Li, Yuheng Du, Zhaoqi Wang, Yuxin Fan, Wenjun Li, Kenghou Hoi, Zhichao Han, Xin Zhou, Fei Gao",
+      "affiliations": "Zhejiang University; Differential Robotics",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO, cs.AI",
+      "abstract": "Unmanned Aerial Vehicles (UAVs) are expected to achieve semantic reasoning, intelligent decision-making, and long-horizon navigation under strict onboard constraints. While recent foundation-model-driven approaches have shown promising progress toward this goal, existing methods remain limited by challenges in 3D data availability, trajectory feasibility, long-horizon reasoning, and computational efficiency in complex environments. To bridge these gaps, we propose VLN-AR, a hierarchical vision-language-navigation (VLN) framework for aerial robots. VLN-AR decouples multimodal reasoning and low-level control, enabling structured prediction of 3D pose commands and navigation intentions that are translated into dynamically feasible actions. To mitigate data scarcity and domain gaps, we introduce a fully automated 3D Gaussian Splatting (3DGS)-based pipeline to generate scalable photorealistic UAV navigation data. A progressive three-stage training strategy further enhances grounding, scene reasoning, and complex navigation. In addition, a lightweight cognitive agent improves long-horizon reasoning via memory-aware task decomposition. Finally, we design onboard optimization techniques, including token sparsification and model lightweighting, achieving 7.1x-9.4x speedup while maintaining high navigation performance on resource-limited UAV platforms. Experiments show great improvements over existing methods in both simulation and real-world UAV navigation. Project website: https://wyz000.github.io/VLN-AR/",
+      "summary_cn": "提出面向无人机机载的分层视觉语言导航框架VLN-AR，解耦多模态推理与底层控制，输出3D位姿指令与导航意图再转成动力学可行动作；用3DGS自动化流水线生成可扩展逼真导航数据，配三阶段渐进训练与带记忆的任务分解，并做token稀疏化与模型轻量化，在受限平台实现7.1至9.4倍加速，仿真与真机均优于已有方法。",
+      "pdf_filename": "2611.23930.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "3DGS",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23930",
+      "search_text": "a hierarchical onboard vision-language-navigation framework for aerial robots in complex environments 3dgs 多模态 提出面向无人机机载的分层视觉语言导航框架vln-ar，解耦多模态推理与底层控制，输出3d位姿指令与导航意图再转成动力学可行动作；用3dgs自动化流水线生成可扩展逼真导航数据，配三阶段渐进训练与带记忆的任务分解，并做token稀疏化与模型轻量化，在受限平台实现7.1至9.4倍加速，仿真与真机均优于已有方法。 unmanned aerial vehicles (uavs) are expected to achieve semantic reasoning, intelligent decision-making, and long-horizon navigation under strict onboard constraints. while recent foundation-model-driven approaches have shown promising progress toward this goal, existing methods remain limited by challenges in 3d data availability, trajectory feasibility, long-horizon reasoning, and computational efficiency in complex environments. to bridge these gaps, we propose vln-ar, a hierarchical vision-language-navigation (vln) framework for aerial robots. vln-ar decouples multimodal reasoning and low-level control, enabling structured prediction of 3d pose commands and navigation intentions that are translated into dynamically feasible actions. to mitigate data scarcity and domain gaps, we introduce a fully automated 3d gaussian splatting (3dgs)-based pipeline to generate scalable photorealistic uav navigation data. a progressive three-stage training strategy further enhances grounding, scene reasoning, and complex navigation. in addition, a lightweight cognitive agent improves long-horizon reasoning via memory-aware task decomposition. finally, we design onboard optimization techniques, including token sparsification and model lightweighting, achieving 7.1x-9.4x speedup while maintaining high navigation performance on resource-limited uav platforms. experiments show great improvements over existing methods in both simulation and real-world uav navigation. project website: https://wyz000.github.io/vln-ar/ zhejiang university; differential robotics yuze wu, mo zhu, xingxing li, yuheng du, zhaoqi wang, yuxin fan, wenjun li, kenghou hoi, zhichao han, xin zhou, fei gao cs.ro, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.23813",
+      "title": "SWIFT: Slow World, Instant Freshness, and Timely Action for Asynchronous Autonomous Driving",
+      "authors": "Jiazhe Wang, Tianyi Yang, Ruihang Li, Fan Lu, Xianming Zeng, Jianyun Xu, Xingliang Liu, Lei Yang",
+      "affiliations": "Hello Robotaxi; Zhejiang University; Tongji University",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Driving scenes keep changing during model computation, making both observation freshness and action-delivery time central to world-action planning. To retain rich generative world priors in autonomous driving without stalling real-time control, we present SWIFT (Slow World, Instant Freshness, and Timely action), a deployment-oriented asynchronous world-action system that moves world updates off the observation-to-action critical path. On a background GPU, a slow Video DiT streams surround-view history into read-only predictive world context, trained with a predictive span that covers both the update interval and background world computation. On a foreground GPU, a lightweight freshness carrier encodes current surround-view images into a gated key/value bank at every step, letting a fast Action DiT combine live visual feedback with the latest completed world context without waiting. On open-loop NAVSIM, SWIFT reaches 94.2 PDMS at 198.4 ms per decision with a trajectory scorer; on closed-loop Bench2Drive, it achieves an 80.30 Driving Score at 109.9 ms foreground latency. SWIFT further transfers to the Waymo E2E hidden test (8.0050 Rater Feedback Score) and nuScenes (0.54 m mean endpoint error, 0.03% mean collision rate). Across all four benchmarks, SWIFT achieves the best results among compared world-action methods, establishing a favorable accuracy-latency trade-off.",
+      "summary_cn": "提出异步world-action系统SWIFT，把世界模型更新移出从观测到动作的关键路径：后台GPU用慢速Video DiT把环视历史流成只读的预测世界上下文，前台GPU用轻量新鲜度载体把当前环视图像编码为门控KV库，让快速Action DiT结合实时视觉反馈出动作，从而既有生成式世界先验又不拖慢实时控制。NAVSIM达94.2 PDMS、每决策198 ms，Bench2Drive闭环80.30 DS、前台延迟110 ms。",
+      "pdf_filename": "2611.23813.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "闭环仿真",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23813",
+      "search_text": "swift: slow world, instant freshness, and timely action for asynchronous autonomous driving 世界模型 闭环仿真 自动驾驶 提出异步world-action系统swift，把世界模型更新移出从观测到动作的关键路径：后台gpu用慢速video dit把环视历史流成只读的预测世界上下文，前台gpu用轻量新鲜度载体把当前环视图像编码为门控kv库，让快速action dit结合实时视觉反馈出动作，从而既有生成式世界先验又不拖慢实时控制。navsim达94.2 pdms、每决策198 ms，bench2drive闭环80.30 ds、前台延迟110 ms。 driving scenes keep changing during model computation, making both observation freshness and action-delivery time central to world-action planning. to retain rich generative world priors in autonomous driving without stalling real-time control, we present swift (slow world, instant freshness, and timely action), a deployment-oriented asynchronous world-action system that moves world updates off the observation-to-action critical path. on a background gpu, a slow video dit streams surround-view history into read-only predictive world context, trained with a predictive span that covers both the update interval and background world computation. on a foreground gpu, a lightweight freshness carrier encodes current surround-view images into a gated key/value bank at every step, letting a fast action dit combine live visual feedback with the latest completed world context without waiting. on open-loop navsim, swift reaches 94.2 pdms at 198.4 ms per decision with a trajectory scorer; on closed-loop bench2drive, it achieves an 80.30 driving score at 109.9 ms foreground latency. swift further transfers to the waymo e2e hidden test (8.0050 rater feedback score) and nuscenes (0.54 m mean endpoint error, 0.03% mean collision rate). across all four benchmarks, swift achieves the best results among compared world-action methods, establishing a favorable accuracy-latency trade-off. hello robotaxi; zhejiang university; tongji university jiazhe wang, tianyi yang, ruihang li, fan lu, xianming zeng, jianyun xu, xingliang liu, lei yang cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23719",
+      "title": "Improving While Deployed: Learning Proactive End-to-End Driving from Imperfect Human Takeover Data",
+      "authors": "Yangang Ren, Di Zeng, Jun Li, Zirui Li, Chengjiang Zhang, Xiaoqing Ye, Ji Tao, Chen Lv",
+      "affiliations": "Nanyang Technological University; Changan Automobile; Wuhan University",
+      "published_date": "2026-11-18",
+      "categories": "cs.RO",
+      "abstract": "Once deployed on vehicles, end-to-end driving models continuously encounter challenging scenarios, generating valuable human takeover data that capture both model outputs and human behaviors. However, human interventions are often imperfect, as drivers may intervene too late or unnecessarily. Consequently, direct imitation can reinforce late responses or discourage otherwise appropriate maneuvers. To address this challenge, we propose an offline post-training framework that transforms imperfect takeover data into proactive supervision. We first construct diverse trajectory candidates by augmenting the plans of the deployed model and shifting recorded human corrective maneuvers earlier in time. We then train a scene-conditioned trajectory scorer to rank these candidates using expert demonstrations and unpaired preference signals from takeover logs. Using this scorer, we selectively replace pre-takeover training targets with higher-scoring candidates while retaining the original targets in normal driving scenarios. Finally, we distill the resulting targets into the driving model without changing its inference architecture. In closed-loop evaluations using real-world scenarios reconstructed with 4D Gaussian splatting, our method achieves the highest overall success rate, outperforming the deployed model, direct imitation learning and trajectory post-optimization. These results highlight a practical path toward efficient updates of deployed driving models using existing fleet logs.",
+      "summary_cn": "把部署后的人类接管数据转成主动监督：先对部署模型规划增广并把人的纠正动作前移，构造轨迹候选，再用专家示范与未配对偏好信号训练场景条件打分器，替换接管前训练目标后蒸馏回驾驶模型且不改推理结构。在4DGS重建真实场景的闭环评测中，总体成功率超过部署模型、直接模仿与轨迹后优化。",
+      "pdf_filename": "2611.23719.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "4DGS",
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23719",
+      "search_text": "improving while deployed: learning proactive end-to-end driving from imperfect human takeover data 3dgs 4dgs 闭环仿真 规划 把部署后的人类接管数据转成主动监督：先对部署模型规划增广并把人的纠正动作前移，构造轨迹候选，再用专家示范与未配对偏好信号训练场景条件打分器，替换接管前训练目标后蒸馏回驾驶模型且不改推理结构。在4dgs重建真实场景的闭环评测中，总体成功率超过部署模型、直接模仿与轨迹后优化。 once deployed on vehicles, end-to-end driving models continuously encounter challenging scenarios, generating valuable human takeover data that capture both model outputs and human behaviors. however, human interventions are often imperfect, as drivers may intervene too late or unnecessarily. consequently, direct imitation can reinforce late responses or discourage otherwise appropriate maneuvers. to address this challenge, we propose an offline post-training framework that transforms imperfect takeover data into proactive supervision. we first construct diverse trajectory candidates by augmenting the plans of the deployed model and shifting recorded human corrective maneuvers earlier in time. we then train a scene-conditioned trajectory scorer to rank these candidates using expert demonstrations and unpaired preference signals from takeover logs. using this scorer, we selectively replace pre-takeover training targets with higher-scoring candidates while retaining the original targets in normal driving scenarios. finally, we distill the resulting targets into the driving model without changing its inference architecture. in closed-loop evaluations using real-world scenarios reconstructed with 4d gaussian splatting, our method achieves the highest overall success rate, outperforming the deployed model, direct imitation learning and trajectory post-optimization. these results highlight a practical path toward efficient updates of deployed driving models using existing fleet logs. nanyang technological university; changan automobile; wuhan university yangang ren, di zeng, jun li, zirui li, chengjiang zhang, xiaoqing ye, ji tao, chen lv cs.ro"
+    },
+    {
+      "arxiv_id": "2611.23697",
+      "title": "What Do Learned 3D Models Add to Localization from Posed References?",
+      "authors": "Jaehyun Kim, Wonseok Kang, Jeongmin Lee, Tae-Wan Kim",
+      "affiliations": "Seoul National University; DeepFine Co., Ltd.",
+      "published_date": "2026-11-18",
+      "categories": "cs.CV",
+      "abstract": "Localizing a query from a few posed reference images avoids building a 3D point map. We ask what the camera predictions of learned 3D models add to geometric estimation from the same references, and where failures arise. Across eight learned models and variants and five test sets, we compare reference budgets, swap pose components, and intervene on the references a model sees. At fine pose-error thresholds, geometric estimation with one additional reference is significantly more accurate than every model on two references on Cambridge and NAVER B1 and never significantly worse, alone or as a fallback behind a shared acceptance gate; with the same three references, the more accurate approach depends on the scene. The gain from the learned translation magnitude depends on reference selection: it improves seven of the eight models on 12-Scenes with the spread-out pairs we select, but none of the five we test with the two top-ranked retrieved references. Where retrieval also returns references from other locations, at NAVER Gangnam Station, models fail at different stages. A robust alignment brings Pi3X and MapAnything within 3.3 pp of adding references as needed. In controlled tests, aligning on the nearby references largely restores VGGT, Pi3X and MapAnything but not Depth Anything 3, and pose-conditioned Pi3X recovers only if the far poses are masked and left out of its input-pose normalization.",
+      "summary_cn": "系统检验学习式3D模型（8个模型及变体、5个测试集）相对少量带位姿参考图的几何估计到底多给了什么：严格位姿阈值下，几何估计多给一张参考图就显著优于所有两参考图模型且从不显著更差；学习式平移增益取决于参考选择，12-Scenes上仅对分散参考有效；混入异地参考时各模型失败阶段不同，鲁棒对齐可把Pi3X、MapAnything差距缩到3.3个百分点。",
+      "pdf_filename": "2611.23697.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23697",
+      "search_text": "what do learned 3d models add to localization from posed references? 前馈3d重建 系统检验学习式3d模型（8个模型及变体、5个测试集）相对少量带位姿参考图的几何估计到底多给了什么：严格位姿阈值下，几何估计多给一张参考图就显著优于所有两参考图模型且从不显著更差；学习式平移增益取决于参考选择，12-scenes上仅对分散参考有效；混入异地参考时各模型失败阶段不同，鲁棒对齐可把pi3x、mapanything差距缩到3.3个百分点。 localizing a query from a few posed reference images avoids building a 3d point map. we ask what the camera predictions of learned 3d models add to geometric estimation from the same references, and where failures arise. across eight learned models and variants and five test sets, we compare reference budgets, swap pose components, and intervene on the references a model sees. at fine pose-error thresholds, geometric estimation with one additional reference is significantly more accurate than every model on two references on cambridge and naver b1 and never significantly worse, alone or as a fallback behind a shared acceptance gate; with the same three references, the more accurate approach depends on the scene. the gain from the learned translation magnitude depends on reference selection: it improves seven of the eight models on 12-scenes with the spread-out pairs we select, but none of the five we test with the two top-ranked retrieved references. where retrieval also returns references from other locations, at naver gangnam station, models fail at different stages. a robust alignment brings pi3x and mapanything within 3.3 pp of adding references as needed. in controlled tests, aligning on the nearby references largely restores vggt, pi3x and mapanything but not depth anything 3, and pose-conditioned pi3x recovers only if the far poses are masked and left out of its input-pose normalization. seoul national university; deepfine co., ltd. jaehyun kim, wonseok kang, jeongmin lee, tae-wan kim cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23610",
+      "title": "Optical Neural Networks Should Be Evaluated by Function, Not Only Physics",
+      "authors": "Shi-Yuan Ma, Xingjian Bai, Ryan Hamerly, Mahmoud Jalali Mehrabad",
+      "affiliations": "Massachusetts Institute of Technology; NTT Research",
+      "published_date": "2026-11-17",
+      "categories": "physics.optics, cs.ET, cs.LG, cs.NE, physics.app-ph",
+      "abstract": "Optical neural networks (ONNs) are attracting significant attention as alternative platforms for machine learning (ML). In an ONN, an optical module often takes over part of the computation inside a digital ML pipeline. How much of the task does the optical module itself perform, and how much does it contribute to any claimed system-level advantages, such as throughput or energy?   This paper offers a simple, function-oriented evaluation methodology. Whatever its internal physics, the optical module appears to the surrounding digital pipeline as a mapping between real-valued tensors. We therefore evaluate it in three steps: (i) define its boundary in the pipeline, as real-valued tensors in and out; (ii) replace it with standard digital modules to identify those that match the optical system's performance on the same task and metric; and (iii) state system-level claims, such as speed or energy, per inference against the performance-matched digital module. We summarize steps (i) and (ii) in an Expressivity Card and demonstrate its use on published ONN systems. This helps isolate the optical module's contribution and provides a concrete digital reference for assessing its claimed system-level advantages, without the need to understand the physics.   While we focus on optical systems as the most prominent example, the same approach applies to any physical analog computing platform used in ML, wherever a physical module takes over part of a digital pipeline.",
+      "summary_cn": "提出按功能而非按物理评测光学神经网络：把光模块视为实数张量到张量的映射，先界定其在数字流水线中的边界，再用标准数字模块替换并找出性能等同者，最后以该参照折算吞吐与能耗收益，并用Expressivity Card总结前两步。在已发表ONN系统上演示，可剥离光模块的真实贡献，也适用于任何模拟计算平台。",
+      "pdf_filename": "2611.23610.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.23610",
+      "search_text": "optical neural networks should be evaluated by function, not only physics  提出按功能而非按物理评测光学神经网络：把光模块视为实数张量到张量的映射，先界定其在数字流水线中的边界，再用标准数字模块替换并找出性能等同者，最后以该参照折算吞吐与能耗收益，并用expressivity card总结前两步。在已发表onn系统上演示，可剥离光模块的真实贡献，也适用于任何模拟计算平台。 optical neural networks (onns) are attracting significant attention as alternative platforms for machine learning (ml). in an onn, an optical module often takes over part of the computation inside a digital ml pipeline. how much of the task does the optical module itself perform, and how much does it contribute to any claimed system-level advantages, such as throughput or energy?   this paper offers a simple, function-oriented evaluation methodology. whatever its internal physics, the optical module appears to the surrounding digital pipeline as a mapping between real-valued tensors. we therefore evaluate it in three steps: (i) define its boundary in the pipeline, as real-valued tensors in and out; (ii) replace it with standard digital modules to identify those that match the optical system's performance on the same task and metric; and (iii) state system-level claims, such as speed or energy, per inference against the performance-matched digital module. we summarize steps (i) and (ii) in an expressivity card and demonstrate its use on published onn systems. this helps isolate the optical module's contribution and provides a concrete digital reference for assessing its claimed system-level advantages, without the need to understand the physics.   while we focus on optical systems as the most prominent example, the same approach applies to any physical analog computing platform used in ml, wherever a physical module takes over part of a digital pipeline. massachusetts institute of technology; ntt research shi-yuan ma, xingjian bai, ryan hamerly, mahmoud jalali mehrabad physics.optics, cs.et, cs.lg, cs.ne, physics.app-ph"
+    },
+    {
+      "arxiv_id": "2611.23554",
+      "title": "Layer-Matched Sparse Attention for Low-Redundancy 3D Reconstruction",
+      "authors": "Sammam Mahdi, Fariha Binta Salim, K. M. Jubair Sami, Rakin Bin Rabbani",
+      "affiliations": "BRAC University",
+      "published_date": "2026-11-17",
+      "categories": "cs.CV",
+      "abstract": "VGGT reconstructs cameras and geometry from unposed images in one pass, but its global attention grows quadratically with the number of views. Training-free accelerators thin this attention and work well on redundant video, but lose pose accuracy when views share little geometry. This paper traces these losses to two kinds of cross-view information that a uniform sparse approximation can fail to preserve together: diffuse layers aggregate distributed context, whereas matching layers depend on query-specific interactions that carry little attention mass. A per-layer statistic measures the log-mass missed by a mean token. Its row-free proxy is the logit variance, and it selects the estimator for each layer. Diffuse layers use shared, importance-sampled hub keys, with log-weights that make the softmax numerator and denominator unbiased. Matching layers stay exact: every aggressive thinning tested cost accuracy. At equal cost, the selected layers outperform the four shifted windows tested. On 13 unseen low-redundancy scenes with 32 views, LMSA stays within 1.4 AUC@5 of dense attention, compared with 10.3 for AVGGT and 4.5 for SAF3R; its difference from contemporaneous GPA-VGGT is not significant, and only its gains over AVGGT pass both scene-level tests. With 100 views, it stays within 1.9 AUC@5 while its aggregator runs $2.0\\times$ faster. Used post hoc to choose the layers GPA-VGGT protects, the statistic improves it by 1.2 AUC@5 for 5% more FLOPs. Applied untuned to $π^3$, it beats AVGGT but remains further from dense accuracy.",
+      "summary_cn": "针对VGGT全局注意力随视图数平方增长，提出免训练的层匹配稀疏注意力：用每层被平均token漏掉的log-mass及logit方差代理，自动判别该层属弥散层还是匹配层，前者用共享重要性采样hub key并配无偏log权重，后者保持精确注意力。13个低冗余32视图场景仅比稠密注意力差1.4 AUC@5（AVGGT差10.3），100视图下聚合器快2.0倍。",
+      "pdf_filename": "2611.23554.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23554",
+      "search_text": "layer-matched sparse attention for low-redundancy 3d reconstruction 前馈3d重建 针对vggt全局注意力随视图数平方增长，提出免训练的层匹配稀疏注意力：用每层被平均token漏掉的log-mass及logit方差代理，自动判别该层属弥散层还是匹配层，前者用共享重要性采样hub key并配无偏log权重，后者保持精确注意力。13个低冗余32视图场景仅比稠密注意力差1.4 auc@5（avggt差10.3），100视图下聚合器快2.0倍。 vggt reconstructs cameras and geometry from unposed images in one pass, but its global attention grows quadratically with the number of views. training-free accelerators thin this attention and work well on redundant video, but lose pose accuracy when views share little geometry. this paper traces these losses to two kinds of cross-view information that a uniform sparse approximation can fail to preserve together: diffuse layers aggregate distributed context, whereas matching layers depend on query-specific interactions that carry little attention mass. a per-layer statistic measures the log-mass missed by a mean token. its row-free proxy is the logit variance, and it selects the estimator for each layer. diffuse layers use shared, importance-sampled hub keys, with log-weights that make the softmax numerator and denominator unbiased. matching layers stay exact: every aggressive thinning tested cost accuracy. at equal cost, the selected layers outperform the four shifted windows tested. on 13 unseen low-redundancy scenes with 32 views, lmsa stays within 1.4 auc@5 of dense attention, compared with 10.3 for avggt and 4.5 for saf3r; its difference from contemporaneous gpa-vggt is not significant, and only its gains over avggt pass both scene-level tests. with 100 views, it stays within 1.9 auc@5 while its aggregator runs $2.0\\times$ faster. used post hoc to choose the layers gpa-vggt protects, the statistic improves it by 1.2 auc@5 for 5% more flops. applied untuned to $π^3$, it beats avggt but remains further from dense accuracy. brac university sammam mahdi, fariha binta salim, k. m. jubair sami, rakin bin rabbani cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23477",
+      "title": "mmTherm: Absolute 3D Human Pose Estimation from Low-Resolution Thermal Images and mmWave Radar",
+      "authors": "Zhaoxin Chang, Badii Jouaber, Daqing Zhang",
+      "affiliations": "SAMOVAR, Telecom SudParis, Institut Polytechnique de Paris; Peking University",
+      "published_date": "2026-11-17",
+      "categories": "cs.CV",
+      "abstract": "Absolute 3D human pose estimation (HPE) aims to recover both a person's body pose and their global position in 3D space. Privacy-preserving millimeter-wave (mmWave) radar provides distance and direction measurement capabilities, but its sparse point clouds make HPE under-constrained. Low-resolution thermal imaging can provide complementary observations of body direction and structure. However, our evaluation shows that a strong feature-level fusion baseline loses much of its localization and HPE advantage when generalizing to unseen subjects, with radial localization becoming less accurate than a radar-only baseline. Motivated by this finding, we introduce mmTherm, a lightweight framework that explicitly incorporates the complementary geometric properties of thermal imaging and mmWave radar. It combines body structure and joint directions estimated from thermal images with range information from radar to localize the body and reconstruct its 3D pose. Experiments on OctoNet show that mmTherm reduces cross-user absolute joint error by 33% and root localization error by 38% relative to the strongest corresponding baselines, while requiring substantially fewer parameters and less computation at inference.",
+      "summary_cn": "针对毫米波雷达点云稀疏、低分辨率热成像可互补的问题，指出特征级融合在跨被试时反而丢掉定位优势，改为显式利用两者几何特性：热图像给身体结构与关节方向，雷达给距离，联合定位并重建绝对3D人体姿态。OctoNet上跨用户绝对关节误差降33%、根节点定位误差降38%，参数量与推理计算明显更省。",
+      "pdf_filename": "2611.23477.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23477",
+      "search_text": "mmtherm: absolute 3d human pose estimation from low-resolution thermal images and mmwave radar 点云 针对毫米波雷达点云稀疏、低分辨率热成像可互补的问题，指出特征级融合在跨被试时反而丢掉定位优势，改为显式利用两者几何特性：热图像给身体结构与关节方向，雷达给距离，联合定位并重建绝对3d人体姿态。octonet上跨用户绝对关节误差降33%、根节点定位误差降38%，参数量与推理计算明显更省。 absolute 3d human pose estimation (hpe) aims to recover both a person's body pose and their global position in 3d space. privacy-preserving millimeter-wave (mmwave) radar provides distance and direction measurement capabilities, but its sparse point clouds make hpe under-constrained. low-resolution thermal imaging can provide complementary observations of body direction and structure. however, our evaluation shows that a strong feature-level fusion baseline loses much of its localization and hpe advantage when generalizing to unseen subjects, with radial localization becoming less accurate than a radar-only baseline. motivated by this finding, we introduce mmtherm, a lightweight framework that explicitly incorporates the complementary geometric properties of thermal imaging and mmwave radar. it combines body structure and joint directions estimated from thermal images with range information from radar to localize the body and reconstruct its 3d pose. experiments on octonet show that mmtherm reduces cross-user absolute joint error by 33% and root localization error by 38% relative to the strongest corresponding baselines, while requiring substantially fewer parameters and less computation at inference. samovar, telecom sudparis, institut polytechnique de paris; peking university zhaoxin chang, badii jouaber, daqing zhang cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23417",
+      "title": "Autoregressive View Model",
+      "authors": "Jensen,  Zhou, Samuel Rota Bulo, Denis Rozumny, Duncan Zauss, Peter Hedman, Nikhil Keetha, Philip Torr, Christian Rupprecht, Andrea Vedaldi, Peter Kontschieder",
+      "affiliations": "Meta; University of Oxford",
+      "published_date": "2026-11-17",
+      "categories": "cs.CV",
+      "abstract": "We present the Autoregressive View Model (AVM), which generates a scene as a stream of views without constructing an explicit 3D representation. Through a unified in-context interface, AVM conditions on images or videos to generate short clips along a requested camera path. Visual context grounds reconstruction and interpolation, while a learned prior enables extrapolation into unseen regions. AVM retrieves relevant views from inputs and generated history to form a bounded active context. We fine-tune a pretrained bidirectional video diffusion transformer with flow matching in an N-in-1-out formulation. We then tune a causal model on its own rollouts to improve photorealism, reduce denoising steps, and limit long-horizon drift. We scale training to approximately 8M scenes and video clips. We evaluate generation capacity and scene persistence across benchmarks for camera control, text control, visual quality, dynamics, sparse and 4D reconstruction, and long-horizon consistency. The results demonstrate that AVM adapts to diverse input and output settings through one in-context interface.",
+      "summary_cn": "提出自回归视图模型AVM：不建显式3D表示，而是把场景当成视图流生成，在统一in-context接口下以图像或视频为条件、沿指定相机轨迹出短片，并用检索式有界活动上下文支持外插。基于双向视频扩散Transformer以flow matching做N-in-1-out微调，再用自身rollout训练因果模型减少去噪步数与长时漂移，训练规模约800万场景。",
+      "pdf_filename": "2611.23417.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "动态场景重建"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23417",
+      "search_text": "autoregressive view model 动态场景重建 提出自回归视图模型avm：不建显式3d表示，而是把场景当成视图流生成，在统一in-context接口下以图像或视频为条件、沿指定相机轨迹出短片，并用检索式有界活动上下文支持外插。基于双向视频扩散transformer以flow matching做n-in-1-out微调，再用自身rollout训练因果模型减少去噪步数与长时漂移，训练规模约800万场景。 we present the autoregressive view model (avm), which generates a scene as a stream of views without constructing an explicit 3d representation. through a unified in-context interface, avm conditions on images or videos to generate short clips along a requested camera path. visual context grounds reconstruction and interpolation, while a learned prior enables extrapolation into unseen regions. avm retrieves relevant views from inputs and generated history to form a bounded active context. we fine-tune a pretrained bidirectional video diffusion transformer with flow matching in an n-in-1-out formulation. we then tune a causal model on its own rollouts to improve photorealism, reduce denoising steps, and limit long-horizon drift. we scale training to approximately 8m scenes and video clips. we evaluate generation capacity and scene persistence across benchmarks for camera control, text control, visual quality, dynamics, sparse and 4d reconstruction, and long-horizon consistency. the results demonstrate that avm adapts to diverse input and output settings through one in-context interface. meta; university of oxford jensen,  zhou, samuel rota bulo, denis rozumny, duncan zauss, peter hedman, nikhil keetha, philip torr, christian rupprecht, andrea vedaldi, peter kontschieder cs.cv"
+    },
+    {
+      "arxiv_id": "2611.23416",
+      "title": "OCLDA-GS: Object-Centric Local Deformation-Aware Gaussian Streaming",
+      "authors": "Ashim Dahal, Nikesh Subedi, Rabab Abdelfattah, Nick Rahimi",
+      "affiliations": "University of Southern Mississippi; University of Utah",
+      "published_date": "2026-11-17",
+      "categories": "cs.CV",
+      "abstract": "Streaming 3D Gaussian Splatting (3DGS) allows for online reconstruction of dynamic scenes from multi-view videos for Free Viewpoint Video (FVV). Current time and storage efficient methods rely on selecting a subset of anchor Gaussians and neighborhood interpolation for fast streamable 3DGS. However, these methods can overlook object-specific motion and introduce inconsistencies near object boundaries. We propose OCLDA-GS, an object-centric streaming framework that dynamically reallocates object and motion-aware Gaussian anchors to allocate anchor Gaussian support for objects undergoing large motion while at the same time, restricting the gaussian neighborhood within object groups for more precise object boundaries. Furthermore, it estimates object-wise rigid transformations (e.g. a hand moving) and leverages these estimates to learn per-anchor local deformation correction for small deformations (e.g. wrinkles on a shirt). Then, we conduct experiments on three dynamic multi-view video datasets and demonstrate improvements over the previous baselines alongside improved quality between refinement timesteps. Under matched refinement budgets, our method improves PSNR over Instant Gaussian Stream (IGS) by 0.169 dB on N3DV, 0.202 dB on Meeting Room and +0.199 on Google Immersive, while reducing the mean PSNR drop between refinement timesteps by 9.2% and 13.8% in N3DV and Meeting Room, respectively.",
+      "summary_cn": "面向多视角视频的流式3DGS，提出以对象为中心的框架：按对象重分配运动感知的anchor高斯，把高斯邻域限制在对象组内以锐化边界，并用对象级刚体变换加anchor局部形变校正刻画衣物褶皱等小形变。N3DV、Meeting Room、Google Immersive上PSNR比IGS高0.169/0.202/0.199 dB，细化步间质量抖动降低9.2%和13.8%。",
+      "pdf_filename": "2611.23416.pdf",
+      "crawled_date": "2026-11-19",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "前馈3D重建",
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23416",
+      "search_text": "oclda-gs: object-centric local deformation-aware gaussian streaming 前馈3d重建 3dgs 面向多视角视频的流式3dgs，提出以对象为中心的框架：按对象重分配运动感知的anchor高斯，把高斯邻域限制在对象组内以锐化边界，并用对象级刚体变换加anchor局部形变校正刻画衣物褶皱等小形变。n3dv、meeting room、google immersive上psnr比igs高0.169/0.202/0.199 db，细化步间质量抖动降低9.2%和13.8%。 streaming 3d gaussian splatting (3dgs) allows for online reconstruction of dynamic scenes from multi-view videos for free viewpoint video (fvv). current time and storage efficient methods rely on selecting a subset of anchor gaussians and neighborhood interpolation for fast streamable 3dgs. however, these methods can overlook object-specific motion and introduce inconsistencies near object boundaries. we propose oclda-gs, an object-centric streaming framework that dynamically reallocates object and motion-aware gaussian anchors to allocate anchor gaussian support for objects undergoing large motion while at the same time, restricting the gaussian neighborhood within object groups for more precise object boundaries. furthermore, it estimates object-wise rigid transformations (e.g. a hand moving) and leverages these estimates to learn per-anchor local deformation correction for small deformations (e.g. wrinkles on a shirt). then, we conduct experiments on three dynamic multi-view video datasets and demonstrate improvements over the previous baselines alongside improved quality between refinement timesteps. under matched refinement budgets, our method improves psnr over instant gaussian stream (igs) by 0.169 db on n3dv, 0.202 db on meeting room and +0.199 on google immersive, while reducing the mean psnr drop between refinement timesteps by 9.2% and 13.8% in n3dv and meeting room, respectively. university of southern mississippi; university of utah ashim dahal, nikesh subedi, rabab abdelfattah, nick rahimi cs.cv"
+    },
     {
       "arxiv_id": "2611.23219",
       "title": "Do LLM Agents Still Need to Be Told How to Self-Improve?",
