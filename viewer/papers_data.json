@@ -1,50 +1,50 @@
 {
-  "count": 2225,
+  "count": 2244,
   "crawled_date_min": "2026-06-17",
-  "crawled_date_max": "2026-11-20",
+  "crawled_date_max": "2026-11-23",
   "published_date_min": "2025-12-08",
-  "published_date_max": "2026-11-19",
+  "published_date_max": "2026-11-20",
   "rating_counts": {
-    "S": 636,
-    "A": 827,
-    "B": 362,
-    "C": 400,
+    "S": 642,
+    "A": 833,
+    "B": 366,
+    "C": 403,
     "": 0
   },
   "tags": [
     {
       "name": "3DGS",
-      "count": 449,
+      "count": 452,
       "group": "3DGS/4DGS"
     },
     {
       "name": "规划",
-      "count": 412,
+      "count": 421,
       "group": "世界模型与仿真"
     },
     {
       "name": "自动驾驶",
-      "count": 385,
+      "count": 389,
       "group": "通用"
     },
     {
       "name": "世界模型",
-      "count": 344,
+      "count": 351,
       "group": "世界模型与仿真"
     },
     {
       "name": "闭环仿真",
-      "count": 333,
+      "count": 337,
       "group": "世界模型与仿真"
     },
     {
       "name": "多模态",
-      "count": 312,
+      "count": 316,
       "group": "通用"
     },
     {
       "name": "大语言模型",
-      "count": 233,
+      "count": 234,
       "group": "通用"
     },
     {
@@ -54,7 +54,7 @@
     },
     {
       "name": "点云",
-      "count": 153,
+      "count": 154,
       "group": "通用"
     },
     {
@@ -69,17 +69,17 @@
     },
     {
       "name": "具身智能",
-      "count": 123,
+      "count": 125,
       "group": "通用"
     },
     {
       "name": "场景压缩",
-      "count": 92,
+      "count": 94,
       "group": "3DGS/4DGS"
     },
     {
       "name": "扩散模型",
-      "count": 77,
+      "count": 78,
       "group": "世界模型与仿真"
     },
     {
@@ -89,7 +89,7 @@
     },
     {
       "name": "视频生成",
-      "count": 57,
+      "count": 59,
       "group": "世界模型与仿真"
     },
     {
@@ -154,6 +154,386 @@
     }
   ],
   "papers": [
+    {
+      "arxiv_id": "2611.27939",
+      "title": "What Must a Model Tell a Planner? Outcome Interfaces for Risk-Aware Planning After Robot Damage",
+      "authors": "Hassan Iqbal, Krishna Kumar",
+      "affiliations": "The University of Texas at Austin",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO",
+      "abstract": "When a robot is damaged, it must decide which routes it can still afford, and the amount of risk it may accept can change from one mission to the next. We argue that whether a learned model helps such a robot depends on its decision interface, that is, on what the model hands to the planner. A decision policy tells the planner what to do, whereas an outcome model, a kind of world model, predicts the consequences of each route. We study simulated Unitree Go2 quadrupeds and H1 humanoids with weakened motors, added payloads, or reduced foot friction. We compare four interfaces. The first is a decision policy, and the second is the same policy trained with fixed penalties for infeasible routes. The third is an outcome model that predicts the feasibility and travel time of each route. The fourth, which we call a capability contract, is an outcome model that predicts the chance of success and the travel time of the robot on each terrain and composes them along a route. All share the same collected experience, matched tuning and risk calibration, and an uncertainty guard. Two comparatively low-risk probes let the capability contract rank hazardous terrains about as well as four new trials on every hazard. At a calibrated 5% limit on selecting empirically infeasible routes, outcome models cut declined missions from about 32% to 7-8% on Go2 and from 57% to 35-36% on H1 compared with the plain policy. Fixed penalties narrow this gap, but the best penalty changes with the risk target. Predicting outcomes lets the planner preserve missions by changing routes as risk requirements tighten.",
+      "summary_cn": "研究机器人受损后“模型该向规划器交付什么”：对比决策策略、加固定惩罚的策略、预测可行性与通行时间的结果模型，以及“能力契约”。在弱化电机、加载荷、低摩擦的Go2/H1仿真中，结果模型把放弃任务比例从约32%降到7–8%、57%降到35–36%，两次低风险试探即可近似四次实测排序。",
+      "pdf_filename": "2611.27939.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27939",
+      "search_text": "what must a model tell a planner? outcome interfaces for risk-aware planning after robot damage 世界模型 规划 研究机器人受损后“模型该向规划器交付什么”：对比决策策略、加固定惩罚的策略、预测可行性与通行时间的结果模型，以及“能力契约”。在弱化电机、加载荷、低摩擦的go2/h1仿真中，结果模型把放弃任务比例从约32%降到7–8%、57%降到35–36%，两次低风险试探即可近似四次实测排序。 when a robot is damaged, it must decide which routes it can still afford, and the amount of risk it may accept can change from one mission to the next. we argue that whether a learned model helps such a robot depends on its decision interface, that is, on what the model hands to the planner. a decision policy tells the planner what to do, whereas an outcome model, a kind of world model, predicts the consequences of each route. we study simulated unitree go2 quadrupeds and h1 humanoids with weakened motors, added payloads, or reduced foot friction. we compare four interfaces. the first is a decision policy, and the second is the same policy trained with fixed penalties for infeasible routes. the third is an outcome model that predicts the feasibility and travel time of each route. the fourth, which we call a capability contract, is an outcome model that predicts the chance of success and the travel time of the robot on each terrain and composes them along a route. all share the same collected experience, matched tuning and risk calibration, and an uncertainty guard. two comparatively low-risk probes let the capability contract rank hazardous terrains about as well as four new trials on every hazard. at a calibrated 5% limit on selecting empirically infeasible routes, outcome models cut declined missions from about 32% to 7-8% on go2 and from 57% to 35-36% on h1 compared with the plain policy. fixed penalties narrow this gap, but the best penalty changes with the risk target. predicting outcomes lets the planner preserve missions by changing routes as risk requirements tighten. the university of texas at austin hassan iqbal, krishna kumar cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27804",
+      "title": "Generalist Action Critic: Harnessing Frontier Models in Autonomous Driving",
+      "authors": "Yun Yan, Shizhi Hu, Zhichao Li, Yang Guan, Shiqi Liu, Jiaxin Gao, Xiangteng Zhang, Wenbo Ding, Jiuhua Zhao, Hui Guo, Xintao Yan, Keqiang Li, Shengbo Eben Li",
+      "affiliations": "University of Hong Kong; Tsinghua University; SAIC Intelligent Technology (Shanghai) Co., Ltd.",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO",
+      "abstract": "Frontier models have demonstrated remarkable general-purpose reasoning capabilities, opening new possibilities for intelligent decision making in the physical world. In autonomous driving, many recent approaches seek to leverage these capabilities through additional adaptation for action output, particularly in scenarios where existing models underperform. We introduce Generalist Action Critic (GAC), a zero-shot framework that combines frontier models' general-purpose reasoning with the planning competence of specialized driving models through an inference-time harness. In GAC, specialized planners generate multiple candidate trajectories and make an initial selection, while a frozen frontier model serves as an action critic that assesses the selected trajectory against scene evidence and either retains it or reselects from the available candidates. The harness combines camera images with spatial overlays, provides driving context and reasoning principles through textual instructions, and regulates the information available at each stage to support trajectory assessment and reselection. On HUGSIM, GAC raises DrivoR's HD-Score to 43.2, achieving state-of-the-art performance among methods trained without additional simulation data. GAC also consistently improves closed-loop driving safety across three planners, with relative HD-Score gains of up to 32.1%. Experiments on NAVSIM v1 further reveal how GAC improves planning performance by correcting up to 52.13% of eligible unsafe trajectory selections while introducing new failures in only 0.67% of originally high-quality selections. These results demonstrate the potential of harnessing frontier models to improve driving safety through inference-time cooperation with specialized planners.",
+      "summary_cn": "提出零样本“通用动作评论家”：专用规划器生成多条候选轨迹并初选，冻结的前沿模型在推理时充当评论家，依据相机图像加空间叠加、文本驾驶上下文与推理原则评估所选轨迹，保留或从候选中重选。在HUGSIM、NAVSIM及安全指标上普遍提升多个规划器，HUGSIM HD-Score提升到43.2。",
+      "pdf_filename": "2611.27804.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27804",
+      "search_text": "generalist action critic: harnessing frontier models in autonomous driving 闭环仿真 规划 自动驾驶 提出零样本“通用动作评论家”：专用规划器生成多条候选轨迹并初选，冻结的前沿模型在推理时充当评论家，依据相机图像加空间叠加、文本驾驶上下文与推理原则评估所选轨迹，保留或从候选中重选。在hugsim、navsim及安全指标上普遍提升多个规划器，hugsim hd-score提升到43.2。 frontier models have demonstrated remarkable general-purpose reasoning capabilities, opening new possibilities for intelligent decision making in the physical world. in autonomous driving, many recent approaches seek to leverage these capabilities through additional adaptation for action output, particularly in scenarios where existing models underperform. we introduce generalist action critic (gac), a zero-shot framework that combines frontier models' general-purpose reasoning with the planning competence of specialized driving models through an inference-time harness. in gac, specialized planners generate multiple candidate trajectories and make an initial selection, while a frozen frontier model serves as an action critic that assesses the selected trajectory against scene evidence and either retains it or reselects from the available candidates. the harness combines camera images with spatial overlays, provides driving context and reasoning principles through textual instructions, and regulates the information available at each stage to support trajectory assessment and reselection. on hugsim, gac raises drivor's hd-score to 43.2, achieving state-of-the-art performance among methods trained without additional simulation data. gac also consistently improves closed-loop driving safety across three planners, with relative hd-score gains of up to 32.1%. experiments on navsim v1 further reveal how gac improves planning performance by correcting up to 52.13% of eligible unsafe trajectory selections while introducing new failures in only 0.67% of originally high-quality selections. these results demonstrate the potential of harnessing frontier models to improve driving safety through inference-time cooperation with specialized planners. university of hong kong; tsinghua university; saic intelligent technology (shanghai) co., ltd. yun yan, shizhi hu, zhichao li, yang guan, shiqi liu, jiaxin gao, xiangteng zhang, wenbo ding, jiuhua zhao, hui guo, xintao yan, keqiang li, shengbo eben li cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27719",
+      "title": "VeilGS: Solving Darkness as a Veil of 2D Basis Maps over Retinex 3DGS",
+      "authors": "Mohab Kishawy, Chengzhou Tang, Shahram Shirani, Jun Chen",
+      "affiliations": "McMaster University; University of Manitoba",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV, cs.GR",
+      "abstract": "In a dark capture, the darkness is not uniform. How much light reaches a surface depends on where it lies relative to the few light sources, and the camera compresses what remains with a tone curve. Most low-light 3D reconstruction methods either apply one curve to every pixel of a view, so a dark object beside a lamp and a bright one in an unlit corner receive the same correction, or store the darkness in the 3D representation, where it can absorb scene detail. We present VeilGS, a 3D Gaussian Splatting method for low-light novel view synthesis that treats the degradation as a veil drawn over a clear scene. Each Gaussian carries an albedo and a shading latent instead of spherical harmonics, separating surface colour from illumination. Each view is darkened by a spatially varying gain followed by a global tone curve, and rendering without this veil gives the restored scene. A small network predicts a coarse basis for the gain from the observation, and its coefficients are solved for each view rather than learned. Training through this solve discourages the Gaussians from absorbing what the veil can explain. VeilGS needs no paired normal-light supervision and stores no per-view parameters. On Gaussian-DK, its restored renders score best on no-reference NIQE and CLIP-IQA and are rated highest in a blind user study with 55 participants. On LOM, it achieves results competitive with the state of the art.",
+      "summary_cn": "低光3DGS新视角合成把暗化视为覆盖在清晰场景上的“面纱”：每个高斯携带反照率与光照隐变量替代球谐，逐视角用空间变化增益加全局色调曲线建模暗化，去掉面纱即得复原场景；小网络预测增益基、系数逐视角求解而非学习，避免高斯吸收光照细节。画质优于Gaussian-DK等，训练从20.7分钟降到5.1分钟。",
+      "pdf_filename": "2611.27719.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27719",
+      "search_text": "veilgs: solving darkness as a veil of 2d basis maps over retinex 3dgs 3dgs 低光3dgs新视角合成把暗化视为覆盖在清晰场景上的“面纱”：每个高斯携带反照率与光照隐变量替代球谐，逐视角用空间变化增益加全局色调曲线建模暗化，去掉面纱即得复原场景；小网络预测增益基、系数逐视角求解而非学习，避免高斯吸收光照细节。画质优于gaussian-dk等，训练从20.7分钟降到5.1分钟。 in a dark capture, the darkness is not uniform. how much light reaches a surface depends on where it lies relative to the few light sources, and the camera compresses what remains with a tone curve. most low-light 3d reconstruction methods either apply one curve to every pixel of a view, so a dark object beside a lamp and a bright one in an unlit corner receive the same correction, or store the darkness in the 3d representation, where it can absorb scene detail. we present veilgs, a 3d gaussian splatting method for low-light novel view synthesis that treats the degradation as a veil drawn over a clear scene. each gaussian carries an albedo and a shading latent instead of spherical harmonics, separating surface colour from illumination. each view is darkened by a spatially varying gain followed by a global tone curve, and rendering without this veil gives the restored scene. a small network predicts a coarse basis for the gain from the observation, and its coefficients are solved for each view rather than learned. training through this solve discourages the gaussians from absorbing what the veil can explain. veilgs needs no paired normal-light supervision and stores no per-view parameters. on gaussian-dk, its restored renders score best on no-reference niqe and clip-iqa and are rated highest in a blind user study with 55 participants. on lom, it achieves results competitive with the state of the art. mcmaster university; university of manitoba mohab kishawy, chengzhou tang, shahram shirani, jun chen cs.cv, cs.gr"
+    },
+    {
+      "arxiv_id": "2611.27689",
+      "title": "Embodied-Harness: Towards Recursive Self-Improvement for Robotic Manipulation",
+      "authors": "Zhenxuan Fan, Zhuoya Wang, Yuqian Yuan, Wenqiao Zhang, Juncheng Li, Jun Xiao, Siliang Tang, Yueting Zhuang",
+      "affiliations": "Zhejiang University; Huazhong University of Science and Technology",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO, cs.AI, cs.CV, cs.MA",
+      "abstract": "Vision-language model (VLM)-based agents offer a promising approach to robotic manipulation, yet remain limited by inadequate memory organization, uncertain failure attribution, and limited reuse of execution experience. We propose Embodied-Harness, a dual-agent framework that improves manipulation by refining the execution harness without updating model parameters. The Actor interacts with the environment through a robot-control interface, while the Reflector converts execution evidence into reusable operational guidance. Hierarchical Memory Architecture maintains short-term execution context and long-term experiential knowledge to support execution and reflection. Evidence-based Experience Reflection grounds failure diagnosis in observed interactions, while Recursive Harness Self-Improvement refines operational guidance across successive attempts. Experiments on RoboTwin 2.0, RoboSPA, and RMBench demonstrate the effectiveness of Embodied-Harness in generalization under environmental variations, spatial reasoning, long-horizon planning, and memory-dependent manipulation. Our method achieves success rates of 82.4%, 76.7%, and 94.4% on the three benchmarks, respectively. Real-world evaluation further yields an average success rate of 96.7% across three manipulation tasks. These results highlight the potential of Embodied-Harness to improve robotic manipulation through experience-driven harness self-improvement.",
+      "summary_cn": "针对VLM机器人操作记忆组织差、失败归因难、经验复用少，提出双智能体框架：Actor经控制接口执行，Reflector把执行证据转为可复用指引，分层记忆保存短期与长期经验，递归改进harness而不更新参数。RoboTwin 2.0、RoboSPA、RMBench成功率最高94.4%与76.7%。",
+      "pdf_filename": "2611.27689.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27689",
+      "search_text": "embodied-harness: towards recursive self-improvement for robotic manipulation 多模态 具身智能 针对vlm机器人操作记忆组织差、失败归因难、经验复用少，提出双智能体框架：actor经控制接口执行，reflector把执行证据转为可复用指引，分层记忆保存短期与长期经验，递归改进harness而不更新参数。robotwin 2.0、robospa、rmbench成功率最高94.4%与76.7%。 vision-language model (vlm)-based agents offer a promising approach to robotic manipulation, yet remain limited by inadequate memory organization, uncertain failure attribution, and limited reuse of execution experience. we propose embodied-harness, a dual-agent framework that improves manipulation by refining the execution harness without updating model parameters. the actor interacts with the environment through a robot-control interface, while the reflector converts execution evidence into reusable operational guidance. hierarchical memory architecture maintains short-term execution context and long-term experiential knowledge to support execution and reflection. evidence-based experience reflection grounds failure diagnosis in observed interactions, while recursive harness self-improvement refines operational guidance across successive attempts. experiments on robotwin 2.0, robospa, and rmbench demonstrate the effectiveness of embodied-harness in generalization under environmental variations, spatial reasoning, long-horizon planning, and memory-dependent manipulation. our method achieves success rates of 82.4%, 76.7%, and 94.4% on the three benchmarks, respectively. real-world evaluation further yields an average success rate of 96.7% across three manipulation tasks. these results highlight the potential of embodied-harness to improve robotic manipulation through experience-driven harness self-improvement. zhejiang university; huazhong university of science and technology zhenxuan fan, zhuoya wang, yuqian yuan, wenqiao zhang, juncheng li, jun xiao, siliang tang, yueting zhuang cs.ro, cs.ai, cs.cv, cs.ma"
+    },
+    {
+      "arxiv_id": "2611.27639",
+      "title": "SOAR: Training-Free Rank-Consistent Rollout Compression for Latent World Model Planning",
+      "authors": "Anqi Li, Kai Liu, Linghe Kong, Yulun Zhang",
+      "affiliations": "Shanghai Jiao Tong University",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO, cs.CV",
+      "abstract": "Latent world models plan by rolling out hundreds of candidate action sequences through a transformer predictor, so a single decision can take tens of seconds. Existing accelerations prune spatial tokens as in vision-language models, yet a sampling-based planner uses predicted costs only to rank candidates, so a rollout can be compressed freely as long as the ranking survives. We propose SOAR, a training-free method that adapts rollout compression to each planning decision. At every decision, SOAR probes a few candidates under several token budgets and keeps the smallest budget that preserves their ranking, so it compresses as far as the current decision allows, without task labels. A closed-loop study of more than 80,000 episodes fixes the rest of the rollout: the first step, which alone reads a real observation, stays exact, and the context frame is cached rather than recomputed. On seven navigation and manipulation tasks with frozen checkpoints, SOAR matches dense-level planning success at 2.3x speedup and retains 98% at 2.5x. Our code is available at https://github.com/starrywiki/SOAR.",
+      "summary_cn": "潜世界模型规划要对上百分支做transformer rollout，单次决策耗时数十秒。SOAR无需训练，利用采样规划只用预测代价排序：每个决策在若干token预算下试探少量候选，保留能维持排序的最小预算以自适应压缩rollout，首步精确、上下文帧缓存。七个任务上2.3×加速达稠密级成功率。",
+      "pdf_filename": "2611.27639.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "场景压缩",
+        "世界模型",
+        "闭环仿真",
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27639",
+      "search_text": "soar: training-free rank-consistent rollout compression for latent world model planning 场景压缩 世界模型 闭环仿真 规划 多模态 潜世界模型规划要对上百分支做transformer rollout，单次决策耗时数十秒。soar无需训练，利用采样规划只用预测代价排序：每个决策在若干token预算下试探少量候选，保留能维持排序的最小预算以自适应压缩rollout，首步精确、上下文帧缓存。七个任务上2.3×加速达稠密级成功率。 latent world models plan by rolling out hundreds of candidate action sequences through a transformer predictor, so a single decision can take tens of seconds. existing accelerations prune spatial tokens as in vision-language models, yet a sampling-based planner uses predicted costs only to rank candidates, so a rollout can be compressed freely as long as the ranking survives. we propose soar, a training-free method that adapts rollout compression to each planning decision. at every decision, soar probes a few candidates under several token budgets and keeps the smallest budget that preserves their ranking, so it compresses as far as the current decision allows, without task labels. a closed-loop study of more than 80,000 episodes fixes the rest of the rollout: the first step, which alone reads a real observation, stays exact, and the context frame is cached rather than recomputed. on seven navigation and manipulation tasks with frozen checkpoints, soar matches dense-level planning success at 2.3x speedup and retains 98% at 2.5x. our code is available at https://github.com/starrywiki/soar. shanghai jiao tong university anqi li, kai liu, linghe kong, yulun zhang cs.ro, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.27635",
+      "title": "Report2Alpha-Bench: Evaluating LLM Agents on End-to-End Quantitative Research",
+      "authors": "Yun Zhang, Hui Yang, Wei Meng",
+      "affiliations": "Fundora Lab",
+      "published_date": "2026-11-20",
+      "categories": "cs.CE",
+      "abstract": "We evaluate whether LLM agents can independently carry out a several-hour quantitative research project: read a brokerage research report, make a plan, and over 7 rounds of iteration propose hypotheses, write factor code and improve it from backtest feedback, seeing only 2022-2023 market data. Like Terminal-Bench-Science, the task evaluates overall research ability; unlike it, there is no directly checkable unique answer: the model must repeatedly propose hypotheses on very noisy data, revise its understanding from experiments, disentangle multiple factors and design ablations without overfitting in-sample, much like complex real-world decisions with many interacting factors. After the research, a fixed rule using only 2022-2023 results selects a low-correlated factor pool from all candidates the model produced, and scores it on unseen 2024-2025 data after removing common style returns such as size and momentum; the same rule on round-0 candidates alone gives a report baseline that \"implements the report without iterating\". We run gpt-6.1-sol (reasoning effort xhigh), gpt-6.1-terra (xhigh), muse-spark-1.3 (xhigh) and deepseek-v4.1-flash (max) once on each of 7 reports. Of the 28 runs, 19 factor pools pass the usability threshold; the average score is 48.4 (0-100 scale), against 25.4 for the report baseline and 35.9 for the models' own picks. From similar report baselines (17.0-31.0), the models separate after iteration to 74.7 (gpt-6.1-sol), 56.6 (gpt-6.1-terra), 35.8 (deepseek-v4.1-flash) and 26.2 (muse-spark-1.3); their candidates look equally good in training and diverge only in testing, with the leaders proposing more diverse ideas per round and ending with more effective factors in the pool. Evaluating research agents thus requires scoring on frozen future data after removing styles, and measuring \"what the research produced\" separately from \"what was finally picked\".",
+      "summary_cn": "构建端到端量化研究基准：LLM智能体读券商研报、做计划，在7轮迭代中提出因子假设、写代码并按回测反馈改进，仅见2022–2023数据，最后用固定规则在2024–2025未见数据上评估。四个模型各跑7份报告共28次，19个因子池可用，均分48.4，高于照搬研报基线25.4，模型间在迭代后明显分化。",
+      "pdf_filename": "2611.27635.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "C",
+      "keywords": [
+        "大语言模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27635",
+      "search_text": "report2alpha-bench: evaluating llm agents on end-to-end quantitative research 大语言模型 构建端到端量化研究基准：llm智能体读券商研报、做计划，在7轮迭代中提出因子假设、写代码并按回测反馈改进，仅见2022–2023数据，最后用固定规则在2024–2025未见数据上评估。四个模型各跑7份报告共28次，19个因子池可用，均分48.4，高于照搬研报基线25.4，模型间在迭代后明显分化。 we evaluate whether llm agents can independently carry out a several-hour quantitative research project: read a brokerage research report, make a plan, and over 7 rounds of iteration propose hypotheses, write factor code and improve it from backtest feedback, seeing only 2022-2023 market data. like terminal-bench-science, the task evaluates overall research ability; unlike it, there is no directly checkable unique answer: the model must repeatedly propose hypotheses on very noisy data, revise its understanding from experiments, disentangle multiple factors and design ablations without overfitting in-sample, much like complex real-world decisions with many interacting factors. after the research, a fixed rule using only 2022-2023 results selects a low-correlated factor pool from all candidates the model produced, and scores it on unseen 2024-2025 data after removing common style returns such as size and momentum; the same rule on round-0 candidates alone gives a report baseline that \"implements the report without iterating\". we run gpt-6.1-sol (reasoning effort xhigh), gpt-6.1-terra (xhigh), muse-spark-1.3 (xhigh) and deepseek-v4.1-flash (max) once on each of 7 reports. of the 28 runs, 19 factor pools pass the usability threshold; the average score is 48.4 (0-100 scale), against 25.4 for the report baseline and 35.9 for the models' own picks. from similar report baselines (17.0-31.0), the models separate after iteration to 74.7 (gpt-6.1-sol), 56.6 (gpt-6.1-terra), 35.8 (deepseek-v4.1-flash) and 26.2 (muse-spark-1.3); their candidates look equally good in training and diverge only in testing, with the leaders proposing more diverse ideas per round and ending with more effective factors in the pool. evaluating research agents thus requires scoring on frozen future data after removing styles, and measuring \"what the research produced\" separately from \"what was finally picked\". fundora lab yun zhang, hui yang, wei meng cs.ce"
+    },
+    {
+      "arxiv_id": "2611.27516",
+      "title": "PhiJEPA: Denoising Latent Predictions for Visual Representation Learning",
+      "authors": "Makoto Yamada, Yao-Hung Hubert Tsai",
+      "affiliations": "Okinawa Institute of Science and Technology",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV, cs.AI, stat.ML",
+      "abstract": "Can a predictor trained to infer hidden image regions still help a world model plan when part of an object disappears from view and the visible context is blurred? We introduce PhiJEPA, a joint-embedding predictive architecture that adapts PhiNet's two-stage prediction to masked Transformers. From sparse, photometrically corrupted context, a Transformer block predicts hidden tokens of an independently corrupted teacher view. A token-wise MLP then maps these predictions to clean teacher tokens. Controlled ablations show that the combined objective improves dense features over the tested one-stage alternatives. Pre-trained on ImageNet-1K with $5.6\\times10^{19}$ training FLOPs, PhiJEPA achieves 69.3 mIoU on linear PASCAL VOC segmentation, exceeding the evaluated I-JEPA and DSeq-JEPA checkpoints in segmentation accuracy, with 25\\% fewer training FLOPs than I-JEPA. It also improves hidden-region segmentation over Simple I-JEPA (49.1 vs.\\ 44.3 mIoU). As an application, we use the frozen encoder in DINO-WM on PushT, and reuse the pre-training predictor, which JEPAs usually discard, to complete occluded tokens without fine-tuning. In open-loop planning with simultaneous object occlusion and Gaussian blur ($σ=2$ pixels), predictor completion raises success from 33\\% to 65\\%, compared with 25\\% for Simple I-JEPA with its predictor and 40\\% for iBOT with pixel inpainting. Together, these results support two-stage latent prediction as an efficient approach to learning visual representations that remain useful under photometric degradation and support completion under partial observation.",
+      "summary_cn": "提出PhiJEPA，把PhiNet预测移植到掩码Transformer：由稀疏退化上下文预测独立退化教师视图的隐token，再映射到干净教师token。预训练后VOC分割69.3 mIoU，FLOPs比I-JEPA少25%；冻结编码器用于DINO-WM，遮挡加模糊下PushT成功率33%升到65%。",
+      "pdf_filename": "2611.27516.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27516",
+      "search_text": "phijepa: denoising latent predictions for visual representation learning 世界模型 提出phijepa，把phinet预测移植到掩码transformer：由稀疏退化上下文预测独立退化教师视图的隐token，再映射到干净教师token。预训练后voc分割69.3 miou，flops比i-jepa少25%；冻结编码器用于dino-wm，遮挡加模糊下pusht成功率33%升到65%。 can a predictor trained to infer hidden image regions still help a world model plan when part of an object disappears from view and the visible context is blurred? we introduce phijepa, a joint-embedding predictive architecture that adapts phinet's two-stage prediction to masked transformers. from sparse, photometrically corrupted context, a transformer block predicts hidden tokens of an independently corrupted teacher view. a token-wise mlp then maps these predictions to clean teacher tokens. controlled ablations show that the combined objective improves dense features over the tested one-stage alternatives. pre-trained on imagenet-1k with $5.6\\times10^{19}$ training flops, phijepa achieves 69.3 miou on linear pascal voc segmentation, exceeding the evaluated i-jepa and dseq-jepa checkpoints in segmentation accuracy, with 25\\% fewer training flops than i-jepa. it also improves hidden-region segmentation over simple i-jepa (49.1 vs.\\ 44.3 miou). as an application, we use the frozen encoder in dino-wm on pusht, and reuse the pre-training predictor, which jepas usually discard, to complete occluded tokens without fine-tuning. in open-loop planning with simultaneous object occlusion and gaussian blur ($σ=2$ pixels), predictor completion raises success from 33\\% to 65\\%, compared with 25\\% for simple i-jepa with its predictor and 40\\% for ibot with pixel inpainting. together, these results support two-stage latent prediction as an efficient approach to learning visual representations that remain useful under photometric degradation and support completion under partial observation. okinawa institute of science and technology makoto yamada, yao-hung hubert tsai cs.cv, cs.ai, stat.ml"
+    },
+    {
+      "arxiv_id": "2611.27515",
+      "title": "Beyond a Single Human Demonstration: Learning from Scored Trajectory Alternatives for End-to-End Driving",
+      "authors": "Xinyao Rao, Zecheng Tang, Liuxuan Sun, Zheyuan Lai, Minjun Yu, Xun Cao, Wei Li",
+      "affiliations": "Nanjing University; Peking University; EABOT.AI",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV",
+      "abstract": "Human driving logs record only one trajectory per scene, leaving other feasible driving choices without explicit trajectory targets or quality labels. This limits supervision for end-to-end planners that generate and refine multiple candidate trajectories. Meanwhile, conditioning refinement on a large vision-language model adds substantial online inference cost. We propose DriveSTA, which extends autoregressive proposal generation and proposal-conditioned residual flow refinement with scored trajectory alternatives. For each training scene, we generate alternatives offline through smooth deformations of the recorded trajectory and evaluate their simulated execution against logged traffic. Diverse, high-quality alternatives supervise distinct proposals and define residual targets for quality-guided denoising, while candidates spanning the full score range train a scorer to assess driving quality. A shared joint-embedding predictive architecture (JEPA), adapted through masked video-feature prediction, encodes observed frames once and provides temporal context for both refinement and scoring. On NAVSIM v1 Navtest, DriveSTA ranks first among the compared planners trained on NAVSIM data alone. With expanded training data, DriveSTA-Scale achieves state-of-the-art results among the compared methods on Navtest and closed-loop HUGSIM, while reducing mean planner forward-pass latency by 73% relative to ChainFlow-VLA in matched evaluations.",
+      "summary_cn": "人类驾驶日志每场景仅一条轨迹，多候选端到端规划缺监督。DriveSTA离线对记录轨迹平滑形变生成候选并仿真评估，用不同质量候选项分别监督提案生成与残差流精化并训练打分器。NAVSIM v1 Navtest居首，闭环HUGSIM达SOTA，前向延迟比ChainFlow-VLA降73%。",
+      "pdf_filename": "2611.27515.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "闭环仿真",
+        "规划",
+        "多模态"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27515",
+      "search_text": "beyond a single human demonstration: learning from scored trajectory alternatives for end-to-end driving 闭环仿真 规划 多模态 人类驾驶日志每场景仅一条轨迹，多候选端到端规划缺监督。drivesta离线对记录轨迹平滑形变生成候选并仿真评估，用不同质量候选项分别监督提案生成与残差流精化并训练打分器。navsim v1 navtest居首，闭环hugsim达sota，前向延迟比chainflow-vla降73%。 human driving logs record only one trajectory per scene, leaving other feasible driving choices without explicit trajectory targets or quality labels. this limits supervision for end-to-end planners that generate and refine multiple candidate trajectories. meanwhile, conditioning refinement on a large vision-language model adds substantial online inference cost. we propose drivesta, which extends autoregressive proposal generation and proposal-conditioned residual flow refinement with scored trajectory alternatives. for each training scene, we generate alternatives offline through smooth deformations of the recorded trajectory and evaluate their simulated execution against logged traffic. diverse, high-quality alternatives supervise distinct proposals and define residual targets for quality-guided denoising, while candidates spanning the full score range train a scorer to assess driving quality. a shared joint-embedding predictive architecture (jepa), adapted through masked video-feature prediction, encodes observed frames once and provides temporal context for both refinement and scoring. on navsim v1 navtest, drivesta ranks first among the compared planners trained on navsim data alone. with expanded training data, drivesta-scale achieves state-of-the-art results among the compared methods on navtest and closed-loop hugsim, while reducing mean planner forward-pass latency by 73% relative to chainflow-vla in matched evaluations. nanjing university; peking university; eabot.ai xinyao rao, zecheng tang, liuxuan sun, zheyuan lai, minjun yu, xun cao, wei li cs.cv"
+    },
+    {
+      "arxiv_id": "2611.27459",
+      "title": "Ego2Ego: Generative Visual Perspective Taking Across Collaborators",
+      "authors": "Chuhan Jiao, John Gideon, Anshul Gupta, Guy Rosman, Andreas Bulling",
+      "affiliations": "University of Stuttgart; Toyota Research Institute",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "Visual perspective taking, the ability to infer what another person sees from their position, is fundamental to human collaboration. However, prior works reduced perspective taking to state estimation, geometric reconstruction, or discrete question answering, whereas existing cross-view video generation methods either inferred the target view from the input video alone or required an external camera that observes the target person. We introduce generative visual perspective taking: Given an ego person's egocentric video, a scene point cloud, and a collaborator's camera trajectory, the task is to generate the continuous egocentric video from the collaborator's perspective. This task is challenging given extreme viewpoint shifts, dynamic occlusions, and sparse visual overlap. We address these challenges with Ego2Ego -- a set of backbone-agnostic geometric modules that provide a pretrained video diffusion model with the 3D scene geometry shared by both interactants. Ego2Ego renders dense, temporally consistent scene coordinate maps into every view as a shared spatial reference, aligns cross-view tokens in 3D ray space through relative geometric attention, and recovers regions outside the ego person's current view from the ego person's visual memory. Experiments on the CoMind dataset across three video diffusion backbones show that Ego2Ego consistently improves visual quality, Level-2 scene layout accuracy, and collaborator motion, outperforming state-of-the-art cross-view video generation baselines on every backbone. By generating the collaborator's egocentric video more accurately, Ego2Ego brings visual perspective taking to human-robot collaboration, where it can help infer what a human collaborator sees and does, and can turn single-person recordings into synchronised multi-perspective videos for robot learning.",
+      "summary_cn": "提出生成式视觉视角采择：给定第一人称视频、场景点云与协作者相机轨迹，生成协作者视角的连续自我中心视频，即使对方不在视野内。Ego2Ego以与主干无关的几何模块为预训练视频扩散模型提供共享3D几何，渲染稠密且时序一致的场景坐标图并做跨视角对齐。可用于机器人推断同伴所见，并把单人录制转成同步多视角数据。",
+      "pdf_filename": "2611.27459.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "视频生成",
+        "扩散模型",
+        "点云"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27459",
+      "search_text": "ego2ego: generative visual perspective taking across collaborators 视频生成 扩散模型 点云 提出生成式视觉视角采择：给定第一人称视频、场景点云与协作者相机轨迹，生成协作者视角的连续自我中心视频，即使对方不在视野内。ego2ego以与主干无关的几何模块为预训练视频扩散模型提供共享3d几何，渲染稠密且时序一致的场景坐标图并做跨视角对齐。可用于机器人推断同伴所见，并把单人录制转成同步多视角数据。 visual perspective taking, the ability to infer what another person sees from their position, is fundamental to human collaboration. however, prior works reduced perspective taking to state estimation, geometric reconstruction, or discrete question answering, whereas existing cross-view video generation methods either inferred the target view from the input video alone or required an external camera that observes the target person. we introduce generative visual perspective taking: given an ego person's egocentric video, a scene point cloud, and a collaborator's camera trajectory, the task is to generate the continuous egocentric video from the collaborator's perspective. this task is challenging given extreme viewpoint shifts, dynamic occlusions, and sparse visual overlap. we address these challenges with ego2ego -- a set of backbone-agnostic geometric modules that provide a pretrained video diffusion model with the 3d scene geometry shared by both interactants. ego2ego renders dense, temporally consistent scene coordinate maps into every view as a shared spatial reference, aligns cross-view tokens in 3d ray space through relative geometric attention, and recovers regions outside the ego person's current view from the ego person's visual memory. experiments on the comind dataset across three video diffusion backbones show that ego2ego consistently improves visual quality, level-2 scene layout accuracy, and collaborator motion, outperforming state-of-the-art cross-view video generation baselines on every backbone. by generating the collaborator's egocentric video more accurately, ego2ego brings visual perspective taking to human-robot collaboration, where it can help infer what a human collaborator sees and does, and can turn single-person recordings into synchronised multi-perspective videos for robot learning. university of stuttgart; toyota research institute chuhan jiao, john gideon, anshul gupta, guy rosman, andreas bulling cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27418",
+      "title": "Beyond Future Views: Exploring Future-State World Models for Vision-Language Navigation",
+      "authors": "Kangyi Wu, Pengna Li, Yucheng Wang, Yance Fang, Xihan Ma, Zhizhong Su, Yang Wu, Ye Deng, Jinjun Wang, Jianyi Liu",
+      "affiliations": "Xi'an Jiaotong University; Horizon Robotics; Renmin University of China; Xi'an University of Architecture and Technology; Southwestern University of Finance and Economics",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO",
+      "abstract": "Vision-Language Navigation(VLN) requires an embodied agent to follow language instructions through unseen 3D environments, where the target spaces often lie beyond the current observation. Navigation world models address this challenge by predicting future views either as pixels or latent representations, providing valuable look-ahead information for action decision. Both paradigms define the future primarily through what the agent may observe, raising a fundamental question: is predicting future views the ultimate form to represent the future for VLN? Cognitive studies show that the human hippocampus prospectively represents both future goals and intervening locations along planned routes. Inspired by this predictive-map view, we organize the navigation-relevant future around goal-directed spatial states and route structure. We instantiate this perspective with two complementary abstractions: a short-horizon waypoint that specifies the next local state to reach, and a mid-horizon corridor that captures the spatial support of the upcoming route. Based on this design, we propose FS-Nav, a future-state world modeling framework that predicts waypoint-corridor states from spatial memory and language instructions, and communicates them to a VLM navigator through top-down and first-person interfaces. Experiments on standard VLN benchmarks demonstrate that FS-Nav achieves state-of-the-art performance. This highlights navigation-relevant future-state modeling as a promising direction for representing the future in VLN.",
+      "summary_cn": "质疑VLN中“预测未来视图”是否为表征未来的最佳形式，受海马体前瞻地图启发，改以目标导向空间状态与路线结构组织未来：短时程航点指明下一局部状态，中时程走廊刻画路线空间支撑。据此提出未来状态世界模型FS-Nav，在VLN基准上取得优于未来视图预测范式的导航效果。",
+      "pdf_filename": "2611.27418.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "世界模型",
+        "多模态",
+        "具身智能"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27418",
+      "search_text": "beyond future views: exploring future-state world models for vision-language navigation 世界模型 多模态 具身智能 质疑vln中“预测未来视图”是否为表征未来的最佳形式，受海马体前瞻地图启发，改以目标导向空间状态与路线结构组织未来：短时程航点指明下一局部状态，中时程走廊刻画路线空间支撑。据此提出未来状态世界模型fs-nav，在vln基准上取得优于未来视图预测范式的导航效果。 vision-language navigation(vln) requires an embodied agent to follow language instructions through unseen 3d environments, where the target spaces often lie beyond the current observation. navigation world models address this challenge by predicting future views either as pixels or latent representations, providing valuable look-ahead information for action decision. both paradigms define the future primarily through what the agent may observe, raising a fundamental question: is predicting future views the ultimate form to represent the future for vln? cognitive studies show that the human hippocampus prospectively represents both future goals and intervening locations along planned routes. inspired by this predictive-map view, we organize the navigation-relevant future around goal-directed spatial states and route structure. we instantiate this perspective with two complementary abstractions: a short-horizon waypoint that specifies the next local state to reach, and a mid-horizon corridor that captures the spatial support of the upcoming route. based on this design, we propose fs-nav, a future-state world modeling framework that predicts waypoint-corridor states from spatial memory and language instructions, and communicates them to a vlm navigator through top-down and first-person interfaces. experiments on standard vln benchmarks demonstrate that fs-nav achieves state-of-the-art performance. this highlights navigation-relevant future-state modeling as a promising direction for representing the future in vln. xi'an jiaotong university; horizon robotics; renmin university of china; xi'an university of architecture and technology; southwestern university of finance and economics kangyi wu, pengna li, yucheng wang, yance fang, xihan ma, zhizhong su, yang wu, ye deng, jinjun wang, jianyi liu cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27407",
+      "title": "BladeR: Scalable, Shape-Guided 3D Reconstruction of Wind Turbine Blades from UAV Imagery",
+      "authors": "Jonathan Sterckx, Michiel Vlaminck, Hiep Luong",
+      "affiliations": "IPI-URC-imec, Ghent University, Ghent, Belgium",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV, cs.RO",
+      "abstract": "The structural integrity of wind turbine blades is critical for safe, efficient energy production. Accurate 3D reconstruction allows precise localization and quantification of wear and early damage detection. While drone-based inspections are standard, their high-resolution imagery poses challenges such as weak texture, lighting variability, and high computational cost. We present BladeR, a scalable pipeline for high-quality 3D reconstruction from inspection imagery. A hierarchical sparse reconstruction strategy leverages GPS/IMU data and blade shape priors to guide advanced keypoint matchers on full-resolution images. For dense reconstruction, a tiled Gaussian Splatting framework processes 45 MP images at native resolution, isolates the blade from background, and adaptively enhances detail recovery along the leading edge. Validation against commercial and open-source baselines shows significant improvements in model completeness and detail.",
+      "summary_cn": "面向风机叶片无人机巡检影像的3D重建管线：用GPS/IMU与叶片形状先验引导先进关键点匹配做分层稀疏重建，稠密端用分块Gaussian Splatting在原生分辨率处理45MP图像，并分离叶片与背景、沿前缘自适应增强细节。相比商用与开源基线，模型完整性与细节显著提升，但流程偏静态工业对象。",
+      "pdf_filename": "2611.27407.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "B",
+      "keywords": [
+        "3DGS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27407",
+      "search_text": "blader: scalable, shape-guided 3d reconstruction of wind turbine blades from uav imagery 3dgs 面向风机叶片无人机巡检影像的3d重建管线：用gps/imu与叶片形状先验引导先进关键点匹配做分层稀疏重建，稠密端用分块gaussian splatting在原生分辨率处理45mp图像，并分离叶片与背景、沿前缘自适应增强细节。相比商用与开源基线，模型完整性与细节显著提升，但流程偏静态工业对象。 the structural integrity of wind turbine blades is critical for safe, efficient energy production. accurate 3d reconstruction allows precise localization and quantification of wear and early damage detection. while drone-based inspections are standard, their high-resolution imagery poses challenges such as weak texture, lighting variability, and high computational cost. we present blader, a scalable pipeline for high-quality 3d reconstruction from inspection imagery. a hierarchical sparse reconstruction strategy leverages gps/imu data and blade shape priors to guide advanced keypoint matchers on full-resolution images. for dense reconstruction, a tiled gaussian splatting framework processes 45 mp images at native resolution, isolates the blade from background, and adaptively enhances detail recovery along the leading edge. validation against commercial and open-source baselines shows significant improvements in model completeness and detail. ipi-urc-imec, ghent university, ghent, belgium jonathan sterckx, michiel vlaminck, hiep luong cs.cv, cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27330",
+      "title": "GGDriver: Glance at What Is Shared, Gaze at What Differs for Perception-Free Planning",
+      "authors": "Jiawei Sun, Maosen Li, Jiamin Shi, Xiaoxu Zheng, Jiun Tian Hoe, Yechao Bai, Michael Bi Mi",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-11-20",
+      "categories": "cs.AI",
+      "abstract": "A planner deciding whether to turn left or continue straight needs to inspect different parts of the scene for each maneuver. Yet many end-to-end driving planners evaluate every candidate trajectory against the same compressed scene representation. We let each candidate select the visual evidence used to refine and score it. A global glance first produces trajectory hypotheses from shared scene features. We then project a corridor around each trajectory into the camera views and use the resulting mask to attend to patch features at the backbone's native resolution. After refinement, the scorer projects each final proposal again and ranks it using evidence along its own path. This geometric selection requires only the predicted trajectory and camera calibration. On three planners with different scene representations (learned registers, a perception-supervised bird's-eye-view grid, and a coarse image-token grid), adding this gaze improves planning scores. In ablations, path-aligned patches outperform both a matched number of randomly selected patches and attention over all patches. Using the gaze for ranking yields larger gains than using it for refinement alone. With a ViT-S backbone and no perception labels, GGDriver achieves a rater feedback score of 8.110 on the WOD-E2E test set, 94.2 PDMS on NAVSIM-v1, 48.6 EPDMS on NAVSIM-v2, and a closed-loop Driving Score of 72.18 on Bench2Drive.",
+      "summary_cn": "现有规划器对候选轨迹共享压缩场景表征；GGDriver先由共享特征“一瞥”生成轨迹假设，再把轨迹投影为相机走廊掩码，在主干原生分辨率patch上“凝视”精化并按路径证据打分。ViT-S无感知标签下WOD-E2E 8.110、NAVSIM-v1 94.2 PDMS、Bench2Drive 72.18。",
+      "pdf_filename": "2611.27330.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "场景压缩",
+        "闭环仿真",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27330",
+      "search_text": "ggdriver: glance at what is shared, gaze at what differs for perception-free planning 场景压缩 闭环仿真 规划 现有规划器对候选轨迹共享压缩场景表征；ggdriver先由共享特征“一瞥”生成轨迹假设，再把轨迹投影为相机走廊掩码，在主干原生分辨率patch上“凝视”精化并按路径证据打分。vit-s无感知标签下wod-e2e 8.110、navsim-v1 94.2 pdms、bench2drive 72.18。 a planner deciding whether to turn left or continue straight needs to inspect different parts of the scene for each maneuver. yet many end-to-end driving planners evaluate every candidate trajectory against the same compressed scene representation. we let each candidate select the visual evidence used to refine and score it. a global glance first produces trajectory hypotheses from shared scene features. we then project a corridor around each trajectory into the camera views and use the resulting mask to attend to patch features at the backbone's native resolution. after refinement, the scorer projects each final proposal again and ranks it using evidence along its own path. this geometric selection requires only the predicted trajectory and camera calibration. on three planners with different scene representations (learned registers, a perception-supervised bird's-eye-view grid, and a coarse image-token grid), adding this gaze improves planning scores. in ablations, path-aligned patches outperform both a matched number of randomly selected patches and attention over all patches. using the gaze for ranking yields larger gains than using it for refinement alone. with a vit-s backbone and no perception labels, ggdriver achieves a rater feedback score of 8.110 on the wod-e2e test set, 94.2 pdms on navsim-v1, 48.6 epdms on navsim-v2, and a closed-loop driving score of 72.18 on bench2drive. 未找到单位信息 jiawei sun, maosen li, jiamin shi, xiaoxu zheng, jiun tian hoe, yechao bai, michael bi mi cs.ai"
+    },
+    {
+      "arxiv_id": "2611.27226",
+      "title": "Trailblazer-F: Speculative Action-Flow Inference for Autonomous Driving",
+      "authors": "Haibo Hu, Lianming Huang, Qiao Li, Nan Guan, Chun Jason Xue",
+      "affiliations": "City University of Hong Kong; Mohamed bin Zayed University of Artificial Intelligence",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO",
+      "abstract": "Driving world-action models generate planned trajectories through iterative action denoising, with each update depending on the preceding state. This sequential dependency incurs substantial inference latency, limiting timely planning. Speculative inference offers an opportunity to reduce this latency by predicting future denoising states for parallel target evaluation, but requires efficient proposal generation and suitable verification for continuous actions. We present Trailblazer-F, a speculative action-flow inference framework in which a lightweight drafter acts as a trailblazer, charting a candidate denoising path through the compact, structured waypoint space so that the target model can verify multiple steps in parallel and advance with fewer sequential updates. Our method maintains planning quality while keeping the pretrained target model frozen.Across all 12,146 NAVSIM v1 navtest scenes, Trailblazer-F maintains near-baseline planning performance, with PDMS changes of +0.04 and -0.08 points for SimWAM and DriveWAM, respectively. Paired inference measurements on an NVIDIA L20 GPU yield 2.31x and 1.55x speedups. Real-vehicle experiments on NVIDIA Jetson AGX Orin further demonstrate 1.96x and 1.37x speedups, together with close qualitative trajectory agreement with native sampling. our code is here https://github.com/DanileHaibo/Trailblazer-F",
+      "summary_cn": "world-action模型去噪导致串行推理延迟，提出推测式动作流推理：轻量drafter在紧凑航点空间规划候选去噪路径，冻结目标模型并行验证多步、少串行更新。NAVSIM v1的12146场景PDMS仅变+0.04/−0.08，L20加速2.31×/1.55×，Orin实车1.96×/1.37×。",
+      "pdf_filename": "2611.27226.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27226",
+      "search_text": "trailblazer-f: speculative action-flow inference for autonomous driving 规划 自动驾驶 world-action模型去噪导致串行推理延迟，提出推测式动作流推理：轻量drafter在紧凑航点空间规划候选去噪路径，冻结目标模型并行验证多步、少串行更新。navsim v1的12146场景pdms仅变+0.04/−0.08，l20加速2.31×/1.55×，orin实车1.96×/1.37×。 driving world-action models generate planned trajectories through iterative action denoising, with each update depending on the preceding state. this sequential dependency incurs substantial inference latency, limiting timely planning. speculative inference offers an opportunity to reduce this latency by predicting future denoising states for parallel target evaluation, but requires efficient proposal generation and suitable verification for continuous actions. we present trailblazer-f, a speculative action-flow inference framework in which a lightweight drafter acts as a trailblazer, charting a candidate denoising path through the compact, structured waypoint space so that the target model can verify multiple steps in parallel and advance with fewer sequential updates. our method maintains planning quality while keeping the pretrained target model frozen.across all 12,146 navsim v1 navtest scenes, trailblazer-f maintains near-baseline planning performance, with pdms changes of +0.04 and -0.08 points for simwam and drivewam, respectively. paired inference measurements on an nvidia l20 gpu yield 2.31x and 1.55x speedups. real-vehicle experiments on nvidia jetson agx orin further demonstrate 1.96x and 1.37x speedups, together with close qualitative trajectory agreement with native sampling. our code is here https://github.com/danilehaibo/trailblazer-f city university of hong kong; mohamed bin zayed university of artificial intelligence haibo hu, lianming huang, qiao li, nan guan, chun jason xue cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27173",
+      "title": "PACE-WM: Parallel World Modeling with Action History for Visual Planning",
+      "authors": "Haishan Liu, Shijie Lian, Bin Yu, Yao Zhang, Changti Wu, Fanping Liu, Jianzheng Liu, Lei Xie, Cong Huang, Kai Chen",
+      "affiliations": "Nanjing University; Zhongguancun Academy; Huazhong University of Science and Technology; Harbin Institute of Technology; Wuhan University; East China Normal University; Zhongguancun Institute of Artificial Intelligence; DeepCybo",
+      "published_date": "2026-11-20",
+      "categories": "cs.RO",
+      "abstract": "JEPA-style world models support visual planning by predicting future representations conditioned on future actions. However, similar observations can conceal different motion states, making temporal context essential for interpreting future action effects. We propose PACE-WM, a parallel world model that uses executed-action history to contextualize future prediction and planning. Specifically, PACE-WM maintains a recurrent memory of executed actions and uses this memory to condition a causal Transformer. PACE-WM predicts multiple future representations in parallel without recursive predicted-state feedback within each prediction window. We further introduce Reference-Anchored Minimum Progress (RAMP) for action selection during planning. RAMP scores candidate actions by their predicted goal improvement along direct and split paths relative to a shared reference. Across four visual planning tasks, PACE-WM with RAMP achieves an average success rate of $98\\%$ and plans approximately $7$-$9\\times$ faster than autoregressive LeWM under matched CEM settings. We also construct four controlled benchmarks to evaluate PACE-WM's capabilities in motion disambiguation, goal-relative motion, and goal adaptation. Project page is available at https://github.com/LHS180/PACE-WM.",
+      "summary_cn": "指出相似观测可能掩盖不同运动状态，JEPA世界模型需要时序上下文；PACE-WM用已执行动作的循环记忆调制因果Transformer，在预测窗口内并行输出多个未来表征而非递归反馈，并提出RAMP按相对参考的目标改善选动作。四个视觉规划任务平均成功率98%，匹配CEM下比自回归LeWM快约7–9倍。",
+      "pdf_filename": "2611.27173.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27173",
+      "search_text": "pace-wm: parallel world modeling with action history for visual planning 世界模型 规划 指出相似观测可能掩盖不同运动状态，jepa世界模型需要时序上下文；pace-wm用已执行动作的循环记忆调制因果transformer，在预测窗口内并行输出多个未来表征而非递归反馈，并提出ramp按相对参考的目标改善选动作。四个视觉规划任务平均成功率98%，匹配cem下比自回归lewm快约7–9倍。 jepa-style world models support visual planning by predicting future representations conditioned on future actions. however, similar observations can conceal different motion states, making temporal context essential for interpreting future action effects. we propose pace-wm, a parallel world model that uses executed-action history to contextualize future prediction and planning. specifically, pace-wm maintains a recurrent memory of executed actions and uses this memory to condition a causal transformer. pace-wm predicts multiple future representations in parallel without recursive predicted-state feedback within each prediction window. we further introduce reference-anchored minimum progress (ramp) for action selection during planning. ramp scores candidate actions by their predicted goal improvement along direct and split paths relative to a shared reference. across four visual planning tasks, pace-wm with ramp achieves an average success rate of $98\\%$ and plans approximately $7$-$9\\times$ faster than autoregressive lewm under matched cem settings. we also construct four controlled benchmarks to evaluate pace-wm's capabilities in motion disambiguation, goal-relative motion, and goal adaptation. project page is available at https://github.com/lhs180/pace-wm. nanjing university; zhongguancun academy; huazhong university of science and technology; harbin institute of technology; wuhan university; east china normal university; zhongguancun institute of artificial intelligence; deepcybo haishan liu, shijie lian, bin yu, yao zhang, changti wu, fanping liu, jianzheng liu, lei xie, cong huang, kai chen cs.ro"
+    },
+    {
+      "arxiv_id": "2611.27124",
+      "title": "A Plan or an Adversarial Example? A Round-Trip Check for Latent World Models",
+      "authors": "Huiyuan Tian, Chih-Yung Wen, Shijian Li",
+      "affiliations": "Zhejiang University; The Hong Kong Polytechnic University",
+      "published_date": "2026-11-20",
+      "categories": "cs.LG, cs.CV",
+      "abstract": "If we optimize an image until a classifier is confident it shows a cat, we may get an adversarial example, not a cat. Planning with a latent world model is a similar search for actions whose predicted future is closest to the goal. Is the result a plan, or an adversarial example of the world model? We show that it can be either. On the released DINO-WM and LeWM, more iterations of the cross-entropy method (CEM) lower the predicted cost but lose up to half of the problems CEM had already solved. The model's own predictions do not reveal these failures. We propose a simple test that executes the plan after every iteration and counts the problems a planner solves and then loses. Unlike an image, a plan comes with its actions, which our round-trip check reads back from the predicted states with a small network, penalizing mismatches. The check reads back the sum of each block of five actions, the part that two consecutive predicted states determine. Without retraining the world model and at only 0.2% to 3.1% more planning time, it improves the widely used planners CEM and MPPI on three released world models, and gains more where planners lose more problems. Without replanning, success rises from 0.39 to 0.76 on Wall with DINO-WM and from 0.56 to 0.94 for MPPI on JEPA-WM. With replanning (MPC), it rises from 0.70 to 0.81 on Cube with LeWM.",
+      "summary_cn": "揭示潜空间世界模型规划中CEM迭代越多预测代价越低却会丢掉多达一半已解问题，即“计划”可能是世界模型的对抗样本。提出往返检验：小网络从预测状态回读每五个动作之和并惩罚不一致；不重训模型、仅增0.2%–3.1%规划时间即提升CEM/MPPI，MPPI成功率0.56升到0.94。",
+      "pdf_filename": "2611.27124.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "A",
+      "keywords": [
+        "世界模型",
+        "规划"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27124",
+      "search_text": "a plan or an adversarial example? a round-trip check for latent world models 世界模型 规划 揭示潜空间世界模型规划中cem迭代越多预测代价越低却会丢掉多达一半已解问题，即“计划”可能是世界模型的对抗样本。提出往返检验：小网络从预测状态回读每五个动作之和并惩罚不一致；不重训模型、仅增0.2%–3.1%规划时间即提升cem/mppi，mppi成功率0.56升到0.94。 if we optimize an image until a classifier is confident it shows a cat, we may get an adversarial example, not a cat. planning with a latent world model is a similar search for actions whose predicted future is closest to the goal. is the result a plan, or an adversarial example of the world model? we show that it can be either. on the released dino-wm and lewm, more iterations of the cross-entropy method (cem) lower the predicted cost but lose up to half of the problems cem had already solved. the model's own predictions do not reveal these failures. we propose a simple test that executes the plan after every iteration and counts the problems a planner solves and then loses. unlike an image, a plan comes with its actions, which our round-trip check reads back from the predicted states with a small network, penalizing mismatches. the check reads back the sum of each block of five actions, the part that two consecutive predicted states determine. without retraining the world model and at only 0.2% to 3.1% more planning time, it improves the widely used planners cem and mppi on three released world models, and gains more where planners lose more problems. without replanning, success rises from 0.39 to 0.76 on wall with dino-wm and from 0.56 to 0.94 for mppi on jepa-wm. with replanning (mpc), it rises from 0.70 to 0.81 on cube with lewm. zhejiang university; the hong kong polytechnic university huiyuan tian, chih-yung wen, shijian li cs.lg, cs.cv"
+    },
+    {
+      "arxiv_id": "2611.27057",
+      "title": "Learning 3D MRI Representations with Generative Adversarial Networks",
+      "authors": "Sujeet Lahane, Sapna Mishra, Akash Suryavanshi, Tapan Gandhi, Bharat Biswal",
+      "affiliations": "Indian Institute of Technology Delhi; New Jersey Institute of Technology",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV, cs.AI",
+      "abstract": "Learning representations of visual images is a challenging task. It requires extracting abstract patterns from high-dimensional data without explicit supervision. This becomes pronounced with 3D MR imaging due to sparse features, higher dimensional inputs, and smaller datasets. Many state-of-the-art representation learning algorithms successfully rely on transformers and diffusion-based architectures. However, these methods struggle with smaller datasets. In effect, solution methods relax the problem by slicing 3D volumes and solving the problem for 2D medical imaging, resulting in a loss of spatial 3D information. We present R2RG, a representation learning method based on Convolutional Neural Networks (CNNs), with Generative Adversarial Networks (GANs) honing the reconstruction task. Our key insights lie in exploiting architectural biases in 3D CNNs, combined with data-efficient auto-encoding GANs and a composite loss function to enhance reconstruction fidelity and stabilize training. Our experiments on three standard datasets and a locally collected dataset show that R2RG not only achieves superior performance but also generalizes to heterogeneous and smaller datasets. Furthermore, representations learned with R2RG outperform those learned with contrastive-based representation learning methods on Parkinson's and Alzheimer's disease classification. Our work demonstrates that reconstruction-based representation learning is a promising direction for 3D medical imaging under limited data availability.",
+      "summary_cn": "针对3D MR影像特征稀疏、样本少、切片化处理丢失空间信息的问题，提出基于3D CNN的自编码表征学习方法R2RG，用GAN强化重建任务，配合复合损失提升重建保真度并稳定训练。三个标准数据集与一个自采数据集上优于对比方法，学到的表征在帕金森与阿尔茨海默分类上超过对比式方法。",
+      "pdf_filename": "2611.27057.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.27057",
+      "search_text": "learning 3d mri representations with generative adversarial networks  针对3d mr影像特征稀疏、样本少、切片化处理丢失空间信息的问题，提出基于3d cnn的自编码表征学习方法r2rg，用gan强化重建任务，配合复合损失提升重建保真度并稳定训练。三个标准数据集与一个自采数据集上优于对比方法，学到的表征在帕金森与阿尔茨海默分类上超过对比式方法。 learning representations of visual images is a challenging task. it requires extracting abstract patterns from high-dimensional data without explicit supervision. this becomes pronounced with 3d mr imaging due to sparse features, higher dimensional inputs, and smaller datasets. many state-of-the-art representation learning algorithms successfully rely on transformers and diffusion-based architectures. however, these methods struggle with smaller datasets. in effect, solution methods relax the problem by slicing 3d volumes and solving the problem for 2d medical imaging, resulting in a loss of spatial 3d information. we present r2rg, a representation learning method based on convolutional neural networks (cnns), with generative adversarial networks (gans) honing the reconstruction task. our key insights lie in exploiting architectural biases in 3d cnns, combined with data-efficient auto-encoding gans and a composite loss function to enhance reconstruction fidelity and stabilize training. our experiments on three standard datasets and a locally collected dataset show that r2rg not only achieves superior performance but also generalizes to heterogeneous and smaller datasets. furthermore, representations learned with r2rg outperform those learned with contrastive-based representation learning methods on parkinson's and alzheimer's disease classification. our work demonstrates that reconstruction-based representation learning is a promising direction for 3d medical imaging under limited data availability. indian institute of technology delhi; new jersey institute of technology sujeet lahane, sapna mishra, akash suryavanshi, tapan gandhi, bharat biswal cs.cv, cs.ai"
+    },
+    {
+      "arxiv_id": "2611.27024",
+      "title": "ReactDrive: Self-Reactive Driving World Model",
+      "authors": "Yifan Wang, Xiaoqi Wang, Cho-Ying Wu, Wenbin He, Chenyu You, Liu Ren",
+      "affiliations": "Stony Brook University; Bosch Research North America; Bosch Center for Artificial Intelligence (BCAI)",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV",
+      "abstract": "The world evolves through the dynamics of its constituent entities and their interactions, with changes in one entity influencing the behavior of others. To simulate this evolution under different actions, interactive world models need to capture the resulting agent responses as part of the world's own dynamics. In autonomous driving, errors in modeling these responses can misrepresent maneuver safety and undermine the reliability of generated videos used for policy evaluation and learning. To formalize this intrinsic requirement for driving world model, we define self-reactivity as the capability to model agent responses from observed history and a specified ego action, and generate visual futures that reflect those responses without prescribed future agent trajectories. To realize this capability, we introduce ReactDrive, a driving world model that jointly learns agent dynamics and visual generation through a shared agent state representation. Within this framework, dynamics supervision grounds a reactive dynamics prior in observed agent states, while the video objective jointly optimizes the self-reactivity and visual realism. Experiments show improved agent responses, ego controllability, and video quality, a 96.0% preference for agent reactivity in human comparisons across five baselines, and better downstream planning through augmentation with generated videos. We hope this work encourages the community to recognize self-reactivityas a foundational capability for developing and evaluating interactive world models. Project page: https://reactdrive.github.io/ .",
+      "summary_cn": "提出驾驶世界模型的“自反应性”能力：只由观测历史与给定自车动作预测其他参与者响应并生成相应视觉未来，无需预设他车轨迹。ReactDrive用共享agent状态表征联合学习交互动力学与视频生成，动力学监督提供反应先验。人类对比中反应性偏好达96%，生成视频还能增强下游规划。",
+      "pdf_filename": "2611.27024.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "世界模型",
+        "视频生成",
+        "规划",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27024",
+      "search_text": "reactdrive: self-reactive driving world model 世界模型 视频生成 规划 自动驾驶 提出驾驶世界模型的“自反应性”能力：只由观测历史与给定自车动作预测其他参与者响应并生成相应视觉未来，无需预设他车轨迹。reactdrive用共享agent状态表征联合学习交互动力学与视频生成，动力学监督提供反应先验。人类对比中反应性偏好达96%，生成视频还能增强下游规划。 the world evolves through the dynamics of its constituent entities and their interactions, with changes in one entity influencing the behavior of others. to simulate this evolution under different actions, interactive world models need to capture the resulting agent responses as part of the world's own dynamics. in autonomous driving, errors in modeling these responses can misrepresent maneuver safety and undermine the reliability of generated videos used for policy evaluation and learning. to formalize this intrinsic requirement for driving world model, we define self-reactivity as the capability to model agent responses from observed history and a specified ego action, and generate visual futures that reflect those responses without prescribed future agent trajectories. to realize this capability, we introduce reactdrive, a driving world model that jointly learns agent dynamics and visual generation through a shared agent state representation. within this framework, dynamics supervision grounds a reactive dynamics prior in observed agent states, while the video objective jointly optimizes the self-reactivity and visual realism. experiments show improved agent responses, ego controllability, and video quality, a 96.0% preference for agent reactivity in human comparisons across five baselines, and better downstream planning through augmentation with generated videos. we hope this work encourages the community to recognize self-reactivityas a foundational capability for developing and evaluating interactive world models. project page: https://reactdrive.github.io/ . stony brook university; bosch research north america; bosch center for artificial intelligence (bcai) yifan wang, xiaoqi wang, cho-ying wu, wenbin he, chenyu you, liu ren cs.cv"
+    },
+    {
+      "arxiv_id": "2611.27003",
+      "title": "S2D-Splat: Static-First Gaussian Reconstruction of Dynamic Driving Scenes with Layer-Wise Feature Guidance",
+      "authors": "Jinheng Li, Tianchen Deng, Bufan Zhang, Qu Chen, Jianwu Fang",
+      "affiliations": "Xi'an Jiaotong University; Shanghai Jiao Tong University; ShanghaiTech University; MEGVII Technology",
+      "published_date": "2026-11-20",
+      "categories": "cs.CV",
+      "abstract": "Moving objects introduce cross-frame inconsistencies that complicate camera estimation and static geometry recovery in driving scenes. Recent feed-forward Gaussian methods explicitly separate static and dynamic primitives, but often estimate camera parameters and geometry from shared features that jointly encode both components, leaving static reconstruction susceptible to dynamic interference. To address this challenge, we propose S2D-Splat, a feed-forward framework for static-first Gaussian reconstruction with layer-wise feature guidance. Our framework separates static and dynamic features before camera and geometry estimation, enabling the static branch to recover camera parameters and static 3D Gaussians with reduced dynamic interference. Intermediate static features are cached at each layer and reused as fixed conditioning at corresponding layers of the dynamic branch. This asymmetric information flow preserves the established static representations while providing stable geometric context for reconstructing dynamic 3D Gaussians. An instance-level motion decoder further queries the fused static and dynamic representations to estimate object trajectories, supporting motion-aligned Gaussian fusion and temporal interpolation. Experiments on Waymo and zero-shot evaluations on nuScenes and the MM-AU accident dataset demonstrate that S2D-Splat outperforms existing approaches on most evaluated metrics and generalizes to highly dynamic, pre-collision driving scenarios.",
+      "summary_cn": "针对驾驶场景中运动物体破坏帧间一致性、使前馈高斯方法的相机与几何估计受动态干扰的问题，提出静态优先框架：先分离静态/动态特征再做相机与几何估计；静态分支恢复相机与静态3D高斯，逐层缓存静态特征作为动态分支条件，实例级运动解码器预测轨迹。Waymo多数指标最优，零样本泛化到nuScenes与事故数据。",
+      "pdf_filename": "2611.27003.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "S",
+      "keywords": [
+        "3DGS",
+        "自动驾驶"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27003",
+      "search_text": "s2d-splat: static-first gaussian reconstruction of dynamic driving scenes with layer-wise feature guidance 3dgs 自动驾驶 针对驾驶场景中运动物体破坏帧间一致性、使前馈高斯方法的相机与几何估计受动态干扰的问题，提出静态优先框架：先分离静态/动态特征再做相机与几何估计；静态分支恢复相机与静态3d高斯，逐层缓存静态特征作为动态分支条件，实例级运动解码器预测轨迹。waymo多数指标最优，零样本泛化到nuscenes与事故数据。 moving objects introduce cross-frame inconsistencies that complicate camera estimation and static geometry recovery in driving scenes. recent feed-forward gaussian methods explicitly separate static and dynamic primitives, but often estimate camera parameters and geometry from shared features that jointly encode both components, leaving static reconstruction susceptible to dynamic interference. to address this challenge, we propose s2d-splat, a feed-forward framework for static-first gaussian reconstruction with layer-wise feature guidance. our framework separates static and dynamic features before camera and geometry estimation, enabling the static branch to recover camera parameters and static 3d gaussians with reduced dynamic interference. intermediate static features are cached at each layer and reused as fixed conditioning at corresponding layers of the dynamic branch. this asymmetric information flow preserves the established static representations while providing stable geometric context for reconstructing dynamic 3d gaussians. an instance-level motion decoder further queries the fused static and dynamic representations to estimate object trajectories, supporting motion-aligned gaussian fusion and temporal interpolation. experiments on waymo and zero-shot evaluations on nuscenes and the mm-au accident dataset demonstrate that s2d-splat outperforms existing approaches on most evaluated metrics and generalizes to highly dynamic, pre-collision driving scenarios. xi'an jiaotong university; shanghai jiao tong university; shanghaitech university; megvii technology jinheng li, tianchen deng, bufan zhang, qu chen, jianwu fang cs.cv"
+    },
+    {
+      "arxiv_id": "2611.26661",
+      "title": "Möbius expansion and pointwise energy transfer over arbitrary fields",
+      "authors": "Yao Zhi",
+      "affiliations": "未找到单位信息",
+      "published_date": "2026-11-19",
+      "categories": "math.CO",
+      "abstract": "Let $F$ be a field of positive characteristic $p$, and let $A\\subset F^\\times$ have $N$ elements. We prove that, for every $λ\\in F^\\times$, \\[   \\card{A+λA^{-1}}\\gg\\min\\{N^{10/9},(pN^2)^{1/3}\\}. \\] This improves the exponent $31/30$ to $10/9$ in the common small-set range. Over prime fields the bound strengthens to $\\min\\{N^{10/9},(pN)^{1/2}\\}$. Analogous bounds hold for $Af(A)$ when $f$ is a Möbius transformation satisfying the stated nondegeneracy conditions. In characteristic zero, the bound $N^{10/9}$ remains valid. No subfield-avoidance condition is required.",
+      "summary_cn": "设F为正特征p的域、A⊂F×有N个元素，证明对任意λ有|A+λA⁻¹|≫min{N^{10/9},(pN²)^{1/3}}，在常见小集合区间把指数31/30改进到10/9，素域上加强为min{N^{10/9},(pN)^{1/2}}；对非退化Möbius变换f，Af(A)有同类界，无需子域回避。",
+      "pdf_filename": "2611.26661.pdf",
+      "crawled_date": "2026-11-23",
+      "notes": "",
+      "rating": "C",
+      "keywords": [],
+      "pdf_url": "https://arxiv.org/pdf/2611.26661",
+      "search_text": "möbius expansion and pointwise energy transfer over arbitrary fields  设f为正特征p的域、a⊂f×有n个元素，证明对任意λ有|a+λa⁻¹|≫min{n^{10/9},(pn²)^{1/3}}，在常见小集合区间把指数31/30改进到10/9，素域上加强为min{n^{10/9},(pn)^{1/2}}；对非退化möbius变换f，af(a)有同类界，无需子域回避。 let $f$ be a field of positive characteristic $p$, and let $a\\subset f^\\times$ have $n$ elements. we prove that, for every $λ\\in f^\\times$, \\[   \\card{a+λa^{-1}}\\gg\\min\\{n^{10/9},(pn^2)^{1/3}\\}. \\] this improves the exponent $31/30$ to $10/9$ in the common small-set range. over prime fields the bound strengthens to $\\min\\{n^{10/9},(pn)^{1/2}\\}$. analogous bounds hold for $af(a)$ when $f$ is a möbius transformation satisfying the stated nondegeneracy conditions. in characteristic zero, the bound $n^{10/9}$ remains valid. no subfield-avoidance condition is required. 未找到单位信息 yao zhi math.co"
+    },
     {
       "arxiv_id": "2611.26565",
       "title": "PhyDEX: A Benchmark for Physical Reasoning in Vision-Language-Action Models via Dynamic Extrinsic Dexterity",
