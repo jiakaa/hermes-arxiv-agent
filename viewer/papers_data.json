@@ -14,7 +14,7 @@
   "tags": [
     {
       "name": "3DGS",
-      "count": 459,
+      "count": 460,
       "group": "3DGS/4DGS"
     },
     {
@@ -151,6 +151,21 @@
       "name": "事件相机",
       "count": 14,
       "group": "通用"
+    },
+    {
+      "name": "稀疏视角重建",
+      "count": 1,
+      "group": ""
+    },
+    {
+      "name": "三维重建",
+      "count": 1,
+      "group": ""
+    },
+    {
+      "name": "主动重建",
+      "count": 1,
+      "group": ""
     }
   ],
   "papers": [
@@ -381,9 +396,12 @@
       "crawled_date": "2026-11-24",
       "notes": "",
       "rating": "A",
-      "keywords": [],
+      "keywords": [
+        "稀疏视角重建",
+        "三维重建"
+      ],
       "pdf_url": "https://arxiv.org/pdf/2611.30869",
-      "search_text": "xfreq: geometry-aligned cross-view residual learning for sparse 3d ultrasound reconstruction  稀疏二维超声切片即使位姿已知也有大量未观测体素，现有方法或插值强度或拼 2d 特征，未区分二者在平滑结构与残差细节上的互补作用。提出几何对齐框架 xfreq：用已知切片位姿与有限足迹在三维位置查询二维特征，低频解码器从泼溅表示预测平滑三维场，高频解码器结合查询特征预测残差，并用学习门控按几何与跨切片变化调制残差。胎儿脑与 cetus 心脏数据上领先。 three-dimensional (3d) ultrasound provides valuable volumetric context for anatomical assessment, motivating reconstruction from widely available two-dimensional (2d) slices. sparse slices leave much of the volume unobserved, even when their acquisition poses are known. existing methods interpolate observed intensities or incorporate learned 2d image features into 3d reconstruction, but their complementary roles in predicting smooth structure and residual details remain less explored. we introduce xfreq, a geometry-aligned framework for sparse 3d ultrasound reconstruction. it uses known slice poses and finite footprints to query 2d image features at 3d locations, complementing splatted intensities and sampling geometry. a low-frequency decoder predicts a smooth 3d field from the splat representation, while a high-frequency decoder additionally incorporates the queried 2d features to predict residual details. a learned gating module regulates the residual contribution based on geometry and cross-slice feature variation. we evaluate xfreq on an in-house fetal brain dataset and the public cetus cardiac dataset, using slices resampled from 3d ultrasound volumes and fivefold cross-validation. among the compared methods, xfreq achieves the highest psnr and ssim in most settings across both datasets, reaching 26.82 db psnr on cetus with 32 input slices. ablation studies further show the contributions of local feature querying, geometric cues, and residual prediction, with gains generally increasing as more input slices are used. our findings highlight the value of geometry-aligned cross-view feature integration for reconstructing 3d ultrasound volumes from sparse 2d slices. boston children's hospital; harvard medical school yuhuan lu, p. ellen grant, davood karimi cs.cv"
+      "search_text": "xfreq: geometry-aligned cross-view residual learning for sparse 3d ultrasound reconstruction 稀疏视角重建 三维重建 稀疏二维超声切片即使位姿已知也有大量未观测体素，现有方法或插值强度或拼 2d 特征，未区分二者在平滑结构与残差细节上的互补作用。提出几何对齐框架 xfreq：用已知切片位姿与有限足迹在三维位置查询二维特征，低频解码器从泼溅表示预测平滑三维场，高频解码器结合查询特征预测残差，并用学习门控按几何与跨切片变化调制残差。胎儿脑与 cetus 心脏数据上领先。 three-dimensional (3d) ultrasound provides valuable volumetric context for anatomical assessment, motivating reconstruction from widely available two-dimensional (2d) slices. sparse slices leave much of the volume unobserved, even when their acquisition poses are known. existing methods interpolate observed intensities or incorporate learned 2d image features into 3d reconstruction, but their complementary roles in predicting smooth structure and residual details remain less explored. we introduce xfreq, a geometry-aligned framework for sparse 3d ultrasound reconstruction. it uses known slice poses and finite footprints to query 2d image features at 3d locations, complementing splatted intensities and sampling geometry. a low-frequency decoder predicts a smooth 3d field from the splat representation, while a high-frequency decoder additionally incorporates the queried 2d features to predict residual details. a learned gating module regulates the residual contribution based on geometry and cross-slice feature variation. we evaluate xfreq on an in-house fetal brain dataset and the public cetus cardiac dataset, using slices resampled from 3d ultrasound volumes and fivefold cross-validation. among the compared methods, xfreq achieves the highest psnr and ssim in most settings across both datasets, reaching 26.82 db psnr on cetus with 32 input slices. ablation studies further show the contributions of local feature querying, geometric cues, and residual prediction, with gains generally increasing as more input slices are used. our findings highlight the value of geometry-aligned cross-view feature integration for reconstructing 3d ultrasound volumes from sparse 2d slices. boston children's hospital; harvard medical school yuhuan lu, p. ellen grant, davood karimi cs.cv"
     },
     {
       "arxiv_id": "2611.30836",
@@ -420,9 +438,12 @@
       "crawled_date": "2026-11-24",
       "notes": "",
       "rating": "A",
-      "keywords": [],
+      "keywords": [
+        "3DGS",
+        "主动重建"
+      ],
       "pdf_url": "https://arxiv.org/pdf/2611.30802",
-      "search_text": "go far, look less: active multi-room reconstruction with persistent goals and selective views  针对多房间家居主动重建中近视的下一最佳视角打分不为远处房间的通行记功、又过度打磨近处残余误差，而稠密建图须流过上千帧的问题，提出免训练框架 roam-gs：每次决策选一个持久目标与可变视界前缀，只在端点拍摄；用表面重建记忆按投影缺陷与视角给位姿打分，目标在到达不再带来可测提升时释放。hssd 覆盖率 74%→93%，hm3d 47%→96%（+11.7 db），以 173 倍更少视角匹配 90 分钟稠密建图。 active 3d reconstruction aims to allocate a sparse view budget to recover complete geometry and high-fidelity renderings. however, existing methods degrade sharply in multi-room homes: myopic next-best-view scoring gives transit no credit for distant rooms and over-polishes irreducible nearby residuals, whereas dense mappers reach far rooms only by streaming thousands of frames. we propose roam-gs, a training-free active multi-room reconstruction framework that couples persistent goals with selective views: each decision selects a goal and a variable-horizon prefix toward it, capturing only at its endpoint. a surface reconstruction memory scores poses by projecting post-update defects and viewing directions. persistent goals credit transit with their remaining value and are released once arrivals stop measurably improving them. without per-scene tuning, roam-gs achieves state-of-the-art multi-room reconstruction while preserving single-room replica fidelity, raising mean coverage from 74% to 93% on hssd and from 47% to 96% (+11.7 db psnr) on hm3d, and matching 90-minute dense mapping using $173\\times$ fewer views. zhejiang university; chengdu minto tech jiawei jiang, haonan zhou, wendi hu, jiabei hu, yina xiang, kaiyue zhou, gaoang wang cs.cv"
+      "search_text": "go far, look less: active multi-room reconstruction with persistent goals and selective views 3dgs 主动重建 针对多房间家居主动重建中近视的下一最佳视角打分不为远处房间的通行记功、又过度打磨近处残余误差，而稠密建图须流过上千帧的问题，提出免训练框架 roam-gs：每次决策选一个持久目标与可变视界前缀，只在端点拍摄；用表面重建记忆按投影缺陷与视角给位姿打分，目标在到达不再带来可测提升时释放。hssd 覆盖率 74%→93%，hm3d 47%→96%（+11.7 db），以 173 倍更少视角匹配 90 分钟稠密建图。 active 3d reconstruction aims to allocate a sparse view budget to recover complete geometry and high-fidelity renderings. however, existing methods degrade sharply in multi-room homes: myopic next-best-view scoring gives transit no credit for distant rooms and over-polishes irreducible nearby residuals, whereas dense mappers reach far rooms only by streaming thousands of frames. we propose roam-gs, a training-free active multi-room reconstruction framework that couples persistent goals with selective views: each decision selects a goal and a variable-horizon prefix toward it, capturing only at its endpoint. a surface reconstruction memory scores poses by projecting post-update defects and viewing directions. persistent goals credit transit with their remaining value and are released once arrivals stop measurably improving them. without per-scene tuning, roam-gs achieves state-of-the-art multi-room reconstruction while preserving single-room replica fidelity, raising mean coverage from 74% to 93% on hssd and from 47% to 96% (+11.7 db psnr) on hm3d, and matching 90-minute dense mapping using $173\\times$ fewer views. zhejiang university; chengdu minto tech jiawei jiang, haonan zhou, wendi hu, jiabei hu, yina xiang, kaiyue zhou, gaoang wang cs.cv"
     },
     {
       "arxiv_id": "2611.30787",
